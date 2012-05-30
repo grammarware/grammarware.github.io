@@ -1,0 +1,25 @@
+Rules:
+        Rule*
+Rule:
+        NonTerminal "::=" Elements
+NonTerminal:
+        "<" STR ">"
+Elements:
+        Element ("|" Element)*
+Element:
+        NonTerminal
+        Terminal
+        "[" Element ("|" Element)* "]"
+        "{" Element ("|" Element)* "}"
+        "|"
+        "["
+        "]"
+        "{"
+        "}"
+        "<"
+        ">"
+        "..."
+        "::="
+        Element Element
+Terminal:
+        STR

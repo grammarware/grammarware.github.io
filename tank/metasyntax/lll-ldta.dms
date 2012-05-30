@@ -1,0 +1,11 @@
+grammar = rule+ ;
+rule = sort ':' alts ';' ;
+alts = alt alts-tail* ;
+alts-tail = '|' alt ;
+alt = term* ;
+term = basis repetition? ;
+basis = literal ;
+basis = sort ;
+repetition = '*' ;
+repetition = '+' ;
+repetition = '?' ;

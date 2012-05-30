@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable Grammar Transformation</title><style type="text/css">
+			          h1, h2 { text-align: center; }
+			          .label, .sel { color: green; }
+			          .marked { background-color: #FFE5B4;}
+			          .nt { color: blue; font-weight: bold; }
+			          .t { color: red;  font-family: monospace; }
+			          .meta, .cmd { color: green; font-style:italic; font-family: serif; }
+			          .b { text-align: right; font-style:italic;}
+			        </style><script type="text/javascript">
+					  var _gaq = _gaq || [];
+					  _gaq.push(['_setAccount', 'UA-3743366-5']);
+					  _gaq.push(['_trackPageview']);
+
+					  (function() {
+					    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					  })();
+					</script></head><body><h1>deyaccify</h1><h2>Source: <a href="http://slps.svn.sourceforge.net/viewvc/slps/topics/grammars/wiki/mediawiki-bnf/deyaccify.xbgf?view=markup">SLPS/topics/grammars/wiki/mediawiki-bnf/deyaccify.xbgf</a></h2><ul><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#canonical-sub-pages">canonical-sub-pages</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#canonical-sub-pages">canonical-sub-pages</a> | ε));
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#canonical-sub-pages">canonical-sub-pages</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#canonical-sub-pages">canonical-sub-pages</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#canonical-sub-pages">canonical-sub-pages</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#inline">inline</a> (<a class="nt" href="mediawiki-bnf.html#canonical-sub-pages">canonical-sub-pages</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ (<a class="nt" href="mediawiki-bnf.html#canonical-sub-page">canonical-sub-page</a><span class="meta">+</span> | ε),
+ <a class="nt" href="mediawiki-bnf.html#canonical-sub-page">canonical-sub-page</a><span class="meta">*</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#canonical-page-chars">canonical-page-chars</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#canonical-page-chars">canonical-page-chars</a> | ε));
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#canonical-page-chars">canonical-page-chars</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#canonical-page-chars">canonical-page-chars</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#canonical-page-chars">canonical-page-chars</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#inline">inline</a> (<a class="nt" href="mediawiki-bnf.html#canonical-page-chars">canonical-page-chars</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ (<a class="nt" href="mediawiki-bnf.html#canonical-page-char">canonical-page-char</a><span class="meta">+</span> | ε),
+ <a class="nt" href="mediawiki-bnf.html#canonical-page-char">canonical-page-char</a><span class="meta">*</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#sub-pages">sub-pages</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#sub-pages">sub-pages</a> | ε));
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#sub-pages">sub-pages</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#sub-pages">sub-pages</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#sub-pages">sub-pages</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#inline">inline</a> (<a class="nt" href="mediawiki-bnf.html#sub-pages">sub-pages</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ (<a class="nt" href="mediawiki-bnf.html#sub-page">sub-page</a><span class="meta">+</span> | ε),
+ <a class="nt" href="mediawiki-bnf.html#sub-page">sub-page</a><span class="meta">*</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#page-chars">page-chars</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#page-chars">page-chars</a> | ε));
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#page-chars">page-chars</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#page-chars">page-chars</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#page-chars">page-chars</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#inline">inline</a> (<a class="nt" href="mediawiki-bnf.html#page-chars">page-chars</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ (<a class="nt" href="mediawiki-bnf.html#page-char">page-char</a><span class="meta">+</span> | ε),
+ <a class="nt" href="mediawiki-bnf.html#page-char">page-char</a><span class="meta">*</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#dashes">dashes</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#dashes">dashes</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#dashes">dashes</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#dashes">dashes</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#dashes">dashes</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#dashes">dashes</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#newlines">newlines</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#newlines">newlines</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#newlines">newlines</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#newlines">newlines</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#newlines">newlines</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#newlines">newlines</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#space-tabs">space-tabs</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#space-tabs">space-tabs</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#space-tabs">space-tabs</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#space-tabs">space-tabs</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#space-tabs">space-tabs</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#space-tabs">space-tabs</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#spaces">spaces</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#spaces">spaces</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#spaces">spaces</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#spaces">spaces</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#spaces">spaces</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#spaces">spaces</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#decimal-number">decimal-number</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#decimal-number">decimal-number</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#decimal-number">decimal-number</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#decimal-number">decimal-number</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#decimal-number">decimal-number</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#decimal-number">decimal-number</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#hex-number">hex-number</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#hex-number">hex-number</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#hex-number">hex-number</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#hex-number">hex-number</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#hex-number">hex-number</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#hex-number">hex-number</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#massage">massage</a> (
+ <a class="nt" href="mediawiki-bnf.html#extra-description">extra-description</a><span class="meta">?</span>,
+ (<a class="nt" href="mediawiki-bnf.html#extra-description">extra-description</a> | ε)
+<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#extra-description">extra-description</a>);
+</li><li><a class="cmd" href="#distribute">distribute</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#extra-description">extra-description</a> );
+</li><li><a class="cmd" href="#vertical">vertical</a>(<span class="meta"> in </span><a class="nt" href="mediawiki-bnf.html#extra-description">extra-description</a> );
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#deyaccify">deyaccify</a> (<a class="nt" href="mediawiki-bnf.html#extra-description">extra-description</a>);
+		</li></ul><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

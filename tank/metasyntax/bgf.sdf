@@ -1,0 +1,35 @@
+module Main
+
+exports
+ context-free start-symbols grammar
+  sorts
+        Grammar Production Expression Value Label Nonterminal Selector Terminal 
+  context-free syntax
+        root::Nonterminal* Production* -> Grammar
+
+        label::Label? nonterminal::Nonterminal Expression -> Production
+
+        epsilon::
+		| empty::
+		| value::Value
+		| any::
+		| terminal::Terminal
+		| nonterminal::Nonterminal
+		| selectable::(selector::Selector Expression)
+		| sequence::(Expression+)
+		| marked::Expression
+		| choice::(Expression+)
+		| optional::Expression
+		| plus::Expression
+		| star::Expression -> Expression
+
+        int::
+		| string:: -> Value
+
+        STR -> Label
+
+        STR -> Nonterminal
+
+        STR -> Selector
+
+        STR -> Terminal

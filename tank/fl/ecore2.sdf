@@ -1,0 +1,29 @@
+module Main
+
+exports
+  sorts
+        Apply Argument Binary Expr Function IfThenElse Literal Ops ProgramType 
+  context-free syntax
+        name::STR arg::Expr+ -> Apply
+
+        name::STR -> Argument
+
+        ops::Ops left::Expr right::Expr -> Binary
+
+        Apply
+		| Argument
+		| Binary
+		| IfThenElse
+		| Literal -> Expr
+
+        name::STR arg::STR+ rhs::Expr -> Function
+
+        ifExpr::Expr thenExpr::Expr elseExpr::Expr -> IfThenElse
+
+        info::INT -> Literal
+
+        Equal::
+		| Plus::
+		| Minus:: -> Ops
+
+        function::Function+ -> ProgramType

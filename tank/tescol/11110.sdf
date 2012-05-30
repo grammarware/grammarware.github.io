@@ -1,0 +1,161 @@
+module Main
+
+exports
+  sorts
+        Prog Stat Type CompilationUnit Declarations ConstDeclaration VarDeclaration ProDeclaration ParameterList ParameterElement ListofStatement SingleStatement Statement SkipStm LoopStm CondStm AssgStm ArithmeticExpr ApplyProcedure ExpressionList ConditionalExpr BooleanExpr ConjunctionExpression EqualityExpression RelationalExpression AddtExpr MultExpr UnaryExpr Atom SEMI COMMA COLON QUESTION EQUALITY NON-EQUALITY LESS LESS-EQUAL GREATER-EQUAL GREATER CONJUNCTION DISJUNCTION COLON-EQUALS ADDITION SUBTRACTION DIVISION MULTIPLICATION EXPONENTIATION IF THEN ELSE WHILE DO DONE TROLLEY CONTAINS SKIP CHECKOUT INT DOUBLE CONST VAR PROC LBRACE RBRACE LPAREN RPAREN CONSTID ID WS INTEGER FLOAT COMMENTS 
+  context-free syntax
+        Stat+ -> Prog
+
+        CompilationUnit -> Stat
+
+        INT
+		| DOUBLE -> Type
+
+        TROLLEY CONSTID CONTAINS de::Declarations CHECKOUT s::Statement SEMI DONE SEMI -> CompilationUnit
+
+        (ConstDeclaration | VarDeclaration | ProDeclaration)+ -> Declarations
+
+        CONST CONSTID COLON t::Type COLON-EQUALS ar::ArithmeticExpr SEMI -> ConstDeclaration
+
+        VAR ID COLON t::Type SEMI -> VarDeclaration
+
+        PROC ID LPAREN p1::ParameterList RPAREN COLON t::Type COLON-EQUALS s1::Statement SEMI -> ProDeclaration
+
+        ParameterElement ("," ParameterElement)* -> ParameterList
+
+        id::ID COLON t::Type -> ParameterElement
+
+        "{" SingleStatement (SEMI s::SingleStatement)+ "}" -> ListofStatement
+
+        SkipStm
+		| LoopStm
+		| CondStm
+		| a::AssgStm -> SingleStatement
+
+        e::SingleStatement
+		| b::ListofStatement -> Statement
+
+        SKIP -> SkipStm
+
+        WHILE LPAREN? e::BooleanExpr RPAREN? DO? s::Statement -> LoopStm
+
+        IF LPAREN? a::BooleanExpr RPAREN? THEN? b::Statement (ELSE c::Statement)? -> CondStm
+
+        ID COLON-EQUALS a1::ArithmeticExpr -> AssgStm
+
+        ConditionalExpr
+		| a::ApplyProcedure -> ArithmeticExpr
+
+        ID LPAREN ExpressionList RPAREN -> ApplyProcedure
+
+        ArithmeticExpr ("," ArithmeticExpr)* -> ExpressionList
+
+        BooleanExpr (QUESTION ConditionalExpr COLON ConditionalExpr)? -> ConditionalExpr
+
+        ConjunctionExpression (DISJUNCTION ConjunctionExpression)* -> BooleanExpr
+
+        EqualityExpression (CONJUNCTION EqualityExpression)* -> ConjunctionExpression
+
+        RelationalExpression ((EQUALITY | NON-EQUALITY) RelationalExpression)? -> EqualityExpression
+
+        AddtExpr ((LESS-EQUAL | GREATER-EQUAL | LESS | GREATER) AddtExpr)? -> RelationalExpression
+
+        MultExpr ((ADDITION | SUBTRACTION) MultExpr)* -> AddtExpr
+
+        UnaryExpr ((MULTIPLICATION | DIVISION | EXPONENTIATION) UnaryExpr)* -> MultExpr
+
+        "-" Atom
+		| Atom -> UnaryExpr
+
+        INTEGER
+		| FLOAT
+		| CONSTID
+		| "(" ConditionalExpr ")"
+		| ApplyProcedure
+		| ID -> Atom
+
+        ";" -> SEMI
+
+        "," -> COMMA
+
+        ":" -> COLON
+
+        "?" -> QUESTION
+
+        "==" -> EQUALITY
+
+        "!=" -> NON-EQUALITY
+
+        "<" -> LESS
+
+        "<=" -> LESS-EQUAL
+
+        ">=" -> GREATER-EQUAL
+
+        ">" -> GREATER
+
+        "/\\" -> CONJUNCTION
+
+        "\\/" -> DISJUNCTION
+
+        ":=" -> COLON-EQUALS
+
+        "+" -> ADDITION
+
+        "-" -> SUBTRACTION
+
+        "/" -> DIVISION
+
+        "*" -> MULTIPLICATION
+
+        "**" -> EXPONENTIATION
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "done" -> DONE
+
+        "trolley" -> TROLLEY
+
+        "contains" -> CONTAINS
+
+        "skip" -> SKIP
+
+        "checkout" -> CHECKOUT
+
+        "int" -> INT
+
+        "double" -> DOUBLE
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "{" -> LBRACE
+
+        "}" -> RBRACE
+
+        "(" -> LPAREN
+
+        ")" -> RPAREN
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID
+
+        (" " | "\t" | "\n" | "\r")+ -> WS
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* -> INTEGER
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+)? -> FLOAT
+
+        "/*" ANY* "*/" -> COMMENTS

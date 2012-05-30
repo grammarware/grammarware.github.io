@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:links="http://planet-sl.org/links" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Java grammars</title><style type="text/css">h1{text-align:center}</style><link href="slps.css" rel="stylesheet" type="text/css"></link><script type="text/javascript">
+
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+					</script></head><body style="background-color:#9C9;"><h1>Java grammars</h1><h2>Originals</h2><ul><li><strong><a href="http://java.sun.com/docs/books/jls/first_edition/html/19.doc.html">Java Language Specification, §19</a></strong> (James Gosling, Bill Joy, Guy Steele) — JLS1, HTML or PDF<p>
+        The original JLS1. The link points to impl1 grammar source.
+      </p></li><li><strong><a href="http://java.sun.com/docs/books/jls/second_edition/html/syntax.doc.html">Java Language Specification, Second Edition, §18</a></strong> (James Gosling, Bill Joy, Guy Steele, Gilad Bracha) — JLS2, HTML or PDF<p>
+        The original JLS2. The link points to impl2 grammar source.
+      </p></li><li><strong><a href="http://java.sun.com/docs/books/jls/third_edition/html/syntax.html">Java Language Specification, Third Edition, §18</a></strong> (James Gosling, Bill Joy, Guy Steele, Gilad Bracha) — JLS3, HTML or PDF<p>
+        The original JLS3. The link points to impl3 grammar source.
+      </p></li></ul><hr></hr><h2>JLS1 derivatives</h2><ul><li><strong><a href="http://www.csci.csusb.edu/dick/samples/java.syntax.html">Java Language Grammar</a></strong> (Richard J. Botting) — JLS1, XBNF<p>
+        The grammar is in the author's XBNF format that we don't have an extractor in the SLPS yet.
+      </p></li><li><strong><a href="http://www.cad.mse.kyutech.ac.jp/people/zhou/dj/doc/revisedJavaGrammar.html">JLS LALR(1) Grammar</a></strong> (Neng-Fa Zhou, Sosuke Kaneko, Kouji Yamauchi) — JLS1, original HTML<p>
+        A part of the project called DJ (Declarative Java).
+      </p></li><li><strong><a href="http://www.cs.dartmouth.edu/~mckeeman/cs118/notation/java11.html">CS118: yacc Java Grammar</a></strong> (Dmitri Bronnikov, Bill McKeeman) — JLS1, YACC<p>
+        Contains some updates to Java 1.1 (which is covered by Arnold/Gosling book, not by any JLS).
+      </p></li></ul><hr></hr><h2>JLS2 derivatives</h2><ul><li><strong><a href="http://www.antlr.org/grammar/java">Java parser and tree parser</a></strong> (John Lilley, John Mitchell, Terence Parr, Scott Stanchfield) — JLS2, ANTLR<p>
+        The grammar corresponds to Java 3, which is a bit more than JLS2.
+        In fact, the only reason J2SE 1.3 was not standardised is because it had too few changes from J2SE 1.2.
+      </p></li><li><strong><a href="http://www.lykkenborg.no/java/grammar/JLS2.html">The Java JLS2 Grammar</a></strong> (Gaute Lykkenborg) — JLS2, browsable; ISO EBNF<p>
+        Very fancy heavily hyperlinked and coloured HTML.
+        The grammar definition formalism was made compliant with ISO/IEC 14977:1996 standard.
+        Which changes/fixes were applied, if any, is unknown.
+      </p></li></ul><hr></hr><h2>JLS3 derivatives</h2><ul><li><strong><a href="http://www.lykkenborg.no/java/grammar/JLS3.html">The Java JLS3 Grammar</a></strong> (Gaute Lykkenborg) — JLS3, browsable; ISO EBNF<p>
+        Very fancy heavily hyperlinked and coloured HTML.
+        The grammar definition formalism was made compliant with ISO/IEC 14977:1996 standard.
+        Which changes/fixes were applied, if any, is unknown.
+      </p></li><li><strong><a href="http://www.antlr.org/grammar/1207932239307/Java1_5Grammars">Java 1.5 grammar for ANTLR v3 that builds trees</a></strong> (Dieter Habelitz) — JLS3, ANTLR<p>
+        Not derived from other ANTLR Java grammars, relation to JLS unknown.
+      </p></li><li><strong><a href="http://www.antlr.org/grammar/1152141644268/Java.g">Java 1.5 grammar for ANTLR v3</a></strong> (Terence Parr) — JLS3, ANTLR<p>
+        Claimed to be 'derived from spec', 'very clean' and 'pretty fast'.
+      </p></li><li><strong><a href="http://www.antlr.org/grammar/1090713067533/index.html">Java 5 (aka 1.5) grammar update</a></strong> (Michael Studman) — JLS3, ANTLR<p>
+        One of the most used ANTLR Java grammars, an update to the 1.3 grammar by Lilley/Mitchell/Parr/Stanchfield.
+      </p></li><li><strong><a href="http://www.antlr.org/grammar/1093454600181/java15-grammar.zip">yet another java 1.5 grammar</a></strong> (Michael Stahl) — JLS3, ANTLR<p>
+        Developed independently from the one by Michael Studman.
+      </p></li><li><strong><a href="http://www.antlr.org/grammar/1109874324096/java1.5.zip">Updated Java 1.5 Grammar</a></strong> (Scott Wisniewski) — JLS3, ANTLR<p>
+        Claimed to be based on Studman's one, but with 'better conformance to the Java Language Specification'.
+      </p></li><li><strong><a href="http://www.antlr.org/grammar/1147455993609/Java5.zip">Java 1.5 + Java preprocessor</a></strong> (Luca Colombi) — JLS3, ANTLR<p>
+        Based on the one by Wisniewski, but
+        'adapted to compile without error also in eclipse with antlr plugin and jdk 1.5'.
+      </p></li><li><strong><a href="http://www.cmis.brighton.ac.uk/staff/rnb/bosware/javaSyntax/syntaxV2.html">Java 1.5 Syntax (corrected)</a></strong> (Richard Bosworth) — JLS3, original HTML<p>
+        This is the only grammar that claims to fix all errors and still not go beyond that.
+        See the next link for their bugreport to Sun.
+      </p></li><li><strong><a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6442525">Bug ID: 6442525 Syntax specification (section 18) is inconsistent with other sections</a></strong> (Richard Bosworth) — JLS3, plain text<p>
+        Even that the title claims to spot differences between impl3 and read3 grammars, some of the
+        issues being reported say that both are incorrect.
+      </p></li></ul><hr></hr></body></html>

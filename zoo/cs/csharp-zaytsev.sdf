@@ -1,0 +1,568 @@
+module Main
+
+exports
+  sorts
+        Ref-or-out Expression-unary-operator Increment-decrement Expression-shift-operator Expression-relational-operator Expression-equality-operator Conversion-kind Maybe-empty-block Built-in-type Built-in-class-type Else-part Qualified-identifier-list Compilation-unit Type Integral-type Argument-list Argument Primary-expression Predefined-type Expression-list Unary-expression Assignment-operator Expression Statement Embedded-statement Block Labeled-statement Declaration-statement Local-variable-declaration Local-constant-declaration Constant-declarator Statement-expression Selection-statement If-statement Switch-statement Switch-section Switch-label Iteration-statement While-statement Do-statement For-statement For-initializer Statement-expression-list Foreach-statement Jump-statement Break-statement Continue-statement Goto-statement Return-statement Throw-statement Try-statement Catch-clauses Specific-catch-clause General-catch-clause Finally-clause Lock-statement Using-statement Resource-acquisition Namespace-declaration Qualified-identifier Namespace-body Using-directive Namespace-member-declaration Type-declaration Class-declaration Class-modifier Class-base Class-body Class-member-declaration Constant-declaration Constant-modifier Field-declaration Field-modifier Variable-declarator Method-declaration Method-header Method-modifier Type-or-void Formal-parameter-list Fixed-parameters Fixed-parameter Parameter-modifier Parameter-array Property-declaration Property-modifier Accessor-declarations Get-accessor-declaration Set-accessor-declaration Event-declaration Event-modifier Event-accessor-declarations Add-accessor-declaration Remove-accessor-declaration Indexer-declaration Indexer-modifier Indexer-declarator Operator-declaration Operator-modifier Operator-declarator Unary-operator-declarator Overloadable-unary-operator Binary-operator-declarator Overloadable-binary-operator Conversion-operator-declarator Constructor-declaration Constructor-modifier Constructor-declarator Constructor-initializer Static-constructor-declaration Static-constructor-modifiers Destructor-declaration Struct-declaration Struct-modifier Struct-body Struct-member-declarations Struct-member-declaration Array-type Non-array-type Rank-specifier Array-initializer Variable-initializer Interface-declaration Interface-modifier Interface-body Interface-member-declaration Interface-method-declaration Interface-property-declaration Interface-accessors Interface-event-declaration Interface-indexer-declaration Enum-declaration Enum-body Enum-modifier Enum-member-declaration Delegate-declaration Delegate-modifier Global-attributes Global-attribute-section Attributes Attribute-section Attribute-target Attribute-list Attribute Attribute-name Attribute-arguments 
+  context-free syntax
+        "ref"
+		| "out" -> Ref-or-out
+
+        Lex-csharp-extra/plus
+		| Lex-csharp-extra/minus
+		| Increment-decrement
+		| "!"
+		| "~"
+		| "*" -> Expression-unary-operator
+
+        "++"
+		| "--" -> Increment-decrement
+
+        "<<"
+		| ">>" -> Expression-shift-operator
+
+        Lex-csharp-extra/less-than
+		| Lex-csharp-extra/greater-than
+		| "<="
+		| ">="
+		| "is"
+		| "as" -> Expression-relational-operator
+
+        "=="
+		| "!=" -> Expression-equality-operator
+
+        "implicit"
+		| "explicit" -> Conversion-kind
+
+        "{" Statement* "}"
+		| ";" -> Maybe-empty-block
+
+        Integral-type
+		| Built-in-class-type
+		| "bool"
+		| "decimal"
+		| "float"
+		| "double" -> Built-in-type
+
+        "object"
+		| "string" -> Built-in-class-type
+
+        "else" Embedded-statement -> Else-part
+
+        "{" Qualified-identifier "," "}"+ -> Qualified-identifier-list
+
+        Using-directive* Global-attributes Namespace-member-declaration* -> Compilation-unit
+
+        Non-array-type Rank-specifier* -> Type
+
+        "sbyte"
+		| "byte"
+		| "short"
+		| "ushort"
+		| "int"
+		| "uint"
+		| "long"
+		| "ulong"
+		| "char" -> Integral-type
+
+        "{" Argument "," "}"* -> Argument-list
+
+        Ref-or-out? Expression -> Argument
+
+        "new" Non-array-type "[" Expression-list "]" Rank-specifier* Array-initializer?
+		| "new" Array-type Array-initializer
+		| Lex-csharp/literal
+		| Lex-csharp/identifier
+		| "(" Expression ")"
+		| Primary-expression "." Lex-csharp/identifier
+		| Predefined-type "." Lex-csharp/identifier
+		| Primary-expression "(" Argument-list ")"
+		| Primary-expression "[" Expression-list "]"
+		| "this"
+		| "base" "." Lex-csharp/identifier
+		| "base" "[" Expression-list "]"
+		| Primary-expression Increment-decrement
+		| "new" Type "(" Argument-list ")"
+		| "typeof" "(" Type-or-void ")"
+		| "checked" "(" Expression ")"
+		| "unchecked" "(" Expression ")" -> Primary-expression
+
+        "bool"
+		| "byte"
+		| "char"
+		| "decimal"
+		| "double"
+		| "float"
+		| "int"
+		| "long"
+		| "object"
+		| "sbyte"
+		| "short"
+		| "string"
+		| "uint"
+		| "ulong"
+		| "ushort" -> Predefined-type
+
+        "{" Expression "," "}"+ -> Expression-list
+
+        Expression-unary-operator Unary-expression
+		| "(" Type ")" Unary-expression
+		| Primary-expression -> Unary-expression
+
+        "="
+		| "+="
+		| "-="
+		| "*="
+		| "/="
+		| "%="
+		| "&="
+		| "|="
+		| "^="
+		| "<<="
+		| ">>=" -> Assignment-operator
+
+        Expression "?" Expression ":" Expression
+		| Expression "||" Expression
+		| Expression "&&" Expression
+		| Expression Lex-csharp-extra/bar Expression
+		| Expression "^" Expression
+		| Expression Lex-csharp-extra/ampersand Expression
+		| Expression Expression-equality-operator Expression
+		| Expression Expression-relational-operator Expression
+		| Expression "is" Built-in-type
+		| Expression Expression-shift-operator Expression
+		| Expression Lex-csharp-extra/plus Expression
+		| Expression Lex-csharp-extra/minus Expression
+		| Expression "*" Expression
+		| Expression "/" Expression
+		| Expression "%" Expression
+		| Unary-expression
+		| Unary-expression Assignment-operator Expression -> Expression
+
+        Labeled-statement
+		| Declaration-statement
+		| Embedded-statement -> Statement
+
+        Maybe-empty-block
+		| Statement-expression ";"
+		| Selection-statement
+		| Iteration-statement
+		| Jump-statement
+		| Try-statement
+		| "checked" Block
+		| "unchecked" Block
+		| Lock-statement
+		| Using-statement -> Embedded-statement
+
+        "{" Statement* "}" -> Block
+
+        Lex-csharp/identifier ":" Statement -> Labeled-statement
+
+        Local-variable-declaration ";"
+		| Local-constant-declaration ";" -> Declaration-statement
+
+        Type "{" Variable-declarator "," "}"+ -> Local-variable-declaration
+
+        "const" Type "{" Constant-declarator "," "}"+ -> Local-constant-declaration
+
+        Lex-csharp/identifier "=" Expression -> Constant-declarator
+
+        Primary-expression "(" Argument-list ")"
+		| "new" Type "(" Argument-list ")"
+		| Unary-expression Assignment-operator Expression
+		| Primary-expression Increment-decrement
+		| Increment-decrement Primary-expression -> Statement-expression
+
+        If-statement
+		| Switch-statement -> Selection-statement
+
+        "if" "(" Expression ")" Embedded-statement Else-part? -> If-statement
+
+        "switch" "(" Expression ")" "{" Switch-section* "}" -> Switch-statement
+
+        Switch-label+ Statement+ -> Switch-section
+
+        "case" Expression ":"
+		| "default" ":" -> Switch-label
+
+        While-statement
+		| Do-statement
+		| For-statement
+		| Foreach-statement -> Iteration-statement
+
+        "while" "(" Expression ")" Embedded-statement -> While-statement
+
+        "do" Embedded-statement "while" "(" Expression ")" ";" -> Do-statement
+
+        "for" "(" For-initializer? ";" Expression? ";" Statement-expression-list? ")" Embedded-statement -> For-statement
+
+        Local-variable-declaration
+		| Statement-expression-list -> For-initializer
+
+        "{" Statement-expression "," "}"+ -> Statement-expression-list
+
+        "foreach" "(" Type Lex-csharp/identifier "in" Expression ")" Embedded-statement -> Foreach-statement
+
+        Break-statement
+		| Continue-statement
+		| Goto-statement
+		| Return-statement
+		| Throw-statement -> Jump-statement
+
+        "break" ";" -> Break-statement
+
+        "continue" ";" -> Continue-statement
+
+        "goto" Lex-csharp/identifier ";"
+		| "goto" "case" Expression ";"
+		| "goto" "default" ";" -> Goto-statement
+
+        "return" Expression? ";" -> Return-statement
+
+        "throw" Expression? ";" -> Throw-statement
+
+        "try" Block Catch-clauses Finally-clause?
+		| "try" Block Finally-clause -> Try-statement
+
+        Specific-catch-clause+ General-catch-clause?
+		| Specific-catch-clause* General-catch-clause -> Catch-clauses
+
+        "catch" "(" Built-in-class-type Lex-csharp/identifier? ")" Block
+		| "catch" "(" Qualified-identifier Lex-csharp/identifier? ")" Block -> Specific-catch-clause
+
+        "catch" Block -> General-catch-clause
+
+        "finally" Block -> Finally-clause
+
+        "lock" "(" Expression ")" Embedded-statement -> Lock-statement
+
+        "using" "(" Resource-acquisition ")" Embedded-statement -> Using-statement
+
+        Local-variable-declaration
+		| Expression -> Resource-acquisition
+
+        "namespace" Qualified-identifier Namespace-body ";"? -> Namespace-declaration
+
+        "{" Lex-csharp/identifier "." "}"+ -> Qualified-identifier
+
+        "{" Using-directive* Namespace-member-declaration* "}" -> Namespace-body
+
+        "using" "(" Lex-csharp/identifier "=" ")"? Qualified-identifier ";" -> Using-directive
+
+        Namespace-declaration
+		| Type-declaration -> Namespace-member-declaration
+
+        Class-declaration
+		| Struct-declaration
+		| Interface-declaration
+		| Enum-declaration
+		| Delegate-declaration -> Type-declaration
+
+        Attributes Class-modifier* "class" Lex-csharp/identifier Class-base? Class-body ";"? -> Class-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "abstract"
+		| "sealed" -> Class-modifier
+
+        ":" Qualified-identifier-list
+		| ":" Built-in-class-type "(" "," Qualified-identifier-list ")"? -> Class-base
+
+        "{" Class-member-declaration* "}" -> Class-body
+
+        Constant-declaration
+		| Field-declaration
+		| Method-declaration
+		| Property-declaration
+		| Event-declaration
+		| Indexer-declaration
+		| Operator-declaration
+		| Constructor-declaration
+		| Destructor-declaration
+		| Static-constructor-declaration
+		| Type-declaration -> Class-member-declaration
+
+        Attributes Constant-modifier* "const" Type "{" Constant-declarator "," "}"+ ";" -> Constant-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private" -> Constant-modifier
+
+        Attributes Field-modifier* Type "{" Variable-declarator "," "}"+ ";" -> Field-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "static"
+		| "readonly"
+		| "volatile" -> Field-modifier
+
+        Lex-csharp/identifier
+		| Lex-csharp/identifier "=" Variable-initializer -> Variable-declarator
+
+        Method-header Maybe-empty-block -> Method-declaration
+
+        Attributes Method-modifier* Type-or-void Qualified-identifier "(" Formal-parameter-list? ")" -> Method-header
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "static"
+		| "virtual"
+		| "sealed"
+		| "override"
+		| "abstract"
+		| "extern" -> Method-modifier
+
+        Type
+		| "void" -> Type-or-void
+
+        Fixed-parameters
+		| Fixed-parameters "," Parameter-array
+		| Parameter-array -> Formal-parameter-list
+
+        "{" Fixed-parameter "," "}"+ -> Fixed-parameters
+
+        Attributes Parameter-modifier? Type Lex-csharp/identifier -> Fixed-parameter
+
+        "ref"
+		| "out" -> Parameter-modifier
+
+        Attributes "params" Array-type Lex-csharp/identifier -> Parameter-array
+
+        Attributes Property-modifier* Type Qualified-identifier "{" Accessor-declarations "}" -> Property-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "static"
+		| "virtual"
+		| "sealed"
+		| "override"
+		| "abstract"
+		| "extern" -> Property-modifier
+
+        Get-accessor-declaration Set-accessor-declaration?
+		| Set-accessor-declaration Get-accessor-declaration? -> Accessor-declarations
+
+        Attributes "get" Maybe-empty-block -> Get-accessor-declaration
+
+        Attributes "set" Maybe-empty-block -> Set-accessor-declaration
+
+        Attributes Event-modifier* "event" Type "{" Variable-declarator "," "}"+ ";"
+		| Attributes Event-modifier* "event" Type Qualified-identifier "{" Event-accessor-declarations "}" -> Event-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "static"
+		| "virtual"
+		| "sealed"
+		| "override"
+		| "abstract"
+		| "extern" -> Event-modifier
+
+        Add-accessor-declaration Remove-accessor-declaration
+		| Remove-accessor-declaration Add-accessor-declaration -> Event-accessor-declarations
+
+        Attributes "add" Block -> Add-accessor-declaration
+
+        Attributes "remove" Block -> Remove-accessor-declaration
+
+        Attributes Indexer-modifier* Indexer-declarator "{" Accessor-declarations "}" -> Indexer-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "virtual"
+		| "sealed"
+		| "override"
+		| "abstract"
+		| "extern" -> Indexer-modifier
+
+        Type "this" "[" Formal-parameter-list "]"
+		| Type Qualified-identifier "." "this" "[" Formal-parameter-list "]" -> Indexer-declarator
+
+        Attributes Operator-modifier+ Operator-declarator Maybe-empty-block -> Operator-declaration
+
+        "public"
+		| "static"
+		| "extern" -> Operator-modifier
+
+        Unary-operator-declarator
+		| Binary-operator-declarator
+		| Conversion-operator-declarator -> Operator-declarator
+
+        Type "operator" Overloadable-unary-operator "(" Type Lex-csharp/identifier ")" -> Unary-operator-declarator
+
+        Lex-csharp-extra/plus
+		| Lex-csharp-extra/minus
+		| Increment-decrement
+		| "!"
+		| "~"
+		| "true"
+		| "false" -> Overloadable-unary-operator
+
+        Type "operator" Overloadable-binary-operator "(" Type Lex-csharp/identifier "," Type Lex-csharp/identifier ")" -> Binary-operator-declarator
+
+        Lex-csharp-extra/plus
+		| Lex-csharp-extra/minus
+		| "*"
+		| "/"
+		| "%"
+		| Lex-csharp-extra/ampersand
+		| Lex-csharp-extra/bar
+		| "^"
+		| "<<"
+		| ">>"
+		| "=="
+		| "!="
+		| Lex-csharp-extra/greater-than
+		| Lex-csharp-extra/less-than
+		| ">="
+		| "<=" -> Overloadable-binary-operator
+
+        Conversion-kind "operator" Type "(" Type Lex-csharp/identifier ")" -> Conversion-operator-declarator
+
+        Attributes Constructor-modifier* Constructor-declarator Maybe-empty-block -> Constructor-declaration
+
+        "public"
+		| "protected"
+		| "internal"
+		| "private"
+		| "extern" -> Constructor-modifier
+
+        Lex-csharp/identifier "(" Formal-parameter-list? ")" Constructor-initializer? -> Constructor-declarator
+
+        ":" "base" "(" Argument-list ")"
+		| ":" "this" "(" Argument-list ")" -> Constructor-initializer
+
+        Attributes Static-constructor-modifiers Lex-csharp/identifier "(" ")" Maybe-empty-block -> Static-constructor-declaration
+
+        "extern"? "static"
+		| "static" "extern" -> Static-constructor-modifiers
+
+        Attributes "extern"? "~" Lex-csharp/identifier "(" ")" Maybe-empty-block -> Destructor-declaration
+
+        Attributes Struct-modifier* "struct" Lex-csharp/identifier "(" ":" Qualified-identifier-list ")"? Struct-body ";"? -> Struct-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private" -> Struct-modifier
+
+        "{" Struct-member-declaration* "}" -> Struct-body
+
+        Struct-member-declaration
+		| Struct-member-declarations Struct-member-declaration -> Struct-member-declarations
+
+        Constant-declaration
+		| Field-declaration
+		| Method-declaration
+		| Property-declaration
+		| Event-declaration
+		| Indexer-declaration
+		| Operator-declaration
+		| Constructor-declaration
+		| Static-constructor-declaration
+		| Type-declaration -> Struct-member-declaration
+
+        Non-array-type Rank-specifier+ -> Array-type
+
+        Qualified-identifier
+		| Built-in-type -> Non-array-type
+
+        "[" ","* "]" -> Rank-specifier
+
+        "{" "}"
+		| "{" "{" Variable-initializer "," "}"+ ","? "}" -> Array-initializer
+
+        Expression
+		| Array-initializer -> Variable-initializer
+
+        Attributes Interface-modifier* "interface" Lex-csharp/identifier "(" ":" Qualified-identifier-list ")"? Interface-body ";"? -> Interface-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private" -> Interface-modifier
+
+        "{" Interface-member-declaration* "}" -> Interface-body
+
+        Interface-method-declaration
+		| Interface-property-declaration
+		| Interface-event-declaration
+		| Interface-indexer-declaration -> Interface-member-declaration
+
+        Attributes "new"? Type-or-void Lex-csharp/identifier "(" Formal-parameter-list? ")" ";" -> Interface-method-declaration
+
+        Attributes "new"? Type Lex-csharp/identifier "{" Interface-accessors "}" -> Interface-property-declaration
+
+        Attributes "get" ";" "(" Attributes "set" ";" ")"?
+		| Attributes "set" ";" "(" Attributes "get" ";" ")"? -> Interface-accessors
+
+        Attributes "new"? "event" Type Lex-csharp/identifier ";" -> Interface-event-declaration
+
+        Attributes "new"? Type "this" "[" Formal-parameter-list "]" "{" Interface-accessors "}" -> Interface-indexer-declaration
+
+        Attributes Enum-modifier* "enum" Lex-csharp/identifier "(" ":" Integral-type ")"? Enum-body ";"? -> Enum-declaration
+
+        "{" "}"
+		| "{" "{" Enum-member-declaration "," "}"+ ","? "}" -> Enum-body
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private" -> Enum-modifier
+
+        Attributes Lex-csharp/identifier "(" "=" Expression ")"? -> Enum-member-declaration
+
+        Attributes Delegate-modifier* "delegate" Type-or-void Lex-csharp/identifier "(" Formal-parameter-list? ")" ";" -> Delegate-declaration
+
+        "new"
+		| "public"
+		| "protected"
+		| "internal"
+		| "private" -> Delegate-modifier
+
+        Global-attribute-section* -> Global-attributes
+
+        "[" "assembly" ":" Attribute-list ","? "]" -> Global-attribute-section
+
+        Attribute-section* -> Attributes
+
+        "[" "(" Attribute-target ":" ")"? Attribute-list ","? "]" -> Attribute-section
+
+        "field"
+		| "event"
+		| "method"
+		| "module"
+		| "param"
+		| "property"
+		| "return"
+		| "type" -> Attribute-target
+
+        "{" Attribute "," "}"+ -> Attribute-list
+
+        Attribute-name Attribute-arguments? -> Attribute
+
+        Qualified-identifier -> Attribute-name
+
+        "(" Expression-list? ")" -> Attribute-arguments

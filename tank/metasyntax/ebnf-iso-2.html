@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable EBNF of ISO Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable EBNF of ISO Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+						ISO/IEC 14977:1996(E).
+						<em>Information Technology—Syntactic Metalanguage—Extended BNF</em>
+					 (1996) §8.2 “Extended BNF used to define itself informally”, page 10</p><h2>Summary</h2><ul><li>Number of production rules: <strong>18</strong></li><li>Number of top alternatives: <strong>28</strong></li><li>Number of defined nonterminal symbols: <strong>18</strong></li><li>Root nonterminal symbols: —</li><li>Other top nonterminal symbols: <strong>1</strong>: <code><a href="#syntax" class="nt">syntax</a></code></li><li>Bottom nonterminal symbols: <strong>3</strong>: <code><a href="#character" class="nt">character</a>, <a href="#letter" class="nt">letter</a>, <a href="#decimal_digit" class="nt">decimal_digit</a></code></li><li>Number of used terminal symbols: <strong>17</strong></li><li>Special terminal symbols: <strong>17</strong>: <code class="t">"=", ";", "|", ",", "-", "*", "[", "]", "{", "}", "(", ")", "’", """, "?", "(*", "*)"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="syntax">syntax</a>:
+        <a class="nt" href="#syntax_rule">syntax_rule</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="syntax_rule">syntax_rule</a>:
+        <a class="nt" href="#meta_identifier">meta_identifier</a> <span class="t">"="</span> <a class="nt" href="#definitions_list">definitions_list</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="definitions_list">definitions_list</a>:
+        <a class="nt" href="#single_definition">single_definition</a> (<span class="t">"|"</span> <a class="nt" href="#single_definition">single_definition</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="single_definition">single_definition</a>:
+        <a class="nt" href="#term">term</a> (<span class="t">","</span> <a class="nt" href="#term">term</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="term">term</a>:
+        <a class="nt" href="#factor">factor</a> (<span class="t">"-"</span> <a class="nt" href="#exception">exception</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="exception">exception</a>:
+        <a class="nt" href="#factor">factor</a>
+</pre><pre><a class="nt" name="factor">factor</a>:
+        (<a class="nt" href="#integer">integer</a> <span class="t">"*"</span>)<span class="meta">?</span> <a class="nt" href="#primary">primary</a>
+</pre><pre><a class="nt" name="primary">primary</a>:
+        <a class="nt" href="#optional_sequence">optional_sequence</a>
+        <a class="nt" href="#repeated_sequence">repeated_sequence</a>
+        <a class="nt" href="#special_sequence">special_sequence</a>
+        <a class="nt" href="#grouped_sequence">grouped_sequence</a>
+        <a class="nt" href="#meta_identifier">meta_identifier</a>
+        <a class="nt" href="#terminal_string">terminal_string</a>
+        <a class="nt" href="#empty">empty</a>
+</pre><pre><a class="nt" name="empty">empty</a>:
+        ε
+</pre><pre><a class="nt" name="optional_sequence">optional_sequence</a>:
+        <span class="t">"["</span> <a class="nt" href="#definitions_list">definitions_list</a> <span class="t">"]"</span>
+</pre><pre><a class="nt" name="repeated_sequence">repeated_sequence</a>:
+        <span class="t">"{"</span> <a class="nt" href="#definitions_list">definitions_list</a> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="grouped_sequence">grouped_sequence</a>:
+        <span class="t">"("</span> <a class="nt" href="#definitions_list">definitions_list</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="terminal_string">terminal_string</a>:
+        <span class="t">"’"</span> <a class="nt" href="#character">character</a><span class="meta">+</span> <span class="t">"’"</span>
+        <span class="t">"""</span> <a class="nt" href="#character">character</a><span class="meta">+</span> <span class="t">"""</span>
+</pre><pre><a class="nt" name="meta_identifier">meta_identifier</a>:
+        <a class="nt" href="#letter">letter</a> (<a class="nt" href="#letter">letter</a> | <a class="nt" href="#decimal_digit">decimal_digit</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="integer">integer</a>:
+        <a class="nt" href="#decimal_digit">decimal_digit</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="special_sequence">special_sequence</a>:
+        <span class="t">"?"</span> <a class="nt" href="#character">character</a><span class="meta">*</span> <span class="t">"?"</span>
+</pre><pre><a class="nt" name="comment">comment</a>:
+        <span class="t">"(*"</span> <a class="nt" href="#comment_symbol">comment_symbol</a><span class="meta">*</span> <span class="t">"*)"</span>
+</pre><pre><a class="nt" name="comment_symbol">comment_symbol</a>:
+        <a class="nt" href="#comment">comment</a>
+        <a class="nt" href="#terminal_string">terminal_string</a>
+        <a class="nt" href="#special_sequence">special_sequence</a>
+        <a class="nt" href="#character">character</a>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

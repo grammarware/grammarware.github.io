@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable FL Abstract Syntax Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable FL Abstract Syntax Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+						Ralf Lämmel, <code>fl.xsd</code>.
+					 (20 May – 29 July 2008) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>10</strong></li><li>Number of top alternatives: <strong>16</strong></li><li>Number of defined nonterminal symbols: <strong>10</strong></li><li>Root nonterminal symbols: <code><a href="#Program" class="nt">Program</a>, <a href="#Fragment" class="nt">Fragment</a></code></li><li>Other top nonterminal symbols: —</li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>—</strong></li></ul><h2>Syntax</h2><pre><a class="nt" name="Program">Program</a>:
+        <span class="sel">function</span>::<a class="nt" href="#Function">Function</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="Fragment">Fragment</a>:
+        <a class="nt" href="#Expr">Expr</a>
+</pre><pre><a class="nt" name="Function">Function</a>:
+        <span class="sel">name</span>::<span class="meta">string</span> <span class="sel">arg</span>::<span class="meta">string</span><span class="meta">+</span> <span class="sel">rhs</span>::<a class="nt" href="#Expr">Expr</a>
+</pre><pre><a class="nt" name="Expr">Expr</a>:
+        <a class="nt" href="#Literal">Literal</a>
+        <a class="nt" href="#Argument">Argument</a>
+        <a class="nt" href="#Binary">Binary</a>
+        <a class="nt" href="#IfThenElse">IfThenElse</a>
+        <a class="nt" href="#Apply">Apply</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <span class="sel">info</span>::<span class="meta">int</span>
+</pre><pre><a class="nt" name="Argument">Argument</a>:
+        <span class="sel">name</span>::<span class="meta">string</span>
+</pre><pre><a class="nt" name="Binary">Binary</a>:
+        <span class="sel">ops</span>::<a class="nt" href="#Ops">Ops</a> <span class="sel">left</span>::<a class="nt" href="#Expr">Expr</a> <span class="sel">right</span>::<a class="nt" href="#Expr">Expr</a>
+</pre><pre><a class="nt" name="Ops">Ops</a>:
+        <span class="sel">Equal</span>::ε
+        <span class="sel">Plus</span>::ε
+        <span class="sel">Minus</span>::ε
+</pre><pre><a class="nt" name="IfThenElse">IfThenElse</a>:
+        <span class="sel">ifExpr</span>::<a class="nt" href="#Expr">Expr</a> <span class="sel">thenExpr</span>::<a class="nt" href="#Expr">Expr</a> <span class="sel">elseExpr</span>::<a class="nt" href="#Expr">Expr</a>
+</pre><pre><a class="nt" name="Apply">Apply</a>:
+        <span class="sel">name</span>::<span class="meta">string</span> <span class="sel">arg</span>::<a class="nt" href="#Expr">Expr</a><span class="meta">+</span>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

@@ -1,0 +1,174 @@
+module Main
+
+exports
+  sorts
+        Program Contains Checkout Done Varid Assignment Constdeclaration Vardeclaration Procdeclaration Parameterlist Statement Ifstatement Whilestatement Expression Mixfix Conjunction Disjunction Comparison Addition-exp Multiply-exp Exp-exp Atom-exp Unary-exp Proccall Argumentlist Conditional Number Id SEMI COLON EQUALS COMMA PLUS MINUS MUL EXP FSLASH LPAREN RPAREN QUESTION BANG LANGLE RANGLE LBRACE RBRACE AND OR DEFINEDAS GTEQUALS LTEQUALS EQUALITY INEQUALITY DONE TROLLEY CHECKOUT CONTAINS PROC IF THEN ELSE WHILE DO SKIP VAR CONST Type TINT TDOUBLE CONSTID VARID UINT INT FLOAT EXPONENT WS COMMENT 
+  context-free syntax
+        TROLLEY CONSTID Contains Checkout Done -> Program
+
+        CONTAINS ((Procdeclaration | Constdeclaration | Vardeclaration) SEMI)* -> Contains
+
+        CHECKOUT Statement SEMI -> Checkout
+
+        DONE SEMI -> Done
+
+        CONSTID
+		| VARID -> Varid
+
+        name::Id DEFINEDAS exp::Expression -> Assignment
+
+        CONST name::CONSTID COLON t::Type DEFINEDAS exp::Expression -> Constdeclaration
+
+        VAR name::Varid COLON t::Type -> Vardeclaration
+
+        PROC name::Varid LPAREN params::Parameterlist RPAREN COLON t::Type DEFINEDAS content::Statement -> Procdeclaration
+
+        name::Varid COLON t::Type (COMMA params::Parameterlist)?
+		|  -> Parameterlist
+
+        SKIP
+		| LBRACE Statement (SEMI Statement)* SEMI? RBRACE
+		| Assignment
+		| Ifstatement
+		| Whilestatement -> Statement
+
+        IF exp::Expression THEN Statement ELSE Statement -> Ifstatement
+
+        WHILE exp::Expression DO Statement -> Whilestatement
+
+        e::Mixfix -> Expression
+
+        e::Conjunction (QUESTION t::Mixfix COLON f::Mixfix)? -> Mixfix
+
+        l::Disjunction (AND r::Disjunction)* -> Conjunction
+
+        l::Comparison (OR r::Comparison)* -> Disjunction
+
+        l::Addition-exp (c::Conditional r::Addition-exp)? -> Comparison
+
+        l::Multiply-exp ((o::PLUS | o::MINUS) r::Multiply-exp)* -> Addition-exp
+
+        l::Exp-exp ((o::MUL | o::FSLASH) r::Exp-exp)* -> Multiply-exp
+
+        l::Atom-exp (EXP r::Atom-exp)* -> Exp-exp
+
+        e::Unary-exp
+		| LPAREN exp::Expression RPAREN
+		| proc::Proccall -> Atom-exp
+
+        MINUS? (num::Number | var::Id) -> Unary-exp
+
+        proc::Varid LPAREN args::Argumentlist RPAREN -> Proccall
+
+        exp::Expression (COMMA args::Argumentlist)?
+		|  -> Argumentlist
+
+        t::EQUALITY
+		| t::INEQUALITY
+		| t::LANGLE
+		| t::RANGLE
+		| t::LTEQUALS
+		| t::GTEQUALS -> Conditional
+
+        f::FLOAT
+		| i::INT
+		| u::UINT -> Number
+
+        name::(CONSTID | VARID) -> Id
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        "=" -> EQUALS
+
+        "," -> COMMA
+
+        "+" -> PLUS
+
+        "-" -> MINUS
+
+        "*" -> MUL
+
+        "**" -> EXP
+
+        "/" -> FSLASH
+
+        "(" -> LPAREN
+
+        ")" -> RPAREN
+
+        "?" -> QUESTION
+
+        "!" -> BANG
+
+        "<" -> LANGLE
+
+        ">" -> RANGLE
+
+        "{" -> LBRACE
+
+        "}" -> RBRACE
+
+        "/\\" -> AND
+
+        "\\/" -> OR
+
+        COLON EQUALS -> DEFINEDAS
+
+        RANGLE EQUALS -> GTEQUALS
+
+        LANGLE EQUALS -> LTEQUALS
+
+        EQUALS EQUALS -> EQUALITY
+
+        BANG EQUALS -> INEQUALITY
+
+        "done" -> DONE
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "proc" -> PROC
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "skip" -> SKIP
+
+        "var" -> VAR
+
+        "const" -> CONST
+
+        TINT
+		| TDOUBLE -> Type
+
+        "int" -> TINT
+
+        "double" -> TDOUBLE
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VARID
+
+        ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> UINT
+
+        ("+" | "-")? UINT -> INT
+
+        INT? "." UINT? EXPONENT? -> FLOAT
+
+        ("e" | "E") INT -> EXPONENT
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        "/*" ANY* "*/" -> COMMENT

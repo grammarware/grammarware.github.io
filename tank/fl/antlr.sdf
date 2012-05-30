@@ -1,0 +1,27 @@
+module Main
+
+exports
+  sorts
+        Program Function Expr Binary Apply IfThenElse Atom Ops 
+  context-free syntax
+        Function+ -> Program
+
+        ID ID+ "=" Expr NEWLINE+ -> Function
+
+        Binary
+		| Apply
+		| IfThenElse -> Expr
+
+        Atom (Ops Atom)* -> Binary
+
+        ID Atom+ -> Apply
+
+        "if" Expr "then" Expr "else" Expr -> IfThenElse
+
+        ID
+		| INT
+		| "(" Expr ")" -> Atom
+
+        "=="
+		| "+"
+		| "-" -> Ops

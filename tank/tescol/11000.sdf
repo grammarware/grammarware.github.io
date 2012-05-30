@@ -1,0 +1,168 @@
+module Main
+
+exports
+  sorts
+        Program Trolley Checkout Done Declarations Constant Variable Procedure Parameters Parameter Statements Statement Ifstatement Whilestatement Skip Assignment Atom Expo Negation Divide Multiply Addition Subtraction Booleanop Conjunction Disjunction Conditexpr Runproc Expression Numbervalues INT DOU EXPONENT Relationships DONE SKIP TROLLEY CHECKOUT CONTAINS CONSTANT VARIABLE PROCEDURE INTEGER DOUBLE LEFTBRACKET RIGHTBRACKET SEMI CURLYLEFT CURLYRIGHT QUESTION COLON DEFINE COMMA IF WHILE DO THEN ELSE ADDITION SUBTRACTION DIVISION MULTIPLICATION EXPONENTIATION OR AND EQUALITY NONEQUALITY GREATERTHAN LESSTHAN GREATEROREQUAL LESSOREQUAL CID ID WS COMMENT 
+  context-free syntax
+        Trolley Checkout Done -> Program
+
+        TROLLEY CID CONTAINS Declarations* -> Trolley
+
+        CHECKOUT Statements -> Checkout
+
+        DONE SEMI -> Done
+
+        Constant
+		| Variable
+		| Procedure -> Declarations
+
+        CONSTANT CID COLON (INTEGER | DOUBLE) DEFINE Expression SEMI -> Constant
+
+        VARIABLE (ID | CID) COLON (INTEGER | DOUBLE) SEMI -> Variable
+
+        PROCEDURE (ID | CID) LEFTBRACKET Parameters RIGHTBRACKET COLON Numbervalues DEFINE Statements -> Procedure
+
+        (Parameter (COMMA Parameter)*)? -> Parameters
+
+        (ID | CONSTANT) COLON Numbervalues -> Parameter
+
+        (Statement | (CURLYLEFT Statement Statement* CURLYRIGHT)) SEMI -> Statements
+
+        (Ifstatement | Whilestatement | Skip | Assignment) SEMI -> Statement
+
+        IF LEFTBRACKET Expression RIGHTBRACKET THEN Statements ELSE Statements -> Ifstatement
+
+        WHILE Expression DO Statements -> Whilestatement
+
+        SKIP -> Skip
+
+        (ID | CID) DEFINE Expression -> Assignment
+
+        INT
+		| DOU
+		| ID
+		| CID
+		| LEFTBRACKET Expression RIGHTBRACKET -> Atom
+
+        Atom (EXPONENTIATION Atom)? -> Expo
+
+        (ADDITION | SUBTRACTION)? Expo -> Negation
+
+        Negation (DIVISION Negation)? -> Divide
+
+        Divide (MULTIPLICATION Divide)* -> Multiply
+
+        Multiply (ADDITION Multiply)* -> Addition
+
+        Addition (SUBTRACTION Addition)* -> Subtraction
+
+        Subtraction (Relationships Subtraction)? -> Booleanop
+
+        Booleanop (AND Booleanop)* -> Conjunction
+
+        Conjunction (OR Conjunction)* -> Disjunction
+
+        Disjunction (QUESTION Disjunction COLON Disjunction)* -> Conditexpr
+
+        Conditexpr
+		| (ID | CID) LEFTBRACKET (Expression (COMMA Expression)*)? RIGHTBRACKET -> Runproc
+
+        Runproc -> Expression
+
+        INTEGER
+		| DOUBLE -> Numbervalues
+
+        ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT
+
+        INT? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* EXPONENT? -> DOU
+
+        ("e" | "E") ("+" | "-") INT -> EXPONENT
+
+        EQUALITY
+		| NONEQUALITY
+		| GREATERTHAN
+		| LESSTHAN
+		| GREATEROREQUAL
+		| LESSOREQUAL -> Relationships
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "const" -> CONSTANT
+
+        "var" -> VARIABLE
+
+        "proc" -> PROCEDURE
+
+        "int" -> INTEGER
+
+        "double" -> DOUBLE
+
+        "(" -> LEFTBRACKET
+
+        ")" -> RIGHTBRACKET
+
+        ";" -> SEMI
+
+        "{" -> CURLYLEFT
+
+        "}" -> CURLYRIGHT
+
+        "?" -> QUESTION
+
+        ":" -> COLON
+
+        ":=" -> DEFINE
+
+        "," -> COMMA
+
+        "if" -> IF
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "+" -> ADDITION
+
+        "-" -> SUBTRACTION
+
+        "\\" -> DIVISION
+
+        "*" -> MULTIPLICATION
+
+        "**" -> EXPONENTIATION
+
+        "\\/" -> OR
+
+        "/\\" -> AND
+
+        "==" -> EQUALITY
+
+        "!=" -> NONEQUALITY
+
+        ">" -> GREATERTHAN
+
+        "<" -> LESSTHAN
+
+        ">=" -> GREATEROREQUAL
+
+        "<=" -> LESSOREQUAL
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "_") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "_") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        "/*" ANY* "*/" -> COMMENT

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable LLL Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable LLL Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: Jan Kort, Ralf Lämmel, Chris Verhoef, <em>The LLL grammar format</em> (April 2002) GDK System Demo, page 2</p><h2>Summary</h2><ul><li>Number of production rules: <strong>8</strong></li><li>Number of top alternatives: <strong>11</strong></li><li>Number of defined nonterminal symbols: <strong>8</strong></li><li>Root nonterminal symbols: <code><a href="#grammar" class="nt">grammar</a></code></li><li>Other top nonterminal symbols: —</li><li>Bottom nonterminal symbols: <strong>2</strong>: <code><a href="#sort" class="nt">sort</a>, <a href="#literal" class="nt">literal</a></code></li><li>Number of used terminal symbols: <strong>6</strong></li><li>Special terminal symbols: <strong>6</strong>: <code class="t">":", ";", "|", "*", "+", "?"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="grammar">grammar</a>:
+        <a class="nt" href="#rule">rule</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="rule">rule</a>:
+        <a class="nt" href="#sort">sort</a> <span class="t">":"</span> <a class="nt" href="#alts">alts</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="alts">alts</a>:
+        <a class="nt" href="#alt">alt</a> <a class="nt" href="#alts-tail">alts-tail</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="alts-tail">alts-tail</a>:
+        <span class="t">"|"</span> <a class="nt" href="#alt">alt</a>
+</pre><pre><a class="nt" name="alt">alt</a>:
+        <a class="nt" href="#term">term</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="term">term</a>:
+        <a class="nt" href="#basis">basis</a> <a class="nt" href="#repetition">repetition</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="basis">basis</a>:
+        <a class="nt" href="#literal">literal</a>
+        <a class="nt" href="#sort">sort</a>
+</pre><pre><a class="nt" name="repetition">repetition</a>:
+        <span class="t">"*"</span>
+        <span class="t">"+"</span>
+        <span class="t">"?"</span>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

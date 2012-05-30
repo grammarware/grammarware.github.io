@@ -1,0 +1,157 @@
+module Main
+
+exports
+  sorts
+        Program Declarations Constdec Vardec Procdec Statements Statement Assign Condstatement Loop Param ComparOps Arith OrExpr AndExpr ComparExpr ArithExpr MultiExpr ExpExpr Atom Nums Procapp Type Id COMMENT SEMI DONE SKIP TROLLEY CHECKOUT CONTAINS INT DOUBLE CONST PROC VAR IF THEN ELSE WHILE DO CONSTID VARID WS INTNUM DOUBNUM LBRACK RBRACK LCBRACK RCBRACK ADD SUB EXP MULT DEF DIV QUES COL COMMA EQ NEQ LTE GTE LT GT CONJ DISJ 
+  context-free syntax
+        TROLLEY CONSTID CONTAINS Declarations CHECKOUT Statement SEMI DONE SEMI -> Program
+
+        (Constdec | Vardec | Procdec)+ -> Declarations
+
+        CONST CONSTID COL Type DEF Arith SEMI -> Constdec
+
+        VAR Id COL Type SEMI -> Vardec
+
+        PROC Id LBRACK Param RBRACK COL Type DEF Statement SEMI -> Procdec
+
+        Assign
+		| Condstatement
+		| Loop -> Statements
+
+        SKIP
+		| Statements
+		| LCBRACK Statement (SEMI Statement)* RCBRACK -> Statement
+
+        Id DEF Arith -> Assign
+
+        IF OrExpr THEN Statement ELSE Statement -> Condstatement
+
+        WHILE OrExpr DO Statement -> Loop
+
+        (l::Id COL ltype::Type (COMMA r::Id COL rtype::Type)*)? -> Param
+
+        EQ
+		| NEQ
+		| LT
+		| GT
+		| LTE
+		| GTE -> ComparOps
+
+        OrExpr (QUES Arith COL Arith)? -> Arith
+
+        AndExpr (DISJ AndExpr)* -> OrExpr
+
+        ComparExpr (CONJ ComparExpr)* -> AndExpr
+
+        ArithExpr (ComparOps ArithExpr)* -> ComparExpr
+
+        MultiExpr ((ADD | SUB) MultiExpr)* -> ArithExpr
+
+        ExpExpr ((MULT | DIV) ExpExpr)* -> MultiExpr
+
+        Atom (EXP Atom)* -> ExpExpr
+
+        INTNUM
+		| DOUBNUM
+		| Id
+		| Procapp
+		| LBRACK Arith RBRACK -> Atom
+
+        VARID
+		| CONSTID
+		| INTNUM
+		| DOUBNUM -> Nums
+
+        Id LBRACK Arith (COMMA Arith)* RBRACK -> Procapp
+
+        INT
+		| DOUBLE -> Type
+
+        CONSTID
+		| VARID -> Id
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ";" -> SEMI
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "int" -> INT
+
+        "double" -> DOUBLE
+
+        "const" -> CONST
+
+        "proc" -> PROC
+
+        "var" -> VAR
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VARID
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INTNUM
+
+        INTNUM? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") INTNUM)? -> DOUBNUM
+
+        "(" -> LBRACK
+
+        ")" -> RBRACK
+
+        "{" -> LCBRACK
+
+        "}" -> RCBRACK
+
+        "+" -> ADD
+
+        "-" -> SUB
+
+        "**" -> EXP
+
+        "*" -> MULT
+
+        ":=" -> DEF
+
+        "/" -> DIV
+
+        "?" -> QUES
+
+        ":" -> COL
+
+        "," -> COMMA
+
+        "==" -> EQ
+
+        "!=" -> NEQ
+
+        "<=" -> LTE
+
+        ">=" -> GTE
+
+        "<" -> LT
+
+        ">" -> GT
+
+        "/\\" -> CONJ
+
+        "\\/" -> DISJ

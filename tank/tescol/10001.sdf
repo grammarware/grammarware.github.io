@@ -1,0 +1,157 @@
+module Main
+
+exports
+  sorts
+        Prog Stat Type Def Vartypedef CondExpr BoolExpr AndExpr CompExpr Expr MultExpr ID Id Cid Atom Trolley Checkout Assignment Ifstat Whilestat ARGLIST PROCBODY Procedure CALL Proccall SEMI COMMA COLON QUESTION EQUALITY NON-EQUALITY LESS LESS-EQUAL GREATER-EQUAL GREATER CONJUNCTION DISJUNCTION COLON-EQUALS ADDITION SUBTRACTION DIVISION MULTIPLICATION EXPONENTIATION IF THEN ELSE WHILE DO DONE TROLLEY CONTAINS SKIP CHECKOUT INT DOUBLE CONST VAR PROC LBRACE RBRACE LPAREN RPAREN INT-NUMBER DOUBLE-NUMBER CIDENT IDENT WS COMMENT 
+  context-free syntax
+        Stat+ -> Prog
+
+        Expr SEMI
+		| Trolley
+		| Checkout
+		| Assignment
+		| Ifstat
+		| Whilestat
+		| SKIP SEMI
+		| LBRACE Stat+ RBRACE
+		| SEMI -> Stat
+
+        INT
+		| DOUBLE -> Type
+
+        CONST n::Cid COLON t::Type COLON-EQUALS e::Expr SEMI
+		| VAR Vartypedef SEMI
+		| Procedure SEMI -> Def
+
+        Id COLON (INT | DOUBLE) -> Vartypedef
+
+        BoolExpr (QUESTION CondExpr COLON CondExpr)? -> CondExpr
+
+        AndExpr (DISJUNCTION AndExpr)* -> BoolExpr
+
+        CompExpr (CONJUNCTION CompExpr)* -> AndExpr
+
+        Expr ((GREATER-EQUAL | LESS-EQUAL | EQUALITY | NON-EQUALITY | LESS | GREATER) Expr)? -> CompExpr
+
+        MultExpr ((ADDITION | SUBTRACTION) MultExpr)* -> Expr
+
+        Atom ((MULTIPLICATION | DIVISION | EXPONENTIATION) Atom)* -> MultExpr
+
+        "id" -> ID
+
+        i::IDENT -> Id
+
+        i::CIDENT -> Cid
+
+        INT-NUMBER
+		| DOUBLE-NUMBER
+		| Id
+		| Cid
+		| LPAREN CondExpr RPAREN
+		| Proccall -> Atom
+
+        TROLLEY Cid CONTAINS Def* -> Trolley
+
+        CHECKOUT Stat SEMI? DONE SEMI -> Checkout
+
+        Id COLON-EQUALS CondExpr SEMI -> Assignment
+
+        IF e::CondExpr THEN ts::Stat ELSE es::Stat -> Ifstat
+
+        WHILE e::CondExpr DO s::Stat -> Whilestat
+
+        "arglist" -> ARGLIST
+
+        "procbody" -> PROCBODY
+
+        PROC i::Id LPAREN (a::Vartypedef (COMMA a::Vartypedef)*)? RPAREN COLON-EQUALS s::Stat -> Procedure
+
+        "call" -> CALL
+
+        i::Id LPAREN (a::Atom (COMMA a::Atom)*)? RPAREN -> Proccall
+
+        ";" -> SEMI
+
+        "," -> COMMA
+
+        ":" -> COLON
+
+        "?" -> QUESTION
+
+        "==" -> EQUALITY
+
+        "!=" -> NON-EQUALITY
+
+        "<" -> LESS
+
+        "<=" -> LESS-EQUAL
+
+        ">=" -> GREATER-EQUAL
+
+        ">" -> GREATER
+
+        "/\\" -> CONJUNCTION
+
+        "\\/" -> DISJUNCTION
+
+        ":=" -> COLON-EQUALS
+
+        "+" -> ADDITION
+
+        "-" -> SUBTRACTION
+
+        "/" -> DIVISION
+
+        "*" -> MULTIPLICATION
+
+        "**" -> EXPONENTIATION
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "done" -> DONE
+
+        "trolley" -> TROLLEY
+
+        "contains" -> CONTAINS
+
+        "skip" -> SKIP
+
+        "checkout" -> CHECKOUT
+
+        "int" -> INT
+
+        "double" -> DOUBLE
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "{" -> LBRACE
+
+        "}" -> RBRACE
+
+        "(" -> LPAREN
+
+        ")" -> RPAREN
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT-NUMBER
+
+        INT-NUMBER? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* ("e" INT-NUMBER)? -> DOUBLE-NUMBER
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CIDENT
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> IDENT
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        "/*" ANY* "*/" -> COMMENT

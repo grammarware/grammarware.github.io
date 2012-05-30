@@ -1,0 +1,618 @@
+module Main
+
+exports
+ context-free start-symbols compilationUnit
+  sorts
+        CompilationUnit HASHBANG NEWLINE Directive Identifier IDENTIFIER-NO-DOLLAR IDENTIFIER-START-NO-DOLLAR LETTER IDENTIFIER-PART-NO-DOLLAR DIGIT IDENTIFIER IDENTIFIER-START IDENTIFIER-PART ABSTRACT ASSERT CLASS EXTENDS FACTORY GET IMPLEMENTS IMPORT INTERFACE IS LIBRARY NATIVE NEGATE OPERATOR SET SOURCE STATIC TYPEDEF Arguments ArgumentList NamedArgument Label Expression AssignableExpression Primary PrimaryNoFE THIS SUPER AssignableSelector Literal NULL TRUE FALSE HEX-NUMBER HEX-DIGIT NUMBER NUMBER-OPT-FRACTIONAL-PART EXPONENT NUMBER-OPT-ILLEGAL-END STRING MULTI-LINE-STRING SINGLE-LINE-STRING STRING-CONTENT-DQ STRING-CONTENT-SQ CONST TypeArguments TypeList Type Qualified CompoundLiteral ListLiteral ExpressionList MapLiteral MapLiteralEntry NEW ExpressionInParentheses PrimaryFE FunctionExpression ReturnType VOID FormalParameterList NamedFormalParameters DefaultFormalParameter NormalFormalParameter FunctionDeclaration FieldFormalParameter FinalVarOrType FINAL VAR SimpleFormalParameter DeclaredIdentifier ConstantExpression NormalFormalParameterTail FunctionExpressionBody Block Statements Statement NonLabelledStatement InitializedVariableDeclaration InitializedIdentifier IterationStatement WHILE DO FOR ForLoopParts ForInitializerStatement IN SelectionStatement IF ELSE SWITCH SwitchCase CASE DefaultCase DEFAULT TryStatement TRY CatchPart CATCH FinallyPart FINALLY BREAK CONTINUE RETURN THROW ConditionalExpression LogicalOrExpression LogicalAndExpression BitwiseOrExpression BitwiseXorExpression BitwiseAndExpression EqualityExpression RelationalExpression ShiftExpression AdditiveExpression MultiplicativeExpression UnaryExpression PostfixExpression PostfixOperator IncrementOperator Selector PrefixOperator AdditiveOperator NegateOperator MultiplicativeOperator ShiftOperator IsOperator RelationalOperator EqualityOperator FunctionBody AssignmentOperator TopLevelDefinition ClassDefinition TypeParameters TypeParameter Superclass Interfaces ClassMemberDefinition Declaration ConstantConstructorDeclaration Redirection Initializers SuperCallOrFieldInitializer FieldInitializer NamedConstructorDeclaration SpecialSignatureDefinition GetOrSet UserDefinableOperator BitwiseOperator StaticFinalDeclarationList StaticFinalDeclaration ConstInitializedVariableDeclaration ConstInitializedIdentifier ConstructorDeclaration MethodDeclaration FactoryConstructorDeclaration FunctionBodyOrNative FunctionNative InterfaceDefinition Superinterfaces FactorySpecification InterfaceMemberDefinition InitializedIdentifierList VariableDeclaration FunctionTypeAlias FunctionPrefix LibraryUnit LibraryDefinition LibraryBody LibraryImport ImportReferences ImportReference LibrarySource SourceUrls 
+  context-free syntax
+        HASHBANG? Directive* TopLevelDefinition* EOF -> CompilationUnit
+
+        "#!" ANY* NEWLINE? -> HASHBANG
+
+        "\n"
+		| "\r" -> NEWLINE
+
+        "#" Identifier Arguments ";" -> Directive
+
+        IDENTIFIER-NO-DOLLAR
+		| IDENTIFIER
+		| ABSTRACT
+		| ASSERT
+		| CLASS
+		| EXTENDS
+		| FACTORY
+		| GET
+		| IMPLEMENTS
+		| IMPORT
+		| INTERFACE
+		| IS
+		| LIBRARY
+		| NATIVE
+		| NEGATE
+		| OPERATOR
+		| SET
+		| SOURCE
+		| STATIC
+		| TYPEDEF -> Identifier
+
+        IDENTIFIER-START-NO-DOLLAR IDENTIFIER-PART-NO-DOLLAR* -> IDENTIFIER-NO-DOLLAR
+
+        LETTER
+		| "_" -> IDENTIFIER-START-NO-DOLLAR
+
+        "a"
+		| "b"
+		| "c"
+		| "d"
+		| "e"
+		| "f"
+		| "g"
+		| "h"
+		| "i"
+		| "j"
+		| "k"
+		| "l"
+		| "m"
+		| "n"
+		| "o"
+		| "p"
+		| "q"
+		| "r"
+		| "s"
+		| "t"
+		| "u"
+		| "v"
+		| "w"
+		| "x"
+		| "y"
+		| "z"
+		| "A"
+		| "B"
+		| "C"
+		| "D"
+		| "E"
+		| "F"
+		| "G"
+		| "H"
+		| "I"
+		| "J"
+		| "K"
+		| "L"
+		| "M"
+		| "N"
+		| "O"
+		| "P"
+		| "Q"
+		| "R"
+		| "S"
+		| "T"
+		| "U"
+		| "V"
+		| "W"
+		| "X"
+		| "Y"
+		| "Z" -> LETTER
+
+        IDENTIFIER-START-NO-DOLLAR
+		| DIGIT -> IDENTIFIER-PART-NO-DOLLAR
+
+        "0"
+		| "1"
+		| "2"
+		| "3"
+		| "4"
+		| "5"
+		| "6"
+		| "7"
+		| "8"
+		| "9" -> DIGIT
+
+        IDENTIFIER-START IDENTIFIER-PART* -> IDENTIFIER
+
+        IDENTIFIER-START-NO-DOLLAR
+		| "$" -> IDENTIFIER-START
+
+        IDENTIFIER-START
+		| DIGIT -> IDENTIFIER-PART
+
+        "abstract" -> ABSTRACT
+
+        "assert" -> ASSERT
+
+        "class" -> CLASS
+
+        "extends" -> EXTENDS
+
+        "factory" -> FACTORY
+
+        "get" -> GET
+
+        "implements" -> IMPLEMENTS
+
+        "import" -> IMPORT
+
+        "interface" -> INTERFACE
+
+        "is" -> IS
+
+        "library" -> LIBRARY
+
+        "native" -> NATIVE
+
+        "negate" -> NEGATE
+
+        "operator" -> OPERATOR
+
+        "set" -> SET
+
+        "source" -> SOURCE
+
+        "static" -> STATIC
+
+        "typedef" -> TYPEDEF
+
+        "(" ArgumentList? ")" -> Arguments
+
+        NamedArgument ("," NamedArgument)*
+		| ExpressionList ("," NamedArgument)* -> ArgumentList
+
+        Label Expression -> NamedArgument
+
+        Identifier ":" -> Label
+
+        AssignableExpression AssignmentOperator Expression
+		| ConditionalExpression -> Expression
+
+        Primary (Arguments* AssignableSelector)+
+		| SUPER AssignableSelector
+		| Identifier -> AssignableExpression
+
+        PrimaryNoFE
+		| PrimaryFE -> Primary
+
+        THIS
+		| SUPER AssignableSelector
+		| Literal
+		| Identifier
+		| CONST? TypeArguments? CompoundLiteral
+		| (NEW | CONST) Type ("." Identifier)? Arguments
+		| ExpressionInParentheses -> PrimaryNoFE
+
+        "this" -> THIS
+
+        "super" -> SUPER
+
+        "[" Expression "]"
+		| "." Identifier -> AssignableSelector
+
+        NULL
+		| TRUE
+		| FALSE
+		| HEX-NUMBER
+		| NUMBER
+		| STRING -> Literal
+
+        "null" -> NULL
+
+        "true" -> TRUE
+
+        "false" -> FALSE
+
+        "0x" HEX-DIGIT+
+		| "0X" HEX-DIGIT+ -> HEX-NUMBER
+
+        "a"
+		| "b"
+		| "c"
+		| "d"
+		| "e"
+		| "f"
+		| "A"
+		| "B"
+		| "C"
+		| "D"
+		| "E"
+		| "F"
+		| DIGIT -> HEX-DIGIT
+
+        DIGIT+ NUMBER-OPT-FRACTIONAL-PART EXPONENT? NUMBER-OPT-ILLEGAL-END
+		| "." DIGIT+ EXPONENT? NUMBER-OPT-ILLEGAL-END -> NUMBER
+
+        "." DIGIT+
+		|  -> NUMBER-OPT-FRACTIONAL-PART
+
+        ("e" | "E") ("+" | "-")? DIGIT+ -> EXPONENT
+
+         -> NUMBER-OPT-ILLEGAL-END
+
+        "@"? MULTI-LINE-STRING
+		| SINGLE-LINE-STRING -> STRING
+
+        """"" ANY* """""
+		| "\'\'\'" ANY* "\'\'\'" -> MULTI-LINE-STRING
+
+        """ STRING-CONTENT-DQ* """
+		| "\'" STRING-CONTENT-SQ* "\'"
+		| "@" "\'" ANY* "\'"
+		| "@" """ ANY* """ -> SINGLE-LINE-STRING
+
+        ANY
+		| "\\" ANY -> STRING-CONTENT-DQ
+
+        ANY
+		| "\\" ANY -> STRING-CONTENT-SQ
+
+        "const" -> CONST
+
+        "<" TypeList ">" -> TypeArguments
+
+        Type ("," Type)* -> TypeList
+
+        Qualified TypeArguments? -> Type
+
+        Identifier ("." Identifier)? -> Qualified
+
+        ListLiteral
+		| MapLiteral -> CompoundLiteral
+
+        "[" (ExpressionList ","?)? "]" -> ListLiteral
+
+        Expression ("," Expression)* -> ExpressionList
+
+        "{" (MapLiteralEntry ("," MapLiteralEntry)* ","?)? "}" -> MapLiteral
+
+        STRING ":" Expression -> MapLiteralEntry
+
+        "new" -> NEW
+
+        "(" Expression ")" -> ExpressionInParentheses
+
+        FunctionExpression
+		| PrimaryNoFE -> PrimaryFE
+
+        (ReturnType? Identifier)? FormalParameterList FunctionExpressionBody -> FunctionExpression
+
+        VOID
+		| Type -> ReturnType
+
+        "void" -> VOID
+
+        "(" NamedFormalParameters? ")"
+		| "(" NormalFormalParameter NormalFormalParameterTail? ")" -> FormalParameterList
+
+        "[" DefaultFormalParameter ("," DefaultFormalParameter)* "]" -> NamedFormalParameters
+
+        NormalFormalParameter ("=" ConstantExpression)? -> DefaultFormalParameter
+
+        FunctionDeclaration
+		| FieldFormalParameter
+		| SimpleFormalParameter -> NormalFormalParameter
+
+        ReturnType? Identifier FormalParameterList -> FunctionDeclaration
+
+        FinalVarOrType? THIS "." Identifier -> FieldFormalParameter
+
+        FINAL Type?
+		| VAR
+		| Type -> FinalVarOrType
+
+        "final" -> FINAL
+
+        "var" -> VAR
+
+        DeclaredIdentifier
+		| Identifier -> SimpleFormalParameter
+
+        FINAL Type? Identifier
+		| VAR Identifier
+		| Type Identifier -> DeclaredIdentifier
+
+        Expression -> ConstantExpression
+
+        "," NamedFormalParameters
+		| "," NormalFormalParameter NormalFormalParameterTail? -> NormalFormalParameterTail
+
+        "=>" Expression
+		| Block -> FunctionExpressionBody
+
+        "{" Statements "}" -> Block
+
+        Statement* -> Statements
+
+        Label* NonLabelledStatement -> Statement
+
+        Block
+		| InitializedVariableDeclaration ";"
+		| IterationStatement
+		| SelectionStatement
+		| TryStatement
+		| BREAK Identifier? ";"
+		| CONTINUE Identifier? ";"
+		| RETURN Expression? ";"
+		| THROW Expression? ";"
+		| Expression? ";"
+		| ASSERT "(" ConditionalExpression ")" ";"
+		| FunctionDeclaration FunctionBody -> NonLabelledStatement
+
+        DeclaredIdentifier ("=" Expression)? ("," InitializedIdentifier)* -> InitializedVariableDeclaration
+
+        Identifier ("=" Expression)? -> InitializedIdentifier
+
+        WHILE "(" Expression ")" Statement
+		| DO Statement WHILE "(" Expression ")" ";"
+		| FOR "(" ForLoopParts ")" Statement -> IterationStatement
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "for" -> FOR
+
+        ForInitializerStatement Expression? ";" ExpressionList?
+		| DeclaredIdentifier IN Expression
+		| Identifier IN Expression -> ForLoopParts
+
+        InitializedVariableDeclaration ";"
+		| Expression? ";" -> ForInitializerStatement
+
+        "in" -> IN
+
+        IF "(" Expression ")" Statement (ELSE Statement)?
+		| SWITCH "(" Expression ")" "{" SwitchCase* DefaultCase? "}" -> SelectionStatement
+
+        "if" -> IF
+
+        "else" -> ELSE
+
+        "switch" -> SWITCH
+
+        Label? (CASE Expression ":")+ Statements -> SwitchCase
+
+        "case" -> CASE
+
+        Label? (CASE Expression ":")* DEFAULT ":" Statements -> DefaultCase
+
+        "default" -> DEFAULT
+
+        TRY Block ((CatchPart+ FinallyPart?) | FinallyPart) -> TryStatement
+
+        "try" -> TRY
+
+        CATCH "(" DeclaredIdentifier ("," DeclaredIdentifier)? ")" Block -> CatchPart
+
+        "catch" -> CATCH
+
+        FINALLY Block -> FinallyPart
+
+        "finally" -> FINALLY
+
+        "break" -> BREAK
+
+        "continue" -> CONTINUE
+
+        "return" -> RETURN
+
+        "throw" -> THROW
+
+        LogicalOrExpression ("?" Expression ":" Expression)? -> ConditionalExpression
+
+        LogicalAndExpression ("||" LogicalAndExpression)* -> LogicalOrExpression
+
+        BitwiseOrExpression ("&&" BitwiseOrExpression)* -> LogicalAndExpression
+
+        BitwiseXorExpression ("|" BitwiseXorExpression)*
+		| SUPER ("|" BitwiseXorExpression)+ -> BitwiseOrExpression
+
+        BitwiseAndExpression ("^" BitwiseAndExpression)*
+		| SUPER ("^" BitwiseAndExpression)+ -> BitwiseXorExpression
+
+        EqualityExpression ("&" EqualityExpression)*
+		| SUPER ("&" EqualityExpression)+ -> BitwiseAndExpression
+
+        RelationalExpression (EqualityOperator RelationalExpression)?
+		| SUPER EqualityOperator RelationalExpression -> EqualityExpression
+
+        ShiftExpression ((IsOperator Type) | (RelationalOperator ShiftExpression))?
+		| SUPER RelationalOperator ShiftExpression -> RelationalExpression
+
+        AdditiveExpression (ShiftOperator AdditiveExpression)*
+		| SUPER (ShiftOperator AdditiveExpression)+ -> ShiftExpression
+
+        MultiplicativeExpression (AdditiveOperator MultiplicativeExpression)*
+		| SUPER (AdditiveOperator MultiplicativeExpression)+ -> AdditiveExpression
+
+        UnaryExpression (MultiplicativeOperator UnaryExpression)*
+		| SUPER (MultiplicativeOperator UnaryExpression)+ -> MultiplicativeExpression
+
+        PostfixExpression
+		| PrefixOperator UnaryExpression
+		| NegateOperator SUPER
+		| "-" SUPER
+		| IncrementOperator AssignableExpression -> UnaryExpression
+
+        AssignableExpression PostfixOperator
+		| Primary Selector* -> PostfixExpression
+
+        IncrementOperator -> PostfixOperator
+
+        "++"
+		| "--" -> IncrementOperator
+
+        AssignableSelector
+		| Arguments -> Selector
+
+        AdditiveOperator
+		| NegateOperator -> PrefixOperator
+
+        "+"
+		| "-" -> AdditiveOperator
+
+        "!"
+		| "~" -> NegateOperator
+
+        "*"
+		| "/"
+		| "%"
+		| "~/" -> MultiplicativeOperator
+
+        "<<"
+		| ">" ">" ">"
+		| ">" ">" -> ShiftOperator
+
+        IS "!"? -> IsOperator
+
+        ">" "="
+		| ">"
+		| "<="
+		| "<" -> RelationalOperator
+
+        "=="
+		| "!="
+		| "==="
+		| "!==" -> EqualityOperator
+
+        "=>" Expression ";"
+		| Block -> FunctionBody
+
+        "="
+		| "*="
+		| "/="
+		| "~/="
+		| "%="
+		| "+="
+		| "-="
+		| "<<="
+		| ">" ">" ">" "="
+		| ">" ">" "="
+		| "&="
+		| "^="
+		| "|=" -> AssignmentOperator
+
+        ClassDefinition
+		| InterfaceDefinition
+		| FunctionTypeAlias
+		| FunctionDeclaration FunctionBodyOrNative
+		| ReturnType? GetOrSet Identifier FormalParameterList FunctionBodyOrNative
+		| FINAL Type? StaticFinalDeclarationList ";"
+		| ConstInitializedVariableDeclaration ";" -> TopLevelDefinition
+
+        CLASS Identifier TypeParameters? Superclass? Interfaces? "{" ClassMemberDefinition* "}"
+		| CLASS Identifier TypeParameters? Interfaces? NATIVE STRING "{" ClassMemberDefinition* "}" -> ClassDefinition
+
+        "<" TypeParameter ("," TypeParameter)* ">" -> TypeParameters
+
+        Identifier (EXTENDS Type)? -> TypeParameter
+
+        EXTENDS Type -> Superclass
+
+        IMPLEMENTS TypeList -> Interfaces
+
+        Declaration ";"
+		| ConstructorDeclaration ";"
+		| MethodDeclaration FunctionBodyOrNative
+		| CONST FactoryConstructorDeclaration FunctionNative -> ClassMemberDefinition
+
+        ConstantConstructorDeclaration (Redirection | Initializers)?
+		| FunctionDeclaration Redirection
+		| NamedConstructorDeclaration Redirection
+		| ABSTRACT SpecialSignatureDefinition
+		| ABSTRACT FunctionDeclaration
+		| STATIC FINAL Type? StaticFinalDeclarationList
+		| STATIC? ConstInitializedVariableDeclaration -> Declaration
+
+        CONST Qualified FormalParameterList -> ConstantConstructorDeclaration
+
+        ":" THIS ("." Identifier)? Arguments -> Redirection
+
+        ":" SuperCallOrFieldInitializer ("," SuperCallOrFieldInitializer)* -> Initializers
+
+        SUPER Arguments
+		| SUPER "." Identifier Arguments
+		| FieldInitializer -> SuperCallOrFieldInitializer
+
+        (THIS ".")? Identifier "=" ConditionalExpression -> FieldInitializer
+
+        Identifier "." Identifier FormalParameterList -> NamedConstructorDeclaration
+
+        STATIC? ReturnType? GetOrSet Identifier FormalParameterList
+		| ReturnType? OPERATOR UserDefinableOperator FormalParameterList -> SpecialSignatureDefinition
+
+        GET
+		| SET -> GetOrSet
+
+        MultiplicativeOperator
+		| AdditiveOperator
+		| ShiftOperator
+		| RelationalOperator
+		| BitwiseOperator
+		| "=="
+		| "~"
+		| NEGATE
+		| "[" "]"
+		| "[" "]" "=" -> UserDefinableOperator
+
+        "&"
+		| "^"
+		| "|" -> BitwiseOperator
+
+        StaticFinalDeclaration ("," StaticFinalDeclaration)* -> StaticFinalDeclarationList
+
+        Identifier "=" ConstantExpression -> StaticFinalDeclaration
+
+        DeclaredIdentifier ("=" ConstantExpression)? ("," ConstInitializedIdentifier)* -> ConstInitializedVariableDeclaration
+
+        Identifier ("=" ConstantExpression)? -> ConstInitializedIdentifier
+
+        Identifier FormalParameterList (Redirection | Initializers)?
+		| NamedConstructorDeclaration (Redirection | Initializers)? -> ConstructorDeclaration
+
+        FactoryConstructorDeclaration
+		| STATIC FunctionDeclaration
+		| SpecialSignatureDefinition
+		| FunctionDeclaration Initializers?
+		| NamedConstructorDeclaration Initializers? -> MethodDeclaration
+
+        FACTORY Qualified TypeParameters? ("." Identifier)? FormalParameterList -> FactoryConstructorDeclaration
+
+        NATIVE FunctionBody
+		| FunctionNative
+		| FunctionBody -> FunctionBodyOrNative
+
+        NATIVE STRING? ";" -> FunctionNative
+
+        INTERFACE Identifier TypeParameters? Superinterfaces? FactorySpecification? "{" InterfaceMemberDefinition* "}" -> InterfaceDefinition
+
+        EXTENDS TypeList -> Superinterfaces
+
+        FACTORY Type -> FactorySpecification
+
+        STATIC FINAL Type? InitializedIdentifierList ";"
+		| FunctionDeclaration ";"
+		| ConstantConstructorDeclaration ";"
+		| NamedConstructorDeclaration ";"
+		| SpecialSignatureDefinition ";"
+		| VariableDeclaration ";" -> InterfaceMemberDefinition
+
+        InitializedIdentifier ("," InitializedIdentifier)* -> InitializedIdentifierList
+
+        DeclaredIdentifier ("," Identifier)* -> VariableDeclaration
+
+        TYPEDEF FunctionPrefix TypeParameters? FormalParameterList ";" -> FunctionTypeAlias
+
+        ReturnType? Identifier -> FunctionPrefix
+
+        LibraryDefinition EOF -> LibraryUnit
+
+        LIBRARY "{" LibraryBody "}" -> LibraryDefinition
+
+        LibraryImport? LibrarySource? -> LibraryBody
+
+        IMPORT "=" "[" ImportReferences? "]" -> LibraryImport
+
+        ImportReference ("," ImportReference)* ","? -> ImportReferences
+
+        (IDENTIFIER ":")? STRING -> ImportReference
+
+        SOURCE "=" "[" SourceUrls? "]" -> LibrarySource
+
+        STRING ("," STRING)* ","? -> SourceUrls

@@ -1,0 +1,205 @@
+module Main
+
+exports
+  sorts
+        Program Declaration Constdec Vardec Procdec Paralist Parameter Type Arithexp Connexp Compexp Addsubexp Multidivexp Expoexp Negateexp Parexp Statement Substatement Assignment Cond Loop Keyword Token Identifier Constantid Symbol Syntaxsymbol Operatorsymbol Comparisonsymbol Compoperator Literal DONE SKIP TROLLEY CHECKOUT CONTAINS CONST VAR PROC IF THEN ELSE WHILE DO INTWORD DOUWORD COMMENT INT DOUBLE COLON COMMA SEMI LPAR RPAR ASSIGN LBRACE RBRACE QMARK ADD SUB DIV MULTI EXPO EQUALS NOTEQ LT LTE GT GTE CONJUNCT DISJUNCT CONSTID ID WS 
+  context-free syntax
+        TROLLEY n1::CONSTID CONTAINS d1::(Declaration*) CHECKOUT s1::Statement DONE SEMI -> Program
+
+        Constdec
+		| Vardec
+		| Procdec -> Declaration
+
+        CONST id1::CONSTID COLON t1::Type ASSIGN a1::Arithexp SEMI -> Constdec
+
+        VAR id1::ID COLON t1::Type SEMI -> Vardec
+
+        PROC id1::ID LPAR p1::Paralist RPAR COLON t1::Type ASSIGN s1::Statement -> Procdec
+
+        (Parameter COMMA)* Parameter -> Paralist
+
+        id1::ID COLON Type -> Parameter
+
+        INTWORD
+		| DOUWORD -> Type
+
+        Connexp (QMARK Connexp COLON Connexp)? -> Arithexp
+
+        c1::Compexp (co1::Compoperator c2::Compexp)* -> Connexp
+
+        Addsubexp (Comparisonsymbol Addsubexp)* -> Compexp
+
+        Multidivexp ((ADD | SUB) Multidivexp)* -> Addsubexp
+
+        Expoexp ((MULTI | DIV) Expoexp)* -> Multidivexp
+
+        Negateexp (EXPO Negateexp)? -> Expoexp
+
+        SUB Negateexp
+		| Parexp -> Negateexp
+
+        Literal
+		| id2::CONSTID
+		| id1::ID
+		| LPAR Arithexp RPAR -> Parexp
+
+        LBRACE Substatement* RBRACE SEMI
+		| Substatement -> Statement
+
+        SKIP SEMI
+		| Assignment
+		| Cond
+		| Loop -> Substatement
+
+        id1::ID ASSIGN a1::Arithexp SEMI -> Assignment
+
+        IF a1::Arithexp THEN s1::Statement ELSE s2::Statement -> Cond
+
+        WHILE a1::Arithexp DO s1::Statement -> Loop
+
+        DONE
+		| TROLLEY
+		| CONTAINS
+		| CHECKOUT
+		| SKIP
+		| CONST
+		| PROC
+		| VAR
+		| IF
+		| THEN
+		| ELSE
+		| WHILE
+		| DO
+		| INTWORD
+		| DOUWORD -> Keyword
+
+        Keyword
+		| WS
+		| Identifier
+		| Symbol
+		| COMMENT
+		| Literal
+		| Constantid -> Token
+
+        ID -> Identifier
+
+        CONSTID -> Constantid
+
+        Syntaxsymbol
+		| Operatorsymbol
+		| Comparisonsymbol -> Symbol
+
+        SEMI
+		| COLON
+		| COMMA
+		| LPAR
+		| RPAR
+		| ASSIGN
+		| QMARK
+		| LBRACE
+		| RBRACE -> Syntaxsymbol
+
+        ADD
+		| SUB
+		| DIV
+		| MULTI
+		| EXPO -> Operatorsymbol
+
+        EQUALS
+		| NOTEQ
+		| LT
+		| LTE
+		| GT
+		| GTE -> Comparisonsymbol
+
+        CONJUNCT
+		| DISJUNCT -> Compoperator
+
+        INT
+		| DOUBLE -> Literal
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "int" -> INTWORD
+
+        "double" -> DOUWORD
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT
+
+        INT? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ (("e" | "E") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+)? -> DOUBLE
+
+        ":" -> COLON
+
+        "," -> COMMA
+
+        ";" -> SEMI
+
+        "(" -> LPAR
+
+        ")" -> RPAR
+
+        COLON "=" -> ASSIGN
+
+        "{" -> LBRACE
+
+        "}" -> RBRACE
+
+        "?" -> QMARK
+
+        "+" -> ADD
+
+        "-" -> SUB
+
+        "/" -> DIV
+
+        "*" -> MULTI
+
+        "**" -> EXPO
+
+        "==" -> EQUALS
+
+        "!=" -> NOTEQ
+
+        "<" -> LT
+
+        "<=" -> LTE
+
+        ">" -> GT
+
+        ">=" -> GTE
+
+        "/\\" -> CONJUNCT
+
+        "\\/" -> DISJUNCT
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID
+
+        (" " | "\t" | "\r" | "\n")+ -> WS

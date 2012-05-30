@@ -1,0 +1,428 @@
+compilationUnit:
+        (packageDefinition | EPSILON) importDefinition* typeDefinition*
+packageDefinition:
+        annotations p::"package" identifier SEMI
+annotations:
+        annotation*
+annotation:
+        AT i::identifier (LPAREN args::annotationArguments? RPAREN)?
+AT:
+        "@"
+identifier:
+        IDENT (DOT IDENT)*
+IDENT:
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "_" | "$") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "_" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "$")*
+DOT:
+        "."
+LPAREN:
+        "("
+annotationArguments:
+        annotationMemberValueInitializer
+        anntotationMemberValuePairs
+annotationMemberValueInitializer:
+        conditionalExpression
+        annotation
+        annotationMemberArrayInitializer
+conditionalExpression:
+        logicalOrExpression (QUESTION assignmentExpression COLON conditionalExpression)?
+logicalOrExpression:
+        logicalAndExpression (LOR logicalAndExpression)*
+logicalAndExpression:
+        inclusiveOrExpression (LAND inclusiveOrExpression)*
+inclusiveOrExpression:
+        exclusiveOrExpression (BOR exclusiveOrExpression)*
+exclusiveOrExpression:
+        andExpression (BXOR andExpression)*
+andExpression:
+        equalityExpression (BAND equalityExpression)*
+equalityExpression:
+        relationalExpression ((NOT_EQUAL | EQUAL) relationalExpression)*
+relationalExpression:
+        shiftExpression (((LT | GT | LE | GE) shiftExpression)* | ("instanceof" typeSpec))
+shiftExpression:
+        additiveExpression ((SL | SR | BSR) additiveExpression)*
+additiveExpression:
+        multiplicativeExpression ((PLUS | MINUS) multiplicativeExpression)*
+multiplicativeExpression:
+        unaryExpression ((STAR | DIV | MOD) unaryExpression)*
+unaryExpression:
+        INC unaryExpression
+        DEC unaryExpression
+        MINUS unaryExpression
+        PLUS unaryExpression
+        unaryExpressionNotPlusMinus
+INC:
+        "++"
+DEC:
+        "--"
+MINUS:
+        "-"
+PLUS:
+        "+"
+unaryExpressionNotPlusMinus:
+        BNOT unaryExpression
+        LNOT unaryExpression
+        lpb::LPAREN builtInTypeSpec RPAREN unaryExpression
+        lp::LPAREN classTypeSpec RPAREN unaryExpressionNotPlusMinus
+        postfixExpression
+BNOT:
+        "~"
+LNOT:
+        "!"
+builtInTypeSpec:
+        builtInType (lb::LBRACK RBRACK)*
+builtInType:
+        "void"
+        "boolean"
+        "byte"
+        "char"
+        "short"
+        "int"
+        "float"
+        "long"
+        "double"
+LBRACK:
+        "["
+RBRACK:
+        "]"
+RPAREN:
+        ")"
+classTypeSpec:
+        classOrInterfaceType (lb::LBRACK RBRACK)*
+classOrInterfaceType:
+        IDENT typeArguments? (DOT IDENT typeArguments?)*
+typeArguments:
+        LT typeArgument (COMMA typeArgument)* typeArgumentsOrParametersEnd?
+LT:
+        "<"
+typeArgument:
+        typeArgumentSpec
+        wildcardType
+typeArgumentSpec:
+        classTypeSpec
+        builtInTypeArraySpec
+builtInTypeArraySpec:
+        builtInType (lb::LBRACK RBRACK)+
+wildcardType:
+        q::QUESTION typeArgumentBounds?
+QUESTION:
+        "?"
+typeArgumentBounds:
+        ("extends" | "super") classOrInterfaceType
+COMMA:
+        ","
+typeArgumentsOrParametersEnd:
+        GT
+        SR
+        BSR
+GT:
+        ">"
+SR:
+        ">>"
+BSR:
+        ">>>"
+postfixExpression:
+        primaryExpression ((DOT typeArguments? ((IDENT (lp::LPAREN argList RPAREN)?) | ("super" ((lp3::LPAREN argList RPAREN) | (DOT typeArguments? IDENT (lps::LPAREN argList RPAREN)?))))) | (DOT "this") | (DOT newExpression) | (lb::LBRACK expression RBRACK))* (in::INC | de::DEC)?
+primaryExpression:
+        identPrimary (DOT "class")?
+        constant
+        "true"
+        "false"
+        "null"
+        newExpression
+        "this"
+        "super"
+        LPAREN assignmentExpression RPAREN
+        builtInType (lbt::LBRACK RBRACK)* DOT "class"
+identPrimary:
+        ta1::typeArguments? IDENT ((DOT ta2::typeArguments? IDENT) | EPSILON)* ((lp::LPAREN argList RPAREN) | (lbc::LBRACK RBRACK)+)?
+argList:
+        expressionList
+        EPSILON
+expressionList:
+        expression (COMMA expression)*
+expression:
+        assignmentExpression
+assignmentExpression:
+        conditionalExpression ((ASSIGN | PLUS_ASSIGN | MINUS_ASSIGN | STAR_ASSIGN | DIV_ASSIGN | MOD_ASSIGN | SR_ASSIGN | BSR_ASSIGN | SL_ASSIGN | BAND_ASSIGN | BXOR_ASSIGN | BOR_ASSIGN) assignmentExpression)?
+ASSIGN:
+        "="
+PLUS_ASSIGN:
+        "+="
+MINUS_ASSIGN:
+        "-="
+STAR_ASSIGN:
+        "*="
+DIV_ASSIGN:
+        "/="
+MOD_ASSIGN:
+        "%="
+SR_ASSIGN:
+        ">>="
+BSR_ASSIGN:
+        ">>>="
+SL_ASSIGN:
+        "<<="
+BAND_ASSIGN:
+        "&="
+BXOR_ASSIGN:
+        "^="
+BOR_ASSIGN:
+        "|="
+constant:
+        NUM_INT
+        CHAR_LITERAL
+        STRING_LITERAL
+        NUM_FLOAT
+        NUM_LONG
+        NUM_DOUBLE
+NUM_INT:
+        "." ((("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ EXPONENT? f1::FLOAT_SUFFIX?) | "..")?
+        (("0" ((("x" | "X") HEX_DIGIT+) | ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ | ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7")+)?) | (("1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")*)) ("l" | "L" | ("." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* EXPONENT? f2::FLOAT_SUFFIX?) | (EXPONENT f3::FLOAT_SUFFIX?) | f4::FLOAT_SUFFIX)?
+EXPONENT:
+        ("e" | "E") ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+
+FLOAT_SUFFIX:
+        "f"
+        "F"
+        "d"
+        "D"
+HEX_DIGIT:
+        "0"
+        "1"
+        "2"
+        "3"
+        "4"
+        "5"
+        "6"
+        "7"
+        "8"
+        "9"
+        "A"
+        "B"
+        "C"
+        "D"
+        "E"
+        "F"
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+CHAR_LITERAL:
+        "\'" (ESC | STR) "\'"
+ESC:
+        "\\" ("n" | "r" | "t" | "b" | "f" | """ | "\'" | "\\" | ("u"+ HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT) | (("0" | "1" | "2" | "3") (("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7")?)?) | (("4" | "5" | "6" | "7") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7")?))
+STRING_LITERAL:
+        """ (ESC | STR)* """
+NUM_FLOAT:
+        "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ EXPONENT? ("f" | "F")
+        "0" ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ ("." | EXPONENT | "f" | "F")
+        ("1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* ((("." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")*)? EXPONENT? ("f" | "F")) | EXPONENT)
+NUM_LONG:
+        ("1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* ("l" | "L")
+NUM_DOUBLE:
+        "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ EXPONENT? ("d" | "D")
+        "0" ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ ("." | EXPONENT | "d" | "D")
+        ("1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* ((("." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")*)? EXPONENT? ("d" | "D")) | EXPONENT)
+newExpression:
+        "new" typeArguments? type ((LPAREN argList RPAREN classBlock?) | (newArrayDeclarator arrayInitializer?))
+type:
+        classOrInterfaceType
+        builtInType
+classBlock:
+        LCURLY (classField | SEMI)* RCURLY
+LCURLY:
+        "{"
+classField:
+        mods::modifiers (td::typeDefinitionInternal | (tp::typeParameters? ((h::ctorHead s::constructorBody) | (t::typeSpec ((IDENT LPAREN param::parameterDeclarationList RPAREN rt::declaratorBrackets tc::throwsClause? (s2::compoundStatement | SEMI)) | (v::variableDefinitions SEMI))))))
+        "static" s3::compoundStatement
+        s4::compoundStatement
+modifiers:
+        (modifier | annotation)*
+modifier:
+        "private"
+        "public"
+        "protected"
+        "static"
+        "transient"
+        "final"
+        "abstract"
+        "native"
+        "threadsafe"
+        "synchronized"
+        "volatile"
+        "strictfp"
+typeDefinitionInternal:
+        classDefinition
+        interfaceDefinition
+        enumDefinition
+        annotationDefinition
+classDefinition:
+        "class" IDENT tp::typeParameters? sc::superClassClause ic::implementsClause cb::classBlock
+typeParameters:
+        LT typeParameter (COMMA typeParameter)* typeArgumentsOrParametersEnd?
+typeParameter:
+        id::IDENT typeParameterBounds?
+typeParameterBounds:
+        "extends" classOrInterfaceType (BAND classOrInterfaceType)*
+BAND:
+        "&"
+superClassClause:
+        ("extends" c::classOrInterfaceType)?
+implementsClause:
+        (i::"implements" classOrInterfaceType (COMMA classOrInterfaceType)*)?
+interfaceDefinition:
+        "interface" IDENT tp::typeParameters? ie::interfaceExtends ib::interfaceBlock
+interfaceExtends:
+        (e::"extends" classOrInterfaceType (COMMA classOrInterfaceType)*)?
+interfaceBlock:
+        LCURLY (interfaceField | SEMI)* RCURLY
+interfaceField:
+        mods::modifiers (td::typeDefinitionInternal | (tp::typeParameters? t::typeSpec ((IDENT LPAREN param::parameterDeclarationList RPAREN rt::declaratorBrackets tc::throwsClause? SEMI) | (v::variableDefinitions SEMI))))
+typeSpec:
+        classTypeSpec
+        builtInTypeSpec
+parameterDeclarationList:
+        ((parameterDeclaration (COMMA parameterDeclaration)* (COMMA variableLengthParameterDeclaration)?) | variableLengthParameterDeclaration)?
+parameterDeclaration:
+        pm::parameterModifier t::typeSpec id::IDENT pd::declaratorBrackets
+parameterModifier:
+        annotation* f::"final"? annotation*
+declaratorBrackets:
+        (lb::LBRACK RBRACK)*
+variableLengthParameterDeclaration:
+        pm::parameterModifier t::typeSpec TRIPLE_DOT id::IDENT pd::declaratorBrackets
+TRIPLE_DOT:
+        "..."
+throwsClause:
+        "throws" identifier (COMMA identifier)*
+SEMI:
+        ";"
+variableDefinitions:
+        variableDeclarator (COMMA variableDeclarator)*
+variableDeclarator:
+        id::IDENT d::declaratorBrackets v::varInitializer
+varInitializer:
+        (ASSIGN initializer)?
+initializer:
+        expression
+        arrayInitializer
+arrayInitializer:
+        lc::LCURLY (initializer (COMMA initializer)* COMMA?)? RCURLY
+RCURLY:
+        "}"
+enumDefinition:
+        "enum" IDENT ic::implementsClause eb::enumBlock
+enumBlock:
+        LCURLY (enumConstant (COMMA enumConstant)* COMMA?)? (SEMI (classField | SEMI)*)? RCURLY
+enumConstant:
+        an::annotations i::IDENT (LPAREN a::argList RPAREN)? b::enumConstantBlock?
+enumConstantBlock:
+        LCURLY (enumConstantField | SEMI)* RCURLY
+enumConstantField:
+        mods::modifiers (td::typeDefinitionInternal | (tp::typeParameters? t::typeSpec ((IDENT LPAREN param::parameterDeclarationList RPAREN rt::declaratorBrackets tc::throwsClause? (s2::compoundStatement | SEMI)) | (v::variableDefinitions SEMI))))
+        s4::compoundStatement
+compoundStatement:
+        lc::LCURLY statement* RCURLY
+statement:
+        compoundStatement
+        declaration SEMI
+        expression SEMI
+        m::modifiers classDefinition
+        IDENT c::COLON statement
+        "if" LPAREN expression RPAREN statement ("else" statement)?
+        forStatement
+        "while" LPAREN expression RPAREN statement
+        "do" statement "while" LPAREN expression RPAREN SEMI
+        "break" IDENT? SEMI
+        "continue" IDENT? SEMI
+        "return" expression? SEMI
+        "switch" LPAREN expression RPAREN LCURLY casesGroup* RCURLY
+        tryBlock
+        "throw" expression SEMI
+        "synchronized" LPAREN expression RPAREN compoundStatement
+        "assert" expression (COLON expression)? SEMI
+        s::SEMI
+declaration:
+        m::modifiers t::typeSpec v::variableDefinitions
+COLON:
+        ":"
+forStatement:
+        f::"for" LPAREN (traditionalForClause | forEachClause) RPAREN statement
+traditionalForClause:
+        forInit SEMI forCond SEMI forIter
+forInit:
+        (declaration | expressionList)?
+forCond:
+        expression?
+forIter:
+        expressionList?
+forEachClause:
+        p::parameterDeclaration COLON expression
+casesGroup:
+        aCase+ caseSList
+aCase:
+        (("case" expression) | "default") COLON
+caseSList:
+        statement*
+tryBlock:
+        "try" compoundStatement handler* finallyClause?
+handler:
+        "catch" LPAREN parameterDeclaration RPAREN compoundStatement
+finallyClause:
+        "finally" compoundStatement
+annotationDefinition:
+        AT "interface" IDENT ab::annotationBlock
+annotationBlock:
+        LCURLY (annotationField | SEMI)* RCURLY
+annotationField:
+        mods::modifiers (td::typeDefinitionInternal | (t::typeSpec ((i::IDENT LPAREN RPAREN rt::declaratorBrackets ("default" amvi::annotationMemberValueInitializer)? SEMI) | (v::variableDefinitions SEMI))))
+ctorHead:
+        IDENT LPAREN parameterDeclarationList RPAREN throwsClause?
+constructorBody:
+        lc::LCURLY explicitConstructorInvocation? statement* RCURLY
+explicitConstructorInvocation:
+        typeArguments? (("this" lp1::LPAREN argList RPAREN SEMI) | ("super" lp2::LPAREN argList RPAREN SEMI))
+newArrayDeclarator:
+        (lb::LBRACK expression? RBRACK)+
+STAR:
+        "*"
+DIV:
+        "/"
+MOD:
+        "%"
+SL:
+        "<<"
+LE:
+        "<="
+GE:
+        ">="
+NOT_EQUAL:
+        "!="
+EQUAL:
+        "=="
+BXOR:
+        "^"
+BOR:
+        "|"
+LAND:
+        "&&"
+LOR:
+        "||"
+annotationMemberArrayInitializer:
+        lc::LCURLY (annotationMemberArrayValueInitializer (COMMA annotationMemberArrayValueInitializer)* COMMA?)? RCURLY
+annotationMemberArrayValueInitializer:
+        conditionalExpression
+        annotation
+anntotationMemberValuePairs:
+        annotationMemberValuePair (COMMA annotationMemberValuePair)*
+annotationMemberValuePair:
+        i::IDENT ASSIGN v::annotationMemberValueInitializer
+importDefinition:
+        i::"import" "static"? identifierStar SEMI
+identifierStar:
+        IDENT (DOT IDENT)* (DOT STAR)?
+typeDefinition:
+        m::modifiers typeDefinitionInternal
+        SEMI

@@ -1,0 +1,156 @@
+module Main
+
+exports
+  sorts
+        Program ProgTree Declarations ConstDec VarDec ProcDec ParamList Stat AssignStat ConditionalStat LoopStat Atom CondExpr BoolExpr AndExpr CompExpr SubExpr AddExpr MulExpr DivExpr ExpExpr SmallId ApplyProc ExprList Type SEMI COLON COMMA QUESTION DEFINEDAS DONE SKIP TROLLEY CHECKOUT CONTAINS CONST VAR PROC INTEGER FLOATDOUBLE COMMENT LEFTBRACE RIGHTBRACE LEFTPAR RIGHTPAR INT DOUBLE EXPONENT PLUS MINUS EXPONENTIATION MULTIPLY DIVIDE EQUALITY NOTEQUAL LESSTHAN LESSTHANEQUAL MORETHAN MORETHANEQUAL CONJUNCTION DISJUNCTION IF THEN ELSE WHILE DO CONSTID ID WS 
+  context-free syntax
+        ProgTree+ -> Program
+
+        TROLLEY CONSTID CONTAINS Declarations* CHECKOUT Stat DONE SEMI -> ProgTree
+
+        CONST ConstDec SEMI
+		| VAR VarDec SEMI
+		| PROC ProcDec SEMI -> Declarations
+
+        CONSTID COLON Type DEFINEDAS SubExpr -> ConstDec
+
+        v1::SmallId COLON Type -> VarDec
+
+        p1::SmallId LEFTPAR ParamList RIGHTPAR COLON Type DEFINEDAS Stat -> ProcDec
+
+        VarDec (COMMA VarDec)* -> ParamList
+
+        ConditionalStat
+		| LoopStat
+		| AssignStat
+		| LEFTBRACE Stat (SEMI Stat)* RIGHTBRACE SEMI
+		| SKIP -> Stat
+
+        SmallId DEFINEDAS CondExpr -> AssignStat
+
+        IF BoolExpr THEN Stat ELSE Stat -> ConditionalStat
+
+        WHILE BoolExpr DO Stat -> LoopStat
+
+        CONSTID
+		| ID
+		| INT
+		| DOUBLE
+		| LEFTPAR CondExpr RIGHTPAR
+		| ApplyProc -> Atom
+
+        BoolExpr (QUESTION CondExpr COLON CondExpr)? -> CondExpr
+
+        AndExpr (DISJUNCTION AndExpr)* -> BoolExpr
+
+        CompExpr (CONJUNCTION CompExpr)* -> AndExpr
+
+        SubExpr ((EQUALITY | NOTEQUAL | LESSTHAN | LESSTHANEQUAL | MORETHAN | MORETHANEQUAL) SubExpr)? -> CompExpr
+
+        AddExpr (MINUS AddExpr)* -> SubExpr
+
+        MulExpr (PLUS MulExpr)* -> AddExpr
+
+        DivExpr (MULTIPLY DivExpr)* -> MulExpr
+
+        ExpExpr (DIVIDE ExpExpr)* -> DivExpr
+
+        Atom (EXPONENTIATION Atom)* -> ExpExpr
+
+        CONSTID
+		| ID -> SmallId
+
+        SmallId LEFTPAR ExprList RIGHTPAR -> ApplyProc
+
+        CompExpr (COMMA CompExpr)* -> ExprList
+
+        INTEGER
+		| FLOATDOUBLE -> Type
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        "," -> COMMA
+
+        "?" -> QUESTION
+
+        ":=" -> DEFINEDAS
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "int" -> INTEGER
+
+        "double" -> FLOATDOUBLE
+
+        "/*" ANY* "*/" -> COMMENT
+
+        "{" -> LEFTBRACE
+
+        "}" -> RIGHTBRACE
+
+        "(" -> LEFTPAR
+
+        ")" -> RIGHTPAR
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT
+
+        ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") INT)? -> DOUBLE
+
+        ("e" | "E") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> EXPONENT
+
+        "+" -> PLUS
+
+        "-" -> MINUS
+
+        "**" -> EXPONENTIATION
+
+        "*" -> MULTIPLY
+
+        "/" -> DIVIDE
+
+        "==" -> EQUALITY
+
+        "!=" -> NOTEQUAL
+
+        "<" -> LESSTHAN
+
+        "<=" -> LESSTHANEQUAL
+
+        ">" -> MORETHAN
+
+        ">=" -> MORETHANEQUAL
+
+        "/\\" -> CONJUNCTION
+
+        "\\/" -> DISJUNCTION
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID
+
+        (" " | "\t" | "\r" | "\n")+ -> WS

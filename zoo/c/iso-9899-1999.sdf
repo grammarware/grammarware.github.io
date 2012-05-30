@@ -1,0 +1,275 @@
+module Main
+
+exports
+ context-free start-symbols translation-unit
+  sorts
+        Translation-unit External-declaration Function-definition Declaration-specifiers Storage-class-specifier Type-specifier Struct-or-union-specifier Struct-or-union Struct-declaration-list Struct-declaration Specifier-qualifier-list Type-qualifier Struct-declarator-list Struct-declarator Declarator Pointer Type-qualifier-list Direct-declarator Assignment-expression Conditional-expression Logical-OR-expression Logical-AND-expression Inclusive-OR-expression Exclusive-OR-expression AND-expression Equality-expression Relational-expression Shift-expression Additive-expression Multiplicative-expression Cast-expression Unary-expression Postfix-expression Primary-expression Expression Argument-expression-list Type-name Abstract-declarator Direct-abstract-declarator Parameter-type-list Parameter-list Parameter-declaration Initializer-list Designation Designator-list Designator Constant-expression Initializer Unary-operator Assignment-operator Identifier-list Enum-specifier Enumerator-list Enumerator Typedef-name Function-specifier Declaration-list Declaration Init-declarator-list Init-declarator Compound-statement Block-item-list Block-item Statement Labeled-statement Expression-statement Selection-statement Iteration-statement Jump-statement 
+  context-free syntax
+        External-declaration
+		| Translation-unit External-declaration -> Translation-unit
+
+        Function-definition
+		| Declaration -> External-declaration
+
+        Declaration-specifiers Declarator Declaration-list? Compound-statement -> Function-definition
+
+        Storage-class-specifier Declaration-specifiers?
+		| Type-specifier Declaration-specifiers?
+		| Type-qualifier Declaration-specifiers?
+		| Function-specifier Declaration-specifiers? -> Declaration-specifiers
+
+        "typedef"
+		| "extern"
+		| "static"
+		| "auto"
+		| "register" -> Storage-class-specifier
+
+        "void"
+		| "char"
+		| "short"
+		| "int"
+		| "long"
+		| "float"
+		| "double"
+		| "signed"
+		| "unsigned"
+		| "_Bool"
+		| "_Complex"
+		| "_Imaginary"
+		| Struct-or-union-specifier
+		| Enum-specifier
+		| Typedef-name -> Type-specifier
+
+        Struct-or-union Identifier? "{" Struct-declaration-list "}"
+		| Struct-or-union Identifier -> Struct-or-union-specifier
+
+        "struct"
+		| "union" -> Struct-or-union
+
+        Struct-declaration
+		| Struct-declaration-list Struct-declaration -> Struct-declaration-list
+
+        Specifier-qualifier-list Struct-declarator-list ";" -> Struct-declaration
+
+        Type-specifier Specifier-qualifier-list?
+		| Type-qualifier Specifier-qualifier-list? -> Specifier-qualifier-list
+
+        "const"
+		| "restrict"
+		| "volatile" -> Type-qualifier
+
+        Struct-declarator
+		| Struct-declarator-list "," Struct-declarator -> Struct-declarator-list
+
+        Declarator
+		| Declarator? ":" Constant-expression -> Struct-declarator
+
+        Pointer? Direct-declarator -> Declarator
+
+        "*" Type-qualifier-list?
+		| "*" Type-qualifier-list? Pointer -> Pointer
+
+        Type-qualifier
+		| Type-qualifier-list Type-qualifier -> Type-qualifier-list
+
+        Identifier
+		| "(" Declarator ")"
+		| Direct-declarator "[" Type-qualifier-list? Assignment-expression? "]"
+		| Direct-declarator "[" "static" Type-qualifier-list? Assignment-expression "]"
+		| Direct-declarator "[" Type-qualifier-list "static" Assignment-expression "]"
+		| Direct-declarator "[" Type-qualifier-list? "*" "]"
+		| Direct-declarator "(" Parameter-type-list ")"
+		| Direct-declarator "(" Identifier-list? ")" -> Direct-declarator
+
+        Conditional-expression
+		| Unary-expression Assignment-operator Assignment-expression -> Assignment-expression
+
+        Logical-OR-expression
+		| Logical-OR-expression "?" Expression ":" Conditional-expression -> Conditional-expression
+
+        Logical-AND-expression
+		| Logical-OR-expression "||" Logical-AND-expression -> Logical-OR-expression
+
+        Inclusive-OR-expression
+		| Logical-AND-expression "&&" Inclusive-OR-expression -> Logical-AND-expression
+
+        Exclusive-OR-expression
+		| Inclusive-OR-expression "|" Exclusive-OR-expression -> Inclusive-OR-expression
+
+        AND-expression
+		| Exclusive-OR-expression "^" AND-expression -> Exclusive-OR-expression
+
+        Equality-expression
+		| AND-expression "&" Equality-expression -> AND-expression
+
+        Relational-expression
+		| Equality-expression "==" Relational-expression
+		| Equality-expression "!=" Relational-expression -> Equality-expression
+
+        Shift-expression
+		| Relational-expression "<" Shift-expression
+		| Relational-expression ">" Shift-expression
+		| Relational-expression "<=" Shift-expression
+		| Relational-expression ">=" Shift-expression -> Relational-expression
+
+        Additive-expression
+		| Shift-expression "<<" Additive-expression
+		| Shift-expression ">>" Additive-expression -> Shift-expression
+
+        Multiplicative-expression
+		| Additive-expression "+" Multiplicative-expression
+		| Additive-expression "-" Multiplicative-expression -> Additive-expression
+
+        Cast-expression
+		| Multiplicative-expression "*" Cast-expression
+		| Multiplicative-expression "/" Cast-expression
+		| Multiplicative-expression "%" Cast-expression -> Multiplicative-expression
+
+        Unary-expression
+		| "(" Type-name ")" Cast-expression -> Cast-expression
+
+        Postfix-expression
+		| "++" Unary-expression
+		| "--" Unary-expression
+		| Unary-operator Cast-expression
+		| "sizeof" Unary-expression
+		| "sizeof" "(" Type-name ")" -> Unary-expression
+
+        Primary-expression
+		| Postfix-expression "[" Expression "]"
+		| Postfix-expression "(" Argument-expression-list? ")"
+		| Postfix-expression "." Identifier
+		| Postfix-expression "->" Identifier
+		| Postfix-expression "++"
+		| Postfix-expression "--"
+		| "(" Type-name ")" "{" Initializer-list "}"
+		| "(" Type-name ")" "{" Initializer-list "," "}" -> Postfix-expression
+
+        Identifier
+		| Constant
+		| String-literal
+		| "(" Expression ")" -> Primary-expression
+
+        Assignment-expression
+		| Expression "," Assignment-expression -> Expression
+
+        Assignment-expression
+		| Argument-expression-list "," Assignment-expression -> Argument-expression-list
+
+        Specifier-qualifier-list Abstract-declarator? -> Type-name
+
+        Pointer
+		| Pointer? Direct-abstract-declarator -> Abstract-declarator
+
+        "(" Abstract-declarator ")"
+		| Direct-abstract-declarator? "[" Assignment-expression? "]"
+		| Direct-abstract-declarator? "[" "*" "]"
+		| Direct-abstract-declarator? "(" Parameter-type-list? ")" -> Direct-abstract-declarator
+
+        Parameter-list
+		| Parameter-list "," "..." -> Parameter-type-list
+
+        Parameter-declaration
+		| Parameter-list "," Parameter-declaration -> Parameter-list
+
+        Declaration-specifiers Declarator
+		| Declaration-specifiers Abstract-declarator? -> Parameter-declaration
+
+        Designation? Initializer
+		| Initializer-list "," Designation? Initializer -> Initializer-list
+
+        Designator-list "=" -> Designation
+
+        Designator
+		| Designator-list Designator -> Designator-list
+
+        "[" Constant-expression "]"
+		| "." Identifier -> Designator
+
+        Conditional-expression -> Constant-expression
+
+        Assignment-expression
+		| "{" Initializer-list "}"
+		| "{" Initializer-list "," "}" -> Initializer
+
+        "&"
+		| "*"
+		| "+"
+		| "-"
+		| "~"
+		| "!" -> Unary-operator
+
+        "="
+		| "*="
+		| "/="
+		| "%="
+		| "+="
+		| "-="
+		| "<<="
+		| ">>="
+		| "&="
+		| "^="
+		| "|=" -> Assignment-operator
+
+        Identifier
+		| Identifier-list "," Identifier -> Identifier-list
+
+        "enum" Identifier? "{" Enumerator-list "}"
+		| "enum" Identifier? "{" Enumerator-list "," "}"
+		| "enum" Identifier -> Enum-specifier
+
+        Enumerator
+		| Enumerator-list "," Enumerator -> Enumerator-list
+
+        Enumeration-constant
+		| Enumeration-constant "=" Constant-expression -> Enumerator
+
+        Identifier -> Typedef-name
+
+        "inline" -> Function-specifier
+
+        Declaration
+		| Declaration-list Declaration -> Declaration-list
+
+        Declaration-specifiers Init-declarator-list? ";" -> Declaration
+
+        Init-declarator
+		| Init-declarator-list "," Init-declarator -> Init-declarator-list
+
+        Declarator
+		| Declarator "=" Initializer -> Init-declarator
+
+        "{" Block-item-list? "}" -> Compound-statement
+
+        Block-item
+		| Block-item-list Block-item -> Block-item-list
+
+        Declaration
+		| Statement -> Block-item
+
+        Labeled-statement
+		| Compound-statement
+		| Expression-statement
+		| Selection-statement
+		| Iteration-statement
+		| Jump-statement -> Statement
+
+        Identifier ":" Statement
+		| "case" Constant-expression ":" Statement
+		| "default" ":" Statement -> Labeled-statement
+
+        Expression? ";" -> Expression-statement
+
+        "if" "(" Expression ")" Statement
+		| "if" "(" Expression ")" Statement "else" Statement
+		| "switch" "(" Expression ")" Statement -> Selection-statement
+
+        "while" "(" Expression ")" Statement
+		| "do" Statement "while" "(" Expression ")" ";"
+		| "for" "(" Expression? ";" Expression? ";" Expression? ")" Statement
+		| "for" "(" Declaration Expression? ";" Expression? ")" Statement -> Iteration-statement
+
+        "goto" Identifier ";"
+		| "continue" ";"
+		| "break" ";"
+		| "return" Expression? ";" -> Jump-statement

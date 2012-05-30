@@ -1,0 +1,22 @@
+program:
+        function+
+function:
+        ID ID+ "=" expr NEWLINE+
+expr:
+        binary
+        apply
+        ifThenElse
+binary:
+        atom (ops atom)*
+apply:
+        ID atom+
+ifThenElse:
+        "if" expr "then" expr "else" expr
+atom:
+        ID
+        INT
+        "(" expr ")"
+ops:
+        "=="
+        "+"
+        "-"

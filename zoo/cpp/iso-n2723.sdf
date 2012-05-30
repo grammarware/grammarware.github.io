@@ -1,0 +1,614 @@
+module Main
+
+exports
+ context-free start-symbols translation-unit
+  sorts
+        Translation-unit Declaration-seq Declaration Block-declaration Simple-declaration Decl-specifier-seq Decl-specifier Storage-class-specifier Type-specifier Simple-type-specifier Nested-name-specifier Type-name Class-name Simple-template-id Template-name Template-argument-list Template-argument Constant-expression Conditional-expression Logical-or-expression Logical-and-expression Inclusive-or-expression Exclusive-or-expression And-expression Equality-expression Relational-expression Shift-expression Additive-expression Multiplicative-expression Pm-expression Cast-expression Unary-expression Postfix-expression Primary-expression Expression Assignment-expression Assignment-operator Initializer-clause Braced-init-list Initializer-list Throw-expression Id-expression Unqualified-id Operator-function-id Operator Conversion-function-id Conversion-type-id Type-specifier-seq Conversion-declarator Ptr-operator Cv-qualifier-seq Cv-qualifier Template-id Qualified-id Lambda-expression Lambda-introducer Lambda-capture Capture-default Capture-list Capture Lambda-parameter-declaration Lambda-parameter-declaration-list Lambda-parameter Declarator Direct-declarator Declarator-id Parameter-declaration-clause Parameter-declaration-list Parameter-declaration Abstract-declarator Direct-abstract-declarator Ref-qualifier Exception-specification Type-id-list Type-id Lambda-return-type-clause Compound-statement Statement-seq Statement Labeled-statement Expression-statement Selection-statement Condition Iteration-statement For-init-statement Jump-statement Declaration-statement Try-block Handler-seq Handler Exception-declaration Expression-list Typename-specifier Pseudo-destructor-name Unary-operator New-expression New-placement New-type-id New-declarator Direct-new-declarator New-initializer Delete-expression Enum-name Typedef-name Namespace-name Original-namespace-name Namespace-alias Class-specifier Class-head Class-key Base-clause Base-specifier-list Base-specifier Access-specifier Member-specification Member-declaration Member-declarator-list Member-declarator Pure-specifier Constant-initializer Function-definition Function-body Ctor-initializer Mem-initializer-list Mem-initializer Mem-initializer-id Function-try-block Using-declaration Static-assert-declaration Template-declaration Template-parameter-list Template-parameter Type-parameter Enum-specifier Enum-key Enum-base Enumerator-list Enumerator-definition Enumerator Elaborated-type-specifier Function-specifier Alignment-specifier Init-declarator-list Init-declarator Initializer Asm-definition Namespace-alias-definition Qualified-namespace-specifier Using-directive Alias-declaration Explicit-instantiation Explicit-specialization Linkage-specification Namespace-definition Named-namespace-definition Original-namespace-definition Namespace-body Extension-namespace-definition Unnamed-namespace-definition 
+  context-free syntax
+        Declaration-seq? -> Translation-unit
+
+        Declaration
+		| Declaration-seq Declaration -> Declaration-seq
+
+        Block-declaration
+		| Function-definition
+		| Template-declaration
+		| Explicit-instantiation
+		| Explicit-specialization
+		| Linkage-specification
+		| Namespace-definition -> Declaration
+
+        Simple-declaration
+		| Asm-definition
+		| Namespace-alias-definition
+		| Using-declaration
+		| Using-directive
+		| Static-assert-declaration
+		| Alias-declaration -> Block-declaration
+
+        Decl-specifier-seq? Init-declarator-list? ";" -> Simple-declaration
+
+        Decl-specifier-seq? Decl-specifier -> Decl-specifier-seq
+
+        Storage-class-specifier
+		| Type-specifier
+		| Function-specifier
+		| "friend"
+		| "typedef"
+		| "constexpr"
+		| Alignment-specifier -> Decl-specifier
+
+        "register"
+		| "static"
+		| "thread_local"
+		| "extern"
+		| "mutable" -> Storage-class-specifier
+
+        Simple-type-specifier
+		| Class-specifier
+		| Enum-specifier
+		| Elaborated-type-specifier
+		| Typename-specifier
+		| Cv-qualifier -> Type-specifier
+
+        "::"? Nested-name-specifier? Type-name
+		| "::"? Nested-name-specifier "template" Simple-template-id
+		| "char"
+		| "char16_t"
+		| "char32_t"
+		| "wchar_t"
+		| "bool"
+		| "short"
+		| "int"
+		| "long"
+		| "signed"
+		| "unsigned"
+		| "float"
+		| "double"
+		| "void"
+		| "auto"
+		| "decltype" "(" Expression ")" -> Simple-type-specifier
+
+        Type-name "::"
+		| Namespace-name "::"
+		| Nested-name-specifier Identifier "::"
+		| Nested-name-specifier "template"? Simple-template-id "::" -> Nested-name-specifier
+
+        Class-name
+		| Enum-name
+		| Typedef-name -> Type-name
+
+        Identifier
+		| Simple-template-id -> Class-name
+
+        Template-name "<" Template-argument-list? ">" -> Simple-template-id
+
+        Identifier -> Template-name
+
+        Template-argument "..."?
+		| Template-argument-list "," Template-argument "..."? -> Template-argument-list
+
+        Constant-expression
+		| Type-id
+		| Id-expression -> Template-argument
+
+        Conditional-expression -> Constant-expression
+
+        Logical-or-expression
+		| Logical-or-expression "?" Expression ":" Assignment-expression -> Conditional-expression
+
+        Logical-and-expression
+		| Logical-or-expression "||" Logical-and-expression -> Logical-or-expression
+
+        Inclusive-or-expression
+		| Logical-and-expression "&&" Inclusive-or-expression -> Logical-and-expression
+
+        Exclusive-or-expression
+		| Inclusive-or-expression "|" Exclusive-or-expression -> Inclusive-or-expression
+
+        And-expression
+		| Exclusive-or-expression "^" And-expression -> Exclusive-or-expression
+
+        Equality-expression
+		| And-expression "&" Equality-expression -> And-expression
+
+        Relational-expression
+		| Equality-expression "==" Relational-expression
+		| Equality-expression "!=" Relational-expression -> Equality-expression
+
+        Shift-expression
+		| Relational-expression "<" Shift-expression
+		| Relational-expression ">" Shift-expression
+		| Relational-expression "<=" Shift-expression
+		| Relational-expression ">=" Shift-expression -> Relational-expression
+
+        Additive-expression
+		| Shift-expression "<<" Additive-expression
+		| Shift-expression ">>" Additive-expression -> Shift-expression
+
+        Multiplicative-expression
+		| Additive-expression "+" Multiplicative-expression
+		| Additive-expression "-" Multiplicative-expression -> Additive-expression
+
+        Pm-expression
+		| Multiplicative-expression "*" Pm-expression
+		| Multiplicative-expression "/" Pm-expression
+		| Multiplicative-expression "%" Pm-expression -> Multiplicative-expression
+
+        Cast-expression
+		| Pm-expression ".*" Cast-expression
+		| Pm-expression "->*" Cast-expression -> Pm-expression
+
+        Unary-expression
+		| "(" Type-id ")" Cast-expression -> Cast-expression
+
+        Postfix-expression
+		| "++" Cast-expression
+		| "--" Cast-expression
+		| Unary-operator Cast-expression
+		| "sizeof" Unary-expression
+		| "sizeof" "(" Type-id ")"
+		| "sizeof" "..." "(" Identifier ")"
+		| "alignof" "(" Type-id ")"
+		| New-expression
+		| Delete-expression -> Unary-expression
+
+        Primary-expression
+		| Postfix-expression "[" Expression "]"
+		| Postfix-expression "[" Braced-init-list "]"
+		| Postfix-expression "(" Expression-list? ")"
+		| Simple-type-specifier "(" Expression-list? ")"
+		| Typename-specifier "(" Expression-list? ")"
+		| Simple-type-specifier Braced-init-list
+		| Typename-specifier Braced-init-list
+		| Postfix-expression "." "template"? Id-expression
+		| Postfix-expression "->" "template"? Id-expression
+		| Postfix-expression "." Pseudo-destructor-name
+		| Postfix-expression "->" Pseudo-destructor-name
+		| Postfix-expression "++"
+		| Postfix-expression "--"
+		| "dynamic_cast" "<" Type-id ">" "(" Expression ")"
+		| "static_cast" "<" Type-id ">" "(" Expression ")"
+		| "reinterpret_cast" "<" Type-id ">" "(" Expression ")"
+		| "const_cast" "<" Type-id ">" "(" Expression ")"
+		| "typeid" "(" Expression ")"
+		| "typeid" "(" Type-id ")" -> Postfix-expression
+
+        Literal
+		| "this"
+		| "(" Expression ")"
+		| Id-expression
+		| Lambda-expression -> Primary-expression
+
+        Assignment-expression
+		| Expression "," Assignment-expression -> Expression
+
+        Conditional-expression
+		| Logical-or-expression Assignment-operator Initializer-clause
+		| Throw-expression -> Assignment-expression
+
+        "="
+		| "*="
+		| "/="
+		| "%="
+		| "+="
+		| "-="
+		| ">>="
+		| "<<="
+		| "&="
+		| "^="
+		| "|=" -> Assignment-operator
+
+        Assignment-expression
+		| Braced-init-list -> Initializer-clause
+
+        "{" Initializer-list ","? "}"
+		| "{" "}" -> Braced-init-list
+
+        Initializer-clause "..."?
+		| Initializer-list "," Initializer-clause "..."? -> Initializer-list
+
+        "throw" Assignment-expression? -> Throw-expression
+
+        Unqualified-id
+		| Qualified-id -> Id-expression
+
+        Identifier
+		| Operator-function-id
+		| Conversion-function-id
+		| "~" Class-name
+		| Template-id -> Unqualified-id
+
+        "operator" Operator -> Operator-function-id
+
+        "new"
+		| "delete"
+		| "new" "[" "]"
+		| "delete" "[" "]"
+		| "+"
+		| "-"
+		| "*"
+		| "/"
+		| "%"
+		| "^"
+		| "&"
+		| "|"
+		| "~"
+		| "!"
+		| "="
+		| "<"
+		| ">"
+		| "+="
+		| "-="
+		| "*="
+		| "/="
+		| "%="
+		| "^="
+		| "&="
+		| "|="
+		| "<<"
+		| ">>"
+		| ">>="
+		| "<<="
+		| "=="
+		| "!="
+		| "<="
+		| ">="
+		| "&&"
+		| "||"
+		| "++"
+		| "--"
+		| ","
+		| "->*"
+		| "->"
+		| "("
+		| ")"
+		| "["
+		| "]" -> Operator
+
+        "operator" Conversion-type-id -> Conversion-function-id
+
+        Type-specifier-seq Conversion-declarator? -> Conversion-type-id
+
+        Type-specifier Type-specifier-seq? -> Type-specifier-seq
+
+        Ptr-operator Conversion-declarator? -> Conversion-declarator
+
+        "*" Cv-qualifier-seq?
+		| "&"
+		| "&&"
+		| "::"? Nested-name-specifier "*" Cv-qualifier-seq? -> Ptr-operator
+
+        Cv-qualifier Cv-qualifier-seq? -> Cv-qualifier-seq
+
+        "const"
+		| "volatile" -> Cv-qualifier
+
+        Simple-template-id
+		| Operator-function-id "<" Template-argument-list? ">" -> Template-id
+
+        "::"? Nested-name-specifier "template"? Unqualified-id
+		| "::" Identifier
+		| "::" Operator-function-id
+		| "::" Template-id -> Qualified-id
+
+        Lambda-introducer Lambda-parameter-declaration? Compound-statement -> Lambda-expression
+
+        "[" Lambda-capture? "]" -> Lambda-introducer
+
+        Capture-default
+		| Capture-list
+		| Capture-default "," Capture-list -> Lambda-capture
+
+        "&"
+		| "=" -> Capture-default
+
+        Capture
+		| Capture-list "," Capture -> Capture-list
+
+        Identifier
+		| "&" Identifier
+		| "this" -> Capture
+
+        "(" Lambda-parameter-declaration-list? ")" "mutable"? Exception-specification? Lambda-return-type-clause? -> Lambda-parameter-declaration
+
+        Lambda-parameter
+		| Lambda-parameter "," Lambda-parameter-declaration-list -> Lambda-parameter-declaration-list
+
+        Decl-specifier-seq Declarator -> Lambda-parameter
+
+        Direct-declarator
+		| Ptr-operator Declarator -> Declarator
+
+        Declarator-id
+		| Direct-declarator "(" Parameter-declaration-clause ")" Cv-qualifier-seq? Ref-qualifier? Exception-specification?
+		| Direct-declarator "(" Parameter-declaration-clause ")" Cv-qualifier-seq? Ref-qualifier? Exception-specification? "->" Type-id
+		| Direct-declarator "[" Constant-expression? "]"
+		| "(" Declarator ")" -> Direct-declarator
+
+        "..."? Id-expression
+		| "::"? Nested-name-specifier? Class-name -> Declarator-id
+
+        Parameter-declaration-list? "..."?
+		| Parameter-declaration-list "," "..." -> Parameter-declaration-clause
+
+        Parameter-declaration
+		| Parameter-declaration-list "," Parameter-declaration -> Parameter-declaration-list
+
+        Decl-specifier-seq Declarator
+		| Decl-specifier-seq Declarator "=" Assignment-expression
+		| Decl-specifier-seq Abstract-declarator?
+		| Decl-specifier-seq Abstract-declarator? "=" Assignment-expression -> Parameter-declaration
+
+        Ptr-operator Abstract-declarator?
+		| Direct-abstract-declarator
+		| "..." -> Abstract-declarator
+
+        Direct-abstract-declarator? "(" Parameter-declaration-clause ")" Cv-qualifier-seq? Ref-qualifier? Exception-specification?
+		| Direct-abstract-declarator? "(" Parameter-declaration-clause ")" Cv-qualifier-seq? Ref-qualifier? Exception-specification? "->" Type-id
+		| Direct-abstract-declarator? "[" Constant-expression? "]"
+		| "(" Abstract-declarator ")" -> Direct-abstract-declarator
+
+        "&"
+		| "&&" -> Ref-qualifier
+
+        "throw" "(" Type-id-list? ")" -> Exception-specification
+
+        Type-id "..."?
+		| Type-id-list "," Type-id "..."? -> Type-id-list
+
+        Type-specifier-seq Abstract-declarator? -> Type-id
+
+        "->" Type-id -> Lambda-return-type-clause
+
+        "{" Statement-seq? "}" -> Compound-statement
+
+        Statement
+		| Statement-seq Statement -> Statement-seq
+
+        Labeled-statement
+		| Expression-statement
+		| Compound-statement
+		| Selection-statement
+		| Iteration-statement
+		| Jump-statement
+		| Declaration-statement
+		| Try-block -> Statement
+
+        Identifier ":" Statement
+		| "case" Constant-expression ":" Statement
+		| "default" ":" Statement -> Labeled-statement
+
+        Expression? ";" -> Expression-statement
+
+        "if" "(" Condition ")" Statement
+		| "if" "(" Condition ")" Statement "else" Statement
+		| "switch" "(" Condition ")" Statement -> Selection-statement
+
+        Expression
+		| Type-specifier-seq Declarator "=" Initializer-clause
+		| Type-specifier-seq Declarator Braced-init-list -> Condition
+
+        "while" "(" Condition ")" Statement
+		| "do" Statement "while" "(" Expression ")" ";"
+		| "for" "(" For-init-statement Condition? ";" Expression? ")" Statement -> Iteration-statement
+
+        Expression-statement
+		| Simple-declaration -> For-init-statement
+
+        "break" ";"
+		| "continue" ";"
+		| "return" Expression? ";"
+		| "return" Braced-init-list ";"
+		| "goto" Identifier ";" -> Jump-statement
+
+        Block-declaration -> Declaration-statement
+
+        "try" Compound-statement Handler-seq -> Try-block
+
+        Handler Handler-seq? -> Handler-seq
+
+        "catch" "(" Exception-declaration ")" Compound-statement -> Handler
+
+        Type-specifier-seq Declarator
+		| Type-specifier-seq Abstract-declarator
+		| Type-specifier-seq
+		| "..." -> Exception-declaration
+
+        Initializer-list -> Expression-list
+
+        "typename" "::"? Nested-name-specifier Identifier
+		| "typename" "::"? Nested-name-specifier "template"? Simple-template-id -> Typename-specifier
+
+        "::"? Nested-name-specifier? Type-name "::" "~" Type-name
+		| "::"? Nested-name-specifier "template" Simple-template-id "::" "~" Type-name
+		| "::"? Nested-name-specifier? "~" Type-name -> Pseudo-destructor-name
+
+        "*"
+		| "&"
+		| "+"
+		| "-"
+		| "!"
+		| "~" -> Unary-operator
+
+        "::"? "new" New-placement? New-type-id New-initializer?
+		| "::"? "new" New-placement? "(" Type-id ")" New-initializer? -> New-expression
+
+        "(" Expression-list ")" -> New-placement
+
+        Type-specifier-seq New-declarator? -> New-type-id
+
+        Ptr-operator New-declarator?
+		| Direct-new-declarator -> New-declarator
+
+        "[" Expression "]"
+		| Direct-new-declarator "[" Constant-expression "]" -> Direct-new-declarator
+
+        "(" Expression-list? ")"
+		| Braced-init-list -> New-initializer
+
+        "::"? "delete" Cast-expression
+		| "::"? "delete" "[" "]" Cast-expression -> Delete-expression
+
+        Identifier -> Enum-name
+
+        Identifier -> Typedef-name
+
+        Original-namespace-name
+		| Namespace-alias -> Namespace-name
+
+        Identifier -> Original-namespace-name
+
+        Identifier -> Namespace-alias
+
+        Class-head "{" Member-specification? "}" -> Class-specifier
+
+        Class-key Identifier? Base-clause?
+		| Class-key Nested-name-specifier Identifier Base-clause?
+		| Class-key Nested-name-specifier? Simple-template-id Base-clause? -> Class-head
+
+        "class"
+		| "struct"
+		| "union" -> Class-key
+
+        ":" Base-specifier-list -> Base-clause
+
+        Base-specifier "..."?
+		| Base-specifier-list "," Base-specifier "..."? -> Base-specifier-list
+
+        "::"? Nested-name-specifier? Class-name
+		| "virtual" Access-specifier? "::"? Nested-name-specifier? Class-name
+		| Access-specifier "virtual"? "::"? Nested-name-specifier? Class-name -> Base-specifier
+
+        "private"
+		| "protected"
+		| "public" -> Access-specifier
+
+        Member-declaration Member-specification?
+		| Access-specifier ":" Member-specification? -> Member-specification
+
+        Decl-specifier-seq? Member-declarator-list? ";"
+		| Function-definition ";"?
+		| "::"? Nested-name-specifier "template"? Unqualified-id ";"
+		| Using-declaration
+		| Static-assert-declaration
+		| Template-declaration -> Member-declaration
+
+        Member-declarator
+		| Member-declarator-list "," Member-declarator -> Member-declarator-list
+
+        Declarator Pure-specifier?
+		| Declarator Constant-initializer?
+		| Identifier? ":" Constant-expression -> Member-declarator
+
+        "=" "0" -> Pure-specifier
+
+        "=" Constant-expression -> Constant-initializer
+
+        Decl-specifier-seq? Declarator Function-body
+		| Decl-specifier-seq? Declarator "=" "default" ";"
+		| Decl-specifier-seq? Declarator "=" "delete" ";" -> Function-definition
+
+        Ctor-initializer? Compound-statement
+		| Function-try-block -> Function-body
+
+        ":" Mem-initializer-list -> Ctor-initializer
+
+        Mem-initializer "..."?
+		| Mem-initializer "," Mem-initializer-list "..."? -> Mem-initializer-list
+
+        Mem-initializer-id "(" Expression-list? ")"
+		| Mem-initializer-id Braced-init-list -> Mem-initializer
+
+        "::"? Nested-name-specifier? Class-name
+		| Identifier -> Mem-initializer-id
+
+        "try" Ctor-initializer? Compound-statement Handler-seq -> Function-try-block
+
+        "using" "typename"? "::"? Nested-name-specifier Unqualified-id ";"
+		| "using" "::" Unqualified-id ";" -> Using-declaration
+
+        "static_assert" "(" Constant-expression "," String-literal ")" ";" -> Static-assert-declaration
+
+        "export"? "template" "<" Template-parameter-list ">" Declaration -> Template-declaration
+
+        Template-parameter
+		| Template-parameter-list "," Template-parameter -> Template-parameter-list
+
+        Type-parameter
+		| Parameter-declaration -> Template-parameter
+
+        "class" "..."? Identifier?
+		| "class" Identifier? "=" Type-id
+		| "typename" "..."? Identifier?
+		| "typename" Identifier? "=" Type-id
+		| "template" "<" Template-parameter-list ">" "class" "..."? Identifier?
+		| "template" "<" Template-parameter-list ">" "class" Identifier? "=" Id-expression -> Type-parameter
+
+        Enum-key Identifier? Enum-base? "{" Enumerator-list? "}"
+		| Enum-key Identifier? Enum-base? "{" Enumerator-list "," "}" -> Enum-specifier
+
+        "enum"
+		| "enum" "class"
+		| "enum" "struct" -> Enum-key
+
+        ":" Type-specifier-seq -> Enum-base
+
+        Enumerator-definition
+		| Enumerator-list "," Enumerator-definition -> Enumerator-list
+
+        Enumerator
+		| Enumerator "=" Constant-expression -> Enumerator-definition
+
+        Identifier -> Enumerator
+
+        Class-key "::"? Nested-name-specifier? Identifier
+		| Class-key "::"? Nested-name-specifier? "template"? Simple-template-id
+		| Enum-key "::"? Nested-name-specifier? Identifier -> Elaborated-type-specifier
+
+        "inline"
+		| "virtual"
+		| "explicit" -> Function-specifier
+
+        "alignas" "(" Constant-expression ")"
+		| "alignas" "(" Type-id ")" -> Alignment-specifier
+
+        Init-declarator
+		| Init-declarator-list "," Init-declarator -> Init-declarator-list
+
+        Declarator Initializer? -> Init-declarator
+
+        "=" Initializer-clause
+		| "(" Expression-list ")"
+		| Braced-init-list -> Initializer
+
+        "asm" "(" String-literal ")" ";" -> Asm-definition
+
+        "namespace" Identifier "=" Qualified-namespace-specifier ";" -> Namespace-alias-definition
+
+        "::"? Nested-name-specifier? Namespace-name -> Qualified-namespace-specifier
+
+        "using" "namespace" "::"? Nested-name-specifier? Namespace-name ";" -> Using-directive
+
+        "using" Identifier "=" Type-id ";" -> Alias-declaration
+
+        "extern"? "template" Declaration -> Explicit-instantiation
+
+        "template" "<" ">" Declaration -> Explicit-specialization
+
+        "extern" String-literal "{" Declaration-seq? "}"
+		| "extern" String-literal Declaration -> Linkage-specification
+
+        Named-namespace-definition
+		| Unnamed-namespace-definition -> Namespace-definition
+
+        Original-namespace-definition
+		| Extension-namespace-definition -> Named-namespace-definition
+
+        "inline"? "namespace" Identifier "{" Namespace-body "}" -> Original-namespace-definition
+
+        Declaration-seq? -> Namespace-body
+
+        "inline"? "namespace" Original-namespace-name "{" Namespace-body "}" -> Extension-namespace-definition
+
+        "inline"? "namespace" "{" Namespace-body "}" -> Unnamed-namespace-definition

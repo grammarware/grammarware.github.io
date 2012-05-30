@@ -1,0 +1,32 @@
+module Main
+
+exports
+ context-free start-symbols Program
+  sorts
+        Program Fragment Function Expr Literal Argument Binary Ops IfThenElse Apply 
+  context-free syntax
+        function::Function+ -> Program
+
+        Expr -> Fragment
+
+        name::STR arg::STR+ rhs::Expr -> Function
+
+        Literal
+		| Argument
+		| Binary
+		| IfThenElse
+		| Apply -> Expr
+
+        info::INT -> Literal
+
+        name::STR -> Argument
+
+        ops::Ops left::Expr right::Expr -> Binary
+
+        Equal::
+		| Plus::
+		| Minus:: -> Ops
+
+        ifExpr::Expr thenExpr::Expr elseExpr::Expr -> IfThenElse
+
+        name::STR arg::Expr+ -> Apply

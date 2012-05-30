@@ -1,0 +1,28 @@
+Apply:
+        Name::STR Arg::(ANY*)
+Argument:
+        Name::STR
+Binary:
+        Ops::Ops Left::Expr Right::Expr
+Expr:
+        Apply
+        Argument
+        Binary
+        IfThenElse
+        Literal
+Function:
+        Name::STR Arg::(ANY*) Rhs::Expr
+IfThenElse:
+        IfExpr::Expr ThenExpr::Expr ElseExpr::Expr
+Literal:
+        Info::INT
+ObjectFactory:
+        EPSILON
+Ops:
+        EQUAL::EPSILON
+        PLUS::EPSILON
+        MINUS::EPSILON
+package-info:
+        EMPTY
+Program:
+        Function::(ANY*)

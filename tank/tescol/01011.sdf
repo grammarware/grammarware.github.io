@@ -1,0 +1,141 @@
+module Main
+
+exports
+  sorts
+        Program Constant Variable Proceduredecl Parameter Term Unary Negation Mult Addition Relation Conj Disj Expression Procedureapp Statement Skip Assignment Ret Conditional Loop SEMI COLON ASSIGN LBRACK RBRACK LBRACE RBRACE PLUS MINUS COMMA DIVIS MULTI EXPO EQUALITY LTHAN MTHAN NOTEQUAL LEQUAL MEQUAL CONJ DISJ DONE SKIP TROLLEY CHECKOUT CONTAINS CONSTANT VARIABLE PROCEDURE INT DOUBLE IF THEN ELSE WHILE DO INUMB DNUMB COMMENT ID WS EOF 
+  context-free syntax
+        TROLLEY ID CONTAINS (Constant | Variable | Proceduredecl)+ CHECKOUT Statement+ DONE SEMI EOF -> Program
+
+        "const" ID COLON (INT | DOUBLE) ASSIGN Expression SEMI -> Constant
+
+        "var" ID COLON (INT | DOUBLE) SEMI -> Variable
+
+        "proc" ID LBRACK Parameter (COMMA Parameter)* RBRACK COLON (INT | DOUBLE) ASSIGN Statement -> Proceduredecl
+
+        ID COLON (INT | DOUBLE) -> Parameter
+
+        Procedureapp
+		| ID
+		| "(" Expression ")"
+		| INUMB
+		| DNUMB -> Term
+
+        (PLUS | Negation)* Term -> Unary
+
+        "-" -> Negation
+
+        Unary ((MULTI | DIVIS | EXPO) Unary)* -> Mult
+
+        Mult ((PLUS | MINUS) Mult)* -> Addition
+
+        Addition ((EQUALITY | LTHAN | MTHAN | NOTEQUAL | LEQUAL | MEQUAL) Addition)* -> Relation
+
+        Relation (CONJ Relation)* -> Conj
+
+        Conj (DISJ Relation)* -> Disj
+
+        Disj ("\?" Disj COLON Disj)? -> Expression
+
+        ID "(" (Expression (COMMA Expression)*)? ")" SEMI? -> Procedureapp
+
+        LBRACE Statement+ RBRACE SEMI
+		| Skip
+		| Assignment
+		| Conditional
+		| Loop
+		| Procedureapp
+		| Ret -> Statement
+
+        "skip" SEMI -> Skip
+
+        ID ASSIGN Expression SEMI -> Assignment
+
+        "currentProc" ASSIGN Expression SEMI -> Ret
+
+        IF Expression THEN Statement+ (ELSE Statement+)? -> Conditional
+
+        WHILE Expression DO Statement+ -> Loop
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        ":=" -> ASSIGN
+
+        "(" -> LBRACK
+
+        ")" -> RBRACK
+
+        "{" -> LBRACE
+
+        "}" -> RBRACE
+
+        "+" -> PLUS
+
+        "-" -> MINUS
+
+        "," -> COMMA
+
+        "/" -> DIVIS
+
+        "*" -> MULTI
+
+        "**" -> EXPO
+
+        "==" -> EQUALITY
+
+        "<" -> LTHAN
+
+        ">" -> MTHAN
+
+        "!=" -> NOTEQUAL
+
+        "<=" -> LEQUAL
+
+        ">=" -> MEQUAL
+
+        "/\\" -> CONJ
+
+        "\\/" -> DISJ
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "const" -> CONSTANT
+
+        "var" -> VARIABLE
+
+        "proc" -> PROCEDURE
+
+        "int" -> INT
+
+        "double" -> DOUBLE
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* -> INUMB
+
+        ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* ("e" ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")*)? -> DNUMB
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+         -> EOF

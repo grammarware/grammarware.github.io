@@ -1,0 +1,17 @@
+Grammar:
+        Rule*
+Rule:
+        IdCon "::=" Expression
+IdCon:
+        STR
+Expression:
+        IdCon
+        String
+        "(" Expression ")"
+        Expression "?"
+        Expression "*"
+        Expression "+"
+        Expression "|" Expression
+        Expression Expression
+String:
+        """ STR """

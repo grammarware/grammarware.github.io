@@ -1,0 +1,243 @@
+module Main
+
+exports
+ context-free start-symbols Compilation
+  sorts
+        Compilation Interface Id Import AsImport ImportItem FromImport IdList Decl ConstDecl Type TypeLiteral ArrayType PackedType Expr Relop Addop Mulop Selector Actual Constructor AnyCons Elt EnumType ObjectType Ancestor TypeName QualId Brand Fields Field Methods Method Signature Formals Formal Mode Raises Overrides Override ProcedureType RecordType RefType SetType SubrangeType TypeDecl ExceptionDecl VariableDecl ProcedureHead Block Stmts Stmt AssignStmt CallStmt CaseStmt Case Label ExitStmt EvalStmt ForStmt IfStmt LockStmt LoopStmt RaiseStmt RepeatStmt ReturnStmt TryFinStmt TryXptStmt Handler TCaseStmt TCase WhileStmt WithStmt Binding GenActls Module GenInf GenFmls GenMod 
+  context-free syntax
+        "UNSAFE"? (Interface | Module | GenInf | GenMod) -> Compilation
+
+        "INTERFACE" Id ";" Import* Decl* "END" Id "."
+		| "INTERFACE" Id "=" Id GenActls "END" Id "." -> Interface
+
+        "NOT"
+		| "ROOT" -> Id
+
+        AsImport
+		| FromImport -> Import
+
+        "IMPORT" ImportItem ("," ImportItem)* ";" -> AsImport
+
+        Id
+		| Id "AS" Id -> ImportItem
+
+        "FROM" Id "IMPORT" IdList ";" -> FromImport
+
+        Id ("," Id)* -> IdList
+
+        "CONST" (ConstDecl ";")*
+		| "TYPE" (TypeDecl ";")*
+		| "EXCEPTION" (ExceptionDecl ";")*
+		| "VAR" (VariableDecl ";")*
+		| ProcedureHead ("=" Block Id)? ";"
+		| "REVEAL" (QualId ("=" | "<:") Type ";")* -> Decl
+
+        Id (":" Type)? "=" Expr -> ConstDecl
+
+        TypeLiteral
+		| QualId -> Type
+
+        ArrayType
+		| PackedType
+		| EnumType
+		| ObjectType
+		| ProcedureType
+		| RecordType
+		| RefType
+		| SetType
+		| SubrangeType
+		| "(" Type ")"
+		| TypeName -> TypeLiteral
+
+        "ARRAY" (Type ("," Type)*)? "OF" Type -> ArrayType
+
+        "BITS" Expr "FOR" Type -> PackedType
+
+        Expr "OR" Expr
+		| Expr "AND" Expr
+		| "NOT" Expr
+		| Expr Relop Expr
+		| Expr Addop Expr
+		| Expr Mulop Expr
+		| "+" Expr
+		| "-" Expr
+		| Expr Selector
+		| Id
+		| Literal
+		| Constructor
+		| "(" Expr ")" -> Expr
+
+        "="
+		| "#"
+		| "<"
+		| "<="
+		| ">"
+		| ">="
+		| "IN" -> Relop
+
+        "+"
+		| "-"
+		| "&" -> Addop
+
+        "*"
+		| "/"
+		| "DIV"
+		| "MOD" -> Mulop
+
+        "^"
+		| "." Id
+		| "[" Expr ("," Expr)* "]"
+		| "(" (Actual ("," Actual)*)? ")" -> Selector
+
+        TypeLiteral
+		| (Id ":=")? Expr -> Actual
+
+        Type "{" AnyCons? "}" -> Constructor
+
+        Elt ("," Elt)* ("," "..")? -> AnyCons
+
+        Expr ".." Expr
+		| Expr
+		| Id ":=" Expr -> Elt
+
+        "{" IdList? "}" -> EnumType
+
+        Ancestor? Brand? "OBJECT" Fields ("METHODS" Methods)? ("OVERRIDES" Overrides)? "END" -> ObjectType
+
+        TypeName
+		| ObjectType
+		| QualId -> Ancestor
+
+        "ROOT"
+		| "UNTRACED" "ROOT" -> TypeName
+
+        Id ("." Id)? -> QualId
+
+        "BRANDED" TextLiteral? -> Brand
+
+        (Field (";" Field)* ";"?)? -> Fields
+
+        IdList ":" Type ":=" Expr
+		| IdList ":" Type
+		| IdList ":=" Expr -> Field
+
+        (Method (";" Method)* ";"?)? -> Methods
+
+        Id Signature (":=" Expr)? -> Method
+
+        "(" Formals ")" (":" Type)? ("RAISES" Raises)? -> Signature
+
+        (Formal (";" Formal)* ";"?)? -> Formals
+
+        Mode? IdList ":" Type ":=" Expr
+		| Mode? IdList ":" Type
+		| Mode? IdList ":=" Expr -> Formal
+
+        "VALUE"
+		| "VAR"
+		| "READONLY" -> Mode
+
+        "{" (QualId ("," QualId)*)? "}"
+		| "ANY" -> Raises
+
+        (Override (";" Override)* ";"?)? -> Overrides
+
+        Id ":=" Expr -> Override
+
+        "PROCEDURE" Signature -> ProcedureType
+
+        "RECORD" Fields "END" -> RecordType
+
+        "UNTRACED"? Brand? "REF" Type -> RefType
+
+        "SET" "OF" Type -> SetType
+
+        "[" Expr ".." Expr "]" -> SubrangeType
+
+        Id ("=" | "<:") Type -> TypeDecl
+
+        Id ("(" Type ")")? -> ExceptionDecl
+
+        IdList ":" Type ":=" Expr
+		| IdList ":" Type
+		| IdList ":=" Expr -> VariableDecl
+
+        "PROCEDURE" Id Signature -> ProcedureHead
+
+        Decl* "BEGIN" Stmts "END" -> Block
+
+        (Stmt (";" Stmt)* ";"?)? -> Stmts
+
+        AssignStmt
+		| Block
+		| CallStmt
+		| CaseStmt
+		| ExitStmt
+		| EvalStmt
+		| ForStmt
+		| IfStmt
+		| LockStmt
+		| LoopStmt
+		| RaiseStmt
+		| RepeatStmt
+		| ReturnStmt
+		| TryFinStmt
+		| TryXptStmt
+		| TCaseStmt
+		| WhileStmt
+		| WithStmt -> Stmt
+
+        Expr ":=" Expr -> AssignStmt
+
+        Expr "(" (Actual ("," Actual)*)? ")" -> CallStmt
+
+        "CASE" Expr "OF" "|"? Case ("|" Case)* ("ELSE" Stmts)? "END" -> CaseStmt
+
+        Label ("," Label)* "=>" Stmts -> Case
+
+        Expr (".." Expr)? -> Label
+
+        "EXIT" -> ExitStmt
+
+        "EVAL" Expr -> EvalStmt
+
+        "FOR" Id ":=" Expr "TO" Expr ("BY" Expr)? "DO" Stmts "END" -> ForStmt
+
+        "IF" Expr "THEN" Stmts ("ELSIF" Expr "THEN" Stmts)* ("ELSE" Stmts)? "END" -> IfStmt
+
+        "LOCK" Expr "DO" Stmts "END" -> LockStmt
+
+        "LOOP" Stmts "END" -> LoopStmt
+
+        "RAISE" QualId ("(" Expr ")")? -> RaiseStmt
+
+        "REPEAT" Stmts "UNTIL" Expr -> RepeatStmt
+
+        "RETURN" Expr? -> ReturnStmt
+
+        "TRY" Stmts "FINALLY" Stmts "END" -> TryFinStmt
+
+        "TRY" Stmts "EXCEPT" "|"? Handler ("|" Handler)* ("ELSE" Stmts)? "END" -> TryXptStmt
+
+        QualId ("," QualId)* ("(" Id ")")? "=>" Stmts -> Handler
+
+        "TYPECASE" Expr "OF" "|"? TCase ("|" TCase)* ("ELSE" Stmts)? "END" -> TCaseStmt
+
+        Type ("," Type)* ("(" Id ")")? "=>" Stmts -> TCase
+
+        "WHILE" Expr "DO" Stmts "END" -> WhileStmt
+
+        "WITH" Binding ("," Binding)* "DO" Stmts "END" -> WithStmt
+
+        Id "=" Expr -> Binding
+
+        "(" IdList? ")" -> GenActls
+
+        "MODULE" Id ("EXPORTS" IdList)? ";" Import* Block Id "."
+		| "MODULE" Id ("EXPORTS" IdList)? "=" Id GenActls "END" Id "." -> Module
+
+        "GENERIC" "INTERFACE" Id GenFmls ";" Import* Decl* "END" Id "." -> GenInf
+
+        "(" IdList? ")" -> GenFmls
+
+        "GENERIC" "MODULE" Id GenFmls ";" Import* Block Id "." -> GenMod

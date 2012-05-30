@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable Grammar Transformation</title><style type="text/css">
+			          h1, h2 { text-align: center; }
+			          .label, .sel { color: green; }
+			          .marked { background-color: #FFE5B4;}
+			          .nt { color: blue; font-weight: bold; }
+			          .t { color: red;  font-family: monospace; }
+			          .meta, .cmd { color: green; font-style:italic; font-family: serif; }
+			          .b { text-align: right; font-style:italic;}
+			        </style><script type="text/javascript">
+					  var _gaq = _gaq || [];
+					  _gaq.push(['_setAccount', 'UA-3743366-5']);
+					  _gaq.push(['_trackPageview']);
+
+					  (function() {
+					    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					  })();
+					</script></head><body><h1>fix-names</h1><h2>Source: <a href="http://slps.svn.sourceforge.net/viewvc/slps/topics/grammars/wiki/mediawiki-bnf/fix-names.xbgf?view=markup">SLPS/topics/grammars/wiki/mediawiki-bnf/fix-names.xbgf</a></h2><ul><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#title-legal-chars">title-legal-chars</a>, <a class="nt" name="title-legal-char">title-legal-char</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#TableCellParameter">TableCellParameter</a>, <a class="nt" href="mediawiki-bnf.html#TableCellParameters">TableCellParameters</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#harmless-characters">harmless-characters</a>, <a class="nt" href="mediawiki-bnf.html#harmless-character">harmless-character</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ (<a class="nt" href="mediawiki-bnf.html#ImageAlign">ImageAlign</a> | <a class="nt" href="mediawiki-bnf.html#Center">Center</a>),
+ (<a class="nt" href="mediawiki-bnf.html#ImageAlignCenter">ImageAlignCenter</a>));
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#unespaced-less-than">unespaced-less-than</a>, <a class="nt" href="mediawiki-bnf.html#unescaped-less-than">unescaped-less-than</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#ImageParamUpgright">ImageParamUpgright</a>, <a class="nt" href="mediawiki-bnf.html#ImageParamUpright">ImageParamUpright</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignParameter">ImageValignParameter</a>, <a class="nt" href="mediawiki-bnf.html#ImageVAlignParameter">ImageVAlignParameter</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#noparseblock">noparseblock</a>, <a class="nt" href="mediawiki-bnf.html#noparse-block">noparse-block</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#GalleryBlock">GalleryBlock</a>, <a class="nt" href="mediawiki-bnf.html#gallery-block">gallery-block</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#ImageInline">ImageInline</a>, <a class="nt" href="mediawiki-bnf.html#image-inline">image-inline</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#MediaInline">MediaInline</a>, <a class="nt" href="mediawiki-bnf.html#media-inline">media-inline</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#Table">Table</a>, <a class="nt" href="mediawiki-bnf.html#table">table</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#Text">Text</a>, <a class="nt" href="mediawiki-bnf.html#text">text</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#InlineText">InlineText</a>, <a class="nt" href="mediawiki-bnf.html#inline-text">inline-text</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#unite">unite</a> (<a class="nt" href="mediawiki-bnf.html#Pipe">Pipe</a>, <a class="nt" href="mediawiki-bnf.html#pipe">pipe</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#AnyText">AnyText</a>, <a class="nt" name="any-text">any-text</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#BadSectionLinkCharacters">BadSectionLinkCharacters</a>, <a class="nt" name="bad-section-link-characters">bad-section-link-characters</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#BadTitleCharacters">BadTitleCharacters</a>, <a class="nt" name="bad-title-characters">bad-title-characters</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#Caption">Caption</a>, <a class="nt" name="caption">caption</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#GalleryImage">GalleryImage</a>, <a class="nt" name="gallery-image">gallery-image</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageAlignCenter">ImageAlignCenter</a>, <a class="nt" name="image-align-center">image-align-center</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageAlignLeft">ImageAlignLeft</a>, <a class="nt" name="image-align-left">image-align-left</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageAlignNone">ImageAlignNone</a>, <a class="nt" name="image-align-none">image-align-none</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageAlignParameter">ImageAlignParameter</a>, <a class="nt" name="image-align-parameter">image-align-parameter</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageAlignRight">ImageAlignRight</a>, <a class="nt" name="image-align-right">image-align-right</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageExtension">ImageExtension</a>, <a class="nt" name="image-extension">image-extension</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageModeAutoThumb">ImageModeAutoThumb</a>, <a class="nt" name="image-mode-auto-thumb">image-mode-auto-thumb</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageModeFrame">ImageModeFrame</a>, <a class="nt" name="image-mode-frame">image-mode-frame</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageModeFrameless">ImageModeFrameless</a>, <a class="nt" name="image-mode-frameless">image-mode-frameless</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageModeManualThumb">ImageModeManualThumb</a>, <a class="nt" name="image-mode-manual-thumb">image-mode-manual-thumb</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageModeParameter">ImageModeParameter</a>, <a class="nt" name="image-mode-parameter">image-mode-parameter</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageName">ImageName</a>, <a class="nt" name="image-name">image-name</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageOption">ImageOption</a>, <a class="nt" name="image-option">image-option</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageOtherParameter">ImageOtherParameter</a>, <a class="nt" name="image-other-parameter">image-other-parameter</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageParamBorder">ImageParamBorder</a>, <a class="nt" name="image-param-border">image-param-border</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageParamPage">ImageParamPage</a>, <a class="nt" name="image-param-page">image-param-page</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageParamUpright">ImageParamUpright</a>, <a class="nt" name="image-param-upright">image-param-upright</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageSizeParameter">ImageSizeParameter</a>, <a class="nt" name="image-size-parameter">image-size-parameter</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignBaseline">ImageValignBaseline</a>, <a class="nt" name="image-valign-baseline">image-valign-baseline</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignBottom">ImageValignBottom</a>, <a class="nt" name="image-valign-bottom">image-valign-bottom</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignMiddle">ImageValignMiddle</a>, <a class="nt" name="image-valign-middle">image-valign-middle</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageVAlignParameter">ImageVAlignParameter</a>, <a class="nt" name="image-valign-parameter">image-valign-parameter</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignSub">ImageValignSub</a>, <a class="nt" name="image-valign-sub">image-valign-sub</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignSuper">ImageValignSuper</a>, <a class="nt" name="image-valign-super">image-valign-super</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignTextBottom">ImageValignTextBottom</a>, <a class="nt" name="image-valign-text-bottom">image-valign-text-bottom</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignTextTop">ImageValignTextTop</a>, <a class="nt" name="image-valign-text-top">image-valign-text-top</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#ImageValignTop">ImageValignTop</a>, <a class="nt" name="image-valign-top">image-valign-top</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#Line">Line</a>, <a class="nt" name="line">line</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#LinkTitle">LinkTitle</a>, <a class="nt" name="link-title">link-title</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#MediaExtension">MediaExtension</a>, <a class="nt" name="media-extension">media-extension</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#PageName">PageName</a>, <a class="nt" name="page-name">page-name</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#PageNameLink">PageNameLink</a>, <a class="nt" name="page-name-link">page-name-link</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#PlainText">PlainText</a>, <a class="nt" name="plain-text">plain-text</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#SectionLink">SectionLink</a>, <a class="nt" name="section-link">section-link</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#SectionLinkCharacter">SectionLinkCharacter</a>, <a class="nt" name="section-link-character">section-link-character</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#SectionTitle">SectionTitle</a>, <a class="nt" name="section-title">section-title</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableCellParameters">TableCellParameters</a>, <a class="nt" name="table-cell-parameters">table-cell-parameters</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableColumn">TableColumn</a>, <a class="nt" name="table-column">table-column</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableColumnLine">TableColumnLine</a>, <a class="nt" name="table-column-line">table-column-line</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableColumnMultiLine">TableColumnMultiLine</a>, <a class="nt" name="table-column-multiline">table-column-multiline</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableFirstRow">TableFirstRow</a>, <a class="nt" name="table-first-row">table-first-row</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableParameters">TableParameters</a>, <a class="nt" name="table-parameters">table-parameters</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TableRow">TableRow</a>, <a class="nt" name="table-row">table-row</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#TitleCharacter">TitleCharacter</a>, <a class="nt" name="title-character">title-character</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#UnicodeCharacter">UnicodeCharacter</a>, <a class="nt" name="unicode-character">unicode-character</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#UnicodeWiki">UnicodeWiki</a>, <a class="nt" name="unicode-wiki">unicode-wiki</a>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#renameN">renameN</a> (<a class="nt" href="mediawiki-bnf.html#WikiMarkupCharacters">WikiMarkupCharacters</a>, <a class="nt" name="wiki-markup-characters">wiki-markup-characters</a>);
+</li></ul><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

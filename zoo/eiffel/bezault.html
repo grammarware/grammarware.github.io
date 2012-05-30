@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable Eiffel Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style><script type="text/javascript">
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				</script></head><body><h1>Browsable Eiffel Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/zoo/">Grammar Zoo</a> for details. <br></br>Source used for this grammar: Eric Bezault,
+				 <em>Eiffel: The Syntax</em> (1999) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>155</strong></li><li>Number of top alternatives: <strong>244</strong></li><li>Number of defined nonterminal symbols: <strong>155</strong></li><li>Root nonterminal symbols: —</li><li>Other top nonterminal symbols: <strong>1</strong>: <code><a href="#Class_declaration" class="nt">Class_declaration</a></code></li><li>Bottom nonterminal symbols: <strong>10</strong>: <code><a href="#Manifest_string" class="nt">Manifest_string</a>, <a href="#Header_comment" class="nt">Header_comment</a>, <a href="#Free_operator" class="nt">Free_operator</a>, <a href="#Comment" class="nt">Comment</a>, <a href="#Character_constant" class="nt">Character_constant</a>, <a href="#Bit_constant" class="nt">Bit_constant</a>, <a href="#Real" class="nt">Real</a>, <a href="#Hexadecimal_constant" class="nt">Hexadecimal_constant</a>, <a href="#Letter" class="nt">Letter</a>, <a href="#Decimal_digit" class="nt">Decimal_digit</a></code></li><li>Number of used terminal symbols: <strong>89</strong></li><li>Special terminal symbols: <strong>31</strong>: <code class="t">"--", ";", ":", ",", "-", "&gt;", "{", "}", """, "+", "*", "/", "&lt;", "&lt;=", "&gt;=", "//", "\\", "^", "(", ")", "!", ".", ":=", "?=", "..", "$", "=", "/=", "&lt;&lt;", "&gt;&gt;", "_"</code></li><li>Keywords: <strong>58</strong>: <code class="t">"end", "class", "indexing", "deferred", "expanded", "separate", "obsolete", "inherit", "rename", "as", "export", "all", "redefine", "undefine", "select", "creation", "feature", "is", "Unique", "frozen", "prefix", "infix", "not", "and", "or", "xor", "then", "else", "implies", "do", "once", "external", "alias", "local", "require", "ensure", "invariant", "rescue", "BIT", "like", "Current", "if", "elseif", "inspect", "when", "from", "variant", "loop", "until", "debug", "check", "retry", "Result", "Precursor", "True", "False", "old", "Strip"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="Class_declaration">Class_declaration</a>:
+        <a class="nt" href="#Indexing">Indexing</a><span class="meta">?</span> <a class="nt" href="#Class_header">Class_header</a> <a class="nt" href="#Formal_generics">Formal_generics</a><span class="meta">?</span> <a class="nt" href="#Obsolete">Obsolete</a><span class="meta">?</span> <a class="nt" href="#Inheritance">Inheritance</a><span class="meta">?</span> <a class="nt" href="#Creators">Creators</a><span class="meta">?</span> <a class="nt" href="#Features">Features</a><span class="meta">?</span> <a class="nt" href="#Invariant">Invariant</a><span class="meta">?</span> <span class="t">"end"</span> (<span class="t">"--"</span> <span class="t">"class"</span> <a class="nt" href="#Class_name">Class_name</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="Indexing">Indexing</a>:
+        <span class="t">"indexing"</span> <a class="nt" href="#Index_list">Index_list</a>
+</pre><pre><a class="nt" name="Index_list">Index_list</a>:
+        (<a class="nt" href="#Index_clause">Index_clause</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Index_clause">Index_clause</a>:
+        <a class="nt" href="#Index">Index</a><span class="meta">?</span> <a class="nt" href="#Index_terms">Index_terms</a>
+</pre><pre><a class="nt" name="Index">Index</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <span class="t">":"</span>
+</pre><pre><a class="nt" name="Index_terms">Index_terms</a>:
+        (<a class="nt" href="#Index_value">Index_value</a> <span class="t">","</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="Index_value">Index_value</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+        <a class="nt" href="#Manifest_constant">Manifest_constant</a>
+</pre><pre><a class="nt" name="Class_header">Class_header</a>:
+        <a class="nt" href="#Header_mark">Header_mark</a><span class="meta">?</span> <span class="t">"class"</span> <a class="nt" href="#Class_name">Class_name</a>
+</pre><pre><a class="nt" name="Header_mark">Header_mark</a>:
+        <span class="t">"deferred"</span>
+        <span class="t">"expanded"</span>
+        <span class="t">"separate"</span>
+</pre><pre><a class="nt" name="Class_name">Class_name</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+</pre><pre><a class="nt" name="Formal_generics">Formal_generics</a>:
+        <a class="nt" href="#Formal_generic_list">Formal_generic_list</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Formal_generic_list">Formal_generic_list</a>:
+        (<a class="nt" href="#Formal_generic">Formal_generic</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Formal_generic">Formal_generic</a>:
+        <a class="nt" href="#Formal_generic_name">Formal_generic_name</a> <a class="nt" href="#Constraint">Constraint</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Formal_generic_name">Formal_generic_name</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+</pre><pre><a class="nt" name="Constraint">Constraint</a>:
+        <span class="t">"-"</span> <span class="t">"&gt;"</span> <a class="nt" href="#Class_type">Class_type</a>
+</pre><pre><a class="nt" name="Obsolete">Obsolete</a>:
+        <span class="t">"obsolete"</span> <a class="nt" href="#Message">Message</a>
+</pre><pre><a class="nt" name="Message">Message</a>:
+        <a class="nt" href="#Manifest_string">Manifest_string</a>
+</pre><pre><a class="nt" name="Inheritance">Inheritance</a>:
+        <span class="t">"inherit"</span> <a class="nt" href="#Parent_list">Parent_list</a>
+</pre><pre><a class="nt" name="Parent_list">Parent_list</a>:
+        (<a class="nt" href="#Parent">Parent</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Parent">Parent</a>:
+        <a class="nt" href="#Class_type">Class_type</a> <a class="nt" href="#Feature_adaptation">Feature_adaptation</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Feature_adaptation">Feature_adaptation</a>:
+        <a class="nt" href="#Rename">Rename</a><span class="meta">?</span> <a class="nt" href="#New_exports">New_exports</a><span class="meta">?</span> <a class="nt" href="#Undefine">Undefine</a><span class="meta">?</span> <a class="nt" href="#Redefine">Redefine</a><span class="meta">?</span> <a class="nt" href="#Select">Select</a><span class="meta">?</span> <span class="t">"end"</span>
+</pre><pre><a class="nt" name="Rename">Rename</a>:
+        <span class="t">"rename"</span> <a class="nt" href="#Rename_list">Rename_list</a>
+</pre><pre><a class="nt" name="Rename_list">Rename_list</a>:
+        (<a class="nt" href="#Rename_pair">Rename_pair</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Rename_pair">Rename_pair</a>:
+        <a class="nt" href="#Feature_name">Feature_name</a> <span class="t">"as"</span> <a class="nt" href="#Feature_name">Feature_name</a>
+</pre><pre><a class="nt" name="New_exports">New_exports</a>:
+        <span class="t">"export"</span> <a class="nt" href="#New_export_list">New_export_list</a>
+</pre><pre><a class="nt" name="New_export_list">New_export_list</a>:
+        (<a class="nt" href="#New_export_item">New_export_item</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="New_export_item">New_export_item</a>:
+        <a class="nt" href="#Clients">Clients</a> <a class="nt" href="#Feature_set">Feature_set</a>
+</pre><pre><a class="nt" name="Feature_set">Feature_set</a>:
+        <a class="nt" href="#Feature_list">Feature_list</a>
+        <span class="t">"all"</span>
+</pre><pre><a class="nt" name="Feature_list">Feature_list</a>:
+        (<a class="nt" href="#Feature_name">Feature_name</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Clients">Clients</a>:
+        <span class="t">"{"</span> <a class="nt" href="#Class_list">Class_list</a> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="Class_list">Class_list</a>:
+        (<a class="nt" href="#Class_name">Class_name</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Redefine">Redefine</a>:
+        <span class="t">"redefine"</span> <a class="nt" href="#Feature_list">Feature_list</a>
+</pre><pre><a class="nt" name="Undefine">Undefine</a>:
+        <span class="t">"undefine"</span> <a class="nt" href="#Feature_list">Feature_list</a>
+</pre><pre><a class="nt" name="Select">Select</a>:
+        <span class="t">"select"</span> <a class="nt" href="#Feature_list">Feature_list</a>
+</pre><pre><a class="nt" name="Creators">Creators</a>:
+        <span class="t">"creation"</span> (<a class="nt" href="#Creation_clause">Creation_clause</a> <span class="t">"creation"</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="Creation_clause">Creation_clause</a>:
+        <a class="nt" href="#Clients">Clients</a><span class="meta">?</span> <a class="nt" href="#Header_comment">Header_comment</a><span class="meta">?</span> <a class="nt" href="#Procedure_list">Procedure_list</a>
+</pre><pre><a class="nt" name="Procedure_list">Procedure_list</a>:
+        (<a class="nt" href="#Procedure_name">Procedure_name</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Procedure_name">Procedure_name</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+</pre><pre><a class="nt" name="Features">Features</a>:
+        <span class="t">"feature"</span> (<a class="nt" href="#Feature_clause">Feature_clause</a> <span class="t">"feature"</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="Feature_clause">Feature_clause</a>:
+        <a class="nt" href="#Clients">Clients</a><span class="meta">?</span> <a class="nt" href="#Header_comment">Header_comment</a><span class="meta">?</span> <a class="nt" href="#Feature_declaration_list">Feature_declaration_list</a>
+</pre><pre><a class="nt" name="Feature_declaration_list">Feature_declaration_list</a>:
+        (<a class="nt" href="#Feature_declaration">Feature_declaration</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Feature_declaration">Feature_declaration</a>:
+        <a class="nt" href="#New_feature_list">New_feature_list</a> <a class="nt" href="#Declaration_body">Declaration_body</a>
+</pre><pre><a class="nt" name="Declaration_body">Declaration_body</a>:
+        <a class="nt" href="#Formal_arguments">Formal_arguments</a><span class="meta">?</span> <a class="nt" href="#Type_mark">Type_mark</a><span class="meta">?</span> <a class="nt" href="#Constant_or_routine">Constant_or_routine</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Constant_or_routine">Constant_or_routine</a>:
+        <span class="t">"is"</span> <a class="nt" href="#Feature_value">Feature_value</a>
+</pre><pre><a class="nt" name="Feature_value">Feature_value</a>:
+        <a class="nt" href="#Manifest_constant">Manifest_constant</a>
+        <a class="nt" href="#Unique">Unique</a>
+        <a class="nt" href="#Routine">Routine</a>
+</pre><pre><a class="nt" name="Unique">Unique</a>:
+        <span class="t">"Unique"</span>
+</pre><pre><a class="nt" name="New_feature_list">New_feature_list</a>:
+        (<a class="nt" href="#New_feature">New_feature</a> <span class="t">","</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="New_feature">New_feature</a>:
+        <span class="t">"frozen"</span><span class="meta">?</span> <a class="nt" href="#Feature_name">Feature_name</a>
+</pre><pre><a class="nt" name="Feature_name">Feature_name</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+        <a class="nt" href="#Prefix">Prefix</a>
+        <a class="nt" href="#Infix">Infix</a>
+</pre><pre><a class="nt" name="Prefix">Prefix</a>:
+        <span class="t">"prefix"</span> <span class="t">"""</span> <a class="nt" href="#Prefix_operator">Prefix_operator</a> <span class="t">"""</span>
+</pre><pre><a class="nt" name="Infix">Infix</a>:
+        <span class="t">"infix"</span> <span class="t">"""</span> <a class="nt" href="#Infix_operator">Infix_operator</a> <span class="t">"""</span>
+</pre><pre><a class="nt" name="Prefix_operator">Prefix_operator</a>:
+        <a class="nt" href="#Unary">Unary</a>
+        <a class="nt" href="#Free_operator">Free_operator</a>
+</pre><pre><a class="nt" name="Infix_operator">Infix_operator</a>:
+        <a class="nt" href="#Binary">Binary</a>
+        <a class="nt" href="#Free_operator">Free_operator</a>
+</pre><pre><a class="nt" name="Unary">Unary</a>:
+        <span class="t">"not"</span>
+        <span class="t">"+"</span>
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="Binary">Binary</a>:
+        <span class="t">"+"</span>
+        <span class="t">"-"</span>
+        <span class="t">"*"</span>
+        <span class="t">"/"</span>
+        <span class="t">"&lt;"</span>
+        <span class="t">"&gt;"</span>
+        <span class="t">"&lt;="</span>
+        <span class="t">"&gt;="</span>
+        <span class="t">"//"</span>
+        <span class="t">"\\"</span>
+        <span class="t">"^"</span>
+        <span class="t">"and"</span>
+        <span class="t">"or"</span>
+        <span class="t">"xor"</span>
+        <span class="t">"and"</span> <span class="t">"then"</span>
+        <span class="t">"or"</span> <span class="t">"else"</span>
+        <span class="t">"implies"</span>
+</pre><pre><a class="nt" name="Formal_arguments">Formal_arguments</a>:
+        <span class="t">"("</span> <a class="nt" href="#Entity_declaration_list">Entity_declaration_list</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="Entity_declaration_list">Entity_declaration_list</a>:
+        (<a class="nt" href="#Entity_declaration_group">Entity_declaration_group</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Entity_declaration_group">Entity_declaration_group</a>:
+        <a class="nt" href="#Identifier_list">Identifier_list</a> <a class="nt" href="#Type_mark">Type_mark</a>
+</pre><pre><a class="nt" name="Identifier_list">Identifier_list</a>:
+        (<a class="nt" href="#Identifier">Identifier</a> <span class="t">","</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="Type_mark">Type_mark</a>:
+        <span class="t">":"</span> <a class="nt" href="#Type">Type</a>
+</pre><pre><a class="nt" name="Routine">Routine</a>:
+        <a class="nt" href="#Obsolete">Obsolete</a><span class="meta">?</span> <a class="nt" href="#Header_comment">Header_comment</a><span class="meta">?</span> <a class="nt" href="#Precondition">Precondition</a><span class="meta">?</span> <a class="nt" href="#Local_declarations">Local_declarations</a><span class="meta">?</span> <a class="nt" href="#Routine_body">Routine_body</a> <a class="nt" href="#Postcondition">Postcondition</a><span class="meta">?</span> <a class="nt" href="#Rescue">Rescue</a><span class="meta">?</span> <span class="t">"end"</span> (<span class="t">"--"</span> <a class="nt" href="#Feature_name">Feature_name</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="Routine_body">Routine_body</a>:
+        <a class="nt" href="#Effective">Effective</a>
+        <a class="nt" href="#Deferred">Deferred</a>
+</pre><pre><a class="nt" name="Effective">Effective</a>:
+        <a class="nt" href="#Internal">Internal</a>
+        <a class="nt" href="#External">External</a>
+</pre><pre><a class="nt" name="Internal">Internal</a>:
+        <a class="nt" href="#Routine_mark">Routine_mark</a> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Routine_mark">Routine_mark</a>:
+        <span class="t">"do"</span>
+        <span class="t">"once"</span>
+</pre><pre><a class="nt" name="Deferred">Deferred</a>:
+        <span class="t">"deferred"</span>
+</pre><pre><a class="nt" name="External">External</a>:
+        <span class="t">"external"</span> <a class="nt" href="#Language_name">Language_name</a> <a class="nt" href="#External_name">External_name</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Language_name">Language_name</a>:
+        <a class="nt" href="#Manifest_string">Manifest_string</a>
+</pre><pre><a class="nt" name="External_name">External_name</a>:
+        <span class="t">"alias"</span> <a class="nt" href="#Manifest_string">Manifest_string</a>
+</pre><pre><a class="nt" name="Local_declarations">Local_declarations</a>:
+        <span class="t">"local"</span> <a class="nt" href="#Entity_declaration_list">Entity_declaration_list</a>
+</pre><pre><a class="nt" name="Precondition">Precondition</a>:
+        <span class="t">"require"</span> <span class="t">"else"</span><span class="meta">?</span> <a class="nt" href="#Assertion">Assertion</a>
+</pre><pre><a class="nt" name="Postcondition">Postcondition</a>:
+        <span class="t">"ensure"</span> <span class="t">"then"</span><span class="meta">?</span> <a class="nt" href="#Assertion">Assertion</a>
+</pre><pre><a class="nt" name="Invariant">Invariant</a>:
+        <span class="t">"invariant"</span> <a class="nt" href="#Assertion">Assertion</a>
+</pre><pre><a class="nt" name="Assertion">Assertion</a>:
+        (<a class="nt" href="#Assertion_clause">Assertion_clause</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Assertion_clause">Assertion_clause</a>:
+        <a class="nt" href="#Tag_mark">Tag_mark</a><span class="meta">?</span> <a class="nt" href="#Unlabeled_assertion_clause">Unlabeled_assertion_clause</a>
+</pre><pre><a class="nt" name="Unlabeled_assertion_clause">Unlabeled_assertion_clause</a>:
+        <a class="nt" href="#Boolean_expression">Boolean_expression</a>
+        <a class="nt" href="#Comment">Comment</a>
+</pre><pre><a class="nt" name="Tag_mark">Tag_mark</a>:
+        <a class="nt" href="#Tag">Tag</a> <span class="t">":"</span>
+</pre><pre><a class="nt" name="Tag">Tag</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+</pre><pre><a class="nt" name="Rescue">Rescue</a>:
+        <span class="t">"rescue"</span> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Type">Type</a>:
+        <a class="nt" href="#Class_type">Class_type</a>
+        <a class="nt" href="#Class_type_expanded">Class_type_expanded</a>
+        <a class="nt" href="#Class_type_separate">Class_type_separate</a>
+        <a class="nt" href="#Anchored">Anchored</a>
+        <a class="nt" href="#Bit_type">Bit_type</a>
+</pre><pre><a class="nt" name="Class_type">Class_type</a>:
+        <a class="nt" href="#Class_name">Class_name</a> <a class="nt" href="#Actual_generics">Actual_generics</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Actual_generics">Actual_generics</a>:
+        <a class="nt" href="#Type_list">Type_list</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Type_list">Type_list</a>:
+        (<a class="nt" href="#Type">Type</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Class_type_expanded">Class_type_expanded</a>:
+        <span class="t">"expanded"</span> <a class="nt" href="#Class_type">Class_type</a>
+</pre><pre><a class="nt" name="Class_type_separate">Class_type_separate</a>:
+        <span class="t">"separate"</span> <a class="nt" href="#Class_type">Class_type</a>
+</pre><pre><a class="nt" name="Bit_type">Bit_type</a>:
+        <span class="t">"BIT"</span> <a class="nt" href="#Bit_length">Bit_length</a>
+</pre><pre><a class="nt" name="Bit_length">Bit_length</a>:
+        <a class="nt" href="#Integer_constant">Integer_constant</a>
+        <a class="nt" href="#Attribute">Attribute</a>
+</pre><pre><a class="nt" name="Anchored">Anchored</a>:
+        <span class="t">"like"</span> <a class="nt" href="#Anchor">Anchor</a>
+</pre><pre><a class="nt" name="Anchor">Anchor</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+        <span class="t">"Current"</span>
+</pre><pre><a class="nt" name="Compound">Compound</a>:
+        (<a class="nt" href="#Instruction">Instruction</a> <span class="t">";"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Instruction">Instruction</a>:
+        <a class="nt" href="#Creation">Creation</a>
+        <a class="nt" href="#Call">Call</a>
+        <a class="nt" href="#Assignment">Assignment</a>
+        <a class="nt" href="#Assignment_attempt">Assignment_attempt</a>
+        <a class="nt" href="#Conditional">Conditional</a>
+        <a class="nt" href="#Multi_branch">Multi_branch</a>
+        <a class="nt" href="#Loop">Loop</a>
+        <a class="nt" href="#Debug">Debug</a>
+        <a class="nt" href="#Check">Check</a>
+        <a class="nt" href="#Retry">Retry</a>
+        <a class="nt" href="#Null_instruction">Null_instruction</a>
+</pre><pre><a class="nt" name="Creation">Creation</a>:
+        <span class="t">"!"</span> <a class="nt" href="#Type">Type</a><span class="meta">?</span> <span class="t">"!"</span> <a class="nt" href="#Writable">Writable</a> <a class="nt" href="#Creation_call">Creation_call</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Creation_call">Creation_call</a>:
+        <span class="t">"."</span> <a class="nt" href="#Procedure_name">Procedure_name</a> <a class="nt" href="#Actuals">Actuals</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Assignment">Assignment</a>:
+        <a class="nt" href="#Writable">Writable</a> <span class="t">":="</span> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Assignment_attempt">Assignment_attempt</a>:
+        <a class="nt" href="#Writable">Writable</a> <span class="t">"?="</span> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Conditional">Conditional</a>:
+        <span class="t">"if"</span> <a class="nt" href="#Then_part_list">Then_part_list</a> <a class="nt" href="#Else_part">Else_part</a><span class="meta">?</span> <span class="t">"end"</span>
+</pre><pre><a class="nt" name="Then_part_list">Then_part_list</a>:
+        (<a class="nt" href="#Then_part">Then_part</a> <span class="t">"elseif"</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="Then_part">Then_part</a>:
+        <a class="nt" href="#Boolean_expression">Boolean_expression</a> <span class="t">"then"</span> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Else_part">Else_part</a>:
+        <span class="t">"else"</span> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Multi_branch">Multi_branch</a>:
+        <span class="t">"inspect"</span> <a class="nt" href="#Expression">Expression</a> <a class="nt" href="#When_part_list">When_part_list</a><span class="meta">?</span> <a class="nt" href="#Else_part">Else_part</a><span class="meta">?</span> <span class="t">"end"</span>
+</pre><pre><a class="nt" name="When_part_list">When_part_list</a>:
+        <span class="t">"when"</span> (<a class="nt" href="#When_part">When_part</a> <span class="t">"when"</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="When_part">When_part</a>:
+        <a class="nt" href="#Choices">Choices</a> <span class="t">"then"</span> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Choices">Choices</a>:
+        (<a class="nt" href="#Choice">Choice</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Choice">Choice</a>:
+        <a class="nt" href="#Choice_constant">Choice_constant</a>
+        <a class="nt" href="#Interval">Interval</a>
+</pre><pre><a class="nt" name="Interval">Interval</a>:
+        <a class="nt" href="#Choice_constant">Choice_constant</a> <span class="t">".."</span> <a class="nt" href="#Choice_constant">Choice_constant</a>
+</pre><pre><a class="nt" name="Choice_constant">Choice_constant</a>:
+        <a class="nt" href="#Integer_constant">Integer_constant</a>
+        <a class="nt" href="#Character_constant">Character_constant</a>
+        <a class="nt" href="#Attribute">Attribute</a>
+</pre><pre><a class="nt" name="Loop">Loop</a>:
+        <a class="nt" href="#Initialization">Initialization</a> <a class="nt" href="#Invariant">Invariant</a><span class="meta">?</span> <a class="nt" href="#Variant">Variant</a><span class="meta">?</span> <a class="nt" href="#Loop_body">Loop_body</a> <span class="t">"end"</span>
+</pre><pre><a class="nt" name="Initialization">Initialization</a>:
+        <span class="t">"from"</span> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Variant">Variant</a>:
+        <span class="t">"variant"</span> <a class="nt" href="#Tag_mark">Tag_mark</a><span class="meta">?</span> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Loop_body">Loop_body</a>:
+        <a class="nt" href="#Exit">Exit</a> <span class="t">"loop"</span> <a class="nt" href="#Compound">Compound</a>
+</pre><pre><a class="nt" name="Exit">Exit</a>:
+        <span class="t">"until"</span> <a class="nt" href="#Boolean_expression">Boolean_expression</a>
+</pre><pre><a class="nt" name="Debug">Debug</a>:
+        <span class="t">"debug"</span> <a class="nt" href="#Debug_keys">Debug_keys</a><span class="meta">?</span> <a class="nt" href="#Compound">Compound</a> <span class="t">"end"</span>
+</pre><pre><a class="nt" name="Debug_keys">Debug_keys</a>:
+        <span class="t">"("</span> <a class="nt" href="#Debug_key_list">Debug_key_list</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="Debug_key_list">Debug_key_list</a>:
+        (<a class="nt" href="#Debug_key">Debug_key</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Debug_key">Debug_key</a>:
+        <a class="nt" href="#Manifest_string">Manifest_string</a>
+</pre><pre><a class="nt" name="Check">Check</a>:
+        <span class="t">"check"</span> <a class="nt" href="#Assertion">Assertion</a> <span class="t">"end"</span>
+</pre><pre><a class="nt" name="Retry">Retry</a>:
+        <span class="t">"retry"</span>
+</pre><pre><a class="nt" name="Null_instruction">Null_instruction</a>:
+        ε
+</pre><pre><a class="nt" name="Call">Call</a>:
+        <a class="nt" href="#Qualified_call">Qualified_call</a>
+        <a class="nt" href="#Precursor">Precursor</a>
+</pre><pre><a class="nt" name="Qualified_call">Qualified_call</a>:
+        <a class="nt" href="#Call_qualifier">Call_qualifier</a><span class="meta">?</span> <a class="nt" href="#Call_chain">Call_chain</a>
+</pre><pre><a class="nt" name="Call_qualifier">Call_qualifier</a>:
+        <a class="nt" href="#Call_target">Call_target</a> <span class="t">"."</span>
+</pre><pre><a class="nt" name="Call_target">Call_target</a>:
+        <a class="nt" href="#Parenthesized">Parenthesized</a>
+        <span class="t">"Result"</span>
+        <span class="t">"Current"</span>
+        <a class="nt" href="#Precursor">Precursor</a>
+</pre><pre><a class="nt" name="Call_chain">Call_chain</a>:
+        (<a class="nt" href="#Unqualified_call">Unqualified_call</a> <span class="t">"."</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="Unqualified_call">Unqualified_call</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#Actuals">Actuals</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Precursor">Precursor</a>:
+        <a class="nt" href="#Parent_qualification">Parent_qualification</a><span class="meta">?</span> <span class="t">"Precursor"</span> <a class="nt" href="#Actuals">Actuals</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Parent_qualification">Parent_qualification</a>:
+        <span class="t">"{"</span> <a class="nt" href="#Class_name">Class_name</a> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="Attribute">Attribute</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+</pre><pre><a class="nt" name="Writable">Writable</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+        <span class="t">"Result"</span>
+</pre><pre><a class="nt" name="Actuals">Actuals</a>:
+        <span class="t">"("</span> <a class="nt" href="#Actual_list">Actual_list</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="Actual_list">Actual_list</a>:
+        (<a class="nt" href="#Actual">Actual</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Actual">Actual</a>:
+        <a class="nt" href="#Expression">Expression</a>
+        <a class="nt" href="#Address">Address</a>
+</pre><pre><a class="nt" name="Address">Address</a>:
+        <span class="t">"$"</span> <a class="nt" href="#Address_mark">Address_mark</a>
+</pre><pre><a class="nt" name="Address_mark">Address_mark</a>:
+        <a class="nt" href="#Feature_name">Feature_name</a>
+        <span class="t">"Current"</span>
+        <span class="t">"Result"</span>
+</pre><pre><a class="nt" name="Expression">Expression</a>:
+        <span class="t">"Current"</span>
+        <span class="t">"Result"</span>
+        <a class="nt" href="#Call">Call</a>
+        <a class="nt" href="#Operator_expression">Operator_expression</a>
+        <a class="nt" href="#Equality">Equality</a>
+        <a class="nt" href="#Manifest_array">Manifest_array</a>
+        <a class="nt" href="#Old">Old</a>
+        <a class="nt" href="#Strip">Strip</a>
+        <a class="nt" href="#Boolean_constant">Boolean_constant</a>
+        <a class="nt" href="#Bit_constant">Bit_constant</a>
+        <a class="nt" href="#Integer">Integer</a>
+        <a class="nt" href="#Real">Real</a>
+        <a class="nt" href="#Manifest_string">Manifest_string</a>
+        <a class="nt" href="#Character_constant">Character_constant</a>
+        <a class="nt" href="#Wide_character_constant">Wide_character_constant</a>
+        <a class="nt" href="#Wide_manifest_string">Wide_manifest_string</a>
+        <a class="nt" href="#Hexadecimal_constant">Hexadecimal_constant</a>
+</pre><pre><a class="nt" name="Boolean_expression">Boolean_expression</a>:
+        <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Operator_expression">Operator_expression</a>:
+        <a class="nt" href="#Parenthesized">Parenthesized</a>
+        <a class="nt" href="#Unary_expression">Unary_expression</a>
+        <a class="nt" href="#Binary_expression">Binary_expression</a>
+</pre><pre><a class="nt" name="Parenthesized">Parenthesized</a>:
+        <span class="t">"("</span> <a class="nt" href="#Expression">Expression</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="Unary_expression">Unary_expression</a>:
+        <a class="nt" href="#Prefix_operator">Prefix_operator</a> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Binary_expression">Binary_expression</a>:
+        <a class="nt" href="#Expression">Expression</a> <a class="nt" href="#Infix_operator">Infix_operator</a> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Equality">Equality</a>:
+        <a class="nt" href="#Expression">Expression</a> <a class="nt" href="#Comparison">Comparison</a> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Comparison">Comparison</a>:
+        <span class="t">"="</span>
+        <span class="t">"/="</span>
+</pre><pre><a class="nt" name="Manifest_constant">Manifest_constant</a>:
+        <a class="nt" href="#Boolean_constant">Boolean_constant</a>
+        <a class="nt" href="#Character_constant">Character_constant</a>
+        <a class="nt" href="#Integer_constant">Integer_constant</a>
+        <a class="nt" href="#Real_constant">Real_constant</a>
+        <a class="nt" href="#Manifest_string">Manifest_string</a>
+        <a class="nt" href="#Bit_constant">Bit_constant</a>
+        <a class="nt" href="#Wide_character_constant">Wide_character_constant</a>
+        <a class="nt" href="#Wide_manifest_string">Wide_manifest_string</a>
+        <a class="nt" href="#Hexadecimal_constant">Hexadecimal_constant</a>
+</pre><pre><a class="nt" name="Boolean_constant">Boolean_constant</a>:
+        <span class="t">"True"</span>
+        <span class="t">"False"</span>
+</pre><pre><a class="nt" name="Integer_constant">Integer_constant</a>:
+        <a class="nt" href="#Sign">Sign</a><span class="meta">?</span> <a class="nt" href="#Integer">Integer</a>
+</pre><pre><a class="nt" name="Real_constant">Real_constant</a>:
+        <a class="nt" href="#Sign">Sign</a><span class="meta">?</span> <a class="nt" href="#Real">Real</a>
+</pre><pre><a class="nt" name="Sign">Sign</a>:
+        <span class="t">"+"</span>
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="Wide_character_constant">Wide_character_constant</a>:
+        <span class="t">"$"</span> <a class="nt" href="#Character_constant">Character_constant</a>
+</pre><pre><a class="nt" name="Wide_manifest_string">Wide_manifest_string</a>:
+        <span class="t">"$"</span> <a class="nt" href="#Manifest_string">Manifest_string</a>
+</pre><pre><a class="nt" name="Manifest_array">Manifest_array</a>:
+        <span class="t">"&lt;&lt;"</span> <a class="nt" href="#Expression_list">Expression_list</a> <span class="t">"&gt;&gt;"</span>
+</pre><pre><a class="nt" name="Expression_list">Expression_list</a>:
+        (<a class="nt" href="#Expression">Expression</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Old">Old</a>:
+        <span class="t">"old"</span> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Strip">Strip</a>:
+        <span class="t">"Strip"</span> <span class="t">"("</span> <a class="nt" href="#Attribute_list">Attribute_list</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="Attribute_list">Attribute_list</a>:
+        (<a class="nt" href="#Attribute">Attribute</a> <span class="t">","</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Identifier">Identifier</a>:
+        <a class="nt" href="#Letter">Letter</a> (<a class="nt" href="#Letter">Letter</a> | <a class="nt" href="#Decimal_digit">Decimal_digit</a> | <span class="t">"_"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Integer">Integer</a>:
+        <a class="nt" href="#Decimal_digit">Decimal_digit</a><span class="meta">+</span>
+        <a class="nt" href="#Decimal_digit">Decimal_digit</a> (<a class="nt" href="#Decimal_digit">Decimal_digit</a> <a class="nt" href="#Decimal_digit">Decimal_digit</a><span class="meta">?</span>)<span class="meta">?</span> (<span class="t">"_"</span> <a class="nt" href="#Decimal_digit">Decimal_digit</a> <a class="nt" href="#Decimal_digit">Decimal_digit</a> <a class="nt" href="#Decimal_digit">Decimal_digit</a>)<span class="meta">+</span>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

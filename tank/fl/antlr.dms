@@ -1,0 +1,14 @@
+program = function+ ;
+function = ID ID+ '=' expr NEWLINE+ ;
+expr = binary ;
+expr = apply ;
+expr = ifThenElse ;
+binary = atom (ops atom)* ;
+apply = ID atom+ ;
+ifThenElse = 'if' expr 'then' expr 'else' expr ;
+atom = ID ;
+atom = INT ;
+atom = '(' expr ')' ;
+ops = '==' ;
+ops = '+' ;
+ops = '-' ;

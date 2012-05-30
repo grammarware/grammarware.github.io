@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable Grammar Transformation</title><style type="text/css">
+			          h1, h2 { text-align: center; }
+			          .label, .sel { color: green; }
+			          .marked { background-color: #FFE5B4;}
+			          .nt { color: blue; font-weight: bold; }
+			          .t { color: red;  font-family: monospace; }
+			          .meta, .cmd { color: green; font-style:italic; font-family: serif; }
+			          .b { text-align: right; font-style:italic;}
+			        </style><script type="text/javascript">
+					  var _gaq = _gaq || [];
+					  _gaq.push(['_setAccount', 'UA-3743366-5']);
+					  _gaq.push(['_trackPageview']);
+
+					  (function() {
+					    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					  })();
+					</script></head><body><h1>fake-exclusion</h1><h2>Source: <a href="http://slps.svn.sourceforge.net/viewvc/slps/topics/grammars/wiki/mediawiki-bnf/fake-exclusion.xbgf?view=markup">SLPS/topics/grammars/wiki/mediawiki-bnf/fake-exclusion.xbgf</a></h2><ul><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ <a class="nt" href="mediawiki-bnf.html#?_all_supported_Unicode_characters_?_-_Whitespaces">?_all_supported_Unicode_characters_?_-_Whitespaces</a>,
+ <span class="marked">&lt;(<a class="nt" href="mediawiki-bnf.html#any-supported-unicode-character">any-supported-unicode-character</a> <a class="nt" href="mediawiki-bnf.html#Whitespaces">Whitespaces</a>)&gt;</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ <a class="nt" href="mediawiki-bnf.html#UnicodeCharacter_-_WikiMarkupCharacters">UnicodeCharacter_-_WikiMarkupCharacters</a>,
+ <span class="marked">&lt;(<a class="nt" href="mediawiki-bnf.html#UnicodeCharacter">UnicodeCharacter</a> <a class="nt" href="mediawiki-bnf.html#WikiMarkupCharacters">WikiMarkupCharacters</a>)&gt;</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ (<a class="nt" href="mediawiki-bnf.html#SectionLinkCharacter_-">SectionLinkCharacter_-</a> <span class="t">"="</span>),
+ <span class="marked">&lt;(<a class="nt" href="mediawiki-bnf.html#SectionLinkCharacter">SectionLinkCharacter</a> <span class="t">"="</span>)&gt;</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ (<a class="nt" href="mediawiki-bnf.html#UnicodeCharacter_-">UnicodeCharacter_-</a> <span class="t">"]"</span>),
+ <span class="marked">&lt;(<a class="nt" href="mediawiki-bnf.html#UnicodeCharacter">UnicodeCharacter</a> <span class="t">"]"</span>)&gt;</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ <a class="nt" href="mediawiki-bnf.html#UnicodeCharacter_-_BadTitleCharacters">UnicodeCharacter_-_BadTitleCharacters</a>,
+ <span class="marked">&lt;(<a class="nt" href="mediawiki-bnf.html#UnicodeCharacter">UnicodeCharacter</a> <a class="nt" href="mediawiki-bnf.html#BadTitleCharacters">BadTitleCharacters</a>)&gt;</span>);
+</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#replace">replace</a> (
+ <a class="nt" href="mediawiki-bnf.html#UnicodeCharacter_-_BadSectionLinkCharacters">UnicodeCharacter_-_BadSectionLinkCharacters</a>,
+ <span class="marked">&lt;(<a class="nt" href="mediawiki-bnf.html#UnicodeCharacter">UnicodeCharacter</a> <a class="nt" href="mediawiki-bnf.html#BadSectionLinkCharacters">BadSectionLinkCharacters</a>)&gt;</span>);
+</li></ul><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

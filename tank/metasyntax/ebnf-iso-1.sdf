@@ -1,0 +1,230 @@
+module Main
+
+exports
+  sorts
+        Letter Decimal-digit Concatenate-symbol Defining-symbol Definition-separator-symbol End-comment-symbol End-group-symbol End-option-symbol End-repeat-symbol Except-symbol First-quote-symbol Repetition-symbol Second-quote-symbol Special-sequence-symbol Start-comment-symbol Start-group-symbol Start-option-symbol Start-repeat-symbol Terminator-symbol Other-character Space-character Horizontal-tabulation-character New-line Vertical-tabulation-character Form-feed Terminal-character Gap-free-symbol Terminal-string First-terminal-character Second-terminal-character Gap-separator Syntax Commentless-symbol Integer Meta-identifier Meta-identifier-character Special-sequence Special-sequence-character Comment-symbol Bracketed-textual-comment Syntax-rule Definitions-list Single-definition Syntactic-term Syntactic-exception Syntactic-factor Syntactic-primary Optional-sequence Repeated-sequence Grouped-sequence Empty-sequence 
+  context-free syntax
+        "a"
+		| "b"
+		| "c"
+		| "d"
+		| "e"
+		| "f"
+		| "g"
+		| "h"
+		| "i"
+		| "j"
+		| "k"
+		| "l"
+		| "m"
+		| "n"
+		| "o"
+		| "p"
+		| "q"
+		| "r"
+		| "s"
+		| "t"
+		| "u"
+		| "v"
+		| "w"
+		| "x"
+		| "y"
+		| "z"
+		| "A"
+		| "B"
+		| "C"
+		| "D"
+		| "E"
+		| "F"
+		| "G"
+		| "H"
+		| "I"
+		| "J"
+		| "K"
+		| "L"
+		| "M"
+		| "N"
+		| "O"
+		| "P"
+		| "Q"
+		| "R"
+		| "S"
+		| "T"
+		| "U"
+		| "V"
+		| "W"
+		| "X"
+		| "Y"
+		| "Z" -> Letter
+
+        "0"
+		| "1"
+		| "2"
+		| "3"
+		| "4"
+		| "5"
+		| "6"
+		| "7"
+		| "8"
+		| "9" -> Decimal-digit
+
+        "," -> Concatenate-symbol
+
+        "=" -> Defining-symbol
+
+        "|"
+		| "/"
+		| "!" -> Definition-separator-symbol
+
+        "*)" -> End-comment-symbol
+
+        ")" -> End-group-symbol
+
+        "]"
+		| "/)" -> End-option-symbol
+
+        "}"
+		| ":)" -> End-repeat-symbol
+
+        "-" -> Except-symbol
+
+        "’" -> First-quote-symbol
+
+        "*" -> Repetition-symbol
+
+        """ -> Second-quote-symbol
+
+        "?" -> Special-sequence-symbol
+
+        "(*" -> Start-comment-symbol
+
+        "(" -> Start-group-symbol
+
+        "["
+		| "(/" -> Start-option-symbol
+
+        "{"
+		| "(:" -> Start-repeat-symbol
+
+        ";"
+		| "." -> Terminator-symbol
+
+        " "
+		| ":"
+		| "+"
+		| "_"
+		| "%"
+		| "@"
+		| "&"
+		| "#"
+		| "$"
+		| "<"
+		| ">"
+		| "\"
+		| "^"
+		| "‘"
+		| "~" -> Other-character
+
+        " " -> Space-character
+
+        "\t" -> Horizontal-tabulation-character
+
+        "\r"* "\n" "\r"* -> New-line
+
+        "\v" -> Vertical-tabulation-character
+
+        "\f" -> Form-feed
+
+        Letter
+		| Decimal-digit
+		| Concatenate-symbol
+		| Defining-symbol
+		| Definition-separator-symbol
+		| End-comment-symbol
+		| End-group-symbol
+		| End-option-symbol
+		| End-repeat-symbol
+		| Except-symbol
+		| First-quote-symbol
+		| Repetition-symbol
+		| Second-quote-symbol
+		| Special-sequence-symbol
+		| Start-comment-symbol
+		| Start-group-symbol
+		| Start-option-symbol
+		| Start-repeat-symbol
+		| Terminator-symbol
+		| Other-character -> Terminal-character
+
+        Terminal-character
+		| Terminal-string -> Gap-free-symbol
+
+        First-quote-symbol First-terminal-character+ First-quote-symbol
+		| Second-quote-symbol Second-terminal-character+ Second-quote-symbol -> Terminal-string
+
+        Terminal-character -> First-terminal-character
+
+        Terminal-character -> Second-terminal-character
+
+        Space-character
+		| Horizontal-tabulation-character
+		| New-line
+		| Vertical-tabulation-character
+		| Form-feed -> Gap-separator
+
+        Gap-separator* (Gap-free-symbol Gap-separator*)+ -> Syntax
+
+        Bracketed-textual-comment* Commentless-symbol Bracketed-textual-comment* (Commentless-symbol Bracketed-textual-comment*)* -> Syntax
+
+        Syntax-rule+ -> Syntax
+
+        Terminal-character
+		| Meta-identifier
+		| Integer
+		| Terminal-string
+		| Special-sequence -> Commentless-symbol
+
+        Decimal-digit+ -> Integer
+
+        Letter Meta-identifier-character* -> Meta-identifier
+
+        Letter
+		| Decimal-digit -> Meta-identifier-character
+
+        Special-sequence-symbol Special-sequence-character* Special-sequence-symbol -> Special-sequence
+
+        Terminal-character -> Special-sequence-character
+
+        Bracketed-textual-comment
+		| Other-character
+		| Commentless-symbol -> Comment-symbol
+
+        Start-comment-symbol Comment-symbol* End-comment-symbol -> Bracketed-textual-comment
+
+        Meta-identifier Defining-symbol Definitions-list Terminator-symbol -> Syntax-rule
+
+        Single-definition (Definition-separator-symbol Single-definition)* -> Definitions-list
+
+        Syntactic-term (Concatenate-symbol Syntactic-term)* -> Single-definition
+
+        Syntactic-factor (Except-symbol Syntactic-exception)? -> Syntactic-term
+
+        Syntactic-factor -> Syntactic-exception
+
+        (Integer Repetition-symbol)? Syntactic-primary -> Syntactic-factor
+
+        Optional-sequence
+		| Repeated-sequence
+		| Grouped-sequence
+		| Meta-identifier
+		| Terminal-string
+		| Special-sequence
+		| Empty-sequence -> Syntactic-primary
+
+        Start-option-symbol Definitions-list End-option-symbol -> Optional-sequence
+
+        Start-repeat-symbol Definitions-list End-repeat-symbol -> Repeated-sequence
+
+        Start-group-symbol Definitions-list End-group-symbol -> Grouped-sequence
+
+         -> Empty-sequence

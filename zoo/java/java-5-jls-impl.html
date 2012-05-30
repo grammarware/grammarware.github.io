@@ -1,0 +1,523 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable J2SE 5.0 “Tiger” aka Java 5 Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style><script type="text/javascript">
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				</script></head><body><h1>Browsable J2SE 5.0 “Tiger” aka Java 5 Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/zoo/">Grammar Zoo</a> for details. <br></br>Source used for this grammar: James Gosling, Bill Joy, Guy Steele, Gilad Bracha, <em>Java Language Specification</em> Third Edition (2004) §18: Syntax, pages 585–596</p><h2>Summary</h2><ul><li>Number of production rules: <strong>246</strong></li><li>Number of top alternatives: <strong>246</strong></li><li>Number of defined nonterminal symbols: <strong>116</strong></li><li>Root nonterminal symbols: <code><a href="#CompilationUnit" class="nt">CompilationUnit</a></code></li><li>Other top nonterminal symbols: —</li><li>Bottom nonterminal symbols: <strong>7</strong>: <code><a href="#Identifier" class="nt">Identifier</a>, <a href="#IntegerLiteral" class="nt">IntegerLiteral</a>, <a href="#FloatingPointLiteral" class="nt">FloatingPointLiteral</a>, <a href="#CharacterLiteral" class="nt">CharacterLiteral</a>, <a href="#StringLiteral" class="nt">StringLiteral</a>, <a href="#BooleanLiteral" class="nt">BooleanLiteral</a>, <a href="#NullLiteral" class="nt">NullLiteral</a></code></li><li>Number of used terminal symbols: <strong>96</strong></li><li>Special terminal symbols: <strong>48</strong>: <code class="t">":", ";", "(", ")", "{", "}", "@", "=", ".", ",", "&lt;", "&gt;", "[", "]", "...", "+=", "-=", "*=", "/=", "&amp;=", "|=", "^=", "%=", "&lt;&lt;=", "&gt;&gt;=", "&gt;&gt;&gt;=", "++", "--", "*", "?", "||", "&amp;&amp;", "|", "^", "&amp;", "==", "!=", "&lt;=", "&gt;=", "&lt;&lt;", "&gt;&gt;", "&gt;&gt;&gt;", "+", "-", "/", "%", "!", "~"</code></li><li>Keywords: <strong>48</strong>: <code class="t">"class", "extends", "implements", "assert", "if", "else", "for", "while", "do", "try", "finally", "switch", "synchronized", "return", "throw", "break", "continue", "catch", "static", "interface", "this", "super", "new", "throws", "case", "default", "void", "public", "protected", "private", "abstract", "final", "native", "transient", "volatile", "strictfp", "enum", "instanceof", "import", "byte", "short", "char", "int", "long", "float", "double", "boolean", "package"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="NormalClassDeclaration">NormalClassDeclaration</a>:
+        <span class="t">"class"</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#TypeParameters">TypeParameters</a><span class="meta">?</span> (<span class="t">"extends"</span> <a class="nt" href="#Type">Type</a>)<span class="meta">?</span> (<span class="t">"implements"</span> <a class="nt" href="#TypeList">TypeList</a>)<span class="meta">?</span> <a class="nt" href="#ClassBody">ClassBody</a>
+</pre><pre><a class="nt" name="ExplicitGenericInvocation">ExplicitGenericInvocation</a>:
+        <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a> <a class="nt" href="#ExplicitGenericInvocationSuffix">ExplicitGenericInvocationSuffix</a>
+</pre><pre><a class="nt" name="InterfaceDeclaration">InterfaceDeclaration</a>:
+        <a class="nt" href="#NormalInterfaceDeclaration">NormalInterfaceDeclaration</a>
+</pre><pre><a class="nt" name="InterfaceDeclaration">InterfaceDeclaration</a>:
+        <a class="nt" href="#AnnotationTypeDeclaration">AnnotationTypeDeclaration</a>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <a class="nt" href="#Block">Block</a>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"assert"</span> <a class="nt" href="#Expression">Expression</a> (<span class="t">":"</span> <a class="nt" href="#Expression">Expression</a>)<span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"if"</span> <a class="nt" href="#ParExpression">ParExpression</a> <a class="nt" href="#Statement">Statement</a> (<span class="t">"else"</span> <a class="nt" href="#Statement">Statement</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"for"</span> <span class="t">"("</span> <a class="nt" href="#ForControl">ForControl</a> <span class="t">")"</span> <a class="nt" href="#Statement">Statement</a>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"while"</span> <a class="nt" href="#ParExpression">ParExpression</a> <a class="nt" href="#Statement">Statement</a>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"do"</span> <a class="nt" href="#Statement">Statement</a> <span class="t">"while"</span> <a class="nt" href="#ParExpression">ParExpression</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"try"</span> <a class="nt" href="#Block">Block</a> (<a class="nt" href="#Catches">Catches</a> | (<a class="nt" href="#Catches">Catches</a><span class="meta">?</span> <span class="t">"finally"</span> <a class="nt" href="#Block">Block</a>))
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"switch"</span> <a class="nt" href="#ParExpression">ParExpression</a> <span class="t">"{"</span> <a class="nt" href="#SwitchBlockStatementGroups">SwitchBlockStatementGroups</a> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"synchronized"</span> <a class="nt" href="#ParExpression">ParExpression</a> <a class="nt" href="#Block">Block</a>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"return"</span> <a class="nt" href="#Expression">Expression</a><span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"throw"</span> <a class="nt" href="#Expression">Expression</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"break"</span> <a class="nt" href="#Identifier">Identifier</a><span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">"continue"</span> <a class="nt" href="#Identifier">Identifier</a><span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <a class="nt" href="#StatementExpression">StatementExpression</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Statement">Statement</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <span class="t">":"</span> <a class="nt" href="#Statement">Statement</a>
+</pre><pre><a class="nt" name="Annotations">Annotations</a>:
+        <a class="nt" href="#Annotation">Annotation</a> <a class="nt" href="#Annotations">Annotations</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="ElementValue">ElementValue</a>:
+        <a class="nt" href="#ConditionalExpression">ConditionalExpression</a>
+</pre><pre><a class="nt" name="ElementValue">ElementValue</a>:
+        <a class="nt" href="#Annotation">Annotation</a>
+</pre><pre><a class="nt" name="ElementValue">ElementValue</a>:
+        <a class="nt" href="#ElementValueArrayInitializer">ElementValueArrayInitializer</a>
+</pre><pre><a class="nt" name="TypeParameter">TypeParameter</a>:
+        <a class="nt" href="#Identifier">Identifier</a> (<span class="t">"extends"</span> <a class="nt" href="#Bound">Bound</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="CatchClause">CatchClause</a>:
+        <span class="t">"catch"</span> <span class="t">"("</span> <a class="nt" href="#FormalParameter">FormalParameter</a> <span class="t">")"</span> <a class="nt" href="#Block">Block</a>
+</pre><pre><a class="nt" name="ClassCreatorRest">ClassCreatorRest</a>:
+        <a class="nt" href="#Arguments">Arguments</a> <a class="nt" href="#ClassBody">ClassBody</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="ClassBodyDeclaration">ClassBodyDeclaration</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="ClassBodyDeclaration">ClassBodyDeclaration</a>:
+        <span class="t">"static"</span><span class="meta">?</span> <a class="nt" href="#Block">Block</a>
+</pre><pre><a class="nt" name="ClassBodyDeclaration">ClassBodyDeclaration</a>:
+        <a class="nt" href="#Modifier">Modifier</a><span class="meta">*</span> <a class="nt" href="#MemberDecl">MemberDecl</a>
+</pre><pre><a class="nt" name="BlockStatement">BlockStatement</a>:
+        <a class="nt" href="#LocalVariableDeclarationStatement">LocalVariableDeclarationStatement</a>
+</pre><pre><a class="nt" name="BlockStatement">BlockStatement</a>:
+        <a class="nt" href="#ClassOrInterfaceDeclaration">ClassOrInterfaceDeclaration</a>
+</pre><pre><a class="nt" name="BlockStatement">BlockStatement</a>:
+        (<a class="nt" href="#Identifier">Identifier</a> <span class="t">":"</span>)<span class="meta">?</span> <a class="nt" href="#Statement">Statement</a>
+</pre><pre><a class="nt" name="Annotation">Annotation</a>:
+        <span class="t">"@"</span> <a class="nt" href="#QualifiedIdentifier">QualifiedIdentifier</a> (<span class="t">"("</span> (<a class="nt" href="#Identifier">Identifier</a> <span class="t">"="</span>)<span class="meta">?</span> <a class="nt" href="#ElementValue">ElementValue</a> <span class="t">")"</span>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="SwitchBlockStatementGroups">SwitchBlockStatementGroups</a>:
+        <a class="nt" href="#SwitchBlockStatementGroup">SwitchBlockStatementGroup</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="EnumConstant">EnumConstant</a>:
+        <a class="nt" href="#Annotations">Annotations</a> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#Arguments">Arguments</a><span class="meta">?</span> <a class="nt" href="#ClassBody">ClassBody</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="QualifiedIdentifier">QualifiedIdentifier</a>:
+        <a class="nt" href="#Identifier">Identifier</a> (<span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="ConstantDeclaratorsRest">ConstantDeclaratorsRest</a>:
+        <a class="nt" href="#ConstantDeclaratorRest">ConstantDeclaratorRest</a> (<span class="t">","</span> <a class="nt" href="#ConstantDeclarator">ConstantDeclarator</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="AnnotationTypeDeclaration">AnnotationTypeDeclaration</a>:
+        <span class="t">"@"</span> <span class="t">"interface"</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#AnnotationTypeBody">AnnotationTypeBody</a>
+</pre><pre><a class="nt" name="NonWildcardTypeArguments">NonWildcardTypeArguments</a>:
+        <span class="t">"&lt;"</span> <a class="nt" href="#TypeList">TypeList</a> <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="Expressions">Expressions</a>:
+        (<span class="t">","</span> <a class="nt" href="#StatementExpression">StatementExpression</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Expression3">Expression3</a>:
+        <a class="nt" href="#PrefixOp">PrefixOp</a> <a class="nt" href="#Expression3">Expression3</a>
+</pre><pre><a class="nt" name="Expression3">Expression3</a>:
+        <span class="t">"("</span> (<a class="nt" href="#Expression">Expression</a> | <a class="nt" href="#Type">Type</a>) <span class="t">")"</span> <a class="nt" href="#Expression3">Expression3</a>
+</pre><pre><a class="nt" name="Expression3">Expression3</a>:
+        <a class="nt" href="#Primary">Primary</a> <a class="nt" href="#Selector">Selector</a><span class="meta">*</span> <a class="nt" href="#PostfixOp">PostfixOp</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="BlockStatements">BlockStatements</a>:
+        <a class="nt" href="#BlockStatement">BlockStatement</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="IdentifierSuffix">IdentifierSuffix</a>:
+        <span class="t">"["</span> ((<span class="t">"]"</span> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> <span class="t">"."</span> <span class="t">"class"</span>) | (<a class="nt" href="#Expression">Expression</a> <span class="t">"]"</span>))
+</pre><pre><a class="nt" name="IdentifierSuffix">IdentifierSuffix</a>:
+        <a class="nt" href="#Arguments">Arguments</a>
+</pre><pre><a class="nt" name="IdentifierSuffix">IdentifierSuffix</a>:
+        <span class="t">"."</span> (<span class="t">"class"</span> | <a class="nt" href="#ExplicitGenericInvocation">ExplicitGenericInvocation</a> | <span class="t">"this"</span> | (<span class="t">"super"</span> <a class="nt" href="#Arguments">Arguments</a>) | (<span class="t">"new"</span> <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a><span class="meta">?</span> <a class="nt" href="#InnerCreator">InnerCreator</a>))
+</pre><pre><a class="nt" name="InterfaceMethodDeclaratorRest">InterfaceMethodDeclaratorRest</a>:
+        <a class="nt" href="#FormalParameters">FormalParameters</a> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> (<span class="t">"throws"</span> <a class="nt" href="#QualifiedIdentifierList">QualifiedIdentifierList</a>)<span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="FormalParameterDeclsRest">FormalParameterDeclsRest</a>:
+        <a class="nt" href="#VariableDeclaratorId">VariableDeclaratorId</a> (<span class="t">","</span> <a class="nt" href="#FormalParameterDecls">FormalParameterDecls</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="FormalParameterDeclsRest">FormalParameterDeclsRest</a>:
+        <span class="t">"..."</span> <a class="nt" href="#VariableDeclaratorId">VariableDeclaratorId</a>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"+="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"-="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"*="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"/="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"&amp;="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"|="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"^="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"%="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"&lt;&lt;="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"&gt;&gt;="</span>
+</pre><pre><a class="nt" name="AssignmentOperator">AssignmentOperator</a>:
+        <span class="t">"&gt;&gt;&gt;="</span>
+</pre><pre><a class="nt" name="ParExpression">ParExpression</a>:
+        <span class="t">"("</span> <a class="nt" href="#Expression">Expression</a> <span class="t">")"</span>
+</pre><pre><a class="nt" name="AnnotationTypeElementDeclarations">AnnotationTypeElementDeclarations</a>:
+        <a class="nt" href="#AnnotationTypeElementDeclaration">AnnotationTypeElementDeclaration</a>
+</pre><pre><a class="nt" name="AnnotationTypeElementDeclarations">AnnotationTypeElementDeclarations</a>:
+        <a class="nt" href="#AnnotationTypeElementDeclarations">AnnotationTypeElementDeclarations</a> <a class="nt" href="#AnnotationTypeElementDeclaration">AnnotationTypeElementDeclaration</a>
+</pre><pre><a class="nt" name="VariableDeclaratorsRest">VariableDeclaratorsRest</a>:
+        <a class="nt" href="#VariableDeclaratorRest">VariableDeclaratorRest</a> (<span class="t">","</span> <a class="nt" href="#VariableDeclarator">VariableDeclarator</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="ForControl">ForControl</a>:
+        <a class="nt" href="#ForVarControl">ForVarControl</a>
+</pre><pre><a class="nt" name="ForControl">ForControl</a>:
+        <a class="nt" href="#ForInit">ForInit</a> <span class="t">";"</span> <a class="nt" href="#Expression">Expression</a><span class="meta">?</span> <span class="t">";"</span> <a class="nt" href="#ForUpdate">ForUpdate</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="VariableDeclarator">VariableDeclarator</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#VariableDeclaratorRest">VariableDeclaratorRest</a>
+</pre><pre><a class="nt" name="ConstantExpression">ConstantExpression</a>:
+        <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="SwitchLabel">SwitchLabel</a>:
+        <span class="t">"case"</span> <a class="nt" href="#ConstantExpression">ConstantExpression</a> <span class="t">":"</span>
+</pre><pre><a class="nt" name="SwitchLabel">SwitchLabel</a>:
+        <span class="t">"case"</span> <a class="nt" href="#EnumConstantName">EnumConstantName</a> <span class="t">":"</span>
+</pre><pre><a class="nt" name="SwitchLabel">SwitchLabel</a>:
+        <span class="t">"default"</span> <span class="t">":"</span>
+</pre><pre><a class="nt" name="ElementValues">ElementValues</a>:
+        <a class="nt" href="#ElementValue">ElementValue</a> (<span class="t">","</span> <a class="nt" href="#ElementValues">ElementValues</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="InterfaceMemberDecl">InterfaceMemberDecl</a>:
+        <a class="nt" href="#InterfaceMethodOrFieldDecl">InterfaceMethodOrFieldDecl</a>
+</pre><pre><a class="nt" name="InterfaceMemberDecl">InterfaceMemberDecl</a>:
+        <a class="nt" href="#InterfaceGenericMethodDecl">InterfaceGenericMethodDecl</a>
+</pre><pre><a class="nt" name="InterfaceMemberDecl">InterfaceMemberDecl</a>:
+        <span class="t">"void"</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#VoidInterfaceMethodDeclaratorRest">VoidInterfaceMethodDeclaratorRest</a>
+</pre><pre><a class="nt" name="InterfaceMemberDecl">InterfaceMemberDecl</a>:
+        <a class="nt" href="#InterfaceDeclaration">InterfaceDeclaration</a>
+</pre><pre><a class="nt" name="InterfaceMemberDecl">InterfaceMemberDecl</a>:
+        <a class="nt" href="#ClassDeclaration">ClassDeclaration</a>
+</pre><pre><a class="nt" name="AnnotationConstantRest">AnnotationConstantRest</a>:
+        <a class="nt" href="#VariableDeclarators">VariableDeclarators</a>
+</pre><pre><a class="nt" name="QualifiedIdentifierList">QualifiedIdentifierList</a>:
+        <a class="nt" href="#QualifiedIdentifier">QualifiedIdentifier</a> (<span class="t">","</span> <a class="nt" href="#QualifiedIdentifier">QualifiedIdentifier</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="GenericMethodOrConstructorRest">GenericMethodOrConstructorRest</a>:
+        (<a class="nt" href="#Type">Type</a> | <span class="t">"void"</span>) <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#MethodDeclaratorRest">MethodDeclaratorRest</a>
+</pre><pre><a class="nt" name="GenericMethodOrConstructorRest">GenericMethodOrConstructorRest</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#ConstructorDeclaratorRest">ConstructorDeclaratorRest</a>
+</pre><pre><a class="nt" name="ArrayCreatorRest">ArrayCreatorRest</a>:
+        <span class="t">"["</span> ((<span class="t">"]"</span> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> <a class="nt" href="#ArrayInitializer">ArrayInitializer</a>) | (<a class="nt" href="#Expression">Expression</a> <span class="t">"]"</span> (<span class="t">"["</span> <a class="nt" href="#Expression">Expression</a> <span class="t">"]"</span>)<span class="meta">*</span> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span>))
+</pre><pre><a class="nt" name="Type">Type</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#TypeArguments">TypeArguments</a><span class="meta">?</span> (<span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#TypeArguments">TypeArguments</a><span class="meta">?</span>)<span class="meta">*</span> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Type">Type</a>:
+        <a class="nt" href="#BasicType">BasicType</a>
+</pre><pre><a class="nt" name="FormalParameters">FormalParameters</a>:
+        <span class="t">"("</span> <a class="nt" href="#FormalParameterDecls">FormalParameterDecls</a><span class="meta">?</span> <span class="t">")"</span>
+</pre><pre><a class="nt" name="TypeList">TypeList</a>:
+        <a class="nt" href="#Type">Type</a> (<span class="t">","</span> <a class="nt" href="#Type">Type</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Selector">Selector</a>:
+        <span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#Arguments">Arguments</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Selector">Selector</a>:
+        <span class="t">"."</span> <a class="nt" href="#ExplicitGenericInvocation">ExplicitGenericInvocation</a>
+</pre><pre><a class="nt" name="Selector">Selector</a>:
+        <span class="t">"."</span> <span class="t">"this"</span>
+</pre><pre><a class="nt" name="Selector">Selector</a>:
+        <span class="t">"."</span> <span class="t">"super"</span> <a class="nt" href="#SuperSuffix">SuperSuffix</a>
+</pre><pre><a class="nt" name="Selector">Selector</a>:
+        <span class="t">"."</span> <span class="t">"new"</span> <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a><span class="meta">?</span> <a class="nt" href="#InnerCreator">InnerCreator</a>
+</pre><pre><a class="nt" name="Selector">Selector</a>:
+        <a class="nt" href="#Expression">Expression</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="VoidInterfaceMethodDeclaratorRest">VoidInterfaceMethodDeclaratorRest</a>:
+        <a class="nt" href="#FormalParameters">FormalParameters</a> (<span class="t">"throws"</span> <a class="nt" href="#QualifiedIdentifierList">QualifiedIdentifierList</a>)<span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="InterfaceBodyDeclaration">InterfaceBodyDeclaration</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="InterfaceBodyDeclaration">InterfaceBodyDeclaration</a>:
+        <a class="nt" href="#Modifier">Modifier</a><span class="meta">*</span> <a class="nt" href="#InterfaceMemberDecl">InterfaceMemberDecl</a>
+</pre><pre><a class="nt" name="MethodDeclaratorRest">MethodDeclaratorRest</a>:
+        <a class="nt" href="#FormalParameters">FormalParameters</a> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> (<span class="t">"throws"</span> <a class="nt" href="#QualifiedIdentifierList">QualifiedIdentifierList</a>)<span class="meta">?</span> (<a class="nt" href="#MethodBody">MethodBody</a> | <span class="t">";"</span>)
+</pre><pre><a class="nt" name="EnumConstants">EnumConstants</a>:
+        <a class="nt" href="#EnumConstant">EnumConstant</a>
+</pre><pre><a class="nt" name="EnumConstants">EnumConstants</a>:
+        <a class="nt" href="#EnumConstants">EnumConstants</a> <span class="t">","</span> <a class="nt" href="#EnumConstant">EnumConstant</a>
+</pre><pre><a class="nt" name="VariableDeclaratorRest">VariableDeclaratorRest</a>:
+        (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> (<span class="t">"="</span> <a class="nt" href="#VariableInitializer">VariableInitializer</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="MethodOrFieldRest">MethodOrFieldRest</a>:
+        <a class="nt" href="#VariableDeclaratorRest">VariableDeclaratorRest</a>
+</pre><pre><a class="nt" name="MethodOrFieldRest">MethodOrFieldRest</a>:
+        <a class="nt" href="#MethodDeclaratorRest">MethodDeclaratorRest</a>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <a class="nt" href="#Annotation">Annotation</a>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"public"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"protected"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"private"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"static"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"abstract"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"final"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"native"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"synchronized"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"transient"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"volatile"</span>
+</pre><pre><a class="nt" name="Modifier">Modifier</a>:
+        <span class="t">"strictfp"</span>
+</pre><pre><a class="nt" name="Block">Block</a>:
+        <span class="t">"{"</span> <a class="nt" href="#BlockStatements">BlockStatements</a> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="PostfixOp">PostfixOp</a>:
+        <span class="t">"++"</span>
+</pre><pre><a class="nt" name="PostfixOp">PostfixOp</a>:
+        <span class="t">"--"</span>
+</pre><pre><a class="nt" name="ForInit">ForInit</a>:
+        <a class="nt" href="#StatementExpression">StatementExpression</a> <a class="nt" href="#Expressions">Expressions</a>
+</pre><pre><a class="nt" name="EnumDeclaration">EnumDeclaration</a>:
+        <span class="t">"enum"</span> <a class="nt" href="#Identifier">Identifier</a> (<span class="t">"implements"</span> <a class="nt" href="#TypeList">TypeList</a>)<span class="meta">?</span> <a class="nt" href="#EnumBody">EnumBody</a>
+</pre><pre><a class="nt" name="VariableDeclarators">VariableDeclarators</a>:
+        <a class="nt" href="#VariableDeclarator">VariableDeclarator</a> (<span class="t">","</span> <a class="nt" href="#VariableDeclarator">VariableDeclarator</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <a class="nt" href="#ParExpression">ParExpression</a>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a> (<a class="nt" href="#ExplicitGenericInvocationSuffix">ExplicitGenericInvocationSuffix</a> | (<span class="t">"this"</span> <a class="nt" href="#Arguments">Arguments</a>))
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <span class="t">"this"</span> <a class="nt" href="#Arguments">Arguments</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <span class="t">"super"</span> <a class="nt" href="#SuperSuffix">SuperSuffix</a>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <a class="nt" href="#Literal">Literal</a>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <span class="t">"new"</span> <a class="nt" href="#Creator">Creator</a>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <a class="nt" href="#Identifier">Identifier</a> (<span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a>)<span class="meta">*</span> <a class="nt" href="#IdentifierSuffix">IdentifierSuffix</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <a class="nt" href="#BasicType">BasicType</a> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> <span class="t">"."</span> <span class="t">"class"</span>
+</pre><pre><a class="nt" name="Primary">Primary</a>:
+        <span class="t">"void"</span> <span class="t">"."</span> <span class="t">"class"</span>
+</pre><pre><a class="nt" name="Expression2Rest">Expression2Rest</a>:
+        (<a class="nt" href="#InfixOp">InfixOp</a> <a class="nt" href="#Expression3">Expression3</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="Expression2Rest">Expression2Rest</a>:
+        <span class="t">"instanceof"</span> <a class="nt" href="#Type">Type</a>
+</pre><pre><a class="nt" name="VariableInitializer">VariableInitializer</a>:
+        <a class="nt" href="#ArrayInitializer">ArrayInitializer</a>
+</pre><pre><a class="nt" name="VariableInitializer">VariableInitializer</a>:
+        <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <a class="nt" href="#IntegerLiteral">IntegerLiteral</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <a class="nt" href="#FloatingPointLiteral">FloatingPointLiteral</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <a class="nt" href="#CharacterLiteral">CharacterLiteral</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <a class="nt" href="#StringLiteral">StringLiteral</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <a class="nt" href="#BooleanLiteral">BooleanLiteral</a>
+</pre><pre><a class="nt" name="Literal">Literal</a>:
+        <a class="nt" href="#NullLiteral">NullLiteral</a>
+</pre><pre><a class="nt" name="ExplicitGenericInvocationSuffix">ExplicitGenericInvocationSuffix</a>:
+        <span class="t">"super"</span> <a class="nt" href="#SuperSuffix">SuperSuffix</a>
+</pre><pre><a class="nt" name="ExplicitGenericInvocationSuffix">ExplicitGenericInvocationSuffix</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#Arguments">Arguments</a>
+</pre><pre><a class="nt" name="ImportDeclaration">ImportDeclaration</a>:
+        <span class="t">"import"</span> <span class="t">"static"</span><span class="meta">?</span> <a class="nt" href="#Identifier">Identifier</a> (<span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a>)<span class="meta">*</span> (<span class="t">"."</span> <span class="t">"*"</span>)<span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"byte"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"short"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"char"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"int"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"long"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"float"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"double"</span>
+</pre><pre><a class="nt" name="BasicType">BasicType</a>:
+        <span class="t">"boolean"</span>
+</pre><pre><a class="nt" name="GenericMethodOrConstructorDecl">GenericMethodOrConstructorDecl</a>:
+        <a class="nt" href="#TypeParameters">TypeParameters</a> <a class="nt" href="#GenericMethodOrConstructorRest">GenericMethodOrConstructorRest</a>
+</pre><pre><a class="nt" name="ConstantDeclarator">ConstantDeclarator</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#ConstantDeclaratorRest">ConstantDeclaratorRest</a>
+</pre><pre><a class="nt" name="ClassBody">ClassBody</a>:
+        <span class="t">"{"</span> <a class="nt" href="#ClassBodyDeclaration">ClassBodyDeclaration</a><span class="meta">*</span> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="MemberDecl">MemberDecl</a>:
+        <a class="nt" href="#GenericMethodOrConstructorDecl">GenericMethodOrConstructorDecl</a>
+</pre><pre><a class="nt" name="MemberDecl">MemberDecl</a>:
+        <a class="nt" href="#MethodOrFieldDecl">MethodOrFieldDecl</a>
+</pre><pre><a class="nt" name="MemberDecl">MemberDecl</a>:
+        <span class="t">"void"</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#VoidMethodDeclaratorRest">VoidMethodDeclaratorRest</a>
+</pre><pre><a class="nt" name="MemberDecl">MemberDecl</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#ConstructorDeclaratorRest">ConstructorDeclaratorRest</a>
+</pre><pre><a class="nt" name="MemberDecl">MemberDecl</a>:
+        <a class="nt" href="#InterfaceDeclaration">InterfaceDeclaration</a>
+</pre><pre><a class="nt" name="MemberDecl">MemberDecl</a>:
+        <a class="nt" href="#ClassDeclaration">ClassDeclaration</a>
+</pre><pre><a class="nt" name="SwitchBlockStatementGroup">SwitchBlockStatementGroup</a>:
+        <a class="nt" href="#SwitchLabel">SwitchLabel</a> <a class="nt" href="#BlockStatements">BlockStatements</a>
+</pre><pre><a class="nt" name="Catches">Catches</a>:
+        <a class="nt" href="#CatchClause">CatchClause</a> <a class="nt" href="#CatchClause">CatchClause</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="InterfaceMethodOrFieldRest">InterfaceMethodOrFieldRest</a>:
+        <a class="nt" href="#ConstantDeclaratorsRest">ConstantDeclaratorsRest</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="InterfaceMethodOrFieldRest">InterfaceMethodOrFieldRest</a>:
+        <a class="nt" href="#InterfaceMethodDeclaratorRest">InterfaceMethodDeclaratorRest</a>
+</pre><pre><a class="nt" name="Expression1Rest">Expression1Rest</a>:
+        <span class="t">"?"</span> <a class="nt" href="#Expression">Expression</a> <span class="t">":"</span> <a class="nt" href="#Expression1">Expression1</a>
+</pre><pre><a class="nt" name="TypeArguments">TypeArguments</a>:
+        <span class="t">"&lt;"</span> <a class="nt" href="#TypeArgument">TypeArgument</a> (<span class="t">","</span> <a class="nt" href="#TypeArgument">TypeArgument</a>)<span class="meta">*</span> <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="Expression">Expression</a>:
+        <a class="nt" href="#Expression1">Expression1</a> (<a class="nt" href="#AssignmentOperator">AssignmentOperator</a> <a class="nt" href="#Expression1">Expression1</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="ConditionalExpression">ConditionalExpression</a>:
+        <a class="nt" href="#Expression2">Expression2</a> <a class="nt" href="#Expression1Rest">Expression1Rest</a>
+</pre><pre><a class="nt" name="Creator">Creator</a>:
+        <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a><span class="meta">?</span> <a class="nt" href="#CreatedName">CreatedName</a> (<a class="nt" href="#ArrayCreatorRest">ArrayCreatorRest</a> | <a class="nt" href="#ClassCreatorRest">ClassCreatorRest</a>)
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"||"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&amp;&amp;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"|"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"^"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&amp;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"=="</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"!="</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&lt;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&lt;="</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&gt;="</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&lt;&lt;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&gt;&gt;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"&gt;&gt;&gt;"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"+"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"*"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"/"</span>
+</pre><pre><a class="nt" name="InfixOp">InfixOp</a>:
+        <span class="t">"%"</span>
+</pre><pre><a class="nt" name="ClassOrInterfaceDeclaration">ClassOrInterfaceDeclaration</a>:
+        <a class="nt" href="#Modifier">Modifier</a><span class="meta">*</span> (<a class="nt" href="#ClassDeclaration">ClassDeclaration</a> | <a class="nt" href="#InterfaceDeclaration">InterfaceDeclaration</a>)
+</pre><pre><a class="nt" name="ConstructorDeclaratorRest">ConstructorDeclaratorRest</a>:
+        <a class="nt" href="#FormalParameters">FormalParameters</a> (<span class="t">"throws"</span> <a class="nt" href="#QualifiedIdentifierList">QualifiedIdentifierList</a>)<span class="meta">?</span> <a class="nt" href="#MethodBody">MethodBody</a>
+</pre><pre><a class="nt" name="InterfaceMethodOrFieldDecl">InterfaceMethodOrFieldDecl</a>:
+        <a class="nt" href="#Type">Type</a> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#InterfaceMethodOrFieldRest">InterfaceMethodOrFieldRest</a>
+</pre><pre><a class="nt" name="ClassDeclaration">ClassDeclaration</a>:
+        <a class="nt" href="#NormalClassDeclaration">NormalClassDeclaration</a>
+</pre><pre><a class="nt" name="ClassDeclaration">ClassDeclaration</a>:
+        <a class="nt" href="#EnumDeclaration">EnumDeclaration</a>
+</pre><pre><a class="nt" name="MethodOrFieldDecl">MethodOrFieldDecl</a>:
+        <a class="nt" href="#Type">Type</a> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#MethodOrFieldRest">MethodOrFieldRest</a>
+</pre><pre><a class="nt" name="InnerCreator">InnerCreator</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#ClassCreatorRest">ClassCreatorRest</a>
+</pre><pre><a class="nt" name="PrefixOp">PrefixOp</a>:
+        <span class="t">"++"</span>
+</pre><pre><a class="nt" name="PrefixOp">PrefixOp</a>:
+        <span class="t">"--"</span>
+</pre><pre><a class="nt" name="PrefixOp">PrefixOp</a>:
+        <span class="t">"!"</span>
+</pre><pre><a class="nt" name="PrefixOp">PrefixOp</a>:
+        <span class="t">"~"</span>
+</pre><pre><a class="nt" name="PrefixOp">PrefixOp</a>:
+        <span class="t">"+"</span>
+</pre><pre><a class="nt" name="PrefixOp">PrefixOp</a>:
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="CreatedName">CreatedName</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a><span class="meta">?</span> (<span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#NonWildcardTypeArguments">NonWildcardTypeArguments</a><span class="meta">?</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="TypeDeclaration">TypeDeclaration</a>:
+        <a class="nt" href="#ClassOrInterfaceDeclaration">ClassOrInterfaceDeclaration</a>
+</pre><pre><a class="nt" name="TypeDeclaration">TypeDeclaration</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="FormalParameterDecls">FormalParameterDecls</a>:
+        (<span class="t">"final"</span> <a class="nt" href="#Annotations">Annotations</a><span class="meta">?</span> <a class="nt" href="#Type">Type</a> <a class="nt" href="#FormalParameterDeclsRest">FormalParameterDeclsRest</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="ConstantDeclaratorRest">ConstantDeclaratorRest</a>:
+        (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> <span class="t">"="</span> <a class="nt" href="#VariableInitializer">VariableInitializer</a>
+</pre><pre><a class="nt" name="StatementExpression">StatementExpression</a>:
+        <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="Arguments">Arguments</a>:
+        <span class="t">"("</span> (<a class="nt" href="#Expression">Expression</a> (<span class="t">","</span> <a class="nt" href="#Expression">Expression</a>)<span class="meta">*</span>)<span class="meta">?</span> <span class="t">")"</span>
+</pre><pre><a class="nt" name="ElementValueArrayInitializer">ElementValueArrayInitializer</a>:
+        <span class="t">"{"</span> <a class="nt" href="#ElementValues">ElementValues</a><span class="meta">?</span> <span class="t">","</span><span class="meta">?</span> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="VariableDeclaratorId">VariableDeclaratorId</a>:
+        <a class="nt" href="#Identifier">Identifier</a> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="AnnotationMethodRest">AnnotationMethodRest</a>:
+        <span class="t">"("</span> <span class="t">")"</span> (<span class="t">"["</span> <span class="t">"]"</span>)<span class="meta">*</span> <a class="nt" href="#DefaultValue">DefaultValue</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="VoidMethodDeclaratorRest">VoidMethodDeclaratorRest</a>:
+        <a class="nt" href="#FormalParameters">FormalParameters</a> (<span class="t">"throws"</span> <a class="nt" href="#QualifiedIdentifierList">QualifiedIdentifierList</a>)<span class="meta">?</span> (<a class="nt" href="#MethodBody">MethodBody</a> | <span class="t">";"</span>)
+</pre><pre><a class="nt" name="LocalVariableDeclarationStatement">LocalVariableDeclarationStatement</a>:
+        <span class="t">"final"</span><span class="meta">?</span> <a class="nt" href="#Type">Type</a> <a class="nt" href="#VariableDeclarators">VariableDeclarators</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Expression1">Expression1</a>:
+        <a class="nt" href="#Expression2">Expression2</a> <a class="nt" href="#Expression1Rest">Expression1Rest</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="TypeParameters">TypeParameters</a>:
+        <span class="t">"&lt;"</span> <a class="nt" href="#TypeParameter">TypeParameter</a> (<span class="t">","</span> <a class="nt" href="#TypeParameter">TypeParameter</a>)<span class="meta">*</span> <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="Expression2">Expression2</a>:
+        <a class="nt" href="#Expression3">Expression3</a> <a class="nt" href="#Expression2Rest">Expression2Rest</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="MethodBody">MethodBody</a>:
+        <a class="nt" href="#Block">Block</a>
+</pre><pre><a class="nt" name="ForVarControlRest">ForVarControlRest</a>:
+        <a class="nt" href="#VariableDeclaratorsRest">VariableDeclaratorsRest</a> <span class="t">";"</span> <a class="nt" href="#Expression">Expression</a><span class="meta">?</span> <span class="t">";"</span> <a class="nt" href="#ForUpdate">ForUpdate</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="ForVarControlRest">ForVarControlRest</a>:
+        <span class="t">":"</span> <a class="nt" href="#Expression">Expression</a>
+</pre><pre><a class="nt" name="EnumBodyDeclarations">EnumBodyDeclarations</a>:
+        <span class="t">";"</span> <a class="nt" href="#ClassBodyDeclaration">ClassBodyDeclaration</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="DefaultValue">DefaultValue</a>:
+        <span class="t">"default"</span> <a class="nt" href="#ElementValue">ElementValue</a>
+</pre><pre><a class="nt" name="AnnotationMethodOrConstantRest">AnnotationMethodOrConstantRest</a>:
+        <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#AnnotationMethodRest">AnnotationMethodRest</a>
+</pre><pre><a class="nt" name="AnnotationMethodOrConstantRest">AnnotationMethodOrConstantRest</a>:
+        <a class="nt" href="#AnnotationConstantRest">AnnotationConstantRest</a>
+</pre><pre><a class="nt" name="SuperSuffix">SuperSuffix</a>:
+        <a class="nt" href="#Arguments">Arguments</a>
+</pre><pre><a class="nt" name="SuperSuffix">SuperSuffix</a>:
+        <span class="t">"."</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#Arguments">Arguments</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="InterfaceGenericMethodDecl">InterfaceGenericMethodDecl</a>:
+        <a class="nt" href="#TypeParameters">TypeParameters</a> (<a class="nt" href="#Type">Type</a> | <span class="t">"void"</span>) <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#InterfaceMethodDeclaratorRest">InterfaceMethodDeclaratorRest</a>
+</pre><pre><a class="nt" name="EnumBody">EnumBody</a>:
+        (<a class="nt" href="#EnumConstants">EnumConstants</a><span class="meta">?</span> <span class="t">","</span><span class="meta">?</span> <a class="nt" href="#EnumBodyDeclarations">EnumBodyDeclarations</a><span class="meta">?</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="CompilationUnit">CompilationUnit</a>:
+        (<a class="nt" href="#Annotations">Annotations</a><span class="meta">?</span> <span class="t">"package"</span> <a class="nt" href="#QualifiedIdentifier">QualifiedIdentifier</a> <span class="t">";"</span>)<span class="meta">?</span> <a class="nt" href="#ImportDeclaration">ImportDeclaration</a><span class="meta">*</span> <a class="nt" href="#TypeDeclaration">TypeDeclaration</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="InterfaceBody">InterfaceBody</a>:
+        <span class="t">"{"</span> <a class="nt" href="#InterfaceBodyDeclaration">InterfaceBodyDeclaration</a><span class="meta">*</span> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="EnumConstantName">EnumConstantName</a>:
+        <a class="nt" href="#Identifier">Identifier</a>
+</pre><pre><a class="nt" name="Bound">Bound</a>:
+        <a class="nt" href="#Type">Type</a> (<span class="t">"&amp;"</span> <a class="nt" href="#Type">Type</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="TypeArgument">TypeArgument</a>:
+        <a class="nt" href="#Type">Type</a>
+</pre><pre><a class="nt" name="TypeArgument">TypeArgument</a>:
+        <span class="t">"?"</span> ((<span class="t">"extends"</span> | <span class="t">"super"</span>) <a class="nt" href="#Type">Type</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="AnnotationTypeElementRest">AnnotationTypeElementRest</a>:
+        <a class="nt" href="#Type">Type</a> <a class="nt" href="#AnnotationMethodOrConstantRest">AnnotationMethodOrConstantRest</a> <span class="t">";"</span>
+</pre><pre><a class="nt" name="AnnotationTypeElementRest">AnnotationTypeElementRest</a>:
+        <a class="nt" href="#ClassDeclaration">ClassDeclaration</a>
+</pre><pre><a class="nt" name="AnnotationTypeElementRest">AnnotationTypeElementRest</a>:
+        <a class="nt" href="#InterfaceDeclaration">InterfaceDeclaration</a>
+</pre><pre><a class="nt" name="AnnotationTypeElementRest">AnnotationTypeElementRest</a>:
+        <a class="nt" href="#EnumDeclaration">EnumDeclaration</a>
+</pre><pre><a class="nt" name="AnnotationTypeElementRest">AnnotationTypeElementRest</a>:
+        <a class="nt" href="#AnnotationTypeDeclaration">AnnotationTypeDeclaration</a>
+</pre><pre><a class="nt" name="AnnotationTypeElementDeclaration">AnnotationTypeElementDeclaration</a>:
+        <a class="nt" href="#Modifier">Modifier</a><span class="meta">*</span> <a class="nt" href="#AnnotationTypeElementRest">AnnotationTypeElementRest</a>
+</pre><pre><a class="nt" name="NormalInterfaceDeclaration">NormalInterfaceDeclaration</a>:
+        <span class="t">"interface"</span> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#TypeParameters">TypeParameters</a><span class="meta">?</span> (<span class="t">"extends"</span> <a class="nt" href="#TypeList">TypeList</a>)<span class="meta">?</span> <a class="nt" href="#InterfaceBody">InterfaceBody</a>
+</pre><pre><a class="nt" name="AnnotationTypeBody">AnnotationTypeBody</a>:
+        <span class="t">"{"</span> <a class="nt" href="#AnnotationTypeElementDeclarations">AnnotationTypeElementDeclarations</a><span class="meta">?</span> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="ArrayInitializer">ArrayInitializer</a>:
+        <span class="t">"{"</span> (<a class="nt" href="#VariableInitializer">VariableInitializer</a> (<span class="t">","</span> <a class="nt" href="#VariableInitializer">VariableInitializer</a>)<span class="meta">*</span> <span class="t">","</span><span class="meta">?</span>)<span class="meta">?</span> <span class="t">"}"</span>
+</pre><pre><a class="nt" name="ForVarControl">ForVarControl</a>:
+        <span class="t">"final"</span><span class="meta">?</span> <a class="nt" href="#Annotations">Annotations</a><span class="meta">?</span> <a class="nt" href="#Type">Type</a> <a class="nt" href="#Identifier">Identifier</a> <a class="nt" href="#ForVarControlRest">ForVarControlRest</a>
+</pre><pre><a class="nt" name="ForUpdate">ForUpdate</a>:
+        <a class="nt" href="#StatementExpression">StatementExpression</a> <a class="nt" href="#Expressions">Expressions</a>
+</pre><pre><a class="nt" name="FormalParameter">FormalParameter</a>:
+        <span class="t">"final"</span><span class="meta">?</span> <a class="nt" href="#Type">Type</a> <a class="nt" href="#VariableDeclaratorId">VariableDeclaratorId</a>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

@@ -1,0 +1,586 @@
+module Main
+
+exports
+  sorts
+        Class-name Class-declaration Notes Note-list Note-entry Note-name Note-values Note-item Class-header Header-mark Obsolete Message Features Feature-clause Feature-declaration-list Header-comment Feature-declaration Declaration-body Query-mark Type-mark Feature-value Explicit-value New-feature-list New-feature Attribute-or-routine Feature-body Extended-feature-name Feature-name Alias Alias-name Bracket Operator Unary Binary Assigner-mark Inheritance Inherit-clause Non-conformance Parent-list Parent Feature-adaptation Rename Rename-list Rename-pair Clients Class-list New-exports New-export-list New-export-item Feature-set Feature-list Formal-arguments Entity-declaration-list Entity-declaration-group Identifier-list Deferred Effective-routine Internal Routine-mark Once Key-list Local-declarations Compound Instruction Precondition Postcondition Invariant Assertion Assertion-clause Unlabeled-assertion-clause Tag-mark Tag Old Only Check Variant Precursor Parent-qualification Redefine Undefine Type Class-or-tuple-type Class-type Attachment-mark Anchored Anchor Actual-generics Type-list Formal-generics Formal-generic-list Formal-generic Formal-generic-name Constraint Constraining-types Single-constraint Renaming Multiple-constraint Constraint-list Constraint-creators Tuple-type Tuple-parameter-list Tuple-parameters Manifest-tuple Expression-list Converters Converter-list Converter Conversion-procedure Conversion-query Select Conditional Then-part-list Then-part Else-part Multi-branch When-part-list When-part Choices Choice Constant-interval Type-interval Loop Initialization Exit-condition Loop-body Debug Attribute Entity Variable Variable-attribute Local Read-only Formal Constant-attribute Creators Creation-clause Creation-procedure-list Creation-procedure Creation-instruction Explicit-creation-type Creation-call Explicit-creation-call Creation-expression Equality Comparison Assignment Assigner-call Call Object-call Unqualified-call Target Parenthesized-target Non-object-call Actuals Actual-list Object-test Rescue Retry Agent Call-agent Inline-agent Call-agent-body Agent-qualified Agent-unqualified Agent-target Agent-actuals Agent-actual-list Agent-actual Placeholder Expression Basic-expression Special-expression Parenthesized Address Once-string Boolean-expression Operator-expression Unary-expression Binary-expression Bracket-expression Bracket-target Constant Manifest-constant Manifest-type Manifest-value Sign Integer-constant Character-constant Boolean-constant Real-constant Manifest-string Basic-manifest-string String-content Verbatim-string Verbatim-string-opener Verbatim-string-closer Open-bracket Close-bracket External External-language Unregistered-language External-name Registered-language External-signature External-argument-types External-type-list External-type External-file-use External-file-list External-file External-user-file External-system-file C-external CPP-external DLL-external DLL-identifier DLL-index Comment Comment-break Integer Integer-base Integer-base-letter Digit-sequence Digit 
+  context-free syntax
+        Identifier -> Class-name
+
+        Notes? Class-header Formal-generics? Obsolete? Inheritance? Creators? Converters? Features? Invariant? Notes? "end" -> Class-declaration
+
+        "note" Note-list -> Notes
+
+        (Note-entry (";" Note-entry)*)? -> Note-list
+
+        Note-name Note-values -> Note-entry
+
+        Identifier ":" -> Note-name
+
+        Note-item ("," Note-item)* -> Note-values
+
+        Identifier
+		| Manifest-constant -> Note-item
+
+        Header-mark? "class" Class-name -> Class-header
+
+        "deferred"
+		| "expanded"
+		| "frozen" -> Header-mark
+
+        "obsolete" Message -> Obsolete
+
+        Manifest-string -> Message
+
+        Feature-clause+ -> Features
+
+        "feature" Clients? Header-comment? Feature-declaration-list -> Feature-clause
+
+        (Feature-declaration (";" Feature-declaration)*)? -> Feature-declaration-list
+
+        Comment -> Header-comment
+
+        New-feature-list Declaration-body -> Feature-declaration
+
+        Formal-arguments? Query-mark? Feature-value? -> Declaration-body
+
+        Type-mark Assigner-mark? -> Query-mark
+
+        ":" Type -> Type-mark
+
+        Explicit-value? Obsolete? Header-comment? Attribute-or-routine? -> Feature-value
+
+        "=" Manifest-constant -> Explicit-value
+
+        New-feature ("," New-feature)* -> New-feature-list
+
+        "frozen"? Extended-feature-name -> New-feature
+
+        Precondition? Local-declarations? Feature-body Postcondition? Rescue? "end" -> Attribute-or-routine
+
+        Deferred
+		| Effective-routine
+		| Attribute -> Feature-body
+
+        Feature-name Alias? -> Extended-feature-name
+
+        Identifier -> Feature-name
+
+        "alias" """ Alias-name """ "convert"? -> Alias
+
+        Operator
+		| Bracket -> Alias-name
+
+        "[]" -> Bracket
+
+        Unary
+		| Binary -> Operator
+
+        "not"
+		| "+"
+		| "-"
+		| Free-unary -> Unary
+
+        "+"
+		| "-"
+		| "*"
+		| "/"
+		| "//"
+		| "\\"
+		| "^"
+		| ".."
+		| "<"
+		| ">"
+		| "<="
+		| ">="
+		| "and"
+		| "or"
+		| "xor"
+		| "and" "then"
+		| "or" "else"
+		| "implies"
+		| Free-binary -> Binary
+
+        "assign" Feature-name -> Assigner-mark
+
+        Inherit-clause+ -> Inheritance
+
+        "inherit" Non-conformance? Parent-list -> Inherit-clause
+
+        "{" "NONE" "}" -> Non-conformance
+
+        Parent (";" Parent)* -> Parent-list
+
+        Class-type Feature-adaptation? -> Parent
+
+        Undefine? Redefine? Rename? New-exports? Select? "end" -> Feature-adaptation
+
+        "rename" Rename-list -> Rename
+
+        Rename-pair ("," Rename-pair)* -> Rename-list
+
+        Feature-name "as" Extended-feature-name -> Rename-pair
+
+        "{" Class-list "}" -> Clients
+
+        Class-name ("," Class-name)* -> Class-list
+
+        "export" New-export-list -> New-exports
+
+        New-export-item (";" New-export-item)* -> New-export-list
+
+        Clients Header-comment? Feature-set -> New-export-item
+
+        Feature-list
+		| "all" -> Feature-set
+
+        Feature-name ("," Feature-name)* -> Feature-list
+
+        "(" Entity-declaration-list ")" -> Formal-arguments
+
+        Entity-declaration-group (";" Entity-declaration-group)* -> Entity-declaration-list
+
+        Identifier-list Type-mark -> Entity-declaration-group
+
+        Identifier ("," Identifier)* -> Identifier-list
+
+        "deferred" -> Deferred
+
+        Internal
+		| External -> Effective-routine
+
+        Routine-mark Compound -> Internal
+
+        "do"
+		| Once -> Routine-mark
+
+        "once" ("(" Key-list ")")? -> Once
+
+        Manifest-string ("," Manifest-string)* -> Key-list
+
+        "local" Entity-declaration-list? -> Local-declarations
+
+        (Instruction (";" Instruction)*)? -> Compound
+
+        Creation-instruction
+		| Call
+		| Assignment
+		| Assigner-call
+		| Conditional
+		| Multi-branch
+		| Loop
+		| Debug
+		| Precursor
+		| Check
+		| Retry -> Instruction
+
+        "require" "else"? Assertion -> Precondition
+
+        "ensure" "then"? Assertion Only? -> Postcondition
+
+        "invariant" Assertion -> Invariant
+
+        (Assertion-clause (";" Assertion-clause)*)? -> Assertion
+
+        Tag-mark? Unlabeled-assertion-clause -> Assertion-clause
+
+        Boolean-expression
+		| Comment -> Unlabeled-assertion-clause
+
+        Tag ":" -> Tag-mark
+
+        Identifier -> Tag
+
+        "old" Expression -> Old
+
+        "only" Feature-list? -> Only
+
+        "check" Assertion Notes? "end" -> Check
+
+        "variant" Tag-mark? Expression -> Variant
+
+        Precursor Parent-qualification? Actuals? -> Precursor
+
+        "{" Class-name "}" -> Parent-qualification
+
+        "redefine" Feature-list -> Redefine
+
+        "undefine" Feature-list -> Undefine
+
+        Class-or-tuple-type
+		| Formal-generic-name
+		| Anchored -> Type
+
+        Class-type
+		| Tuple-type -> Class-or-tuple-type
+
+        Attachment-mark? Class-name Actual-generics? -> Class-type
+
+        "?"
+		| "!" -> Attachment-mark
+
+        Attachment-mark? "like" Anchor -> Anchored
+
+        Feature-name
+		| "Current" -> Anchor
+
+        "[" Type-list "]" -> Actual-generics
+
+        Type ("," Type)* -> Type-list
+
+        "[" Formal-generic-list "]" -> Formal-generics
+
+        Formal-generic ("," Formal-generic)* -> Formal-generic-list
+
+        "frozen"? Formal-generic-name Constraint? -> Formal-generic
+
+        "?"? Identifier -> Formal-generic-name
+
+        "->" Constraining-types Constraint-creators? -> Constraint
+
+        Single-constraint
+		| Multiple-constraint -> Constraining-types
+
+        Type Renaming? -> Single-constraint
+
+        Rename "end" -> Renaming
+
+        "{" Constraint-list "}" -> Multiple-constraint
+
+        Single-constraint ("," Single-constraint)* -> Constraint-list
+
+        "create" Feature-list "end" -> Constraint-creators
+
+        "TUPLE" Tuple-parameter-list? -> Tuple-type
+
+        "[" Tuple-parameters "]" -> Tuple-parameter-list
+
+        Type-list
+		| Entity-declaration-list -> Tuple-parameters
+
+        "[" Expression-list "]" -> Manifest-tuple
+
+        (Expression ("," Expression)*)? -> Expression-list
+
+        "convert" Converter-list -> Converters
+
+        Converter ("," Converter)* -> Converter-list
+
+        Conversion-procedure
+		| Conversion-query -> Converter
+
+        Feature-name "({" Type-list "})" -> Conversion-procedure
+
+        Feature-name ":{" Type-list "}" -> Conversion-query
+
+        "select" Feature-list -> Select
+
+        "if" Then-part-list Else-part? "end" -> Conditional
+
+        Then-part ("elseif" Then-part)* -> Then-part-list
+
+        Boolean-expression "then" Compound -> Then-part
+
+        "else" Compound -> Else-part
+
+        "inspect" Expression When-part-list? Else-part? "end" -> Multi-branch
+
+        When-part+ -> When-part-list
+
+        "when" Choices "then" Compound -> When-part
+
+        Choice ("," Choice)* -> Choices
+
+        Constant
+		| Manifest-type
+		| Constant-interval
+		| Type-interval -> Choice
+
+        Constant ".." Constant -> Constant-interval
+
+        Manifest-type ".." Manifest-type -> Type-interval
+
+        Initialization Invariant? Exit-condition Loop-body Variant? "end" -> Loop
+
+        "from" Compound -> Initialization
+
+        "until" Boolean-expression -> Exit-condition
+
+        "loop" Compound -> Loop-body
+
+        "debug" ("(" Key-list ")")? Compound "end" -> Debug
+
+        "attribute" Compound -> Attribute
+
+        Variable
+		| Read-only -> Entity
+
+        Variable-attribute
+		| Local -> Variable
+
+        Feature-name -> Variable-attribute
+
+        Identifier
+		| "Result" -> Local
+
+        Formal
+		| Constant-attribute
+		| "Current" -> Read-only
+
+        Identifier -> Formal
+
+        Feature-name -> Constant-attribute
+
+        Creation-clause+ -> Creators
+
+        "create" Clients? Header-comment? Creation-procedure-list -> Creation-clause
+
+        Creation-procedure ("," Creation-procedure)* -> Creation-procedure-list
+
+        Feature-name -> Creation-procedure
+
+        "create" Explicit-creation-type? Creation-call -> Creation-instruction
+
+        "{" Type "}" -> Explicit-creation-type
+
+        Variable Explicit-creation-call? -> Creation-call
+
+        "." Unqualified-call -> Explicit-creation-call
+
+        "create" Explicit-creation-type Explicit-creation-call? -> Creation-expression
+
+        Expression Comparison Expression -> Equality
+
+        "="
+		| "/="
+		| "~"
+		| "/~" -> Comparison
+
+        Variable ":=" Expression -> Assignment
+
+        Expression ":=" Expression -> Assigner-call
+
+        Object-call
+		| Non-object-call -> Call
+
+        (Target ".")? Unqualified-call -> Object-call
+
+        Feature-name Actuals? -> Unqualified-call
+
+        Local
+		| Read-only
+		| Call
+		| Parenthesized-target -> Target
+
+        "(|" Expression "|)" -> Parenthesized-target
+
+        "{" Type "}." Unqualified-call -> Non-object-call
+
+        "(" Actual-list ")" -> Actuals
+
+        Expression ("," Expression)* -> Actual-list
+
+        "{" Identifier ":" Type "}" Expression -> Object-test
+
+        "rescue" Compound -> Rescue
+
+        "retry" -> Retry
+
+        Call-agent
+		| Inline-agent -> Agent
+
+        "agent" Call-agent-body -> Call-agent
+
+        "agent" Formal-arguments? Type-mark? Attribute-or-routine? Agent-actuals? -> Inline-agent
+
+        Agent-qualified
+		| Agent-unqualified -> Call-agent-body
+
+        Agent-target "." Agent-unqualified -> Agent-qualified
+
+        Feature-name Agent-actuals? -> Agent-unqualified
+
+        Entity
+		| Parenthesized
+		| Manifest-type -> Agent-target
+
+        "(" Agent-actual-list ")" -> Agent-actuals
+
+        Agent-actual ("," Agent-actual)* -> Agent-actual-list
+
+        Expression
+		| Placeholder -> Agent-actual
+
+        Manifest-type? "?" -> Placeholder
+
+        Basic-expression
+		| Special-expression -> Expression
+
+        Read-only
+		| Local
+		| Call
+		| Precursor
+		| Equality
+		| Parenthesized
+		| Old
+		| Operator-expression
+		| Bracket-expression
+		| Creation-expression -> Basic-expression
+
+        Manifest-constant
+		| Manifest-tuple
+		| Agent
+		| Object-test
+		| Once-string
+		| Address -> Special-expression
+
+        "(" Expression ")" -> Parenthesized
+
+        "$" Variable -> Address
+
+        "once" Manifest-string -> Once-string
+
+        Basic-expression
+		| Boolean-constant
+		| Object-test -> Boolean-expression
+
+        Unary-expression
+		| Binary-expression -> Operator-expression
+
+        Unary Expression -> Unary-expression
+
+        Expression Binary Expression -> Binary-expression
+
+        Bracket-target "[" Actuals "]" -> Bracket-expression
+
+        Target
+		| Once-string
+		| Manifest-constant
+		| Manifest-tuple -> Bracket-target
+
+        Manifest-constant
+		| Constant-attribute -> Constant
+
+        Manifest-type? Manifest-value -> Manifest-constant
+
+        "{" Type "}" -> Manifest-type
+
+        Boolean-constant
+		| Character-constant
+		| Integer-constant
+		| Real-constant
+		| Manifest-string
+		| Manifest-type -> Manifest-value
+
+        "+"
+		| "-" -> Sign
+
+        Sign? Integer -> Integer-constant
+
+        "'" Character "'" -> Character-constant
+
+        "True"
+		| "False" -> Boolean-constant
+
+        Sign? Real -> Real-constant
+
+        Basic-manifest-string
+		| Verbatim-string -> Manifest-string
+
+        """ String-content """ -> Basic-manifest-string
+
+        Simple-string (Line-wrapping-part Simple-string)* -> String-content
+
+        Verbatim-string-opener Line-sequence Verbatim-string-closer -> Verbatim-string
+
+        """ Simple-string? Open-bracket -> Verbatim-string-opener
+
+        Close-bracket Simple-string? """ -> Verbatim-string-closer
+
+        "["
+		| "{" -> Open-bracket
+
+        "]"
+		| "}" -> Close-bracket
+
+        "external" External-language External-name? -> External
+
+        Unregistered-language
+		| Registered-language -> External-language
+
+        Manifest-string -> Unregistered-language
+
+        "alias" Manifest-string -> External-name
+
+        C-external
+		| CPP-external
+		| DLL-external -> Registered-language
+
+        "signature" External-argument-types? (":" External-type)? -> External-signature
+
+        "(" External-type-list ")" -> External-argument-types
+
+        (External-type ("," External-type)*)? -> External-type-list
+
+        Simple-string -> External-type
+
+        "use" External-file-list -> External-file-use
+
+        External-file ("," External-file)* -> External-file-list
+
+        External-user-file
+		| External-system-file -> External-file
+
+        """ Simple-string """ -> External-user-file
+
+        "<" Simple-string ">" -> External-system-file
+
+        """ "C" "inline"? External-signature? External-file-use? """ -> C-external
+
+        """ "C++" "inline" External-signature? External-file-use? """ -> CPP-external
+
+        """ "dll" "windows"? DLL-identifier DLL-index? External-signature? External-file-use? """ -> DLL-external
+
+        Simple-string -> DLL-identifier
+
+        Integer -> DLL-index
+
+        "--" (Simple-string (Comment-break Simple-string)*)? -> Comment
+
+        New-line Blanks-or-tabs? "--" -> Comment-break
+
+        Integer-base? Digit-sequence -> Integer
+
+        "0" Integer-base-letter -> Integer-base
+
+        "b"
+		| "c"
+		| "x"
+		| "B"
+		| "C"
+		| "X" -> Integer-base-letter
+
+        Digit+ -> Digit-sequence
+
+        "0"
+		| "1"
+		| "2"
+		| "3"
+		| "4"
+		| "5"
+		| "6"
+		| "7"
+		| "8"
+		| "9"
+		| "a"
+		| "b"
+		| "c"
+		| "d"
+		| "e"
+		| "f"
+		| "A"
+		| "B"
+		| "C"
+		| "D"
+		| "E"
+		| "F"
+		| "_" -> Digit

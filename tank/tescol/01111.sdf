@@ -1,0 +1,162 @@
+module Main
+
+exports
+  sorts
+        Program ProgTree Declarations ConstDec VarDec ProcDec ParamList Stat AssignStat ConditionalStat LoopStat Atom ArithmeticExpression DisjBool ConjBool BoolExpr SubExpr AddExpr MulExpr DivExpr ExpExpr ApplyProc SubExprList Number Comment Operations INTVALUE DOUBLEVALUE DONE DO TROLLEY PROC CONTAINS CHECKOUT SKIP CONST VAR IF THEN ELSE WHILE INTKEYWORD DOUBLEKEYWORD COLON DEFINEDAS SEMI OPAR CPAR COMMA LPAR RPAR UNDER DIVISION ADDITION SUBTRACTION EXPONENTION MULTIPLICATION QUESTION EQUALITY NONEQUALITY LESSTHAN LESSTHANOREQUAL GREATERTHAN GREATERTHANOREQUAL DISJUNCTION CONJUNCTION COMMENT CONSTID VARANDPROCID WS 
+  context-free syntax
+        ProgTree+ -> Program
+
+        TROLLEY CONSTID CONTAINS Declarations* CHECKOUT Stat DONE SEMI -> ProgTree
+
+        CONST ConstDec SEMI
+		| VAR VarDec SEMI
+		| PROC ProcDec -> Declarations
+
+        c::CONSTID COLON Number DEFINEDAS ArithmeticExpression -> ConstDec
+
+        v::VARANDPROCID COLON Number -> VarDec
+
+        p::VARANDPROCID OPAR ParamList? CPAR COLON Number DEFINEDAS Stat -> ProcDec
+
+        VarDec (COMMA VarDec)* -> ParamList
+
+        ConditionalStat
+		| LoopStat
+		| AssignStat SEMI
+		| SKIP SEMI
+		| LPAR Stat+ RPAR SEMI -> Stat
+
+        VARANDPROCID DEFINEDAS ArithmeticExpression -> AssignStat
+
+        IF BoolExpr THEN Stat ELSE Stat -> ConditionalStat
+
+        WHILE BoolExpr DO Stat -> LoopStat
+
+        CONSTID
+		| VARANDPROCID
+		| ("+" | "-")? INTVALUE
+		| ("+" | "-")? DOUBLEVALUE
+		| ApplyProc
+		| OPAR ArithmeticExpression CPAR -> Atom
+
+        DisjBool (QUESTION ArithmeticExpression COLON ArithmeticExpression)? -> ArithmeticExpression
+
+        ConjBool (DISJUNCTION ConjBool)* -> DisjBool
+
+        BoolExpr (CONJUNCTION BoolExpr)* -> ConjBool
+
+        SubExpr (Operations SubExpr)? -> BoolExpr
+
+        AddExpr (SUBTRACTION AddExpr)* -> SubExpr
+
+        MulExpr (ADDITION MulExpr)* -> AddExpr
+
+        DivExpr (MULTIPLICATION DivExpr)* -> MulExpr
+
+        ExpExpr (DIVISION ExpExpr)* -> DivExpr
+
+        Atom (EXPONENTION Atom)* -> ExpExpr
+
+        VARANDPROCID OPAR SubExprList CPAR -> ApplyProc
+
+        ArithmeticExpression (COMMA ArithmeticExpression)* -> SubExprList
+
+        INTKEYWORD
+		| DOUBLEKEYWORD -> Number
+
+        COMMENT -> Comment
+
+        EQUALITY
+		| NONEQUALITY
+		| LESSTHAN
+		| LESSTHANOREQUAL
+		| GREATERTHAN
+		| GREATERTHANOREQUAL -> Operations
+
+        ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INTVALUE
+
+        INTVALUE? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") ("+" | "-")? INTVALUE)? -> DOUBLEVALUE
+
+        "done" -> DONE
+
+        "do" -> DO
+
+        "trolley" -> TROLLEY
+
+        "proc" -> PROC
+
+        "contains" -> CONTAINS
+
+        "checkout" -> CHECKOUT
+
+        "skip" -> SKIP
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "int" -> INTKEYWORD
+
+        "double" -> DOUBLEKEYWORD
+
+        ":" -> COLON
+
+        ":=" -> DEFINEDAS
+
+        ";" -> SEMI
+
+        "(" -> OPAR
+
+        ")" -> CPAR
+
+        "," -> COMMA
+
+        "{" -> LPAR
+
+        "}" -> RPAR
+
+        "_" -> UNDER
+
+        "/" -> DIVISION
+
+        "+" -> ADDITION
+
+        "-" -> SUBTRACTION
+
+        "**" -> EXPONENTION
+
+        "*" -> MULTIPLICATION
+
+        "?" -> QUESTION
+
+        "==" -> EQUALITY
+
+        "!=" -> NONEQUALITY
+
+        "<" -> LESSTHAN
+
+        "<=" -> LESSTHANOREQUAL
+
+        ">" -> GREATERTHAN
+
+        ">=" -> GREATERTHANOREQUAL
+
+        "\\/" -> DISJUNCTION
+
+        "/\\" -> CONJUNCTION
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VARANDPROCID
+
+        ("\t" | "|" | "\n" | "\r" | " " | "\f")+ -> WS

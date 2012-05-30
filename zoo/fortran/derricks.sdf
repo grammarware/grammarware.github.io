@@ -1,0 +1,1088 @@
+module Main
+
+exports
+ context-free start-symbols ExecutableProgram
+  sorts
+        ExecutableProgram ProgramUnit MainProgram ProgramStmt LblDef ProgramName MainRange BodyConstruct SpecificationPartConstruct ImplicitStmt ImplicitSpec TypeSpec KindSelector Expr DefinedBinaryOp Level5Expr EquivOp EquivOperand OrOp OrOperand AndOp AndOperand NotOp Level4Expr Level3Expr ConcatOp Level2Expr AddOp AddOperand MultOp MultOperand Level1Expr DefinedUnaryOp Primary ArrayConstructor AcValueList AcValue AcImpliedDo ImpliedDoVariable UnsignedArithmeticConstant KindParam NamedConstantUse ComplexConst Name DataRef SectionSubscriptList SectionSubscript SubscriptTriplet FunctionReference FunctionArgList FunctionArg LogicalConstant PowerOp Sign RelOp CharSelector TypeParamValue SpecificationExpr TypeName LengthSelector CharLength LetterSpec ParameterStmt NamedConstantDefList NamedConstantDef NamedConstant FormatStmt FormatItemList FormatItem DataEditDescr ControlEditDescr PositionEditDescr SignEditDescr BlankInterpEditDescr CharStringEditDescr EntryStmt EntryName SubroutineParList SubroutinePar DummyArgName DeclarationConstruct TypeDeclarationStmt AttrSpec AccessSpec ArraySpec AssumedShapeSpecList LowerBound DeferredShapeSpecList DeferredShapeSpec AssumedShapeSpec ExplicitShapeSpecList ExplicitShapeSpec UpperBound AssumedSizeSpec IntentSpec EntityDecl ObjectName SpecificationStmt AccessStmt AccessIdList AccessId GenericName GenericSpec DefinedOperator AllocatableStmt ArrayAllocationList ArrayAllocation ArrayName CommonStmt Comblock CommonBlockName CommonBlockObjectList CommonBlockObject VariableName ArrayDeclarator DataStmt Datalist DataStmtSet DataStmtObjectList DataStmtObject Variable Subscript SubstringRange DataImpliedDo DataIDoObjectList DataIDoObject ArrayElement StructureComponent FieldSelector DataStmtValueList DataStmtValue Constant StructureConstructor BozLiteralConstant DimensionStmt ArrayDeclaratorList EquivalenceStmt EquivalenceSetList EquivalenceSet EquivalenceObject ExternalStmt ExternalName IntrinsicStmt IntrinsicProcedureName SaveStmt SavedEntityList SavedEntity IntentStmt IntentParList IntentPar NamelistStmt NamelistGroup NamelistGroupName NamelistGroupObject OptionalStmt OptionalParList OptionalPar PointerStmt PointerStmtObjectList PointerStmtObject TargetStmt TargetObjectList TargetObject DerivedTypeDef DerivedTypeStmt DerivedTypeBody PrivateSequenceStmt ComponentDefStmt ComponentAttrSpecList ComponentAttrSpec ComponentArraySpec ComponentDeclList ComponentDecl ComponentName EndTypeStmt InterfaceBlock InterfaceStmt InterfaceBlockPart InterfaceBody FunctionPrefix FunctionName FunctionInterfaceRange FunctionParList FunctionPar SubprogramInterfaceBody EndFunctionStmt EndName SubroutineName SubroutineInterfaceRange EndSubroutineStmt ModuleProcedureStmt ProcedureNameList ProcedureName EndInterfaceStmt UseStmt RenameList Rename UseName OnlyList Only ExecutableConstruct ActionStmt AllocateStmt AllocationList Allocation AllocateObject AllocatedShape CycleStmt DeallocateStmt AllocateObjectList ExitStmt NullifyStmt PointerObjectList PointerObject PointerField SFExprList SFExpr SFTerm SFFactor SFPrimary SFDummyArgNameList SFDummyArgName PointerAssignmentStmt Target WhereStmt MaskExpr AssignmentStmt ArithmeticIfStmt ScalarNumericExpr LblRef AssignStmt BackspaceStmt UnitIdentifier UFExpr UFTerm UFFactor UFPrimary PositionSpec ScalarVariable CallStmt SubroutineNameUse ActualArg CloseStmt CloseSpecList CloseSpec CExpr CPrimary COperand ContinueStmt EndfileStmt GotoStmt GoToKw ComputedGotoStmt ScalarIntExpr AssignedGotoStmt IfStmt ScalarLogicalExpr InquireStmt InquireSpecList InquireSpec OutputItemList OutputItem OutputImpliedDo OpenStmt ConnectSpecList ConnectSpec PauseStmt PrintStmt FormatIdentifier ReadStmt RdCtlSpec RdUnitId RdIoCtlSpecList IoControlSpec InputItemList InputItem InputImpliedDo RdFmtId RdFmtIdExpr ReturnStmt RewindStmt StopStmt WriteStmt IoControlSpecList DoConstruct BlockDoConstruct LoopControl Int-Real-Dp-Expression LabelDoStmt IfConstruct IfThenStmt IfConstructName ExecutionPartConstruct ElseIfStmt ElseStmt EndIfStmt CaseConstruct SelectCaseRange SelectCaseBody CaseBodyConstruct CaseStmt CaseSelector CaseValueRange EndSelectStmt WhereConstruct WhereConstructStmt ElsewhereStmt EndWhereStmt EndDoStmt EndProgramStmt InternalSubProgPart Body ContainsStmt InternalSubprogram FunctionSubprogram FunctionRange SubroutineSubprogram SubroutineRange Module ModuleStmt ModuleName ModuleBody ModuleSubprogramPartConstruct ModuleSubprogram EndModuleStmt BlockDataSubprogram BlockDataStmt BlockDataName BlockDataBody BlockDataBodyConstruct EndBlockDataStmt 
+  context-free syntax
+        StartCommentBlock? ProgramUnit+ -> ExecutableProgram
+
+        MainProgram
+		| FunctionSubprogram
+		| SubroutineSubprogram
+		| Module
+		| BlockDataSubprogram -> ProgramUnit
+
+        ProgramStmt? MainRange -> MainProgram
+
+        LblDef "program" ProgramName EOS -> ProgramStmt
+
+        Label? -> LblDef
+
+        Ident -> ProgramName
+
+        BodyConstruct+ EndProgramStmt
+		| InternalSubProgPart EndProgramStmt
+		| EndProgramStmt -> MainRange
+
+        SpecificationPartConstruct
+		| ExecutableConstruct -> BodyConstruct
+
+        ImplicitStmt
+		| ParameterStmt
+		| FormatStmt
+		| EntryStmt
+		| DeclarationConstruct
+		| UseStmt -> SpecificationPartConstruct
+
+        LblDef "implicit" "none" EOS
+		| LblDef "implicit" ImplicitSpec ("," ImplicitSpec)* EOS -> ImplicitStmt
+
+        TypeSpec "(" LetterSpec ("," LetterSpec)* ")" -> ImplicitSpec
+
+        "integer" KindSelector
+		| "real" KindSelector
+		| "double" "precision"
+		| "complex" KindSelector
+		| "character" CharSelector
+		| "logical" KindSelector
+		| "type" "(" TypeName ")"
+		| "integer"
+		| "real"
+		| "complex"
+		| "logical"
+		| "character"
+		| "character" LengthSelector -> TypeSpec
+
+        "(" ("kind" "=")? Expr ")"
+		| "*" Icon -> KindSelector
+
+        (Expr DefinedBinaryOp)? Level5Expr -> Expr
+
+        Dop -> DefinedBinaryOp
+
+        (Level5Expr EquivOp)? EquivOperand -> Level5Expr
+
+        ".eqv."
+		| ".neqv." -> EquivOp
+
+        (EquivOperand OrOp)? OrOperand -> EquivOperand
+
+        ".or." -> OrOp
+
+        (OrOperand AndOp)? AndOperand -> OrOperand
+
+        ".and." -> AndOp
+
+        NotOp? Level4Expr -> AndOperand
+
+        ".not." -> NotOp
+
+        (Level3Expr RelOp)? Level3Expr -> Level4Expr
+
+        (Level3Expr ConcatOp)? Level2Expr -> Level3Expr
+
+        "//" -> ConcatOp
+
+        (Level2Expr AddOp)? AddOperand
+		| Sign AddOperand -> Level2Expr
+
+        "+"
+		| "-" -> AddOp
+
+        (AddOperand MultOp)? MultOperand -> AddOperand
+
+        "*"
+		| "/" -> MultOp
+
+        Level1Expr (PowerOp MultOperand)? -> MultOperand
+
+        DefinedUnaryOp? Primary -> Level1Expr
+
+        Dop -> DefinedUnaryOp
+
+        ArrayConstructor
+		| UnsignedArithmeticConstant
+		| Name
+		| DataRef
+		| FunctionReference
+		| "(" Expr ")"
+		| Scon
+		| LogicalConstant -> Primary
+
+        "(/" AcValueList "/)" -> ArrayConstructor
+
+        AcValue ("," AcValue)* -> AcValueList
+
+        Expr
+		| AcImpliedDo -> AcValue
+
+        "(" Expr "," ImpliedDoVariable "=" Expr "," Expr ")"
+		| "(" Expr "," ImpliedDoVariable "=" Expr "," Expr "," Expr ")"
+		| "(" AcImpliedDo "," ImpliedDoVariable "=" Expr "," Expr ")"
+		| "(" AcImpliedDo "," ImpliedDoVariable "=" Expr "," Expr "," Expr ")" -> AcImpliedDo
+
+        Ident -> ImpliedDoVariable
+
+        Icon "_" KindParam
+		| Rcon "_" KindParam
+		| Icon
+		| Rcon
+		| ComplexConst -> UnsignedArithmeticConstant
+
+        Icon
+		| NamedConstantUse -> KindParam
+
+        Ident -> NamedConstantUse
+
+        "(" Expr "," Expr ")" -> ComplexConst
+
+        Ident -> Name
+
+        Name "%" Name
+		| DataRef "%" Name
+		| Name "(" SectionSubscriptList ")"
+		| DataRef "(" SectionSubscriptList ")" -> DataRef
+
+        SectionSubscript ("," SectionSubscript)* -> SectionSubscriptList
+
+        Expr
+		| SubscriptTriplet -> SectionSubscript
+
+        Expr? ":" Expr? (":" Expr)? -> SubscriptTriplet
+
+        Name "(" FunctionArgList? ")" -> FunctionReference
+
+        FunctionArg
+		| FunctionArgList "," FunctionArg
+		| SectionSubscriptList "," FunctionArg -> FunctionArgList
+
+        Name "=" Expr -> FunctionArg
+
+        ".true." "_" KindParam
+		| ".false." "_" KindParam
+		| ".true."
+		| ".false." -> LogicalConstant
+
+        "**" -> PowerOp
+
+        "+"
+		| "-" -> Sign
+
+        "=="
+		| "/="
+		| "<"
+		| "<="
+		| ">"
+		| ">="
+		| ".eq."
+		| ".ne."
+		| ".lt."
+		| ".le."
+		| ".gt."
+		| ".ge." -> RelOp
+
+        "(" "len" "=" TypeParamValue "," "kind" "=" Expr ")"
+		| "(" "len" "=" TypeParamValue "," Expr ")"
+		| "(" "len" "=" TypeParamValue ")"
+		| "(" ("kind" "=")? Expr ")" -> CharSelector
+
+        SpecificationExpr
+		| "*" -> TypeParamValue
+
+        Expr -> SpecificationExpr
+
+        Ident -> TypeName
+
+        "(" TypeParamValue ")"
+		| "*" CharLength -> LengthSelector
+
+        "(" TypeParamValue ")"
+		| ScalarIntLiteralConstant -> CharLength
+
+        Letter ("-" Letter)? -> LetterSpec
+
+        LblDef "parameter" "(" NamedConstantDefList ")" EOS -> ParameterStmt
+
+        NamedConstantDef ("," NamedConstantDef)* -> NamedConstantDefList
+
+        NamedConstant "=" Expr -> NamedConstantDef
+
+        Ident -> NamedConstant
+
+        LblDef "format" "(" FormatItemList? ")" EOS -> FormatStmt
+
+        FormatItem ("," FormatItem)* -> FormatItemList
+
+        Icon? DataEditDescr
+		| ControlEditDescr
+		| CharStringEditDescr
+		| Icon? "(" FormatItemList ")"
+		| FormatItem ":" FormatItem -> FormatItem
+
+        "I" Icon ("." Icon)?
+		| "O" Icon ("." Icon)?
+		| "B" Icon ("." Icon)?
+		| "Z" Icon ("." Icon)?
+		| "F" Icon "." Icon
+		| "E" Icon "." Icon ("E" Icon)?
+		| "EN" Icon "." Icon ("E" Icon)?
+		| "ES" Icon "." Icon ("E" Icon)?
+		| "G" Icon "." Icon ("E" Icon)?
+		| "L" Icon
+		| "A" Icon?
+		| "D" Icon "." Icon -> DataEditDescr
+
+        PositionEditDescr
+		| Icon? "/"
+		| ":"
+		| SignEditDescr
+		| ("-" | "+")? Icon "P" (Icon? DataEditDescr)?
+		| BlankInterpEditDescr -> ControlEditDescr
+
+        "T" Icon
+		| "TL" Icon
+		| "TR" Icon
+		| Icon "X" -> PositionEditDescr
+
+        "S"
+		| "SP"
+		| "SS" -> SignEditDescr
+
+        "BN"
+		| "BZ" -> BlankInterpEditDescr
+
+        Scon
+		| Icon "H" Character+ -> CharStringEditDescr
+
+        LblDef "entry" EntryName SubroutineParList EOS
+		| LblDef "entry" EntryName SubroutineParList "result" "(" Name ")" EOS -> EntryStmt
+
+        Ident -> EntryName
+
+        "(" (SubroutinePar ("," SubroutinePar)*)? ")" -> SubroutineParList
+
+        DummyArgName
+		| "*" -> SubroutinePar
+
+        Ident -> DummyArgName
+
+        TypeDeclarationStmt
+		| SpecificationStmt
+		| DerivedTypeDef
+		| InterfaceBlock -> DeclarationConstruct
+
+        LblDef TypeSpec ("," AttrSpec)* ":" ":" EntityDecl ("," EntityDecl)* EOS
+		| LblDef TypeSpec EntityDecl ("," EntityDecl)* EOS -> TypeDeclarationStmt
+
+        "parameter"
+		| AccessSpec
+		| "allocatable"
+		| "dimension" "(" ArraySpec ")"
+		| "external"
+		| "intent" "(" IntentSpec ")"
+		| "intrinsic"
+		| "optional"
+		| "pointer"
+		| "save"
+		| "target" -> AttrSpec
+
+        "public"
+		| "private" -> AccessSpec
+
+        AssumedShapeSpecList
+		| DeferredShapeSpecList
+		| ExplicitShapeSpecList
+		| AssumedSizeSpec -> ArraySpec
+
+        LowerBound ":"
+		| DeferredShapeSpecList "," LowerBound ":"
+		| AssumedShapeSpecList "," AssumedShapeSpec -> AssumedShapeSpecList
+
+        SpecificationExpr -> LowerBound
+
+        DeferredShapeSpec ("," DeferredShapeSpec)* -> DeferredShapeSpecList
+
+        ":" -> DeferredShapeSpec
+
+        LowerBound? ":" -> AssumedShapeSpec
+
+        ExplicitShapeSpec ("," ExplicitShapeSpec)* -> ExplicitShapeSpecList
+
+        (LowerBound ":")? UpperBound -> ExplicitShapeSpec
+
+        SpecificationExpr -> UpperBound
+
+        (LowerBound ":")? "*"
+		| ExplicitShapeSpecList "," "*"
+		| ExplicitShapeSpecList "," LowerBound ":" "*" -> AssumedSizeSpec
+
+        "in"
+		| "out"
+		| "in" "out" -> IntentSpec
+
+        ObjectName "=" Expr
+		| ObjectName "(" ArraySpec ")" "=" Expr
+		| ObjectName "*" CharLength "=" Expr
+		| ObjectName "*" CharLength "(" ArraySpec ")" "=" Expr
+		| ObjectName
+		| ObjectName "*" CharLength
+		| ObjectName "(" ArraySpec ")"
+		| ObjectName "(" ArraySpec ")" "*" CharLength -> EntityDecl
+
+        Ident -> ObjectName
+
+        AccessStmt
+		| AllocatableStmt
+		| CommonStmt
+		| DataStmt
+		| DimensionStmt
+		| EquivalenceStmt
+		| ExternalStmt
+		| IntrinsicStmt
+		| SaveStmt
+		| IntentStmt
+		| NamelistStmt
+		| OptionalStmt
+		| PointerStmt
+		| TargetStmt -> SpecificationStmt
+
+        LblDef AccessSpec ":" ":" AccessIdList EOS
+		| LblDef AccessSpec AccessIdList? EOS -> AccessStmt
+
+        AccessId ("," AccessId)* -> AccessIdList
+
+        GenericName
+		| GenericSpec -> AccessId
+
+        Ident -> GenericName
+
+        "operator" "(" DefinedOperator ")"
+		| "assignment" "(" "=" ")" -> GenericSpec
+
+        Dop
+		| PowerOp
+		| MultOp
+		| AddOp
+		| ConcatOp
+		| RelOp
+		| NotOp
+		| AndOp
+		| OrOp
+		| EquivOp -> DefinedOperator
+
+        LblDef "allocatable" ":" ":" ArrayAllocationList EOS
+		| LblDef "allocatable" ArrayAllocationList EOS -> AllocatableStmt
+
+        ArrayAllocation ("," ArrayAllocation)* -> ArrayAllocationList
+
+        ArrayName ("(" DeferredShapeSpecList ")")? -> ArrayAllocation
+
+        Ident -> ArrayName
+
+        LblDef "common" Comblock? CommonBlockObjectList (","? Comblock CommonBlockObjectList)* EOS -> CommonStmt
+
+        "/" CommonBlockName? "/" -> Comblock
+
+        Ident -> CommonBlockName
+
+        CommonBlockObject ("," CommonBlockObject)* -> CommonBlockObjectList
+
+        VariableName
+		| ArrayDeclarator -> CommonBlockObject
+
+        Ident -> VariableName
+
+        VariableName "(" ArraySpec ")" -> ArrayDeclarator
+
+        LblDef "data" Datalist EOS -> DataStmt
+
+        DataStmtSet ("," DataStmtSet)* -> Datalist
+
+        DataStmtObjectList "/" DataStmtValueList "/" -> DataStmtSet
+
+        DataStmtObject ("," DataStmtObject)* -> DataStmtObjectList
+
+        Variable
+		| DataImpliedDo -> DataStmtObject
+
+        VariableName
+		| VariableName "(" Subscript ("," Subscript)* ")"
+		| VariableName SubstringRange
+		| VariableName "(" Subscript ("," Subscript)* ")" SubstringRange -> Variable
+
+        Expr -> Subscript
+
+        "(" SubscriptTriplet ")" -> SubstringRange
+
+        "(" DataIDoObjectList "," ImpliedDoVariable "=" Expr "," Expr ("," Expr)? ")" -> DataImpliedDo
+
+        DataIDoObject ("," DataIDoObject)* -> DataIDoObjectList
+
+        ArrayElement
+		| DataImpliedDo
+		| StructureComponent -> DataIDoObject
+
+        StructureComponent "(" SectionSubscriptList ")"
+		| VariableName "(" SectionSubscriptList ")" -> ArrayElement
+
+        VariableName FieldSelector
+		| StructureComponent FieldSelector -> StructureComponent
+
+        "(" SectionSubscriptList ")" "%" Name
+		| "%" Name -> FieldSelector
+
+        DataStmtValue ("," DataStmtValue)* -> DataStmtValueList
+
+        Constant
+		| NamedConstantUse "*" Constant -> DataStmtValue
+
+        NamedConstantUse
+		| UnsignedArithmeticConstant
+		| "+" UnsignedArithmeticConstant
+		| "-" UnsignedArithmeticConstant
+		| Scon
+		| LogicalConstant
+		| Icon "_" Scon
+		| NamedConstantUse "_" Scon
+		| StructureConstructor
+		| BozLiteralConstant -> Constant
+
+        TypeName "(" Expr ("," Expr)* ")" -> StructureConstructor
+
+        BinaryConstant
+		| OctalConstant
+		| HexConstant -> BozLiteralConstant
+
+        LblDef "dimension" ":" ":" ArrayDeclaratorList EOS
+		| LblDef "dimension" ArrayDeclaratorList EOS -> DimensionStmt
+
+        ArrayDeclarator ("," ArrayDeclarator)* -> ArrayDeclaratorList
+
+        LblDef "equivalence" EquivalenceSetList EOS -> EquivalenceStmt
+
+        EquivalenceSet ("," EquivalenceSet)* -> EquivalenceSetList
+
+        "(" EquivalenceObject "," EquivalenceObject ("," EquivalenceObject)* ")" -> EquivalenceSet
+
+        ArrayName
+		| Variable -> EquivalenceObject
+
+        LblDef "external" ExternalName ("," ExternalName)* EOS -> ExternalStmt
+
+        Ident -> ExternalName
+
+        LblDef "intrinsic" IntrinsicProcedureName ("," IntrinsicProcedureName)* EOS -> IntrinsicStmt
+
+        Ident -> IntrinsicProcedureName
+
+        LblDef "save" ":" ":" SavedEntityList EOS
+		| LblDef "save" SavedEntityList? EOS -> SaveStmt
+
+        SavedEntity ("," SavedEntity)* -> SavedEntityList
+
+        VariableName
+		| "/" CommonBlockName "/" -> SavedEntity
+
+        LblDef "intent" "(" IntentSpec ")" ":" ":" IntentParList EOS
+		| LblDef "intent" "(" IntentSpec ")" IntentParList EOS -> IntentStmt
+
+        IntentPar ("," IntentPar)* -> IntentParList
+
+        DummyArgName -> IntentPar
+
+        LblDef "namelist" NamelistGroup (","? NamelistGroup)* EOS -> NamelistStmt
+
+        "/" NamelistGroupName "/" NamelistGroupObject ("," NamelistGroupObject)* -> NamelistGroup
+
+        Ident -> NamelistGroupName
+
+        VariableName -> NamelistGroupObject
+
+        LblDef "optional" ":" ":" OptionalParList EOS
+		| LblDef "optional" OptionalParList EOS -> OptionalStmt
+
+        OptionalPar ("," OptionalPar)* -> OptionalParList
+
+        DummyArgName -> OptionalPar
+
+        LblDef "pointer" ":" ":" PointerStmtObjectList EOS
+		| LblDef "pointer" PointerStmtObjectList EOS -> PointerStmt
+
+        PointerStmtObject ("," PointerStmtObject)* -> PointerStmtObjectList
+
+        ObjectName
+		| ObjectName "(" DeferredShapeSpecList ")" -> PointerStmtObject
+
+        LblDef "target" ":" ":" TargetObjectList EOS
+		| LblDef "target" TargetObjectList EOS -> TargetStmt
+
+        TargetObject ("," TargetObject)* -> TargetObjectList
+
+        ObjectName
+		| ObjectName "(" ArraySpec ")" -> TargetObject
+
+        DerivedTypeStmt DerivedTypeBody+ EndTypeStmt -> DerivedTypeDef
+
+        LblDef "type" TypeName EOS
+		| LblDef "type" ":" ":" TypeName EOS
+		| LblDef "type" "," AccessSpec ":" ":" TypeName EOS -> DerivedTypeStmt
+
+        PrivateSequenceStmt
+		| ComponentDefStmt -> DerivedTypeBody
+
+        LblDef "private" EOS
+		| LblDef "sequence" EOS -> PrivateSequenceStmt
+
+        LblDef TypeSpec ("," ComponentAttrSpecList)? ":" ":" ComponentDeclList EOS
+		| LblDef TypeSpec ComponentDeclList EOS -> ComponentDefStmt
+
+        ComponentAttrSpec ("," ComponentAttrSpec)* -> ComponentAttrSpecList
+
+        "pointer"
+		| "dimension" "(" ComponentArraySpec ")" -> ComponentAttrSpec
+
+        ExplicitShapeSpecList
+		| DeferredShapeSpecList -> ComponentArraySpec
+
+        ComponentDecl ("," ComponentDecl)* -> ComponentDeclList
+
+        ComponentName ("(" ComponentArraySpec ")")? ("*" CharLength)? -> ComponentDecl
+
+        Ident -> ComponentName
+
+        LblDef "end" "type" TypeName? EOS -> EndTypeStmt
+
+        InterfaceStmt InterfaceBlockPart+ EndInterfaceStmt -> InterfaceBlock
+
+        LblDef "interface" GenericName EOS
+		| LblDef "interface" GenericSpec EOS
+		| LblDef "interface" EOS -> InterfaceStmt
+
+        InterfaceBody
+		| ModuleProcedureStmt -> InterfaceBlockPart
+
+        LblDef FunctionPrefix FunctionName FunctionInterfaceRange
+		| LblDef "subroutine" SubroutineName SubroutineInterfaceRange -> InterfaceBody
+
+        "recursive" "function"
+		| "recursive" TypeSpec "function"
+		| TypeSpec "recursive" "function"
+		| TypeSpec? "function" -> FunctionPrefix
+
+        Ident -> FunctionName
+
+        FunctionParList EOS SubprogramInterfaceBody EndFunctionStmt
+		| FunctionParList EOS EndFunctionStmt -> FunctionInterfaceRange
+
+        "(" (FunctionPar ("," FunctionPar)*)? ")" -> FunctionParList
+
+        DummyArgName -> FunctionPar
+
+        SpecificationPartConstruct
+		| SubprogramInterfaceBody SpecificationPartConstruct -> SubprogramInterfaceBody
+
+        LblDef "end" EOS
+		| LblDef "end" "function" EndName? EOS -> EndFunctionStmt
+
+        Ident -> EndName
+
+        Ident -> SubroutineName
+
+        SubroutineParList EOS SubprogramInterfaceBody EndSubroutineStmt
+		| SubroutineParList EOS EndSubroutineStmt -> SubroutineInterfaceRange
+
+        LblDef "end" "subroutine" EndName? EOS
+		| LblDef "end" EOS -> EndSubroutineStmt
+
+        LblDef "module" "procedure" ProcedureNameList EOS -> ModuleProcedureStmt
+
+        ProcedureName ("," ProcedureName)* -> ProcedureNameList
+
+        Ident -> ProcedureName
+
+        LblDef "end" "interface" EOS -> EndInterfaceStmt
+
+        LblDef "use" Name ("," RenameList)? EOS
+		| LblDef "use" Name "," "only" ":" OnlyList? EOS -> UseStmt
+
+        Rename ("," Rename)* -> RenameList
+
+        Ident "=>" UseName -> Rename
+
+        Ident -> UseName
+
+        Only ("," Only)* -> OnlyList
+
+        GenericSpec
+		| (Ident "=>")? UseName -> Only
+
+        ActionStmt
+		| DoConstruct
+		| IfConstruct
+		| CaseConstruct
+		| WhereConstruct
+		| EndDoStmt -> ExecutableConstruct
+
+        AllocateStmt
+		| CycleStmt
+		| DeallocateStmt
+		| ExitStmt
+		| NullifyStmt
+		| PointerAssignmentStmt
+		| WhereStmt
+		| ArithmeticIfStmt
+		| AssignmentStmt
+		| AssignStmt
+		| BackspaceStmt
+		| CallStmt
+		| CloseStmt
+		| ContinueStmt
+		| EndfileStmt
+		| GotoStmt
+		| ComputedGotoStmt
+		| AssignedGotoStmt
+		| IfStmt
+		| InquireStmt
+		| OpenStmt
+		| PauseStmt
+		| PrintStmt
+		| ReadStmt
+		| ReturnStmt
+		| RewindStmt
+		| StopStmt
+		| WriteStmt -> ActionStmt
+
+        LblDef "allocate" "(" AllocationList "," "stat" "=" Variable ")" EOS
+		| LblDef "allocate" "(" AllocationList ")" EOS -> AllocateStmt
+
+        Allocation ("," Allocation)* -> AllocationList
+
+        AllocateObject AllocatedShape? -> Allocation
+
+        VariableName
+		| AllocateObject FieldSelector -> AllocateObject
+
+        "(" SectionSubscriptList ")" -> AllocatedShape
+
+        LblDef "cycle" EndName? EOS -> CycleStmt
+
+        LblDef "deallocate" "(" AllocateObjectList "," "stat" "=" Variable ")" EOS
+		| LblDef "deallocate" "(" AllocateObjectList ")" EOS -> DeallocateStmt
+
+        AllocateObject ("," AllocateObject)* -> AllocateObjectList
+
+        LblDef "exit" EndName? EOS -> ExitStmt
+
+        LblDef "nullify" "(" PointerObjectList ")" EOS -> NullifyStmt
+
+        PointerObject ("," PointerObject)* -> PointerObjectList
+
+        Name
+		| PointerField -> PointerObject
+
+        Name "(" SFExprList ")" "%" Name
+		| Name "(" SFDummyArgNameList ")" "%" Name
+		| Name "%" Name
+		| PointerField FieldSelector -> PointerField
+
+        SFExpr ":" Expr ":" Expr
+		| SFExpr ":" ":" Expr
+		| ":" Expr ":" Expr
+		| ":" ":" Expr
+		| ":"
+		| ":" Expr
+		| SFExpr
+		| SFExpr ":"
+		| SFExpr ":" Expr
+		| SFExprList "," SectionSubscript
+		| SFDummyArgNameList "," ":"
+		| SFDummyArgNameList "," ":" Expr
+		| SFDummyArgNameList "," SFExpr ":"
+		| SFDummyArgNameList "," SFExpr ":" Expr -> SFExprList
+
+        SFTerm
+		| Sign AddOperand
+		| SFExpr AddOp AddOperand -> SFExpr
+
+        SFFactor
+		| SFTerm MultOp MultOperand -> SFTerm
+
+        SFPrimary
+		| SFPrimary PowerOp MultOperand -> SFFactor
+
+        ArrayConstructor
+		| Icon
+		| Name
+		| DataRef
+		| FunctionReference
+		| "(" Expr ")" -> SFPrimary
+
+        SFDummyArgName ("," SFDummyArgName)* -> SFDummyArgNameList
+
+        Ident -> SFDummyArgName
+
+        LblDef Name "=>" Target EOS
+		| LblDef Name "%" Name "=>" Target EOS
+		| LblDef Name "%" DataRef "=>" Target EOS
+		| LblDef Name "(" SFExprList ")" "%" Name "=>" Target EOS
+		| LblDef Name "(" SFExprList ")" "%" DataRef "=>" Target EOS
+		| LblDef Name "(" SFDummyArgNameList ")" "%" Name "=>" Target EOS
+		| LblDef Name "(" SFDummyArgNameList ")" "%" DataRef "=>" Target EOS -> PointerAssignmentStmt
+
+        Expr -> Target
+
+        LblDef "where" "(" MaskExpr ")" AssignmentStmt -> WhereStmt
+
+        Expr -> MaskExpr
+
+        LblDef Name "%" Name "=" Expr EOS
+		| LblDef Name "%" DataRef "=" Expr EOS
+		| LblDef Name "(" SFExprList ")" "%" Name "=" Expr EOS
+		| LblDef Name "(" SFExprList ")" "%" DataRef "=" Expr EOS
+		| LblDef Name "(" SFDummyArgNameList ")" "%" Name "=" Expr EOS
+		| LblDef Name "(" SFDummyArgNameList ")" "%" DataRef "=" Expr EOS
+		| LblDef Name "=" Expr EOS
+		| LblDef Name "(" SFExprList ")" "=" Expr EOS
+		| LblDef Name "(" SFExprList ")" SubstringRange "=" Expr EOS -> AssignmentStmt
+
+        LblDef "if" "(" ScalarNumericExpr ")" LblRef "," LblRef "," LblRef EOS -> ArithmeticIfStmt
+
+        Expr -> ScalarNumericExpr
+
+        Icon -> LblRef
+
+        LblDef "assign" LblRef "to" VariableName EOS -> AssignStmt
+
+        LblDef "backspace" UnitIdentifier EOS
+		| LblDef "backspace" "(" PositionSpec ("," PositionSpec)* ")" EOS -> BackspaceStmt
+
+        UFExpr
+		| "*" -> UnitIdentifier
+
+        UFTerm
+		| Sign UFTerm
+		| UFExpr AddOp UFTerm -> UFExpr
+
+        UFFactor
+		| UFTerm MultOp UFFactor
+		| UFTerm ConcatOp UFPrimary -> UFTerm
+
+        UFPrimary
+		| UFPrimary PowerOp UFFactor -> UFFactor
+
+        Icon
+		| Scon
+		| Name
+		| FunctionReference
+		| DataRef
+		| "(" UFExpr ")" -> UFPrimary
+
+        "unit="? UnitIdentifier
+		| "iostat=" ScalarVariable
+		| "err=" LblRef -> PositionSpec
+
+        VariableName
+		| ArrayElement -> ScalarVariable
+
+        LblDef "call" SubroutineNameUse EOS
+		| LblDef "call" SubroutineNameUse "(" (ActualArg ("," ActualArg)*)? ")" EOS -> CallStmt
+
+        Ident -> SubroutineNameUse
+
+        (Name "=")? Expr
+		| (Name "=")? "*" LblRef -> ActualArg
+
+        LblDef "close" "(" CloseSpecList ")" EOS -> CloseStmt
+
+        CloseSpec ("," CloseSpec)* -> CloseSpecList
+
+        UnitIdentifier
+		| "unit" "=" UnitIdentifier
+		| "iostat" "=" ScalarVariable
+		| "err" "=" LblRef
+		| "status" "=" CExpr -> CloseSpec
+
+        (CExpr ConcatOp)? CPrimary -> CExpr
+
+        COperand
+		| "(" CExpr ")" -> CPrimary
+
+        Scon
+		| Name
+		| DataRef
+		| FunctionReference -> COperand
+
+        LblDef "continue" EOS -> ContinueStmt
+
+        LblDef "end" "file" UnitIdentifier EOS
+		| LblDef "end" "file" "(" PositionSpec ("," PositionSpec)* ")" EOS -> EndfileStmt
+
+        LblDef GoToKw LblRef EOS -> GotoStmt
+
+        "go" "to" -> GoToKw
+
+        LblDef GoToKw "(" LblRef ("," LblRef)* ")" ","? ScalarIntExpr EOS -> ComputedGotoStmt
+
+        Expr -> ScalarIntExpr
+
+        LblDef GoToKw VariableName EOS
+		| LblDef GoToKw VariableName ","? "(" LblRef ("," LblRef)* ")" EOS -> AssignedGotoStmt
+
+        LblDef "if" "(" ScalarLogicalExpr ")" ActionStmt -> IfStmt
+
+        Expr -> ScalarLogicalExpr
+
+        LblDef "inquire" "(" InquireSpecList ")" EOS
+		| LblDef "inquire" "(" "iolength" "=" ScalarVariable ")" OutputItemList EOS -> InquireStmt
+
+        UnitIdentifier "," InquireSpec ("," InquireSpec)*
+		| InquireSpec ("," InquireSpec)* -> InquireSpecList
+
+        "unit" "=" UnitIdentifier
+		| "file" "=" CExpr
+		| "iostat" "=" ScalarVariable
+		| "err" "=" LblRef
+		| "exist" "=" ScalarVariable
+		| "opened" "=" ScalarVariable
+		| "number" "=" ScalarVariable
+		| "named" "=" ScalarVariable
+		| "name" "=" ScalarVariable
+		| "access" "=" ScalarVariable
+		| "sequential" "=" ScalarVariable
+		| "direct" "=" ScalarVariable
+		| "form" "=" ScalarVariable
+		| "formatted" "=" ScalarVariable
+		| "unformatted" "=" ScalarVariable
+		| "recl" "=" Expr
+		| "nextrec" "=" ScalarVariable
+		| "blank" "=" ScalarVariable
+		| "position" "=" ScalarVariable
+		| "action" "=" ScalarVariable
+		| "read" "=" ScalarVariable
+		| "write" "=" ScalarVariable
+		| "readwrite" "=" ScalarVariable
+		| "delim" "=" ScalarVariable
+		| "pad" "=" ScalarVariable -> InquireSpec
+
+        OutputItem ("," OutputItem)* -> OutputItemList
+
+        Expr
+		| OutputImpliedDo -> OutputItem
+
+        "(" OutputItemList "," ImpliedDoVariable "=" Expr "," Expr ")"
+		| "(" OutputItemList "," ImpliedDoVariable "=" Expr "," Expr "," Expr ")" -> OutputImpliedDo
+
+        LblDef "open" "(" ConnectSpecList ")" EOS -> OpenStmt
+
+        ConnectSpec ("," ConnectSpec)* -> ConnectSpecList
+
+        UnitIdentifier
+		| "unit" "=" UnitIdentifier
+		| "iostat" "=" ScalarVariable
+		| "err" "=" LblRef
+		| "file" "=" CExpr
+		| "status" "=" CExpr
+		| "access" "=" CExpr
+		| "form" "=" CExpr
+		| "recl" "=" Expr
+		| "blank" "=" CExpr
+		| "position" "=" CExpr
+		| "action" "=" CExpr
+		| "delim" "=" CExpr
+		| "pad" "=" CExpr -> ConnectSpec
+
+        LblDef "pause" (Icon | Scon)? EOS -> PauseStmt
+
+        LblDef "print" FormatIdentifier ("," OutputItemList)? EOS -> PrintStmt
+
+        LblRef
+		| CExpr
+		| "*" -> FormatIdentifier
+
+        LblDef "read" RdCtlSpec InputItemList? EOS
+		| LblDef "read" RdFmtId EOS
+		| LblDef "read" RdFmtId "," InputItemList EOS -> ReadStmt
+
+        RdUnitId
+		| "(" RdIoCtlSpecList ")" -> RdCtlSpec
+
+        "(" UFExpr ")"
+		| "(" "*" ")" -> RdUnitId
+
+        UnitIdentifier "," IoControlSpec
+		| UnitIdentifier "," FormatIdentifier
+		| IoControlSpec
+		| RdIoCtlSpecList "," IoControlSpec -> RdIoCtlSpecList
+
+        "unit" "=" UnitIdentifier
+		| "fmt" "=" FormatIdentifier
+		| "nml" "=" NamelistGroupName
+		| "rec" "=" Expr
+		| "iostat" "=" ScalarVariable
+		| "err" "=" LblRef
+		| "end" "=" LblRef
+		| "advance" "=" CExpr
+		| "size" "=" Variable
+		| "eor" "=" LblRef -> IoControlSpec
+
+        InputItem ("," InputItem)* -> InputItemList
+
+        Name
+		| DataRef
+		| InputImpliedDo -> InputItem
+
+        "(" InputItemList "," ImpliedDoVariable "=" Expr "," Expr ")"
+		| "(" InputItemList "," ImpliedDoVariable "=" Expr "," Expr "," Expr ")" -> InputImpliedDo
+
+        LblRef
+		| "*"
+		| COperand
+		| COperand ConcatOp CPrimary
+		| RdFmtIdExpr ConcatOp CPrimary -> RdFmtId
+
+        "(" UFExpr ")" -> RdFmtIdExpr
+
+        LblDef "return" Expr? EOS -> ReturnStmt
+
+        LblDef "rewind" UnitIdentifier EOS
+		| LblDef "rewind" "(" PositionSpec ("," PositionSpec)* ")" EOS -> RewindStmt
+
+        LblDef "stop" (Icon | Scon)? EOS -> StopStmt
+
+        LblDef "write" "(" IoControlSpecList ")" OutputItemList? EOS -> WriteStmt
+
+        UnitIdentifier "," FormatIdentifier?
+		| UnitIdentifier "," IoControlSpec
+		| IoControlSpec
+		| IoControlSpecList "," IoControlSpec -> IoControlSpecList
+
+        BlockDoConstruct
+		| LabelDoStmt -> DoConstruct
+
+        LblDef "do" LblRef EOS
+		| LblDef "do" LoopControl EOS
+		| LblDef "do" EOS
+		| LblDef Name ":" "do" LblRef LoopControl EOS
+		| LblDef Name ":" "do" LblRef EOS
+		| LblDef Name ":" "do" LoopControl EOS
+		| LblDef Name ":" "do" EOS -> BlockDoConstruct
+
+        "while" "(" Expr ")"
+		| VariableName "=" Int-Real-Dp-Expression "," Int-Real-Dp-Expression ("," Int-Real-Dp-Expression)? -> LoopControl
+
+        Expr -> Int-Real-Dp-Expression
+
+        LblDef "do" LblRef ","? LoopControl EOS -> LabelDoStmt
+
+        IfThenStmt ExecutionPartConstruct* (ElseIfStmt ExecutionPartConstruct*)* (ElseStmt ExecutionPartConstruct*)? EndIfStmt -> IfConstruct
+
+        LblDef (IfConstructName ":")? "if" "(" ScalarLogicalExpr ")" "then" EOS -> IfThenStmt
+
+        Ident -> IfConstructName
+
+        ExecutableConstruct
+		| FormatStmt
+		| DataStmt
+		| EntryStmt -> ExecutionPartConstruct
+
+        LblDef "else" "if" "(" ScalarLogicalExpr ")" "then" IfConstructName? EOS -> ElseIfStmt
+
+        LblDef "else" IfConstructName? EOS -> ElseStmt
+
+        LblDef "end" "if" IfConstructName? EOS -> EndIfStmt
+
+        LblDef Name ":" "select" "case" "(" Expr ")" EOS SelectCaseRange
+		| LblDef "select" "case" "(" Expr ")" EOS SelectCaseRange -> CaseConstruct
+
+        SelectCaseBody EndSelectStmt
+		| EndSelectStmt -> SelectCaseRange
+
+        CaseBodyConstruct+ -> SelectCaseBody
+
+        CaseStmt
+		| ExecutionPartConstruct -> CaseBodyConstruct
+
+        LblDef "case" CaseSelector Name? EOS -> CaseStmt
+
+        "(" CaseValueRange ("," CaseValueRange)* ")"
+		| "default" -> CaseSelector
+
+        Expr
+		| Expr ":"
+		| ":" Expr
+		| Expr ":" Expr -> CaseValueRange
+
+        LblDef "end" "select" EndName? EOS -> EndSelectStmt
+
+        WhereConstructStmt AssignmentStmt* (ElsewhereStmt AssignmentStmt*)? EndWhereStmt -> WhereConstruct
+
+        LblDef "where" "(" MaskExpr ")" EOS -> WhereConstructStmt
+
+        LblDef "elsewhere" EOS -> ElsewhereStmt
+
+        LblDef "end" "where" EOS -> EndWhereStmt
+
+        LblDef "end" "do" Name? EOS -> EndDoStmt
+
+        LblDef "end" EOS
+		| LblDef "end" "program" EndName? EOS -> EndProgramStmt
+
+        Body ContainsStmt InternalSubprogram
+		| ContainsStmt InternalSubprogram
+		| InternalSubProgPart InternalSubprogram -> InternalSubProgPart
+
+        BodyConstruct+ -> Body
+
+        LblDef "contains" EOS -> ContainsStmt
+
+        FunctionSubprogram
+		| SubroutineSubprogram -> InternalSubprogram
+
+        LblDef FunctionPrefix FunctionName FunctionRange -> FunctionSubprogram
+
+        FunctionParList EOS Body? EndFunctionStmt
+		| FunctionParList "result" "(" Name ")" EOS InternalSubProgPart EndFunctionStmt
+		| FunctionParList "result" "(" Name ")" EOS Body EndFunctionStmt
+		| FunctionParList "result" "(" Name ")" EOS EndFunctionStmt
+		| FunctionParList EOS InternalSubProgPart EndFunctionStmt -> FunctionRange
+
+        LblDef "recursive"? "subroutine" SubroutineName SubroutineRange -> SubroutineSubprogram
+
+        SubroutineParList? EOS Body? EndSubroutineStmt
+		| SubroutineParList EOS InternalSubProgPart EndSubroutineStmt -> SubroutineRange
+
+        ModuleStmt ModuleBody EndModuleStmt
+		| ModuleStmt EndModuleStmt -> Module
+
+        LblDef "module" ModuleName EOS -> ModuleStmt
+
+        Ident -> ModuleName
+
+        SpecificationPartConstruct
+		| ModuleSubprogramPartConstruct
+		| ModuleBody SpecificationPartConstruct
+		| ModuleBody ModuleSubprogramPartConstruct -> ModuleBody
+
+        ContainsStmt
+		| ModuleSubprogram -> ModuleSubprogramPartConstruct
+
+        FunctionSubprogram
+		| SubroutineSubprogram -> ModuleSubprogram
+
+        LblDef "end" EOS
+		| LblDef "end" "module" EndName? EOS -> EndModuleStmt
+
+        BlockDataStmt BlockDataBody EndBlockDataStmt
+		| BlockDataStmt EndBlockDataStmt -> BlockDataSubprogram
+
+        LblDef "block" "data" BlockDataName? EOS -> BlockDataStmt
+
+        Ident -> BlockDataName
+
+        BlockDataBodyConstruct+ -> BlockDataBody
+
+        SpecificationPartConstruct -> BlockDataBodyConstruct
+
+        LblDef "end" "block" "data" EndName? EOS
+		| LblDef "end" EOS -> EndBlockDataStmt

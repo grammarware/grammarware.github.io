@@ -1,0 +1,638 @@
+module Main
+
+exports
+ context-free start-symbols CompilationUnit
+  sorts
+        ClassBodyDeclarations PostDecrementExpression ExpressionStatement PrimitiveType InterfaceTypeList InterfaceDeclaration Statement AndExpression ConstructorBody ArgumentList MethodName ClassMemberDeclaration Assignment Interfaces CatchClause AbstractMethodModifiers PostIncrementExpression TypeName InterfaceType BlockStatement IfThenStatement SwitchBlockStatementGroups ClassModifier SingleTypeImportDeclaration InterfaceModifiers PreIncrementExpression ExplicitConstructorInvocation UnaryExpression VariableInitializers DimExpr Throws BlockStatements ConstantDeclaration ClassTypeList PrimaryNoNewArray AssignmentOperator Literal EmptyStatement ReturnStatement VariableDeclarator PostfixExpression SwitchLabel AssignmentExpression FormalParameter PackageName ConditionalAndExpression MethodModifiers Type EqualityExpression InterfaceMemberDeclaration MultiplicativeExpression BreakStatement ConstructorModifier SynchronizedStatement ClassInstanceCreationExpression Super ArrayCreationExpression ArrayInitializer InterfaceModifier UnaryExpressionNotPlusMinus SwitchBlock FieldDeclaration StatementNoShortIf MethodInvocation AbstractMethodDeclaration IfThenElseStatement ArrayAccess Block ForUpdate ForInit VariableDeclarators ThrowStatement ExclusiveOrExpression Primary PackageDeclaration RelationalExpression WhileStatementNoShortIf ExtendsInterfaces AbstractMethodModifier ConstantExpression VariableInitializer StaticInitializer Finally ConstructorDeclaration TypeImportOnDemandDeclaration PreDecrementExpression InterfaceMemberDeclarations ForStatement AmbiguousName ContinueStatement ImportDeclaration CompilationUnit SwitchStatement Dims ClassBody ConditionalOrExpression ClassBodyDeclaration SwitchBlockStatementGroup MethodDeclaration MethodModifier DoStatement ConditionalExpression ClassOrInterfaceType TryStatement SwitchLabels FormalParameterList Expression StatementExpressionList AdditiveExpression FloatingPointType LocalVariableDeclaration ConstructorDeclarator InclusiveOrExpression ClassType WhileStatement ClassDeclaration CastExpression ImportDeclarations TypeDeclaration LabeledStatement ExpressionName ArrayType StatementExpression MethodDeclarator VariableDeclaratorId IntegralType NumericType LeftHandSide IfThenElseStatementNoShortIf LocalVariableDeclarationStatement ShiftExpression FieldModifiers MethodBody Catches ResultType ConstructorModifiers ReferenceType ClassModifiers ForStatementNoShortIf MethodHeader LabeledStatementNoShortIf InterfaceBody ConstantModifiers ConstantModifier FieldAccess TypeDeclarations FieldModifier StatementWithoutTrailingSubstatement DimExprs 
+  context-free syntax
+        ClassBodyDeclaration -> ClassBodyDeclarations
+
+        ClassBodyDeclarations ClassBodyDeclaration -> ClassBodyDeclarations
+
+        PostfixExpression "--" -> PostDecrementExpression
+
+        StatementExpression ";" -> ExpressionStatement
+
+        NumericType -> PrimitiveType
+
+        "boolean" -> PrimitiveType
+
+        InterfaceType -> InterfaceTypeList
+
+        InterfaceTypeList "," InterfaceType -> InterfaceTypeList
+
+        InterfaceModifiers? "interface" Identifier ExtendsInterfaces? InterfaceBody -> InterfaceDeclaration
+
+        StatementWithoutTrailingSubstatement -> Statement
+
+        LabeledStatement -> Statement
+
+        IfThenStatement -> Statement
+
+        IfThenElseStatement -> Statement
+
+        WhileStatement -> Statement
+
+        ForStatement -> Statement
+
+        EqualityExpression -> AndExpression
+
+        AndExpression "&" EqualityExpression -> AndExpression
+
+        "{" ExplicitConstructorInvocation? BlockStatements? "}" -> ConstructorBody
+
+        Expression -> ArgumentList
+
+        ArgumentList "," Expression -> ArgumentList
+
+        Identifier -> MethodName
+
+        AmbiguousName "." Identifier -> MethodName
+
+        FieldDeclaration -> ClassMemberDeclaration
+
+        MethodDeclaration -> ClassMemberDeclaration
+
+        LeftHandSide AssignmentOperator AssignmentExpression -> Assignment
+
+        "implements" InterfaceTypeList -> Interfaces
+
+        "catch" "(" FormalParameter ")" Block -> CatchClause
+
+        AbstractMethodModifier -> AbstractMethodModifiers
+
+        AbstractMethodModifiers AbstractMethodModifier -> AbstractMethodModifiers
+
+        PostfixExpression "++" -> PostIncrementExpression
+
+        Identifier -> TypeName
+
+        PackageName "." Identifier -> TypeName
+
+        TypeName -> InterfaceType
+
+        LocalVariableDeclarationStatement -> BlockStatement
+
+        Statement -> BlockStatement
+
+        "if" "(" Expression ")" Statement -> IfThenStatement
+
+        SwitchBlockStatementGroup -> SwitchBlockStatementGroups
+
+        SwitchBlockStatementGroups SwitchBlockStatementGroup -> SwitchBlockStatementGroups
+
+        "public" -> ClassModifier
+
+        "abstract" -> ClassModifier
+
+        "final" -> ClassModifier
+
+        "import" TypeName ";" -> SingleTypeImportDeclaration
+
+        InterfaceModifier -> InterfaceModifiers
+
+        InterfaceModifiers InterfaceModifier -> InterfaceModifiers
+
+        "++" UnaryExpression -> PreIncrementExpression
+
+        "this" "(" ArgumentList? ")" ";" -> ExplicitConstructorInvocation
+
+        "super" "(" ArgumentList? ")" ";" -> ExplicitConstructorInvocation
+
+        PreIncrementExpression -> UnaryExpression
+
+        PreDecrementExpression -> UnaryExpression
+
+        "+" UnaryExpression -> UnaryExpression
+
+        "-" UnaryExpression -> UnaryExpression
+
+        UnaryExpressionNotPlusMinus -> UnaryExpression
+
+        VariableInitializer -> VariableInitializers
+
+        VariableInitializers "," VariableInitializer -> VariableInitializers
+
+        "[" Expression "]" -> DimExpr
+
+        "throws" ClassTypeList -> Throws
+
+        BlockStatement -> BlockStatements
+
+        BlockStatements BlockStatement -> BlockStatements
+
+        ConstantModifiers? Type VariableDeclarator -> ConstantDeclaration
+
+        ClassType -> ClassTypeList
+
+        ClassTypeList "," ClassType -> ClassTypeList
+
+        Literal -> PrimaryNoNewArray
+
+        "this" -> PrimaryNoNewArray
+
+        "(" Expression ")" -> PrimaryNoNewArray
+
+        ClassInstanceCreationExpression -> PrimaryNoNewArray
+
+        FieldAccess -> PrimaryNoNewArray
+
+        MethodInvocation -> PrimaryNoNewArray
+
+        ArrayAccess -> PrimaryNoNewArray
+
+        "=" -> AssignmentOperator
+
+        "*=" -> AssignmentOperator
+
+        "/=" -> AssignmentOperator
+
+        "%=" -> AssignmentOperator
+
+        "+=" -> AssignmentOperator
+
+        "-=" -> AssignmentOperator
+
+        "<<=" -> AssignmentOperator
+
+        ">>=" -> AssignmentOperator
+
+        ">>>=" -> AssignmentOperator
+
+        "&=" -> AssignmentOperator
+
+        "^=" -> AssignmentOperator
+
+        "|=" -> AssignmentOperator
+
+        IntegerLiteral -> Literal
+
+        FloatingPointLiteral -> Literal
+
+        BooleanLiteral -> Literal
+
+        CharacterLiteral -> Literal
+
+        StringLiteral -> Literal
+
+        NullLiteral -> Literal
+
+        ";" -> EmptyStatement
+
+        "return" Expression? ";" -> ReturnStatement
+
+        VariableDeclaratorId -> VariableDeclarator
+
+        VariableDeclaratorId "=" VariableInitializer -> VariableDeclarator
+
+        Primary -> PostfixExpression
+
+        ExpressionName -> PostfixExpression
+
+        PostIncrementExpression -> PostfixExpression
+
+        PostDecrementExpression -> PostfixExpression
+
+        "case" ConstantExpression ":" -> SwitchLabel
+
+        "default" ":" -> SwitchLabel
+
+        ConditionalExpression -> AssignmentExpression
+
+        Assignment -> AssignmentExpression
+
+        Type VariableDeclaratorId -> FormalParameter
+
+        Identifier -> PackageName
+
+        PackageName "." Identifier -> PackageName
+
+        InclusiveOrExpression -> ConditionalAndExpression
+
+        ConditionalAndExpression "&&" InclusiveOrExpression -> ConditionalAndExpression
+
+        MethodModifier -> MethodModifiers
+
+        MethodModifiers MethodModifier -> MethodModifiers
+
+        PrimitiveType -> Type
+
+        ReferenceType -> Type
+
+        RelationalExpression -> EqualityExpression
+
+        EqualityExpression "==" RelationalExpression -> EqualityExpression
+
+        EqualityExpression "!=" RelationalExpression -> EqualityExpression
+
+        ConstantDeclaration -> InterfaceMemberDeclaration
+
+        AbstractMethodDeclaration -> InterfaceMemberDeclaration
+
+        UnaryExpression -> MultiplicativeExpression
+
+        MultiplicativeExpression "*" UnaryExpression -> MultiplicativeExpression
+
+        MultiplicativeExpression "/" UnaryExpression -> MultiplicativeExpression
+
+        MultiplicativeExpression "%" UnaryExpression -> MultiplicativeExpression
+
+        "break" Identifier? ";" -> BreakStatement
+
+        "public" -> ConstructorModifier
+
+        "protected" -> ConstructorModifier
+
+        "private" -> ConstructorModifier
+
+        "synchronized" "(" Expression ")" Block -> SynchronizedStatement
+
+        "new" ClassType "(" ArgumentList? ")" -> ClassInstanceCreationExpression
+
+        "extends" ClassType -> Super
+
+        "new" PrimitiveType DimExprs Dims? -> ArrayCreationExpression
+
+        "new" TypeName DimExprs Dims? -> ArrayCreationExpression
+
+        "{" VariableInitializers? ","? "}" -> ArrayInitializer
+
+        "public" -> InterfaceModifier
+
+        "abstract" -> InterfaceModifier
+
+        PostfixExpression -> UnaryExpressionNotPlusMinus
+
+        "~" UnaryExpression -> UnaryExpressionNotPlusMinus
+
+        "!" UnaryExpression -> UnaryExpressionNotPlusMinus
+
+        CastExpression -> UnaryExpressionNotPlusMinus
+
+        "{" SwitchBlockStatementGroups? SwitchLabels? "}" -> SwitchBlock
+
+        FieldModifiers? Type VariableDeclarators ";" -> FieldDeclaration
+
+        StatementWithoutTrailingSubstatement -> StatementNoShortIf
+
+        LabeledStatementNoShortIf -> StatementNoShortIf
+
+        IfThenElseStatementNoShortIf -> StatementNoShortIf
+
+        WhileStatementNoShortIf -> StatementNoShortIf
+
+        ForStatementNoShortIf -> StatementNoShortIf
+
+        MethodName "(" ArgumentList? ")" -> MethodInvocation
+
+        Primary "." Identifier "(" ArgumentList? ")" -> MethodInvocation
+
+        "super" "." Identifier "(" ArgumentList? ")" -> MethodInvocation
+
+        AbstractMethodModifiers? ResultType MethodDeclarator Throws? ";" -> AbstractMethodDeclaration
+
+        "if" "(" Expression ")" StatementNoShortIf "else" Statement -> IfThenElseStatement
+
+        ExpressionName "[" Expression "]" -> ArrayAccess
+
+        PrimaryNoNewArray "[" Expression "]" -> ArrayAccess
+
+        "{" BlockStatements? "}" -> Block
+
+        StatementExpressionList -> ForUpdate
+
+        StatementExpressionList -> ForInit
+
+        LocalVariableDeclaration -> ForInit
+
+        VariableDeclarator -> VariableDeclarators
+
+        VariableDeclarators "," VariableDeclarator -> VariableDeclarators
+
+        "throw" Expression ";" -> ThrowStatement
+
+        AndExpression -> ExclusiveOrExpression
+
+        ExclusiveOrExpression "^" AndExpression -> ExclusiveOrExpression
+
+        PrimaryNoNewArray -> Primary
+
+        ArrayCreationExpression -> Primary
+
+        "package" PackageName ";" -> PackageDeclaration
+
+        ShiftExpression -> RelationalExpression
+
+        RelationalExpression "<" ShiftExpression -> RelationalExpression
+
+        RelationalExpression ">" ShiftExpression -> RelationalExpression
+
+        RelationalExpression "<=" ShiftExpression -> RelationalExpression
+
+        RelationalExpression ">=" ShiftExpression -> RelationalExpression
+
+        RelationalExpression "instanceof" ReferenceType -> RelationalExpression
+
+        "while" "(" Expression ")" StatementNoShortIf -> WhileStatementNoShortIf
+
+        "extends" InterfaceType -> ExtendsInterfaces
+
+        ExtendsInterfaces "," InterfaceType -> ExtendsInterfaces
+
+        "public" -> AbstractMethodModifier
+
+        "abstract" -> AbstractMethodModifier
+
+        Expression -> ConstantExpression
+
+        Expression -> VariableInitializer
+
+        ArrayInitializer -> VariableInitializer
+
+        "static" Block -> StaticInitializer
+
+        "finally" Block -> Finally
+
+        ConstructorModifiers? ConstructorDeclarator Throws? ConstructorBody -> ConstructorDeclaration
+
+        "import" PackageName "." "*" ";" -> TypeImportOnDemandDeclaration
+
+        "--" UnaryExpression -> PreDecrementExpression
+
+        InterfaceMemberDeclaration -> InterfaceMemberDeclarations
+
+        InterfaceMemberDeclarations InterfaceMemberDeclaration -> InterfaceMemberDeclarations
+
+        "for" "(" ForInit? ";" Expression? ";" ForUpdate? ")" Statement -> ForStatement
+
+        Identifier -> AmbiguousName
+
+        AmbiguousName "." Identifier -> AmbiguousName
+
+        "continue" Identifier? ";" -> ContinueStatement
+
+        SingleTypeImportDeclaration -> ImportDeclaration
+
+        TypeImportOnDemandDeclaration -> ImportDeclaration
+
+        PackageDeclaration? ImportDeclarations? TypeDeclarations? -> CompilationUnit
+
+        "switch" "(" Expression ")" SwitchBlock -> SwitchStatement
+
+        "[" "]" -> Dims
+
+        Dims "[" "]" -> Dims
+
+        "{" ClassBodyDeclarations? "}" -> ClassBody
+
+        ConditionalAndExpression -> ConditionalOrExpression
+
+        ConditionalOrExpression "||" ConditionalAndExpression -> ConditionalOrExpression
+
+        ClassMemberDeclaration -> ClassBodyDeclaration
+
+        StaticInitializer -> ClassBodyDeclaration
+
+        ConstructorDeclaration -> ClassBodyDeclaration
+
+        SwitchLabels BlockStatements -> SwitchBlockStatementGroup
+
+        MethodHeader MethodBody -> MethodDeclaration
+
+        "public" -> MethodModifier
+
+        "protected" -> MethodModifier
+
+        "private" -> MethodModifier
+
+        "abstract" -> MethodModifier
+
+        "static" -> MethodModifier
+
+        "final" -> MethodModifier
+
+        "synchronized" -> MethodModifier
+
+        "native" -> MethodModifier
+
+        "do" Statement "while" "(" Expression ")" ";" -> DoStatement
+
+        ConditionalOrExpression -> ConditionalExpression
+
+        ConditionalOrExpression "?" Expression ":" ConditionalExpression -> ConditionalExpression
+
+        ClassType -> ClassOrInterfaceType
+
+        InterfaceType -> ClassOrInterfaceType
+
+        "try" Block Catches -> TryStatement
+
+        "try" Block Catches? Finally -> TryStatement
+
+        SwitchLabel -> SwitchLabels
+
+        SwitchLabels SwitchLabel -> SwitchLabels
+
+        FormalParameter -> FormalParameterList
+
+        FormalParameterList "," FormalParameter -> FormalParameterList
+
+        AssignmentExpression -> Expression
+
+        StatementExpression -> StatementExpressionList
+
+        StatementExpressionList "," StatementExpression -> StatementExpressionList
+
+        MultiplicativeExpression -> AdditiveExpression
+
+        AdditiveExpression "+" MultiplicativeExpression -> AdditiveExpression
+
+        AdditiveExpression "-" MultiplicativeExpression -> AdditiveExpression
+
+        "float" -> FloatingPointType
+
+        "double" -> FloatingPointType
+
+        Type VariableDeclarators -> LocalVariableDeclaration
+
+        Identifier "(" FormalParameterList? ")" -> ConstructorDeclarator
+
+        ExclusiveOrExpression -> InclusiveOrExpression
+
+        InclusiveOrExpression "|" ExclusiveOrExpression -> InclusiveOrExpression
+
+        TypeName -> ClassType
+
+        "while" "(" Expression ")" Statement -> WhileStatement
+
+        ClassModifiers? "class" Identifier Super? Interfaces? ClassBody -> ClassDeclaration
+
+        "(" PrimitiveType Dims? ")" UnaryExpression -> CastExpression
+
+        "(" ReferenceType ")" UnaryExpressionNotPlusMinus -> CastExpression
+
+        ImportDeclaration -> ImportDeclarations
+
+        ImportDeclarations ImportDeclaration -> ImportDeclarations
+
+        ClassDeclaration -> TypeDeclaration
+
+        InterfaceDeclaration -> TypeDeclaration
+
+        ";" -> TypeDeclaration
+
+        Identifier ":" Statement -> LabeledStatement
+
+        Identifier -> ExpressionName
+
+        AmbiguousName "." Identifier -> ExpressionName
+
+        Type "[" "]" -> ArrayType
+
+        Assignment -> StatementExpression
+
+        PreIncrementExpression -> StatementExpression
+
+        PreDecrementExpression -> StatementExpression
+
+        PostIncrementExpression -> StatementExpression
+
+        PostDecrementExpression -> StatementExpression
+
+        MethodInvocation -> StatementExpression
+
+        ClassInstanceCreationExpression -> StatementExpression
+
+        Identifier "(" FormalParameterList? ")" -> MethodDeclarator
+
+        MethodDeclarator "[" "]" -> MethodDeclarator
+
+        Identifier -> VariableDeclaratorId
+
+        VariableDeclaratorId "[" "]" -> VariableDeclaratorId
+
+        "byte" -> IntegralType
+
+        "short" -> IntegralType
+
+        "int" -> IntegralType
+
+        "long" -> IntegralType
+
+        "char" -> IntegralType
+
+        IntegralType -> NumericType
+
+        FloatingPointType -> NumericType
+
+        ExpressionName -> LeftHandSide
+
+        FieldAccess -> LeftHandSide
+
+        ArrayAccess -> LeftHandSide
+
+        "if" "(" Expression ")" StatementNoShortIf "else" StatementNoShortIf -> IfThenElseStatementNoShortIf
+
+        LocalVariableDeclaration ";" -> LocalVariableDeclarationStatement
+
+        AdditiveExpression -> ShiftExpression
+
+        ShiftExpression "<<" AdditiveExpression -> ShiftExpression
+
+        ShiftExpression ">>" AdditiveExpression -> ShiftExpression
+
+        ShiftExpression ">>>" AdditiveExpression -> ShiftExpression
+
+        FieldModifier -> FieldModifiers
+
+        FieldModifiers FieldModifier -> FieldModifiers
+
+        Block -> MethodBody
+
+        ";" -> MethodBody
+
+        CatchClause -> Catches
+
+        Catches CatchClause -> Catches
+
+        Type -> ResultType
+
+        "void" -> ResultType
+
+        ConstructorModifier -> ConstructorModifiers
+
+        ConstructorModifiers ConstructorModifier -> ConstructorModifiers
+
+        ClassOrInterfaceType -> ReferenceType
+
+        ArrayType -> ReferenceType
+
+        ClassModifier -> ClassModifiers
+
+        ClassModifiers ClassModifier -> ClassModifiers
+
+        "for" "(" ForInit? ";" Expression? ";" ForUpdate? ")" StatementNoShortIf -> ForStatementNoShortIf
+
+        MethodModifiers? ResultType MethodDeclarator Throws? -> MethodHeader
+
+        Identifier ":" StatementNoShortIf -> LabeledStatementNoShortIf
+
+        "{" InterfaceMemberDeclarations? "}" -> InterfaceBody
+
+        ConstantModifier -> ConstantModifiers
+
+        ConstantModifiers ConstantModifier -> ConstantModifiers
+
+        "public" -> ConstantModifier
+
+        "static" -> ConstantModifier
+
+        "final" -> ConstantModifier
+
+        Primary "." Identifier -> FieldAccess
+
+        "super" "." Identifier -> FieldAccess
+
+        TypeDeclaration -> TypeDeclarations
+
+        TypeDeclarations TypeDeclaration -> TypeDeclarations
+
+        "public" -> FieldModifier
+
+        "protected" -> FieldModifier
+
+        "private" -> FieldModifier
+
+        "final" -> FieldModifier
+
+        "static" -> FieldModifier
+
+        "transient" -> FieldModifier
+
+        "volatile" -> FieldModifier
+
+        Block -> StatementWithoutTrailingSubstatement
+
+        EmptyStatement -> StatementWithoutTrailingSubstatement
+
+        ExpressionStatement -> StatementWithoutTrailingSubstatement
+
+        SwitchStatement -> StatementWithoutTrailingSubstatement
+
+        DoStatement -> StatementWithoutTrailingSubstatement
+
+        BreakStatement -> StatementWithoutTrailingSubstatement
+
+        ContinueStatement -> StatementWithoutTrailingSubstatement
+
+        ReturnStatement -> StatementWithoutTrailingSubstatement
+
+        SynchronizedStatement -> StatementWithoutTrailingSubstatement
+
+        ThrowStatement -> StatementWithoutTrailingSubstatement
+
+        TryStatement -> StatementWithoutTrailingSubstatement
+
+        DimExpr -> DimExprs
+
+        DimExprs DimExpr -> DimExprs

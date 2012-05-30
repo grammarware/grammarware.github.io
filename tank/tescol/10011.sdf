@@ -1,0 +1,160 @@
+module Main
+
+exports
+ context-free start-symbols program
+  sorts
+        Program TROLLEY CONSTANT CONTAINS Declaration Consdec CONST COLON Type INTEGER DOUBLE DEFAS Aexpr Cexpr Bexpr Con Ropexpr Expr MultExpr Expon Sign MINUS PLUS Atom Number INT DUB VARIABLE LPAR RPAR EXPON MULT DIV Procapp Aexprlist COMMA Rop EQ NEQ LESS MORE LESSEQ MOREEQ CONJUN DISJUN QM SEMI Vardec VAR Parameter Procdec PROC Paramlist Statementlist Statement SKIP Assignment Conditional IF THEN ELSE Loop WHILE DO LCPAR RCPAR CHECKOUT DONE 
+  context-free syntax
+        TROLLEY CONSTANT CONTAINS Declaration* CHECKOUT Statementlist SEMI DONE SEMI -> Program
+
+        "trolley" -> TROLLEY
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTANT
+
+        "contains" -> CONTAINS
+
+        Consdec
+		| Vardec
+		| Procdec -> Declaration
+
+        CONST CONSTANT COLON Type DEFAS Aexpr SEMI -> Consdec
+
+        "const" -> CONST
+
+        ":" -> COLON
+
+        INTEGER
+		| DOUBLE -> Type
+
+        "int" -> INTEGER
+
+        "double" -> DOUBLE
+
+        ":=" -> DEFAS
+
+        Cexpr -> Aexpr
+
+        Bexpr (QM Cexpr COLON Cexpr)? -> Cexpr
+
+        Con (DISJUN Con)* -> Bexpr
+
+        Ropexpr (CONJUN Ropexpr)* -> Con
+
+        Expr (Rop Expr)? -> Ropexpr
+
+        MultExpr ((PLUS | MINUS) MultExpr)*
+		| Procapp -> Expr
+
+        Expon ((MULT | DIV) Expon)* -> MultExpr
+
+        Sign (EXPON Sign)* -> Expon
+
+        (MINUS | PLUS)? Atom -> Sign
+
+        "-" -> MINUS
+
+        "+" -> PLUS
+
+        Number
+		| VARIABLE
+		| CONSTANT
+		| LPAR Cexpr RPAR -> Atom
+
+        INT
+		| DUB -> Number
+
+        "0"
+		| ("1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* -> INT
+
+        INT? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") INT)? -> DUB
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VARIABLE
+
+        "(" -> LPAR
+
+        ")" -> RPAR
+
+        "**" -> EXPON
+
+        "*" -> MULT
+
+        "/" -> DIV
+
+        VARIABLE LPAR Aexprlist RPAR -> Procapp
+
+        Aexpr (COMMA Aexpr)* -> Aexprlist
+
+        "," -> COMMA
+
+        EQ
+		| NEQ
+		| LESS
+		| MORE
+		| LESSEQ
+		| MOREEQ -> Rop
+
+        "==" -> EQ
+
+        "!=" -> NEQ
+
+        "<" -> LESS
+
+        ">" -> MORE
+
+        "<=" -> LESSEQ
+
+        ">=" -> MOREEQ
+
+        "/\\" -> CONJUN
+
+        "\\/" -> DISJUN
+
+        "?" -> QM
+
+        ";" -> SEMI
+
+        VAR Parameter SEMI -> Vardec
+
+        "var" -> VAR
+
+        VARIABLE COLON Type -> Parameter
+
+        PROC VARIABLE LPAR Paramlist RPAR COLON Type DEFAS Statementlist SEMI -> Procdec
+
+        "proc" -> PROC
+
+        Parameter (COMMA Parameter)* -> Paramlist
+
+        Statement
+		| LCPAR Statement (SEMI Statement)* RCPAR -> Statementlist
+
+        SKIP
+		| Assignment
+		| Conditional
+		| Loop -> Statement
+
+        "skip" -> SKIP
+
+        VARIABLE DEFAS Aexpr -> Assignment
+
+        IF Bexpr THEN Statementlist ELSE Statementlist -> Conditional
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        WHILE Bexpr DO Statementlist -> Loop
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "{" -> LCPAR
+
+        "}" -> RCPAR
+
+        "checkout" -> CHECKOUT
+
+        "done" -> DONE

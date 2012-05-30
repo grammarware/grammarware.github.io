@@ -1,0 +1,23 @@
+module Main
+
+exports
+ context-free start-symbols Grammar
+  sorts
+        Grammar Rule IdCon Expression String 
+  context-free syntax
+        Rule* -> Grammar
+
+        IdCon "::=" Expression -> Rule
+
+        STR -> IdCon
+
+        IdCon
+		| String
+		| "(" Expression ")"
+		| Expression "?"
+		| Expression "*"
+		| Expression "+"
+		| Expression "|" Expression
+		| Expression Expression -> Expression
+
+        """ STR """ -> String

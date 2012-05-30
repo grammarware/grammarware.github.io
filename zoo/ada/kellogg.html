@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable Ada 95 Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style><script type="text/javascript">
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				</script></head><body><h1>Browsable Ada 95 Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/zoo/">Grammar Zoo</a> for details. <br></br>Source used for this grammar: Oliver Kellogg, <code>ada.g</code> (2003) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>315</strong></li><li>Number of top alternatives: <strong>414</strong></li><li>Number of defined nonterminal symbols: <strong>315</strong></li><li>Root nonterminal symbols: —</li><li>Other top nonterminal symbols: <strong>8</strong>: <code><a href="#compilation_unit" class="nt">compilation_unit</a>, <a href="#basic_declarative_items" class="nt">basic_declarative_items</a>, <a href="#known_discrim_part" class="nt">known_discrim_part</a>, <a href="#enumeration_aggregate" class="nt">enumeration_aggregate</a>, <a href="#abortable_part" class="nt">abortable_part</a>, <a href="#operator_call" class="nt">operator_call</a>, <a href="#WS_" class="nt">WS_</a>, <a href="#COMMENT" class="nt">COMMENT</a></code></li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>141</strong></li><li>Special terminal symbols: <strong>72</strong>: <code class="t">"--", "..", "&lt;&lt;", "&lt;&gt;", "&gt;&gt;", ":=", "=&gt;", "/=", "&lt;=", "&gt;=", "**", "|", "&amp;", ".", "=", "&lt;", "&gt;", "+", "-", "*", "/", "(", ")", ":", ",", ";", "'", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "_", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", """, "#", " ", "\t", "\f", "\r\n", "\r", "\n"</code></li><li>Keywords: <strong>69</strong>: <code class="t">"abort", "abs", "abstract", "accept", "access", "aliased", "all", "and", "array", "at", "begin", "body", "case", "constant", "declare", "delay", "delta", "digits", "do", "else", "elsif", "end", "entry", "exception", "exit", "for", "function", "generic", "goto", "if", "in", "is", "limited", "loop", "mod", "new", "not", "null", "of", "or", "others", "out", "package", "pragma", "private", "procedure", "protected", "raise", "range", "record", "rem", "renames", "requeue", "return", "reverse", "select", "separate", "subtype", "tagged", "task", "terminate", "then", "type", "until", "use", "when", "while", "with", "xor"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="compilation_unit">compilation_unit</a>:
+        <a class="nt" href="#context_items_opt">context_items_opt</a> (<a class="nt" href="#library_item">library_item</a> | <a class="nt" href="#subunit">subunit</a>) <a class="nt" href="#pragma">pragma</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="pragma">pragma</a>:
+        <a class="nt" href="#PRAGMA">PRAGMA</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#pragma_args_opt">pragma_args_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="pragma_args_opt">pragma_args_opt</a>:
+        (<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#pragma_arg">pragma_arg</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#pragma_arg">pragma_arg</a>)<span class="meta">*</span> <a class="nt" href="#RPAREN">RPAREN</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="pragma_arg">pragma_arg</a>:
+        (<a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a>)<span class="meta">?</span> <a class="nt" href="#expression">expression</a>
+</pre><pre><a class="nt" name="context_items_opt">context_items_opt</a>:
+        <a class="nt" href="#pragma">pragma</a><span class="meta">*</span> (<a class="nt" href="#with_clause">with_clause</a> (<a class="nt" href="#use_clause">use_clause</a> | <a class="nt" href="#pragma">pragma</a>)<span class="meta">*</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="with_clause">with_clause</a>:
+        <span class="sel">w</span>::<a class="nt" href="#WITH">WITH</a> <a class="nt" href="#c_name_list">c_name_list</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="c_name_list">c_name_list</a>:
+        <a class="nt" href="#compound_name">compound_name</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#compound_name">compound_name</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="compound_name">compound_name</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> (<a class="nt" href="#DOT">DOT</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="use_clause">use_clause</a>:
+        <span class="sel">u</span>::<a class="nt" href="#USE">USE</a> ((<a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#subtype_mark">subtype_mark</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#subtype_mark">subtype_mark</a>)<span class="meta">*</span>) | <a class="nt" href="#c_name_list">c_name_list</a>) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="subtype_mark">subtype_mark</a>:
+        <a class="nt" href="#compound_name">compound_name</a> (<a class="nt" href="#TIC">TIC</a> <a class="nt" href="#attribute_id">attribute_id</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="attribute_id">attribute_id</a>:
+        <a class="nt" href="#RANGE">RANGE</a>
+        <a class="nt" href="#DIGITS">DIGITS</a>
+        <a class="nt" href="#DELTA">DELTA</a>
+        <a class="nt" href="#ACCESS">ACCESS</a>
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="library_item">library_item</a>:
+        <a class="nt" href="#private_opt">private_opt</a> (<a class="nt" href="#lib_pkg_spec_or_body">lib_pkg_spec_or_body</a> | <a class="nt" href="#subprog_decl_or_rename_or_inst_or_body">subprog_decl_or_rename_or_inst_or_body</a> | <a class="nt" href="#generic_decl">generic_decl</a>)
+</pre><pre><a class="nt" name="private_opt">private_opt</a>:
+        <a class="nt" href="#PRIVATE">PRIVATE</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="lib_pkg_spec_or_body">lib_pkg_spec_or_body</a>:
+        <span class="sel">pkg</span>::<a class="nt" href="#PACKAGE">PACKAGE</a> ((<a class="nt" href="#BODY">BODY</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#pkg_body_part">pkg_body_part</a> <a class="nt" href="#end_id_opt">end_id_opt</a> <a class="nt" href="#SEMI">SEMI</a>) | (<a class="nt" href="#def_id">def_id</a> <a class="nt" href="#spec_decl_part">spec_decl_part</a>))
+</pre><pre><a class="nt" name="subprog_decl">subprog_decl</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> (<a class="nt" href="#generic_subp_inst">generic_subp_inst</a> | (<a class="nt" href="#formal_part_opt">formal_part_opt</a> (<a class="nt" href="#renames">renames</a> | <a class="nt" href="#is_separate_or_abstract_or_decl">is_separate_or_abstract_or_decl</a>) <a class="nt" href="#SEMI">SEMI</a>))
+        <span class="sel">f</span>::<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#def_designator">def_designator</a> (<a class="nt" href="#generic_subp_inst">generic_subp_inst</a> | (<a class="nt" href="#function_tail">function_tail</a> (<a class="nt" href="#renames">renames</a> | <a class="nt" href="#is_separate_or_abstract_or_decl">is_separate_or_abstract_or_decl</a>) <a class="nt" href="#SEMI">SEMI</a>))
+</pre><pre><a class="nt" name="def_id">def_id</a>:
+        <span class="sel">cn</span>::<a class="nt" href="#compound_name">compound_name</a>
+        <span class="sel">n</span>::<a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="generic_subp_inst">generic_subp_inst</a>:
+        <a class="nt" href="#IS">IS</a> <a class="nt" href="#generic_inst">generic_inst</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="generic_inst">generic_inst</a>:
+        <a class="nt" href="#NEW">NEW</a> <a class="nt" href="#compound_name">compound_name</a> (<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#value_s">value_s</a> <a class="nt" href="#RPAREN">RPAREN</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="parenth_values">parenth_values</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#value">value</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#value">value</a>)<span class="meta">*</span> <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="value">value</a>:
+        <a class="nt" href="#OTHERS">OTHERS</a> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a> <a class="nt" href="#expression">expression</a>
+        <a class="nt" href="#ranged_expr_s">ranged_expr_s</a> (<a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a> <a class="nt" href="#expression">expression</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="ranged_expr_s">ranged_expr_s</a>:
+        <a class="nt" href="#ranged_expr">ranged_expr</a> (<a class="nt" href="#PIPE">PIPE</a> <a class="nt" href="#ranged_expr">ranged_expr</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="ranged_expr">ranged_expr</a>:
+        <a class="nt" href="#expression">expression</a> ((<a class="nt" href="#DOT_DOT">DOT_DOT</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#RANGE">RANGE</a> <a class="nt" href="#range">range</a>))<span class="meta">?</span>
+</pre><pre><a class="nt" name="range_constraint">range_constraint</a>:
+        <a class="nt" href="#RANGE">RANGE</a> <a class="nt" href="#range">range</a>
+</pre><pre><a class="nt" name="range">range</a>:
+        <a class="nt" href="#range_dots">range_dots</a>
+        <a class="nt" href="#range_attrib_ref">range_attrib_ref</a>
+</pre><pre><a class="nt" name="range_dots">range_dots</a>:
+        <a class="nt" href="#simple_expression">simple_expression</a> <a class="nt" href="#DOT_DOT">DOT_DOT</a> <a class="nt" href="#simple_expression">simple_expression</a>
+</pre><pre><a class="nt" name="range_attrib_ref">range_attrib_ref</a>:
+        <a class="nt" href="#prefix">prefix</a> <a class="nt" href="#TIC">TIC</a> <span class="sel">r</span>::<a class="nt" href="#RANGE">RANGE</a> (<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#RPAREN">RPAREN</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="prefix">prefix</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> ((<a class="nt" href="#DOT">DOT</a> (<a class="nt" href="#ALL">ALL</a> | <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>)) | (<span class="sel">p</span>::<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#value_s">value_s</a> <a class="nt" href="#RPAREN">RPAREN</a>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="formal_part_opt">formal_part_opt</a>:
+        (<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#parameter_specification">parameter_specification</a> (<a class="nt" href="#SEMI">SEMI</a> <a class="nt" href="#parameter_specification">parameter_specification</a>)<span class="meta">*</span> <a class="nt" href="#RPAREN">RPAREN</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="parameter_specification">parameter_specification</a>:
+        <a class="nt" href="#def_ids_colon">def_ids_colon</a> <a class="nt" href="#mode_opt">mode_opt</a> <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#init_opt">init_opt</a>
+</pre><pre><a class="nt" name="def_ids_colon">def_ids_colon</a>:
+        <a class="nt" href="#defining_identifier_list">defining_identifier_list</a> <a class="nt" href="#COLON">COLON</a>
+</pre><pre><a class="nt" name="defining_identifier_list">defining_identifier_list</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="mode_opt">mode_opt</a>:
+        ((<a class="nt" href="#IN">IN</a> <a class="nt" href="#OUT">OUT</a><span class="meta">?</span>) | <a class="nt" href="#OUT">OUT</a> | <a class="nt" href="#ACCESS">ACCESS</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="renames">renames</a>:
+        <a class="nt" href="#RENAMES">RENAMES</a> (<a class="nt" href="#name">name</a> | <span class="sel">dummy</span>::<a class="nt" href="#definable_operator_symbol">definable_operator_symbol</a>)
+</pre><pre><a class="nt" name="name">name</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> ((<a class="nt" href="#DOT">DOT</a> (<a class="nt" href="#ALL">ALL</a> | <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> | <a class="nt" href="#CHARACTER_LITERAL">CHARACTER_LITERAL</a> | <span class="sel">dummy</span>::<a class="nt" href="#is_operator">is_operator</a>)) | (<span class="sel">p</span>::<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#value_s">value_s</a> <a class="nt" href="#RPAREN">RPAREN</a>) | (<a class="nt" href="#TIC">TIC</a> <a class="nt" href="#attribute_id">attribute_id</a>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="is_operator">is_operator</a>:
+        <span class="sel">op</span>::<a class="nt" href="#CHAR_STRING">CHAR_STRING</a>
+</pre><pre><a class="nt" name="definable_operator_symbol">definable_operator_symbol</a>:
+        <span class="sel">op</span>::<a class="nt" href="#CHAR_STRING">CHAR_STRING</a>
+</pre><pre><a class="nt" name="parenthesized_primary">parenthesized_primary</a>:
+        <span class="sel">pp</span>::<a class="nt" href="#LPAREN">LPAREN</a> ((<a class="nt" href="#NuLL">NuLL</a> <a class="nt" href="#RECORD">RECORD</a>) | (<a class="nt" href="#value_s">value_s</a> <a class="nt" href="#extension_opt">extension_opt</a>)) <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="extension_opt">extension_opt</a>:
+        (<a class="nt" href="#WITH">WITH</a> ((<a class="nt" href="#NuLL">NuLL</a> <a class="nt" href="#RECORD">RECORD</a>) | <a class="nt" href="#value_s">value_s</a>))<span class="meta">?</span>
+</pre><pre><a class="nt" name="is_separate_or_abstract_or_decl">is_separate_or_abstract_or_decl</a>:
+        <a class="nt" href="#IS">IS</a> <a class="nt" href="#separate_or_abstract">separate_or_abstract</a>
+        ε
+</pre><pre><a class="nt" name="separate_or_abstract">separate_or_abstract</a>:
+        <a class="nt" href="#SEPARATE">SEPARATE</a>
+        <a class="nt" href="#ABSTRACT">ABSTRACT</a>
+</pre><pre><a class="nt" name="def_designator">def_designator</a>:
+        <span class="sel">n</span>::<a class="nt" href="#compound_name">compound_name</a>
+        <span class="sel">d</span>::<a class="nt" href="#designator">designator</a>
+</pre><pre><a class="nt" name="designator">designator</a>:
+        <span class="sel">op</span>::<a class="nt" href="#definable_operator_symbol">definable_operator_symbol</a>
+        <span class="sel">n</span>::<a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="function_tail">function_tail</a>:
+        <a class="nt" href="#func_formal_part_opt">func_formal_part_opt</a> <a class="nt" href="#RETURN">RETURN</a> <a class="nt" href="#subtype_mark">subtype_mark</a>
+</pre><pre><a class="nt" name="func_formal_part_opt">func_formal_part_opt</a>:
+        (<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#func_param">func_param</a> (<a class="nt" href="#SEMI">SEMI</a> <a class="nt" href="#func_param">func_param</a>)<span class="meta">*</span> <a class="nt" href="#RPAREN">RPAREN</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="func_param">func_param</a>:
+        <a class="nt" href="#def_ids_colon">def_ids_colon</a> <a class="nt" href="#in_access_opt">in_access_opt</a> <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#init_opt">init_opt</a>
+</pre><pre><a class="nt" name="in_access_opt">in_access_opt</a>:
+        (<a class="nt" href="#IN">IN</a> | <a class="nt" href="#ACCESS">ACCESS</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="spec_decl_part">spec_decl_part</a>:
+        ((<a class="nt" href="#IS">IS</a> (<a class="nt" href="#generic_inst">generic_inst</a> | <a class="nt" href="#pkg_spec_part">pkg_spec_part</a>)) | <a class="nt" href="#renames">renames</a>) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="pkg_spec_part">pkg_spec_part</a>:
+        <a class="nt" href="#basic_declarative_items_opt">basic_declarative_items_opt</a> (<a class="nt" href="#PRIVATE">PRIVATE</a> <a class="nt" href="#basic_declarative_items_opt">basic_declarative_items_opt</a>)<span class="meta">?</span> <a class="nt" href="#end_id_opt">end_id_opt</a>
+</pre><pre><a class="nt" name="basic_declarative_items_opt">basic_declarative_items_opt</a>:
+        (<a class="nt" href="#basic_decl_item">basic_decl_item</a> | <a class="nt" href="#pragma">pragma</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="basic_declarative_items">basic_declarative_items</a>:
+        (<a class="nt" href="#basic_decl_item">basic_decl_item</a> | <a class="nt" href="#pragma">pragma</a>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="basic_decl_item">basic_decl_item</a>:
+        <span class="sel">pkg</span>::<a class="nt" href="#PACKAGE">PACKAGE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#spec_decl_part">spec_decl_part</a>
+        <span class="sel">tsk</span>::<a class="nt" href="#TASK">TASK</a> <a class="nt" href="#task_type_or_single_decl">task_type_or_single_decl</a>
+        <span class="sel">pro</span>::<a class="nt" href="#PROTECTED">PROTECTED</a> <a class="nt" href="#prot_type_or_single_decl">prot_type_or_single_decl</a> <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#subprog_decl">subprog_decl</a>
+        <a class="nt" href="#decl_common">decl_common</a>
+</pre><pre><a class="nt" name="task_type_or_single_decl">task_type_or_single_decl</a>:
+        <a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#discrim_part_opt">discrim_part_opt</a> <a class="nt" href="#task_definition_opt">task_definition_opt</a>
+        <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#task_definition_opt">task_definition_opt</a>
+</pre><pre><a class="nt" name="task_definition_opt">task_definition_opt</a>:
+        <a class="nt" href="#IS">IS</a> <a class="nt" href="#task_items_opt">task_items_opt</a> <a class="nt" href="#private_task_items_opt">private_task_items_opt</a> <a class="nt" href="#end_id_opt">end_id_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="discrim_part_opt">discrim_part_opt</a>:
+        <a class="nt" href="#discrim_part_text">discrim_part_text</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="discrim_part_text">discrim_part_text</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> (<a class="nt" href="#BOX">BOX</a> | <a class="nt" href="#discriminant_specifications">discriminant_specifications</a>) <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="known_discrim_part">known_discrim_part</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#discriminant_specifications">discriminant_specifications</a> <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="empty_discrim_opt">empty_discrim_opt</a>:
+        ε
+</pre><pre><a class="nt" name="discrim_part">discrim_part</a>:
+        <a class="nt" href="#discrim_part_text">discrim_part_text</a>
+</pre><pre><a class="nt" name="discriminant_specifications">discriminant_specifications</a>:
+        <a class="nt" href="#discriminant_specification">discriminant_specification</a> (<a class="nt" href="#SEMI">SEMI</a> <a class="nt" href="#discriminant_specification">discriminant_specification</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="discriminant_specification">discriminant_specification</a>:
+        <a class="nt" href="#def_ids_colon">def_ids_colon</a> <a class="nt" href="#access_opt">access_opt</a> <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#init_opt">init_opt</a>
+</pre><pre><a class="nt" name="access_opt">access_opt</a>:
+        <a class="nt" href="#ACCESS">ACCESS</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="init_opt">init_opt</a>:
+        (<a class="nt" href="#ASSIGN">ASSIGN</a> <a class="nt" href="#expression">expression</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="task_items_opt">task_items_opt</a>:
+        <a class="nt" href="#pragma">pragma</a><span class="meta">*</span> <a class="nt" href="#entrydecls_repspecs_opt">entrydecls_repspecs_opt</a>
+</pre><pre><a class="nt" name="entrydecls_repspecs_opt">entrydecls_repspecs_opt</a>:
+        (<a class="nt" href="#entry_declaration">entry_declaration</a> (<a class="nt" href="#pragma">pragma</a> | <a class="nt" href="#rep_spec">rep_spec</a>)<span class="meta">*</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="entry_declaration">entry_declaration</a>:
+        <span class="sel">e</span>::<a class="nt" href="#ENTRY">ENTRY</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#discrete_subtype_def_opt">discrete_subtype_def_opt</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="discrete_subtype_def_opt">discrete_subtype_def_opt</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#discrete_subtype_definition">discrete_subtype_definition</a>
+        ε
+</pre><pre><a class="nt" name="discrete_subtype_definition">discrete_subtype_definition</a>:
+        <a class="nt" href="#range">range</a>
+        <a class="nt" href="#subtype_ind">subtype_ind</a>
+</pre><pre><a class="nt" name="rep_spec">rep_spec</a>:
+        <span class="sel">r</span>::<a class="nt" href="#FOR">FOR</a> <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#USE">USE</a> <a class="nt" href="#rep_spec_part">rep_spec_part</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="rep_spec_part">rep_spec_part</a>:
+        <a class="nt" href="#RECORD">RECORD</a> <a class="nt" href="#align_opt">align_opt</a> <a class="nt" href="#comp_loc_s">comp_loc_s</a> <a class="nt" href="#END">END</a> <a class="nt" href="#RECORD">RECORD</a>
+        <a class="nt" href="#AT">AT</a> <a class="nt" href="#expression">expression</a>
+        <a class="nt" href="#expression">expression</a>
+</pre><pre><a class="nt" name="align_opt">align_opt</a>:
+        (<a class="nt" href="#AT">AT</a> <a class="nt" href="#MOD">MOD</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#SEMI">SEMI</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="comp_loc_s">comp_loc_s</a>:
+        (<a class="nt" href="#pragma">pragma</a> | (<a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#AT">AT</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#RANGE">RANGE</a> <a class="nt" href="#range">range</a> <a class="nt" href="#SEMI">SEMI</a>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="private_task_items_opt">private_task_items_opt</a>:
+        (<a class="nt" href="#PRIVATE">PRIVATE</a> <a class="nt" href="#pragma">pragma</a><span class="meta">*</span> <a class="nt" href="#entrydecls_repspecs_opt">entrydecls_repspecs_opt</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="prot_type_or_single_decl">prot_type_or_single_decl</a>:
+        <a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#discrim_part_opt">discrim_part_opt</a> <a class="nt" href="#protected_definition">protected_definition</a>
+        <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#protected_definition">protected_definition</a>
+</pre><pre><a class="nt" name="protected_definition">protected_definition</a>:
+        <a class="nt" href="#IS">IS</a> <a class="nt" href="#prot_op_decl_s">prot_op_decl_s</a> (<a class="nt" href="#PRIVATE">PRIVATE</a> <a class="nt" href="#prot_member_decl_s">prot_member_decl_s</a>)<span class="meta">?</span> <a class="nt" href="#end_id_opt">end_id_opt</a>
+</pre><pre><a class="nt" name="prot_op_decl_s">prot_op_decl_s</a>:
+        <a class="nt" href="#prot_op_decl">prot_op_decl</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="prot_op_decl">prot_op_decl</a>:
+        <a class="nt" href="#entry_declaration">entry_declaration</a>
+        <span class="sel">p</span>::<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+        <span class="sel">f</span>::<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#def_designator">def_designator</a> <a class="nt" href="#function_tail">function_tail</a> <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#rep_spec">rep_spec</a>
+        <a class="nt" href="#pragma">pragma</a>
+</pre><pre><a class="nt" name="prot_member_decl_s">prot_member_decl_s</a>:
+        (<a class="nt" href="#prot_op_decl">prot_op_decl</a> | <a class="nt" href="#comp_decl">comp_decl</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="comp_decl">comp_decl</a>:
+        <a class="nt" href="#def_ids_colon">def_ids_colon</a> <a class="nt" href="#component_subtype_def">component_subtype_def</a> <a class="nt" href="#init_opt">init_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="decl_common">decl_common</a>:
+        <span class="sel">t</span>::<a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> ((<a class="nt" href="#IS">IS</a> <a class="nt" href="#type_def">type_def</a>) | (<a class="nt" href="#discrim_part">discrim_part</a> ((<a class="nt" href="#IS">IS</a> <a class="nt" href="#derived_or_private_or_record">derived_or_private_or_record</a>) | ε)) | <a class="nt" href="#empty_discrim_opt">empty_discrim_opt</a>) <a class="nt" href="#SEMI">SEMI</a>
+        <span class="sel">s</span>::<a class="nt" href="#SUBTYPE">SUBTYPE</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#subtype_ind">subtype_ind</a> <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#generic_decl">generic_decl</a>
+        <a class="nt" href="#use_clause">use_clause</a>
+        <span class="sel">r</span>::<a class="nt" href="#FOR">FOR</a> ((<a class="nt" href="#local_enum_name">local_enum_name</a> <a class="nt" href="#USE">USE</a>) | (<a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#USE">USE</a> <a class="nt" href="#rep_spec_part">rep_spec_part</a>)) <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <span class="sel">erd</span>::<a class="nt" href="#COLON">COLON</a> <a class="nt" href="#EXCEPTION">EXCEPTION</a> <a class="nt" href="#RENAMES">RENAMES</a> <a class="nt" href="#compound_name">compound_name</a>
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <span class="sel">ord</span>::<a class="nt" href="#COLON">COLON</a> <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#RENAMES">RENAMES</a> <a class="nt" href="#name">name</a>
+        <a class="nt" href="#defining_identifier_list">defining_identifier_list</a> <span class="sel">od</span>::<a class="nt" href="#COLON">COLON</a> (<a class="nt" href="#EXCEPTION">EXCEPTION</a> | (<a class="nt" href="#CONSTANT">CONSTANT</a> <a class="nt" href="#ASSIGN">ASSIGN</a>) | (<a class="nt" href="#aliased_constant_opt">aliased_constant_opt</a> ((<a class="nt" href="#array_type_definition">array_type_definition</a> <a class="nt" href="#init_opt">init_opt</a>) | (<a class="nt" href="#subtype_ind">subtype_ind</a> <a class="nt" href="#init_opt">init_opt</a>)))) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="type_def">type_def</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#enum_id_s">enum_id_s</a> <a class="nt" href="#RPAREN">RPAREN</a>
+        <a class="nt" href="#RANGE">RANGE</a> <a class="nt" href="#range">range</a>
+        <a class="nt" href="#MOD">MOD</a> <a class="nt" href="#expression">expression</a>
+        <a class="nt" href="#DIGITS">DIGITS</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#range_constraint_opt">range_constraint_opt</a>
+        <a class="nt" href="#DELTA">DELTA</a> <a class="nt" href="#expression">expression</a> ((<a class="nt" href="#RANGE">RANGE</a> <a class="nt" href="#range">range</a>) | (<a class="nt" href="#DIGITS">DIGITS</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#range_constraint_opt">range_constraint_opt</a>))
+        <a class="nt" href="#array_type_definition">array_type_definition</a>
+        <a class="nt" href="#access_type_definition">access_type_definition</a>
+        <a class="nt" href="#empty_discrim_opt">empty_discrim_opt</a> <a class="nt" href="#derived_or_private_or_record">derived_or_private_or_record</a>
+</pre><pre><a class="nt" name="enum_id_s">enum_id_s</a>:
+        <a class="nt" href="#enumeration_literal_specification">enumeration_literal_specification</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#enumeration_literal_specification">enumeration_literal_specification</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="enumeration_literal_specification">enumeration_literal_specification</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+        <a class="nt" href="#CHARACTER_LITERAL">CHARACTER_LITERAL</a>
+</pre><pre><a class="nt" name="range_constraint_opt">range_constraint_opt</a>:
+        <a class="nt" href="#range_constraint">range_constraint</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="array_type_definition">array_type_definition</a>:
+        <a class="nt" href="#ARRAY">ARRAY</a> <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#index_or_discrete_range_s">index_or_discrete_range_s</a> <a class="nt" href="#RPAREN">RPAREN</a> <a class="nt" href="#OF">OF</a> <a class="nt" href="#component_subtype_def">component_subtype_def</a>
+</pre><pre><a class="nt" name="index_or_discrete_range_s">index_or_discrete_range_s</a>:
+        <a class="nt" href="#index_or_discrete_range">index_or_discrete_range</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#index_or_discrete_range">index_or_discrete_range</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="index_or_discrete_range">index_or_discrete_range</a>:
+        <a class="nt" href="#simple_expression">simple_expression</a> ((<a class="nt" href="#DOT_DOT">DOT_DOT</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#RANGE">RANGE</a> (<a class="nt" href="#BOX">BOX</a> | <a class="nt" href="#range">range</a>)))<span class="meta">?</span>
+</pre><pre><a class="nt" name="component_subtype_def">component_subtype_def</a>:
+        <a class="nt" href="#aliased_opt">aliased_opt</a> <a class="nt" href="#subtype_ind">subtype_ind</a>
+</pre><pre><a class="nt" name="aliased_opt">aliased_opt</a>:
+        <a class="nt" href="#ALIASED">ALIASED</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="subtype_ind">subtype_ind</a>:
+        <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#constraint_opt">constraint_opt</a>
+</pre><pre><a class="nt" name="constraint_opt">constraint_opt</a>:
+        (<a class="nt" href="#range_constraint">range_constraint</a> | <a class="nt" href="#digits_constraint">digits_constraint</a> | <a class="nt" href="#delta_constraint">delta_constraint</a> | <a class="nt" href="#index_constraint">index_constraint</a> | <a class="nt" href="#discriminant_constraint">discriminant_constraint</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="digits_constraint">digits_constraint</a>:
+        <span class="sel">d</span>::<a class="nt" href="#DIGITS">DIGITS</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#range_constraint_opt">range_constraint_opt</a>
+</pre><pre><a class="nt" name="delta_constraint">delta_constraint</a>:
+        <span class="sel">d</span>::<a class="nt" href="#DELTA">DELTA</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#range_constraint_opt">range_constraint_opt</a>
+</pre><pre><a class="nt" name="index_constraint">index_constraint</a>:
+        <span class="sel">p</span>::<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#discrete_range">discrete_range</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#discrete_range">discrete_range</a>)<span class="meta">*</span> <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="discrete_range">discrete_range</a>:
+        <a class="nt" href="#range">range</a>
+        <a class="nt" href="#subtype_ind">subtype_ind</a>
+</pre><pre><a class="nt" name="discriminant_constraint">discriminant_constraint</a>:
+        <span class="sel">p</span>::<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#discriminant_association">discriminant_association</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#discriminant_association">discriminant_association</a>)<span class="meta">*</span> <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="discriminant_association">discriminant_association</a>:
+        <a class="nt" href="#selector_names_opt">selector_names_opt</a> <a class="nt" href="#expression">expression</a>
+</pre><pre><a class="nt" name="selector_names_opt">selector_names_opt</a>:
+        <a class="nt" href="#association_head">association_head</a>
+        ε
+</pre><pre><a class="nt" name="association_head">association_head</a>:
+        <a class="nt" href="#selector_name">selector_name</a> (<a class="nt" href="#PIPE">PIPE</a> <a class="nt" href="#selector_name">selector_name</a>)<span class="meta">*</span> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a>
+</pre><pre><a class="nt" name="selector_name">selector_name</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="access_type_definition">access_type_definition</a>:
+        <a class="nt" href="#ACCESS">ACCESS</a> ((<a class="nt" href="#protected_opt">protected_opt</a> ((<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a>) | (<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#func_formal_part_opt">func_formal_part_opt</a> <a class="nt" href="#RETURN">RETURN</a> <a class="nt" href="#subtype_mark">subtype_mark</a>))) | (<a class="nt" href="#constant_all_opt">constant_all_opt</a> <a class="nt" href="#subtype_ind">subtype_ind</a>))
+</pre><pre><a class="nt" name="protected_opt">protected_opt</a>:
+        <a class="nt" href="#PROTECTED">PROTECTED</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="constant_all_opt">constant_all_opt</a>:
+        (<a class="nt" href="#CONSTANT">CONSTANT</a> | <a class="nt" href="#ALL">ALL</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="derived_or_private_or_record">derived_or_private_or_record</a>:
+        <a class="nt" href="#abstract_opt">abstract_opt</a> <a class="nt" href="#NEW">NEW</a> <a class="nt" href="#subtype_ind">subtype_ind</a> <a class="nt" href="#WITH">WITH</a>
+        <a class="nt" href="#NEW">NEW</a> <a class="nt" href="#subtype_ind">subtype_ind</a>
+        <a class="nt" href="#abstract_tagged_limited_opt">abstract_tagged_limited_opt</a> (<a class="nt" href="#PRIVATE">PRIVATE</a> | <a class="nt" href="#record_definition">record_definition</a>)
+</pre><pre><a class="nt" name="abstract_opt">abstract_opt</a>:
+        <a class="nt" href="#ABSTRACT">ABSTRACT</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="record_definition">record_definition</a>:
+        <a class="nt" href="#RECORD">RECORD</a> <a class="nt" href="#component_list">component_list</a> <a class="nt" href="#END">END</a> <a class="nt" href="#RECORD">RECORD</a>
+        <a class="nt" href="#NuLL">NuLL</a> <a class="nt" href="#RECORD">RECORD</a>
+</pre><pre><a class="nt" name="component_list">component_list</a>:
+        <a class="nt" href="#NuLL">NuLL</a> <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#component_items">component_items</a> <a class="nt" href="#variant_part">variant_part</a><span class="meta">?</span>
+        <a class="nt" href="#empty_component_items">empty_component_items</a> <a class="nt" href="#variant_part">variant_part</a>
+</pre><pre><a class="nt" name="component_items">component_items</a>:
+        (<a class="nt" href="#pragma">pragma</a> | <a class="nt" href="#comp_decl">comp_decl</a>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="empty_component_items">empty_component_items</a>:
+        ε
+</pre><pre><a class="nt" name="variant_part">variant_part</a>:
+        <span class="sel">c</span>::<a class="nt" href="#CASE">CASE</a> <a class="nt" href="#discriminant_direct_name">discriminant_direct_name</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#variant_s">variant_s</a> <a class="nt" href="#END">END</a> <a class="nt" href="#CASE">CASE</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="discriminant_direct_name">discriminant_direct_name</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="variant_s">variant_s</a>:
+        <a class="nt" href="#variant">variant</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="variant">variant</a>:
+        <span class="sel">w</span>::<a class="nt" href="#WHEN">WHEN</a> <a class="nt" href="#choice_s">choice_s</a> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a> <a class="nt" href="#component_list">component_list</a>
+</pre><pre><a class="nt" name="choice_s">choice_s</a>:
+        <a class="nt" href="#choice">choice</a> (<a class="nt" href="#PIPE">PIPE</a> <a class="nt" href="#choice">choice</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="choice">choice</a>:
+        <a class="nt" href="#OTHERS">OTHERS</a>
+        <a class="nt" href="#discrete_with_range">discrete_with_range</a>
+        <a class="nt" href="#expression">expression</a>
+</pre><pre><a class="nt" name="discrete_with_range">discrete_with_range</a>:
+        <a class="nt" href="#mark_with_constraint">mark_with_constraint</a>
+        <a class="nt" href="#range">range</a>
+</pre><pre><a class="nt" name="mark_with_constraint">mark_with_constraint</a>:
+        <a class="nt" href="#subtype_mark">subtype_mark</a> <a class="nt" href="#range_constraint">range_constraint</a>
+</pre><pre><a class="nt" name="abstract_tagged_limited_opt">abstract_tagged_limited_opt</a>:
+        ((<a class="nt" href="#ABSTRACT">ABSTRACT</a> <a class="nt" href="#TAGGED">TAGGED</a>) | <a class="nt" href="#TAGGED">TAGGED</a>)<span class="meta">?</span> <a class="nt" href="#LIMITED">LIMITED</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="local_enum_name">local_enum_name</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="enumeration_aggregate">enumeration_aggregate</a>:
+        <a class="nt" href="#parenth_values">parenth_values</a>
+</pre><pre><a class="nt" name="aliased_constant_opt">aliased_constant_opt</a>:
+        <a class="nt" href="#ALIASED">ALIASED</a><span class="meta">?</span> <a class="nt" href="#CONSTANT">CONSTANT</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="generic_decl">generic_decl</a>:
+        <span class="sel">g</span>::<a class="nt" href="#GENERIC">GENERIC</a> <a class="nt" href="#generic_formal_part_opt">generic_formal_part_opt</a> ((<a class="nt" href="#PACKAGE">PACKAGE</a> <a class="nt" href="#def_id">def_id</a> (<a class="nt" href="#renames">renames</a> | (<a class="nt" href="#IS">IS</a> <a class="nt" href="#pkg_spec_part">pkg_spec_part</a>))) | (<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> (<a class="nt" href="#renames">renames</a> | ε)) | (<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#def_designator">def_designator</a> <a class="nt" href="#function_tail">function_tail</a> (<a class="nt" href="#renames">renames</a> | ε))) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="generic_formal_part_opt">generic_formal_part_opt</a>:
+        (<a class="nt" href="#use_clause">use_clause</a> | <a class="nt" href="#pragma">pragma</a> | <a class="nt" href="#generic_formal_parameter">generic_formal_parameter</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="generic_formal_parameter">generic_formal_parameter</a>:
+        ((<span class="sel">t</span>::<a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#def_id">def_id</a> ((<a class="nt" href="#IS">IS</a> ((<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#BOX">BOX</a> <a class="nt" href="#RPAREN">RPAREN</a>) | (<a class="nt" href="#RANGE">RANGE</a> <a class="nt" href="#BOX">BOX</a>) | (<a class="nt" href="#MOD">MOD</a> <a class="nt" href="#BOX">BOX</a>) | (<a class="nt" href="#DELTA">DELTA</a> <a class="nt" href="#BOX">BOX</a> ((<a class="nt" href="#DIGITS">DIGITS</a> <a class="nt" href="#BOX">BOX</a>) | ε)) | (<a class="nt" href="#DIGITS">DIGITS</a> <a class="nt" href="#BOX">BOX</a>) | <a class="nt" href="#array_type_definition">array_type_definition</a> | <a class="nt" href="#access_type_definition">access_type_definition</a> | (<a class="nt" href="#empty_discrim_opt">empty_discrim_opt</a> <a class="nt" href="#discriminable_type_definition">discriminable_type_definition</a>))) | (<a class="nt" href="#discrim_part">discrim_part</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#discriminable_type_definition">discriminable_type_definition</a>))) | (<span class="sel">w</span>::<a class="nt" href="#WITH">WITH</a> ((<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> <a class="nt" href="#subprogram_default_opt">subprogram_default_opt</a>) | (<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#def_designator">def_designator</a> <a class="nt" href="#function_tail">function_tail</a> <a class="nt" href="#subprogram_default_opt">subprogram_default_opt</a>) | (<a class="nt" href="#PACKAGE">PACKAGE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#NEW">NEW</a> <a class="nt" href="#compound_name">compound_name</a> <a class="nt" href="#formal_package_actual_part_opt">formal_package_actual_part_opt</a>))) | <a class="nt" href="#parameter_specification">parameter_specification</a>) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="discriminable_type_definition">discriminable_type_definition</a>:
+        <a class="nt" href="#abstract_opt">abstract_opt</a> <a class="nt" href="#NEW">NEW</a> <a class="nt" href="#subtype_ind">subtype_ind</a> <a class="nt" href="#WITH">WITH</a>
+        <a class="nt" href="#NEW">NEW</a> <a class="nt" href="#subtype_ind">subtype_ind</a>
+        <a class="nt" href="#abstract_tagged_limited_opt">abstract_tagged_limited_opt</a> <a class="nt" href="#PRIVATE">PRIVATE</a>
+</pre><pre><a class="nt" name="subprogram_default_opt">subprogram_default_opt</a>:
+        (<a class="nt" href="#IS">IS</a> (<a class="nt" href="#BOX">BOX</a> | <a class="nt" href="#name">name</a>))<span class="meta">?</span>
+</pre><pre><a class="nt" name="formal_package_actual_part_opt">formal_package_actual_part_opt</a>:
+        (<a class="nt" href="#LPAREN">LPAREN</a> (<a class="nt" href="#BOX">BOX</a> | <a class="nt" href="#defining_identifier_list">defining_identifier_list</a>) <a class="nt" href="#RPAREN">RPAREN</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="subprog_decl_or_rename_or_inst_or_body">subprog_decl_or_rename_or_inst_or_body</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> (<a class="nt" href="#generic_subp_inst">generic_subp_inst</a> | (<a class="nt" href="#formal_part_opt">formal_part_opt</a> (<a class="nt" href="#renames">renames</a> | (<a class="nt" href="#IS">IS</a> (<a class="nt" href="#separate_or_abstract">separate_or_abstract</a> | <a class="nt" href="#body_part">body_part</a>)) | ε) <a class="nt" href="#SEMI">SEMI</a>))
+        <span class="sel">f</span>::<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#def_designator">def_designator</a> (<a class="nt" href="#generic_subp_inst">generic_subp_inst</a> | (<a class="nt" href="#function_tail">function_tail</a> (<a class="nt" href="#renames">renames</a> | (<a class="nt" href="#IS">IS</a> (<a class="nt" href="#separate_or_abstract">separate_or_abstract</a> | <a class="nt" href="#body_part">body_part</a>)) | ε) <a class="nt" href="#SEMI">SEMI</a>))
+</pre><pre><a class="nt" name="body_part">body_part</a>:
+        <a class="nt" href="#declarative_part">declarative_part</a> <a class="nt" href="#block_body">block_body</a> <a class="nt" href="#end_id_opt">end_id_opt</a>
+</pre><pre><a class="nt" name="declarative_part">declarative_part</a>:
+        (<a class="nt" href="#pragma">pragma</a> | <a class="nt" href="#declarative_item">declarative_item</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="declarative_item">declarative_item</a>:
+        <span class="sel">pkg</span>::<a class="nt" href="#PACKAGE">PACKAGE</a> ((<a class="nt" href="#body_is">body_is</a> (<a class="nt" href="#separate">separate</a> | (<a class="nt" href="#pkg_body_part">pkg_body_part</a> <a class="nt" href="#end_id_opt">end_id_opt</a>)) <a class="nt" href="#SEMI">SEMI</a>) | (<a class="nt" href="#def_id">def_id</a> <a class="nt" href="#spec_decl_part">spec_decl_part</a>))
+        <span class="sel">tsk</span>::<a class="nt" href="#TASK">TASK</a> ((<a class="nt" href="#body_is">body_is</a> (<a class="nt" href="#separate">separate</a> | <a class="nt" href="#body_part">body_part</a>) <a class="nt" href="#SEMI">SEMI</a>) | <a class="nt" href="#task_type_or_single_decl">task_type_or_single_decl</a>)
+        <span class="sel">pro</span>::<a class="nt" href="#PROTECTED">PROTECTED</a> ((<a class="nt" href="#body_is">body_is</a> (<a class="nt" href="#separate">separate</a> | (<a class="nt" href="#prot_op_bodies_opt">prot_op_bodies_opt</a> <a class="nt" href="#end_id_opt">end_id_opt</a>))) | <a class="nt" href="#prot_type_or_single_decl">prot_type_or_single_decl</a>) <a class="nt" href="#SEMI">SEMI</a>
+        <a class="nt" href="#subprog_decl_or_rename_or_inst_or_body">subprog_decl_or_rename_or_inst_or_body</a>
+        <a class="nt" href="#decl_common">decl_common</a>
+</pre><pre><a class="nt" name="body_is">body_is</a>:
+        <a class="nt" href="#BODY">BODY</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#IS">IS</a>
+</pre><pre><a class="nt" name="separate">separate</a>:
+        <a class="nt" href="#SEPARATE">SEPARATE</a>
+</pre><pre><a class="nt" name="pkg_body_part">pkg_body_part</a>:
+        <a class="nt" href="#declarative_part">declarative_part</a> <a class="nt" href="#block_body_opt">block_body_opt</a>
+</pre><pre><a class="nt" name="block_body_opt">block_body_opt</a>:
+        (<a class="nt" href="#BEGIN">BEGIN</a> <a class="nt" href="#handled_stmt_s">handled_stmt_s</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="prot_op_bodies_opt">prot_op_bodies_opt</a>:
+        (<a class="nt" href="#entry_body">entry_body</a> | <a class="nt" href="#subprog_decl_or_body">subprog_decl_or_body</a> | <a class="nt" href="#pragma">pragma</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="subprog_decl_or_body">subprog_decl_or_body</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> ((<a class="nt" href="#IS">IS</a> <a class="nt" href="#body_part">body_part</a>) | ε) <a class="nt" href="#SEMI">SEMI</a>
+        <span class="sel">f</span>::<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#def_designator">def_designator</a> <a class="nt" href="#function_tail">function_tail</a> ((<a class="nt" href="#IS">IS</a> <a class="nt" href="#body_part">body_part</a>) | ε) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="block_body">block_body</a>:
+        <span class="sel">b</span>::<a class="nt" href="#BEGIN">BEGIN</a> <a class="nt" href="#handled_stmt_s">handled_stmt_s</a>
+</pre><pre><a class="nt" name="handled_stmt_s">handled_stmt_s</a>:
+        <a class="nt" href="#statements">statements</a> <a class="nt" href="#except_handler_part_opt">except_handler_part_opt</a>
+</pre><pre><a class="nt" name="statements">statements</a>:
+        (<a class="nt" href="#pragma">pragma</a> | <a class="nt" href="#statement">statement</a>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="statement">statement</a>:
+        <a class="nt" href="#def_label_opt">def_label_opt</a> (<a class="nt" href="#null_stmt">null_stmt</a> | <a class="nt" href="#exit_stmt">exit_stmt</a> | <a class="nt" href="#return_stmt">return_stmt</a> | <a class="nt" href="#goto_stmt">goto_stmt</a> | <a class="nt" href="#delay_stmt">delay_stmt</a> | <a class="nt" href="#abort_stmt">abort_stmt</a> | <a class="nt" href="#raise_stmt">raise_stmt</a> | <a class="nt" href="#requeue_stmt">requeue_stmt</a> | <a class="nt" href="#accept_stmt">accept_stmt</a> | <a class="nt" href="#select_stmt">select_stmt</a> | <a class="nt" href="#if_stmt">if_stmt</a> | <a class="nt" href="#case_stmt">case_stmt</a> | (<a class="nt" href="#loop_stmt">loop_stmt</a> <a class="nt" href="#SEMI">SEMI</a>) | (<a class="nt" href="#block">block</a> <a class="nt" href="#END">END</a> <a class="nt" href="#SEMI">SEMI</a>) | (<a class="nt" href="#statement_identifier">statement_identifier</a> ((<a class="nt" href="#loop_stmt">loop_stmt</a> <a class="nt" href="#id_opt">id_opt</a> <a class="nt" href="#SEMI">SEMI</a>) | (<a class="nt" href="#block">block</a> <a class="nt" href="#end_id_opt">end_id_opt</a> <a class="nt" href="#SEMI">SEMI</a>))) | <a class="nt" href="#call_or_assignment">call_or_assignment</a>)
+</pre><pre><a class="nt" name="def_label_opt">def_label_opt</a>:
+        (<a class="nt" href="#LT_LT">LT_LT</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#GT_GT">GT_GT</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="null_stmt">null_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#NuLL">NuLL</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="if_stmt">if_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#IF">IF</a> <a class="nt" href="#cond_clause">cond_clause</a> <a class="nt" href="#elsifs_opt">elsifs_opt</a> <a class="nt" href="#else_opt">else_opt</a> <a class="nt" href="#END">END</a> <a class="nt" href="#IF">IF</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="cond_clause">cond_clause</a>:
+        <a class="nt" href="#condition">condition</a> <span class="sel">c</span>::<a class="nt" href="#THEN">THEN</a> <a class="nt" href="#statements">statements</a>
+</pre><pre><a class="nt" name="condition">condition</a>:
+        <a class="nt" href="#expression">expression</a>
+</pre><pre><a class="nt" name="elsifs_opt">elsifs_opt</a>:
+        (<a class="nt" href="#ELSIF">ELSIF</a> <a class="nt" href="#cond_clause">cond_clause</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="else_opt">else_opt</a>:
+        (<a class="nt" href="#ELSE">ELSE</a> <a class="nt" href="#statements">statements</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="case_stmt">case_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#CASE">CASE</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#alternative_s">alternative_s</a> <a class="nt" href="#END">END</a> <a class="nt" href="#CASE">CASE</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="alternative_s">alternative_s</a>:
+        <a class="nt" href="#case_statement_alternative">case_statement_alternative</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="case_statement_alternative">case_statement_alternative</a>:
+        <span class="sel">s</span>::<a class="nt" href="#WHEN">WHEN</a> <a class="nt" href="#choice_s">choice_s</a> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a> <a class="nt" href="#statements">statements</a>
+</pre><pre><a class="nt" name="loop_stmt">loop_stmt</a>:
+        <a class="nt" href="#iteration_scheme_opt">iteration_scheme_opt</a> <a class="nt" href="#LOOP">LOOP</a> <a class="nt" href="#statements">statements</a> <a class="nt" href="#END">END</a> <a class="nt" href="#LOOP">LOOP</a>
+</pre><pre><a class="nt" name="iteration_scheme_opt">iteration_scheme_opt</a>:
+        ((<a class="nt" href="#WHILE">WHILE</a> <a class="nt" href="#condition">condition</a>) | (<a class="nt" href="#FOR">FOR</a> <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#IN">IN</a> <a class="nt" href="#reverse_opt">reverse_opt</a> <a class="nt" href="#discrete_subtype_definition">discrete_subtype_definition</a>))<span class="meta">?</span>
+</pre><pre><a class="nt" name="reverse_opt">reverse_opt</a>:
+        <a class="nt" href="#REVERSE">REVERSE</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="id_opt">id_opt</a>:
+        <span class="sel">endid</span>::<a class="nt" href="#definable_operator_symbol">definable_operator_symbol</a>
+        <span class="sel">n</span>::<a class="nt" href="#compound_name">compound_name</a>
+        ε
+</pre><pre><a class="nt" name="end_id_opt">end_id_opt</a>:
+        <a class="nt" href="#END">END</a> <a class="nt" href="#id_opt">id_opt</a>
+</pre><pre><a class="nt" name="statement_identifier">statement_identifier</a>:
+        <span class="sel">n</span>::<a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#COLON">COLON</a>
+</pre><pre><a class="nt" name="block">block</a>:
+        <a class="nt" href="#declare_opt">declare_opt</a> <a class="nt" href="#block_body">block_body</a>
+</pre><pre><a class="nt" name="declare_opt">declare_opt</a>:
+        (<a class="nt" href="#DECLARE">DECLARE</a> <a class="nt" href="#declarative_part">declarative_part</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="exit_stmt">exit_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#EXIT">EXIT</a> <a class="nt" href="#label_name">label_name</a><span class="meta">?</span> (<a class="nt" href="#WHEN">WHEN</a> <a class="nt" href="#condition">condition</a>)<span class="meta">?</span> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="label_name">label_name</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a>
+</pre><pre><a class="nt" name="return_stmt">return_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#RETURN">RETURN</a> <a class="nt" href="#expression">expression</a><span class="meta">?</span> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="goto_stmt">goto_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#GOTO">GOTO</a> <a class="nt" href="#label_name">label_name</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="call_or_assignment">call_or_assignment</a>:
+        <a class="nt" href="#name">name</a> ((<a class="nt" href="#ASSIGN">ASSIGN</a> <a class="nt" href="#expression">expression</a>) | ε) <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="entry_body">entry_body</a>:
+        <span class="sel">e</span>::<a class="nt" href="#ENTRY">ENTRY</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#entry_body_formal_part">entry_body_formal_part</a> <a class="nt" href="#entry_barrier">entry_barrier</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#body_part">body_part</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="entry_body_formal_part">entry_body_formal_part</a>:
+        <a class="nt" href="#entry_index_spec_opt">entry_index_spec_opt</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a>
+</pre><pre><a class="nt" name="entry_index_spec_opt">entry_index_spec_opt</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#FOR">FOR</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#IN">IN</a> <a class="nt" href="#discrete_subtype_definition">discrete_subtype_definition</a>
+        ε
+</pre><pre><a class="nt" name="entry_barrier">entry_barrier</a>:
+        <a class="nt" href="#WHEN">WHEN</a> <a class="nt" href="#condition">condition</a>
+</pre><pre><a class="nt" name="entry_call_stmt">entry_call_stmt</a>:
+        <a class="nt" href="#name">name</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="accept_stmt">accept_stmt</a>:
+        <span class="sel">a</span>::<a class="nt" href="#ACCEPT">ACCEPT</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#entry_index_opt">entry_index_opt</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> ((<a class="nt" href="#DO">DO</a> <a class="nt" href="#handled_stmt_s">handled_stmt_s</a> <a class="nt" href="#end_id_opt">end_id_opt</a> <a class="nt" href="#SEMI">SEMI</a>) | <a class="nt" href="#SEMI">SEMI</a>)
+</pre><pre><a class="nt" name="entry_index_opt">entry_index_opt</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#expression">expression</a>
+        ε
+</pre><pre><a class="nt" name="delay_stmt">delay_stmt</a>:
+        <span class="sel">d</span>::<a class="nt" href="#DELAY">DELAY</a> <a class="nt" href="#until_opt">until_opt</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="until_opt">until_opt</a>:
+        <a class="nt" href="#UNTIL">UNTIL</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="select_stmt">select_stmt</a>:
+        <span class="sel">s</span>::<a class="nt" href="#SELECT">SELECT</a> ((<a class="nt" href="#triggering_alternative">triggering_alternative</a> <a class="nt" href="#THEN">THEN</a> <a class="nt" href="#ABORT">ABORT</a>) | <a class="nt" href="#selective_accept">selective_accept</a> | (<a class="nt" href="#entry_call_alternative">entry_call_alternative</a> ((<a class="nt" href="#OR">OR</a> <a class="nt" href="#delay_alternative">delay_alternative</a>) | (<a class="nt" href="#ELSE">ELSE</a> <a class="nt" href="#statements">statements</a>)))) <a class="nt" href="#END">END</a> <a class="nt" href="#SELECT">SELECT</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="triggering_alternative">triggering_alternative</a>:
+        (<a class="nt" href="#delay_stmt">delay_stmt</a> | <a class="nt" href="#entry_call_stmt">entry_call_stmt</a>) <a class="nt" href="#stmts_opt">stmts_opt</a>
+</pre><pre><a class="nt" name="abortable_part">abortable_part</a>:
+        <a class="nt" href="#stmts_opt">stmts_opt</a>
+</pre><pre><a class="nt" name="entry_call_alternative">entry_call_alternative</a>:
+        <a class="nt" href="#entry_call_stmt">entry_call_stmt</a> <a class="nt" href="#stmts_opt">stmts_opt</a>
+</pre><pre><a class="nt" name="selective_accept">selective_accept</a>:
+        <a class="nt" href="#guard_opt">guard_opt</a> <a class="nt" href="#select_alternative">select_alternative</a> <a class="nt" href="#or_select_opt">or_select_opt</a> <a class="nt" href="#else_opt">else_opt</a>
+</pre><pre><a class="nt" name="guard_opt">guard_opt</a>:
+        (<a class="nt" href="#WHEN">WHEN</a> <a class="nt" href="#condition">condition</a> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a> <a class="nt" href="#pragma">pragma</a><span class="meta">*</span>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="select_alternative">select_alternative</a>:
+        <a class="nt" href="#accept_alternative">accept_alternative</a>
+        <a class="nt" href="#delay_alternative">delay_alternative</a>
+        <span class="sel">t</span>::<a class="nt" href="#TERMINATE">TERMINATE</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="accept_alternative">accept_alternative</a>:
+        <a class="nt" href="#accept_stmt">accept_stmt</a> <a class="nt" href="#stmts_opt">stmts_opt</a>
+</pre><pre><a class="nt" name="delay_alternative">delay_alternative</a>:
+        <a class="nt" href="#delay_stmt">delay_stmt</a> <a class="nt" href="#stmts_opt">stmts_opt</a>
+</pre><pre><a class="nt" name="stmts_opt">stmts_opt</a>:
+        (<a class="nt" href="#pragma">pragma</a> | <a class="nt" href="#statement">statement</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="or_select_opt">or_select_opt</a>:
+        (<a class="nt" href="#OR">OR</a> <a class="nt" href="#guard_opt">guard_opt</a> <a class="nt" href="#select_alternative">select_alternative</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="abort_stmt">abort_stmt</a>:
+        <span class="sel">a</span>::<a class="nt" href="#ABORT">ABORT</a> <a class="nt" href="#name">name</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#name">name</a>)<span class="meta">*</span> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="except_handler_part_opt">except_handler_part_opt</a>:
+        (<a class="nt" href="#EXCEPTION">EXCEPTION</a> <a class="nt" href="#exception_handler">exception_handler</a><span class="meta">+</span>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="exception_handler">exception_handler</a>:
+        <span class="sel">w</span>::<a class="nt" href="#WHEN">WHEN</a> <a class="nt" href="#identifier_colon_opt">identifier_colon_opt</a> <a class="nt" href="#except_choice_s">except_choice_s</a> <a class="nt" href="#RIGHT_SHAFT">RIGHT_SHAFT</a> <a class="nt" href="#statements">statements</a>
+</pre><pre><a class="nt" name="identifier_colon_opt">identifier_colon_opt</a>:
+        (<a class="nt" href="#IDENTIFIER">IDENTIFIER</a> <a class="nt" href="#COLON">COLON</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="except_choice_s">except_choice_s</a>:
+        <a class="nt" href="#exception_choice">exception_choice</a> (<a class="nt" href="#PIPE">PIPE</a> <a class="nt" href="#exception_choice">exception_choice</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="exception_choice">exception_choice</a>:
+        <a class="nt" href="#compound_name">compound_name</a>
+        <a class="nt" href="#OTHERS">OTHERS</a>
+</pre><pre><a class="nt" name="raise_stmt">raise_stmt</a>:
+        <span class="sel">r</span>::<a class="nt" href="#RAISE">RAISE</a> <a class="nt" href="#compound_name">compound_name</a><span class="meta">?</span> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="requeue_stmt">requeue_stmt</a>:
+        <span class="sel">r</span>::<a class="nt" href="#REQUEUE">REQUEUE</a> <a class="nt" href="#name">name</a> (<a class="nt" href="#WITH">WITH</a> <a class="nt" href="#ABORT">ABORT</a>)<span class="meta">?</span> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="operator_call">operator_call</a>:
+        <span class="sel">cs</span>::<a class="nt" href="#CHAR_STRING">CHAR_STRING</a> <a class="nt" href="#operator_call_tail">operator_call_tail</a>
+</pre><pre><a class="nt" name="operator_call_tail">operator_call_tail</a>:
+        <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#value_s">value_s</a> <a class="nt" href="#RPAREN">RPAREN</a>
+</pre><pre><a class="nt" name="value_s">value_s</a>:
+        <a class="nt" href="#value">value</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#value">value</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="expression">expression</a>:
+        <a class="nt" href="#relation">relation</a> ((<span class="sel">a</span>::<a class="nt" href="#AND">AND</a> <a class="nt" href="#THEN">THEN</a><span class="meta">?</span> <a class="nt" href="#relation">relation</a>) | (<span class="sel">o</span>::<a class="nt" href="#OR">OR</a> <a class="nt" href="#ELSE">ELSE</a><span class="meta">?</span> <a class="nt" href="#relation">relation</a>) | (<a class="nt" href="#XOR">XOR</a> <a class="nt" href="#relation">relation</a>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="relation">relation</a>:
+        <a class="nt" href="#simple_expression">simple_expression</a> ((<a class="nt" href="#IN">IN</a> <a class="nt" href="#range_or_mark">range_or_mark</a>) | (<span class="sel">n</span>::<a class="nt" href="#NOT">NOT</a> <a class="nt" href="#IN">IN</a> <a class="nt" href="#range_or_mark">range_or_mark</a>) | (<a class="nt" href="#EQ">EQ</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#NE">NE</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#LT_">LT_</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#LE">LE</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#GT">GT</a> <a class="nt" href="#simple_expression">simple_expression</a>) | (<a class="nt" href="#GE">GE</a> <a class="nt" href="#simple_expression">simple_expression</a>))<span class="meta">?</span>
+</pre><pre><a class="nt" name="range_or_mark">range_or_mark</a>:
+        <a class="nt" href="#range">range</a>
+        <a class="nt" href="#subtype_mark">subtype_mark</a>
+</pre><pre><a class="nt" name="simple_expression">simple_expression</a>:
+        <a class="nt" href="#signed_term">signed_term</a> ((<a class="nt" href="#PLUS">PLUS</a> <a class="nt" href="#signed_term">signed_term</a>) | (<a class="nt" href="#MINUS">MINUS</a> <a class="nt" href="#signed_term">signed_term</a>) | (<a class="nt" href="#CONCAT">CONCAT</a> <a class="nt" href="#signed_term">signed_term</a>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="signed_term">signed_term</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PLUS">PLUS</a> <a class="nt" href="#term">term</a>
+        <span class="sel">m</span>::<a class="nt" href="#MINUS">MINUS</a> <a class="nt" href="#term">term</a>
+        <a class="nt" href="#term">term</a>
+</pre><pre><a class="nt" name="term">term</a>:
+        <a class="nt" href="#factor">factor</a> ((<a class="nt" href="#STAR">STAR</a> <a class="nt" href="#factor">factor</a>) | (<a class="nt" href="#DIV">DIV</a> <a class="nt" href="#factor">factor</a>) | (<a class="nt" href="#MOD">MOD</a> <a class="nt" href="#factor">factor</a>) | (<a class="nt" href="#REM">REM</a> <a class="nt" href="#factor">factor</a>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="factor">factor</a>:
+        <a class="nt" href="#NOT">NOT</a> <a class="nt" href="#primary">primary</a>
+        <a class="nt" href="#ABS">ABS</a> <a class="nt" href="#primary">primary</a>
+        <a class="nt" href="#primary">primary</a> (<a class="nt" href="#EXPON">EXPON</a> <a class="nt" href="#primary">primary</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="primary">primary</a>:
+        <a class="nt" href="#name_or_qualified">name_or_qualified</a>
+        <a class="nt" href="#parenthesized_primary">parenthesized_primary</a>
+        <a class="nt" href="#allocator">allocator</a>
+        <a class="nt" href="#NuLL">NuLL</a>
+        <a class="nt" href="#NUMERIC_LIT">NUMERIC_LIT</a>
+        <a class="nt" href="#CHARACTER_LITERAL">CHARACTER_LITERAL</a>
+        <span class="sel">cs</span>::<a class="nt" href="#CHAR_STRING">CHAR_STRING</a> <a class="nt" href="#operator_call_tail">operator_call_tail</a><span class="meta">?</span>
+</pre><pre><a class="nt" name="name_or_qualified">name_or_qualified</a>:
+        <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> ((<a class="nt" href="#DOT">DOT</a> (<a class="nt" href="#ALL">ALL</a> | <a class="nt" href="#IDENTIFIER">IDENTIFIER</a> | <a class="nt" href="#CHARACTER_LITERAL">CHARACTER_LITERAL</a> | <span class="sel">dummy</span>::<a class="nt" href="#is_operator">is_operator</a>)) | (<span class="sel">p</span>::<a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#value_s">value_s</a> <a class="nt" href="#RPAREN">RPAREN</a>) | (<a class="nt" href="#TIC">TIC</a> (<a class="nt" href="#parenthesized_primary">parenthesized_primary</a> | <a class="nt" href="#attribute_id">attribute_id</a>)))<span class="meta">*</span>
+</pre><pre><a class="nt" name="allocator">allocator</a>:
+        <span class="sel">n</span>::<a class="nt" href="#NEW">NEW</a> <a class="nt" href="#name_or_qualified">name_or_qualified</a>
+</pre><pre><a class="nt" name="subunit">subunit</a>:
+        <span class="sel">sep</span>::<a class="nt" href="#SEPARATE">SEPARATE</a> <a class="nt" href="#LPAREN">LPAREN</a> <a class="nt" href="#compound_name">compound_name</a> <a class="nt" href="#RPAREN">RPAREN</a> (<a class="nt" href="#subprogram_body">subprogram_body</a> | <a class="nt" href="#package_body">package_body</a> | <a class="nt" href="#task_body">task_body</a> | <a class="nt" href="#protected_body">protected_body</a>)
+</pre><pre><a class="nt" name="subprogram_body">subprogram_body</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#def_id">def_id</a> <a class="nt" href="#formal_part_opt">formal_part_opt</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#body_part">body_part</a> <a class="nt" href="#SEMI">SEMI</a>
+        <span class="sel">f</span>::<a class="nt" href="#FUNCTION">FUNCTION</a> <a class="nt" href="#function_tail">function_tail</a> <a class="nt" href="#IS">IS</a> <a class="nt" href="#body_part">body_part</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="package_body">package_body</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PACKAGE">PACKAGE</a> <a class="nt" href="#body_is">body_is</a> <a class="nt" href="#pkg_body_part">pkg_body_part</a> <a class="nt" href="#end_id_opt">end_id_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="task_body">task_body</a>:
+        <span class="sel">t</span>::<a class="nt" href="#TASK">TASK</a> <a class="nt" href="#body_is">body_is</a> <a class="nt" href="#body_part">body_part</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="protected_body">protected_body</a>:
+        <span class="sel">p</span>::<a class="nt" href="#PROTECTED">PROTECTED</a> <a class="nt" href="#body_is">body_is</a> <a class="nt" href="#prot_op_bodies_opt">prot_op_bodies_opt</a> <a class="nt" href="#end_id_opt">end_id_opt</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="ABORT">ABORT</a>:
+        <span class="t">"abort"</span>
+</pre><pre><a class="nt" name="ABS">ABS</a>:
+        <span class="t">"abs"</span>
+</pre><pre><a class="nt" name="ABSTRACT">ABSTRACT</a>:
+        <span class="t">"abstract"</span>
+</pre><pre><a class="nt" name="ACCEPT">ACCEPT</a>:
+        <span class="t">"accept"</span>
+</pre><pre><a class="nt" name="ACCESS">ACCESS</a>:
+        <span class="t">"access"</span>
+</pre><pre><a class="nt" name="ALIASED">ALIASED</a>:
+        <span class="t">"aliased"</span>
+</pre><pre><a class="nt" name="ALL">ALL</a>:
+        <span class="t">"all"</span>
+</pre><pre><a class="nt" name="AND">AND</a>:
+        <span class="t">"and"</span>
+</pre><pre><a class="nt" name="ARRAY">ARRAY</a>:
+        <span class="t">"array"</span>
+</pre><pre><a class="nt" name="AT">AT</a>:
+        <span class="t">"at"</span>
+</pre><pre><a class="nt" name="BEGIN">BEGIN</a>:
+        <span class="t">"begin"</span>
+</pre><pre><a class="nt" name="BODY">BODY</a>:
+        <span class="t">"body"</span>
+</pre><pre><a class="nt" name="CASE">CASE</a>:
+        <span class="t">"case"</span>
+</pre><pre><a class="nt" name="CONSTANT">CONSTANT</a>:
+        <span class="t">"constant"</span>
+</pre><pre><a class="nt" name="DECLARE">DECLARE</a>:
+        <span class="t">"declare"</span>
+</pre><pre><a class="nt" name="DELAY">DELAY</a>:
+        <span class="t">"delay"</span>
+</pre><pre><a class="nt" name="DELTA">DELTA</a>:
+        <span class="t">"delta"</span>
+</pre><pre><a class="nt" name="DIGITS">DIGITS</a>:
+        <span class="t">"digits"</span>
+</pre><pre><a class="nt" name="DO">DO</a>:
+        <span class="t">"do"</span>
+</pre><pre><a class="nt" name="ELSE">ELSE</a>:
+        <span class="t">"else"</span>
+</pre><pre><a class="nt" name="ELSIF">ELSIF</a>:
+        <span class="t">"elsif"</span>
+</pre><pre><a class="nt" name="END">END</a>:
+        <span class="t">"end"</span>
+</pre><pre><a class="nt" name="ENTRY">ENTRY</a>:
+        <span class="t">"entry"</span>
+</pre><pre><a class="nt" name="EXCEPTION">EXCEPTION</a>:
+        <span class="t">"exception"</span>
+</pre><pre><a class="nt" name="EXIT">EXIT</a>:
+        <span class="t">"exit"</span>
+</pre><pre><a class="nt" name="FOR">FOR</a>:
+        <span class="t">"for"</span>
+</pre><pre><a class="nt" name="FUNCTION">FUNCTION</a>:
+        <span class="t">"function"</span>
+</pre><pre><a class="nt" name="GENERIC">GENERIC</a>:
+        <span class="t">"generic"</span>
+</pre><pre><a class="nt" name="GOTO">GOTO</a>:
+        <span class="t">"goto"</span>
+</pre><pre><a class="nt" name="IF">IF</a>:
+        <span class="t">"if"</span>
+</pre><pre><a class="nt" name="IN">IN</a>:
+        <span class="t">"in"</span>
+</pre><pre><a class="nt" name="IS">IS</a>:
+        <span class="t">"is"</span>
+</pre><pre><a class="nt" name="LIMITED">LIMITED</a>:
+        <span class="t">"limited"</span>
+</pre><pre><a class="nt" name="LOOP">LOOP</a>:
+        <span class="t">"loop"</span>
+</pre><pre><a class="nt" name="MOD">MOD</a>:
+        <span class="t">"mod"</span>
+</pre><pre><a class="nt" name="NEW">NEW</a>:
+        <span class="t">"new"</span>
+</pre><pre><a class="nt" name="NOT">NOT</a>:
+        <span class="t">"not"</span>
+</pre><pre><a class="nt" name="NuLL">NuLL</a>:
+        <span class="t">"null"</span>
+</pre><pre><a class="nt" name="OF">OF</a>:
+        <span class="t">"of"</span>
+</pre><pre><a class="nt" name="OR">OR</a>:
+        <span class="t">"or"</span>
+</pre><pre><a class="nt" name="OTHERS">OTHERS</a>:
+        <span class="t">"others"</span>
+</pre><pre><a class="nt" name="OUT">OUT</a>:
+        <span class="t">"out"</span>
+</pre><pre><a class="nt" name="PACKAGE">PACKAGE</a>:
+        <span class="t">"package"</span>
+</pre><pre><a class="nt" name="PRAGMA">PRAGMA</a>:
+        <span class="t">"pragma"</span>
+</pre><pre><a class="nt" name="PRIVATE">PRIVATE</a>:
+        <span class="t">"private"</span>
+</pre><pre><a class="nt" name="PROCEDURE">PROCEDURE</a>:
+        <span class="t">"procedure"</span>
+</pre><pre><a class="nt" name="PROTECTED">PROTECTED</a>:
+        <span class="t">"protected"</span>
+</pre><pre><a class="nt" name="RAISE">RAISE</a>:
+        <span class="t">"raise"</span>
+</pre><pre><a class="nt" name="RANGE">RANGE</a>:
+        <span class="t">"range"</span>
+</pre><pre><a class="nt" name="RECORD">RECORD</a>:
+        <span class="t">"record"</span>
+</pre><pre><a class="nt" name="REM">REM</a>:
+        <span class="t">"rem"</span>
+</pre><pre><a class="nt" name="RENAMES">RENAMES</a>:
+        <span class="t">"renames"</span>
+</pre><pre><a class="nt" name="REQUEUE">REQUEUE</a>:
+        <span class="t">"requeue"</span>
+</pre><pre><a class="nt" name="RETURN">RETURN</a>:
+        <span class="t">"return"</span>
+</pre><pre><a class="nt" name="REVERSE">REVERSE</a>:
+        <span class="t">"reverse"</span>
+</pre><pre><a class="nt" name="SELECT">SELECT</a>:
+        <span class="t">"select"</span>
+</pre><pre><a class="nt" name="SEPARATE">SEPARATE</a>:
+        <span class="t">"separate"</span>
+</pre><pre><a class="nt" name="SUBTYPE">SUBTYPE</a>:
+        <span class="t">"subtype"</span>
+</pre><pre><a class="nt" name="TAGGED">TAGGED</a>:
+        <span class="t">"tagged"</span>
+</pre><pre><a class="nt" name="TASK">TASK</a>:
+        <span class="t">"task"</span>
+</pre><pre><a class="nt" name="TERMINATE">TERMINATE</a>:
+        <span class="t">"terminate"</span>
+</pre><pre><a class="nt" name="THEN">THEN</a>:
+        <span class="t">"then"</span>
+</pre><pre><a class="nt" name="TYPE">TYPE</a>:
+        <span class="t">"type"</span>
+</pre><pre><a class="nt" name="UNTIL">UNTIL</a>:
+        <span class="t">"until"</span>
+</pre><pre><a class="nt" name="USE">USE</a>:
+        <span class="t">"use"</span>
+</pre><pre><a class="nt" name="WHEN">WHEN</a>:
+        <span class="t">"when"</span>
+</pre><pre><a class="nt" name="WHILE">WHILE</a>:
+        <span class="t">"while"</span>
+</pre><pre><a class="nt" name="WITH">WITH</a>:
+        <span class="t">"with"</span>
+</pre><pre><a class="nt" name="XOR">XOR</a>:
+        <span class="t">"xor"</span>
+</pre><pre><a class="nt" name="COMMENT_INTRO">COMMENT_INTRO</a>:
+        <span class="t">"--"</span>
+</pre><pre><a class="nt" name="DOT_DOT">DOT_DOT</a>:
+        <span class="t">".."</span>
+</pre><pre><a class="nt" name="LT_LT">LT_LT</a>:
+        <span class="t">"&lt;&lt;"</span>
+</pre><pre><a class="nt" name="BOX">BOX</a>:
+        <span class="t">"&lt;&gt;"</span>
+</pre><pre><a class="nt" name="GT_GT">GT_GT</a>:
+        <span class="t">"&gt;&gt;"</span>
+</pre><pre><a class="nt" name="ASSIGN">ASSIGN</a>:
+        <span class="t">":="</span>
+</pre><pre><a class="nt" name="RIGHT_SHAFT">RIGHT_SHAFT</a>:
+        <span class="t">"=&gt;"</span>
+</pre><pre><a class="nt" name="NE">NE</a>:
+        <span class="t">"/="</span>
+</pre><pre><a class="nt" name="LE">LE</a>:
+        <span class="t">"&lt;="</span>
+</pre><pre><a class="nt" name="GE">GE</a>:
+        <span class="t">"&gt;="</span>
+</pre><pre><a class="nt" name="EXPON">EXPON</a>:
+        <span class="t">"**"</span>
+</pre><pre><a class="nt" name="PIPE">PIPE</a>:
+        <span class="t">"|"</span>
+</pre><pre><a class="nt" name="CONCAT">CONCAT</a>:
+        <span class="t">"&amp;"</span>
+</pre><pre><a class="nt" name="DOT">DOT</a>:
+        <span class="t">"."</span>
+</pre><pre><a class="nt" name="EQ">EQ</a>:
+        <span class="t">"="</span>
+</pre><pre><a class="nt" name="LT_">LT_</a>:
+        <span class="t">"&lt;"</span>
+</pre><pre><a class="nt" name="GT">GT</a>:
+        <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="PLUS">PLUS</a>:
+        <span class="t">"+"</span>
+</pre><pre><a class="nt" name="MINUS">MINUS</a>:
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="STAR">STAR</a>:
+        <span class="t">"*"</span>
+</pre><pre><a class="nt" name="DIV">DIV</a>:
+        <span class="t">"/"</span>
+</pre><pre><a class="nt" name="LPAREN">LPAREN</a>:
+        <span class="t">"("</span>
+</pre><pre><a class="nt" name="RPAREN">RPAREN</a>:
+        <span class="t">")"</span>
+</pre><pre><a class="nt" name="COLON">COLON</a>:
+        <span class="t">":"</span>
+</pre><pre><a class="nt" name="COMMA">COMMA</a>:
+        <span class="t">","</span>
+</pre><pre><a class="nt" name="SEMI">SEMI</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="TIC">TIC</a>:
+        <span class="t">"'"</span>
+</pre><pre><a class="nt" name="IDENTIFIER">IDENTIFIER</a>:
+        (<span class="t">"a"</span> | <span class="t">"b"</span> | <span class="t">"c"</span> | <span class="t">"d"</span> | <span class="t">"e"</span> | <span class="t">"f"</span> | <span class="t">"g"</span> | <span class="t">"h"</span> | <span class="t">"i"</span> | <span class="t">"j"</span> | <span class="t">"k"</span> | <span class="t">"l"</span> | <span class="t">"m"</span> | <span class="t">"n"</span> | <span class="t">"o"</span> | <span class="t">"p"</span> | <span class="t">"q"</span> | <span class="t">"r"</span> | <span class="t">"s"</span> | <span class="t">"t"</span> | <span class="t">"u"</span> | <span class="t">"v"</span> | <span class="t">"w"</span> | <span class="t">"x"</span> | <span class="t">"y"</span> | <span class="t">"z"</span>) (<span class="t">"_"</span><span class="meta">?</span> (<span class="t">"a"</span> | <span class="t">"b"</span> | <span class="t">"c"</span> | <span class="t">"d"</span> | <span class="t">"e"</span> | <span class="t">"f"</span> | <span class="t">"g"</span> | <span class="t">"h"</span> | <span class="t">"i"</span> | <span class="t">"j"</span> | <span class="t">"k"</span> | <span class="t">"l"</span> | <span class="t">"m"</span> | <span class="t">"n"</span> | <span class="t">"o"</span> | <span class="t">"p"</span> | <span class="t">"q"</span> | <span class="t">"r"</span> | <span class="t">"s"</span> | <span class="t">"t"</span> | <span class="t">"u"</span> | <span class="t">"v"</span> | <span class="t">"w"</span> | <span class="t">"x"</span> | <span class="t">"y"</span> | <span class="t">"z"</span> | <span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span>))<span class="meta">*</span>
+</pre><pre><a class="nt" name="CHARACTER_LITERAL">CHARACTER_LITERAL</a>:
+        <span class="t">"'"</span> <span class="meta">any</span> <span class="t">"'"</span>
+</pre><pre><a class="nt" name="CHAR_STRING">CHAR_STRING</a>:
+        <span class="t">"""</span> <span class="meta">any</span><span class="meta">*</span> <span class="t">"""</span>
+</pre><pre><a class="nt" name="NUMERIC_LIT">NUMERIC_LIT</a>:
+        <a class="nt" href="#DIGIT">DIGIT</a><span class="meta">+</span> ((<span class="t">"#"</span> <a class="nt" href="#BASED_INTEGER">BASED_INTEGER</a> (<span class="t">"."</span> <a class="nt" href="#BASED_INTEGER">BASED_INTEGER</a>)<span class="meta">?</span> <span class="t">"#"</span>) | (<span class="t">"_"</span> <a class="nt" href="#DIGIT">DIGIT</a><span class="meta">+</span>)<span class="meta">+</span>)<span class="meta">?</span> ((<span class="t">"."</span> <a class="nt" href="#DIGIT">DIGIT</a><span class="meta">+</span> (<span class="t">"_"</span> <a class="nt" href="#DIGIT">DIGIT</a><span class="meta">+</span>)<span class="meta">*</span> <a class="nt" href="#EXPONENT">EXPONENT</a><span class="meta">?</span>) | <a class="nt" href="#EXPONENT">EXPONENT</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="DIGIT">DIGIT</a>:
+        <span class="t">"0"</span>
+        <span class="t">"1"</span>
+        <span class="t">"2"</span>
+        <span class="t">"3"</span>
+        <span class="t">"4"</span>
+        <span class="t">"5"</span>
+        <span class="t">"6"</span>
+        <span class="t">"7"</span>
+        <span class="t">"8"</span>
+        <span class="t">"9"</span>
+</pre><pre><a class="nt" name="EXPONENT">EXPONENT</a>:
+        <span class="t">"e"</span> (<span class="t">"+"</span> | <span class="t">"-"</span>)<span class="meta">?</span> <a class="nt" href="#DIGIT">DIGIT</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="EXTENDED_DIGIT">EXTENDED_DIGIT</a>:
+        <a class="nt" href="#DIGIT">DIGIT</a>
+        <span class="t">"a"</span>
+        <span class="t">"b"</span>
+        <span class="t">"c"</span>
+        <span class="t">"d"</span>
+        <span class="t">"e"</span>
+        <span class="t">"f"</span>
+</pre><pre><a class="nt" name="BASED_INTEGER">BASED_INTEGER</a>:
+        <a class="nt" href="#EXTENDED_DIGIT">EXTENDED_DIGIT</a> (<span class="t">"_"</span><span class="meta">?</span> <a class="nt" href="#EXTENDED_DIGIT">EXTENDED_DIGIT</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="WS_">WS_</a>:
+        <span class="t">" "</span>
+        <span class="t">"\t"</span>
+        <span class="t">"\f"</span>
+        <span class="t">"\r\n"</span>
+        <span class="t">"\r"</span>
+        <span class="t">"\n"</span>
+</pre><pre><a class="nt" name="COMMENT">COMMENT</a>:
+        <a class="nt" href="#COMMENT_INTRO">COMMENT_INTRO</a> <span class="meta">any</span><span class="meta">*</span> (<span class="t">"\n"</span> | (<span class="t">"\r"</span> <span class="t">"\n"</span><span class="meta">?</span>))
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

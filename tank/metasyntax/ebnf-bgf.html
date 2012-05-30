@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable EBNF of BGF Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable EBNF of BGF Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+					Vadim Zaytsev, <code>ebnf-bgf.bgf</code>
+				 (11 July 2010 – 11 February 2011) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>28</strong></li><li>Number of top alternatives: <strong>40</strong></li><li>Number of defined nonterminal symbols: <strong>28</strong></li><li>Root nonterminal symbols: <code><a href="#grammar" class="nt">grammar</a></code></li><li>Other top nonterminal symbols: —</li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>20</strong></li><li>Special terminal symbols: <strong>15</strong>: <code class="t">"[", "]", ":", "\n", "        ", " ", "::", "&lt;", "&gt;", "+", "*", "?", """, "(", ")"</code></li><li>Keywords: <strong>5</strong>: <code class="t">"EMPTY", "EPSILON", "ANY", "INT", "STR"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="grammar">grammar</a>:
+        <a class="nt" href="#production">production</a><span class="meta">+</span>
+</pre><pre><a class="nt" name="production">production</a>:
+        <a class="nt" href="#label">label</a><span class="meta">?</span> <span class="meta">string</span> <a class="nt" href="#defining-metasymbol">defining-metasymbol</a> <a class="nt" href="#right-hand-side">right-hand-side</a> <a class="nt" href="#terminator-metasymbol">terminator-metasymbol</a>
+</pre><pre><a class="nt" name="label">label</a>:
+        <span class="t">"["</span> <span class="meta">string</span> <span class="t">"]"</span>
+</pre><pre><a class="nt" name="defining-metasymbol">defining-metasymbol</a>:
+        <span class="t">":"</span>
+</pre><pre><a class="nt" name="right-hand-side">right-hand-side</a>:
+        (<a class="nt" href="#definition-separator-metasymbol">definition-separator-metasymbol</a> <a class="nt" href="#definition">definition</a>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="terminator-metasymbol">terminator-metasymbol</a>:
+        <span class="t">"\n"</span>
+</pre><pre><a class="nt" name="definition-separator-metasymbol">definition-separator-metasymbol</a>:
+        <span class="t">"\n"</span> <span class="t">"        "</span>
+</pre><pre><a class="nt" name="definition">definition</a>:
+        <a class="nt" href="#expression">expression</a> (<span class="t">" "</span> <a class="nt" href="#expression">expression</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="expression">expression</a>:
+        <a class="nt" href="#empty">empty</a>
+        <a class="nt" href="#epsilon">epsilon</a>
+        <a class="nt" href="#any">any</a>
+        <a class="nt" href="#value">value</a>
+        <a class="nt" href="#selectable-expression">selectable-expression</a>
+        <a class="nt" href="#marked-expression">marked-expression</a>
+        <a class="nt" href="#repetition-expression">repetition-expression</a>
+        <a class="nt" href="#optional-expression">optional-expression</a>
+        <a class="nt" href="#terminal">terminal</a>
+        <a class="nt" href="#nonterminal">nonterminal</a>
+        <a class="nt" href="#group-expression">group-expression</a>
+</pre><pre><a class="nt" name="empty">empty</a>:
+        <span class="t">"EMPTY"</span>
+</pre><pre><a class="nt" name="epsilon">epsilon</a>:
+        <span class="t">"EPSILON"</span>
+</pre><pre><a class="nt" name="any">any</a>:
+        <span class="t">"ANY"</span>
+</pre><pre><a class="nt" name="value">value</a>:
+        <span class="t">"INT"</span>
+        <span class="t">"STR"</span>
+</pre><pre><a class="nt" name="selectable-expression">selectable-expression</a>:
+        <span class="sel">selector</span>::<span class="meta">string</span> <span class="t">"::"</span> <a class="nt" href="#expression">expression</a>
+</pre><pre><a class="nt" name="marked-expression">marked-expression</a>:
+        <span class="t">"&lt;"</span> <a class="nt" href="#expression">expression</a> <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="repetition-expression">repetition-expression</a>:
+        <a class="nt" href="#expression">expression</a> <a class="nt" href="#repetition-metasymbol">repetition-metasymbol</a>
+</pre><pre><a class="nt" name="repetition-metasymbol">repetition-metasymbol</a>:
+        <span class="t">"+"</span>
+        <span class="t">"*"</span>
+</pre><pre><a class="nt" name="optional-expression">optional-expression</a>:
+        <a class="nt" href="#expression">expression</a> <a class="nt" href="#optionality-metasymbol">optionality-metasymbol</a>
+</pre><pre><a class="nt" name="optionality-metasymbol">optionality-metasymbol</a>:
+        <span class="t">"?"</span>
+</pre><pre><a class="nt" name="terminal">terminal</a>:
+        <a class="nt" href="#start-terminal-metasymbol">start-terminal-metasymbol</a> <span class="meta">string</span> <a class="nt" href="#end-terminal-metasymbol">end-terminal-metasymbol</a>
+</pre><pre><a class="nt" name="start-terminal-metasymbol">start-terminal-metasymbol</a>:
+        <span class="t">"""</span>
+</pre><pre><a class="nt" name="end-terminal-metasymbol">end-terminal-metasymbol</a>:
+        <span class="t">"""</span>
+</pre><pre><a class="nt" name="nonterminal">nonterminal</a>:
+        <a class="nt" href="#start-nonterminal-metasymbol">start-nonterminal-metasymbol</a> <span class="meta">string</span> <a class="nt" href="#end-nonterminal-metasymbol">end-nonterminal-metasymbol</a>
+</pre><pre><a class="nt" name="start-nonterminal-metasymbol">start-nonterminal-metasymbol</a>:
+        ε
+</pre><pre><a class="nt" name="end-nonterminal-metasymbol">end-nonterminal-metasymbol</a>:
+        ε
+</pre><pre><a class="nt" name="group-expression">group-expression</a>:
+        <a class="nt" href="#start-group-metasymbol">start-group-metasymbol</a> <a class="nt" href="#expression">expression</a> <a class="nt" href="#end-group-metasymbol">end-group-metasymbol</a>
+</pre><pre><a class="nt" name="start-group-metasymbol">start-group-metasymbol</a>:
+        <span class="t">"("</span>
+</pre><pre><a class="nt" name="end-group-metasymbol">end-group-metasymbol</a>:
+        <span class="t">")"</span>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

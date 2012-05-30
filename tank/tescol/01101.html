@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable TESCOL Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable TESCOL Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+					Bernd Fischer, <em>COMP2010: Compiler Engineering</em> course work
+				 (11 March – 22 April 2010) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>77</strong></li><li>Number of top alternatives: <strong>90</strong></li><li>Number of defined nonterminal symbols: <strong>77</strong></li><li>Root nonterminal symbols: —</li><li>Other top nonterminal symbols: <strong>4</strong>: <code><a href="#program" class="nt">program</a>, <a href="#COMMENT" class="nt">COMMENT</a>, <a href="#TROLLY" class="nt">TROLLY</a>, <a href="#WS" class="nt">WS</a></code></li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>108</strong></li><li>Special terminal symbols: <strong>92</strong>: <code class="t">".", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "e", "E", ",", ";", ":", "+", "-", "/", "*", "**", ":=", "?", "==", "!=", "&lt;", "&gt;", "&lt;=", "&gt;=", "/\\", "\\/", "/*", "*/", "{", "}", "(", ")", "A", "B", "C", "D", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "_", "a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "\t", "\r", "\n"</code></li><li>Keywords: <strong>16</strong>: <code class="t">"int", "double", "done", "skip", "trolley", "checkout", "contains", "var", "const", "proc", "trolly", "if", "then", "else", "while", "do"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="program">program</a>:
+        <a class="nt" href="#trolley">trolley</a> <a class="nt" href="#checkout">checkout</a>
+</pre><pre><a class="nt" name="trolley">trolley</a>:
+        <a class="nt" href="#TROLLEY">TROLLEY</a> <a class="nt" href="#varIDs">varIDs</a> <a class="nt" href="#CONTAINS">CONTAINS</a> <a class="nt" href="#decleration">decleration</a>
+</pre><pre><a class="nt" name="checkout">checkout</a>:
+        <a class="nt" href="#CHECKOUT">CHECKOUT</a> <a class="nt" href="#OPENBRACKET">OPENBRACKET</a> <a class="nt" href="#statement">statement</a><span class="meta">*</span> <a class="nt" href="#CLOSEDBRACKET">CLOSEDBRACKET</a> <a class="nt" href="#SEMI">SEMI</a> <a class="nt" href="#DONE">DONE</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="decleration">decleration</a>:
+        (<a class="nt" href="#const_dec">const_dec</a> | <a class="nt" href="#var_dec">var_dec</a> | <a class="nt" href="#proc_dec">proc_dec</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="const_dec">const_dec</a>:
+        <a class="nt" href="#CONSTANT">CONSTANT</a> <a class="nt" href="#conIDs">conIDs</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#BECOMES">BECOMES</a> <a class="nt" href="#mix_fix">mix_fix</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="var_dec">var_dec</a>:
+        <a class="nt" href="#VAR">VAR</a> <a class="nt" href="#varIDs">varIDs</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="proc_dec">proc_dec</a>:
+        <a class="nt" href="#PROCEDURE">PROCEDURE</a> <a class="nt" href="#proc_para">proc_para</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#TYPE">TYPE</a> <a class="nt" href="#proc_becomes">proc_becomes</a>
+</pre><pre><a class="nt" name="proc_para">proc_para</a>:
+        <a class="nt" href="#varIDs">varIDs</a> <a class="nt" href="#OPENPARENTHESIS">OPENPARENTHESIS</a> (<a class="nt" href="#parameter">parameter</a> <a class="nt" href="#COMMA">COMMA</a><span class="meta">?</span>)<span class="meta">*</span> <a class="nt" href="#CLOSEDPARENTHESIS">CLOSEDPARENTHESIS</a>
+</pre><pre><a class="nt" name="parameter">parameter</a>:
+        <a class="nt" href="#varIDs">varIDs</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#TYPE">TYPE</a>
+</pre><pre><a class="nt" name="proc_becomes">proc_becomes</a>:
+        <a class="nt" href="#BECOMES">BECOMES</a> <a class="nt" href="#cond_statements">cond_statements</a>
+</pre><pre><a class="nt" name="atom">atom</a>:
+        <a class="nt" href="#procedure_call">procedure_call</a>
+        <a class="nt" href="#CID">CID</a>
+        <span class="meta">id</span>
+        <a class="nt" href="#OPENPARENTHESIS">OPENPARENTHESIS</a> <a class="nt" href="#mix_fix">mix_fix</a> <a class="nt" href="#CLOSEDPARENTHESIS">CLOSEDPARENTHESIS</a>
+        <a class="nt" href="#INT">INT</a>
+        <a class="nt" href="#DOUBLE">DOUBLE</a>
+</pre><pre><a class="nt" name="negation">negation</a>:
+        <a class="nt" href="#SUB">SUB</a> <a class="nt" href="#atom">atom</a>
+        <a class="nt" href="#atom">atom</a>
+</pre><pre><a class="nt" name="exponential">exponential</a>:
+        <a class="nt" href="#negation">negation</a> (<a class="nt" href="#EXP">EXP</a> <a class="nt" href="#negation">negation</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="multiplication_division">multiplication_division</a>:
+        <a class="nt" href="#exponential">exponential</a> ((<a class="nt" href="#MUL">MUL</a> | <a class="nt" href="#DIV">DIV</a>) <a class="nt" href="#exponential">exponential</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="arithmetic_expression">arithmetic_expression</a>:
+        <a class="nt" href="#multiplication_division">multiplication_division</a> ((<a class="nt" href="#ADD">ADD</a> | <a class="nt" href="#SUB">SUB</a>) <a class="nt" href="#multiplication_division">multiplication_division</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="bool_atom">bool_atom</a>:
+        <a class="nt" href="#arithmetic_expression">arithmetic_expression</a> ((<a class="nt" href="#NONEQUALITY">NONEQUALITY</a> | <a class="nt" href="#EQUALITY">EQUALITY</a> | <a class="nt" href="#MOREOREQUAL">MOREOREQUAL</a> | <a class="nt" href="#LESSOREQUAL">LESSOREQUAL</a> | <a class="nt" href="#MORETHEN">MORETHEN</a> | <a class="nt" href="#LESSTHEN">LESSTHEN</a>) <a class="nt" href="#arithmetic_expression">arithmetic_expression</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="bool_conjunction">bool_conjunction</a>:
+        <a class="nt" href="#bool_atom">bool_atom</a> (<a class="nt" href="#CONJUNCTION">CONJUNCTION</a> <a class="nt" href="#bool_atom">bool_atom</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="bool_disjunction">bool_disjunction</a>:
+        <a class="nt" href="#bool_conjunction">bool_conjunction</a> (<a class="nt" href="#DISJUNCTION">DISJUNCTION</a> <a class="nt" href="#bool_conjunction">bool_conjunction</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="mix_fix">mix_fix</a>:
+        <a class="nt" href="#bool_disjunction">bool_disjunction</a> (<a class="nt" href="#MIX_FIX">MIX_FIX</a> <a class="nt" href="#arithmetic_expression">arithmetic_expression</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#atom">atom</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="procedure_call">procedure_call</a>:
+        <a class="nt" href="#varIDs">varIDs</a> <a class="nt" href="#OPENPARENTHESIS">OPENPARENTHESIS</a> <a class="nt" href="#parameters">parameters</a> <a class="nt" href="#CLOSEDPARENTHESIS">CLOSEDPARENTHESIS</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="parameters">parameters</a>:
+        <a class="nt" href="#mix_fix">mix_fix</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#mix_fix">mix_fix</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="statement">statement</a>:
+        <a class="nt" href="#conditional">conditional</a>
+        <a class="nt" href="#loop">loop</a>
+        <a class="nt" href="#assignment">assignment</a>
+        <a class="nt" href="#skip">skip</a>
+        <a class="nt" href="#procedure_call">procedure_call</a>
+</pre><pre><a class="nt" name="skip">skip</a>:
+        <a class="nt" href="#SKIP">SKIP</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="conditional">conditional</a>:
+        <a class="nt" href="#IF">IF</a> <a class="nt" href="#OPENPARENTHESIS">OPENPARENTHESIS</a> <a class="nt" href="#bool_disjunction">bool_disjunction</a> <a class="nt" href="#CLOSEDPARENTHESIS">CLOSEDPARENTHESIS</a> <a class="nt" href="#then_statement">then_statement</a> <a class="nt" href="#else_statement">else_statement</a>
+</pre><pre><a class="nt" name="then_statement">then_statement</a>:
+        <a class="nt" href="#THEN">THEN</a> <a class="nt" href="#cond_statements">cond_statements</a>
+</pre><pre><a class="nt" name="else_statement">else_statement</a>:
+        <a class="nt" href="#ELSE">ELSE</a> <a class="nt" href="#cond_statements">cond_statements</a>
+</pre><pre><a class="nt" name="loop">loop</a>:
+        <a class="nt" href="#WHILE">WHILE</a> <a class="nt" href="#bool_disjunction">bool_disjunction</a> <a class="nt" href="#do_statement">do_statement</a>
+</pre><pre><a class="nt" name="do_statement">do_statement</a>:
+        <a class="nt" href="#DO">DO</a> <a class="nt" href="#cond_statements">cond_statements</a>
+</pre><pre><a class="nt" name="cond_statements">cond_statements</a>:
+        <a class="nt" href="#OPENBRACKET">OPENBRACKET</a> <a class="nt" href="#statement">statement</a><span class="meta">*</span> <a class="nt" href="#CLOSEDBRACKET">CLOSEDBRACKET</a>
+        <a class="nt" href="#statement">statement</a>
+</pre><pre><a class="nt" name="assignment">assignment</a>:
+        <a class="nt" href="#varIDs">varIDs</a> <a class="nt" href="#BECOMES">BECOMES</a> <a class="nt" href="#mix_fix">mix_fix</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="varIDs">varIDs</a>:
+        <a class="nt" href="#CID">CID</a>
+        <span class="meta">id</span>
+</pre><pre><a class="nt" name="conIDs">conIDs</a>:
+        <a class="nt" href="#CID">CID</a>
+</pre><pre><a class="nt" name="DOUBLE">DOUBLE</a>:
+        <a class="nt" href="#INT">INT</a><span class="meta">?</span> <span class="t">"."</span> (<span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span>)<span class="meta">*</span> ((<span class="t">"e"</span> | <span class="t">"E"</span>) (<a class="nt" href="#ADD">ADD</a> | <a class="nt" href="#SUB">SUB</a>)<span class="meta">?</span> <a class="nt" href="#INT">INT</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="INT">INT</a>:
+        (<span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span>)<span class="meta">+</span>
+</pre><pre><a class="nt" name="COMMENT">COMMENT</a>:
+        <a class="nt" href="#BEGINCOMMENT">BEGINCOMMENT</a> <span class="meta">any</span><span class="meta">*</span> <a class="nt" href="#ENDCOMMENT">ENDCOMMENT</a>
+</pre><pre><a class="nt" name="TYPE">TYPE</a>:
+        <span class="t">"int"</span>
+        <span class="t">"double"</span>
+</pre><pre><a class="nt" name="DONE">DONE</a>:
+        <span class="t">"done"</span>
+</pre><pre><a class="nt" name="SKIP">SKIP</a>:
+        <span class="t">"skip"</span>
+</pre><pre><a class="nt" name="TROLLEY">TROLLEY</a>:
+        <span class="t">"trolley"</span>
+</pre><pre><a class="nt" name="CHECKOUT">CHECKOUT</a>:
+        <span class="t">"checkout"</span>
+</pre><pre><a class="nt" name="CONTAINS">CONTAINS</a>:
+        <span class="t">"contains"</span>
+</pre><pre><a class="nt" name="VAR">VAR</a>:
+        <span class="t">"var"</span>
+</pre><pre><a class="nt" name="CONSTANT">CONSTANT</a>:
+        <span class="t">"const"</span>
+</pre><pre><a class="nt" name="PROCEDURE">PROCEDURE</a>:
+        <span class="t">"proc"</span>
+</pre><pre><a class="nt" name="TROLLY">TROLLY</a>:
+        <span class="t">"trolly"</span>
+</pre><pre><a class="nt" name="COMMA">COMMA</a>:
+        <span class="t">","</span>
+</pre><pre><a class="nt" name="SEMI">SEMI</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="COLON">COLON</a>:
+        <span class="t">":"</span>
+</pre><pre><a class="nt" name="ADD">ADD</a>:
+        <span class="t">"+"</span>
+</pre><pre><a class="nt" name="SUB">SUB</a>:
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="DIV">DIV</a>:
+        <span class="t">"/"</span>
+</pre><pre><a class="nt" name="MUL">MUL</a>:
+        <span class="t">"*"</span>
+</pre><pre><a class="nt" name="EXP">EXP</a>:
+        <span class="t">"**"</span>
+</pre><pre><a class="nt" name="BECOMES">BECOMES</a>:
+        <span class="t">":="</span>
+</pre><pre><a class="nt" name="MIX_FIX">MIX_FIX</a>:
+        <span class="t">"?"</span>
+</pre><pre><a class="nt" name="EQUALITY">EQUALITY</a>:
+        <span class="t">"=="</span>
+</pre><pre><a class="nt" name="NONEQUALITY">NONEQUALITY</a>:
+        <span class="t">"!="</span>
+</pre><pre><a class="nt" name="LESSTHEN">LESSTHEN</a>:
+        <span class="t">"&lt;"</span>
+</pre><pre><a class="nt" name="MORETHEN">MORETHEN</a>:
+        <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="LESSOREQUAL">LESSOREQUAL</a>:
+        <span class="t">"&lt;="</span>
+</pre><pre><a class="nt" name="MOREOREQUAL">MOREOREQUAL</a>:
+        <span class="t">"&gt;="</span>
+</pre><pre><a class="nt" name="CONJUNCTION">CONJUNCTION</a>:
+        <span class="t">"/\\"</span>
+</pre><pre><a class="nt" name="DISJUNCTION">DISJUNCTION</a>:
+        <span class="t">"\\/"</span>
+</pre><pre><a class="nt" name="BEGINCOMMENT">BEGINCOMMENT</a>:
+        <span class="t">"/*"</span>
+</pre><pre><a class="nt" name="ENDCOMMENT">ENDCOMMENT</a>:
+        <span class="t">"*/"</span>
+</pre><pre><a class="nt" name="OPENBRACKET">OPENBRACKET</a>:
+        <span class="t">"{"</span>
+</pre><pre><a class="nt" name="CLOSEDBRACKET">CLOSEDBRACKET</a>:
+        <span class="t">"}"</span>
+</pre><pre><a class="nt" name="OPENPARENTHESIS">OPENPARENTHESIS</a>:
+        <span class="t">"("</span>
+</pre><pre><a class="nt" name="CLOSEDPARENTHESIS">CLOSEDPARENTHESIS</a>:
+        <span class="t">")"</span>
+</pre><pre><a class="nt" name="IF">IF</a>:
+        <span class="t">"if"</span>
+</pre><pre><a class="nt" name="THEN">THEN</a>:
+        <span class="t">"then"</span>
+</pre><pre><a class="nt" name="ELSE">ELSE</a>:
+        <span class="t">"else"</span>
+</pre><pre><a class="nt" name="WHILE">WHILE</a>:
+        <span class="t">"while"</span>
+</pre><pre><a class="nt" name="DO">DO</a>:
+        <span class="t">"do"</span>
+</pre><pre><a class="nt" name="CID">CID</a>:
+        (<span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span>) (<span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span> | <span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span> | <span class="t">"_"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="ID">ID</a>:
+        (<span class="t">"a"</span> | <span class="t">"b"</span> | <span class="t">"c"</span> | <span class="t">"d"</span> | <span class="t">"e"</span> | <span class="t">"f"</span> | <span class="t">"g"</span> | <span class="t">"h"</span> | <span class="t">"i"</span> | <span class="t">"j"</span> | <span class="t">"k"</span> | <span class="t">"l"</span> | <span class="t">"m"</span> | <span class="t">"n"</span> | <span class="t">"o"</span> | <span class="t">"p"</span> | <span class="t">"q"</span> | <span class="t">"r"</span> | <span class="t">"s"</span> | <span class="t">"t"</span> | <span class="t">"u"</span> | <span class="t">"v"</span> | <span class="t">"w"</span> | <span class="t">"x"</span> | <span class="t">"y"</span> | <span class="t">"z"</span> | <span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span>) (<span class="t">"a"</span> | <span class="t">"b"</span> | <span class="t">"c"</span> | <span class="t">"d"</span> | <span class="t">"e"</span> | <span class="t">"f"</span> | <span class="t">"g"</span> | <span class="t">"h"</span> | <span class="t">"i"</span> | <span class="t">"j"</span> | <span class="t">"k"</span> | <span class="t">"l"</span> | <span class="t">"m"</span> | <span class="t">"n"</span> | <span class="t">"o"</span> | <span class="t">"p"</span> | <span class="t">"q"</span> | <span class="t">"r"</span> | <span class="t">"s"</span> | <span class="t">"t"</span> | <span class="t">"u"</span> | <span class="t">"v"</span> | <span class="t">"w"</span> | <span class="t">"x"</span> | <span class="t">"y"</span> | <span class="t">"z"</span> | <span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span> | <span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span> | <span class="t">"_"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="WS">WS</a>:
+        (<span class="t">" "</span> | <span class="t">"\t"</span> | <span class="t">"\r"</span> | <span class="t">"\n"</span>)<span class="meta">+</span>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

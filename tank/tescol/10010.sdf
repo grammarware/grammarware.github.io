@@ -1,0 +1,161 @@
+module Main
+
+exports
+  sorts
+        Program Declaration Constdecl Vardecl Procdecl ParameterList ArithmeticExpression ProcedureApplication ExpressionList Arithmetic Number ConditionalExpression BooleanExpression ConjExpression DisjExpression Expression Statement Assignment Conditional Loop StatementList Operator ArithmeticOperator RelationalOperator Type CONST VAR PROC INTKEYWORD DOUBLEKEYWORD DONE SKIP TROLLEY CHECKOUT CONTAINS IF THEN ELSE WHILE DO CMT INT DOUBLE LPAREN RPAREN CLPAREN CRPAREN WS ID SEMI COLON COMMA DEF QUESTION ADD SUBTRACT DIVIDE MULTIPLY EXPON EQUAL NOTEQUAL MORETHAN LESSTHAN MORETHANEQUAL LESSTHANEQUAL CONJUNC DISJUNC 
+  context-free syntax
+        TROLLEY ID CONTAINS Declaration+ CHECKOUT Statement SEMI DONE SEMI -> Program
+
+        (Constdecl | Vardecl | Procdecl) SEMI -> Declaration
+
+        CONST ID COLON Type DEF ArithmeticExpression -> Constdecl
+
+        VAR ID COLON Type -> Vardecl
+
+        PROC ID LPAREN ParameterList RPAREN COLON Type DEF Statement -> Procdecl
+
+        ID COLON Type (COMMA ID COLON Type)* -> ParameterList
+
+        ProcedureApplication (ConditionalExpression QUESTION ArithmeticExpression COLON ArithmeticExpression)? -> ArithmeticExpression
+
+        Arithmetic (ID LPAREN ExpressionList RPAREN)? -> ProcedureApplication
+
+        ArithmeticExpression (COMMA ArithmeticExpression)* -> ExpressionList
+
+        Number (ArithmeticOperator Number)* -> Arithmetic
+
+        INT
+		| DOUBLE
+		| ID
+		| LPAREN ConditionalExpression RPAREN -> Number
+
+        BooleanExpression (QUESTION Conditional COLON Conditional)? -> ConditionalExpression
+
+        ConjExpression (CONJUNC ConjExpression)* -> BooleanExpression
+
+        DisjExpression (DISJUNC DisjExpression)* -> ConjExpression
+
+        Expression (RelationalOperator Expression)? -> DisjExpression
+
+        Number (ArithmeticOperator Number)* -> Expression
+
+        SKIP
+		| Assignment
+		| Conditional
+		| Loop
+		| StatementList -> Statement
+
+        ID DEF ArithmeticExpression -> Assignment
+
+        IF BooleanExpression THEN Statement ELSE Statement -> Conditional
+
+        WHILE BooleanExpression DO Statement -> Loop
+
+        CLPAREN Statement SEMI (Statement SEMI)* CRPAREN -> StatementList
+
+        DEF
+		| QUESTION
+		| CONJUNC
+		| DISJUNC
+		| ArithmeticOperator
+		| RelationalOperator -> Operator
+
+        ADD
+		| SUBTRACT
+		| DIVIDE
+		| MULTIPLY
+		| EXPON -> ArithmeticOperator
+
+        EQUAL
+		| NOTEQUAL
+		| MORETHAN
+		| LESSTHAN
+		| MORETHANEQUAL
+		| LESSTHANEQUAL -> RelationalOperator
+
+        INTKEYWORD
+		| DOUBLEKEYWORD -> Type
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "int" -> INTKEYWORD
+
+        "double" -> DOUBLEKEYWORD
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "/*" ANY* "*/" -> CMT
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT
+
+        INT? "." (("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* | (("e" | "E") ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+)) -> DOUBLE
+
+        "(" -> LPAREN
+
+        ")" -> RPAREN
+
+        "{" -> CLPAREN
+
+        "}" -> CRPAREN
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        "," -> COMMA
+
+        ":=" -> DEF
+
+        "?" -> QUESTION
+
+        "+" -> ADD
+
+        "-" -> SUBTRACT
+
+        "/" -> DIVIDE
+
+        "*" -> MULTIPLY
+
+        "**" -> EXPON
+
+        "==" -> EQUAL
+
+        "!=" -> NOTEQUAL
+
+        ">" -> MORETHAN
+
+        "<" -> LESSTHAN
+
+        ">=" -> MORETHANEQUAL
+
+        "<=" -> LESSTHANEQUAL
+
+        "/\\" -> CONJUNC
+
+        "\\/" -> DISJUNC

@@ -1,0 +1,177 @@
+module Main
+
+exports
+  sorts
+        Program Declaration Const-dec Var-dec Proc-dec Proc-header Proc-params Proc-body Param-list Param-item Var-id Statement Grouped Assignment Conditional Loop Arith-exp Bool-exp Con-exp Comp-exp Plus-min-exp Mult-div-exp Exp-exp Minus Atom V-id P-id Constant Variable Procedure Params-given Rel-operator Type Typename TROLLEY CONTAINS CHECKOUT DONE CONST VAR PROC SKIP IF THEN ELSE WHILE DO SEMI COLON DEF OPEN CLOSE STST STED COMMA QUEST PLUS MINUS MULT DIV EXP EQ NEQ LESS LESSEQ GRT GRTEQ CONJ DISJ INT DOUBLE INT-T DOUBLE-T CONST-ID VAR-ID WS COM 
+  context-free syntax
+        TROLLEY CONST-ID CONTAINS Declaration* CHECKOUT Statement SEMI DONE SEMI -> Program
+
+        Const-dec
+		| Var-dec
+		| Proc-dec -> Declaration
+
+        CONST CONST-ID COLON Typename DEF Arith-exp SEMI -> Const-dec
+
+        VAR V-id COLON Typename SEMI -> Var-dec
+
+        Proc-header Proc-params Proc-body -> Proc-dec
+
+        PROC P-id -> Proc-header
+
+        OPEN Param-list CLOSE COLON Typename -> Proc-params
+
+        DEF Statement SEMI -> Proc-body
+
+        (Param-item (COMMA Param-item)*)? -> Param-list
+
+        Var-id COLON Typename -> Param-item
+
+        VAR-ID -> Var-id
+
+        Grouped
+		| SKIP
+		| Assignment
+		| Conditional
+		| Loop -> Statement
+
+        STST (Statement SEMI)+ STED -> Grouped
+
+        Variable DEF Arith-exp -> Assignment
+
+        IF Bool-exp THEN Statement ELSE Statement -> Conditional
+
+        WHILE Bool-exp DO Statement -> Loop
+
+        Bool-exp (QUEST Arith-exp COLON Arith-exp)? -> Arith-exp
+
+        Con-exp (DISJ Con-exp)* -> Bool-exp
+
+        Comp-exp (CONJ Comp-exp)* -> Con-exp
+
+        Plus-min-exp (Rel-operator Plus-min-exp)? -> Comp-exp
+
+        Mult-div-exp ((PLUS | MINUS) Mult-div-exp)* -> Plus-min-exp
+
+        Exp-exp ((MULT | DIV) Exp-exp)* -> Mult-div-exp
+
+        Minus (EXP Minus)? -> Exp-exp
+
+        Atom
+		| MINUS Minus -> Minus
+
+        Type
+		| Constant
+		| Variable
+		| Procedure
+		| OPEN Arith-exp CLOSE -> Atom
+
+        idname::(VAR-ID | CONST-ID) -> V-id
+
+        idname::(VAR-ID | CONST-ID) -> P-id
+
+        CONST-ID -> Constant
+
+        VAR-ID -> Variable
+
+        VAR-ID OPEN Params-given CLOSE -> Procedure
+
+        (Arith-exp (COMMA Arith-exp)*)? -> Params-given
+
+        EQ
+		| NEQ
+		| LESS
+		| LESSEQ
+		| GRT
+		| GRTEQ -> Rel-operator
+
+        INT-T
+		| DOUBLE-T -> Type
+
+        INT
+		| DOUBLE -> Typename
+
+        "trolley" -> TROLLEY
+
+        "contains" -> CONTAINS
+
+        "checkout" -> CHECKOUT
+
+        "done" -> DONE
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "skip" -> SKIP
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        ":=" -> DEF
+
+        "(" -> OPEN
+
+        ")" -> CLOSE
+
+        "{" -> STST
+
+        "}" -> STED
+
+        "," -> COMMA
+
+        "?" -> QUEST
+
+        "+" -> PLUS
+
+        "-" -> MINUS
+
+        "*" -> MULT
+
+        "/" -> DIV
+
+        "**" -> EXP
+
+        "==" -> EQ
+
+        "!=" -> NEQ
+
+        "<" -> LESS
+
+        "<=" -> LESSEQ
+
+        ">" -> GRT
+
+        ">=" -> GRTEQ
+
+        "/\\" -> CONJ
+
+        "\\/" -> DISJ
+
+        "int" -> INT
+
+        "double" -> DOUBLE
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT-T
+
+        INT-T? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") INT-T)? -> DOUBLE-T
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONST-ID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VAR-ID
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        "/*" ANY* "*/" -> COM

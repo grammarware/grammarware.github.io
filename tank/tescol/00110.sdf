@@ -1,0 +1,172 @@
+module Main
+
+exports
+  sorts
+        Program Term Unary Mult Add CondExpr Relational Conjunction Expression ProcedureApplication ProcedureParams Declarations ConstantDeclaration VariableDeclaration ProcedureDeclaration Parameters Parameter Statement AssignmentStatement SkipStatement WhileStatement IfStatement SEMI COLON COMMA DEFINE-AS EQUAL PLUS MINUS MULT DIV EXPON VAR PROC CONST DONE SKIP TROLLEY CHECKOUT CONTAINS IF THEN ELSE WHILE DO EXPR COND IFELSE PARAM TESCO VARDECL CONSTDECL PROCDECL BODY PROCAPP LEFT-PAREN RIGHT-PAREN LEFT-BRACKET RIGHT-BRACKET TYPE CONST-ID VAR-ID WS COMMENT INTEGER DOUBLE EQUALITY NOT-EQUAL LESS-THAN LESS-THAN-OR-EQUAL GREATER-THAN GREATER-THAN-OR-EQUAL Q-MARK CONJ DISJUNCT 
+  context-free syntax
+        TROLLEY CONST-ID CONTAINS Declarations* CHECKOUT Statement* SEMI DONE SEMI -> Program
+
+        LEFT-PAREN Expression RIGHT-PAREN
+		| ProcedureApplication
+		| v2::VAR-ID
+		| CONST-ID
+		| INTEGER
+		| DOUBLE -> Term
+
+        (PLUS | MINUS)* Term -> Unary
+
+        Unary ((MULT | DIV | EXPON) Unary)* -> Mult
+
+        Mult ((PLUS | MINUS) Mult)* -> Add
+
+        Add (Q-MARK Add COLON Add)? -> CondExpr
+
+        CondExpr ((EQUALITY | NOT-EQUAL | LESS-THAN | LESS-THAN-OR-EQUAL | GREATER-THAN | GREATER-THAN-OR-EQUAL) CondExpr)* -> Relational
+
+        Relational (CONJ Relational)* -> Conjunction
+
+        Conjunction (DISJUNCT Conjunction)* -> Expression
+
+        VAR-ID LEFT-PAREN p::ProcedureParams RIGHT-PAREN -> ProcedureApplication
+
+        Expression (COMMA Expression)* -> ProcedureParams
+
+        ConstantDeclaration
+		| VariableDeclaration
+		| ProcedureDeclaration -> Declarations
+
+        CONST CONST-ID COLON TYPE DEFINE-AS Add SEMI -> ConstantDeclaration
+
+        VAR VAR-ID COLON TYPE SEMI -> VariableDeclaration
+
+        PROC VAR-ID LEFT-PAREN Parameters RIGHT-PAREN COLON TYPE DEFINE-AS Statement -> ProcedureDeclaration
+
+        Parameter (COMMA Parameter)* -> Parameters
+
+        VAR-ID COLON TYPE -> Parameter
+
+        AssignmentStatement
+		| WhileStatement
+		| IfStatement
+		| SkipStatement
+		| LEFT-BRACKET (AssignmentStatement | WhileStatement | IfStatement | SkipStatement)+ RIGHT-BRACKET -> Statement
+
+        VAR-ID DEFINE-AS Expression SEMI -> AssignmentStatement
+
+        SKIP SEMI -> SkipStatement
+
+        WHILE Expression DO Statement -> WhileStatement
+
+        IF Expression THEN s1::Statement ELSE s2::Statement -> IfStatement
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        "," -> COMMA
+
+        ":=" -> DEFINE-AS
+
+        "=" -> EQUAL
+
+        "+" -> PLUS
+
+        "-" -> MINUS
+
+        "*" -> MULT
+
+        "/" -> DIV
+
+        "**" -> EXPON
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        "const" -> CONST
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "expr" -> EXPR
+
+        "cond" -> COND
+
+        "ifelse" -> IFELSE
+
+        "param" -> PARAM
+
+        "tesco" -> TESCO
+
+        "vardecl" -> VARDECL
+
+        "constdecl" -> CONSTDECL
+
+        "procdecl" -> PROCDECL
+
+        "body" -> BODY
+
+        "procApp" -> PROCAPP
+
+        "(" -> LEFT-PAREN
+
+        ")" -> RIGHT-PAREN
+
+        "{" -> LEFT-BRACKET
+
+        "}" -> RIGHT-BRACKET
+
+        "int"
+		| "double" -> TYPE
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONST-ID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VAR-ID
+
+        " "
+		| "\t"
+		| "\f"
+		| "\r\n"
+		| "\r"
+		| "\n" -> WS
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INTEGER
+
+        INTEGER? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* (("e" | "E") INTEGER)? -> DOUBLE
+
+        "==" -> EQUALITY
+
+        "!=" -> NOT-EQUAL
+
+        "<" -> LESS-THAN
+
+        "<=" -> LESS-THAN-OR-EQUAL
+
+        ">" -> GREATER-THAN
+
+        ">=" -> GREATER-THAN-OR-EQUAL
+
+        "?" -> Q-MARK
+
+        "/\\" -> CONJ
+
+        "\\/" -> DISJUNCT

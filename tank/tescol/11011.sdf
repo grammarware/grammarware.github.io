@@ -1,0 +1,148 @@
+module Main
+
+exports
+  sorts
+        Program Dec-var Declarations Dec-const Ids Dec-proc Dec-types Param-list Param-element Statements Statement Statement-group Assign Conditional Loop Expr Exp-bools Exp-and Exp-comp Exp-addsub Exp-multi Exp-exp Atom Argument-list IF THEN ELSE WHILE DO DONE SKIP TROLLEY CHECKOUT CONTAINS CONST VAR PROC DEFAS SEMI COLON COMMA TYPE-INT TYPE-DOUBLE INT DOUBLE LPAR RPAR LCB RCB QMARK ARITH-ADD ARITH-SUB ARITH-MUL ARITH-DIV ARITH-EXP COND-EQUAL COND-NONEQUAL COND-COMP-GREAT COND-COMP-GREATE COND-COMP-LESS COND-COMP-LESSE CONJ DISJ WS COMMENT CONST-ID ID 
+  context-free syntax
+        TROLLEY CONST-ID Declarations Statements DONE SEMI -> Program
+
+        VAR Ids COLON Dec-types SEMI -> Dec-var
+
+        CONTAINS (Dec-const | Dec-var | Dec-proc)* -> Declarations
+
+        CONST CONST-ID COLON Dec-types DEFAS Expr SEMI -> Dec-const
+
+        ID
+		| CONST-ID -> Ids
+
+        PROC ID LPAR Param-list COLON Dec-types DEFAS Statement SEMI -> Dec-proc
+
+        TYPE-INT
+		| TYPE-DOUBLE -> Dec-types
+
+        Param-element? (COMMA Param-element)* -> Param-list
+
+        ID COLON Dec-types -> Param-element
+
+        CHECKOUT Statement SEMI -> Statements
+
+        Assign
+		| SKIP
+		| Conditional
+		| Loop
+		| Statement-group -> Statement
+
+        LCB Statement (SEMI Statement)* RCB -> Statement-group
+
+        Ids DEFAS Expr -> Assign
+
+        IF Exp-bools THEN Statement ELSE Statement -> Conditional
+
+        WHILE Exp-bools DO Statement -> Loop
+
+        Exp-bools (QMARK Expr COLON Expr)? -> Expr
+
+        Exp-and (DISJ Exp-and)* -> Exp-bools
+
+        Exp-comp (CONJ Exp-comp)* -> Exp-and
+
+        Exp-addsub ((COND-COMP-GREATE | COND-COMP-GREAT | COND-COMP-LESS | COND-COMP-LESSE | COND-EQUAL | COND-NONEQUAL) Exp-addsub)? -> Exp-comp
+
+        Exp-multi ((ARITH-ADD | ARITH-SUB) Exp-multi)* -> Exp-addsub
+
+        Exp-exp ((ARITH-MUL | ARITH-DIV) Exp-exp)* -> Exp-multi
+
+        Atom (ARITH-EXP Atom)* -> Exp-exp
+
+        INT
+		| DOUBLE
+		| Ids Argument-list?
+		| LPAR Expr RPAR -> Atom
+
+        LPAR (Expr (COMMA Expr)*)? RPAR -> Argument-list
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "const" -> CONST
+
+        "var" -> VAR
+
+        "proc" -> PROC
+
+        ":=" -> DEFAS
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        "," -> COMMA
+
+        "int" -> TYPE-INT
+
+        "double" -> TYPE-DOUBLE
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* ("e" ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+)? -> DOUBLE
+
+        "(" -> LPAR
+
+        ")" -> RPAR
+
+        "{" -> LCB
+
+        "}" -> RCB
+
+        "?" -> QMARK
+
+        "+" -> ARITH-ADD
+
+        "-" -> ARITH-SUB
+
+        "*" -> ARITH-MUL
+
+        "/" -> ARITH-DIV
+
+        "**" -> ARITH-EXP
+
+        "==" -> COND-EQUAL
+
+        "!=" -> COND-NONEQUAL
+
+        "<" -> COND-COMP-GREAT
+
+        "<=" -> COND-COMP-GREATE
+
+        ">" -> COND-COMP-LESS
+
+        ">=" -> COND-COMP-LESSE
+
+        "/\\" -> CONJ
+
+        "\\/" -> DISJ
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "_" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")* -> CONST-ID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> ID

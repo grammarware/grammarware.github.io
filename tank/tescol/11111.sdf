@@ -1,0 +1,162 @@
+module Main
+
+exports
+  sorts
+        Program Id Declaration Constant-declaration Variable-declaration Procedure-declaration Param-list Type Term Proc Unary Negation Expon Mult Add Relational Conjunction Disjunction Expression Relational-op Statement Single-statement Assignment Conditional Loop Multiple-statement SEMI COLON ASSIGN LPAREN RPAREN LBRACE RBRACE COMMA ADDITION SUBTRACTION DIVISION MULTIPLICATION EXPONENTIATION EQUAL NONEQUAL GREATER GREATER-EQUAL LESS LESS-EQUAL CONJUNCTION DISJUNCTION MIXFIX DONE SKIP TROLLEY CHECKOUT CONTAINS VAR CONST PROC INT DOUBLE IF THEN ELSE WHILE DO CONSTID VARID NEWLINE WS COMMENT INT-NUMBER DOUBLE-NUMBER 
+  context-free syntax
+        TROLLEY CONSTID CONTAINS Declaration* CHECKOUT Statement SEMI DONE SEMI -> Program
+
+        CONSTID
+		| VARID -> Id
+
+        Constant-declaration
+		| Variable-declaration
+		| Procedure-declaration -> Declaration
+
+        CONST CONSTID COLON Type ASSIGN Expression SEMI -> Constant-declaration
+
+        VAR Id COLON Type SEMI -> Variable-declaration
+
+        PROC Id LPAREN Param-list RPAREN COLON Type ASSIGN Statement SEMI -> Procedure-declaration
+
+        (Id COLON Type (COMMA Id COLON Type)*)? -> Param-list
+
+        INT
+		| DOUBLE -> Type
+
+        INT-NUMBER
+		| DOUBLE-NUMBER
+		| LPAREN Expression RPAREN
+		| Id
+		| Proc -> Term
+
+        Id LPAREN (Term (COMMA Term)*)? RPAREN -> Proc
+
+        Negation* Term -> Unary
+
+        SUBTRACTION -> Negation
+
+        Unary (EXPONENTIATION Unary)* -> Expon
+
+        Expon ((MULTIPLICATION | DIVISION) Expon)* -> Mult
+
+        Mult ((ADDITION | SUBTRACTION) Mult)* -> Add
+
+        Add (Relational-op Add)* -> Relational
+
+        Relational (CONJUNCTION Relational)* -> Conjunction
+
+        Conjunction (DISJUNCTION Conjunction)* -> Disjunction
+
+        Disjunction (MIXFIX Expression COLON Expression)? -> Expression
+
+        EQUAL
+		| NONEQUAL
+		| GREATER
+		| GREATER-EQUAL
+		| LESS
+		| LESS-EQUAL -> Relational-op
+
+        Single-statement
+		| Multiple-statement -> Statement
+
+        SKIP
+		| Assignment
+		| Conditional
+		| Loop -> Single-statement
+
+        Id ASSIGN Expression -> Assignment
+
+        IF Expression THEN Statement ELSE Statement -> Conditional
+
+        WHILE Expression DO Statement -> Loop
+
+        LBRACE Single-statement (SEMI Single-statement)* RBRACE -> Multiple-statement
+
+        ";" -> SEMI
+
+        ":" -> COLON
+
+        ":=" -> ASSIGN
+
+        "(" -> LPAREN
+
+        ")" -> RPAREN
+
+        "{" -> LBRACE
+
+        "}" -> RBRACE
+
+        "," -> COMMA
+
+        "+" -> ADDITION
+
+        "-" -> SUBTRACTION
+
+        "/" -> DIVISION
+
+        "*" -> MULTIPLICATION
+
+        "**" -> EXPONENTIATION
+
+        "==" -> EQUAL
+
+        "!=" -> NONEQUAL
+
+        ">" -> GREATER
+
+        ">=" -> GREATER-EQUAL
+
+        "<" -> LESS
+
+        "<=" -> LESS-EQUAL
+
+        "/\\" -> CONJUNCTION
+
+        "\\/" -> DISJUNCTION
+
+        "?" -> MIXFIX
+
+        "done" -> DONE
+
+        "skip" -> SKIP
+
+        "trolley" -> TROLLEY
+
+        "checkout" -> CHECKOUT
+
+        "contains" -> CONTAINS
+
+        "var" -> VAR
+
+        "const" -> CONST
+
+        "proc" -> PROC
+
+        "int" -> INT
+
+        "double" -> DOUBLE
+
+        "if" -> IF
+
+        "then" -> THEN
+
+        "else" -> ELSE
+
+        "while" -> WHILE
+
+        "do" -> DO
+
+        ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> CONSTID
+
+        ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z") ("a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z" | "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "_")* -> VARID
+
+        "\r"? "\n" -> NEWLINE
+
+        (" " | "\t" | "\r" | "\n")+ -> WS
+
+        "/*" ANY* "*/" -> COMMENT
+
+        ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+ -> INT-NUMBER
+
+        (("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+)? "." ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+? (("e" | "E") ("+" | "-")? ("0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9")+)? -> DOUBLE-NUMBER

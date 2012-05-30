@@ -1,0 +1,33 @@
+module Main
+
+exports
+  sorts
+        Apply Argument Binary Expr Function IfThenElse Literal ObjectFactory Ops Package-info Program 
+  context-free syntax
+        Name::STR Arg::(ANY*) -> Apply
+
+        Name::STR -> Argument
+
+        Ops::Ops Left::Expr Right::Expr -> Binary
+
+        Apply
+		| Argument
+		| Binary
+		| IfThenElse
+		| Literal -> Expr
+
+        Name::STR Arg::(ANY*) Rhs::Expr -> Function
+
+        IfExpr::Expr ThenExpr::Expr ElseExpr::Expr -> IfThenElse
+
+        Info::INT -> Literal
+
+         -> ObjectFactory
+
+        EQUAL::
+		| PLUS::
+		| MINUS:: -> Ops
+
+        EMPTY -> Package-info
+
+        Function::(ANY*) -> Program

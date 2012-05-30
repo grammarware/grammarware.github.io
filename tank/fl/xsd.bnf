@@ -1,0 +1,26 @@
+Program:
+        function::Function+
+Fragment:
+        Expr
+Function:
+        name::STR arg::STR+ rhs::Expr
+Expr:
+        Literal
+        Argument
+        Binary
+        IfThenElse
+        Apply
+Literal:
+        info::INT
+Argument:
+        name::STR
+Binary:
+        ops::Ops left::Expr right::Expr
+Ops:
+        Equal::EPSILON
+        Plus::EPSILON
+        Minus::EPSILON
+IfThenElse:
+        ifExpr::Expr thenExpr::Expr elseExpr::Expr
+Apply:
+        name::STR arg::Expr+

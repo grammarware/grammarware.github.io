@@ -1,0 +1,30 @@
+module Main
+
+exports
+ context-free start-symbols specification
+  sorts
+        Specification Rule Disjunction Conjunction Term Basis Repetition Alternation Group 
+  context-free syntax
+        Rule+ -> Specification
+
+        Ident ":" Disjunction ";" -> Rule
+
+        Conjunction ("|" Conjunction)* -> Disjunction
+
+        Term+ -> Conjunction
+
+        Basis Repetition? -> Term
+
+        Ident
+		| Literal
+		| "%epsilon"
+		| Alternation
+		| Group -> Basis
+
+        "+"
+		| "*"
+		| "?" -> Repetition
+
+        "{" Basis Basis "}" Repetition -> Alternation
+
+        "(" Disjunction ")" -> Group

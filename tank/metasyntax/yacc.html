@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable YACC Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable YACC Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+					Paul Klint, <code>YACC.sdf</code>
+				 (28 March 2007) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>6</strong></li><li>Number of top alternatives: <strong>12</strong></li><li>Number of defined nonterminal symbols: <strong>6</strong></li><li>Root nonterminal symbols: <code><a href="#Grammar" class="nt">Grammar</a></code></li><li>Other top nonterminal symbols: —</li><li>Bottom nonterminal symbols: <strong>7</strong>: <code><a href="#C-declarations" class="nt">C-declarations</a>, <a href="#Extra-C-code" class="nt">Extra-C-code</a>, <a href="#Terminal" class="nt">Terminal</a>, <a href="#Literal" class="nt">Literal</a>, <a href="#String" class="nt">String</a>, <a href="#NonTerminal" class="nt">NonTerminal</a>, <a href="#C-code" class="nt">C-code</a></code></li><li>Number of used terminal symbols: <strong>10</strong></li><li>Special terminal symbols: <strong>10</strong>: <code class="t">"%%", "%token", "%left", "%right", "%nonassoc", "%start", ":", "|", ";", "%prec"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="Grammar">Grammar</a>:
+        <a class="nt" href="#C-declarations">C-declarations</a> <a class="nt" href="#Yacc-declarations">Yacc-declarations</a> <span class="t">"%%"</span> <a class="nt" href="#Grammar-rules">Grammar-rules</a> <span class="t">"%%"</span> <a class="nt" href="#Extra-C-code">Extra-C-code</a>
+</pre><pre><a class="nt" name="Yacc-declarations">Yacc-declarations</a>:
+        <a class="nt" href="#Yacc-declaration">Yacc-declaration</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="Yacc-declaration">Yacc-declaration</a>:
+        (<span class="t">"%token"</span> | <span class="t">"%left"</span> | <span class="t">"%right"</span> | <span class="t">"%nonassoc"</span>) (<a class="nt" href="#Terminal">Terminal</a> | <a class="nt" href="#Literal">Literal</a>)<span class="meta">+</span> <a class="nt" href="#String">String</a><span class="meta">?</span>
+        <span class="t">"%start"</span> <a class="nt" href="#Terminal">Terminal</a>
+</pre><pre><a class="nt" name="Grammar-rules">Grammar-rules</a>:
+        <a class="nt" href="#Rule">Rule</a><span class="meta">*</span>
+</pre><pre><a class="nt" name="Rule">Rule</a>:
+        <a class="nt" href="#NonTerminal">NonTerminal</a> <span class="t">":"</span> (<a class="nt" href="#Expression">Expression</a><span class="meta">?</span> (<span class="t">"|"</span> <a class="nt" href="#Expression">Expression</a><span class="meta">?</span>)<span class="meta">*</span>)<span class="meta">?</span> <span class="t">";"</span>
+</pre><pre><a class="nt" name="Expression">Expression</a>:
+        <a class="nt" href="#Terminal">Terminal</a>
+        <a class="nt" href="#NonTerminal">NonTerminal</a>
+        <a class="nt" href="#Literal">Literal</a>
+        <span class="t">"%prec"</span> <a class="nt" href="#Terminal">Terminal</a>
+        <a class="nt" href="#C-code">C-code</a>
+        <a class="nt" href="#Expression">Expression</a> <a class="nt" href="#Expression">Expression</a>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

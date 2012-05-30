@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable TESCOL Grammar</title><style type="text/css">
+		          .label, .sel { color: green; }
+		          .marked { background-color: #FFE5B4;}
+		          .nt { color: blue; font-weight: bold; }
+		          .t { color: red;  font-style:italic; }
+		          .meta { color: green; font-style:italic; font-family: Roman, "Times New Roman", serif; }
+		          .b { text-align: right; font-style:italic;}
+		          .date { font-size: small; }
+		          pre
+		          {
+		          border: 1px solid black;
+		          border-spacing: 2px;
+		          border-collapse: collapse;
+		          background-color: #ECECEC;
+		          }
+		        </style></head><body><h1>Browsable TESCOL Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+					Bernd Fischer, <em>COMP2010: Compiler Engineering</em> course work
+				 (11 March – 22 April 2010) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>68</strong></li><li>Number of top alternatives: <strong>86</strong></li><li>Number of defined nonterminal symbols: <strong>68</strong></li><li>Root nonterminal symbols: <code><a href="#program" class="nt">program</a></code></li><li>Other top nonterminal symbols: —</li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>101</strong></li><li>Special terminal symbols: <strong>86</strong>: <code class="t">"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "_", ":", ":=", "-", "+", ".", "e", "a", "b", "c", "d", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "(", ")", "**", "*", "/", ",", "==", "!=", "&lt;", "&gt;", "&lt;=", "&gt;=", "/\\", "\\/", "?", ";", "{", "}"</code></li><li>Keywords: <strong>15</strong>: <code class="t">"trolley", "contains", "const", "int", "double", "var", "proc", "skip", "if", "then", "else", "while", "do", "checkout", "done"</code></li></ul><h2>Syntax</h2><pre><a class="nt" name="program">program</a>:
+        <a class="nt" href="#TROLLEY">TROLLEY</a> <a class="nt" href="#CONSTANT">CONSTANT</a> <a class="nt" href="#CONTAINS">CONTAINS</a> <a class="nt" href="#declaration">declaration</a><span class="meta">*</span> <a class="nt" href="#CHECKOUT">CHECKOUT</a> <a class="nt" href="#statementlist">statementlist</a> <a class="nt" href="#SEMI">SEMI</a> <a class="nt" href="#DONE">DONE</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="TROLLEY">TROLLEY</a>:
+        <span class="t">"trolley"</span>
+</pre><pre><a class="nt" name="CONSTANT">CONSTANT</a>:
+        (<span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span>) (<span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span> | <span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span> | <span class="t">"_"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="CONTAINS">CONTAINS</a>:
+        <span class="t">"contains"</span>
+</pre><pre><a class="nt" name="declaration">declaration</a>:
+        <a class="nt" href="#consdec">consdec</a>
+        <a class="nt" href="#vardec">vardec</a>
+        <a class="nt" href="#procdec">procdec</a>
+</pre><pre><a class="nt" name="consdec">consdec</a>:
+        <a class="nt" href="#CONST">CONST</a> <a class="nt" href="#CONSTANT">CONSTANT</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#type">type</a> <a class="nt" href="#DEFAS">DEFAS</a> <a class="nt" href="#aexpr">aexpr</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="CONST">CONST</a>:
+        <span class="t">"const"</span>
+</pre><pre><a class="nt" name="COLON">COLON</a>:
+        <span class="t">":"</span>
+</pre><pre><a class="nt" name="type">type</a>:
+        <a class="nt" href="#INTEGER">INTEGER</a>
+        <a class="nt" href="#DOUBLE">DOUBLE</a>
+</pre><pre><a class="nt" name="INTEGER">INTEGER</a>:
+        <span class="t">"int"</span>
+</pre><pre><a class="nt" name="DOUBLE">DOUBLE</a>:
+        <span class="t">"double"</span>
+</pre><pre><a class="nt" name="DEFAS">DEFAS</a>:
+        <span class="t">":="</span>
+</pre><pre><a class="nt" name="aexpr">aexpr</a>:
+        <a class="nt" href="#cexpr">cexpr</a>
+</pre><pre><a class="nt" name="cexpr">cexpr</a>:
+        <a class="nt" href="#bexpr">bexpr</a> (<a class="nt" href="#QM">QM</a> <a class="nt" href="#cexpr">cexpr</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#cexpr">cexpr</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="bexpr">bexpr</a>:
+        <a class="nt" href="#con">con</a> (<a class="nt" href="#DISJUN">DISJUN</a> <a class="nt" href="#con">con</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="con">con</a>:
+        <a class="nt" href="#ropexpr">ropexpr</a> (<a class="nt" href="#CONJUN">CONJUN</a> <a class="nt" href="#ropexpr">ropexpr</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="ropexpr">ropexpr</a>:
+        <a class="nt" href="#expr">expr</a> (<a class="nt" href="#rop">rop</a> <a class="nt" href="#expr">expr</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="expr">expr</a>:
+        <a class="nt" href="#multExpr">multExpr</a> ((<a class="nt" href="#PLUS">PLUS</a> | <a class="nt" href="#MINUS">MINUS</a>) <a class="nt" href="#multExpr">multExpr</a>)<span class="meta">*</span>
+        <a class="nt" href="#procapp">procapp</a>
+</pre><pre><a class="nt" name="multExpr">multExpr</a>:
+        <a class="nt" href="#expon">expon</a> ((<a class="nt" href="#MULT">MULT</a> | <a class="nt" href="#DIV">DIV</a>) <a class="nt" href="#expon">expon</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="expon">expon</a>:
+        <a class="nt" href="#sign">sign</a> (<a class="nt" href="#EXPON">EXPON</a> <a class="nt" href="#sign">sign</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="sign">sign</a>:
+        (<a class="nt" href="#MINUS">MINUS</a> | <a class="nt" href="#PLUS">PLUS</a>)<span class="meta">?</span> <a class="nt" href="#atom">atom</a>
+</pre><pre><a class="nt" name="MINUS">MINUS</a>:
+        <span class="t">"-"</span>
+</pre><pre><a class="nt" name="PLUS">PLUS</a>:
+        <span class="t">"+"</span>
+</pre><pre><a class="nt" name="atom">atom</a>:
+        <a class="nt" href="#number">number</a>
+        <a class="nt" href="#VARIABLE">VARIABLE</a>
+        <a class="nt" href="#CONSTANT">CONSTANT</a>
+        <a class="nt" href="#LPAR">LPAR</a> <a class="nt" href="#cexpr">cexpr</a> <a class="nt" href="#RPAR">RPAR</a>
+</pre><pre><a class="nt" name="number">number</a>:
+        <a class="nt" href="#INT">INT</a>
+        <a class="nt" href="#DUB">DUB</a>
+</pre><pre><a class="nt" name="INT">INT</a>:
+        <span class="t">"0"</span>
+        (<span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span>) (<span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="DUB">DUB</a>:
+        <a class="nt" href="#INT">INT</a><span class="meta">?</span> <span class="t">"."</span> (<span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span>)<span class="meta">*</span> ((<span class="t">"e"</span> | <span class="t">"E"</span>) <a class="nt" href="#INT">INT</a>)<span class="meta">?</span>
+</pre><pre><a class="nt" name="VARIABLE">VARIABLE</a>:
+        (<span class="t">"a"</span> | <span class="t">"b"</span> | <span class="t">"c"</span> | <span class="t">"d"</span> | <span class="t">"e"</span> | <span class="t">"f"</span> | <span class="t">"g"</span> | <span class="t">"h"</span> | <span class="t">"i"</span> | <span class="t">"j"</span> | <span class="t">"k"</span> | <span class="t">"l"</span> | <span class="t">"m"</span> | <span class="t">"n"</span> | <span class="t">"o"</span> | <span class="t">"p"</span> | <span class="t">"q"</span> | <span class="t">"r"</span> | <span class="t">"s"</span> | <span class="t">"t"</span> | <span class="t">"u"</span> | <span class="t">"v"</span> | <span class="t">"w"</span> | <span class="t">"x"</span> | <span class="t">"y"</span> | <span class="t">"z"</span> | <span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span>) (<span class="t">"a"</span> | <span class="t">"b"</span> | <span class="t">"c"</span> | <span class="t">"d"</span> | <span class="t">"e"</span> | <span class="t">"f"</span> | <span class="t">"g"</span> | <span class="t">"h"</span> | <span class="t">"i"</span> | <span class="t">"j"</span> | <span class="t">"k"</span> | <span class="t">"l"</span> | <span class="t">"m"</span> | <span class="t">"n"</span> | <span class="t">"o"</span> | <span class="t">"p"</span> | <span class="t">"q"</span> | <span class="t">"r"</span> | <span class="t">"s"</span> | <span class="t">"t"</span> | <span class="t">"u"</span> | <span class="t">"v"</span> | <span class="t">"w"</span> | <span class="t">"x"</span> | <span class="t">"y"</span> | <span class="t">"z"</span> | <span class="t">"A"</span> | <span class="t">"B"</span> | <span class="t">"C"</span> | <span class="t">"D"</span> | <span class="t">"E"</span> | <span class="t">"F"</span> | <span class="t">"G"</span> | <span class="t">"H"</span> | <span class="t">"I"</span> | <span class="t">"J"</span> | <span class="t">"K"</span> | <span class="t">"L"</span> | <span class="t">"M"</span> | <span class="t">"N"</span> | <span class="t">"O"</span> | <span class="t">"P"</span> | <span class="t">"Q"</span> | <span class="t">"R"</span> | <span class="t">"S"</span> | <span class="t">"T"</span> | <span class="t">"U"</span> | <span class="t">"V"</span> | <span class="t">"W"</span> | <span class="t">"X"</span> | <span class="t">"Y"</span> | <span class="t">"Z"</span> | <span class="t">"0"</span> | <span class="t">"1"</span> | <span class="t">"2"</span> | <span class="t">"3"</span> | <span class="t">"4"</span> | <span class="t">"5"</span> | <span class="t">"6"</span> | <span class="t">"7"</span> | <span class="t">"8"</span> | <span class="t">"9"</span> | <span class="t">"_"</span>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="LPAR">LPAR</a>:
+        <span class="t">"("</span>
+</pre><pre><a class="nt" name="RPAR">RPAR</a>:
+        <span class="t">")"</span>
+</pre><pre><a class="nt" name="EXPON">EXPON</a>:
+        <span class="t">"**"</span>
+</pre><pre><a class="nt" name="MULT">MULT</a>:
+        <span class="t">"*"</span>
+</pre><pre><a class="nt" name="DIV">DIV</a>:
+        <span class="t">"/"</span>
+</pre><pre><a class="nt" name="procapp">procapp</a>:
+        <a class="nt" href="#VARIABLE">VARIABLE</a> <a class="nt" href="#LPAR">LPAR</a> <a class="nt" href="#aexprlist">aexprlist</a> <a class="nt" href="#RPAR">RPAR</a>
+</pre><pre><a class="nt" name="aexprlist">aexprlist</a>:
+        <a class="nt" href="#aexpr">aexpr</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#aexpr">aexpr</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="COMMA">COMMA</a>:
+        <span class="t">","</span>
+</pre><pre><a class="nt" name="rop">rop</a>:
+        <a class="nt" href="#EQ">EQ</a>
+        <a class="nt" href="#NEQ">NEQ</a>
+        <a class="nt" href="#LESS">LESS</a>
+        <a class="nt" href="#MORE">MORE</a>
+        <a class="nt" href="#LESSEQ">LESSEQ</a>
+        <a class="nt" href="#MOREEQ">MOREEQ</a>
+</pre><pre><a class="nt" name="EQ">EQ</a>:
+        <span class="t">"=="</span>
+</pre><pre><a class="nt" name="NEQ">NEQ</a>:
+        <span class="t">"!="</span>
+</pre><pre><a class="nt" name="LESS">LESS</a>:
+        <span class="t">"&lt;"</span>
+</pre><pre><a class="nt" name="MORE">MORE</a>:
+        <span class="t">"&gt;"</span>
+</pre><pre><a class="nt" name="LESSEQ">LESSEQ</a>:
+        <span class="t">"&lt;="</span>
+</pre><pre><a class="nt" name="MOREEQ">MOREEQ</a>:
+        <span class="t">"&gt;="</span>
+</pre><pre><a class="nt" name="CONJUN">CONJUN</a>:
+        <span class="t">"/\\"</span>
+</pre><pre><a class="nt" name="DISJUN">DISJUN</a>:
+        <span class="t">"\\/"</span>
+</pre><pre><a class="nt" name="QM">QM</a>:
+        <span class="t">"?"</span>
+</pre><pre><a class="nt" name="SEMI">SEMI</a>:
+        <span class="t">";"</span>
+</pre><pre><a class="nt" name="vardec">vardec</a>:
+        <a class="nt" href="#VAR">VAR</a> <a class="nt" href="#parameter">parameter</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="VAR">VAR</a>:
+        <span class="t">"var"</span>
+</pre><pre><a class="nt" name="parameter">parameter</a>:
+        <a class="nt" href="#VARIABLE">VARIABLE</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#type">type</a>
+</pre><pre><a class="nt" name="procdec">procdec</a>:
+        <a class="nt" href="#PROC">PROC</a> <a class="nt" href="#VARIABLE">VARIABLE</a> <a class="nt" href="#LPAR">LPAR</a> <a class="nt" href="#paramlist">paramlist</a> <a class="nt" href="#RPAR">RPAR</a> <a class="nt" href="#COLON">COLON</a> <a class="nt" href="#type">type</a> <a class="nt" href="#DEFAS">DEFAS</a> <a class="nt" href="#statementlist">statementlist</a> <a class="nt" href="#SEMI">SEMI</a>
+</pre><pre><a class="nt" name="PROC">PROC</a>:
+        <span class="t">"proc"</span>
+</pre><pre><a class="nt" name="paramlist">paramlist</a>:
+        <a class="nt" href="#parameter">parameter</a> (<a class="nt" href="#COMMA">COMMA</a> <a class="nt" href="#parameter">parameter</a>)<span class="meta">*</span>
+</pre><pre><a class="nt" name="statementlist">statementlist</a>:
+        <a class="nt" href="#statement">statement</a>
+        <a class="nt" href="#LCPAR">LCPAR</a> <a class="nt" href="#statement">statement</a> (<a class="nt" href="#SEMI">SEMI</a> <a class="nt" href="#statement">statement</a>)<span class="meta">*</span> <a class="nt" href="#RCPAR">RCPAR</a>
+</pre><pre><a class="nt" name="statement">statement</a>:
+        <a class="nt" href="#SKIP">SKIP</a>
+        <a class="nt" href="#assignment">assignment</a>
+        <a class="nt" href="#conditional">conditional</a>
+        <a class="nt" href="#loop">loop</a>
+</pre><pre><a class="nt" name="SKIP">SKIP</a>:
+        <span class="t">"skip"</span>
+</pre><pre><a class="nt" name="assignment">assignment</a>:
+        <a class="nt" href="#VARIABLE">VARIABLE</a> <a class="nt" href="#DEFAS">DEFAS</a> <a class="nt" href="#aexpr">aexpr</a>
+</pre><pre><a class="nt" name="conditional">conditional</a>:
+        <a class="nt" href="#IF">IF</a> <a class="nt" href="#bexpr">bexpr</a> <a class="nt" href="#THEN">THEN</a> <a class="nt" href="#statementlist">statementlist</a> <a class="nt" href="#ELSE">ELSE</a> <a class="nt" href="#statementlist">statementlist</a>
+</pre><pre><a class="nt" name="IF">IF</a>:
+        <span class="t">"if"</span>
+</pre><pre><a class="nt" name="THEN">THEN</a>:
+        <span class="t">"then"</span>
+</pre><pre><a class="nt" name="ELSE">ELSE</a>:
+        <span class="t">"else"</span>
+</pre><pre><a class="nt" name="loop">loop</a>:
+        <a class="nt" href="#WHILE">WHILE</a> <a class="nt" href="#bexpr">bexpr</a> <a class="nt" href="#DO">DO</a> <a class="nt" href="#statementlist">statementlist</a>
+</pre><pre><a class="nt" name="WHILE">WHILE</a>:
+        <span class="t">"while"</span>
+</pre><pre><a class="nt" name="DO">DO</a>:
+        <span class="t">"do"</span>
+</pre><pre><a class="nt" name="LCPAR">LCPAR</a>:
+        <span class="t">"{"</span>
+</pre><pre><a class="nt" name="RCPAR">RCPAR</a>:
+        <span class="t">"}"</span>
+</pre><pre><a class="nt" name="CHECKOUT">CHECKOUT</a>:
+        <span class="t">"checkout"</span>
+</pre><pre><a class="nt" name="DONE">DONE</a>:
+        <span class="t">"done"</span>
+</pre><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 16/09/2011.
+				</div></body></html>

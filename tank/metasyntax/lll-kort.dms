@@ -1,0 +1,15 @@
+specification = rule+ ;
+rule = ident ':' disjunction ';' ;
+disjunction = conjunction ('|' conjunction)* ;
+conjunction = term+ ;
+term = basis repetition? ;
+basis = ident ;
+basis = literal ;
+basis = '%epsilon' ;
+basis = alternation ;
+basis = group ;
+repetition = '+' ;
+repetition = '*' ;
+repetition = '?' ;
+alternation = '{' basis basis '}' repetition ;
+group = '(' disjunction ')' ;

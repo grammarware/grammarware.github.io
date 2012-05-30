@@ -1,0 +1,51 @@
+module Main
+
+exports
+  sorts
+        Syntax Syntax-rule Definitions-list Single-definition Term Exception Factor Primary Empty Optional-sequence Repeated-sequence Grouped-sequence Terminal-string Meta-identifier Integer Special-sequence Comment Comment-symbol 
+  context-free syntax
+        Syntax-rule+ -> Syntax
+
+        Meta-identifier "=" Definitions-list ";" -> Syntax-rule
+
+        Single-definition ("|" Single-definition)* -> Definitions-list
+
+        Term ("," Term)* -> Single-definition
+
+        Factor ("-" Exception)? -> Term
+
+        Factor -> Exception
+
+        (Integer "*")? Primary -> Factor
+
+        Optional-sequence
+		| Repeated-sequence
+		| Special-sequence
+		| Grouped-sequence
+		| Meta-identifier
+		| Terminal-string
+		| Empty -> Primary
+
+         -> Empty
+
+        "[" Definitions-list "]" -> Optional-sequence
+
+        "{" Definitions-list "}" -> Repeated-sequence
+
+        "(" Definitions-list ")" -> Grouped-sequence
+
+        "’" Character+ "’"
+		| """ Character+ """ -> Terminal-string
+
+        Letter (Letter | Decimal-digit)* -> Meta-identifier
+
+        Decimal-digit+ -> Integer
+
+        "?" Character* "?" -> Special-sequence
+
+        "(*" Comment-symbol* "*)" -> Comment
+
+        Comment
+		| Terminal-string
+		| Special-sequence
+		| Character -> Comment-symbol

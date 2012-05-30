@@ -1,0 +1,169 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xmlns:xbgf="http://planet-sl.org/xbgf" xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Browsable Grammar Transformation</title><style type="text/css">
+			          h1, h2 { text-align: center; }
+			          .label, .sel { color: green; }
+			          .marked { background-color: #FFE5B4;}
+			          .nt { color: blue; font-weight: bold; }
+			          .t { color: red;  font-family: monospace; }
+			          .meta, .cmd { color: green; font-style:italic; font-family: serif; }
+			          .b { text-align: right; font-style:italic;}
+			        </style><script type="text/javascript">
+					  var _gaq = _gaq || [];
+					  _gaq.push(['_setAccount', 'UA-3743366-5']);
+					  _gaq.push(['_trackPageview']);
+
+					  (function() {
+					    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					  })();
+					</script></head><body><h1>refactor</h1><h2>Source: <a href="http://slps.svn.sourceforge.net/viewvc/slps/topics/grammars/fortran/derricks/refactor.xbgf?view=markup">SLPS/topics/grammars/fortran/derricks/refactor.xbgf</a></h2><ul><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ProgramUnit">ProgramUnit</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#MainRange">MainRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#BodyConstruct">BodyConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SpecificationPartConstruct">SpecificationPartConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ImplicitStmt">ImplicitStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#TypeSpec">TypeSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#KindSelector">KindSelector</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#Level2Expr">Level2Expr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#Primary">Primary</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AcValue">AcValue</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AcImpliedDo">AcImpliedDo</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#UnsignedArithmeticConstant">UnsignedArithmeticConstant</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#KindParam">KindParam</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DataRef">DataRef</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SectionSubscript">SectionSubscript</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#FunctionArgList">FunctionArgList</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#LogicalConstant">LogicalConstant</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#RelOp">RelOp</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CharSelector">CharSelector</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#LengthSelector">LengthSelector</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CharLength">CharLength</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#FormatItem">FormatItem</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DataEditDescr">DataEditDescr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ControlEditDescr">ControlEditDescr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PositionEditDescr">PositionEditDescr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SignEditDescr">SignEditDescr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#BlankInterpEditDescr">BlankInterpEditDescr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CharStringEditDescr">CharStringEditDescr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EntryStmt">EntryStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SubroutinePar">SubroutinePar</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DeclarationConstruct">DeclarationConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#TypeDeclarationStmt">TypeDeclarationStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AttrSpec">AttrSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AccessSpec">AccessSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ArraySpec">ArraySpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AssumedShapeSpecList">AssumedShapeSpecList</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AssumedSizeSpec">AssumedSizeSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#IntentSpec">IntentSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EntityDecl">EntityDecl</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SpecificationStmt">SpecificationStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AccessStmt">AccessStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AccessId">AccessId</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#GenericSpec">GenericSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DefinedOperator">DefinedOperator</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AllocatableStmt">AllocatableStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CommonBlockObject">CommonBlockObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DataStmtObject">DataStmtObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#Variable">Variable</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DataIDoObject">DataIDoObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ArrayElement">ArrayElement</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#StructureComponent">StructureComponent</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#FieldSelector">FieldSelector</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DataStmtValue">DataStmtValue</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#Constant">Constant</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#BozLiteralConstant">BozLiteralConstant</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DimensionStmt">DimensionStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EquivalenceObject">EquivalenceObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SaveStmt">SaveStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SavedEntity">SavedEntity</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#IntentStmt">IntentStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#OptionalStmt">OptionalStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PointerStmt">PointerStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PointerStmtObject">PointerStmtObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#TargetStmt">TargetStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#TargetObject">TargetObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DerivedTypeStmt">DerivedTypeStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DerivedTypeBody">DerivedTypeBody</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PrivateSequenceStmt">PrivateSequenceStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ComponentDefStmt">ComponentDefStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ComponentAttrSpec">ComponentAttrSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ComponentArraySpec">ComponentArraySpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InterfaceStmt">InterfaceStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InterfaceBlockPart">InterfaceBlockPart</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InterfaceBody">InterfaceBody</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#FunctionPrefix">FunctionPrefix</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#FunctionInterfaceRange">FunctionInterfaceRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SubprogramInterfaceBody">SubprogramInterfaceBody</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EndFunctionStmt">EndFunctionStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SubroutineInterfaceRange">SubroutineInterfaceRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EndSubroutineStmt">EndSubroutineStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#UseStmt">UseStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#Only">Only</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ExecutableConstruct">ExecutableConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ActionStmt">ActionStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AllocateStmt">AllocateStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AllocateObject">AllocateObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DeallocateStmt">DeallocateStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PointerObject">PointerObject</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PointerField">PointerField</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SFExprList">SFExprList</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SFExpr">SFExpr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SFTerm">SFTerm</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SFFactor">SFFactor</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SFPrimary">SFPrimary</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PointerAssignmentStmt">PointerAssignmentStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AssignmentStmt">AssignmentStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#BackspaceStmt">BackspaceStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#UFExpr">UFExpr</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#UFTerm">UFTerm</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#UFFactor">UFFactor</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#UFPrimary">UFPrimary</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#PositionSpec">PositionSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CallStmt">CallStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ActualArg">ActualArg</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CloseSpec">CloseSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CPrimary">CPrimary</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#COperand">COperand</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EndfileStmt">EndfileStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#AssignedGotoStmt">AssignedGotoStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InquireStmt">InquireStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InquireSpecList">InquireSpecList</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InquireSpec">InquireSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#OutputItem">OutputItem</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#OutputImpliedDo">OutputImpliedDo</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ConnectSpec">ConnectSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ReadStmt">ReadStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#RdCtlSpec">RdCtlSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#RdUnitId">RdUnitId</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#RdIoCtlSpecList">RdIoCtlSpecList</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#IoControlSpec">IoControlSpec</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InputItem">InputItem</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InputImpliedDo">InputImpliedDo</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#RdFmtId">RdFmtId</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#RewindStmt">RewindStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#IoControlSpecList">IoControlSpecList</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#DoConstruct">DoConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#BlockDoConstruct">BlockDoConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#LoopControl">LoopControl</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ExecutionPartConstruct">ExecutionPartConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CaseConstruct">CaseConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SelectCaseRange">SelectCaseRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CaseBodyConstruct">CaseBodyConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CaseSelector">CaseSelector</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#CaseValueRange">CaseValueRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EndProgramStmt">EndProgramStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InternalSubProgPart">InternalSubProgPart</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#InternalSubprogram">InternalSubprogram</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#FunctionRange">FunctionRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#SubroutineRange">SubroutineRange</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#Module">Module</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ModuleBody">ModuleBody</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ModuleSubprogramPartConstruct">ModuleSubprogramPartConstruct</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#ModuleSubprogram">ModuleSubprogram</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EndModuleStmt">EndModuleStmt</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#BlockDataSubprogram">BlockDataSubprogram</a>);
+		</li><li><a class="cmd" href="http://slps.sourceforge.net/xbgf/#horizontal">horizontal</a> (<a class="nt" href="derricks.html#EndBlockDataStmt">EndBlockDataStmt</a>);
+		</li></ul><hr></hr><div class="b">
+					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+					Last updated: 28/02/2012.
+				</div></body></html>

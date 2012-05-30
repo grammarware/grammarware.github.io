@@ -1,0 +1,25 @@
+module Main
+
+exports
+ context-free start-symbols grammar
+  sorts
+        Grammar Rule Alts Alts-tail Alt Term Basis Repetition 
+  context-free syntax
+        Rule+ -> Grammar
+
+        Sort ":" Alts ";" -> Rule
+
+        Alt Alts-tail* -> Alts
+
+        "|" Alt -> Alts-tail
+
+        Term* -> Alt
+
+        Basis Repetition? -> Term
+
+        Literal
+		| Sort -> Basis
+
+        "*"
+		| "+"
+		| "?" -> Repetition

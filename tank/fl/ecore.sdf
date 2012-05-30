@@ -1,0 +1,35 @@
+module Main
+
+exports
+  sorts
+        Program Function Argument Exp LiteralExp ArgumentExp IfThenElseExp ApplyExp BinaryExp PlusExp MinusExp EqualExp 
+  context-free syntax
+        function::Function+ -> Program
+
+        name::STR argument::Argument+ definition::Exp -> Function
+
+        name::STR -> Argument
+
+        LiteralExp
+		| ArgumentExp
+		| IfThenElseExp
+		| ApplyExp
+		| BinaryExp -> Exp
+
+        value::INT -> LiteralExp
+
+        argument::Argument -> ArgumentExp
+
+        if::Exp then::Exp else::Exp -> IfThenElseExp
+
+        function::Function argument::Exp+ -> ApplyExp
+
+        PlusExp
+		| MinusExp
+		| EqualExp -> BinaryExp
+
+        left::Exp right::Exp -> PlusExp
+
+        left::Exp right::Exp -> MinusExp
+
+        left::Exp right::Exp -> EqualExp

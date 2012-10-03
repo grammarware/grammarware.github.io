@@ -184,7 +184,7 @@
 					</title>
 					<date>1–25 Aug 2008</date>
 					<link>
-						<uri>https://github.com/grammarware/slps/tree/master/topics/fl/asfsdf</uri>
+						<slps>topics/fl/asfsdf</slps>
 						<name>GitHub</name>
 					</link>
 				</source>
@@ -283,7 +283,7 @@
 				</title>
 					<date>17 May – 28 July 2008</date>
 					<link>
-						<uri>https://github.com/grammarware/slps/tree/master/topics/fl/java1/types</uri>
+						<slps>topics/fl/java1/types</slps>
 						<name>GitHub</name>
 					</link>
 				</source>

@@ -17,7 +17,7 @@
 		          }
 		        </style><script type="text/javascript">
 				  var _gaq = _gaq || [];
-				  _gaq.push(['_setAccount', 'UA-3743366-7']);
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
 				  _gaq.push(['_trackPageview']);
 
 				  (function() {
@@ -32,13 +32,13 @@
 </pre><pre><a class="nt" name="Notes">Notes</a>:
         <span class="t">"note"</span> <a class="nt" href="#Note_list">Note_list</a>
 </pre><pre><a class="nt" name="Note_list">Note_list</a>:
-        (<a class="nt" href="#Note_entry">Note_entry</a> (<span class="t">";"</span> <a class="nt" href="#Note_entry">Note_entry</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="meta">{</span><a class="nt" href="#Note_entry">Note_entry</a> <span class="t">";"</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="Note_entry">Note_entry</a>:
         <a class="nt" href="#Note_name">Note_name</a> <a class="nt" href="#Note_values">Note_values</a>
 </pre><pre><a class="nt" name="Note_name">Note_name</a>:
         <a class="nt" href="#Identifier">Identifier</a> <span class="t">":"</span>
 </pre><pre><a class="nt" name="Note_values">Note_values</a>:
-        <a class="nt" href="#Note_item">Note_item</a> (<span class="t">","</span> <a class="nt" href="#Note_item">Note_item</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Note_item">Note_item</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Note_item">Note_item</a>:
         <a class="nt" href="#Identifier">Identifier</a>
         <a class="nt" href="#Manifest_constant">Manifest_constant</a>
@@ -57,7 +57,7 @@
 </pre><pre><a class="nt" name="Feature_clause">Feature_clause</a>:
         <span class="t">"feature"</span> <a class="nt" href="#Clients">Clients</a><span class="meta">?</span> <a class="nt" href="#Header_comment">Header_comment</a><span class="meta">?</span> <a class="nt" href="#Feature_declaration_list">Feature_declaration_list</a>
 </pre><pre><a class="nt" name="Feature_declaration_list">Feature_declaration_list</a>:
-        (<a class="nt" href="#Feature_declaration">Feature_declaration</a> (<span class="t">";"</span> <a class="nt" href="#Feature_declaration">Feature_declaration</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="meta">{</span><a class="nt" href="#Feature_declaration">Feature_declaration</a> <span class="t">";"</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="Header_comment">Header_comment</a>:
         <a class="nt" href="#Comment">Comment</a>
 </pre><pre><a class="nt" name="Feature_declaration">Feature_declaration</a>:
@@ -73,7 +73,7 @@
 </pre><pre><a class="nt" name="Explicit_value">Explicit_value</a>:
         <span class="t">"="</span> <a class="nt" href="#Manifest_constant">Manifest_constant</a>
 </pre><pre><a class="nt" name="New_feature_list">New_feature_list</a>:
-        <a class="nt" href="#New_feature">New_feature</a> (<span class="t">","</span> <a class="nt" href="#New_feature">New_feature</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#New_feature">New_feature</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="New_feature">New_feature</a>:
         <span class="t">"frozen"</span><span class="meta">?</span> <a class="nt" href="#Extended_feature_name">Extended_feature_name</a>
 </pre><pre><a class="nt" name="Attribute_or_routine">Attribute_or_routine</a>:
@@ -130,7 +130,7 @@
 </pre><pre><a class="nt" name="Non_conformance">Non_conformance</a>:
         <span class="t">"{"</span> <span class="t">"NONE"</span> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="Parent_list">Parent_list</a>:
-        <a class="nt" href="#Parent">Parent</a> (<span class="t">";"</span> <a class="nt" href="#Parent">Parent</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Parent">Parent</a> <span class="t">";"</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Parent">Parent</a>:
         <a class="nt" href="#Class_type">Class_type</a> <a class="nt" href="#Feature_adaptation">Feature_adaptation</a><span class="meta">?</span>
 </pre><pre><a class="nt" name="Feature_adaptation">Feature_adaptation</a>:
@@ -138,32 +138,32 @@
 </pre><pre><a class="nt" name="Rename">Rename</a>:
         <span class="t">"rename"</span> <a class="nt" href="#Rename_list">Rename_list</a>
 </pre><pre><a class="nt" name="Rename_list">Rename_list</a>:
-        <a class="nt" href="#Rename_pair">Rename_pair</a> (<span class="t">","</span> <a class="nt" href="#Rename_pair">Rename_pair</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Rename_pair">Rename_pair</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Rename_pair">Rename_pair</a>:
         <a class="nt" href="#Feature_name">Feature_name</a> <span class="t">"as"</span> <a class="nt" href="#Extended_feature_name">Extended_feature_name</a>
 </pre><pre><a class="nt" name="Clients">Clients</a>:
         <span class="t">"{"</span> <a class="nt" href="#Class_list">Class_list</a> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="Class_list">Class_list</a>:
-        <a class="nt" href="#Class_name">Class_name</a> (<span class="t">","</span> <a class="nt" href="#Class_name">Class_name</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Class_name">Class_name</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="New_exports">New_exports</a>:
         <span class="t">"export"</span> <a class="nt" href="#New_export_list">New_export_list</a>
 </pre><pre><a class="nt" name="New_export_list">New_export_list</a>:
-        <a class="nt" href="#New_export_item">New_export_item</a> (<span class="t">";"</span> <a class="nt" href="#New_export_item">New_export_item</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#New_export_item">New_export_item</a> <span class="t">";"</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="New_export_item">New_export_item</a>:
         <a class="nt" href="#Clients">Clients</a> <a class="nt" href="#Header_comment">Header_comment</a><span class="meta">?</span> <a class="nt" href="#Feature_set">Feature_set</a>
 </pre><pre><a class="nt" name="Feature_set">Feature_set</a>:
         <a class="nt" href="#Feature_list">Feature_list</a>
         <span class="t">"all"</span>
 </pre><pre><a class="nt" name="Feature_list">Feature_list</a>:
-        <a class="nt" href="#Feature_name">Feature_name</a> (<span class="t">","</span> <a class="nt" href="#Feature_name">Feature_name</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Feature_name">Feature_name</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Formal_arguments">Formal_arguments</a>:
         <span class="t">"("</span> <a class="nt" href="#Entity_declaration_list">Entity_declaration_list</a> <span class="t">")"</span>
 </pre><pre><a class="nt" name="Entity_declaration_list">Entity_declaration_list</a>:
-        <a class="nt" href="#Entity_declaration_group">Entity_declaration_group</a> (<span class="t">";"</span> <a class="nt" href="#Entity_declaration_group">Entity_declaration_group</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Entity_declaration_group">Entity_declaration_group</a> <span class="t">";"</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Entity_declaration_group">Entity_declaration_group</a>:
         <a class="nt" href="#Identifier_list">Identifier_list</a> <a class="nt" href="#Type_mark">Type_mark</a>
 </pre><pre><a class="nt" name="Identifier_list">Identifier_list</a>:
-        <a class="nt" href="#Identifier">Identifier</a> (<span class="t">","</span> <a class="nt" href="#Identifier">Identifier</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Identifier">Identifier</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Deferred">Deferred</a>:
         <span class="t">"deferred"</span>
 </pre><pre><a class="nt" name="Effective_routine">Effective_routine</a>:
@@ -177,11 +177,11 @@
 </pre><pre><a class="nt" name="Once">Once</a>:
         <span class="t">"once"</span> (<span class="t">"("</span> <a class="nt" href="#Key_list">Key_list</a> <span class="t">")"</span>)<span class="meta">?</span>
 </pre><pre><a class="nt" name="Key_list">Key_list</a>:
-        <a class="nt" href="#Manifest_string">Manifest_string</a> (<span class="t">","</span> <a class="nt" href="#Manifest_string">Manifest_string</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Manifest_string">Manifest_string</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Local_declarations">Local_declarations</a>:
         <span class="t">"local"</span> <a class="nt" href="#Entity_declaration_list">Entity_declaration_list</a><span class="meta">?</span>
 </pre><pre><a class="nt" name="Compound">Compound</a>:
-        (<a class="nt" href="#Instruction">Instruction</a> (<span class="t">";"</span> <a class="nt" href="#Instruction">Instruction</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="meta">{</span><a class="nt" href="#Instruction">Instruction</a> <span class="t">";"</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="Instruction">Instruction</a>:
         <a class="nt" href="#Creation_instruction">Creation_instruction</a>
         <a class="nt" href="#Call">Call</a>
@@ -201,7 +201,7 @@
 </pre><pre><a class="nt" name="Invariant">Invariant</a>:
         <span class="t">"invariant"</span> <a class="nt" href="#Assertion">Assertion</a>
 </pre><pre><a class="nt" name="Assertion">Assertion</a>:
-        (<a class="nt" href="#Assertion_clause">Assertion_clause</a> (<span class="t">";"</span> <a class="nt" href="#Assertion_clause">Assertion_clause</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="meta">{</span><a class="nt" href="#Assertion_clause">Assertion_clause</a> <span class="t">";"</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="Assertion_clause">Assertion_clause</a>:
         <a class="nt" href="#Tag_mark">Tag_mark</a><span class="meta">?</span> <a class="nt" href="#Unlabeled_assertion_clause">Unlabeled_assertion_clause</a>
 </pre><pre><a class="nt" name="Unlabeled_assertion_clause">Unlabeled_assertion_clause</a>:
@@ -247,11 +247,11 @@
 </pre><pre><a class="nt" name="Actual_generics">Actual_generics</a>:
         <span class="t">"["</span> <a class="nt" href="#Type_list">Type_list</a> <span class="t">"]"</span>
 </pre><pre><a class="nt" name="Type_list">Type_list</a>:
-        <a class="nt" href="#Type">Type</a> (<span class="t">","</span> <a class="nt" href="#Type">Type</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Type">Type</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Formal_generics">Formal_generics</a>:
         <span class="t">"["</span> <a class="nt" href="#Formal_generic_list">Formal_generic_list</a> <span class="t">"]"</span>
 </pre><pre><a class="nt" name="Formal_generic_list">Formal_generic_list</a>:
-        <a class="nt" href="#Formal_generic">Formal_generic</a> (<span class="t">","</span> <a class="nt" href="#Formal_generic">Formal_generic</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Formal_generic">Formal_generic</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Formal_generic">Formal_generic</a>:
         <span class="t">"frozen"</span><span class="meta">?</span> <a class="nt" href="#Formal_generic_name">Formal_generic_name</a> <a class="nt" href="#Constraint">Constraint</a><span class="meta">?</span>
 </pre><pre><a class="nt" name="Formal_generic_name">Formal_generic_name</a>:
@@ -268,7 +268,7 @@
 </pre><pre><a class="nt" name="Multiple_constraint">Multiple_constraint</a>:
         <span class="t">"{"</span> <a class="nt" href="#Constraint_list">Constraint_list</a> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="Constraint_list">Constraint_list</a>:
-        <a class="nt" href="#Single_constraint">Single_constraint</a> (<span class="t">","</span> <a class="nt" href="#Single_constraint">Single_constraint</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Single_constraint">Single_constraint</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Constraint_creators">Constraint_creators</a>:
         <span class="t">"create"</span> <a class="nt" href="#Feature_list">Feature_list</a> <span class="t">"end"</span>
 </pre><pre><a class="nt" name="Tuple_type">Tuple_type</a>:
@@ -281,11 +281,11 @@
 </pre><pre><a class="nt" name="Manifest_tuple">Manifest_tuple</a>:
         <span class="t">"["</span> <a class="nt" href="#Expression_list">Expression_list</a> <span class="t">"]"</span>
 </pre><pre><a class="nt" name="Expression_list">Expression_list</a>:
-        (<a class="nt" href="#Expression">Expression</a> (<span class="t">","</span> <a class="nt" href="#Expression">Expression</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="meta">{</span><a class="nt" href="#Expression">Expression</a> <span class="t">","</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="Converters">Converters</a>:
         <span class="t">"convert"</span> <a class="nt" href="#Converter_list">Converter_list</a>
 </pre><pre><a class="nt" name="Converter_list">Converter_list</a>:
-        <a class="nt" href="#Converter">Converter</a> (<span class="t">","</span> <a class="nt" href="#Converter">Converter</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Converter">Converter</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Converter">Converter</a>:
         <a class="nt" href="#Conversion_procedure">Conversion_procedure</a>
         <a class="nt" href="#Conversion_query">Conversion_query</a>
@@ -298,7 +298,7 @@
 </pre><pre><a class="nt" name="Conditional">Conditional</a>:
         <span class="t">"if"</span> <a class="nt" href="#Then_part_list">Then_part_list</a> <a class="nt" href="#Else_part">Else_part</a><span class="meta">?</span> <span class="t">"end"</span>
 </pre><pre><a class="nt" name="Then_part_list">Then_part_list</a>:
-        <a class="nt" href="#Then_part">Then_part</a> (<span class="t">"elseif"</span> <a class="nt" href="#Then_part">Then_part</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Then_part">Then_part</a> <span class="t">"elseif"</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Then_part">Then_part</a>:
         <a class="nt" href="#Boolean_expression">Boolean_expression</a> <span class="t">"then"</span> <a class="nt" href="#Compound">Compound</a>
 </pre><pre><a class="nt" name="Else_part">Else_part</a>:
@@ -310,7 +310,7 @@
 </pre><pre><a class="nt" name="When_part">When_part</a>:
         <span class="t">"when"</span> <a class="nt" href="#Choices">Choices</a> <span class="t">"then"</span> <a class="nt" href="#Compound">Compound</a>
 </pre><pre><a class="nt" name="Choices">Choices</a>:
-        <a class="nt" href="#Choice">Choice</a> (<span class="t">","</span> <a class="nt" href="#Choice">Choice</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Choice">Choice</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Choice">Choice</a>:
         <a class="nt" href="#Constant">Constant</a>
         <a class="nt" href="#Manifest_type">Manifest_type</a>
@@ -356,7 +356,7 @@
 </pre><pre><a class="nt" name="Creation_clause">Creation_clause</a>:
         <span class="t">"create"</span> <a class="nt" href="#Clients">Clients</a><span class="meta">?</span> <a class="nt" href="#Header_comment">Header_comment</a><span class="meta">?</span> <a class="nt" href="#Creation_procedure_list">Creation_procedure_list</a>
 </pre><pre><a class="nt" name="Creation_procedure_list">Creation_procedure_list</a>:
-        <a class="nt" href="#Creation_procedure">Creation_procedure</a> (<span class="t">","</span> <a class="nt" href="#Creation_procedure">Creation_procedure</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Creation_procedure">Creation_procedure</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Creation_procedure">Creation_procedure</a>:
         <a class="nt" href="#Feature_name">Feature_name</a>
 </pre><pre><a class="nt" name="Creation_instruction">Creation_instruction</a>:
@@ -399,7 +399,7 @@
 </pre><pre><a class="nt" name="Actuals">Actuals</a>:
         <span class="t">"("</span> <a class="nt" href="#Actual_list">Actual_list</a> <span class="t">")"</span>
 </pre><pre><a class="nt" name="Actual_list">Actual_list</a>:
-        <a class="nt" href="#Expression">Expression</a> (<span class="t">","</span> <a class="nt" href="#Expression">Expression</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Expression">Expression</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Object_test">Object_test</a>:
         <span class="t">"{"</span> <a class="nt" href="#Identifier">Identifier</a> <span class="t">":"</span> <a class="nt" href="#Type">Type</a> <span class="t">"}"</span> <a class="nt" href="#Expression">Expression</a>
 </pre><pre><a class="nt" name="Rescue">Rescue</a>:
@@ -427,7 +427,7 @@
 </pre><pre><a class="nt" name="Agent_actuals">Agent_actuals</a>:
         <span class="t">"("</span> <a class="nt" href="#Agent_actual_list">Agent_actual_list</a> <span class="t">")"</span>
 </pre><pre><a class="nt" name="Agent_actual_list">Agent_actual_list</a>:
-        <a class="nt" href="#Agent_actual">Agent_actual</a> (<span class="t">","</span> <a class="nt" href="#Agent_actual">Agent_actual</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Agent_actual">Agent_actual</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Agent_actual">Agent_actual</a>:
         <a class="nt" href="#Expression">Expression</a>
         <a class="nt" href="#Placeholder">Placeholder</a>
@@ -510,7 +510,7 @@
 </pre><pre><a class="nt" name="Basic_manifest_string">Basic_manifest_string</a>:
         <span class="t">"""</span> <a class="nt" href="#String_content">String_content</a> <span class="t">"""</span>
 </pre><pre><a class="nt" name="String_content">String_content</a>:
-        <a class="nt" href="#Simple_string">Simple_string</a> (<a class="nt" href="#Line_wrapping_part">Line_wrapping_part</a> <a class="nt" href="#Simple_string">Simple_string</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#Simple_string">Simple_string</a> <a class="nt" href="#Line_wrapping_part">Line_wrapping_part</a><span class="meta">}+</span>
 </pre><pre><a class="nt" name="Verbatim_string">Verbatim_string</a>:
         <a class="nt" href="#Verbatim_string_opener">Verbatim_string_opener</a> <a class="nt" href="#Line_sequence">Line_sequence</a> <a class="nt" href="#Verbatim_string_closer">Verbatim_string_closer</a>
 </pre><pre><a class="nt" name="Verbatim_string_opener">Verbatim_string_opener</a>:
@@ -541,13 +541,13 @@
 </pre><pre><a class="nt" name="External_argument_types">External_argument_types</a>:
         <span class="t">"("</span> <a class="nt" href="#External_type_list">External_type_list</a> <span class="t">")"</span>
 </pre><pre><a class="nt" name="External_type_list">External_type_list</a>:
-        (<a class="nt" href="#External_type">External_type</a> (<span class="t">","</span> <a class="nt" href="#External_type">External_type</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="meta">{</span><a class="nt" href="#External_type">External_type</a> <span class="t">","</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="External_type">External_type</a>:
         <a class="nt" href="#Simple_string">Simple_string</a>
 </pre><pre><a class="nt" name="External_file_use">External_file_use</a>:
         <span class="t">"use"</span> <a class="nt" href="#External_file_list">External_file_list</a>
 </pre><pre><a class="nt" name="External_file_list">External_file_list</a>:
-        <a class="nt" href="#External_file">External_file</a> (<span class="t">","</span> <a class="nt" href="#External_file">External_file</a>)<span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#External_file">External_file</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="External_file">External_file</a>:
         <a class="nt" href="#External_user_file">External_user_file</a>
         <a class="nt" href="#External_system_file">External_system_file</a>
@@ -566,7 +566,7 @@
 </pre><pre><a class="nt" name="DLL_index">DLL_index</a>:
         <a class="nt" href="#Integer">Integer</a>
 </pre><pre><a class="nt" name="Comment">Comment</a>:
-        <span class="t">"--"</span> (<a class="nt" href="#Simple_string">Simple_string</a> (<a class="nt" href="#Comment_break">Comment_break</a> <a class="nt" href="#Simple_string">Simple_string</a>)<span class="meta">*</span>)<span class="meta">?</span>
+        <span class="t">"--"</span> <span class="meta">{</span><a class="nt" href="#Simple_string">Simple_string</a> <a class="nt" href="#Comment_break">Comment_break</a><span class="meta">}*</span>
 </pre><pre><a class="nt" name="Comment_break">Comment_break</a>:
         <a class="nt" href="#New_line">New_line</a> <a class="nt" href="#Blanks_or_tabs">Blanks_or_tabs</a><span class="meta">?</span> <span class="t">"--"</span>
 </pre><pre><a class="nt" name="Integer">Integer</a>:
@@ -608,5 +608,5 @@
         <span class="t">"_"</span>
 </pre><hr></hr><div class="b">
 					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
-					Last updated: 28/02/2012.
+					Last updated: 03/10/2012.
 				</div></body></html>

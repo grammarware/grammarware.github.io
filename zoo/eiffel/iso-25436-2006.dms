@@ -1,10 +1,16 @@
 Class_name = Identifier ;
 Class_declaration = Notes? Class_header Formal_generics? Obsolete? Inheritance? Creators? Converters? Features? Invariant? Notes? 'end' ;
 Notes = 'note' Note_list ;
-Note_list = (Note_entry (';' Note_entry)*)? ;
+Note_list = 
+	Note_entry
+	';'
+       ;
 Note_entry = Note_name Note_values ;
 Note_name = Identifier ':' ;
-Note_values = Note_item (',' Note_item)* ;
+Note_values = 
+	Note_item
+	','
+       ;
 Note_item = Identifier ;
 Note_item = Manifest_constant ;
 Class_header = Header_mark? 'class' Class_name ;
@@ -15,7 +21,10 @@ Obsolete = 'obsolete' Message ;
 Message = Manifest_string ;
 Features = Feature_clause+ ;
 Feature_clause = 'feature' Clients? Header_comment? Feature_declaration_list ;
-Feature_declaration_list = (Feature_declaration (';' Feature_declaration)*)? ;
+Feature_declaration_list = 
+	Feature_declaration
+	';'
+       ;
 Header_comment = Comment ;
 Feature_declaration = New_feature_list Declaration_body ;
 Declaration_body = Formal_arguments? Query_mark? Feature_value? ;
@@ -23,7 +32,10 @@ Query_mark = Type_mark Assigner_mark? ;
 Type_mark = ':' Type ;
 Feature_value = Explicit_value? Obsolete? Header_comment? Attribute_or_routine? ;
 Explicit_value = '=' Manifest_constant ;
-New_feature_list = New_feature (',' New_feature)* ;
+New_feature_list = 
+	New_feature
+	','
+       ;
 New_feature = 'frozen'? Extended_feature_name ;
 Attribute_or_routine = Precondition? Local_declarations? Feature_body Postcondition? Rescue? 'end' ;
 Feature_body = Deferred ;
@@ -64,24 +76,45 @@ Assigner_mark = 'assign' Feature_name ;
 Inheritance = Inherit_clause+ ;
 Inherit_clause = 'inherit' Non_conformance? Parent_list ;
 Non_conformance = '{' 'NONE' '}' ;
-Parent_list = Parent (';' Parent)* ;
+Parent_list = 
+	Parent
+	';'
+       ;
 Parent = Class_type Feature_adaptation? ;
 Feature_adaptation = Undefine? Redefine? Rename? New_exports? Select? 'end' ;
 Rename = 'rename' Rename_list ;
-Rename_list = Rename_pair (',' Rename_pair)* ;
+Rename_list = 
+	Rename_pair
+	','
+       ;
 Rename_pair = Feature_name 'as' Extended_feature_name ;
 Clients = '{' Class_list '}' ;
-Class_list = Class_name (',' Class_name)* ;
+Class_list = 
+	Class_name
+	','
+       ;
 New_exports = 'export' New_export_list ;
-New_export_list = New_export_item (';' New_export_item)* ;
+New_export_list = 
+	New_export_item
+	';'
+       ;
 New_export_item = Clients Header_comment? Feature_set ;
 Feature_set = Feature_list ;
 Feature_set = 'all' ;
-Feature_list = Feature_name (',' Feature_name)* ;
+Feature_list = 
+	Feature_name
+	','
+       ;
 Formal_arguments = '(' Entity_declaration_list ')' ;
-Entity_declaration_list = Entity_declaration_group (';' Entity_declaration_group)* ;
+Entity_declaration_list = 
+	Entity_declaration_group
+	';'
+       ;
 Entity_declaration_group = Identifier_list Type_mark ;
-Identifier_list = Identifier (',' Identifier)* ;
+Identifier_list = 
+	Identifier
+	','
+       ;
 Deferred = 'deferred' ;
 Effective_routine = Internal ;
 Effective_routine = External ;
@@ -89,9 +122,15 @@ Internal = Routine_mark Compound ;
 Routine_mark = 'do' ;
 Routine_mark = Once ;
 Once = 'once' ('(' Key_list ')')? ;
-Key_list = Manifest_string (',' Manifest_string)* ;
+Key_list = 
+	Manifest_string
+	','
+       ;
 Local_declarations = 'local' Entity_declaration_list? ;
-Compound = (Instruction (';' Instruction)*)? ;
+Compound = 
+	Instruction
+	';'
+       ;
 Instruction = Creation_instruction ;
 Instruction = Call ;
 Instruction = Assignment ;
@@ -106,7 +145,10 @@ Instruction = Retry ;
 Precondition = 'require' 'else'? Assertion ;
 Postcondition = 'ensure' 'then'? Assertion Only? ;
 Invariant = 'invariant' Assertion ;
-Assertion = (Assertion_clause (';' Assertion_clause)*)? ;
+Assertion = 
+	Assertion_clause
+	';'
+       ;
 Assertion_clause = Tag_mark? Unlabeled_assertion_clause ;
 Unlabeled_assertion_clause = Boolean_expression ;
 Unlabeled_assertion_clause = Comment ;
@@ -132,9 +174,15 @@ Anchored = Attachment_mark? 'like' Anchor ;
 Anchor = Feature_name ;
 Anchor = 'Current' ;
 Actual_generics = '[' Type_list ']' ;
-Type_list = Type (',' Type)* ;
+Type_list = 
+	Type
+	','
+       ;
 Formal_generics = '[' Formal_generic_list ']' ;
-Formal_generic_list = Formal_generic (',' Formal_generic)* ;
+Formal_generic_list = 
+	Formal_generic
+	','
+       ;
 Formal_generic = 'frozen'? Formal_generic_name Constraint? ;
 Formal_generic_name = '?'? Identifier ;
 Constraint = '->' Constraining_types Constraint_creators? ;
@@ -143,29 +191,44 @@ Constraining_types = Multiple_constraint ;
 Single_constraint = Type Renaming? ;
 Renaming = Rename 'end' ;
 Multiple_constraint = '{' Constraint_list '}' ;
-Constraint_list = Single_constraint (',' Single_constraint)* ;
+Constraint_list = 
+	Single_constraint
+	','
+       ;
 Constraint_creators = 'create' Feature_list 'end' ;
 Tuple_type = 'TUPLE' Tuple_parameter_list? ;
 Tuple_parameter_list = '[' Tuple_parameters ']' ;
 Tuple_parameters = Type_list ;
 Tuple_parameters = Entity_declaration_list ;
 Manifest_tuple = '[' Expression_list ']' ;
-Expression_list = (Expression (',' Expression)*)? ;
+Expression_list = 
+	Expression
+	','
+       ;
 Converters = 'convert' Converter_list ;
-Converter_list = Converter (',' Converter)* ;
+Converter_list = 
+	Converter
+	','
+       ;
 Converter = Conversion_procedure ;
 Converter = Conversion_query ;
 Conversion_procedure = Feature_name '({' Type_list '})' ;
 Conversion_query = Feature_name ':{' Type_list '}' ;
 Select = 'select' Feature_list ;
 Conditional = 'if' Then_part_list Else_part? 'end' ;
-Then_part_list = Then_part ('elseif' Then_part)* ;
+Then_part_list = 
+	Then_part
+	'elseif'
+       ;
 Then_part = Boolean_expression 'then' Compound ;
 Else_part = 'else' Compound ;
 Multi_branch = 'inspect' Expression When_part_list? Else_part? 'end' ;
 When_part_list = When_part+ ;
 When_part = 'when' Choices 'then' Compound ;
-Choices = Choice (',' Choice)* ;
+Choices = 
+	Choice
+	','
+       ;
 Choice = Constant ;
 Choice = Manifest_type ;
 Choice = Constant_interval ;
@@ -192,7 +255,10 @@ Formal = Identifier ;
 Constant_attribute = Feature_name ;
 Creators = Creation_clause+ ;
 Creation_clause = 'create' Clients? Header_comment? Creation_procedure_list ;
-Creation_procedure_list = Creation_procedure (',' Creation_procedure)* ;
+Creation_procedure_list = 
+	Creation_procedure
+	','
+       ;
 Creation_procedure = Feature_name ;
 Creation_instruction = 'create' Explicit_creation_type? Creation_call ;
 Explicit_creation_type = '{' Type '}' ;
@@ -217,7 +283,10 @@ Target = Parenthesized_target ;
 Parenthesized_target = '(|' Expression '|)' ;
 Non_object_call = '{' Type '}.' Unqualified_call ;
 Actuals = '(' Actual_list ')' ;
-Actual_list = Expression (',' Expression)* ;
+Actual_list = 
+	Expression
+	','
+       ;
 Object_test = '{' Identifier ':' Type '}' Expression ;
 Rescue = 'rescue' Compound ;
 Retry = 'retry' ;
@@ -233,7 +302,10 @@ Agent_target = Entity ;
 Agent_target = Parenthesized ;
 Agent_target = Manifest_type ;
 Agent_actuals = '(' Agent_actual_list ')' ;
-Agent_actual_list = Agent_actual (',' Agent_actual)* ;
+Agent_actual_list = 
+	Agent_actual
+	','
+       ;
 Agent_actual = Expression ;
 Agent_actual = Placeholder ;
 Placeholder = Manifest_type? '?' ;
@@ -290,7 +362,10 @@ Real_constant = Sign? Real ;
 Manifest_string = Basic_manifest_string ;
 Manifest_string = Verbatim_string ;
 Basic_manifest_string = '"' String_content '"' ;
-String_content = Simple_string (Line_wrapping_part Simple_string)* ;
+String_content = 
+	Simple_string
+	Line_wrapping_part
+       ;
 Verbatim_string = Verbatim_string_opener Line_sequence Verbatim_string_closer ;
 Verbatim_string_opener = '"' Simple_string? Open_bracket ;
 Verbatim_string_closer = Close_bracket Simple_string? '"' ;
@@ -308,10 +383,16 @@ Registered_language = CPP_external ;
 Registered_language = DLL_external ;
 External_signature = 'signature' External_argument_types? (':' External_type)? ;
 External_argument_types = '(' External_type_list ')' ;
-External_type_list = (External_type (',' External_type)*)? ;
+External_type_list = 
+	External_type
+	','
+       ;
 External_type = Simple_string ;
 External_file_use = 'use' External_file_list ;
-External_file_list = External_file (',' External_file)* ;
+External_file_list = 
+	External_file
+	','
+       ;
 External_file = External_user_file ;
 External_file = External_system_file ;
 External_user_file = '"' Simple_string '"' ;
@@ -321,7 +402,10 @@ CPP_external = '"' 'C++' 'inline' External_signature? External_file_use? '"' ;
 DLL_external = '"' 'dll' 'windows'? DLL_identifier DLL_index? External_signature? External_file_use? '"' ;
 DLL_identifier = Simple_string ;
 DLL_index = Integer ;
-Comment = '--' (Simple_string (Comment_break Simple_string)*)? ;
+Comment = '--' 
+	    Simple_string
+	    Comment_break
+	   ;
 Comment_break = New_line Blanks_or_tabs? '--' ;
 Integer = Integer_base? Digit_sequence ;
 Integer_base = '0' Integer_base_letter ;

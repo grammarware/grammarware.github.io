@@ -5,13 +5,13 @@ Class_declaration:
 Notes:
         "note" Note_list
 Note_list:
-        (Note_entry (";" Note_entry)*)?
+        {Note_entry ";"}*
 Note_entry:
         Note_name Note_values
 Note_name:
         Identifier ":"
 Note_values:
-        Note_item ("," Note_item)*
+        {Note_item ","}+
 Note_item:
         Identifier
         Manifest_constant
@@ -30,7 +30,7 @@ Features:
 Feature_clause:
         "feature" Clients? Header_comment? Feature_declaration_list
 Feature_declaration_list:
-        (Feature_declaration (";" Feature_declaration)*)?
+        {Feature_declaration ";"}*
 Header_comment:
         Comment
 Feature_declaration:
@@ -46,7 +46,7 @@ Feature_value:
 Explicit_value:
         "=" Manifest_constant
 New_feature_list:
-        New_feature ("," New_feature)*
+        {New_feature ","}+
 New_feature:
         "frozen"? Extended_feature_name
 Attribute_or_routine:
@@ -103,7 +103,7 @@ Inherit_clause:
 Non_conformance:
         "{" "NONE" "}"
 Parent_list:
-        Parent (";" Parent)*
+        {Parent ";"}+
 Parent:
         Class_type Feature_adaptation?
 Feature_adaptation:
@@ -111,32 +111,32 @@ Feature_adaptation:
 Rename:
         "rename" Rename_list
 Rename_list:
-        Rename_pair ("," Rename_pair)*
+        {Rename_pair ","}+
 Rename_pair:
         Feature_name "as" Extended_feature_name
 Clients:
         "{" Class_list "}"
 Class_list:
-        Class_name ("," Class_name)*
+        {Class_name ","}+
 New_exports:
         "export" New_export_list
 New_export_list:
-        New_export_item (";" New_export_item)*
+        {New_export_item ";"}+
 New_export_item:
         Clients Header_comment? Feature_set
 Feature_set:
         Feature_list
         "all"
 Feature_list:
-        Feature_name ("," Feature_name)*
+        {Feature_name ","}+
 Formal_arguments:
         "(" Entity_declaration_list ")"
 Entity_declaration_list:
-        Entity_declaration_group (";" Entity_declaration_group)*
+        {Entity_declaration_group ";"}+
 Entity_declaration_group:
         Identifier_list Type_mark
 Identifier_list:
-        Identifier ("," Identifier)*
+        {Identifier ","}+
 Deferred:
         "deferred"
 Effective_routine:
@@ -150,11 +150,11 @@ Routine_mark:
 Once:
         "once" ("(" Key_list ")")?
 Key_list:
-        Manifest_string ("," Manifest_string)*
+        {Manifest_string ","}+
 Local_declarations:
         "local" Entity_declaration_list?
 Compound:
-        (Instruction (";" Instruction)*)?
+        {Instruction ";"}*
 Instruction:
         Creation_instruction
         Call
@@ -174,7 +174,7 @@ Postcondition:
 Invariant:
         "invariant" Assertion
 Assertion:
-        (Assertion_clause (";" Assertion_clause)*)?
+        {Assertion_clause ";"}*
 Assertion_clause:
         Tag_mark? Unlabeled_assertion_clause
 Unlabeled_assertion_clause:
@@ -220,11 +220,11 @@ Anchor:
 Actual_generics:
         "[" Type_list "]"
 Type_list:
-        Type ("," Type)*
+        {Type ","}+
 Formal_generics:
         "[" Formal_generic_list "]"
 Formal_generic_list:
-        Formal_generic ("," Formal_generic)*
+        {Formal_generic ","}+
 Formal_generic:
         "frozen"? Formal_generic_name Constraint?
 Formal_generic_name:
@@ -241,7 +241,7 @@ Renaming:
 Multiple_constraint:
         "{" Constraint_list "}"
 Constraint_list:
-        Single_constraint ("," Single_constraint)*
+        {Single_constraint ","}+
 Constraint_creators:
         "create" Feature_list "end"
 Tuple_type:
@@ -254,11 +254,11 @@ Tuple_parameters:
 Manifest_tuple:
         "[" Expression_list "]"
 Expression_list:
-        (Expression ("," Expression)*)?
+        {Expression ","}*
 Converters:
         "convert" Converter_list
 Converter_list:
-        Converter ("," Converter)*
+        {Converter ","}+
 Converter:
         Conversion_procedure
         Conversion_query
@@ -271,7 +271,7 @@ Select:
 Conditional:
         "if" Then_part_list Else_part? "end"
 Then_part_list:
-        Then_part ("elseif" Then_part)*
+        {Then_part "elseif"}+
 Then_part:
         Boolean_expression "then" Compound
 Else_part:
@@ -283,7 +283,7 @@ When_part_list:
 When_part:
         "when" Choices "then" Compound
 Choices:
-        Choice ("," Choice)*
+        {Choice ","}+
 Choice:
         Constant
         Manifest_type
@@ -329,7 +329,7 @@ Creators:
 Creation_clause:
         "create" Clients? Header_comment? Creation_procedure_list
 Creation_procedure_list:
-        Creation_procedure ("," Creation_procedure)*
+        {Creation_procedure ","}+
 Creation_procedure:
         Feature_name
 Creation_instruction:
@@ -372,7 +372,7 @@ Non_object_call:
 Actuals:
         "(" Actual_list ")"
 Actual_list:
-        Expression ("," Expression)*
+        {Expression ","}+
 Object_test:
         "{" Identifier ":" Type "}" Expression
 Rescue:
@@ -400,7 +400,7 @@ Agent_target:
 Agent_actuals:
         "(" Agent_actual_list ")"
 Agent_actual_list:
-        Agent_actual ("," Agent_actual)*
+        {Agent_actual ","}+
 Agent_actual:
         Expression
         Placeholder
@@ -483,7 +483,7 @@ Manifest_string:
 Basic_manifest_string:
         """ String_content """
 String_content:
-        Simple_string (Line_wrapping_part Simple_string)*
+        {Simple_string Line_wrapping_part}+
 Verbatim_string:
         Verbatim_string_opener Line_sequence Verbatim_string_closer
 Verbatim_string_opener:
@@ -514,13 +514,13 @@ External_signature:
 External_argument_types:
         "(" External_type_list ")"
 External_type_list:
-        (External_type ("," External_type)*)?
+        {External_type ","}*
 External_type:
         Simple_string
 External_file_use:
         "use" External_file_list
 External_file_list:
-        External_file ("," External_file)*
+        {External_file ","}+
 External_file:
         External_user_file
         External_system_file
@@ -539,7 +539,7 @@ DLL_identifier:
 DLL_index:
         Integer
 Comment:
-        "--" (Simple_string (Comment_break Simple_string)*)?
+        "--" {Simple_string Comment_break}*
 Comment_break:
         New_line Blanks_or_tabs? "--"
 Integer:

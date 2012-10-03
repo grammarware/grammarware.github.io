@@ -15,7 +15,10 @@ syntax Notes
  ;
 syntax Note_list
         = 
-        {Note_entry ";"}*
+        
+	Note_entry
+	";"
+      
  ;
 syntax Note_entry
         = 
@@ -27,7 +30,10 @@ syntax Note_name
  ;
 syntax Note_values
         = 
-        Note_item ("," Note_item)*
+        
+	Note_item
+	","
+      
  ;
 syntax Note_item
         = Identifier
@@ -60,7 +66,10 @@ syntax Feature_clause
  ;
 syntax Feature_declaration_list
         = 
-        {Feature_declaration ";"}*
+        
+	Feature_declaration
+	";"
+      
  ;
 syntax Header_comment
         = 
@@ -92,7 +101,10 @@ syntax Explicit_value
  ;
 syntax New_feature_list
         = 
-        New_feature ("," New_feature)*
+        
+	New_feature
+	","
+      
  ;
 syntax New_feature
         = 
@@ -176,7 +188,10 @@ syntax Non_conformance
  ;
 syntax Parent_list
         = 
-        Parent (";" Parent)*
+        
+	Parent
+	";"
+      
  ;
 syntax Parent
         = 
@@ -192,7 +207,10 @@ syntax Rename
  ;
 syntax Rename_list
         = 
-        Rename_pair ("," Rename_pair)*
+        
+	Rename_pair
+	","
+      
  ;
 syntax Rename_pair
         = 
@@ -204,7 +222,10 @@ syntax Clients
  ;
 syntax Class_list
         = 
-        Class_name ("," Class_name)*
+        
+	Class_name
+	","
+      
  ;
 syntax New_exports
         = 
@@ -212,7 +233,10 @@ syntax New_exports
  ;
 syntax New_export_list
         = 
-        New_export_item (";" New_export_item)*
+        
+	New_export_item
+	";"
+      
  ;
 syntax New_export_item
         = 
@@ -224,7 +248,10 @@ syntax Feature_set
  ;
 syntax Feature_list
         = 
-        Feature_name ("," Feature_name)*
+        
+	Feature_name
+	","
+      
  ;
 syntax Formal_arguments
         = 
@@ -232,7 +259,10 @@ syntax Formal_arguments
  ;
 syntax Entity_declaration_list
         = 
-        Entity_declaration_group (";" Entity_declaration_group)*
+        
+	Entity_declaration_group
+	";"
+      
  ;
 syntax Entity_declaration_group
         = 
@@ -240,7 +270,10 @@ syntax Entity_declaration_group
  ;
 syntax Identifier_list
         = 
-        Identifier ("," Identifier)*
+        
+	Identifier
+	","
+      
  ;
 syntax Deferred
         = 
@@ -264,7 +297,10 @@ syntax Once
  ;
 syntax Key_list
         = 
-        Manifest_string ("," Manifest_string)*
+        
+	Manifest_string
+	","
+      
  ;
 syntax Local_declarations
         = 
@@ -272,7 +308,10 @@ syntax Local_declarations
  ;
 syntax Compound
         = 
-        {Instruction ";"}*
+        
+	Instruction
+	";"
+      
  ;
 syntax Instruction
         = Creation_instruction
@@ -301,7 +340,10 @@ syntax Invariant
  ;
 syntax Assertion
         = 
-        {Assertion_clause ";"}*
+        
+	Assertion_clause
+	";"
+      
  ;
 syntax Assertion_clause
         = 
@@ -382,7 +424,10 @@ syntax Actual_generics
  ;
 syntax Type_list
         = 
-        Type ("," Type)*
+        
+	Type
+	","
+      
  ;
 syntax Formal_generics
         = 
@@ -390,7 +435,10 @@ syntax Formal_generics
  ;
 syntax Formal_generic_list
         = 
-        Formal_generic ("," Formal_generic)*
+        
+	Formal_generic
+	","
+      
  ;
 syntax Formal_generic
         = 
@@ -422,7 +470,10 @@ syntax Multiple_constraint
  ;
 syntax Constraint_list
         = 
-        Single_constraint ("," Single_constraint)*
+        
+	Single_constraint
+	","
+      
  ;
 syntax Constraint_creators
         = 
@@ -446,7 +497,10 @@ syntax Manifest_tuple
  ;
 syntax Expression_list
         = 
-        {Expression ","}*
+        
+	Expression
+	","
+      
  ;
 syntax Converters
         = 
@@ -454,7 +508,10 @@ syntax Converters
  ;
 syntax Converter_list
         = 
-        Converter ("," Converter)*
+        
+	Converter
+	","
+      
  ;
 syntax Converter
         = Conversion_procedure
@@ -478,7 +535,10 @@ syntax Conditional
  ;
 syntax Then_part_list
         = 
-        Then_part ("elseif" Then_part)*
+        
+	Then_part
+	"elseif"
+      
  ;
 syntax Then_part
         = 
@@ -502,7 +562,10 @@ syntax When_part
  ;
 syntax Choices
         = 
-        Choice ("," Choice)*
+        
+	Choice
+	","
+      
  ;
 syntax Choice
         = Constant
@@ -581,7 +644,10 @@ syntax Creation_clause
  ;
 syntax Creation_procedure_list
         = 
-        Creation_procedure ("," Creation_procedure)*
+        
+	Creation_procedure
+	","
+      
  ;
 syntax Creation_procedure
         = 
@@ -657,7 +723,10 @@ syntax Actuals
  ;
 syntax Actual_list
         = 
-        Expression ("," Expression)*
+        
+	Expression
+	","
+      
  ;
 syntax Object_test
         = 
@@ -706,7 +775,10 @@ syntax Agent_actuals
  ;
 syntax Agent_actual_list
         = 
-        Agent_actual ("," Agent_actual)*
+        
+	Agent_actual
+	","
+      
  ;
 syntax Agent_actual
         = Expression
@@ -829,7 +901,10 @@ syntax Basic_manifest_string
  ;
 syntax String_content
         = 
-        Simple_string (Line_wrapping_part Simple_string)*
+        
+	Simple_string
+	Line_wrapping_part
+      
  ;
 syntax Verbatim_string
         = 
@@ -882,7 +957,10 @@ syntax External_argument_types
  ;
 syntax External_type_list
         = 
-        {External_type ","}*
+        
+	External_type
+	","
+      
  ;
 syntax External_type
         = 
@@ -894,7 +972,10 @@ syntax External_file_use
  ;
 syntax External_file_list
         = 
-        External_file ("," External_file)*
+        
+	External_file
+	","
+      
  ;
 syntax External_file
         = External_user_file
@@ -930,7 +1011,10 @@ syntax DLL_index
  ;
 syntax Comment
         = 
-        "--" {Simple_string Comment_break}*
+        "--" 
+	    Simple_string
+	    Comment_break
+	  
  ;
 syntax Comment_break
         = 

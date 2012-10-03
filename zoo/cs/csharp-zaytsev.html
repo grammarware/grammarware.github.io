@@ -17,7 +17,7 @@
 		          }
 		        </style><script type="text/javascript">
 				  var _gaq = _gaq || [];
-				  _gaq.push(['_setAccount', 'UA-3743366-7']);
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
 				  _gaq.push(['_trackPageview']);
 
 				  (function() {
@@ -70,7 +70,7 @@
 </pre><pre><a class="nt" name="else-part">else-part</a>:
         <span class="t">"else"</span> <a class="nt" href="#embedded-statement">embedded-statement</a>
 </pre><pre><a class="nt" name="qualified-identifier-list">qualified-identifier-list</a>:
-        <span class="t">"{"</span> <a class="nt" href="#qualified-identifier">qualified-identifier</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="meta">{</span><a class="nt" href="#qualified-identifier">qualified-identifier</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="compilation-unit">compilation-unit</a>:
         <a class="nt" href="#using-directive">using-directive</a><span class="meta">*</span> <a class="nt" href="#global-attributes">global-attributes</a> <a class="nt" href="#namespace-member-declaration">namespace-member-declaration</a><span class="meta">*</span>
 </pre><pre><a class="nt" name="type">type</a>:
@@ -86,7 +86,7 @@
         <span class="t">"ulong"</span>
         <span class="t">"char"</span>
 </pre><pre><a class="nt" name="argument-list">argument-list</a>:
-        <span class="t">"{"</span> <a class="nt" href="#argument">argument</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">*</span>
+        <span class="meta">{</span><a class="nt" href="#argument">argument</a> <span class="t">","</span><span class="meta">}*</span>
 </pre><pre><a class="nt" name="argument">argument</a>:
         <a class="nt" href="#ref-or-out">ref-or-out</a><span class="meta">?</span> <a class="nt" href="#expression">expression</a>
 </pre><pre><a class="nt" name="primary-expression">primary-expression</a>:
@@ -124,7 +124,7 @@
         <span class="t">"ulong"</span>
         <span class="t">"ushort"</span>
 </pre><pre><a class="nt" name="expression-list">expression-list</a>:
-        <span class="t">"{"</span> <a class="nt" href="#expression">expression</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="meta">{</span><a class="nt" href="#expression">expression</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="unary-expression">unary-expression</a>:
         <a class="nt" href="#expression-unary-operator">expression-unary-operator</a> <a class="nt" href="#unary-expression">unary-expression</a>
         <span class="t">"("</span> <a class="nt" href="#type">type</a> <span class="t">")"</span> <a class="nt" href="#unary-expression">unary-expression</a>
@@ -182,9 +182,9 @@
         <a class="nt" href="#local-variable-declaration">local-variable-declaration</a> <span class="t">";"</span>
         <a class="nt" href="#local-constant-declaration">local-constant-declaration</a> <span class="t">";"</span>
 </pre><pre><a class="nt" name="local-variable-declaration">local-variable-declaration</a>:
-        <a class="nt" href="#type">type</a> <span class="t">"{"</span> <a class="nt" href="#variable-declarator">variable-declarator</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <a class="nt" href="#type">type</a> <span class="meta">{</span><a class="nt" href="#variable-declarator">variable-declarator</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="local-constant-declaration">local-constant-declaration</a>:
-        <span class="t">"const"</span> <a class="nt" href="#type">type</a> <span class="t">"{"</span> <a class="nt" href="#constant-declarator">constant-declarator</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="t">"const"</span> <a class="nt" href="#type">type</a> <span class="meta">{</span><a class="nt" href="#constant-declarator">constant-declarator</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="constant-declarator">constant-declarator</a>:
         <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"="</span> <a class="nt" href="#expression">expression</a>
 </pre><pre><a class="nt" name="statement-expression">statement-expression</a>:
@@ -220,7 +220,7 @@
         <a class="nt" href="#local-variable-declaration">local-variable-declaration</a>
         <a class="nt" href="#statement-expression-list">statement-expression-list</a>
 </pre><pre><a class="nt" name="statement-expression-list">statement-expression-list</a>:
-        <span class="t">"{"</span> <a class="nt" href="#statement-expression">statement-expression</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="meta">{</span><a class="nt" href="#statement-expression">statement-expression</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="foreach-statement">foreach-statement</a>:
         <span class="t">"foreach"</span> <span class="t">"("</span> <a class="nt" href="#type">type</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"in"</span> <a class="nt" href="#expression">expression</a> <span class="t">")"</span> <a class="nt" href="#embedded-statement">embedded-statement</a>
 </pre><pre><a class="nt" name="jump-statement">jump-statement</a>:
@@ -264,11 +264,11 @@
 </pre><pre><a class="nt" name="namespace-declaration">namespace-declaration</a>:
         <span class="t">"namespace"</span> <a class="nt" href="#qualified-identifier">qualified-identifier</a> <a class="nt" href="#namespace-body">namespace-body</a> <span class="t">";"</span><span class="meta">?</span>
 </pre><pre><a class="nt" name="qualified-identifier">qualified-identifier</a>:
-        <span class="t">"{"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"."</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="meta">{</span><a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"."</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="namespace-body">namespace-body</a>:
         <span class="t">"{"</span> <a class="nt" href="#using-directive">using-directive</a><span class="meta">*</span> <a class="nt" href="#namespace-member-declaration">namespace-member-declaration</a><span class="meta">*</span> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="using-directive">using-directive</a>:
-        <span class="t">"using"</span> <span class="t">"("</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"="</span> <span class="t">")"</span><span class="meta">?</span> <a class="nt" href="#qualified-identifier">qualified-identifier</a> <span class="t">";"</span>
+        <span class="t">"using"</span> (<a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"="</span>)<span class="meta">?</span> <a class="nt" href="#qualified-identifier">qualified-identifier</a> <span class="t">";"</span>
 </pre><pre><a class="nt" name="namespace-member-declaration">namespace-member-declaration</a>:
         <a class="nt" href="#namespace-declaration">namespace-declaration</a>
         <a class="nt" href="#type-declaration">type-declaration</a>
@@ -290,7 +290,7 @@
         <span class="t">"sealed"</span>
 </pre><pre><a class="nt" name="class-base">class-base</a>:
         <span class="t">":"</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a>
-        <span class="t">":"</span> <a class="nt" href="#built-in-class-type">built-in-class-type</a> <span class="t">"("</span> <span class="t">","</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a> <span class="t">")"</span><span class="meta">?</span>
+        <span class="t">":"</span> <a class="nt" href="#built-in-class-type">built-in-class-type</a> (<span class="t">","</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a>)<span class="meta">?</span>
 </pre><pre><a class="nt" name="class-body">class-body</a>:
         <span class="t">"{"</span> <a class="nt" href="#class-member-declaration">class-member-declaration</a><span class="meta">*</span> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="class-member-declaration">class-member-declaration</a>:
@@ -306,7 +306,7 @@
         <a class="nt" href="#static-constructor-declaration">static-constructor-declaration</a>
         <a class="nt" href="#type-declaration">type-declaration</a>
 </pre><pre><a class="nt" name="constant-declaration">constant-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#constant-modifier">constant-modifier</a><span class="meta">*</span> <span class="t">"const"</span> <a class="nt" href="#type">type</a> <span class="t">"{"</span> <a class="nt" href="#constant-declarator">constant-declarator</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span> <span class="t">";"</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#constant-modifier">constant-modifier</a><span class="meta">*</span> <span class="t">"const"</span> <a class="nt" href="#type">type</a> <span class="meta">{</span><a class="nt" href="#constant-declarator">constant-declarator</a> <span class="t">","</span><span class="meta">}+</span> <span class="t">";"</span>
 </pre><pre><a class="nt" name="constant-modifier">constant-modifier</a>:
         <span class="t">"new"</span>
         <span class="t">"public"</span>
@@ -314,7 +314,7 @@
         <span class="t">"internal"</span>
         <span class="t">"private"</span>
 </pre><pre><a class="nt" name="field-declaration">field-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#field-modifier">field-modifier</a><span class="meta">*</span> <a class="nt" href="#type">type</a> <span class="t">"{"</span> <a class="nt" href="#variable-declarator">variable-declarator</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span> <span class="t">";"</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#field-modifier">field-modifier</a><span class="meta">*</span> <a class="nt" href="#type">type</a> <span class="meta">{</span><a class="nt" href="#variable-declarator">variable-declarator</a> <span class="t">","</span><span class="meta">}+</span> <span class="t">";"</span>
 </pre><pre><a class="nt" name="field-modifier">field-modifier</a>:
         <span class="t">"new"</span>
         <span class="t">"public"</span>
@@ -351,7 +351,7 @@
         <a class="nt" href="#fixed-parameters">fixed-parameters</a> <span class="t">","</span> <a class="nt" href="#parameter-array">parameter-array</a>
         <a class="nt" href="#parameter-array">parameter-array</a>
 </pre><pre><a class="nt" name="fixed-parameters">fixed-parameters</a>:
-        <span class="t">"{"</span> <a class="nt" href="#fixed-parameter">fixed-parameter</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="meta">{</span><a class="nt" href="#fixed-parameter">fixed-parameter</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="fixed-parameter">fixed-parameter</a>:
         <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#parameter-modifier">parameter-modifier</a><span class="meta">?</span> <a class="nt" href="#type">type</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a>
 </pre><pre><a class="nt" name="parameter-modifier">parameter-modifier</a>:
@@ -381,7 +381,7 @@
 </pre><pre><a class="nt" name="set-accessor-declaration">set-accessor-declaration</a>:
         <a class="nt" href="#attributes">attributes</a> <span class="t">"set"</span> <a class="nt" href="#maybe-empty-block">maybe-empty-block</a>
 </pre><pre><a class="nt" name="event-declaration">event-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#event-modifier">event-modifier</a><span class="meta">*</span> <span class="t">"event"</span> <a class="nt" href="#type">type</a> <span class="t">"{"</span> <a class="nt" href="#variable-declarator">variable-declarator</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span> <span class="t">";"</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#event-modifier">event-modifier</a><span class="meta">*</span> <span class="t">"event"</span> <a class="nt" href="#type">type</a> <span class="meta">{</span><a class="nt" href="#variable-declarator">variable-declarator</a> <span class="t">","</span><span class="meta">}+</span> <span class="t">";"</span>
         <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#event-modifier">event-modifier</a><span class="meta">*</span> <span class="t">"event"</span> <a class="nt" href="#type">type</a> <a class="nt" href="#qualified-identifier">qualified-identifier</a> <span class="t">"{"</span> <a class="nt" href="#event-accessor-declarations">event-accessor-declarations</a> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="event-modifier">event-modifier</a>:
         <span class="t">"new"</span>
@@ -480,7 +480,7 @@
 </pre><pre><a class="nt" name="destructor-declaration">destructor-declaration</a>:
         <a class="nt" href="#attributes">attributes</a> <span class="t">"extern"</span><span class="meta">?</span> <span class="t">"~"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"("</span> <span class="t">")"</span> <a class="nt" href="#maybe-empty-block">maybe-empty-block</a>
 </pre><pre><a class="nt" name="struct-declaration">struct-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#struct-modifier">struct-modifier</a><span class="meta">*</span> <span class="t">"struct"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"("</span> <span class="t">":"</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a> <span class="t">")"</span><span class="meta">?</span> <a class="nt" href="#struct-body">struct-body</a> <span class="t">";"</span><span class="meta">?</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#struct-modifier">struct-modifier</a><span class="meta">*</span> <span class="t">"struct"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> (<span class="t">":"</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a>)<span class="meta">?</span> <a class="nt" href="#struct-body">struct-body</a> <span class="t">";"</span><span class="meta">?</span>
 </pre><pre><a class="nt" name="struct-modifier">struct-modifier</a>:
         <span class="t">"new"</span>
         <span class="t">"public"</span>
@@ -512,12 +512,12 @@
         <span class="t">"["</span> <span class="t">","</span><span class="meta">*</span> <span class="t">"]"</span>
 </pre><pre><a class="nt" name="array-initializer">array-initializer</a>:
         <span class="t">"{"</span> <span class="t">"}"</span>
-        <span class="t">"{"</span> <span class="t">"{"</span> <a class="nt" href="#variable-initializer">variable-initializer</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span> <span class="t">","</span><span class="meta">?</span> <span class="t">"}"</span>
+        <span class="t">"{"</span> <span class="meta">{</span><a class="nt" href="#variable-initializer">variable-initializer</a> <span class="t">","</span><span class="meta">}+</span> <span class="t">","</span><span class="meta">?</span> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="variable-initializer">variable-initializer</a>:
         <a class="nt" href="#expression">expression</a>
         <a class="nt" href="#array-initializer">array-initializer</a>
 </pre><pre><a class="nt" name="interface-declaration">interface-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#interface-modifier">interface-modifier</a><span class="meta">*</span> <span class="t">"interface"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"("</span> <span class="t">":"</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a> <span class="t">")"</span><span class="meta">?</span> <a class="nt" href="#interface-body">interface-body</a> <span class="t">";"</span><span class="meta">?</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#interface-modifier">interface-modifier</a><span class="meta">*</span> <span class="t">"interface"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> (<span class="t">":"</span> <a class="nt" href="#qualified-identifier-list">qualified-identifier-list</a>)<span class="meta">?</span> <a class="nt" href="#interface-body">interface-body</a> <span class="t">";"</span><span class="meta">?</span>
 </pre><pre><a class="nt" name="interface-modifier">interface-modifier</a>:
         <span class="t">"new"</span>
         <span class="t">"public"</span>
@@ -536,17 +536,17 @@
 </pre><pre><a class="nt" name="interface-property-declaration">interface-property-declaration</a>:
         <a class="nt" href="#attributes">attributes</a> <span class="t">"new"</span><span class="meta">?</span> <a class="nt" href="#type">type</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"{"</span> <a class="nt" href="#interface-accessors">interface-accessors</a> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="interface-accessors">interface-accessors</a>:
-        <a class="nt" href="#attributes">attributes</a> <span class="t">"get"</span> <span class="t">";"</span> <span class="t">"("</span> <a class="nt" href="#attributes">attributes</a> <span class="t">"set"</span> <span class="t">";"</span> <span class="t">")"</span><span class="meta">?</span>
-        <a class="nt" href="#attributes">attributes</a> <span class="t">"set"</span> <span class="t">";"</span> <span class="t">"("</span> <a class="nt" href="#attributes">attributes</a> <span class="t">"get"</span> <span class="t">";"</span> <span class="t">")"</span><span class="meta">?</span>
+        <a class="nt" href="#attributes">attributes</a> <span class="t">"get"</span> <span class="t">";"</span> (<a class="nt" href="#attributes">attributes</a> <span class="t">"set"</span> <span class="t">";"</span>)<span class="meta">?</span>
+        <a class="nt" href="#attributes">attributes</a> <span class="t">"set"</span> <span class="t">";"</span> (<a class="nt" href="#attributes">attributes</a> <span class="t">"get"</span> <span class="t">";"</span>)<span class="meta">?</span>
 </pre><pre><a class="nt" name="interface-event-declaration">interface-event-declaration</a>:
         <a class="nt" href="#attributes">attributes</a> <span class="t">"new"</span><span class="meta">?</span> <span class="t">"event"</span> <a class="nt" href="#type">type</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">";"</span>
 </pre><pre><a class="nt" name="interface-indexer-declaration">interface-indexer-declaration</a>:
         <a class="nt" href="#attributes">attributes</a> <span class="t">"new"</span><span class="meta">?</span> <a class="nt" href="#type">type</a> <span class="t">"this"</span> <span class="t">"["</span> <a class="nt" href="#formal-parameter-list">formal-parameter-list</a> <span class="t">"]"</span> <span class="t">"{"</span> <a class="nt" href="#interface-accessors">interface-accessors</a> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="enum-declaration">enum-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#enum-modifier">enum-modifier</a><span class="meta">*</span> <span class="t">"enum"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"("</span> <span class="t">":"</span> <a class="nt" href="#integral-type">integral-type</a> <span class="t">")"</span><span class="meta">?</span> <a class="nt" href="#enum-body">enum-body</a> <span class="t">";"</span><span class="meta">?</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#enum-modifier">enum-modifier</a><span class="meta">*</span> <span class="t">"enum"</span> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> (<span class="t">":"</span> <a class="nt" href="#integral-type">integral-type</a>)<span class="meta">?</span> <a class="nt" href="#enum-body">enum-body</a> <span class="t">";"</span><span class="meta">?</span>
 </pre><pre><a class="nt" name="enum-body">enum-body</a>:
         <span class="t">"{"</span> <span class="t">"}"</span>
-        <span class="t">"{"</span> <span class="t">"{"</span> <a class="nt" href="#enum-member-declaration">enum-member-declaration</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span> <span class="t">","</span><span class="meta">?</span> <span class="t">"}"</span>
+        <span class="t">"{"</span> <span class="meta">{</span><a class="nt" href="#enum-member-declaration">enum-member-declaration</a> <span class="t">","</span><span class="meta">}+</span> <span class="t">","</span><span class="meta">?</span> <span class="t">"}"</span>
 </pre><pre><a class="nt" name="enum-modifier">enum-modifier</a>:
         <span class="t">"new"</span>
         <span class="t">"public"</span>
@@ -554,7 +554,7 @@
         <span class="t">"internal"</span>
         <span class="t">"private"</span>
 </pre><pre><a class="nt" name="enum-member-declaration">enum-member-declaration</a>:
-        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"("</span> <span class="t">"="</span> <a class="nt" href="#expression">expression</a> <span class="t">")"</span><span class="meta">?</span>
+        <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> (<span class="t">"="</span> <a class="nt" href="#expression">expression</a>)<span class="meta">?</span>
 </pre><pre><a class="nt" name="delegate-declaration">delegate-declaration</a>:
         <a class="nt" href="#attributes">attributes</a> <a class="nt" href="#delegate-modifier">delegate-modifier</a><span class="meta">*</span> <span class="t">"delegate"</span> <a class="nt" href="#type-or-void">type-or-void</a> <a class="nt" href="#lex-csharp/identifier">lex-csharp/identifier</a> <span class="t">"("</span> <a class="nt" href="#formal-parameter-list">formal-parameter-list</a><span class="meta">?</span> <span class="t">")"</span> <span class="t">";"</span>
 </pre><pre><a class="nt" name="delegate-modifier">delegate-modifier</a>:
@@ -570,7 +570,7 @@
 </pre><pre><a class="nt" name="attributes">attributes</a>:
         <a class="nt" href="#attribute-section">attribute-section</a><span class="meta">*</span>
 </pre><pre><a class="nt" name="attribute-section">attribute-section</a>:
-        <span class="t">"["</span> <span class="t">"("</span> <a class="nt" href="#attribute-target">attribute-target</a> <span class="t">":"</span> <span class="t">")"</span><span class="meta">?</span> <a class="nt" href="#attribute-list">attribute-list</a> <span class="t">","</span><span class="meta">?</span> <span class="t">"]"</span>
+        <span class="t">"["</span> (<a class="nt" href="#attribute-target">attribute-target</a> <span class="t">":"</span>)<span class="meta">?</span> <a class="nt" href="#attribute-list">attribute-list</a> <span class="t">","</span><span class="meta">?</span> <span class="t">"]"</span>
 </pre><pre><a class="nt" name="attribute-target">attribute-target</a>:
         <span class="t">"field"</span>
         <span class="t">"event"</span>
@@ -581,7 +581,7 @@
         <span class="t">"return"</span>
         <span class="t">"type"</span>
 </pre><pre><a class="nt" name="attribute-list">attribute-list</a>:
-        <span class="t">"{"</span> <a class="nt" href="#attribute">attribute</a> <span class="t">","</span> <span class="t">"}"</span><span class="meta">+</span>
+        <span class="meta">{</span><a class="nt" href="#attribute">attribute</a> <span class="t">","</span><span class="meta">}+</span>
 </pre><pre><a class="nt" name="attribute">attribute</a>:
         <a class="nt" href="#attribute-name">attribute-name</a> <a class="nt" href="#attribute-arguments">attribute-arguments</a><span class="meta">?</span>
 </pre><pre><a class="nt" name="attribute-name">attribute-name</a>:
@@ -590,5 +590,5 @@
         <span class="t">"("</span> <a class="nt" href="#expression-list">expression-list</a><span class="meta">?</span> <span class="t">")"</span>
 </pre><hr></hr><div class="b">
 					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
-					Last updated: 28/02/2012.
+					Last updated: 03/10/2012.
 				</div></body></html>

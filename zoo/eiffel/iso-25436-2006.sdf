@@ -10,13 +10,19 @@ exports
 
         "note" Note-list -> Notes
 
-        (Note-entry (";" Note-entry)*)? -> Note-list
+        
+	Note-entry
+	";"
+       -> Note-list
 
         Note-name Note-values -> Note-entry
 
         Identifier ":" -> Note-name
 
-        Note-item ("," Note-item)* -> Note-values
+        
+	Note-item
+	","
+       -> Note-values
 
         Identifier
 		| Manifest-constant -> Note-item
@@ -35,7 +41,10 @@ exports
 
         "feature" Clients? Header-comment? Feature-declaration-list -> Feature-clause
 
-        (Feature-declaration (";" Feature-declaration)*)? -> Feature-declaration-list
+        
+	Feature-declaration
+	";"
+       -> Feature-declaration-list
 
         Comment -> Header-comment
 
@@ -51,7 +60,10 @@ exports
 
         "=" Manifest-constant -> Explicit-value
 
-        New-feature ("," New-feature)* -> New-feature-list
+        
+	New-feature
+	","
+       -> New-feature-list
 
         "frozen"? Extended-feature-name -> New-feature
 
@@ -108,7 +120,10 @@ exports
 
         "{" "NONE" "}" -> Non-conformance
 
-        Parent (";" Parent)* -> Parent-list
+        
+	Parent
+	";"
+       -> Parent-list
 
         Class-type Feature-adaptation? -> Parent
 
@@ -116,32 +131,50 @@ exports
 
         "rename" Rename-list -> Rename
 
-        Rename-pair ("," Rename-pair)* -> Rename-list
+        
+	Rename-pair
+	","
+       -> Rename-list
 
         Feature-name "as" Extended-feature-name -> Rename-pair
 
         "{" Class-list "}" -> Clients
 
-        Class-name ("," Class-name)* -> Class-list
+        
+	Class-name
+	","
+       -> Class-list
 
         "export" New-export-list -> New-exports
 
-        New-export-item (";" New-export-item)* -> New-export-list
+        
+	New-export-item
+	";"
+       -> New-export-list
 
         Clients Header-comment? Feature-set -> New-export-item
 
         Feature-list
 		| "all" -> Feature-set
 
-        Feature-name ("," Feature-name)* -> Feature-list
+        
+	Feature-name
+	","
+       -> Feature-list
 
         "(" Entity-declaration-list ")" -> Formal-arguments
 
-        Entity-declaration-group (";" Entity-declaration-group)* -> Entity-declaration-list
+        
+	Entity-declaration-group
+	";"
+       -> Entity-declaration-list
 
         Identifier-list Type-mark -> Entity-declaration-group
 
-        Identifier ("," Identifier)* -> Identifier-list
+        
+	Identifier
+	","
+       -> Identifier-list
 
         "deferred" -> Deferred
 
@@ -155,11 +188,17 @@ exports
 
         "once" ("(" Key-list ")")? -> Once
 
-        Manifest-string ("," Manifest-string)* -> Key-list
+        
+	Manifest-string
+	","
+       -> Key-list
 
         "local" Entity-declaration-list? -> Local-declarations
 
-        (Instruction (";" Instruction)*)? -> Compound
+        
+	Instruction
+	";"
+       -> Compound
 
         Creation-instruction
 		| Call
@@ -179,7 +218,10 @@ exports
 
         "invariant" Assertion -> Invariant
 
-        (Assertion-clause (";" Assertion-clause)*)? -> Assertion
+        
+	Assertion-clause
+	";"
+       -> Assertion
 
         Tag-mark? Unlabeled-assertion-clause -> Assertion-clause
 
@@ -225,11 +267,17 @@ exports
 
         "[" Type-list "]" -> Actual-generics
 
-        Type ("," Type)* -> Type-list
+        
+	Type
+	","
+       -> Type-list
 
         "[" Formal-generic-list "]" -> Formal-generics
 
-        Formal-generic ("," Formal-generic)* -> Formal-generic-list
+        
+	Formal-generic
+	","
+       -> Formal-generic-list
 
         "frozen"? Formal-generic-name Constraint? -> Formal-generic
 
@@ -246,7 +294,10 @@ exports
 
         "{" Constraint-list "}" -> Multiple-constraint
 
-        Single-constraint ("," Single-constraint)* -> Constraint-list
+        
+	Single-constraint
+	","
+       -> Constraint-list
 
         "create" Feature-list "end" -> Constraint-creators
 
@@ -259,11 +310,17 @@ exports
 
         "[" Expression-list "]" -> Manifest-tuple
 
-        (Expression ("," Expression)*)? -> Expression-list
+        
+	Expression
+	","
+       -> Expression-list
 
         "convert" Converter-list -> Converters
 
-        Converter ("," Converter)* -> Converter-list
+        
+	Converter
+	","
+       -> Converter-list
 
         Conversion-procedure
 		| Conversion-query -> Converter
@@ -276,7 +333,10 @@ exports
 
         "if" Then-part-list Else-part? "end" -> Conditional
 
-        Then-part ("elseif" Then-part)* -> Then-part-list
+        
+	Then-part
+	"elseif"
+       -> Then-part-list
 
         Boolean-expression "then" Compound -> Then-part
 
@@ -288,7 +348,10 @@ exports
 
         "when" Choices "then" Compound -> When-part
 
-        Choice ("," Choice)* -> Choices
+        
+	Choice
+	","
+       -> Choices
 
         Constant
 		| Manifest-type
@@ -334,7 +397,10 @@ exports
 
         "create" Clients? Header-comment? Creation-procedure-list -> Creation-clause
 
-        Creation-procedure ("," Creation-procedure)* -> Creation-procedure-list
+        
+	Creation-procedure
+	","
+       -> Creation-procedure-list
 
         Feature-name -> Creation-procedure
 
@@ -377,7 +443,10 @@ exports
 
         "(" Actual-list ")" -> Actuals
 
-        Expression ("," Expression)* -> Actual-list
+        
+	Expression
+	","
+       -> Actual-list
 
         "{" Identifier ":" Type "}" Expression -> Object-test
 
@@ -405,7 +474,10 @@ exports
 
         "(" Agent-actual-list ")" -> Agent-actuals
 
-        Agent-actual ("," Agent-actual)* -> Agent-actual-list
+        
+	Agent-actual
+	","
+       -> Agent-actual-list
 
         Expression
 		| Placeholder -> Agent-actual
@@ -488,7 +560,10 @@ exports
 
         """ String-content """ -> Basic-manifest-string
 
-        Simple-string (Line-wrapping-part Simple-string)* -> String-content
+        
+	Simple-string
+	Line-wrapping-part
+       -> String-content
 
         Verbatim-string-opener Line-sequence Verbatim-string-closer -> Verbatim-string
 
@@ -519,13 +594,19 @@ exports
 
         "(" External-type-list ")" -> External-argument-types
 
-        (External-type ("," External-type)*)? -> External-type-list
+        
+	External-type
+	","
+       -> External-type-list
 
         Simple-string -> External-type
 
         "use" External-file-list -> External-file-use
 
-        External-file ("," External-file)* -> External-file-list
+        
+	External-file
+	","
+       -> External-file-list
 
         External-user-file
 		| External-system-file -> External-file
@@ -544,7 +625,10 @@ exports
 
         Integer -> DLL-index
 
-        "--" (Simple-string (Comment-break Simple-string)*)? -> Comment
+        "--" 
+	    Simple-string
+	    Comment-break
+	   -> Comment
 
         New-line Blanks-or-tabs? "--" -> Comment-break
 

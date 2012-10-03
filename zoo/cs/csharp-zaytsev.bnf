@@ -43,7 +43,7 @@ built-in-class-type:
 else-part:
         "else" embedded-statement
 qualified-identifier-list:
-        "{" qualified-identifier "," "}"+
+        {qualified-identifier ","}+
 compilation-unit:
         using-directive* global-attributes namespace-member-declaration*
 type:
@@ -59,7 +59,7 @@ integral-type:
         "ulong"
         "char"
 argument-list:
-        "{" argument "," "}"*
+        {argument ","}*
 argument:
         ref-or-out? expression
 primary-expression:
@@ -97,7 +97,7 @@ predefined-type:
         "ulong"
         "ushort"
 expression-list:
-        "{" expression "," "}"+
+        {expression ","}+
 unary-expression:
         expression-unary-operator unary-expression
         "(" type ")" unary-expression
@@ -155,9 +155,9 @@ declaration-statement:
         local-variable-declaration ";"
         local-constant-declaration ";"
 local-variable-declaration:
-        type "{" variable-declarator "," "}"+
+        type {variable-declarator ","}+
 local-constant-declaration:
-        "const" type "{" constant-declarator "," "}"+
+        "const" type {constant-declarator ","}+
 constant-declarator:
         lex-csharp/identifier "=" expression
 statement-expression:
@@ -193,7 +193,7 @@ for-initializer:
         local-variable-declaration
         statement-expression-list
 statement-expression-list:
-        "{" statement-expression "," "}"+
+        {statement-expression ","}+
 foreach-statement:
         "foreach" "(" type lex-csharp/identifier "in" expression ")" embedded-statement
 jump-statement:
@@ -237,11 +237,11 @@ resource-acquisition:
 namespace-declaration:
         "namespace" qualified-identifier namespace-body ";"?
 qualified-identifier:
-        "{" lex-csharp/identifier "." "}"+
+        {lex-csharp/identifier "."}+
 namespace-body:
         "{" using-directive* namespace-member-declaration* "}"
 using-directive:
-        "using" "(" lex-csharp/identifier "=" ")"? qualified-identifier ";"
+        "using" (lex-csharp/identifier "=")? qualified-identifier ";"
 namespace-member-declaration:
         namespace-declaration
         type-declaration
@@ -263,7 +263,7 @@ class-modifier:
         "sealed"
 class-base:
         ":" qualified-identifier-list
-        ":" built-in-class-type "(" "," qualified-identifier-list ")"?
+        ":" built-in-class-type ("," qualified-identifier-list)?
 class-body:
         "{" class-member-declaration* "}"
 class-member-declaration:
@@ -279,7 +279,7 @@ class-member-declaration:
         static-constructor-declaration
         type-declaration
 constant-declaration:
-        attributes constant-modifier* "const" type "{" constant-declarator "," "}"+ ";"
+        attributes constant-modifier* "const" type {constant-declarator ","}+ ";"
 constant-modifier:
         "new"
         "public"
@@ -287,7 +287,7 @@ constant-modifier:
         "internal"
         "private"
 field-declaration:
-        attributes field-modifier* type "{" variable-declarator "," "}"+ ";"
+        attributes field-modifier* type {variable-declarator ","}+ ";"
 field-modifier:
         "new"
         "public"
@@ -324,7 +324,7 @@ formal-parameter-list:
         fixed-parameters "," parameter-array
         parameter-array
 fixed-parameters:
-        "{" fixed-parameter "," "}"+
+        {fixed-parameter ","}+
 fixed-parameter:
         attributes parameter-modifier? type lex-csharp/identifier
 parameter-modifier:
@@ -354,7 +354,7 @@ get-accessor-declaration:
 set-accessor-declaration:
         attributes "set" maybe-empty-block
 event-declaration:
-        attributes event-modifier* "event" type "{" variable-declarator "," "}"+ ";"
+        attributes event-modifier* "event" type {variable-declarator ","}+ ";"
         attributes event-modifier* "event" type qualified-identifier "{" event-accessor-declarations "}"
 event-modifier:
         "new"
@@ -453,7 +453,7 @@ static-constructor-modifiers:
 destructor-declaration:
         attributes "extern"? "~" lex-csharp/identifier "(" ")" maybe-empty-block
 struct-declaration:
-        attributes struct-modifier* "struct" lex-csharp/identifier "(" ":" qualified-identifier-list ")"? struct-body ";"?
+        attributes struct-modifier* "struct" lex-csharp/identifier (":" qualified-identifier-list)? struct-body ";"?
 struct-modifier:
         "new"
         "public"
@@ -485,12 +485,12 @@ rank-specifier:
         "[" ","* "]"
 array-initializer:
         "{" "}"
-        "{" "{" variable-initializer "," "}"+ ","? "}"
+        "{" {variable-initializer ","}+ ","? "}"
 variable-initializer:
         expression
         array-initializer
 interface-declaration:
-        attributes interface-modifier* "interface" lex-csharp/identifier "(" ":" qualified-identifier-list ")"? interface-body ";"?
+        attributes interface-modifier* "interface" lex-csharp/identifier (":" qualified-identifier-list)? interface-body ";"?
 interface-modifier:
         "new"
         "public"
@@ -509,17 +509,17 @@ interface-method-declaration:
 interface-property-declaration:
         attributes "new"? type lex-csharp/identifier "{" interface-accessors "}"
 interface-accessors:
-        attributes "get" ";" "(" attributes "set" ";" ")"?
-        attributes "set" ";" "(" attributes "get" ";" ")"?
+        attributes "get" ";" (attributes "set" ";")?
+        attributes "set" ";" (attributes "get" ";")?
 interface-event-declaration:
         attributes "new"? "event" type lex-csharp/identifier ";"
 interface-indexer-declaration:
         attributes "new"? type "this" "[" formal-parameter-list "]" "{" interface-accessors "}"
 enum-declaration:
-        attributes enum-modifier* "enum" lex-csharp/identifier "(" ":" integral-type ")"? enum-body ";"?
+        attributes enum-modifier* "enum" lex-csharp/identifier (":" integral-type)? enum-body ";"?
 enum-body:
         "{" "}"
-        "{" "{" enum-member-declaration "," "}"+ ","? "}"
+        "{" {enum-member-declaration ","}+ ","? "}"
 enum-modifier:
         "new"
         "public"
@@ -527,7 +527,7 @@ enum-modifier:
         "internal"
         "private"
 enum-member-declaration:
-        attributes lex-csharp/identifier "(" "=" expression ")"?
+        attributes lex-csharp/identifier ("=" expression)?
 delegate-declaration:
         attributes delegate-modifier* "delegate" type-or-void lex-csharp/identifier "(" formal-parameter-list? ")" ";"
 delegate-modifier:
@@ -543,7 +543,7 @@ global-attribute-section:
 attributes:
         attribute-section*
 attribute-section:
-        "[" "(" attribute-target ":" ")"? attribute-list ","? "]"
+        "[" (attribute-target ":")? attribute-list ","? "]"
 attribute-target:
         "field"
         "event"
@@ -554,7 +554,7 @@ attribute-target:
         "return"
         "type"
 attribute-list:
-        "{" attribute "," "}"+
+        {attribute ","}+
 attribute:
         attribute-name attribute-arguments?
 attribute-name:

@@ -99,29 +99,14 @@
   <xns1:production>
     <nonterminal>Note_list</nonterminal>
     <xns1:expression>
-      <optional>
+      <sepliststar>
 	<xns1:expression>
-	  <sequence>
-	    <xns1:expression>
-	      <nonterminal>Note_entry</nonterminal>
-	    </xns1:expression>
-	    <xns1:expression>
-	      <star>
-		<xns1:expression>
-		  <sequence>
-		    <xns1:expression>
-		      <terminal>;</terminal>
-		    </xns1:expression>
-		    <xns1:expression>
-		      <nonterminal>Note_entry</nonterminal>
-		    </xns1:expression>
-		  </sequence>
-		</xns1:expression>
-	      </star>
-	    </xns1:expression>
-	  </sequence>
+	  <nonterminal>Note_entry</nonterminal>
 	</xns1:expression>
-      </optional>
+	<xns1:expression>
+	  <terminal>;</terminal>
+	</xns1:expression>
+      </sepliststar>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -153,25 +138,14 @@
   <xns1:production>
     <nonterminal>Note_values</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Note_item</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Note_item</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -282,29 +256,14 @@
   <xns1:production>
     <nonterminal>Feature_declaration_list</nonterminal>
     <xns1:expression>
-      <optional>
+      <sepliststar>
 	<xns1:expression>
-	  <sequence>
-	    <xns1:expression>
-	      <nonterminal>Feature_declaration</nonterminal>
-	    </xns1:expression>
-	    <xns1:expression>
-	      <star>
-		<xns1:expression>
-		  <sequence>
-		    <xns1:expression>
-		      <terminal>;</terminal>
-		    </xns1:expression>
-		    <xns1:expression>
-		      <nonterminal>Feature_declaration</nonterminal>
-		    </xns1:expression>
-		  </sequence>
-		</xns1:expression>
-	      </star>
-	    </xns1:expression>
-	  </sequence>
+	  <nonterminal>Feature_declaration</nonterminal>
 	</xns1:expression>
-      </optional>
+	<xns1:expression>
+	  <terminal>;</terminal>
+	</xns1:expression>
+      </sepliststar>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -435,25 +394,14 @@
   <xns1:production>
     <nonterminal>New_feature_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>New_feature</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>New_feature</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -770,25 +718,14 @@
   <xns1:production>
     <nonterminal>Parent_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Parent</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>;</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Parent</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>;</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -869,25 +806,14 @@
   <xns1:production>
     <nonterminal>Rename_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Rename_pair</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Rename_pair</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -925,25 +851,14 @@
   <xns1:production>
     <nonterminal>Class_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Class_name</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Class_name</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -962,25 +877,14 @@
   <xns1:production>
     <nonterminal>New_export_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>New_export_item</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>;</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>New_export_item</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>;</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1019,25 +923,14 @@
   <xns1:production>
     <nonterminal>Feature_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Feature_name</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Feature_name</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1059,25 +952,14 @@
   <xns1:production>
     <nonterminal>Entity_declaration_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Entity_declaration_group</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>;</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Entity_declaration_group</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>;</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1096,25 +978,14 @@
   <xns1:production>
     <nonterminal>Identifier_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Identifier</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Identifier</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1192,25 +1063,14 @@
   <xns1:production>
     <nonterminal>Key_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Manifest_string</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Manifest_string</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1233,29 +1093,14 @@
   <xns1:production>
     <nonterminal>Compound</nonterminal>
     <xns1:expression>
-      <optional>
+      <sepliststar>
 	<xns1:expression>
-	  <sequence>
-	    <xns1:expression>
-	      <nonterminal>Instruction</nonterminal>
-	    </xns1:expression>
-	    <xns1:expression>
-	      <star>
-		<xns1:expression>
-		  <sequence>
-		    <xns1:expression>
-		      <terminal>;</terminal>
-		    </xns1:expression>
-		    <xns1:expression>
-		      <nonterminal>Instruction</nonterminal>
-		    </xns1:expression>
-		  </sequence>
-		</xns1:expression>
-	      </star>
-	    </xns1:expression>
-	  </sequence>
+	  <nonterminal>Instruction</nonterminal>
 	</xns1:expression>
-      </optional>
+	<xns1:expression>
+	  <terminal>;</terminal>
+	</xns1:expression>
+      </sepliststar>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1361,29 +1206,14 @@
   <xns1:production>
     <nonterminal>Assertion</nonterminal>
     <xns1:expression>
-      <optional>
+      <sepliststar>
 	<xns1:expression>
-	  <sequence>
-	    <xns1:expression>
-	      <nonterminal>Assertion_clause</nonterminal>
-	    </xns1:expression>
-	    <xns1:expression>
-	      <star>
-		<xns1:expression>
-		  <sequence>
-		    <xns1:expression>
-		      <terminal>;</terminal>
-		    </xns1:expression>
-		    <xns1:expression>
-		      <nonterminal>Assertion_clause</nonterminal>
-		    </xns1:expression>
-		  </sequence>
-		</xns1:expression>
-	      </star>
-	    </xns1:expression>
-	  </sequence>
+	  <nonterminal>Assertion_clause</nonterminal>
 	</xns1:expression>
-      </optional>
+	<xns1:expression>
+	  <terminal>;</terminal>
+	</xns1:expression>
+      </sepliststar>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1692,25 +1522,14 @@
   <xns1:production>
     <nonterminal>Type_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Type</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Type</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1732,25 +1551,14 @@
   <xns1:production>
     <nonterminal>Formal_generic_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Formal_generic</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Formal_generic</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1876,25 +1684,14 @@
   <xns1:production>
     <nonterminal>Constraint_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Single_constraint</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Single_constraint</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -1978,29 +1775,14 @@
   <xns1:production>
     <nonterminal>Expression_list</nonterminal>
     <xns1:expression>
-      <optional>
+      <sepliststar>
 	<xns1:expression>
-	  <sequence>
-	    <xns1:expression>
-	      <nonterminal>Expression</nonterminal>
-	    </xns1:expression>
-	    <xns1:expression>
-	      <star>
-		<xns1:expression>
-		  <sequence>
-		    <xns1:expression>
-		      <terminal>,</terminal>
-		    </xns1:expression>
-		    <xns1:expression>
-		      <nonterminal>Expression</nonterminal>
-		    </xns1:expression>
-		  </sequence>
-		</xns1:expression>
-	      </star>
-	    </xns1:expression>
-	  </sequence>
+	  <nonterminal>Expression</nonterminal>
 	</xns1:expression>
-      </optional>
+	<xns1:expression>
+	  <terminal>,</terminal>
+	</xns1:expression>
+      </sepliststar>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -2019,25 +1801,14 @@
   <xns1:production>
     <nonterminal>Converter_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Converter</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Converter</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -2130,25 +1901,14 @@
   <xns1:production>
     <nonterminal>Then_part_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Then_part</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>elseif</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Then_part</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>elseif</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -2242,25 +2002,14 @@
   <xns1:production>
     <nonterminal>Choices</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Choice</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Choice</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -2545,25 +2294,14 @@
   <xns1:production>
     <nonterminal>Creation_procedure_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Creation_procedure</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Creation_procedure</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -2852,25 +2590,14 @@
   <xns1:production>
     <nonterminal>Actual_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Expression</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Expression</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -3062,25 +2789,14 @@
   <xns1:production>
     <nonterminal>Agent_actual_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Agent_actual</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Agent_actual</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -3505,25 +3221,14 @@
   <xns1:production>
     <nonterminal>String_content</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>Simple_string</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <nonterminal>Line_wrapping_part</nonterminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>Simple_string</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <nonterminal>Line_wrapping_part</nonterminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -3726,29 +3431,14 @@
   <xns1:production>
     <nonterminal>External_type_list</nonterminal>
     <xns1:expression>
-      <optional>
+      <sepliststar>
 	<xns1:expression>
-	  <sequence>
-	    <xns1:expression>
-	      <nonterminal>External_type</nonterminal>
-	    </xns1:expression>
-	    <xns1:expression>
-	      <star>
-		<xns1:expression>
-		  <sequence>
-		    <xns1:expression>
-		      <terminal>,</terminal>
-		    </xns1:expression>
-		    <xns1:expression>
-		      <nonterminal>External_type</nonterminal>
-		    </xns1:expression>
-		  </sequence>
-		</xns1:expression>
-	      </star>
-	    </xns1:expression>
-	  </sequence>
+	  <nonterminal>External_type</nonterminal>
 	</xns1:expression>
-      </optional>
+	<xns1:expression>
+	  <terminal>,</terminal>
+	</xns1:expression>
+      </sepliststar>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -3773,25 +3463,14 @@
   <xns1:production>
     <nonterminal>External_file_list</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>External_file</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>,</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>External_file</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>,</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>
@@ -3976,29 +3655,14 @@
 	  <terminal>--</terminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <optional>
+	  <sepliststar>
 	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <nonterminal>Simple_string</nonterminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <star>
-		    <xns1:expression>
-		      <sequence>
-			<xns1:expression>
-			  <nonterminal>Comment_break</nonterminal>
-			</xns1:expression>
-			<xns1:expression>
-			  <nonterminal>Simple_string</nonterminal>
-			</xns1:expression>
-		      </sequence>
-		    </xns1:expression>
-		  </star>
-		</xns1:expression>
-	      </sequence>
+	      <nonterminal>Simple_string</nonterminal>
 	    </xns1:expression>
-	  </optional>
+	    <xns1:expression>
+	      <nonterminal>Comment_break</nonterminal>
+	    </xns1:expression>
+	  </sepliststar>
 	</xns1:expression>
       </sequence>
     </xns1:expression>

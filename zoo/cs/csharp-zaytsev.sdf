@@ -48,7 +48,7 @@ exports
 
         "else" Embedded-statement -> Else-part
 
-        "{" Qualified-identifier "," "}"+ -> Qualified-identifier-list
+        Qualified-identifier"," -> Qualified-identifier-list
 
         Using-directive* Global-attributes Namespace-member-declaration* -> Compilation-unit
 
@@ -64,7 +64,7 @@ exports
 		| "ulong"
 		| "char" -> Integral-type
 
-        "{" Argument "," "}"* -> Argument-list
+        Argument"," -> Argument-list
 
         Ref-or-out? Expression -> Argument
 
@@ -102,7 +102,7 @@ exports
 		| "ulong"
 		| "ushort" -> Predefined-type
 
-        "{" Expression "," "}"+ -> Expression-list
+        Expression"," -> Expression-list
 
         Expression-unary-operator Unary-expression
 		| "(" Type ")" Unary-expression
@@ -160,9 +160,9 @@ exports
         Local-variable-declaration ";"
 		| Local-constant-declaration ";" -> Declaration-statement
 
-        Type "{" Variable-declarator "," "}"+ -> Local-variable-declaration
+        Type Variable-declarator"," -> Local-variable-declaration
 
-        "const" Type "{" Constant-declarator "," "}"+ -> Local-constant-declaration
+        "const" Type Constant-declarator"," -> Local-constant-declaration
 
         Lex-csharp/identifier "=" Expression -> Constant-declarator
 
@@ -198,7 +198,7 @@ exports
         Local-variable-declaration
 		| Statement-expression-list -> For-initializer
 
-        "{" Statement-expression "," "}"+ -> Statement-expression-list
+        Statement-expression"," -> Statement-expression-list
 
         "foreach" "(" Type Lex-csharp/identifier "in" Expression ")" Embedded-statement -> Foreach-statement
 
@@ -242,11 +242,11 @@ exports
 
         "namespace" Qualified-identifier Namespace-body ";"? -> Namespace-declaration
 
-        "{" Lex-csharp/identifier "." "}"+ -> Qualified-identifier
+        Lex-csharp/identifier"." -> Qualified-identifier
 
         "{" Using-directive* Namespace-member-declaration* "}" -> Namespace-body
 
-        "using" "(" Lex-csharp/identifier "=" ")"? Qualified-identifier ";" -> Using-directive
+        "using" (Lex-csharp/identifier "=")? Qualified-identifier ";" -> Using-directive
 
         Namespace-declaration
 		| Type-declaration -> Namespace-member-declaration
@@ -268,7 +268,7 @@ exports
 		| "sealed" -> Class-modifier
 
         ":" Qualified-identifier-list
-		| ":" Built-in-class-type "(" "," Qualified-identifier-list ")"? -> Class-base
+		| ":" Built-in-class-type ("," Qualified-identifier-list)? -> Class-base
 
         "{" Class-member-declaration* "}" -> Class-body
 
@@ -284,7 +284,7 @@ exports
 		| Static-constructor-declaration
 		| Type-declaration -> Class-member-declaration
 
-        Attributes Constant-modifier* "const" Type "{" Constant-declarator "," "}"+ ";" -> Constant-declaration
+        Attributes Constant-modifier* "const" Type Constant-declarator"," ";" -> Constant-declaration
 
         "new"
 		| "public"
@@ -292,7 +292,7 @@ exports
 		| "internal"
 		| "private" -> Constant-modifier
 
-        Attributes Field-modifier* Type "{" Variable-declarator "," "}"+ ";" -> Field-declaration
+        Attributes Field-modifier* Type Variable-declarator"," ";" -> Field-declaration
 
         "new"
 		| "public"
@@ -329,7 +329,7 @@ exports
 		| Fixed-parameters "," Parameter-array
 		| Parameter-array -> Formal-parameter-list
 
-        "{" Fixed-parameter "," "}"+ -> Fixed-parameters
+        Fixed-parameter"," -> Fixed-parameters
 
         Attributes Parameter-modifier? Type Lex-csharp/identifier -> Fixed-parameter
 
@@ -359,7 +359,7 @@ exports
 
         Attributes "set" Maybe-empty-block -> Set-accessor-declaration
 
-        Attributes Event-modifier* "event" Type "{" Variable-declarator "," "}"+ ";"
+        Attributes Event-modifier* "event" Type Variable-declarator"," ";"
 		| Attributes Event-modifier* "event" Type Qualified-identifier "{" Event-accessor-declarations "}" -> Event-declaration
 
         "new"
@@ -458,7 +458,7 @@ exports
 
         Attributes "extern"? "~" Lex-csharp/identifier "(" ")" Maybe-empty-block -> Destructor-declaration
 
-        Attributes Struct-modifier* "struct" Lex-csharp/identifier "(" ":" Qualified-identifier-list ")"? Struct-body ";"? -> Struct-declaration
+        Attributes Struct-modifier* "struct" Lex-csharp/identifier (":" Qualified-identifier-list)? Struct-body ";"? -> Struct-declaration
 
         "new"
 		| "public"
@@ -490,12 +490,12 @@ exports
         "[" ","* "]" -> Rank-specifier
 
         "{" "}"
-		| "{" "{" Variable-initializer "," "}"+ ","? "}" -> Array-initializer
+		| "{" Variable-initializer"," ","? "}" -> Array-initializer
 
         Expression
 		| Array-initializer -> Variable-initializer
 
-        Attributes Interface-modifier* "interface" Lex-csharp/identifier "(" ":" Qualified-identifier-list ")"? Interface-body ";"? -> Interface-declaration
+        Attributes Interface-modifier* "interface" Lex-csharp/identifier (":" Qualified-identifier-list)? Interface-body ";"? -> Interface-declaration
 
         "new"
 		| "public"
@@ -514,17 +514,17 @@ exports
 
         Attributes "new"? Type Lex-csharp/identifier "{" Interface-accessors "}" -> Interface-property-declaration
 
-        Attributes "get" ";" "(" Attributes "set" ";" ")"?
-		| Attributes "set" ";" "(" Attributes "get" ";" ")"? -> Interface-accessors
+        Attributes "get" ";" (Attributes "set" ";")?
+		| Attributes "set" ";" (Attributes "get" ";")? -> Interface-accessors
 
         Attributes "new"? "event" Type Lex-csharp/identifier ";" -> Interface-event-declaration
 
         Attributes "new"? Type "this" "[" Formal-parameter-list "]" "{" Interface-accessors "}" -> Interface-indexer-declaration
 
-        Attributes Enum-modifier* "enum" Lex-csharp/identifier "(" ":" Integral-type ")"? Enum-body ";"? -> Enum-declaration
+        Attributes Enum-modifier* "enum" Lex-csharp/identifier (":" Integral-type)? Enum-body ";"? -> Enum-declaration
 
         "{" "}"
-		| "{" "{" Enum-member-declaration "," "}"+ ","? "}" -> Enum-body
+		| "{" Enum-member-declaration"," ","? "}" -> Enum-body
 
         "new"
 		| "public"
@@ -532,7 +532,7 @@ exports
 		| "internal"
 		| "private" -> Enum-modifier
 
-        Attributes Lex-csharp/identifier "(" "=" Expression ")"? -> Enum-member-declaration
+        Attributes Lex-csharp/identifier ("=" Expression)? -> Enum-member-declaration
 
         Attributes Delegate-modifier* "delegate" Type-or-void Lex-csharp/identifier "(" Formal-parameter-list? ")" ";" -> Delegate-declaration
 
@@ -548,7 +548,7 @@ exports
 
         Attribute-section* -> Attributes
 
-        "[" "(" Attribute-target ":" ")"? Attribute-list ","? "]" -> Attribute-section
+        "[" (Attribute-target ":")? Attribute-list ","? "]" -> Attribute-section
 
         "field"
 		| "event"
@@ -559,7 +559,7 @@ exports
 		| "return"
 		| "type" -> Attribute-target
 
-        "{" Attribute "," "}"+ -> Attribute-list
+        Attribute"," -> Attribute-list
 
         Attribute-name Attribute-arguments? -> Attribute
 

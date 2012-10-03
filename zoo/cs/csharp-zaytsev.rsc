@@ -59,7 +59,10 @@ syntax Else_part
  ;
 syntax Qualified_identifier_list
         = 
-        "{" Qualified_identifier "," "}"+
+        
+	Qualified_identifier
+	","
+      
  ;
 syntax Compilation_unit
         = 
@@ -82,7 +85,10 @@ syntax Integral_type
  ;
 syntax Argument_list
         = 
-        "{" Argument "," "}"*
+        
+	Argument
+	","
+      
  ;
 syntax Argument
         = 
@@ -126,7 +132,10 @@ syntax Predefined_type
  ;
 syntax Expression_list
         = 
-        "{" Expression "," "}"+
+        
+	Expression
+	","
+      
  ;
 syntax Unary_expression
         = Expression_unary_operator Unary_expression
@@ -196,11 +205,17 @@ syntax Declaration_statement
  ;
 syntax Local_variable_declaration
         = 
-        Type "{" Variable_declarator "," "}"+
+        Type 
+	    Variable_declarator
+	    ","
+	  
  ;
 syntax Local_constant_declaration
         = 
-        "const" Type "{" Constant_declarator "," "}"+
+        "const" Type 
+	    Constant_declarator
+	    ","
+	  
  ;
 syntax Constant_declarator
         = 
@@ -257,7 +272,10 @@ syntax For_initializer
  ;
 syntax Statement_expression_list
         = 
-        "{" Statement_expression "," "}"+
+        
+	Statement_expression
+	","
+      
  ;
 syntax Foreach_statement
         = 
@@ -329,7 +347,10 @@ syntax Namespace_declaration
  ;
 syntax Qualified_identifier
         = 
-        "{" Lex_csharp/identifier "." "}"+
+        
+	Lex_csharp/identifier
+	"."
+      
  ;
 syntax Namespace_body
         = 
@@ -337,7 +358,7 @@ syntax Namespace_body
  ;
 syntax Using_directive
         = 
-        "using" "(" Lex_csharp/identifier "=" ")"? Qualified_identifier ";"
+        "using" (Lex_csharp/identifier "=")? Qualified_identifier ";"
  ;
 syntax Namespace_member_declaration
         = Namespace_declaration
@@ -365,7 +386,7 @@ syntax Class_modifier
  ;
 syntax Class_base
         = ":" Qualified_identifier_list
-        | ":" Built_in_class_type "(" "," Qualified_identifier_list ")"?
+        | ":" Built_in_class_type ("," Qualified_identifier_list)?
  ;
 syntax Class_body
         = 
@@ -386,7 +407,10 @@ syntax Class_member_declaration
  ;
 syntax Constant_declaration
         = 
-        Attributes Constant_modifier* "const" Type "{" Constant_declarator "," "}"+ ";"
+        Attributes Constant_modifier* "const" Type 
+	    Constant_declarator
+	    ","
+	   ";"
  ;
 syntax Constant_modifier
         = "new"
@@ -397,7 +421,10 @@ syntax Constant_modifier
  ;
 syntax Field_declaration
         = 
-        Attributes Field_modifier* Type "{" Variable_declarator "," "}"+ ";"
+        Attributes Field_modifier* Type 
+	    Variable_declarator
+	    ","
+	   ";"
  ;
 syntax Field_modifier
         = "new"
@@ -445,7 +472,10 @@ syntax Formal_parameter_list
  ;
 syntax Fixed_parameters
         = 
-        "{" Fixed_parameter "," "}"+
+        
+	Fixed_parameter
+	","
+      
  ;
 syntax Fixed_parameter
         = 
@@ -489,7 +519,10 @@ syntax Set_accessor_declaration
         Attributes "set" Maybe_empty_block
  ;
 syntax Event_declaration
-        = Attributes Event_modifier* "event" Type "{" Variable_declarator "," "}"+ ";"
+        = Attributes Event_modifier* "event" Type 
+		Variable_declarator
+		","
+	       ";"
         | Attributes Event_modifier* "event" Type Qualified_identifier "{" Event_accessor_declarations "}"
  ;
 syntax Event_modifier
@@ -623,7 +656,7 @@ syntax Destructor_declaration
  ;
 syntax Struct_declaration
         = 
-        Attributes Struct_modifier* "struct" Lex_csharp/identifier "(" ":" Qualified_identifier_list ")"? Struct_body ";"?
+        Attributes Struct_modifier* "struct" Lex_csharp/identifier (":" Qualified_identifier_list)? Struct_body ";"?
  ;
 syntax Struct_modifier
         = "new"
@@ -666,7 +699,10 @@ syntax Rank_specifier
  ;
 syntax Array_initializer
         = "{" "}"
-        | "{" "{" Variable_initializer "," "}"+ ","? "}"
+        | "{" 
+		Variable_initializer
+		","
+	       ","? "}"
  ;
 syntax Variable_initializer
         = Expression
@@ -674,7 +710,7 @@ syntax Variable_initializer
  ;
 syntax Interface_declaration
         = 
-        Attributes Interface_modifier* "interface" Lex_csharp/identifier "(" ":" Qualified_identifier_list ")"? Interface_body ";"?
+        Attributes Interface_modifier* "interface" Lex_csharp/identifier (":" Qualified_identifier_list)? Interface_body ";"?
  ;
 syntax Interface_modifier
         = "new"
@@ -702,8 +738,8 @@ syntax Interface_property_declaration
         Attributes "new"? Type Lex_csharp/identifier "{" Interface_accessors "}"
  ;
 syntax Interface_accessors
-        = Attributes "get" ";" "(" Attributes "set" ";" ")"?
-        | Attributes "set" ";" "(" Attributes "get" ";" ")"?
+        = Attributes "get" ";" (Attributes "set" ";")?
+        | Attributes "set" ";" (Attributes "get" ";")?
  ;
 syntax Interface_event_declaration
         = 
@@ -715,11 +751,14 @@ syntax Interface_indexer_declaration
  ;
 syntax Enum_declaration
         = 
-        Attributes Enum_modifier* "enum" Lex_csharp/identifier "(" ":" Integral_type ")"? Enum_body ";"?
+        Attributes Enum_modifier* "enum" Lex_csharp/identifier (":" Integral_type)? Enum_body ";"?
  ;
 syntax Enum_body
         = "{" "}"
-        | "{" "{" Enum_member_declaration "," "}"+ ","? "}"
+        | "{" 
+		Enum_member_declaration
+		","
+	       ","? "}"
  ;
 syntax Enum_modifier
         = "new"
@@ -730,7 +769,7 @@ syntax Enum_modifier
  ;
 syntax Enum_member_declaration
         = 
-        Attributes Lex_csharp/identifier "(" "=" Expression ")"?
+        Attributes Lex_csharp/identifier ("=" Expression)?
  ;
 syntax Delegate_declaration
         = 
@@ -757,7 +796,7 @@ syntax Attributes
  ;
 syntax Attribute_section
         = 
-        "[" "(" Attribute_target ":" ")"? Attribute_list ","? "]"
+        "[" (Attribute_target ":")? Attribute_list ","? "]"
  ;
 syntax Attribute_target
         = "field"
@@ -771,7 +810,10 @@ syntax Attribute_target
  ;
 syntax Attribute_list
         = 
-        "{" Attribute "," "}"+
+        
+	Attribute
+	","
+      
  ;
 syntax Attribute
         = 

@@ -1,5 +1,5 @@
 Apply:
-        name::STR args::(ANY*)
+        name::STR args::(Expr*)
 Argument:
         name::STR
 Binary:
@@ -11,7 +11,7 @@ Expr:
         IfThenElse
         Literal
 Function:
-        name::STR args::(ANY*) rhs::Expr
+        name::STR args::(STR*) rhs::Expr
 IfThenElse:
         ifExpr::Expr thenExpr::Expr elseExpr::Expr
 Literal:
@@ -21,6 +21,6 @@ Ops:
         Plus::EPSILON
         Minus::EPSILON
 Program:
-        functions::(ANY*)
+        functions::(Function*)
 Visitor:
         EMPTY

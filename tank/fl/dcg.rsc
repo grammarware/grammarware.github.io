@@ -10,17 +10,17 @@ syntax Function
         Name Name+ "=" Expr Newline+
  ;
 syntax Expr
-        = (Atom (Ops Atom)*) binary
-        | (Name Atom+) apply
-        | ("if" Expr "then" Expr "else" Expr) ifThenElse
+        = binary: Atom (Ops Atom)*
+        | apply: Name Atom+
+        | ifThenElse: "if" Expr "then" Expr "else" Expr
  ;
 syntax Atom
-        = Int literal
-        | Name argument
+        = literal: Int
+        | argument: Name
         | "(" Expr ")"
  ;
 syntax Ops
-        = "==" equal
-        | "+" plus
-        | "-" minus
+        = equal: "=="
+        | plus: "+"
+        | minus: "-"
  ;

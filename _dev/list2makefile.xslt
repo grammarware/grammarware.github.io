@@ -19,7 +19,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
-				<xsl:text>	cp ../topics/grammars/</xsl:text>
+				<xsl:text>	cp ../slps/topics/grammars/</xsl:text>
 				<xsl:value-of select="handle"/>
 				<xsl:text>/grammar.bgf </xsl:text>
 				<xsl:value-of select="/zoo/name"/>
@@ -50,7 +50,7 @@
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
-				<xsl:text>	cp ../topics/grammars/</xsl:text>
+				<xsl:text>	cp ../slps/topics/grammars/</xsl:text>
 				<xsl:value-of select="."/>
 				<xsl:text>/grammar.bgf </xsl:text>
 				<xsl:value-of select="/zoo/name"/>

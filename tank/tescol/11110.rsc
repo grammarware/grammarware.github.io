@@ -49,11 +49,11 @@ syntax SingleStatement
         = SkipStm
         | LoopStm
         | CondStm
-        | AssgStm a
+        | a: AssgStm
  ;
 syntax Statement
-        = SingleStatement e
-        | ListofStatement b
+        = e: SingleStatement
+        | b: ListofStatement
  ;
 syntax SkipStm
         = 
@@ -73,7 +73,7 @@ syntax AssgStm
  ;
 syntax ArithmeticExpr
         = ConditionalExpr
-        | ApplyProcedure a
+        | a: ApplyProcedure
  ;
 syntax ApplyProcedure
         = 

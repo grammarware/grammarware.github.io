@@ -9,7 +9,10 @@ exports
 
         Ident ":" Disjunction ";" -> Rule
 
-        Conjunction ("|" Conjunction)* -> Disjunction
+        
+	Conjunction
+	"|"
+       -> Disjunction
 
         Term+ -> Conjunction
 

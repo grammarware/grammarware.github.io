@@ -54,7 +54,7 @@ syntax Loop
         WHILE Booleanexpression DO Statement
  ;
 syntax Expression
-        = Procedureapplication p1
+        = p1: Procedureapplication
         | Booleanexpression b1 (QUESTION Expression COLON Expression)?
  ;
 syntax Booleanexpression

@@ -10,15 +10,15 @@ syntax Function
         Name Name+ "=" Expr Newline+
  ;
 syntax Expr
-        = (Expr Ops Expr) binary
-        | (Name Expr+) apply
-        | ("if" Expr "then" Expr "else" Expr) ifThenElse
+        = binary: Expr Ops Expr
+        | apply: Name Expr+
+        | ifThenElse: "if" Expr "then" Expr "else" Expr
         | "(" Expr ")"
-        | Name argument
-        | Int literal
+        | argument: Name
+        | literal: Int
  ;
 syntax Ops
-        = "-" minus
-        | "+" plus
-        | "==" equal
+        = minus: "-"
+        | plus: "+"
+        | equal: "=="
  ;

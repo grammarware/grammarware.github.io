@@ -3,7 +3,7 @@ specification:
 rule:
         ident ":" disjunction ";"
 disjunction:
-        conjunction ("|" conjunction)*
+        {conjunction "|"}+
 conjunction:
         term+
 term:

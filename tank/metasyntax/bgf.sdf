@@ -21,7 +21,9 @@ exports
 		| choice::(Expression+)
 		| optional::Expression
 		| plus::Expression
-		| star::Expression -> Expression
+		| star::Expression
+		| seplistplus::(Expression Expression)
+		| sepliststar::(Expression Expression) -> Expression
 
         int::
 		| string:: -> Value

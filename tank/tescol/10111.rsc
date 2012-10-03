@@ -43,7 +43,7 @@ syntax Molecule
  ;
 syntax Atom
         = Immediate
-        | Varproc_id v
+        | v: Varproc_id
         | Proc_call
         | Parenthesised
  ;

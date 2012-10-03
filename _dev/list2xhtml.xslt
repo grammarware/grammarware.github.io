@@ -123,7 +123,7 @@
 					<li>
 						<xsl:text>BNF-like Grammar Format:</xsl:text>
 						<span class="links">
-							[<a href="http://slps.svn.sourceforge.net/viewvc/slps/shared/xsd/bgf.xsd?view=markup">Schema</a>]
+							[<a href="https://github.com/grammarware/slps/blob/master/shared/xsd/bgf.xsd">Schema</a>]
 							[<a href="http://www.w3.org/TR/xml/">W3C XML Rec</a>]
 							[<a href="http://www.w3.org/TR/xmlschema11-1/">W3C XSD WD 1</a>]
 							[<a href="http://www.w3.org/TR/xmlschema11-2/">W3C XSD WD 2</a>]
@@ -205,7 +205,7 @@
 				</a>
 			</xsl:when>
 			<xsl:when test="mu">
-				<a xmlns="http://www.w3.org/1999/xhtml" href="http://slps.svn.sourceforge.net/viewvc/slps/{mu}?view=markup">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="https://github.com/grammarware/slps/blob/master/{mu}">
 					<xsl:value-of select="name"/>
 				</a>
 			</xsl:when>
@@ -216,7 +216,7 @@
 				</a>
 			</xsl:when>
 			<xsl:when test="slps">
-				<a xmlns="http://www.w3.org/1999/xhtml" href="http://slps.svn.sourceforge.net/viewvc/slps/{slps}">
+				<a xmlns="http://www.w3.org/1999/xhtml" href="https://github.com/grammarware/slps/tree/master/{slps}">
 					<xsl:value-of select="name"/>
 				</a>
 			</xsl:when>

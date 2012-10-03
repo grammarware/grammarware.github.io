@@ -1,5 +1,5 @@
 @contributor{bgf2src automated exporter - SLPS}
-module Ecore2
+module Emf
 
 syntax Apply
         = 
@@ -7,7 +7,7 @@ syntax Apply
  ;
 syntax Argument
         = 
-        String name
+        name: String
  ;
 syntax Binary
         = 
@@ -30,12 +30,12 @@ syntax IfThenElse
  ;
 syntax Literal
         = 
-        Integer info
+        info: Integer
  ;
 syntax Ops
-        = () Equal
-        | () Plus
-        | () Minus
+        = Equal: ()
+        | Plus: ()
+        | Minus: ()
  ;
 syntax ProgramType
         = 

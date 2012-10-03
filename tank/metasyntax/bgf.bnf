@@ -16,6 +16,8 @@ expression:
         optional::expression
         plus::expression
         star::expression
+        seplistplus::(expression expression)
+        sepliststar::(expression expression)
 value:
         int::EPSILON
         string::EPSILON

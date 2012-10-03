@@ -8,7 +8,7 @@ syntax Program
 syntax Term
         = LEFT_PAREN Expression RIGHT_PAREN
         | ProcedureApplication
-        | VAR_ID v2
+        | v2: VAR_ID
         | CONST_ID
         | INTEGER
         | DOUBLE

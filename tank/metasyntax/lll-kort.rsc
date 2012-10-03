@@ -11,7 +11,10 @@ syntax Rule
  ;
 syntax Disjunction
         = 
-        Conjunction ("|" Conjunction)*
+        
+	Conjunction
+	"|"
+      
  ;
 syntax Conjunction
         = 

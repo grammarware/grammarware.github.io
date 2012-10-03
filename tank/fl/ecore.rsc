@@ -11,7 +11,7 @@ syntax Function
  ;
 syntax Argument
         = 
-        String name
+        name: String
  ;
 syntax Exp
         = LiteralExp
@@ -22,11 +22,11 @@ syntax Exp
  ;
 syntax LiteralExp
         = 
-        Integer value
+        value: Integer
  ;
 syntax ArgumentExp
         = 
-        Argument argument
+        argument: Argument
  ;
 syntax IfThenElseExp
         = 

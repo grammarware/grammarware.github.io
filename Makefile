@@ -24,8 +24,8 @@ zooprj:
 
 tankprj:
 	rm -f tank/*/*
-	cp ../topics/convergence/fl/snapshot/*.bgf tank/fl/
-	cp ../topics/testing/gbtf/tests/tescol/*.bgf tank/tescol/
+	cp ../slps/topics/convergence/xbgf/fl/snapshot/*.bgf tank/fl/
+	cp ../slps/topics/testing/gbtf/tests/tescol/*.bgf tank/tescol/
 	chmod 644 tank/*/*.bgf
 	xsltproc _dev/list2makefile.xslt _dev/tank.xml | grep -v 'tank/fl' | grep -v 'tank/tescol' > _dev/Makefile.y
 	make -f _dev/Makefile.y

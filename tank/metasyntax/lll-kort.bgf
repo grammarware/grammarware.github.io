@@ -34,25 +34,14 @@
   <xns1:production>
     <nonterminal>disjunction</nonterminal>
     <xns1:expression>
-      <sequence>
+      <seplistplus>
 	<xns1:expression>
 	  <nonterminal>conjunction</nonterminal>
 	</xns1:expression>
 	<xns1:expression>
-	  <star>
-	    <xns1:expression>
-	      <sequence>
-		<xns1:expression>
-		  <terminal>|</terminal>
-		</xns1:expression>
-		<xns1:expression>
-		  <nonterminal>conjunction</nonterminal>
-		</xns1:expression>
-	      </sequence>
-	    </xns1:expression>
-	  </star>
+	  <terminal>|</terminal>
 	</xns1:expression>
-      </sequence>
+      </seplistplus>
     </xns1:expression>
   </xns1:production>
   <xns1:production>

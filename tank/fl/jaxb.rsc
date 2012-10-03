@@ -3,11 +3,11 @@ module Jaxb
 
 syntax Apply
         = 
-        String Name ANY* Arg
+        String Name Expr* Arg
  ;
 syntax Argument
         = 
-        String Name
+        Name: String
  ;
 syntax Binary
         = 
@@ -22,7 +22,7 @@ syntax Expr
  ;
 syntax Function
         = 
-        String Name ANY* Arg Expr Rhs
+        String Name String* Arg Expr Rhs
  ;
 syntax IfThenElse
         = 
@@ -30,16 +30,16 @@ syntax IfThenElse
  ;
 syntax Literal
         = 
-        Integer Info
+        Info: Integer
  ;
 syntax ObjectFactory
         = 
         ()
  ;
 syntax Ops
-        = () EQUAL
-        | () PLUS
-        | () MINUS
+        = EQUAL: ()
+        | PLUS: ()
+        | MINUS: ()
  ;
 syntax Package_info
         = 
@@ -47,5 +47,5 @@ syntax Package_info
  ;
 syntax Program
         = 
-        ANY* Function
+        Function: Function*
  ;

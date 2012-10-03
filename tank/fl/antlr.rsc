@@ -3,33 +3,33 @@ module Antlr
 
 syntax Program
         = 
-        Function+
+        Function f+
  ;
 syntax Function
         = 
-        ID ID+ "=" Expr NEWLINE+
+        ID n ID a+ "=" Expr e NEWLINE+
  ;
 syntax Expr
-        = Binary
-        | Apply
-        | IfThenElse
+        = b: Binary
+        | a: Apply
+        | i: IfThenElse
  ;
 syntax Binary
         = 
-        Atom (Ops Atom)*
+        Atom l (Ops o Atom r)*
  ;
 syntax Apply
         = 
-        ID Atom+
+        ID i Atom a+
  ;
 syntax IfThenElse
         = 
-        "if" Expr "then" Expr "else" Expr
+        "if" Expr c "then" Expr e1 "else" Expr e2
  ;
 syntax Atom
         = ID
         | INT
-        | "(" Expr ")"
+        | "(" Expr e ")"
  ;
 syntax Ops
         = "=="

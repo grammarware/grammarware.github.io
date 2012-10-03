@@ -18,7 +18,7 @@
 <bgf:expression>
 <star>
 <bgf:expression>
-<any/>
+<nonterminal>Expr</nonterminal>
 </bgf:expression>
 </star>
 </bgf:expression>
@@ -109,7 +109,7 @@
 <bgf:expression>
 <star>
 <bgf:expression>
-<any/>
+<value>string</value>
 </bgf:expression>
 </star>
 </bgf:expression>
@@ -219,7 +219,7 @@
 <bgf:expression>
 <star>
 <bgf:expression>
-<any/>
+<nonterminal>Function</nonterminal>
 </bgf:expression>
 </star>
 </bgf:expression>

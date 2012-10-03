@@ -116,7 +116,7 @@
 					<date>17 May – 16 July 2008</date>
 					<link>
 						<mu>topics/fl/java1/FL.g</mu>
-						<name>SVN</name>
+						<name>GitHub</name>
 					</link>
 					<link>
 						<uri>http://www.antlr.org/</uri>
@@ -147,7 +147,7 @@
 					<date>28 July – 3 September 2008</date>
 					<link>
 						<mu>topics/fl/prolog1/Parser.pro</mu>
-						<name>SVN</name>
+						<name>GitHub</name>
 					</link>
 				</source>
 				<toolset>
@@ -184,8 +184,8 @@
 					</title>
 					<date>1–25 Aug 2008</date>
 					<link>
-						<uri>http://slps.svn.sourceforge.net/viewvc/slps/topics/fl/asfsdf/</uri>
-						<name>SVN</name>
+						<uri>https://github.com/grammarware/slps/tree/master/topics/fl/asfsdf</uri>
+						<name>GitHub</name>
 					</link>
 				</source>
 				<toolset ref="sdf2bgf"/>
@@ -202,7 +202,7 @@
 					<date>6–7 Jul 2009</date>
 					<link>
 						<mu>topics/fl/txl/FL.Txl</mu>
-						<name>SVN</name>
+						<name>GitHub</name>
 					</link>
 				</source>
 				<toolset ref="txl2bgf"/>
@@ -219,7 +219,7 @@
 					<date>26 June 2008 – 28 May 2009</date>
 					<link>
 						<mu>topics/fl/emf1/fl.ecore</mu>
-						<name>SVN</name>
+						<name>GitHub</name>
 					</link>
 				</source>
 				<toolset>
@@ -233,7 +233,7 @@
 			</grammar>
 			<grammar>
 				<name>Extracted</name>
-				<handle>fl/ecore2</handle>
+				<handle>fl/emf</handle>
 				<source>
 					<title>
 					Vadim Zaytsev, <code xmlns="http://www.w3.org/1999/xhtml">fl.ecore</code> generated from <code xmlns="http://www.w3.org/1999/xhtml">fl.xsd</code>
@@ -241,7 +241,7 @@
 					<date>28 May 2009</date>
 					<link>
 						<mu>topics/fl/emf2/model/fl.ecore</mu>
-						<name>SVN</name>
+						<name>GitHub</name>
 					</link>
 					<link>
 						<uri>http://www.eclipse.org</uri>
@@ -267,7 +267,7 @@
 					<date>20 May – 29 July 2008</date>
 					<link>
 						<mu>topics/fl/xsd/fl.xsd</mu>
-						<name>SVN</name>
+						<name>GitHub</name>
 					</link>
 				</source>
 				<toolset ref="xsd2bgf"/>
@@ -283,8 +283,8 @@
 				</title>
 					<date>17 May – 28 July 2008</date>
 					<link>
-						<uri>http://slps.svn.sourceforge.net/viewvc/slps/topics/fl/java1/types/</uri>
-						<name>SVN</name>
+						<uri>https://github.com/grammarware/slps/tree/master/topics/fl/java1/types</uri>
+						<name>GitHub</name>
 					</link>
 				</source>
 				<toolset>
@@ -306,8 +306,8 @@
 				</title>
 					<date>21 May – 28 July 2008</date>
 					<link>
-						<uri>http://slps.svn.sourceforge.net/viewvc/slps/topics/fl/java3/fl/</uri>
-						<name>SVN</name>
+						<slps>topics/fl/java3/fl</slps>
+						<name>GitHub</name>
 					</link>
 					<link>
 						<uri>http://jaxb.java.net/</uri>
@@ -650,7 +650,7 @@
 				</item>
 			</grammar>
 		</version>
-		<version>
+		<!-- <version>
 			<name>Rascal</name>
 			<grammar>
 				<name>Extracted</name>
@@ -678,7 +678,7 @@
 					</link>
 				</toolset>
 			</grammar>
-		</version>
+		</version> -->
 		<version>
 			<name>TXL</name>
 			<grammar>

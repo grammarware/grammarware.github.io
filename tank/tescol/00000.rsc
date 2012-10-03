@@ -64,8 +64,8 @@ syntax Negateexp
  ;
 syntax Parexp
         = Literal
-        | CONSTID id2
-        | ID id1
+        | id2: CONSTID
+        | id1: ID
         | LPAR Arithexp RPAR
  ;
 syntax Statement

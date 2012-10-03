@@ -59,11 +59,11 @@ syntax ID
  ;
 syntax Id
         = 
-        IDENT i
+        i: IDENT
  ;
 syntax Cid
         = 
-        CIDENT i
+        i: CIDENT
  ;
 syntax Atom
         = INT_NUMBER

@@ -4,7 +4,7 @@ exports
   sorts
         Apply Argument Binary Expr Function IfThenElse Literal Ops Program Visitor 
   context-free syntax
-        name::STR args::(ANY*) -> Apply
+        name::STR args::(Expr*) -> Apply
 
         name::STR -> Argument
 
@@ -16,7 +16,7 @@ exports
 		| IfThenElse
 		| Literal -> Expr
 
-        name::STR args::(ANY*) rhs::Expr -> Function
+        name::STR args::(STR*) rhs::Expr -> Function
 
         ifExpr::Expr thenExpr::Expr elseExpr::Expr -> IfThenElse
 
@@ -26,6 +26,6 @@ exports
 		| Plus::
 		| Minus:: -> Ops
 
-        functions::(ANY*) -> Program
+        functions::(Function*) -> Program
 
         EMPTY -> Visitor

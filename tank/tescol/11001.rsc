@@ -58,7 +58,7 @@ syntax Whilestatement
  ;
 syntax Expression
         = 
-        Mixfix e
+        e: Mixfix
  ;
 syntax Mixfix
         = 
@@ -89,9 +89,9 @@ syntax Exp_exp
         Atom_exp l (EXP Atom_exp r)*
  ;
 syntax Atom_exp
-        = Unary_exp e
+        = e: Unary_exp
         | LPAREN Expression exp RPAREN
-        | Proccall proc
+        | proc: Proccall
  ;
 syntax Unary_exp
         = 
@@ -106,21 +106,21 @@ syntax Argumentlist
         | ()
  ;
 syntax Conditional
-        = EQUALITY t
-        | INEQUALITY t
-        | LANGLE t
-        | RANGLE t
-        | LTEQUALS t
-        | GTEQUALS t
+        = t: EQUALITY
+        | t: INEQUALITY
+        | t: LANGLE
+        | t: RANGLE
+        | t: LTEQUALS
+        | t: GTEQUALS
  ;
 syntax Number
-        = FLOAT f
-        | INT i
-        | UINT u
+        = f: FLOAT
+        | i: INT
+        | u: UINT
  ;
 syntax Id
         = 
-        (CONSTID | VARID) name
+        name: (CONSTID | VARID)
  ;
 syntax SEMI
         = 

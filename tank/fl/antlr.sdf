@@ -4,23 +4,23 @@ exports
   sorts
         Program Function Expr Binary Apply IfThenElse Atom Ops 
   context-free syntax
-        Function+ -> Program
+        f::Function+ -> Program
 
-        ID ID+ "=" Expr NEWLINE+ -> Function
+        n::ID a::ID+ "=" e::Expr NEWLINE+ -> Function
 
-        Binary
-		| Apply
-		| IfThenElse -> Expr
+        b::Binary
+		| a::Apply
+		| i::IfThenElse -> Expr
 
-        Atom (Ops Atom)* -> Binary
+        l::Atom (o::Ops r::Atom)* -> Binary
 
-        ID Atom+ -> Apply
+        i::ID a::Atom+ -> Apply
 
-        "if" Expr "then" Expr "else" Expr -> IfThenElse
+        "if" c::Expr "then" e1::Expr "else" e2::Expr -> IfThenElse
 
         ID
 		| INT
-		| "(" Expr ")" -> Atom
+		| "(" e::Expr ")" -> Atom
 
         "=="
 		| "+"

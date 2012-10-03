@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <bgf:grammar xmlns:bgf="http://planet-sl.org/bgf">
 <bgf:production>
 <nonterminal>Apply</nonterminal>
@@ -18,7 +18,7 @@
 <bgf:expression>
 <star>
 <bgf:expression>
-<any/>
+<nonterminal>Expr</nonterminal>
 </bgf:expression>
 </star>
 </bgf:expression>
@@ -109,7 +109,7 @@
 <bgf:expression>
 <star>
 <bgf:expression>
-<any/>
+<value>string</value>
 </bgf:expression>
 </star>
 </bgf:expression>
@@ -207,7 +207,7 @@
 <bgf:expression>
 <star>
 <bgf:expression>
-<any/>
+<nonterminal>Function</nonterminal>
 </bgf:expression>
 </star>
 </bgf:expression>

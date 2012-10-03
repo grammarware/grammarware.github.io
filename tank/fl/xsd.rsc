@@ -22,20 +22,20 @@ syntax Expr
  ;
 syntax Literal
         = 
-        Integer info
+        info: Integer
  ;
 syntax Argument
         = 
-        String name
+        name: String
  ;
 syntax Binary
         = 
         Ops ops Expr left Expr right
  ;
 syntax Ops
-        = () Equal
-        | () Plus
-        | () Minus
+        = Equal: ()
+        | Plus: ()
+        | Minus: ()
  ;
 syntax IfThenElse
         = 

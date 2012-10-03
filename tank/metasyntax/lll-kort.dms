@@ -1,6 +1,9 @@
 specification = rule+ ;
 rule = ident ':' disjunction ';' ;
-disjunction = conjunction ('|' conjunction)* ;
+disjunction = 
+	conjunction
+	'|'
+       ;
 conjunction = term+ ;
 term = basis repetition? ;
 basis = ident ;

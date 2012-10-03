@@ -15,10 +15,20 @@
 		          border-collapse: collapse;
 		          background-color: #ECECEC;
 		          }
-		        </style></head><body><h1>Browsable FL Abstract Syntax Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
+		        </style><script type="text/javascript">
+				  var _gaq = _gaq || [];
+				  _gaq.push(['_setAccount', 'UA-3743366-5']);
+				  _gaq.push(['_trackPageview']);
+
+				  (function() {
+				    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				  })();
+				</script></head><body><h1>Browsable FL Abstract Syntax Grammar</h1><a href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="CC-BY"></img></a><p>Extracted and/or recovered by <strong><a href="http://grammarware.net">Vadim Zaytsev</a></strong>,	see <a href="http://slps.sourceforge.net/tank/">Grammar Tank</a> for details. <br></br>Source used for this grammar: 
 					Ralf Lämmel, <code>Program.java</code>, <code>Function.java</code> et al. generated from <code>fl.xsd</code>.
-				 (21 May – 28 July 2008) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>11</strong></li><li>Number of top alternatives: <strong>17</strong></li><li>Number of defined nonterminal symbols: <strong>11</strong></li><li>Root nonterminal symbols: —</li><li>Other top nonterminal symbols: <strong>4</strong>: <code><a href="#Function" class="nt">Function</a>, <a href="#ObjectFactory" class="nt">ObjectFactory</a>, <a href="#package-info" class="nt">package-info</a>, <a href="#Program" class="nt">Program</a></code></li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>—</strong></li></ul><h2>Syntax</h2><pre><a class="nt" name="Apply">Apply</a>:
-        <span class="sel">Name</span>::<span class="meta">string</span> <span class="sel">Arg</span>::(<span class="meta">any</span><span class="meta">*</span>)
+				 (21 May – 28 July 2008) </p><h2>Summary</h2><ul><li>Number of production rules: <strong>11</strong></li><li>Number of top alternatives: <strong>17</strong></li><li>Number of defined nonterminal symbols: <strong>11</strong></li><li>Root nonterminal symbols: —</li><li>Other top nonterminal symbols: <strong>3</strong>: <code><a href="#ObjectFactory" class="nt">ObjectFactory</a>, <a href="#package-info" class="nt">package-info</a>, <a href="#Program" class="nt">Program</a></code></li><li>Bottom nonterminal symbols: —</li><li>Number of used terminal symbols: <strong>—</strong></li></ul><h2>Syntax</h2><pre><a class="nt" name="Apply">Apply</a>:
+        <span class="sel">Name</span>::<span class="meta">string</span> <span class="sel">Arg</span>::(<a class="nt" href="#Expr">Expr</a><span class="meta">*</span>)
 </pre><pre><a class="nt" name="Argument">Argument</a>:
         <span class="sel">Name</span>::<span class="meta">string</span>
 </pre><pre><a class="nt" name="Binary">Binary</a>:
@@ -30,7 +40,7 @@
         <a class="nt" href="#IfThenElse">IfThenElse</a>
         <a class="nt" href="#Literal">Literal</a>
 </pre><pre><a class="nt" name="Function">Function</a>:
-        <span class="sel">Name</span>::<span class="meta">string</span> <span class="sel">Arg</span>::(<span class="meta">any</span><span class="meta">*</span>) <span class="sel">Rhs</span>::<a class="nt" href="#Expr">Expr</a>
+        <span class="sel">Name</span>::<span class="meta">string</span> <span class="sel">Arg</span>::(<span class="meta">string</span><span class="meta">*</span>) <span class="sel">Rhs</span>::<a class="nt" href="#Expr">Expr</a>
 </pre><pre><a class="nt" name="IfThenElse">IfThenElse</a>:
         <span class="sel">IfExpr</span>::<a class="nt" href="#Expr">Expr</a> <span class="sel">ThenExpr</span>::<a class="nt" href="#Expr">Expr</a> <span class="sel">ElseExpr</span>::<a class="nt" href="#Expr">Expr</a>
 </pre><pre><a class="nt" name="Literal">Literal</a>:
@@ -44,8 +54,8 @@
 </pre><pre><a class="nt" name="package-info">package-info</a>:
         <span class="meta">empty</span>
 </pre><pre><a class="nt" name="Program">Program</a>:
-        <span class="sel">Function</span>::(<span class="meta">any</span><span class="meta">*</span>)
+        <span class="sel">Function</span>::(<a class="nt" href="#Function">Function</a><span class="meta">*</span>)
 </pre><hr></hr><div class="b">
 					Maintained by Dr. <a href="http://grammarware.net/">Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
-					Last updated: 16/09/2011.
+					Last updated: 03/10/2012.
 				</div></body></html>

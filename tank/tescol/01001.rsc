@@ -110,11 +110,11 @@ syntax Atom
  ;
 syntax V_id
         = 
-        (VAR_ID | CONST_ID) idname
+        idname: (VAR_ID | CONST_ID)
  ;
 syntax P_id
         = 
-        (VAR_ID | CONST_ID) idname
+        idname: (VAR_ID | CONST_ID)
  ;
 syntax Constant
         = 

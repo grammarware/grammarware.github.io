@@ -4,7 +4,7 @@ exports
   sorts
         Apply Argument Binary Expr Function IfThenElse Literal ObjectFactory Ops Package-info Program 
   context-free syntax
-        Name::STR Arg::(ANY*) -> Apply
+        Name::STR Arg::(Expr*) -> Apply
 
         Name::STR -> Argument
 
@@ -16,7 +16,7 @@ exports
 		| IfThenElse
 		| Literal -> Expr
 
-        Name::STR Arg::(ANY*) Rhs::Expr -> Function
+        Name::STR Arg::(STR*) Rhs::Expr -> Function
 
         IfExpr::Expr ThenExpr::Expr ElseExpr::Expr -> IfThenElse
 
@@ -30,4 +30,4 @@ exports
 
         EMPTY -> Package-info
 
-        Function::(ANY*) -> Program
+        Function::(Function*) -> Program

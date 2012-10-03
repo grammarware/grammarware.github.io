@@ -3,11 +3,11 @@ module Om
 
 syntax Apply
         = 
-        String name ANY* args
+        String name Expr* args
  ;
 syntax Argument
         = 
-        String name
+        name: String
  ;
 syntax Binary
         = 
@@ -22,7 +22,7 @@ syntax Expr
  ;
 syntax Function
         = 
-        String name ANY* args Expr rhs
+        String name String* args Expr rhs
  ;
 syntax IfThenElse
         = 
@@ -30,16 +30,16 @@ syntax IfThenElse
  ;
 syntax Literal
         = 
-        Integer info
+        info: Integer
  ;
 syntax Ops
-        = () Equal
-        | () Plus
-        | () Minus
+        = Equal: ()
+        | Plus: ()
+        | Minus: ()
  ;
 syntax Program
         = 
-        ANY* functions
+        functions: Function*
  ;
 syntax Visitor
         = 

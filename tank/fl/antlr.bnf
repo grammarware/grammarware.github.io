@@ -1,21 +1,21 @@
 program:
-        function+
+        f::function+
 function:
-        ID ID+ "=" expr NEWLINE+
+        n::ID a::ID+ "=" e::expr NEWLINE+
 expr:
-        binary
-        apply
-        ifThenElse
+        b::binary
+        a::apply
+        i::ifThenElse
 binary:
-        atom (ops atom)*
+        l::atom (o::ops r::atom)*
 apply:
-        ID atom+
+        i::ID a::atom+
 ifThenElse:
-        "if" expr "then" expr "else" expr
+        "if" c::expr "then" e1::expr "else" e2::expr
 atom:
         ID
         INT
-        "(" expr ")"
+        "(" e::expr ")"
 ops:
         "=="
         "+"

@@ -62,7 +62,12 @@
 		</link>
 	</toolset>
 	<item name="ifm2009">
-		<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">An Introduction to Grammar Convergence.</em> iFM 2009.</name>
+		<author>R. Lämmel</author>
+		<author>V. Zaytsev</author>
+		<title>An Introduction to Grammar Convergence</title>
+		<venue>iFM</venue>
+		<date>2009</date>
+		<!-- <name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">An Introduction to Grammar Convergence.</em> iFM 2009.</name> -->
 		<link>
 			<uri>http://www.formal-methods.de/ifm09/</uri>
 			<name>iFM</name>
@@ -85,7 +90,11 @@
 		</link>
 	</item>
 	<item name="phd">
-		<name>V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Recovery, Convergence and Documentation of Languages.</em> Vrije Universiteit Amsterdam, 2010.</name>
+		<author>V. Zaytsev</author>
+		<title>Recovery, Convergence and Documentation of Languages</title>
+		<venue>Vrije Universiteit Amsterdam</venue>
+		<date>2010</date>
+		<!-- <name>V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Recovery, Convergence and Documentation of Languages.</em> Vrije Universiteit Amsterdam, 2010.</name> -->
 		<link>
 			<uri>http://grammarware.net/text/2010/zaytsev-thesis.pdf</uri>
 			<name>Thesis</name>
@@ -97,7 +106,12 @@
 	</item>
 	<itemset name="javapubs">
 		<item>
-			<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Recovering Grammar Relationships for the Java Language Specification.</em> SCAM 2009.</name>
+			<author>R. Lämmel</author>
+			<author>V. Zaytsev</author>
+			<title>Recovering Grammar Relationships for the Java Language Specification</title>
+			<venue>SCAM</venue>
+			<date>2009</date>
+			<!-- <name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Recovering Grammar Relationships for the Java Language Specification.</em> SCAM 2009.</name> -->
 			<link>
 				<uri>http://www2009.ieee-scam.org/</uri>
 				<name>SCAM</name>
@@ -116,7 +130,12 @@
 			</link>
 		</item>
 		<item>
-			<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Reverse Engineering Grammar Relationships.</em> WSR 2010.</name>
+			<author>R. Lämmel</author>
+			<author>V. Zaytsev</author>
+			<title>Reverse Engineering Grammar Relationships</title>
+			<venue>WSR</venue>
+			<date>2010</date>
+			<!-- <name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Reverse Engineering Grammar Relationships.</em> WSR 2010.</name> -->
 			<link>
 				<uri>http://www.uni-koblenz-landau.de/koblenz/fb4/institute/uebergreifend/sre/conferences/wsr/wsr2010</uri>
 				<name>WSR</name>
@@ -131,7 +150,11 @@
 			</link>
 		</item>
 		<item>
-			<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Recovering Grammar Relationships for the Java Language Specification.</em> ACM CoRR; SQJ 19:2.</name>
+			<author>R. Lämmel</author>
+			<author>V. Zaytsev</author>
+			<title>Recovering Grammar Relationships for the Java Language Specification</title>
+			<venue>ACM CoRR; SQJ 19:2</venue>
+			<!-- <name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Recovering Grammar Relationships for the Java Language Specification.</em> ACM CoRR; SQJ 19:2.</name> -->
 			<link>
 				<doi>10.1007/s11219-010-9116-5</doi>
 				<name>SQJ</name>
@@ -164,7 +187,10 @@
 				<name>Recovered</name>
 				<handle>ada/kempe</handle>
 				<source>
-					<title>Magnus Kempe, <em xmlns="http://www.w3.org/1999/xhtml">Ada 95 Reference Manual</em>, Hypertext version</title>
+					<author>Magnus Kempe</author>
+					<title>Ada 95 Reference Manual</title>
+					<subtitle>Hypertext version</subtitle>
+					<!-- <title>Magnus Kempe, <em xmlns="http://www.w3.org/1999/xhtml">Ada 95 Reference Manual</em>, Hypertext version</title> -->
 					<date>1994–1997</date>
 					<link>
 						<slps>topics/grammars/ada/kempe/README.txt</slps>
@@ -206,7 +232,9 @@
 				<name>Extracted</name>
 				<handle>ada/laemmel-verhoef</handle>
 				<source>
-					<title>Ralf Lämmel, Chris Verhoef. <em xmlns="http://www.w3.org/1999/xhtml">Engineering of Grammarware. Browsable Ada 95 Grammar</em> 1.0.</title>
+					<author>Ralf Lämmel</author>
+					<author>Chris Verhoef</author>
+					<title>Engineering of Grammarware. Browsable Ada 95 Grammar 1.0</title>
 					<date>December 2000</date>
 					<link>
 						<slps>topics/grammars/ada/laemmel-verhoef/README.txt</slps>
@@ -240,11 +268,9 @@
 				<name>Recovered</name>
 				<handle>ada/lncs-2219</handle>
 				<source>
-					<title>
-					International Standard ISO/IEC 8652/1995(E) with Technical Corrigendum 1.
-					<em xmlns="http://www.w3.org/1999/xhtml">Consolidated Ada Reference Manual. Language and Standard Libraries</em>.
-					Also published as LNCS 2219 with Taft, T.S.; Duff, R.A.; Brukardt, R.L.; Ploedereder, E. as editors.
-				</title>
+					<standard>International Standard ISO/IEC 8652/1995(E) with Technical Corrigendum 1</standard>
+					<title>Consolidated Ada Reference Manual. Language and Standard Libraries</title>
+					<subtitle>Also published as LNCS 2219 with Taft, T.S.; Duff, R.A.; Brukardt, R.L.; Ploedereder, E. as editors</subtitle>
 					<date>2001</date>
 					<specific>Annex P, pages 497–512</specific>
 					<link>
@@ -283,7 +309,8 @@
 				<name>Extracted</name>
 				<handle>ada/kellogg</handle>
 				<source>
-					<title>Oliver Kellogg, <code xmlns="http://www.w3.org/1999/xhtml">ada.g</code></title>
+					<author>Oliver Kellogg</author>
+					<file>ada.g</file>
 					<date>2003</date>
 					<link>
 						<slps>topics/grammars/ada/kellogg/README.txt</slps>
@@ -321,11 +348,9 @@
 				<name>Recovered</name>
 				<handle>ada/lncs-4348</handle>
 				<source>
-					<title>
-					International Standard ISO/IEC 8652/1995(E) with Technical Corrigendum 1 and Amendment 1.
-					<em xmlns="http://www.w3.org/1999/xhtml">Ada 2005 Reference Manual. Language and Standard Libraries</em>.
-					Also published as LNCS 4348 with Taft, S.T.; Duff, R.A.; Brukardt, R.L.; Ploedereder, E.; Leroy, P. as editors.
-				</title>
+					<standard>International Standard ISO/IEC 8652/1995(E) with Technical Corrigendum 1 and Amendment 1</standard>
+					<title>Ada 2005 Reference Manual. Language and Standard Libraries</title>
+					<subtitle>Also published as LNCS 4348 with Taft, S.T.; Duff, R.A.; Brukardt, R.L.; Ploedereder, E.; Leroy, P. as editors</subtitle>
 					<date>2006</date>
 					<specific>Annex P, pages 675–692</specific>
 					<link>
@@ -371,7 +396,8 @@
 				<name>Extracted</name>
 				<handle>c/iso-9899-1999</handle>
 				<source>
-					<title>ISO/IEC 9899:1999(E) <em xmlns="http://www.w3.org/1999/xhtml">Programming languages — C</em></title>
+					<standard>ISO/IEC 9899:1999(E)</standard>
+					<title>Programming languages — C</title>
 					<date>December 1999</date>
 					<specific>Annex A, pages 402–416</specific>
 					<link>
@@ -388,7 +414,8 @@
 				<name>Recovered</name>
 				<handle>c/iso-9899-tc2</handle>
 				<source>
-					<title>ISO/IEC 9899:TC2 <em xmlns="http://www.w3.org/1999/xhtml">WG14/N1124</em> Committee Draft</title>
+					<standard>ISO/IEC 9899:TC2</standard>
+					<title>WG14/N1124 Committee Draft</title>
 					<date>May 2005</date>
 					<specific>Annex A, pages 403–417</specific>
 					<link>
@@ -412,7 +439,8 @@
 				<name>Recovered</name>
 				<handle>c/iso-9899-tc3</handle>
 				<source>
-					<title>ISO/IEC 9899:TC3 <em xmlns="http://www.w3.org/1999/xhtml">WG14/N1256</em> Committee Draft</title>
+					<standard>ISO/IEC 9899:TC3</standard>
+					<title>WG14/N1256 Committee Draft</title>
 					<date>September 2007</date>
 					<specific>Annex A, pages 403–418</specific>
 					<link>
@@ -439,7 +467,9 @@
 				<name>Recovered</name>
 				<handle>cpp/iso-14882-1998</handle>
 				<source>
-					<title>ISO/IEC 14882:1998(E) <em xmlns="http://www.w3.org/1999/xhtml">Programming languages — C++</em>. First edition</title>
+					<standard>ISO/IEC 14882:1998(E)</standard>
+					<title>Programming languages — C++</title>
+					<subtitle>First edition</subtitle>
 					<date>September 1998</date>
 					<specific>Annex A, pages 667–684</specific>
 					<link>
@@ -470,7 +500,8 @@
 				<name>Recovered</name>
 				<handle>cpp/iso-n2723</handle>
 				<source>
-					<title>ISO/IEC SC22/WG21 N2723=08-0233 Working Draft, <em xmlns="http://www.w3.org/1999/xhtml">Standard for Programming Language C++</em></title>
+					<standard>ISO/IEC SC22/WG21 N2723=08-0233 Working Draft</standard>
+					<title>Standard for Programming Language C++</title>
 					<date>August 2008</date>
 					<specific>Annex A, pages 1089–1101</specific>
 					<link>
@@ -497,7 +528,8 @@
 				<name>Extracted</name>
 				<handle>csharp/ecma-334-1</handle>
 				<source>
-					<title>ECMA International Standard <em xmlns="http://www.w3.org/1999/xhtml">ECMA-334, 1<sup>st</sup> edition</em></title>
+					<standard>ECMA-334</standard>
+					<edition>1</edition>
 					<date>December 2001</date>
 					<specific>Appendix A, pages 339–364</specific>
 					<link>
@@ -526,7 +558,8 @@
 				<name>Extracted</name>
 				<handle>csharp/ecma-334-2</handle>
 				<source>
-					<title>ECMA International Standard <em xmlns="http://www.w3.org/1999/xhtml">ECMA-334, 2<sup>nd</sup> edition</em></title>
+					<standard>ECMA-334</standard>
+					<edition>2</edition>
 					<date>December 2002</date>
 					<specific>Appendix A, pages 335–360</specific>
 					<link>
@@ -548,7 +581,8 @@
 				<name>Recovered</name>
 				<handle>csharp/zaytsev</handle>
 				<source>
-					<title>Vadim Zaytsev, <em xmlns="http://www.w3.org/1999/xhtml">ECMA-334 C# Grammar Recovered</em>.</title>
+					<author>Vadim Zaytsev</author>
+					<title>ECMA-334 C# Grammar Recovered</title>
 					<date>2005</date>
 					<link>
 						<slps>topics/grammars/csharp/zaytsev/README.txt</slps>
@@ -602,7 +636,12 @@
 					</link>
 				</toolset>
 				<item>
-					<name>V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Correct C# Grammar too Sharp for ISO.</em> GTTSE 2005. Extended abstract.</name>
+					<author>V. Zaytsev</author>
+					<title>Correct C# Grammar too Sharp for ISO</title>
+					<venue>GTTSE</venue>
+					<date>2005</date>
+					<specific>Extended abstract</specific>
+					<!-- <name>. <em xmlns="http://www.w3.org/1999/xhtml">Correct C# Grammar too Sharp for ISO.</em> GTTSE 2005. Extended abstract.</name> -->
 					<link>
 						<uri>http://wiki.di.uminho.pt/twiki/bin/view/Events/GTTSE/</uri>
 						<name>GTTSE</name>
@@ -625,7 +664,9 @@
 				<name>Extracted</name>
 				<handle>csharp/iso-23270-2003</handle>
 				<source>
-					<title>ISO/IEC 23270:2003(E) <em xmlns="http://www.w3.org/1999/xhtml">Information technology — Programming languages — C#</em>. First edition</title>
+					<standard>ISO/IEC 23270:2003(E)</standard>
+					<title>Information technology — Programming languages — C#</title>
+					<edition>1</edition>
 					<date>2003</date>
 					<link>
 						<slps>topics/grammars/csharp/iso-23270-2003/README.txt</slps>
@@ -648,7 +689,9 @@
 				<name>Extracted</name>
 				<handle>csharp/msft-ls-1.0</handle>
 				<source>
-					<title>Microsoft, <em xmlns="http://www.w3.org/1999/xhtml">C# Language Specification.</em> Version 1.0</title>
+					<author>Microsoft</author>
+					<title>C# Language Specification</title>
+					<subtitle>Version 1.0</subtitle>
 					<date>2002</date>
 					<link>
 						<slps>topics/grammars/csharp/msft-ls-1.0/README.txt</slps>
@@ -665,7 +708,9 @@
 				<name>Extracted</name>
 				<handle>csharp/msft-ls-1.2</handle>
 				<source>
-					<title><em xmlns="http://www.w3.org/1999/xhtml">C# Language Specification.</em> Version 1.2</title>
+					<author>Microsoft</author>
+					<title>C# Language Specification</title>
+					<subtitle>Version 1.2</subtitle>
 					<date>2003</date>
 					<link>
 						<slps>topics/grammars/csharp/msft-ls-1.2/README.txt</slps>
@@ -685,7 +730,8 @@
 				<name>Extracted</name>
 				<handle>csharp/ecma-334-3</handle>
 				<source>
-					<title>ECMA International Standard <em xmlns="http://www.w3.org/1999/xhtml">ECMA-334, 3<sup>rd</sup> edition</em></title>
+					<standard>ECMA-334</standard>
+					<edition>3</edition>
 					<date>June 2005</date>
 					<link>
 						<slps>topics/grammars/csharp/ecma-334-3/README.txt</slps>
@@ -706,7 +752,8 @@
 				<name>Extracted</name>
 				<handle>csharp/ecma-334-4</handle>
 				<source>
-					<title>ECMA International Standard <em xmlns="http://www.w3.org/1999/xhtml">ECMA-334, 4<sup>th</sup> edition</em></title>
+					<standard>ECMA-334</standard>
+					<edition>4</edition>
 					<date>June 2006</date>
 					<link>
 						<slps>topics/grammars/csharp/ecma-334-4/README.txt</slps>
@@ -734,7 +781,9 @@
 				<name>Extracted</name>
 				<handle>csharp/iso-23270-2006</handle>
 				<source>
-					<title>ISO/IEC 23270:2006(E) <em xmlns="http://www.w3.org/1999/xhtml">Information technology — Programming languages — C#</em>. Second edition</title>
+					<standard>ISO/IEC 23270:2006(E)</standard>
+					<title>Information technology — Programming languages — C#</title>
+					<edition>2</edition>
 					<date>September 2006</date>
 					<link>
 						<slps>topics/grammars/csharp/iso-23270-2006/README.txt</slps>
@@ -758,7 +807,9 @@
 				<name>Extracted</name>
 				<handle>csharp/msft-ls-3.0</handle>
 				<source>
-					<title><em xmlns="http://www.w3.org/1999/xhtml">C# Language Specification.</em> Version 3.0</title>
+					<author>Microsoft</author>
+					<title>C# Language Specification</title>
+					<subtitle>Version 3.0</subtitle>
 					<date>2007</date>
 					<link>
 						<slps>topics/grammars/csharp/msft-ls-3.0/README.txt</slps>
@@ -785,7 +836,9 @@
 				<name>Extracted</name>
 				<handle>csharp/msft-ls-4.0</handle>
 				<source>
-					<title><em xmlns="http://www.w3.org/1999/xhtml">C# Language Specification.</em> Version 4.0</title>
+					<author>Microsoft</author>
+					<title>C# Language Specification</title>
+					<subtitle>Version 4.0</subtitle>
 					<date>2010</date>
 					<link>
 						<slps>topics/grammars/csharp/msft-ls-4.0/README.txt</slps>
@@ -815,7 +868,9 @@
 				<name>Extracted</name>
 				<handle>dart/google</handle>
 				<source>
-					<title>Google, Inc., Dart subversion repository</title>
+					<author>Google, Inc.</author>
+					<title>Dart subversion repository</title>
+					<file>Dart.g</file>
 					<date>October 2011</date>
 					<specific>bleeding edge branch, revision 14</specific>
 					<link>
@@ -854,7 +909,9 @@
 				<name>Recovered</name>
 				<handle>dart/spec-0.01</handle>
 				<source>
-					<title>The Dart Team, Dart Programming Language Specification, Draft Version 0.01</title>
+					<author>The Dart Team</author>
+					<title>Dart Programming Language Specification</title>
+					<subtitle>Draft Version 0.01</subtitle>
 					<date>October 2011</date>
 					<link>
 						<slps>topics/grammars/dart/spec-0.01/README.txt</slps>
@@ -923,7 +980,9 @@
 				<name>Recovered</name>
 				<handle>dart/spec-0.05</handle>
 				<source>
-					<title>The Dart Team, Dart Programming Language Specification, Draft Version 0.05</title>
+					<author>The Dart Team</author>
+					<title>Dart Programming Language Specification</title>
+					<subtitle>Draft Version 0.05</subtitle>
 					<date>November 2011</date>
 					<link>
 						<slps>topics/grammars/dart/spec-0.05/README.txt</slps>
@@ -964,8 +1023,8 @@
 				<name>Recovered</name>
 				<handle>eiffel/bezault</handle>
 				<source>
-					<title>Eric Bezault,
-				 <em xmlns="http://www.w3.org/1999/xhtml">Eiffel: The Syntax</em></title>
+					<author>Eric Bezault</author>
+					<title>Eiffel: The Syntax</title>
 					<date>1999</date>
 					<link>
 						<slps>topics/grammars/eiffel/bezault/README.txt</slps>
@@ -1003,7 +1062,8 @@
 				<name>Extracted</name>
 				<handle>eiffel/iso-25436-2006</handle>
 				<source>
-					<title>ISO/IEC 25436:2006(E) <em xmlns="http://www.w3.org/1999/xhtml">Information technology — Eiffel: Analysis, Design and Programming Language</em></title>
+					<standard>ISO/IEC 25436:2006(E)</standard>
+					<title>Information technology — Eiffel: Analysis, Design and Programming Language</title>
 					<date>2006</date>
 					<specific>Syntax sections collected from pages 30–158</specific>
 					<link>
@@ -1048,7 +1108,8 @@
 				<name>Extracted</name>
 				<handle>fortran/derricks</handle>
 				<source>
-					<title>Jan Derricks, <code xmlns="http://www.w3.org/1999/xhtml">Fortran90.sdf</code></title>
+					<author>Jan Derricks</author>
+					<file>Fortran90.sdf</file>
 					<date>12 July 2007</date>
 					<link>
 						<slps>topics/grammars/fortran/README.txt</slps>
@@ -1072,7 +1133,10 @@
 					</link>
 				</toolset>
 				<item>
-					<name>J. Derricks. <em xmlns="http://www.w3.org/1999/xhtml">Fortran grammatica-extractie.</em> MSc thesis, 2007.</name>
+					<author>J. Derricks</author>
+					<title>Fortran grammatica-extractie</title>
+					<venue>MSc thesis</venue>
+					<date>2007</date>
 					<link>
 						<uri>http://repository.cwi.nl/search/abstract.php?publnr=12415</uri>
 						<name>Abstract</name>
@@ -1093,7 +1157,10 @@
 				<name>Readable</name>
 				<handle>java-1/jls-read</handle>
 				<source>
-					<title>James Gosling, Bill Joy, Guy Steele, <em xmlns="http://www.w3.org/1999/xhtml">Java Language Specification</em></title>
+					<author>James Gosling</author>
+					<author>Bill Joy</author>
+					<author>Guy Steele</author>
+					<title>Java Language Specification</title>
 					<date>1996</date>
 					<link>
 						<slps>topics/grammars/java-1/jls-read/README.txt</slps>
@@ -1115,7 +1182,10 @@
 				<name>Implementable</name>
 				<handle>java-1/jls-impl</handle>
 				<source>
-					<title>James Gosling, Bill Joy, Guy Steele, <em xmlns="http://www.w3.org/1999/xhtml">Java Language Specification</em></title>
+					<author>James Gosling</author>
+					<author>Bill Joy</author>
+					<author>Guy Steele</author>
+					<title>Java Language Specification</title>
 					<date>1996</date>
 					<specific>§19: LALR(1) Grammar, pages 439–453</specific>
 					<link>
@@ -1141,7 +1211,12 @@
 				<name>Readable</name>
 				<handle>java-2/jls-read</handle>
 				<source>
-					<title>James Gosling, Bill Joy, Guy Steele, Gilad Bracha, <em xmlns="http://www.w3.org/1999/xhtml">Java Language Specification</em> Second Edition</title>
+					<author>James Gosling</author>
+					<author>Bill Joy</author>
+					<author>Guy Steele</author>
+					<author>Gilad Bracha</author>
+					<title>Java Language Specification</title>
+					<edition>2</edition>
 					<date>1998</date>
 					<link>
 						<slps>topics/grammars/java-2/jls-read/README.txt</slps>
@@ -1163,7 +1238,12 @@
 				<name>Implementable</name>
 				<handle>java-2/jls-impl</handle>
 				<source>
-					<title>James Gosling, Bill Joy, Guy Steele, Gilad Bracha, <em xmlns="http://www.w3.org/1999/xhtml">Java Language Specification</em> Second Edition</title>
+					<author>James Gosling</author>
+					<author>Bill Joy</author>
+					<author>Guy Steele</author>
+					<author>Gilad Bracha</author>
+					<title>Java Language Specification</title>
+					<edition>2</edition>
 					<date>1998</date>
 					<specific>§18: Syntax, pages 449–456</specific>
 					<link>
@@ -1189,7 +1269,12 @@
 				<name>Readable</name>
 				<handle>java-5/jls-read</handle>
 				<source>
-					<title>James Gosling, Bill Joy, Guy Steele, Gilad Bracha, <em xmlns="http://www.w3.org/1999/xhtml">Java Language Specification</em> Third Edition</title>
+					<author>James Gosling</author>
+					<author>Bill Joy</author>
+					<author>Guy Steele</author>
+					<author>Gilad Bracha</author>
+					<title>Java Language Specification</title>
+					<edition>3</edition>
 					<date>2004</date>
 					<link>
 						<slps>topics/grammars/java-5/jls-read/README.txt</slps>
@@ -1211,7 +1296,12 @@
 				<name>Implementable</name>
 				<handle>java-5/jls-impl</handle>
 				<source>
-					<title>James Gosling, Bill Joy, Guy Steele, Gilad Bracha, <em xmlns="http://www.w3.org/1999/xhtml">Java Language Specification</em> Third Edition</title>
+					<author>James Gosling</author>
+					<author>Bill Joy</author>
+					<author>Guy Steele</author>
+					<author>Gilad Bracha</author>
+					<title>Java Language Specification</title>
+					<edition>3</edition>
 					<date>2004</date>
 					<specific>§18: Syntax, pages 585–596</specific>
 					<link>
@@ -1234,7 +1324,8 @@
 				<name>Stahl</name>
 				<handle>java-5/stahl</handle>
 				<source>
-					<title>Michael Stahl, <code xmlns="http://www.w3.org/1999/xhtml">java15.g</code></title>
+					<author>Michael Stahl</author>
+					<file>java15.g</file>
 					<date>2004</date>
 					<link>
 						<slps>topics/grammars/java-5/stahl/README.txt</slps>
@@ -1265,7 +1356,11 @@
 					</link>
 				</toolset>
 				<item>
-					<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Comparison of Context-free Grammars Based on Parsing Generated Test Data.</em></name>
+					<author>R. Lämmel</author>
+					<author>V. Zaytsev</author>
+					<title>Comparison of Context-free Grammars Based on Parsing Generated Test Data</title>
+					<venue>SLE</venue>
+					<date>2011</date>
 					<link>
 						<uri>http://grammarware.net/text/2011/testmatch.pdf</uri>
 						<name>Draft</name>
@@ -1280,7 +1375,8 @@
 				<name>Studman</name>
 				<handle>java-5/studman</handle>
 				<source>
-					<title>Michael Studman, <code xmlns="http://www.w3.org/1999/xhtml">java15.g</code></title>
+					<author>Michael Studman</author>
+					<file>java15.g</file>
 					<date>2004</date>
 					<link>
 						<slps>topics/grammars/java-5/studman/README.txt</slps>
@@ -1311,7 +1407,11 @@
 					</link>
 				</toolset>
 				<item>
-					<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Comparison of Context-free Grammars Based on Parsing Generated Test Data.</em></name>
+					<author>R. Lämmel</author>
+					<author>V. Zaytsev</author>
+					<title>Comparison of Context-free Grammars Based on Parsing Generated Test Data</title>
+					<venue>SLE</venue>
+					<date>2011</date>
 					<link>
 						<uri>http://grammarware.net/text/2011/testmatch.pdf</uri>
 						<name>Draft</name>
@@ -1326,7 +1426,8 @@
 				<name>Parr</name>
 				<handle>java-5/parr</handle>
 				<source>
-					<title>Terence Parr, <code xmlns="http://www.w3.org/1999/xhtml">Java.g</code></title>
+					<author>Terence Parr</author>
+					<file>Java.g</file>
 					<date>2006</date>
 					<link>
 						<slps>topics/grammars/java-5/parr/README.txt</slps>
@@ -1357,7 +1458,11 @@
 					</link>
 				</toolset>
 				<item>
-					<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Comparison of Context-free Grammars Based on Parsing Generated Test Data.</em></name>
+					<author>R. Lämmel</author>
+					<author>V. Zaytsev</author>
+					<title>Comparison of Context-free Grammars Based on Parsing Generated Test Data</title>
+					<venue>SLE</venue>
+					<date>2011</date>
 					<link>
 						<uri>http://grammarware.net/text/2011/testmatch.pdf</uri>
 						<name>Draft</name>
@@ -1372,7 +1477,8 @@
 				<name>Habelitz</name>
 				<handle>java-5/habelitz</handle>
 				<source>
-					<title>Dieter Habelitz, <code xmlns="http://www.w3.org/1999/xhtml">Java.g</code></title>
+					<author>Dieter Habelitz</author>
+					<file>Java.g</file>
 					<date>2008</date>
 					<link>
 						<slps>topics/grammars/java-5/habelitz/README.txt</slps>
@@ -1403,7 +1509,11 @@
 					</link>
 				</toolset>
 				<item>
-					<name>R. Lämmel, V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">Comparison of Context-free Grammars Based on Parsing Generated Test Data.</em></name>
+					<author>R. Lämmel</author>
+					<author>V. Zaytsev</author>
+					<title>Comparison of Context-free Grammars Based on Parsing Generated Test Data</title>
+					<venue>SLE</venue>
+					<date>2011</date>
 					<link>
 						<uri>http://grammarware.net/text/2011/testmatch.pdf</uri>
 						<name>Draft</name>
@@ -1424,9 +1534,13 @@
 				<name>Extracted</name>
 				<handle>modula/src-052</handle>
 				<source>
-					<title>Luca Cardelli, James Donahue,
-				Lucille Glassman, Mick Jordan,
-				Bill Kalsow, Greg Nelson, <em xmlns="http://www.w3.org/1999/xhtml">SRC 052: Modula-3 Report (revised)</em></title>
+					<author>Luca Cardelli</author>
+					<author>James Donahue</author>
+					<author>Lucille Glassman</author>
+					<author>Mick Jordan</author>
+					<author>Bill Kalsow</author>
+					<author>Greg Nelson</author>
+					<title>SRC 052: Modula-3 Report (revised)</title>
 					<date>1 November 1989</date>
 					<specific>§9 Syntax, pages 56–60</specific>
 					<link>
@@ -1461,7 +1575,9 @@
 				<name>Extracted</name>
 				<handle>modula/sdf</handle>
 				<source>
-					<title>Jurgen Vinju, Tijs van der Storm, <code xmlns="http://www.w3.org/1999/xhtml">Modula-3.sdf</code></title>
+					<author>Jurgen Vinju</author>
+					<author>Tijs van der Storm</author>
+					<file>Modula-3.sdf</file>
 					<date>13 February 2006 – 19 September 2008</date>
 					<link>
 						<slps>topics/grammars/modula/sdf/README.txt</slps>
@@ -1495,7 +1611,9 @@
 				<name>Extracted</name>
 				<handle>w3c/xpath1</handle>
 				<source>
-					<title><em xmlns="http://www.w3.org/1999/xhtml">XML Path Language (XPath)</em>, Version 1.0, W3C Recommendation</title>
+					<author>W3C</author>
+					<title>XML Path Language (XPath)</title>
+					<subtitle>Version 1.0, W3C Recommendation</subtitle>
 					<date>16 November 1999</date>
 					<link>
 						<slps>topics/grammars/xpath/v1/README.txt</slps>
@@ -1530,7 +1648,11 @@
 					</link>
 				</toolset>
 				<item>
-					<name>V. Zaytsev, R. Lämmel. <em xmlns="http://www.w3.org/1999/xhtml">A Unified Format for Language Documents.</em> SLE 2010.</name>
+					<author>V. Zaytsev</author>
+					<author>R. Lämmel</author>
+					<title>A Unified Format for Language Documents</title>
+					<venue>SLE</venue>
+					<date>2010</date>
 					<link>
 						<uri>http://planet-sl.org/sle2010/</uri>
 						<name>SLE</name>
@@ -1555,7 +1677,9 @@
 				<name>Recovered</name>
 				<handle>wiki/mediawiki-bnf</handle>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Article title</em>, Revision 295042</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Article title</title>
+					<subtitle>Revision 295042</subtitle>
 					<date>28 December 2009</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Article_title&amp;oldid=295042</uri>
@@ -1563,7 +1687,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Article</em>, Revision 281674</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Article</title>
+					<subtitle>Revision 281674</subtitle>
 					<date>17 October 2009</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Article&amp;oldid=281674</uri>
@@ -1571,7 +1697,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Noparse-block</em>, Revision 372814</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Noparse-block</title>
+					<subtitle>Revision 372814</subtitle>
 					<date>30 December 2010</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Noparse-block&amp;oldid=372814</uri>
@@ -1579,7 +1707,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Links</em>, Revision 376721</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Links</title>
+					<subtitle>Revision 376721</subtitle>
 					<date>18 January 2011</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Links&amp;oldid=376721</uri>
@@ -1587,7 +1717,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Magic links</em>, Revision 269783</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Magic links</title>
+					<subtitle>Revision 269783</subtitle>
 					<date>8 August 2009</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Magic_links&amp;oldid=269783</uri>
@@ -1595,7 +1727,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Special block</em>, Revision 281676</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Special block</title>
+					<subtitle>Revision 281676</subtitle>
 					<date>17 October 2009</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Special_block&amp;oldid=281676</uri>
@@ -1603,7 +1737,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Inline text</em>, Revision 295055</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Inline text</title>
+					<subtitle>Revision 295055</subtitle>
 					<date>29 December 2009</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Inline_text&amp;oldid=295055</uri>
@@ -1611,7 +1747,9 @@
 					</link>
 				</source>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/BNF/Fundamental elements</em>, Revision 212918</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/BNF/Fundamental elements</title>
+					<subtitle>Revision 212918</subtitle>
 					<date>17 September 2008</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/BNF/Fundamental_elements&amp;oldid=212918</uri>
@@ -1725,7 +1863,9 @@
 					</link>
 				</toolset>
 				<item>
-					<name>V. Zaytsev. <em xmlns="http://www.w3.org/1999/xhtml">MediaWiki Grammar Recovery.</em> ACM CoRR.</name>
+					<author>V. Zaytsev</author>
+					<title>MediaWiki Grammar Recovery</title>
+					<venue>ACM CoRR</venue>
 					<link>
 						<uri>http://arxiv.org/abs/1107.4661</uri>
 						<name>arXiv</name>
@@ -1743,7 +1883,9 @@
 				<name>Extracted</name>
 				<handle>wiki/mediawiki-ebnf</handle>
 				<source>
-					<title>MediaWiki, <em xmlns="http://www.w3.org/1999/xhtml">Markup spec/EBNF</em>, Revision 335623</title>
+					<author>MediaWiki</author>
+					<title>Markup spec/EBNF</title>
+					<subtitle>Revision 335623</subtitle>
 					<date>5 July 2010</date>
 					<link>
 						<uri>http://www.mediawiki.org/w/index.php?title=Markup_spec/EBNF&amp;oldid=335623</uri>

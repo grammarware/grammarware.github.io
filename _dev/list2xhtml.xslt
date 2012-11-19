@@ -231,7 +231,38 @@
 	<xsl:template match="source">
 		<li xmlns="http://www.w3.org/1999/xhtml">
 			<xsl:text>Source: </xsl:text>
-			<xsl:copy-of select="title/node()"/>
+			<xsl:for-each select="author|standard">
+				<xsl:value-of select="."/>
+				<xsl:text>, </xsl:text>
+			</xsl:for-each>
+			<xsl:if test="title">
+				<em>
+					<xsl:value-of select="title"/>
+					<xsl:text>. </xsl:text>
+				</em>
+			</xsl:if>
+			<xsl:if test="file">
+				<code>
+					<xsl:value-of select="file"/>
+				</code>
+			</xsl:if>
+			<xsl:if test="subtitle">
+				<xsl:value-of select="subtitle"/>
+				<xsl:text>. </xsl:text>
+			</xsl:if>
+			<xsl:if test="edition">
+				<xsl:value-of select="edition"/>
+				<sup>
+					<xsl:choose>
+						<xsl:when test="edition='1'">st</xsl:when>
+						<xsl:when test="edition='2'">nd</xsl:when>
+						<xsl:when test="edition='3'">rd</xsl:when>
+						<xsl:otherwise>th</xsl:otherwise>
+					</xsl:choose>
+				</sup>
+				<xsl:text> edition. </xsl:text>
+			</xsl:if>
+			<!-- <xsl:copy-of select="title/node()"/> -->
 			<xsl:if test="date">
 				<xsl:text> (</xsl:text>
 				<xsl:value-of select="date"/>
@@ -359,7 +390,58 @@
 	</xsl:template>
 	<xsl:template match="item">
 		<li xmlns="http://www.w3.org/1999/xhtml">
-			<xsl:copy-of select="name/node()"/>
+			<!-- <xsl:copy-of select="name/node()"/> -->
+			<xsl:for-each select="author|standard">
+				<xsl:value-of select="."/>
+				<xsl:text>, </xsl:text>
+			</xsl:for-each>
+			<xsl:if test="title">
+				<em>
+					<xsl:value-of select="title"/>
+					<xsl:text>. </xsl:text>
+				</em>
+			</xsl:if>
+			<xsl:if test="file">
+				<code>
+					<xsl:value-of select="file"/>
+				</code>
+			</xsl:if>
+			<xsl:if test="subtitle">
+				<xsl:value-of select="subtitle"/>
+				<xsl:text>. </xsl:text>
+			</xsl:if>
+			<xsl:if test="edition">
+				<xsl:value-of select="edition"/>
+				<sup>
+					<xsl:choose>
+						<xsl:when test="edition='1'">st</xsl:when>
+						<xsl:when test="edition='2'">nd</xsl:when>
+						<xsl:when test="edition='3'">rd</xsl:when>
+						<xsl:otherwise>th</xsl:otherwise>
+					</xsl:choose>
+				</sup>
+				<xsl:text> edition. </xsl:text>
+			</xsl:if>
+			<!-- <xsl:copy-of select="title/node()"/> -->
+			<xsl:if test="venue and date">
+				<xsl:value-of select="venue"/>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="date"/>
+				<xsl:text>. </xsl:text>
+			</xsl:if>
+			<xsl:if test="not(venue) and date">
+				<xsl:text>(</xsl:text>
+				<xsl:value-of select="date"/>
+				<xsl:text>)</xsl:text>
+			</xsl:if>
+			<xsl:if test="venue and not(date)">
+				<xsl:value-of select="venue"/>
+				<xsl:text>. </xsl:text>
+			</xsl:if>
+			<xsl:if test="specific">
+				<!-- <xsl:text>, </xsl:text> -->
+				<xsl:value-of select="specific"/>
+			</xsl:if>
 			<span class="links">
 				<xsl:apply-templates select="link"/>
 			</span>

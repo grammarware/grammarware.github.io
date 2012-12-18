@@ -1,15 +1,6 @@
-h1, h2, div.c {text-align:center;}
-h2 a, div.c em {font-size:small;}
-dt {font-weight: bold;}
-img {border:0;}
-.last {width: 100%; text-align: right; font-style: italic;}
-.last img {border:0; width: 88px; height: 31px;}
-br {clear: both;}
-.links {text-align:center; font-family: monospace; font-weight: bold;}
-.links a {text-decoration: none;}
-a:hover {text-decoration: underline;}
-body{color:#033;}
-a:link{color:#039;}
-a:visited{color:#006;}
-ul li {list-style:disc;}
-a:link.red, a:visited.red {color:#933;}
+body {color:#033; background-color:#FCA}
+.pic {float:left; text-align:center; width:225px; margin:25px; font-weight:bold}
+.iconimg {border:0px; width:200px; height:200px}
+div {display:block}
+br {clear:both}
+.last {width:100%; text-align:right; font-style:italic}

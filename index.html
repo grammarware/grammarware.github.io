@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:bgf="http://planet-sl.org/bgf" xml:lang="en" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Software Language Processing Suite</title>
-		<link href="slps.css" rel="stylesheet" type="text/css" />
+		<title>Dr. Vadim Zaytsev — projects</title>
+		<link href="common.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
@@ -19,203 +19,29 @@
 
 		</script>
 	</head>
-	<body style="background-color:#9CF;">
+	<body>
 		<h1>
-			<a href="https://github.com/grammarware/slps"><img src="img/slps-small.png" border="0" alt="Software Language Processing Suite at GitHub" /></a>
-			<br />
-			Software Language Processing Suite
+			Projects of @<a href="http://grammarware.net">grammarware</a>:
 		</h1>
-		<h2>Mission</h2>
-		<h3>
-			The project facilitates exposition and comparison of approaches and
-			techniques on language processing in a way that is relevant for CS
-			students, teachers, scientists, engineers and practitioners.
-		</h3>
-		<hr />
-		<h2>Pages</h2>
-		<ul>
-			<li>
-				<a href="https://github.com/grammarware/slps/">Project page at GitHub</a>
-				(<a href="https://sourceforge.net/projects/slps">legacy project page at SourceForge</a>)
-			</li>
-			<li>
-				<a href="https://github.com/grammarware/slps/commits/master">List of recent commits</a> and 
-				<a href="https://github.com/grammarware/slps/graphs/commit-activity">statistics on them</a>
-				(<a href="http://slps.svn.sourceforge.net/viewvc/slps/">legacy subversion repository</a>)
-			</li>
-			<li>
-				<a href="xbgf/">XBGF Language Manual</a>
-			</li>
-			<li>
-				<a href="zoo/">SLPS Grammar Zoo</a> (Ada, C, C++, C#, Java, Modula, …)
-			</li>
-			<li>
-				<a href="tank/">SLPS Grammar Tank</a> (BNF, EBNF, FL, TESCOL, …)
-			</li>
-			<li>
-				<a href="testmatch/">TestMatch project</a> (comparing languages based on parsing generated test data)
-			</li>
-			<li>
-				<a href="zoo/java/links.html">Java grammars link repository</a>
-			</li>
-			<li>
-				<a href="faq.html">FAQ (legacy)</a>
-			</li>
-		</ul>
-		<h2>Links</h2>
-		<ul>
-			<li>
-				<a href="https://lists.sourceforge.net/lists/listinfo/slps-cafe">Mailing list slps-cafe@lists.sourceforge.net</a>
-			</li>
-			<li>
-				<a href="https://lists.sourceforge.net/lists/listinfo/slps-contributors">Mailing list slps-contributors@lists.sourceforge.ne</a>
-			</li>
-			<li>
-				<a href="http://planet-sl.org/">Software Language Engineering Conference</a>
-			</li>
-		</ul>
-		<hr />
-		<h2>Structure</h2>
-		<dl>
-			<dt>topics</dt>
-			<dd>
-				<dl>
-					<dt>fl</dt>
-					<dd>
-						The Factorial Language that is used in the SLPS for prototyping various tools
-						and approaches. Every subdirectory there is a different implementation of FL:
-						Java, Haskell, Prolog, etc.
-					</dd>
-					<dt>convergence</dt>
-					<dd>
-						Grammar convergence tool (Language Convergence Infrastructure)
-						and grammar convergence scenarios: Factorial Language, Java Language Specification, etc.
-					</dd>
-					<dt>extraction</dt>
-					<dd>
-						Grammar extractors: getting grammar knowledge in a form of BGF from
-						ANTLR, DCG, Ecore, HTML, BNF dialects, source code, SDF, TXL, Rascal, XML Schema, …
-					</dd>
-					<dt>recovery</dt>
-					<dd>
-						Grammar recovery attempts that go beyond simple extraction: Grammar Recovery Kit, Grammar Hunter, ISO C#, VU Browsable Grammars, etc.
-					</dd>
-					<dt>grammars</dt>
-					<dd>
-						Extracted grammars that form the <a href="zoo/">SLPS Zoo</a>, <a href="tank/">SLPS Tank</a>.
-						Of many grammars located here, the most interesting ones are those of
-						Ada, C, C++, C# and Java.
-					</dd>
-					<dt>storage</dt>
-					<dd>
-						Formats for storing language documentation and grammar syntax definitions:
-						Language Document Format, BNF-like Grammar Format and similar topics. Work on metasyntax in progress.
-					</dd>
-					<dt>investigation</dt>
-					<dd>
-						Grammar analysis, metrics, visualisations, normalisations.
-					</dd>
-					<dt>export</dt>
-					<dd>
-						The reverse of extraction: mappers from BGF to elsewhere:
-						pretty-printers, hypertext enablers, generators of Rascal and TXL, etc.
-					</dd>
-					<dt>transformation</dt>
-					<dd>
-						Grammar transformation and language document transformation, complete with test sets.
-					</dd>
-					<dt>testing</dt>
-					<dd>
-						Combinatorial test data generation framework and input data for and around the 
-						<a href="testmatch/">TestMatch</a> project.
-					</dd>
-					<dt>exercises</dt>
-					<dd>
-						Lab exercises for the course Programming Paradigms and Formal Semantics.
-					</dd>
-					<dt>parsing</dt>
-					<dd>
-						Parsing-related materials for the same course (in Haskell).
-					</dd>
-					<dt>semantics</dt>
-					<dd>
-						Semantics-related materials for the same course (in Prolog).
-					</dd>
-					<dt>documents</dt>
-					<dd>
-						Language documents. Work in progress.
-					</dd>
-					<dt>NielsonN07</dt>
-					<dd>
-						Some encodings of semantics derived from Nielson and Nielson, 2007 (and prior versions).
-						In particular, the denotational semantics of While language.
-					</dd>
-					<dt>apimigration</dt>
-					<dd>
-						API migration. Work in progress.
-					</dd>
-					<dt>java</dt>
-					<dd>
-						Legacy.
-					</dd>
-				</dl>
-			</dd>
-			<dt>shared</dt>
-			<dd>
-				<dl>
-					<dt>xsd</dt>
-					<dd>
-						XML Schema definitions for various DSLs used in SLPS: BTF, BGF, XBGF, LDF, XLDF, LCF, etc.
-					</dd>
-					<dt>xsl</dt>
-					<dd>
-						eXtensible Stylesheet Language transformations for mappers and extractors.
-						Mostly populated with BGF-to-elsewhere mappings, but also Ecore-to-BGF, TXL-to-BGF and LDF-to-elsewhere ones are found here.
-					</dd>
-					<dt>prolog</dt>
-					<dd>
-						Prolog sources for some extractors and for the XBGF engine (as well as any other future Prolog sources).
-					</dd>
-					<dt>python</dt>
-					<dd>
-						Python sources for many different SLPS tools, of which the most interesting ones are perhaps LCI and XLDF.
-					</dd>
-					<dt>tools</dt>
-					<dd>
-						Shell scripts that wrap SLPS tools in a user-friendly way. People who use SLPS frequently are advised to
-						add this directory to their system PATH.
-					</dd>
-					<dt>generators</dt>
-					<dd>
-						Shell wrappers for BGF-to-XBGF generators.
-					</dd>
-					<dt>wrappers</dt>
-					<dd>
-						Shell wrappers for running parsers and evaluators in order to generalize
-						their interface for the LCI. These wrappers are rarely, if ever, executed by a human.
-					</dd>
-					<dt>edd</dt>
-					<dd>
-						EBNF Dialect Definitions. Work in progress.
-					</dd>
-				</dl>
-			</dd>
-			<dt>download</dt>
-			<dd>
-				Automated installers for third party software which is needed for SLPS stuff to work.
-				ANTLR, FOP, JastAdd, MSV, ElementTree, GDK, PyParsing, etc.
-			</dd>
-			<dt>www</dt>
-			<dd>
-				Web content for this page, the FAQ, the Zoo, the XBGF manual, etc.
-				The makefile is configured to be easily used by <a href="mailto:zaytsev.vadim@googlemail.com">VZ</a>
-				and <a href="mailto:rlaemmel@acm.org">RL</a>, so it seems
-				more reasonable to contact one of them if you want anything changed there.
-			</dd>
-		</dl>
 		<hr/>
+		<div class="pic">
+			<a href="http://slps.github.com"><img src="logos/slps.200.png" alt="SLPS"><br/>Software Language Processing Suite</a>
+		</div>
+		<div class="pic">
+			<a href="http://github.com/grammarware/ruconf/wiki"><img src="logos/conf.200.png" alt="Conferences"><br/>Международные научные конференции</a>
+		</div>
+		<div class="pic">
+			<a href="http://grammarware.net/opens/"><img src="logos/ons.200.png" alt="Open Notebook Science"><br/>Open Notebook Science</a>
+		</div>
+		<div class="pic">
+			<a href="http://github.com/grammarware"><img src="logos/terminal.200.png" alt="Grammarware"><br/>The rest</a>
+		</div>
+		<br/><hr/>
 		<div class="last">
-			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>. Last updated: May 2012.
+			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+			Last updated: December 2012.
+			The images on this page are made by me (possibly utilising public domain materials), please do not use them for other purposes than referring
+			to the corresponding projects, but feel free to ask me for vector sources if you want to base derivatives on them.
 			<br />
 			<a href="http://validator.w3.org/check/referer"><img src="img/vxhtml.png" alt="XHTML 1.0" /></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="img/vcss.png" alt="CSS 2.1" /></a>		</div>

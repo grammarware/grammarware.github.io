@@ -1,6 +1,6 @@
 body {color:#033; background-color:#FCA}
-.pic {float:left; text-align:center; width:210px; height:250px; margin:15px; font-weight:bold}
-.iconimg {border:0px; width:200px; height:200px}
+.pic {float:left; text-align:center; width:125px; height:150px; margin:15px; font-weight:bold}
+.pic img {border:0px; width:100px; height:100px}
 div {display:block}
 br {clear:both}
 .last {width:100%; text-align:right; font-style:italic}

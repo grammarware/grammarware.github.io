@@ -3,5 +3,5 @@ body {color:#033; background-color:#FCA}
 .pic img {border:0px; width:100px; height:100px}
 div {display:block}
 br {clear:both}
-.last {width:100%; text-align:right; font-style:italic}
+.last {width:100%; text-align:right; font-style:italic; font-size: smaller;}
 a:link, a:visited {color:#03C}

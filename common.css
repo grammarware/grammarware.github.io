@@ -5,3 +5,4 @@ div {display:block}
 br {clear:both}
 .last {width:100%; text-align:right; font-style:italic; font-size: smaller;}
 a:link, a:visited {color:#03C}
+h1 a img, h1 img {float:right; margin-left:50px; margin-bottom:50px;}

@@ -23,8 +23,11 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-
+		  function onn(n) {$('.help:eq('+n+')').css('background-color','#552200');}
+		  function off(n) {$('.help:eq('+n+')').css('background-color','#ffdec9');}
+		  // $('.help:eq(0)').css('background-color','#552200')" onMouseLeave="$('.help:eq(0)').css('background-color','#ffdec9')">
 		</script>
+		<script src="../jquery-1.11.1.min.js"></script></head>
 	</head>
 	<body>
 		<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>
@@ -52,7 +55,7 @@
 		</ul>
 		<p>This is the (mega)model of 12 classes of artefacts found in software language processing (dotted lines denote mappings that rely on either lexical or syntactic definitions; solid lines denote universally defined mappings. The loops are examples of transformations):</p>
 		<div class="bmp">
-			<a href="megamodel.1429.png"><img src="megamodel.715.png" alt="Bidirectional megamodel of parsing and unparsing"/></a>
+			<a href="megamodel.1429.png"><img src="megamodel.715.png" alt="Bidirectional megamodel of parsing and unparsing" title="Click to enlarge"/></a>
 		</div>
 		<p>It can be used to systematically explore the technical research space of bidirectional mappings to build on top of the existing body of work and discover as of yet unused relationships.</p>
 		<h2>Artefacts</h2>
@@ -85,12 +88,28 @@
 		</dl>
 		<h2>Publications / presentations</h2>
 		<ul>
-			<li>Anya Helene Bagge, Ralf Lämmel, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#SLE-Courses2014">Reflections on Courses for Software Language Engineering</a></em>, EduSymp, 2014.</li>
-			<li>Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#Renarration2014">Understanding Metalanguage Integration by Renarrating a Technical Space Megamodel</a></em>, GEMOC’14, 2014.</li>
-			<li>Vadim Zaytsev, Anya Helene Bagge, <em><a href="http://grammarware.net/writes/index.html#Modelling-Parsing2014">Modelling Parsing and Unparsing</a></em>, Parsing@SLE, 2014.</li>
-			<li>Vadim Zaytsev, Anya Helene Bagge, <em><a href="http://grammarware.net/writes/index.html#Parsing2014">Parsing in a Broad Sense</a></em>, MoDELS’14, LNCS 8767, 2014.</li>
-			<li>Vadim Zaytsev, <a href="https://github.com/grammarware/bx-parsing#bx-parsing"><code>grammarware/bx-parsing</code></a>, GitHub, March 2014.</li>
-			<li>Paul Klint, Ralf Lämmel, Chris Verhoef, <em><a href="http://www.cs.vu.nl/grammarware/agenda/">Toward an Engineering Discipline for Grammarware</a></em>, ACM ToSEM, 2005. <br/><em>(The title of our paper/topic was inspired by the term “grammars in a broad sense” introduced here on Figure 4)</em></li>
+			<li onMouseEnter="onn(0)" onMouseLeave="off(0)">
+				Paul Klint, Ralf Lämmel, Chris Verhoef, <em><a href="http://www.cs.vu.nl/grammarware/agenda/">Toward an Engineering Discipline for Grammarware</a></em>, ACM ToSEM, 2005.
+				<span class="help">⇐ introduces the term “grammars in a broad sense”</span></li>
+			<li onMouseEnter="onn(1)" onMouseLeave="off(1)">
+				Vadim Zaytsev, <a href="https://github.com/grammarware/bx-parsing#bx-parsing"><code>grammarware/bx-parsing</code></a>, GitHub, March 2014.
+				<span class="help">⇐ if you like to see some code (in Rascal)</span></li>
+			<li onMouseEnter="onn(2)" onMouseLeave="off(2)">
+				Vadim Zaytsev, Anya Helene Bagge, <em><a href="http://grammarware.net/writes/index.html#Modelling-Parsing2014">Modelling Parsing and Unparsing</a></em>, <a href="http://www.sleconf.org/2014/Parsing-at-SLE.html">Parsing@SLE</a>, 2014.
+				(<a href="http://www.sleconf.org/2014/parsing-slides/4-zaytsev-bagge.pdf">slides</a>)
+				<span class="help">⇐ a more technical piece targeted for parsing researchers</span></li>
+			<li onMouseEnter="onn(3)" onMouseLeave="off(3)">
+				Vadim Zaytsev, Anya Helene Bagge, <em><a href="http://grammarware.net/writes/index.html#Parsing2014">Parsing in a Broad Sense</a></em>, MoDELS’14, LNCS 8767, 2014.
+				(<a href="http://grammarware.net/talks/index.html#MoDELS2014">slides</a>)
+				<span class="help">⇐ the MAIN paper on this topic</span></li>
+			<li onMouseEnter="onn(4)" onMouseLeave="off(4)">
+				Anya Helene Bagge, Ralf Lämmel, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#SLE-Courses2014">Reflections on Courses for Software Language Engineering</a></em>, EduSymp, 2014.
+				(<a href="http://softlang.uni-koblenz.de/edusymp14/talk.pdf">slides</a>)
+				<span class="help">⇐ contains the megamodel, presents how it was used in teaching</span></li>
+			<li onMouseEnter="onn(5)" onMouseLeave="off(5)">
+				Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#Renarration2014">Understanding Metalanguage Integration by Renarrating a Technical Space Megamodel</a></em>, GEMOC’14, 2014.
+				(<a href="http://grammarware.net/talks/index.html#GEMOC2014">slides</a>)
+				<span class="help">⇐ argues how megamodels are useful in teaching, uses this megamodel as an example</span></li>
 		</ul>
 		<div class="last">
 			<br/><hr/>

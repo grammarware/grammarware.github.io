@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@viewport{zoom: 1.0; width: extend-to-zoom;}
 body {color:#552200; background-color:#ffdec9; font-family:"Futura", "Montserrat", sans-serif}
 .dim {opacity:0.3}
 .pic .alert {color:#C00}

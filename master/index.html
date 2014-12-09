@@ -23,8 +23,10 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-
+		  function onn(n) {$('.help:eq('+n+')').css('background-color','#552200');}
+		  function off(n) {$('.help:eq('+n+')').css('background-color','#ffdec9');}
 		</script>
+		<script src="../jquery-1.11.1.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>
@@ -34,58 +36,60 @@
 			<img src="../logos/master-software-engineering.200.png" alt="UvA MSc SE" title="This unofficial Doctor Who themed logo was designed by Vadim Zaytsev"/></a>
 		</h1>
 		<hr/>
-		<p><em>Software Engineering</em> is a one-year programme at the University of Amsterdam, accepting Bachelor-level students with interest in computer science yet more amused by its technical side, the engineering aspects, as well as by the human factors playing a role in the software development process. It is promised and assumed that the graduates of the programme are eventually suitable to work as lead developers, senior software engineers, technical advisors and industrial researchers.</p>
+		<p>Software Engineering is a one-year programme at the University of Amsterdam, accepting Bachelor-level students with interest in computer science yet more amused by its technical side, the engineering aspects, as well as by the human factors playing a role in the software development process. It is promised and assumed that the graduates of the programme are eventually suitable to work as lead developers, senior software engineers, technical advisors and industrial researchers.</p>
 		<h2>Organisation</h2>
 		<ul>
-			<li>I unofficially (as a CWI employee) assisted in the lab studies of courses like <em>Software Construction</em> and <em>Software Evolution</em> in 2011, 2012 and 2013.</li>
-			<li>I unofficially (still being employed by the CWI) joined the programme in September 2013 for the <em>Software Testing</em> course where I actively assisted <a href="http://homepages.cwi.nl/~jve/">Jan van Eijck</a> by providing advice at the lab, but also co-designing assignments and grading solutions.</li>
-			<li>From September 2013 till March 2014 I was responsible for the course <em>Preparation Master Project</em> (a.k.a. <em>Academic Skills</em>, a.k.a. <em>Paper Sessions</em>) which consisted of numerous small group sessions teaching students to seek, filter, consume and produce academic literature. Ran about half of the sessions myself, asked colleagues to cover the rest.</li>
+			<li>I unofficially (as a CWI employee) assisted in the lab studies of courses like Software Construction and Software Evolution in 2011, 2012 and 2013.</li>
+			<li>I unofficially (still being employed by the CWI) joined the programme in September 2013 for the Software Testing course where I actively assisted <a href="http://homepages.cwi.nl/~jve/">Jan van Eijck</a> by providing advice at the lab, but also co-designing assignments and grading solutions.</li>
+			<li>From September 2013 till March 2014 I was responsible for the course Preparation Master Project (a.k.a. Academic Skills, a.k.a. Paper Sessions) which consisted of numerous small group sessions teaching students to seek, filter, consume and produce academic literature. Ran about half of the sessions myself, asked colleagues to cover the rest.</li>
 			<li>In November 2013 I started working at the UvA officially as lecturer of the education team.</li>
-			<li>In November–December 2013, I assisted Jurgen Vinju at the <em>Software Evolution</em> course and in February–March 2014 assisted Tijs van der Storm at the <em>Software Construction</em> course.</li>
-			<li>In January 2014, I ran the <em>Project Software Engineering</em> course together with Hans Dekkers and Alan Berg, participating in the course design, giving lectures, assisting lab work and auditing some of the teams.</li>
+			<li>In November–December 2013, I assisted Jurgen Vinju at the Software Evolution course and in February–March 2014 assisted Tijs van der Storm at the Software Construction course.</li>
+			<li>In January 2014, I ran the Project Software Engineering course together with Hans Dekkers and Alan Berg, participating in the course design, giving lectures, assisting lab work and auditing some of the teams.</li>
 			<li>Starting from March 2014, I began supervising final student projects.</li>
-			<li>In April–June 2014 I have completed the BKO (“Basic Educational Qualifications”) training programme given at the UvA by AcademicFactory. Got the actual certificate in October 2014.</li>
+			<li>In April–June 2014 I have successfully completed the BKO (“Basic Educational Qualifications”) training programme given at the UvA by AcademicFactory. Got the actual certificate in October 2014.</li>
 			<li>Some time in begin 2014 I have also started testing student candidates for their premaster courses.</li>
 			<li>Since May 2014 I was also running some of the intake procedures, involving interviews with students and admitting them (often conditionally, by assigning them premaster courses).</li>
+			<li>In November 2014 I have organised the <a href="http://thesisfair.software-engineering-amsterdam.nl">Thesis Fair</a>, an event bridging companies with their possible MSc interns.</li>
 		</ul>
-		<h2>Publications / presentations on educational topics</h2>
+		<h2 onmouseover="onn(0)" onmouseout="off(0)">Publications / presentations on educational topics <span class="help">(by presentation date)</span></h2>
 		<ul>
-			<li>Çiğdem Aytekin, Magiel Bruntink, Ammar Hamid, Tijs van der Storm, Vadim Zaytsev, <em><a href="http://grammarware.net/talks/#SEN-SATToSE2014">Software Engineering Master Students Replicate (Your) Research</a></em>, SEN Symposium, 2014. Poster.</li>
-			<li>Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#Admission2014">Model-based Student Admission</a></em>, EduSymp, 2014. Position paper.</li>
-			<li>Anya Helene Bagge, Ralf Lämmel, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#SLE-Courses2014">Reflections on Courses for Software Language Engineering</a></em>, EduSymp, 2014.</li>
-			<li>Dick van Albada, Roy Bakker, Inge Bethke, Robert Belleman, Daan van den Berg, Magiel Bruntink, Hans L. Dekkers, Roeland Douma, Toto van Inge, José Lagerberg, Andy Pimentel, Simon Polstra, Raphael Poss, Ana-Lucia Varbanescu, Arnoud Visser, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#Project-Based2014">Whitepaper: Project-based Curricula</a></em>, UvA FNWI IvI External Report, 2014.</li>
-			<li>Jan van Eijck, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#Flipped2014">Flipped Graduate Classroom in a Haskell-based Software Testing Course</a></em>, TFPIE, 2014. Presentation abstract.</li>
-			<li>Vadim Zaytsev, <em><a href="http://grammarware.net/talks/index.html#DayOfTheMaster2014">The Day of the Master</a></em>, Joy of Coding, 2014. Coding dojo.</li>
-			<li>Vadim Zaytsev, <em><a href="http://grammarware.net/talks/index.html#EFD2014">Flipped Education</a></em>, EFD, 2014. Invited presentation.</li>
+			<li>Vadim Zaytsev, <a href="http://grammarware.net/talks/index.html#EFD2014">Flipped Education</a>, EFD, 2014. Invited presentation.</li>
+			<li>Vadim Zaytsev, <a href="http://grammarware.net/talks/index.html#DayOfTheMaster2014">The Day of the Master</a>, Joy of Coding, 2014. Coding dojo.</li>
+			<li>Jan van Eijck, Vadim Zaytsev, <a href="http://grammarware.net/writes/index.html#Flipped2014">Flipped Graduate Classroom in a Haskell-based Software Testing Course</a>, TFPIE, 2014. Presentation abstract.</li>
+			<li>Dick van Albada, Roy Bakker, Inge Bethke, Robert Belleman, Daan van den Berg, Magiel Bruntink, Hans L. Dekkers, Roeland Douma, Toto van Inge, José Lagerberg, Andy Pimentel, Simon Polstra, Raphael Poss, Ana-Lucia Varbanescu, Arnoud Visser, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Project-Based2014">Whitepaper: Project-based Curricula</a>, UvA FNWI IvI External Report, 2014.</li>
+			<li>Anya Helene Bagge, Ralf Lämmel, Vadim Zaytsev, <a href="http://grammarware.net/writes/index.html#SLE-Courses2014">Reflections on Courses for Software Language Engineering</a>, EduSymp, 2014.</li>
+			<li>Vadim Zaytsev, <a href="http://grammarware.net/writes/index.html#Admission2014">Model-based Student Admission</a>, EduSymp, 2014. Position paper.</li>
+			<li>Çiğdem Aytekin, Magiel Bruntink, Ammar Hamid, Tijs van der Storm, Vadim Zaytsev, <a href="http://grammarware.net/talks/#SEN-SATToSE2014">Software Engineering Master Students Replicate (Your) Research</a>, SEN Symposium, 2014. Poster.</li>
 		</ul>
-		<h2>Publications based on student work</h2>
+		<h2 onmouseover="onn(1)" onmouseout="off(1)">Publications based on student work <span class="help">(by acceptance date)</span></h2>
 		<ul>
-			<li>Ammar Hamid, <em>Detecting Refactorable Clones Using PDG and Program Slicing</em>, SATToSE, 2014. Preproceedings submission.</li>
-			<li>Vadim Zaytsev, Ammar Hamid, <em><a href="http://grammarware.net/writes/#Refactorable2014">Detecting Refactorable Clones by Slicing Program Dependence Graphs</a></em>, SATToSE, 2014. Postproceedings paper (under review).</li>
-			<li>Ovidiu Roșu, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#Inference2015">Replicating Methods of Grammatical Inference</a></em>, SANER ERA, 2015 (under review)</li>
-			<li>Eenass Butrus, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#Mutations2015">Grammar-based Testing Made Easy with Grammar Mutations</a></em>, SANER ERA, 2015 (under review)</li>
+			<li>Ammar Hamid, <a href="http://grammarware.github.io/sattose/SATToSE2014.pdf">Detecting Refactorable Clones Using PDG and Program Slicing</a>, SATToSE, 2014. Preproceedings submission.</li>
+			<li class="wip">Vadim Zaytsev, Ammar Hamid, <a href="http://grammarware.net/writes/#Refactorable2014">Detecting Refactorable Clones by Slicing Program Dependence Graphs</a>, SATToSE, 2014. Postproceedings paper.</li>
+			<li class="wip">Ovidiu Roșu, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Inference2015">Replicating Methods of Grammatical Inference</a>, SANER ERA, 2015.</li>
+			<li class="wip">Eenass Butrus, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Mutations2015">Grammar-based Testing Made Easy with Grammar Mutations</a>, SANER ERA, 2015.</li>
 		</ul>
-		<h2>Supervised students (earliest first)</h2>
-		<ul>
-			<li>Ovidiu Roșu. <em><a href="http://grammarware.net/edits/index.html#Rosu2014">Grammatical Inference from Source Code Written in an Unknown Programming Language</a></em>. April–June 2014.</li>
-			<li>Christian Patrik König. <em><a href="http://grammarware.net/edits/index.html#Koenig2014">Static Code Analysis for PHP</a></em>. March–August 2014. Hosted by <a href="https://guidion.nl/">Guidion</a>.</li>
-			<li>Eenass Butrus. <em><a href="http://grammarware.net/edits/index.html#Butrus2014">Satisfying Coverage Criteria by Grammar Mutations and Purdom’s Sentence Generator</a></em>. April–August 2014.</li>
-			<li>Varvara Tzika. <em><a href="http://grammarware.net/edits/index.html#Tzika2014">Ranking Classifieds at Marktplaats.nl: Query Modeling, Retrieval Methods, Data Fusion and Result Diversification</a></em>. June–August 2014. Hosted by <a href="http://www.marktplaats.nl/">Marktplaats</a>. Co-supervised with Manos Tsagkias and Ton Wessling.</li>
-			<li>Xander Horjus. <em><a href="http://grammarware.net/edits/index.html#Horjus2014">UvApp: Challenges in Mobile Software Engineering Examined</a></em>. April–August 2014. Hosted by <a href="http://www.uva.nl/over-de-uva/organisatie/organisatiegids/content/gemeenschappelijke-dienstverlenende-eenheden/ict-services-icts/ict-services-icts.html">UvA ICTS</a>. Co-supervised with Tom Kuipers and Alan Berg.</li>
-			<li>Ammar Hamid. <em><a href="http://grammarware.net/edits/index.html#Hamid2014">Detecting Refactorable Clones Using PDG and Program Slicing</a></em>. April–August 2014.</li>
-			<li>Lulu Zhang. <em><a href="http://grammarware.net/edits/index.html#Zhang2014">Implementing a PDG Library in Rascal</a></em>. April–September 2014.</li>
-			<li>George Pachitariu. <em><a href="http://grammarware.net/edits/index.html#Pachitariu2014">Data Replication Algorithms in Distributed Databases</a></em>. April–October 2014.</li>
-		</ul>
-		<h2>Current students</h2>
+		<h2 onmouseover="onn(2)" onmouseout="off(2)">Supervised students <span class="help">(by defence date)</span></h2>
+		<ol>
+			<li>Ovidiu Roșu. <a href="http://grammarware.net/edits/index.html#Rosu2014">Grammatical Inference from Source Code Written in an Unknown Programming Language</a>. April–June 2014. <a class="red" href="https://bitbucket.org/orosu/thesis-cpp">(C++ code)</a> <a class="red" href="https://bitbucket.org/orosu/thesis-rascal">(Rascal code)</a></li>
+			<li>Christian Patrik König. <a href="http://grammarware.net/edits/index.html#Koenig2014">Static Code Analysis for PHP</a>. March–August 2014. Hosted by <a href="https://guidion.nl/">Guidion</a>.</li>
+			<li>Eenass Butrus. <a href="http://grammarware.net/edits/index.html#Butrus2014">Satisfying Coverage Criteria by Grammar Mutations and Purdom’s Sentence Generator</a>. April–August 2014. <a class="red" href="https://github.com/Eenass/Sentences-Generation">(Java code)</a></li>
+			<li>Varvara Tzika. <a href="http://grammarware.net/edits/index.html#Tzika2014">Ranking Classifieds at Marktplaats.nl: Query Modeling, Retrieval Methods, Data Fusion and Result Diversification</a>. June–August 2014. Hosted by <a href="http://www.marktplaats.nl/">Marktplaats</a>. Co-supervised with Manos Tsagkias and Ton Wessling.</li>
+			<li>Xander Horjus. <a href="http://grammarware.net/edits/index.html#Horjus2014">UvApp: Challenges in Mobile Software Engineering Examined</a>. April–August 2014. Hosted by <a href="http://www.uva.nl/over-de-uva/organisatie/organisatiegids/content/gemeenschappelijke-dienstverlenende-eenheden/ict-services-icts/ict-services-icts.html">UvA ICTS</a>. Co-supervised with Tom Kuipers and Alan Berg.</li>
+			<li>Ammar Hamid. <a href="http://grammarware.net/edits/index.html#Hamid2014">Detecting Refactorable Clones Using PDG and Program Slicing</a>. April–August 2014. <a class="red" href="https://github.com/ammarhamid/clone-detection">(Scheme&amp;Ruby code)</a></li>
+			<li>Lulu Zhang. <a href="http://grammarware.net/edits/index.html#Zhang2014">Implementing a PDG Library in Rascal</a>. April–September 2014. <a class="red" href="https://github.com/lulu516/ProgramDependenceGraph">(Rascal code)</a> <a class="red" href="https://github.com/lulu516/JavaTest">(Java code)</a> <a class="now" href="https://github.com/grammarware/pdg">(WIP: Rascal code)</a></li>
+			<li>George Pachitariu. <a href="http://grammarware.net/edits/index.html#Pachitariu2014">Data Replication Algorithms in Distributed Databases</a>. April–October 2014. <a class="red" href="https://github.com/georgepachitariu/Megastore">(Java code)</a></li>
+		</ol>
+		<h2 onmouseover="onn(3)" onmouseout="off(3)">Current students <span class="help">(by start date)</span></h2>
 		<ul>
 			<li>Sven Rohde (webapp testing)</li>
 			<li>Sven-Erik Haitjema (sensor networks)</li>
 			<li>Sinan Ceylan (code quality)</li>
 			<li>Mohamed Alkaduhimi (webdev framework)</li>
 			<li>Carlos Cirello Filho (code transformation)</li>
-			<li>Kevin Adegeest</li>
+			<li>Kevin Adegeest (refactoring)</li>
 			<li>Juriaan Kennedy van Dam</li>
 			<li>Bas Meesters (model visualisation)</li>
+			<li>Leonard Punt (refactoring)</li>
 		</ul>
 		<div class="last">
 			<br/><hr/>

@@ -130,6 +130,14 @@
 			<text>in [conceptual] development</text>
 		</pic>
 		<pic>
+			<a>wiki</a>
+			<img>wiki.200.png</img>
+			<alt>Wikipedia logo</alt>
+			<title>Wikipedia is a free multilingual encyclopedia that anyone can edit</title>
+			<name>Wikipedia</name>
+			<text>occasionally contributing to the sum of all knowledge</text>
+		</pic>
+		<pic>
 			<a>http://twitter.com/grammarware</a>
 			<img>twitter.200.png</img>
 			<alt>@grammarware</alt>

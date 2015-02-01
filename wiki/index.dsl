@@ -177,7 +177,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%B0%D1%8F_%D0%BC%D0%B0%D1%81%D1%81%D0%B0</a>
 			<img>solar.jpg</img>
 			<name>Solar Mass</name>
-			<text>astronomical unit of mass concerning weight of stars</text>
+			<text>astronomical unit of mass for expressing weight of stars</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D0%B2%D0%B8%D0%BB%D0%B8%D1%84%D0%B5%D1%80</a>
@@ -189,7 +189,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B4%D1%85%D0%BE%D1%80%D1%83%D0%BD%D0%B6%D0%B8%D0%B9</a>
 			<img>podchorazy.jpg</img>
 			<name>Podchorąży</name>
-			<text>Cossacks and Eastern European military rank</text>
+			<text>Cossack and Eastern European military rank</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A8%D0%B0%D1%83%D1%82%D0%B1%D0%B5%D0%BD%D0%B0%D1%85%D1%82</a>
@@ -212,7 +212,7 @@
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%B2%D0%BE_%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_%D0%98%D0%B3%D0%BE%D1%80%D0%B5%D0%B2%D0%B5</a>
 			<img>slovo.jpg</img>
-			<name>Tale of Igor’s Campaign</name>
+			<name>The Tale of Igor’s Campaign</name>
 			<text>epic poem in ancient Russian (Old East Slavic)</text>
 		</pic>
 		<pic>

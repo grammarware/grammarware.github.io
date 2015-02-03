@@ -38,7 +38,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				pic['text'] = '<span class="p">%s</span>' % pic['text']
 			else:
 				pic['text'] = ''
-			pic['name'] = pic['name'].replace('\\n','<br/>')
+			for key in pic:
+				pic[key] = pic[key].replace('\\n','<br/>')
 			g.write('\t\t<div><a href="%s"><span class="%s"><img src="%s%s" alt="%s" title="%s"/><br/>%s%s</span></a></div>\n'
 			 % (pic['a'],c,picdir,pic['img'],pic['alt'],pic['title'],pic['name'],pic['text']))
 		elif lines[i].find('#LASTMOD#')>-1:

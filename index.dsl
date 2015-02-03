@@ -71,7 +71,7 @@
 			<img>grammarlab-icon.200.png</img>
 			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
 			<name>GrammarLab</name>
-			<text>a grammar manipulation library for Rascal (2013–…)</text>
+			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
 		</pic>
 		<pic>
 			<a>master</a>
@@ -81,12 +81,19 @@
 			<text>a one-year university graduate programme</text>
 		</pic>
 		<pic>
+			<a>gttse</a>
+			<img>gttse.200.png</img>
+			<title>Summer School on Grand Timely Topics in Software Engineering</title>
+			<name>GTTSE</name>
+			<text>a summer school on grammar tackling trends\n(2005–…)</text>
+		</pic>
+		<pic>
 			<a>sattose</a>
 			<img>sotesola.200.png</img>
 			<alt>SATToSE</alt>
 			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
 			<name>SATToSE\nSoTeSoLa</name>
-			<text>a regular event for collaborating on software evolution</text>
+			<text>a regular event for collaborating on software evolution\n(2008–…)</text>
 		</pic>
 		<!-- <div><a href="https://github.com/grammarware/incertus"><span class="pic">
 			<span class="alert">WIP<br/></span>
@@ -114,6 +121,14 @@
 			<text>info about international conferences in Russian</text>
 		</pic>
 		<pic>
+			<a>wiki</a>
+			<img>wiki.200.png</img>
+			<alt>Wikipedia logo</alt>
+			<title>Wikipedia is a free multilingual encyclopedia that anyone can edit</title>
+			<name>Wikipedia</name>
+			<text>occasionally contributing to the sum of all knowledge</text>
+		</pic>
+		<pic>
 			<a>http://grammarware.net/opens/</a>
 			<img>ons.200.png</img>
 			<alt>Open Notebook Science</alt>
@@ -128,14 +143,6 @@
 			<title>Collecting various terms used by software language engineers across natural languages</title>
 			<name>Software Language Engineering Glossary</name>
 			<text>in [conceptual] development</text>
-		</pic>
-		<pic>
-			<a>wiki</a>
-			<img>wiki.200.png</img>
-			<alt>Wikipedia logo</alt>
-			<title>Wikipedia is a free multilingual encyclopedia that anyone can edit</title>
-			<name>Wikipedia</name>
-			<text>occasionally contributing to the sum of all knowledge</text>
 		</pic>
 		<pic>
 			<a>http://twitter.com/grammarware</a>
@@ -160,13 +167,6 @@
 			<title>Scientific colloquium: ongoing seminar series dating back from at least 1997</title>
 			<name>PEM</name>
 			<text>a colloquium I used to organise (2012–2013)</text>
-		</pic>
-		<pic dim>
-			<a>gttse</a>
-			<img>gttse.200.png</img>
-			<title>Summer School on Generative and Transformational Techniques in Software Engineering</title>
-			<name>GTTSE</name>
-			<text>a summer school on hiatus (2005–2011)</text>
 		</pic>
 		<div class="last">
 			<br/><hr/>

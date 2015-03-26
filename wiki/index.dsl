@@ -29,6 +29,8 @@
 	</head>
 	<body>
 		<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>
+		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
+		<hr/>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%82%D0%B0%D0%BD%D0%B8,_%D0%9F%D0%B0%D1%83%D0%BB</a>
 			<img>vitanyi.jpg</img>
@@ -213,7 +215,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%B2%D0%BE_%D0%BE_%D0%BF%D0%BE%D0%BB%D0%BA%D1%83_%D0%98%D0%B3%D0%BE%D1%80%D0%B5%D0%B2%D0%B5</a>
 			<img>slovo.jpg</img>
 			<name>The Tale of Igor’s Campaign</name>
-			<text>epic poem in ancient Russian (Old East Slavic)</text>
+			<text>epic poem in ancient Russian (Old Slavic)</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D0%BD%D1%8B%D0%B5</a>
@@ -231,7 +233,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B5%D1%82%D1%8B_%D0%B5%D0%B2%D1%80%D0%BE_%D0%9D%D0%B8%D0%B4%D0%B5%D1%80%D0%BB%D0%B0%D0%BD%D0%B4%D0%BE%D0%B2</a>
 			<img>euros.png</img>
 			<name>Dutch Euro Coins</name>
-			<text>all pictures were removed due to Dutch laws</text>
+			<text>all pictures were removed due to a change in Dutch laws</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%83%D1%80%D0%B0_%D0%BF%D0%BB%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F</a>
@@ -267,7 +269,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B3%D1%83%D1%87%D0%B0%D1%8F_%D0%BA%D1%83%D1%87%D0%BA%D0%B0</a>
 			<img>mighty.jpg</img>
 			<name>The Mighty Handful</name>
-			<text>five composers: Balakirev, Mussorgsky, Borodin, Rimsky-Korsakov, Cui</text>
+			<text>five composers: Balakirev, Mussorgsky, Borodin, Cui, Rimsky-Korsakov</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B0%D1%82</a>
@@ -289,7 +291,7 @@
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D1%82%D0%B8%D0%BF%D0%B0</a>
-			<img>types.png</img>
+			<img>typeconv.png</img>
 			<name>Type Conversion</name>
 			<text>mutating a value from one type to another</text>
 		</pic>
@@ -301,31 +303,31 @@
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BB%D0%BE%D0%B5_(%D1%82%D0%B8%D0%BF_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)</a>
-			<img>types.png</img>
+			<img>integer.png</img>
 			<name>Integer</name>
 			<text>the simplest data type in software</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%82%D0%B8%D0%BF%D0%BE%D0%B2</a>
-			<img>types.png</img>
+			<img>typesys.png</img>
 			<name>Type System</name>
 			<text>set of rules that assign language entities with a type</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)</a>
-			<img>types.png</img>
+			<img>variable.png</img>
 			<name>Variable</name>
 			<text>named memory fragment</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F</a>
-			<img>types.png</img>
+			<img>python.png</img>
 			<name>Dynamic Typing</name>
 			<text>convention of assigning a type during value assignment</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D1%82%D0%B8%D0%BF%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F</a>
-			<img>types.png</img>
+			<img>ada.gif</img>
 			<name>Static Typing</name>
 			<text>convention of assigning a type during variable declaration</text>
 		</pic>

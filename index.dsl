@@ -45,13 +45,6 @@
 			<text>CV, bio, lists of talks, papers, venues, contact details</text>
 		</pic>
 		<pic>
-			<a>http://oopsle.github.io</a>
-			<img>oopsle.200.png</img>
-			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
-			<name>OOPSLE</name>
-			<text>a workshop about open and original problems in SLE (2013–…)</text>
-		</pic>
-		<pic>
 			<a>http://slebok.github.io/zoo/</a>
 			<img>zoo.200.png</img>
 			<alt>SLPS Grammar Zoo</alt>
@@ -72,6 +65,20 @@
 			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
 			<name>GrammarLab</name>
 			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
+		</pic>
+		<pic>
+			<a>http://oopsle.github.io</a>
+			<img>oopsle.200.png</img>
+			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
+			<name>OOPSLE</name>
+			<text>a workshop about open and original problems in SLE (2013–…)</text>
+		</pic>
+		<pic>
+			<a>http://mmmde.github.io</a>
+			<img>mmmde.200.png</img>
+			<title>Workshop on Mathematical Models for MDE</title>
+			<name>MMMDE</name>
+			<text>a workshop about mathematical methods in MDE (2015)</text>
 		</pic>
 		<pic>
 			<a>master</a>

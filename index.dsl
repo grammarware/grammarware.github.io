@@ -37,7 +37,7 @@
 			<title>Inspiring quote by Nikola Tesla, picture by Matthew Inman</title>
 		</pic>
 		<pic>
-			<a>http://grammarware.net</a>
+			<a>http://grammarware.net/</a>
 			<img>terminal.200.png</img>
 			<alt>Grammarware</alt>
 			<title>Biography, lists of publications and presentations, curriculum vitae, affiliations, event participation, etc</title>
@@ -67,14 +67,22 @@
 			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
 		</pic>
 		<pic>
-			<a>http://oopsle.github.io</a>
+			<a>http://bibtex.github.io/</a>
+			<img>bibsleigh.200.png</img>
+			<alt>BibSLEIGH</alt>
+			<title>BibSLEIGH: Bibliography of Software Language Engineering in Generated Hypertext</title>
+			<name>BibSLEIGH</name>
+			<text>interactive bibtex browser and formatter (2014–…)</text>
+		</pic>
+		<pic>
+			<a>http://oopsle.github.io/</a>
 			<img>oopsle.200.png</img>
 			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
 			<name>OOPSLE</name>
 			<text>a workshop about open and original problems in SLE (2013–…)</text>
 		</pic>
 		<pic>
-			<a>http://mmmde.github.io</a>
+			<a>http://mmmde.github.io/</a>
 			<img>mmmde.200.png</img>
 			<title>Workshop on Mathematical Models for MDE</title>
 			<name>MMMDE</name>
@@ -108,18 +116,13 @@
 			<span class="p">a framework for nondeterministic transformations</span>
 		</span></a></div> -->
 		<pic>
-			<a>http://slps.github.io</a>
+			<a>http://slps.github.io/</a>
 			<img>slps.200.png</img>
 			<alt>SLPS</alt>
 			<title>Experimental prototypes for novel computer science techniques for grammars in a broad sense</title>
 			<name>Software Language Processing Suite</name>
 			<text>my main repo in 2008–2012</text>
 		</pic>
-		<!-- 
-		<div class="pic">
-			<a href="http://bibtex.github.io/" title="Bibliography of Software Language Engineering in Generated Hypertext"><img src="logos/bibsleigh.200.png" alt="BibSLEIGH"><br/>BibSLEIGH</a>
-		</div>
-		 -->
 		 <pic>
 			<a>http://github.com/grammarware/ruconf/wiki</a>
 			<img>conf.200.png</img>

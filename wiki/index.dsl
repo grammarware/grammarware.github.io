@@ -32,6 +32,12 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%94%D0%B5_%D0%91%D1%83%D1%80,_%D0%A4%D1%80%D0%B0%D0%BD%D0%BA_%D0%A1%D0%B8%D0%BF%D0%BA%D0%B5</a>
+			<img>deboer.jpg</img>
+			<name>Frank de Boer</name>
+			<text>Dutch theoretical computer scientist and formal methods researcher</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%A5%D0%B0%D0%B9%D1%80%D0%B0%D0%BA%D1%81_%D0%A5%D0%B8%D0%BB%D0%BB</a>
 			<img>hyrax.jpg</img>
 			<name>Hyrax Hill</name>

@@ -45,6 +45,14 @@
 			<text>CV, bio, lists of talks, papers, venues, contact details</text>
 		</pic>
 		<pic>
+			<a>http://bibtex.github.io/</a>
+			<img>bibsleigh.200.png</img>
+			<alt>BibSLEIGH</alt>
+			<title>BibSLEIGH: Bibliography of Software Language Engineering in Generated Hypertext</title>
+			<name>BibSLEIGH</name>
+			<text>extensive interactive bibliography of papers at S(L)E venues (2014–…)</text>
+		</pic>
+		<pic>
 			<a>http://slebok.github.io/zoo/</a>
 			<img>zoo.200.png</img>
 			<alt>SLPS Grammar Zoo</alt>
@@ -65,14 +73,6 @@
 			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
 			<name>GrammarLab</name>
 			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
-		</pic>
-		<pic>
-			<a>http://bibtex.github.io/</a>
-			<img>bibsleigh.200.png</img>
-			<alt>BibSLEIGH</alt>
-			<title>BibSLEIGH: Bibliography of Software Language Engineering in Generated Hypertext</title>
-			<name>BibSLEIGH</name>
-			<text>interactive bibtex browser and formatter (2014–…)</text>
 		</pic>
 		<pic>
 			<a>http://oopsle.github.io/</a>
@@ -139,14 +139,6 @@
 			<text>occasionally contributing to the sum of all knowledge</text>
 		</pic>
 		<pic>
-			<a>http://grammarware.net/opens/</a>
-			<img>ons.200.png</img>
-			<alt>Open Notebook Science</alt>
-			<title>A repository of subatomic scientific knowledge objects, created by one researcher</title>
-			<name>Open Notebook</name>
-			<text>nobody else is crazy enough to do open notebook computer science</text>
-		</pic>
-		<pic>
 			<a>http://slebok.github.io/sleg/</a>
 			<img>sleg.200.png</img>
 			<alt>Software Language Engineering Glossary</alt>
@@ -169,6 +161,14 @@
 			<title>Rascal is a metaprogramming language and a software language workbench</title>
 			<name>Rascal</name>
 			<text>a language for metaprogramming I contributed to (2010–2013)</text>
+		</pic>
+		<pic dim>
+			<a>http://grammarware.net/opens/</a>
+			<img>ons.200.png</img>
+			<alt>Open Notebook Science</alt>
+			<title>A repository of subatomic scientific knowledge objects, created by one researcher</title>
+			<name>Open Notebook</name>
+			<text>nobody else is crazy enough to do open notebook computer science</text>
 		</pic>
 		<pic dim>
 			<a>pem</a>

@@ -154,6 +154,14 @@
 			<name>Twitter</name>
 			<text>mostly for keeping in touch with the research community (2007–…)</text>
 		</pic>
+		<pic>
+			<a>a-z</a>
+			<img>A.png</img>
+			<alt>SE Alphabet</alt>
+			<title>Letters from A to Z linked to similarly named notions</title>
+			<name>SE Alphabet</name>
+			<text>software language engineering from A to Z; useless fun (2015)</text>
+		</pic>
 		<pic dim>
 			<a>http://www.rascal-mpl.org/</a>
 			<img>rascal.200.png</img>

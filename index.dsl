@@ -89,13 +89,6 @@
 			<text>a workshop about mathematical methods in MDE (2015)</text>
 		</pic>
 		<pic>
-			<a>master</a>
-			<img>master-software-engineering.200.png</img>
-			<title>Universiteit van Amsterdam’s Master of Science programme in Software Engineering</title>
-			<name>UvA MSc SE</name>
-			<text>a one-year university graduate programme</text>
-		</pic>
-		<pic>
 			<a>gttse</a>
 			<img>gttse.200.png</img>
 			<title>Summer School on Grand Timely Topics in Software Engineering</title>
@@ -161,6 +154,13 @@
 			<title>Letters from A to Z linked to similarly named notions</title>
 			<name>SE Alphabet</name>
 			<text>software language engineering from A to Z; useless fun (2015)</text>
+		</pic>
+		<pic dim>
+			<a>master</a>
+			<img>master-software-engineering.200.png</img>
+			<title>Universiteit van Amsterdam’s Master of Science programme in Software Engineering</title>
+			<name>UvA MSc SE</name>
+			<text>a one-year university graduate programme</text>
 		</pic>
 		<pic dim>
 			<a>http://www.rascal-mpl.org/</a>

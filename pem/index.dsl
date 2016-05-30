@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="x-ua-compatible" content="IE=9">
-		<title>Dr. Vadim Zaytsev — PEM Colloquium</title>
-		<link href="../common.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript">
-
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-3743366-7']);
-		  _gaq.push(['_setDomainName', 'github.io']);
-		  _gaq.push(['_setAllowLinker', true]);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-		</script>
-	</head>
+<html doctype>
+	<head title="PEM Colloquium"/>
 	<body>
-<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>		<h1>
+		<header/>
+		<h1>
 			PEM/SEM Colloquium
 			<a href="http://event.cwi.nl/pem/">
 			<img src="../logos/pem.200.png" alt="PEM" title="PEM logo designed by Vadim Zaytsev"/></a>
@@ -58,7 +39,6 @@
 				<ul><li>Acknowledgement on the last page mentions PEM and T. B. Dinesh as the one introducing me to the notion of “renarration”</li></ul>
 			</li>
 		</ul>
-<div class="last"><br/><hr/>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>. Last updated: May 2016.<br/>
-			<a href="http://validator.w3.org/check/referer"><img src="../logos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../logos/css.88.png" alt="CSS 3" /></a></div>	</body>
+		<footer/>
+	</body>
 </html>

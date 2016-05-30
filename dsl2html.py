@@ -71,22 +71,15 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 ''' % (vp, title, rootpath, end))
 			i += 1
 		# useful macros
-		# TODO: clean up whitespace
 		if lines[i].strip() == '<header/>':
-			lines[i] = '\t\t<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>\n'
+			lines[i] = '<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>'
 		if lines[i].strip() == '<html doctype>':
-			lines[i] = '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html version="-//W3C//DTD XHTML 1.1//EN"
-      xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.w3.org/1999/xhtml
-                          http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
-'''
+			lines[i] = '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">'''
 		if lines[i].strip() == '<valid/>':
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
-			lines[i] = '''<br/>\t\t\t<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>\n''' % (rootpath,rootpath)
+			lines[i] = '''<br/><a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>''' % (rootpath,rootpath)
 		if lines[i].strip().startswith('<footer'):
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			content = ''
@@ -97,19 +90,14 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				while lines[i].strip() != '</footer>':
 					content += lines[i].strip() + ' '
 					i += 1
-			lines[i] = '''<div class="last">
-			<br/><hr/>
-			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
-			%s
-			Last updated: #LASTMOD#.<br/>
+			lines[i] = '''<div class="last"><br/><hr/>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>. %sLast updated: #LASTMOD#.<br/>
 			<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>
-		</div>\n''' % (content.strip(), rootpath, rootpath)
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a></div>''' % (content, rootpath, rootpath)
 		# jQuery use
 		if lines[i].strip().startswith('<h2 help'):
 			helptext = lines[i].split('"')[1]
 			gist = lines[i].split('>')[1].split('<')[0]
-			lines[i] = '\t\t<h2 onmouseover="onn(%s)" onmouseout="off(%s)">%s <span class="help">(%s)</span></h2>\n' % (HX, HX, gist, helptext)
+			lines[i] = '<h2 onmouseover="onn(%s)" onmouseout="off(%s)">%s <span class="help">(%s)</span></h2>' % (HX, HX, gist, helptext)
 			HX += 1
 		# Ordered lists
 		if lines[i].strip() == '<ol>':
@@ -121,7 +109,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				j += 1
 				if lines[j].find('<li>') > -1:
 					lis += 1
-			lines[i] = '\t\t<ol class="back" style="counter-reset: item %s">\n' % lis
+			lines[i] = '<ol class="back" style="counter-reset: item %s">' % lis
 		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

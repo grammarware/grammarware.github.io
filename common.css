@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
-body {color:#552200; background-color:#ffdec9; font-family:"Futura", "Montserrat", sans-serif}
+/*@import url(http://fonts.googleapis.com/css?family=Montserrat);*/
+body {color:#552200; background-color:#ffdec9; font-family:"Futura", "Gill Sans MT", "Trebuchet MS", sans-serif}
 .dim {opacity:0.3}
 .pic .alert {color:#C00}
 .pic .p {color:#552200; padding-top:5px}
@@ -24,8 +24,9 @@ code {font-family:"Courier Prime", Courier, monospace}
 .help {color:#ffdec9; font-size:smaller; font-style:italic}
 .title {font-size:larger;}
 .title>ul{font-size:smaller;}
-ol {counter-reset: item}
+ol.fwd {counter-reset: item}
 ol li {display:block; text-indent:-2em}
 ol li:before {content: "[" counter(item) "] "; counter-increment:item; font-weight: bold; padding: .5em}
+ol.back li:before {content: "[" counter(item) "] "; counter-increment:item -1; font-weight: bold; padding: .5em}
 li a {font-style:italic}
 li.wip:after {content: " (under review)"; color:#ff6332}

@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
 # -*- coding: utf-8 -*-
 
 import glob, re, datetime
@@ -10,10 +10,10 @@ d = ('Zeroary', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 
 for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 	picdir = divclass = ''
 	print('Processing', dsl)
-	f = open(dsl, 'r')
+	f = open(dsl, 'r', encoding='utf-8')
 	lines = f.readlines()
 	f.close()
-	g = open(dsl.replace('.dsl', '.html'), 'w')
+	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
 	i = 0
 	while i < len(lines):
 		if lines[i].strip().startswith('<picdir'):
@@ -49,6 +49,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				div = '<div class="'+divclass+'">'
 			else:
 				div = '<div>'
+			if pic['a'].find('/') < 0:
+				pic['a'] += '/index.html'
 			g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
 				'<br/>{}{}</span></a></div>\n').format(\
 					div,\

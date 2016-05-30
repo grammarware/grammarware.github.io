@@ -161,13 +161,9 @@
 			<text>a colloquium I used to organise (2012–2013)</text>
 		</pic>
 
-		<div class="last">
-			<br/><hr/>
-			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+		<footer>
 			Dim tiles refer to past projects.
 			See <a href="copyright">copyright disclaimer</a>.
-			Last updated: #LASTMOD#.<br/>
-			<valid/>
-		</div>
+		</footer>
 	</body>
 </html>

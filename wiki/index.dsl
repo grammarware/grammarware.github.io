@@ -353,13 +353,9 @@
 			<name>Latin Honours</name>
 			<text>cum laude, magna cum laude, summa cum laude, etc</text>
 		</pic>
-		<div class="last">
-			<br/><hr/>
+		<footer>
 			<a href="https://en.wikipedia.org/wiki/Fair_use">Fair use</a> claimed for all images used on this page.<br/>
-			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
-			See <a href="copyright">copyright disclaimer</a>.
-			Last updated: #LASTMOD#.<br/>
-			<valid/>
-		</div>
+			See also <a href="copyright">copyright disclaimer</a>.
+		</footer>
 	</body>
 </html>

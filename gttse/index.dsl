@@ -36,11 +36,7 @@
 			<li>Ralf Lämmel, João Saraiva, Joost Visser (editors), <em><a href="http://dx.doi.org/10.1007/11877028">Generative and Transformational Techniques in Software Engineering</a></em>, LNCS 4143. 2006.</li>
 			<li>Vadim Zaytsev, <em><a href="http://grammarware.net/writes/index.html#Too-Sharp2005">Correct C♯ Grammar too Sharp for ISO</a></em>, GTTSE’05. 2005.</li>
 		</ul>
-		<div class="last">
-			<br/><hr/>
-			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
-			Last updated: #LASTMOD#.<br/>
-			<valid/>
-		</div>
+
+		<footer/>
 	</body>
 </html>

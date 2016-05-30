@@ -3,11 +3,13 @@
 
 import glob, re, datetime
 
+# Header Counter
 p = re.compile('<(?P<tag>\w+)>(?P<txt>[^\<]+)</(?P=tag)+>')
 d = ('Zeroary', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',\
 	'September', 'October', 'November', 'December')[datetime.date.today().month]+\
 	' '+str(datetime.date.today().year)
 for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
+	HX = 0
 	picdir = divclass = ''
 	print('Processing', dsl)
 	f = open(dsl, 'r', encoding='utf-8')
@@ -38,6 +40,13 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			else:
 				title = ' — ' + lines[i].split('"')[1]
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+			if lines[i].strip().find('jquery') < 0:
+				end = '</script>'
+			else:
+				end = '''function onn(n) {$('.help:eq('+n+')').css('background-color','#552200');}
+		function off(n) {$('.help:eq('+n+')').css('background-color','#ffdec9');}
+		</script>
+		<script src="../jquery.min.js" type="text/javascript"></script>'''
 			g.write('''	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="x-ua-compatible" content="IE=9">%s
@@ -57,9 +66,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
 
-		</script>
+		%s
 	</head>
-''' % (vp, title, rootpath))
+''' % (vp, title, rootpath, end))
 			i += 1
 		# useful macros
 		# TODO: clean up whitespace
@@ -76,8 +85,43 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 '''
 		if lines[i].strip() == '<valid/>':
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
-			lines[i] = '''\t\t\t<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
+			lines[i] = '''<br/>\t\t\t<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>\n''' % (rootpath,rootpath)
+		if lines[i].strip().startswith('<footer'):
+			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+			content = ''
+			if lines[i].strip() == '<footer/>':
+				content = ''
+			else:
+				i += 1
+				while lines[i].strip() != '</footer>':
+					content += lines[i].strip() + ' '
+					i += 1
+			lines[i] = '''<div class="last">
+			<br/><hr/>
+			The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>.
+			%s
+			Last updated: #LASTMOD#.<br/>
+			<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>
+		</div>\n''' % (content.strip(), rootpath, rootpath)
+		# jQuery use
+		if lines[i].strip().startswith('<h2 help'):
+			helptext = lines[i].split('"')[1]
+			gist = lines[i].split('>')[1].split('<')[0]
+			lines[i] = '\t\t<h2 onmouseover="onn(%s)" onmouseout="off(%s)">%s <span class="help">(%s)</span></h2>\n' % (HX, HX, gist, helptext)
+			HX += 1
+		# Ordered lists
+		if lines[i].strip() == '<ol>':
+			lines[i] = lines[i].replace('<ol>', '<ol class="fwd">')
+		elif lines[i].strip() == '<ol back>':
+			j = i
+			lis = 1
+			while lines[j].strip()!='</ol>':
+				j += 1
+				if lines[j].find('<li>') > -1:
+					lis += 1
+			lines[i] = '\t\t<ol class="back" style="counter-reset: item %s">\n' % lis
 		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

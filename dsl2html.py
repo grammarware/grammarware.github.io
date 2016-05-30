@@ -16,6 +16,69 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
 	i = 0
 	while i < len(lines):
+		# skip comments
+		if lines[i].strip().startswith('<!--'):
+			while not lines[i].strip().endswith('-->'):
+				i += 1
+			i += 1
+		# skip empty lines
+		if not lines[i].strip():
+			i += 1
+			# to be on the safe side of the boundary bug
+			continue
+		# unified head
+		if lines[i].strip().startswith('<head '):
+			if lines[i].strip().find('viewport') < 0:
+				vp = ''
+			else:
+				vp = '''
+		<meta name="viewport" content="initial-scale=1.0"/>'''
+			if lines[i].strip().find('title="') < 0:
+				title = ''
+			else:
+				title = ' — ' + lines[i].split('"')[1]
+			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+			g.write('''	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="x-ua-compatible" content="IE=9">%s
+		<title>Dr. Vadim Zaytsev%s</title>
+		<link href="%scommon.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-3743366-7']);
+		  _gaq.push(['_setDomainName', 'github.io']);
+		  _gaq.push(['_setAllowLinker', true]);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+''' % (vp, title, rootpath))
+			i += 1
+		# useful macros
+		# TODO: clean up whitespace
+		if lines[i].strip() == '<header/>':
+			lines[i] = '\t\t<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>\n'
+		if lines[i].strip() == '<html doctype>':
+			lines[i] = '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html version="-//W3C//DTD XHTML 1.1//EN"
+      xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.w3.org/1999/xhtml
+                          http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
+'''
+		if lines[i].strip() == '<valid/>':
+			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+			lines[i] = '''\t\t\t<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>\n''' % (rootpath,rootpath)
+		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'
 		elif lines[i].strip().startswith('<divclass'):

@@ -25,6 +25,18 @@
 			<li>In November 2014 and November 2015 I have organised <a href="http://informatics.amsterdam/">Thesis Fair</a>, events bridging industrial companies with their possible MSc interns.</li>
 			<li>Starting from February 2016, I am only involved in the programme as a remote supervisor.</li>
 		</ul>
+		<h2 help="by acceptance date">Publications based on student work</h2>
+		<ul>
+			<li>Ammar Hamid, <a href="http://grammarware.github.io/sattose/SATToSE2014.pdf">Detecting Refactorable Clones Using PDG and Program Slicing</a>, SATToSE, 2014. Preproceedings submission.</li>
+			<li>Ammar Hamid, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Refactorable2015">Detecting Refactorable Clones by Slicing Program Dependence Graphs</a>, SATToSE, 2014. CEUR, pp. 37–48.</li>
+			<li>Carlos U. Cirello F., <a href="http://sattose.wdfiles.com/local--files/2015%3Atalks/proceedings.pdf">Pretty Printers: Anatomy and Measured Effects on Productivity of Teams of Developers</a>, SATToSE, 2015, pp. 63–66.</li>
+			<li>Boryana Goncharenko, <a href="http://sattose.wdfiles.com/local--files/2015%3Atalks/proceedings.pdf">Detecting Violations of CSS Code Conventions</a>, SATToSE, 2015, pp. 89–91.</li>
+			<li>Jetse Koopmans, Daan van den Berg, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Scarlatti2015">Similarity, Data Compression and a Dead Composer</a>, SRC 2015.</li>
+			<li>Juriaan Kennedy van Dam, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Identification2016">Software Language Identification with Natural Language Classifiers</a>, SANER ERA 2016. IEEE, pp. 624–628.</li>
+			<li>Nico de Groot, <a href="http://sattose.org/2016">Analysing CSS using the M3 Model</a>, SATToSE, 2016.</li>
+			<li>Gorjan Jovanovski, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Critical2016">Critical CSS Rules — Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>, SATToSE, 2016.</li>
+			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA2016">The A?B*A Pattern: Undoing Style in CSS and Refactoring Opportunities it Presents</a>, ICSME, 2016. In print.</li>
+		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
 			<li>Vadim Zaytsev, <a href="http://grammarware.net/talks/index.html#EFD2014">Flipped Education</a>, EFD, 2014. Invited presentation.</li>
@@ -37,15 +49,6 @@
 			<li>Çiğdem Aytekin, Magiel Bruntink, Ammar Hamid, Tijs van der Storm, Vadim Zaytsev, <a href="http://grammarware.net/talks/#SEN-SATToSE2014">Software Engineering Master Students Replicate (Your) Research</a>, SEN Symposium, 2014. Poster.</li>
 			<li>Dave Stikkolorum, Birgit Demuth, Vadim Zaytsev, Frédéric Boulanger, Jeff Gray, <a href="http://grammarware.net/writes/index.html#MOOC2015">The MOOC Hype: Can We Ignore It? Reflections on the Current Use of Massive Open Online Courses in Software Modeling Education</a>. EduSymp 2014. Panel paper.</li>
 			<li>Vadim Zaytsev, <a href="http://grammarware.net/writes/index.html#Flipped2015">Flipped Top-Down is Systematic Bottom-Up</a>, EduSymp, 2015.</li>
-		</ul>
-		<h2 help="by acceptance date">Publications based on student work</h2>
-		<ul>
-			<li>Ammar Hamid, <a href="http://grammarware.github.io/sattose/SATToSE2014.pdf">Detecting Refactorable Clones Using PDG and Program Slicing</a>, SATToSE, 2014. Preproceedings submission.</li>
-			<li>Ammar Hamid, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Refactorable2015">Detecting Refactorable Clones by Slicing Program Dependence Graphs</a>, SATToSE, 2014. CEUR, pp. 37–48.</li>
-			<li>Carlos U. Cirello F., <a href="http://sattose.wdfiles.com/local--files/2015%3Atalks/proceedings.pdf">Pretty Printers: Anatomy and Measured Effects on Productivity of Teams of Developers</a>, SATToSE, 2015, pp. 63–66.</li>
-			<li>Boryana Goncharenko, <a href="http://sattose.wdfiles.com/local--files/2015%3Atalks/proceedings.pdf">Detecting Violations of CSS Code Conventions</a>, SATToSE, 2015, pp. 89–91.</li>
-			<li>Jetse Koopmans, Daan van den Berg, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Scarlatti2015">Similarity, Data Compression and a Dead Composer</a>, SRC 2015.</li>
-			<li>Juriaan Kennedy van Dam, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Identification2016">Software Language Identification with Natural Language Classifiers</a>, SANER ERA 2016. IEEE, pp. 624–628.</li>
 		</ul>
 		<h2 help="by defence date">Supervised students</h2>
 		<ol>
@@ -142,7 +145,6 @@
 			<li>Nico de Groot (CSS)</li>
 			<li class="dim">Merijn Wijngaard (PHP; with Mark Hills)</li>
 		</ul>
-
 		<footer/>
 	</body>
 </html>

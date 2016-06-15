@@ -34,7 +34,7 @@
 			<li>At SATToSE 2014, I was the Program Chair (<a href="2014.html">behold the programme</a>!) and the Post-proceedings Co-editor (<a href="http://dblp.uni-trier.de/db/conf/sattose/sattose2014.html">check out the post-proceedings</a>!)</li>
 			<li>At SATToSE 2015, I was on the Programme Committee, gave a regular talk and a technology showdown demo, as well as participated in the hackathon.</li>
 			<li>Since December 2012, I am a Steering Committee member of SATToSE.</li>
-            <li><a href="../master/">My students</a> have presented at SATToSE as well: <em>Ammar Hamid</em> (2014), <em>Carlos Cirello</em> (2015), <em>Boryana Goncharenko</em> (2015).</li>
+            <li><a href="../master/">My students</a> have presented at SATToSE as well: <em>Ammar Hamid</em> (2014), <em>Carlos Cirello</em> (2015), <em>Boryana Goncharenko</em> (2015), <em>Nico de Groot</em> (2016), <em>Gorjan Jovanovski</em> (2016).</li>
 		</ul>
 		<h2>Publications / presentations</h2>
 		<ul>

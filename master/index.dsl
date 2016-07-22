@@ -24,6 +24,7 @@
 			<li>Since May 2014 I was also running some of the intake procedures, involving interviews with students and admitting them (often conditionally, by assigning them premaster courses).</li>
 			<li>In November 2014 and November 2015 I have organised <a href="http://informatics.amsterdam/">Thesis Fair</a>, events bridging industrial companies with their possible MSc interns.</li>
 			<li>Starting from February 2016, I am only involved in the programme as a remote supervisor.</li>
+			<li>In August 2016, I was asked to run a summer school in Compiler Construction for premaster students.</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
@@ -33,7 +34,7 @@
 			<li>Boryana Goncharenko, <a href="http://sattose.wdfiles.com/local--files/2015%3Atalks/proceedings.pdf">Detecting Violations of CSS Code Conventions</a>, SATToSE, 2015, pp. 89–91.</li>
 			<li>Jetse Koopmans, Daan van den Berg, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Scarlatti2015">Similarity, Data Compression and a Dead Composer</a>, SRC 2015.</li>
 			<li>Juriaan Kennedy van Dam, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Identification2016">Software Language Identification with Natural Language Classifiers</a>, SANER ERA 2016. IEEE, pp. 624–628.</li>
-			<li>Nico de Groot, <a href="http://sattose.org/2016">Analysing CSS using the M3 Model</a>, SATToSE, 2016.</li>
+			<li>Nico de Groot, <a href="http://sattose.org/2016:alltalks#paper10">Analysing CSS using the M3 Model</a>, SATToSE, 2016.</li>
 			<li>Gorjan Jovanovski, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Critical2016">Critical CSS Rules — Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>, SATToSE, 2016.</li>
 			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA2016">The A?B*A Pattern: Undoing Style in CSS and Refactoring Opportunities it Presents</a>, ICSME, 2016. In print.</li>
 		</ul>
@@ -75,6 +76,8 @@
 			<li>Juriaan Kennedy van Dam. <a href="http://grammarware.net/edits/index.html#Kennedy2016">Identifying Source Code Programming Languages through Natural Language Processing</a>. May 2015–January 2016.</li>
 			<li>Timon Dominique Langlotz. <a href="http://grammarware.net/edits/index.html#Langlotz2016">Event Detection Using Machine Learning Classifiers in the Context of Real-World Objects</a>. April 2015–January 2016. Hosted by <a href="https://www.peerby.com/">Peerby</a>. Co-supervised with Eelke Boezeman.</li>
 			<li>Mark Suurland. <a href="http://grammarware.net/edits/index.html#Suurland2016">Replication: Necessary and Neglected? An Empirical Study of Internal Documentation in Agile Software Development Teams</a>. April 2015–March 2016. Hosted by <a href="https://www.rabobank.nl/">Rabobank</a>. Co-supervised with Wil Leeuwis and Onno Verdonk.</li>
+			<li>Nico de Groot. <a href="http://grammarware.net/edits/index.html#Groot2016">Analysing and Manipulating CSS using the M³ Model</a>. April–July 2016. <a class="red" href="https://github.com/Nicasso/rascal/tree/master/src/org/rascalmpl/library/lang/css/m3">(Rascal code)</a> <a class="red" href="https://github.com/Nicasso/jStyleParser">(Java code)</a> <a class="red" href="https://github.com/Nicasso/css-m3-thesis-2016">(data)</a></li>
+			<li>Gorjan Jovanovski. <a href="http://grammarware.net/edits/index.html#Jovanovski2016">Critical CSS Rules: Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>. April–July 2016. Hosted by <a href="http://thenextweb.com/">The Next Web</a>. <a class="red" href="http://gorjan.rocks/research/thesis/">(node.js code)</a> <a class="red" href="http://gorjan.rocks/research/thesis/ThesisCSSResultAcrhive.zip">(data)</a> </li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -139,10 +142,8 @@
 			<li class="dim">Sven-Erik Haitjema (sensor networks; with Ben Kröse)</li>
 			<li>Carlos Cirello Filho (unparsing and versioning)</li>
 			<li>Stevan Pavlicic (traversals)</li>
-			<li>Gorjan Jovanovski (CSS metrics)</li>
 			<li>Yoan-Alexander Grigorov</li>
 			<li>Ton Heijligers (TensorFlow)</li>
-			<li>Nico de Groot (CSS)</li>
 			<li class="dim">Merijn Wijngaard (PHP; with Mark Hills)</li>
 		</ul>
 		<footer/>

@@ -79,7 +79,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 		if lines[i].strip() == '<valid/>':
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			lines[i] = '''<br/><a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>''' % (rootpath,rootpath)
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>''' % (rootpath, rootpath)
 		if lines[i].strip().startswith('<footer'):
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			content = ''

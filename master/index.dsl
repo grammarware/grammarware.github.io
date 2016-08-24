@@ -37,6 +37,7 @@
 			<li>Nico de Groot, <a href="http://sattose.org/2016:alltalks#paper10">Analysing CSS using the M3 Model</a>, SATToSE, 2016.</li>
 			<li>Gorjan Jovanovski, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Critical2016">Critical CSS Rules — Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>, SATToSE, 2016.</li>
 			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA2016">The A?B*A Pattern: Undoing Style in CSS and Refactoring Opportunities it Presents</a>, ICSME, 2016. In print.</li>
+			<li>Boryana Goncharenko, Vadim Zaytsev, <a href="http://grammarware.net/writes/#CoCo2016">Language Design and Implementation for the Domain of Coding Conventions</a>, SLE, 2016. In print.</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
@@ -78,6 +79,8 @@
 			<li>Mark Suurland. <a href="http://grammarware.net/edits/index.html#Suurland2016">Replication: Necessary and Neglected? An Empirical Study of Internal Documentation in Agile Software Development Teams</a>. April 2015–March 2016. Hosted by <a href="https://www.rabobank.nl/">Rabobank</a>. Co-supervised with Wil Leeuwis and Onno Verdonk.</li>
 			<li>Nico de Groot. <a href="http://grammarware.net/edits/index.html#Groot2016">Analysing and Manipulating CSS using the M³ Model</a>. April–July 2016. <a class="red" href="https://github.com/Nicasso/rascal/tree/master/src/org/rascalmpl/library/lang/css/m3">(Rascal code)</a> <a class="red" href="https://github.com/Nicasso/jStyleParser">(Java code)</a> <a class="red" href="https://github.com/Nicasso/css-m3-thesis-2016">(data)</a></li>
 			<li>Gorjan Jovanovski. <a href="http://grammarware.net/edits/index.html#Jovanovski2016">Critical CSS Rules: Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>. April–July 2016. Hosted by <a href="http://thenextweb.com/">The Next Web</a>. <a class="red" href="http://gorjan.rocks/research/thesis/">(node.js code)</a> <a class="red" href="http://gorjan.rocks/research/thesis/ThesisCSSResultAcrhive.zip">(data)</a> </li>
+			<li>Merijn Wijngaard. <a href="#Wijngaard2016">Dependence Analysis in PHP</a>. April-August 2016. Hosted by <a href="http://www.moxio.com">Moxio</a>. Co-supervised with Mark Hills and A. Boks.</li>
+			<li>Sven-Erik Haitjema. <a href="#Haitjema2016">Wireless Sensor Networks</a>. January 2014-August 2016. Hosted by <a href="http://www.digitallifecentre.nl/">Digital Life Centre</a>. Co-supervised with Ben Kröse.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -139,12 +142,10 @@
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
-			<li class="dim">Sven-Erik Haitjema (sensor networks; with Ben Kröse)</li>
 			<li>Carlos Cirello Filho (unparsing and versioning)</li>
 			<li>Stevan Pavlicic (traversals)</li>
 			<li>Yoan-Alexander Grigorov</li>
 			<li>Ton Heijligers (TensorFlow)</li>
-			<li class="dim">Merijn Wijngaard (PHP; with Mark Hills)</li>
 		</ul>
 		<footer/>
 	</body>

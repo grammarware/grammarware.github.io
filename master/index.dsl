@@ -146,6 +146,7 @@
 			<li>Stevan Pavlicic (traversals)</li>
 			<li>Yoan-Alexander Grigorov</li>
 			<li>Ton Heijligers (TensorFlow)</li>
+			<li>Alberto Martinez de Murga Ramirez (codebase analysis)</li>
 		</ul>
 		<footer/>
 	</body>

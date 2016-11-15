@@ -51,6 +51,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			elif lines[i].strip().startswith('<sleigh>'):
 				paperBib = 'http://bibtex.github.io/'+lines[i].strip()[8:-9]+'.html'
 				lines[i] = ''
+			elif lines[i].strip().startswith('<arxiv>'):
+				paperOpen = 'http://arxiv.org/abs/'+lines[i].strip()[7:-8]
+				lines[i] = ''
 			elif lines[i].strip() != '</paper>' and lines[i].strip() != '<paper>':
 				paperText.append(lines[i].strip())
 				lines[i] = ''
@@ -141,6 +144,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 		if lines[i].strip() == '<paper>':
 			paper = True
 			paperText = []
+			paperA = paperFull = paperT = paperV = paperBib = paperText = paperOpen = ''
 			lines[i] = ''
 		elif lines[i].strip() == '</paper>':
 			paper = False
@@ -148,7 +152,14 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				paperText = '<p>' + '\n'.join(paperText) + '</p>'
 			else:
 				paperText = ''
-			lines[i] = '<li>%s, <a href="%s">%s</a>, %s. <a class="red" href="%s">(bibtex)</a>%s</li>' % (paperA, paperFull, paperT, paperV, paperBib, paperText)
+			if paperOpen:
+				paperOpen = ' <a class="now" href="%s">(open access)</a>' % paperOpen
+			X = ' <a class="red" href="https://www.google.com/search?q=%s">(search)</a>' % paperT
+			if paperFull:
+				L = ' href="'+paperFull+'"'
+			else:
+				L = ''
+			lines[i] = '<li>%s, <a%s>%s</a>, %s. <a class="now" href="%s">(bibtex)</a>%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, X, paperText)
 		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

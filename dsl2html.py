@@ -42,6 +42,16 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			elif lines[i].strip().startswith('<doi>'):
 				paperFull = 'http://dx.doi.org/'+lines[i].strip()[5:-6]
 				lines[i] = ''
+			elif lines[i].strip().startswith('<uri'):
+				if lines[i].strip().startswith('<uri>'):
+					paperFull = lines[i].strip()[5:-6]
+				elif lines[i].strip().startswith('<uri closed=>'):
+					paperFull = lines[i].strip()[13:-6]
+				elif lines[i].strip().startswith('<uri open=>'):
+					paperOpen = lines[i].strip()[11:-6]
+				else:
+					print('What kind of URI is "'+lines[i].strip()+'"?')
+				lines[i] = ''
 			elif lines[i].strip().startswith('<url>'):
 				paperFull = lines[i].strip()[5:-6]
 				lines[i] = ''
@@ -144,17 +154,19 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 		if lines[i].strip() == '<paper>':
 			paper = True
 			paperText = []
-			paperA = paperFull = paperT = paperV = paperBib = paperText = paperOpen = ''
+			paperA = paperFull = paperT = paperV = paperBib = paperOpen = ''
 			lines[i] = ''
 		elif lines[i].strip() == '</paper>':
 			paper = False
+			if not paperFull and paperOpen:
+				paperFull = paperOpen
 			if len(paperText) > 0:
-				paperText = '<p>' + '\n'.join(paperText) + '</p>'
+				paperText = '<ul class="dim">' + '\n'.join(paperText) + '</ul>'
 			else:
 				paperText = ''
 			if paperOpen:
 				paperOpen = ' <a class="now" href="%s">(open access)</a>' % paperOpen
-			X = ' <a class="red" href="https://www.google.com/search?q=%s">(search)</a>' % paperT
+			X = ' <a class="red" href="https://www.google.com/search?q=%%22%s%%22">(search)</a>' % paperT
 			if paperFull:
 				L = ' href="'+paperFull+'"'
 			else:

@@ -17,6 +17,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 	f.close()
 	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
 	i = 0
+	paper = False
 	while i < len(lines):
 		# skip comments
 		if lines[i].strip().startswith('<!--'):
@@ -28,6 +29,31 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			i += 1
 			# to be on the safe side of the boundary bug
 			continue
+		if paper:
+			if lines[i].strip().startswith('<a>'):
+				paperA = lines[i].strip()[3:-4]
+				lines[i] = ''
+			elif lines[i].strip().startswith('<t>'):
+				paperT = lines[i].strip()[3:-4]
+				lines[i] = ''
+			elif lines[i].strip().startswith('<v>'):
+				paperV = lines[i].strip()[3:-4]
+				lines[i] = ''
+			elif lines[i].strip().startswith('<doi>'):
+				paperFull = 'http://dx.doi.org/'+lines[i].strip()[5:-6]
+				lines[i] = ''
+			elif lines[i].strip().startswith('<url>'):
+				paperFull = lines[i].strip()[5:-6]
+				lines[i] = ''
+			elif lines[i].strip().startswith('<dblp>'):
+				paperBib = 'http://dblp.uni-trier.de/rec/bibtex/'+lines[i].strip()[6:-7]
+				lines[i] = ''
+			elif lines[i].strip().startswith('<sleigh>'):
+				paperBib = 'http://bibtex.github.io/'+lines[i].strip()[8:-9]+'.html'
+				lines[i] = ''
+			elif lines[i].strip() != '</paper>' and lines[i].strip() != '<paper>':
+				paperText.append(lines[i].strip())
+				lines[i] = ''
 		# unified head
 		if lines[i].strip().startswith('<head '):
 			if lines[i].strip().find('viewport') < 0:
@@ -105,11 +131,24 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 		elif lines[i].strip() == '<ol back>':
 			j = i
 			lis = 1
-			while lines[j].strip()!='</ol>':
+			while j < len(lines) and lines[j].strip()!='</ol>':
 				j += 1
-				if lines[j].find('<li>') > -1:
-					lis += 1
+				if j < len(lines):
+					if lines[j].find('<li>') > -1 or lines[j].find('<paper>') > -1:
+						lis += 1
 			lines[i] = '<ol class="back" style="counter-reset: item %s">' % lis
+		# paper collections
+		if lines[i].strip() == '<paper>':
+			paper = True
+			paperText = []
+			lines[i] = ''
+		elif lines[i].strip() == '</paper>':
+			paper = False
+			if len(paperText) > 0:
+				paperText = '<p>' + '\n'.join(paperText) + '</p>'
+			else:
+				paperText = ''
+			lines[i] = '<li>%s, <a href="%s">%s</a>, %s. <a class="red" href="%s">(bibtex)</a>%s</li>' % (paperA, paperFull, paperT, paperV, paperBib, paperText)
 		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

@@ -18,6 +18,26 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
 	i = 0
 	paper = False
+	resolver = {}
+	for i in range(0,len(lines)):
+		if lines[i].strip().startswith('<paper'):
+			HX += 1
+			tmp = lines[i].strip().split('#')
+			if len(tmp)>1:
+				resolver[tmp[1]] = HX
+	# print(resolver,HX)
+	HX += 1
+	for i in range(0,len(lines)):
+		while lines[i].find('[#')>0:
+			tmp = lines[i].split('#')[1]
+			if tmp not in resolver.keys():
+				print('Cannot resolve #'+tmp+'#')
+				break
+			else:
+				# print('Resolved #%s# to %s' % (tmp,HX-resolver[tmp]))
+				lines[i] = lines[i].replace('#'+tmp+'#', str(HX-resolver[tmp]))
+	# TODO: HX is total!
+	HX = i = 0
 	while i < len(lines):
 		# skip comments
 		if lines[i].strip().startswith('<!--'):
@@ -39,6 +59,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			elif lines[i].strip().startswith('<v>'):
 				paperV = lines[i].strip()[3:-4]
 				lines[i] = ''
+			elif lines[i].strip().startswith('<x>'):
+				paperX = lines[i].strip()[3:-4]
+				lines[i] = ''
 			elif lines[i].strip().startswith('<doi>'):
 				paperFull = 'http://dx.doi.org/'+lines[i].strip()[5:-6]
 				lines[i] = ''
@@ -55,6 +78,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			elif lines[i].strip().startswith('<url>'):
 				paperFull = lines[i].strip()[5:-6]
 				lines[i] = ''
+			elif lines[i].strip().startswith('<bib>'):
+				paperBib = lines[i].strip()[5:-6]
+				lines[i] = ''
 			elif lines[i].strip().startswith('<dblp>'):
 				paperBib = 'http://dblp.uni-trier.de/rec/bibtex/'+lines[i].strip()[6:-7]
 				lines[i] = ''
@@ -64,7 +90,13 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			elif lines[i].strip().startswith('<arxiv>'):
 				paperOpen = 'http://arxiv.org/abs/'+lines[i].strip()[7:-8]
 				lines[i] = ''
-			elif lines[i].strip() != '</paper>' and lines[i].strip() != '<paper>':
+			elif lines[i].strip().startswith('<gwbib>'):
+				paperBib = 'http://grammarware.net/bib/'+lines[i].strip()[7:-8]+'.bib'
+				lines[i] = ''
+			elif lines[i].strip().startswith('<gwpdf>'):
+				paperOpen = 'http://grammarware.net/text/'+lines[i].strip()[7:-8]
+				lines[i] = ''
+			elif lines[i].strip() != '</paper>' and not lines[i].strip().startswith('<paper'):
 				paperText.append(lines[i].strip())
 				lines[i] = ''
 		# unified head
@@ -147,14 +179,14 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			while j < len(lines) and lines[j].strip()!='</ol>':
 				j += 1
 				if j < len(lines):
-					if lines[j].find('<li>') > -1 or lines[j].find('<paper>') > -1:
+					if lines[j].find('<li>') > -1 or lines[j].find('<paper') > -1:
 						lis += 1
 			lines[i] = '<ol class="back" style="counter-reset: item %s">' % lis
 		# paper collections
-		if lines[i].strip() == '<paper>':
+		if lines[i].strip().startswith('<paper'):
 			paper = True
 			paperText = []
-			paperA = paperFull = paperT = paperV = paperBib = paperOpen = ''
+			paperA = paperFull = paperT = paperV = paperX = paperBib = paperOpen = ''
 			lines[i] = ''
 		elif lines[i].strip() == '</paper>':
 			paper = False
@@ -166,12 +198,14 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				paperText = ''
 			if paperOpen:
 				paperOpen = ' <a class="now" href="%s">(open access)</a>' % paperOpen
+			if paperX:
+				paperX = ' <a class="now" href="%s">(extra)</a>' % paperX
 			X = ' <a class="red" href="https://www.google.com/search?q=%%22%s%%22">(search)</a>' % paperT
 			if paperFull:
 				L = ' href="'+paperFull+'"'
 			else:
 				L = ''
-			lines[i] = '<li>%s, <a%s>%s</a>, %s. <a class="now" href="%s">(bibtex)</a>%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, X, paperText)
+			lines[i] = '<li>%s, <a%s>%s</a>, %s. <a class="now" href="%s">(bibtex)</a>%s%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, paperX, X, paperText)
 		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

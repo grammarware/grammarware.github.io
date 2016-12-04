@@ -6,6 +6,54 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%85%D1%82%D0%B5%D1%80,_%D0%A0%D0%B8%D0%BD%D0%B0</a>
+			<img>dechter.jpg</img>
+			<name>Rina Dechter</name>
+			<text>Israeli computer scientist and constraint reasoning researcher</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%AD%D1%81%D1%82%D1%80%D0%B8%D0%BD,_%D0%94%D0%B5%D0%B1%D0%BE%D1%80%D0%B0</a>
+			<img>estrin.jpg</img>
+			<name>Debora Estrin</name>
+			<text>American computer scientist and embedded networking sensing researcher</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B7%D0%BE,_%D0%A0%D0%B0%D0%B4%D0%B8%D1%8F</a>
+			<img>cousot.jpg</img>
+			<name>Radhia Cousot</name>
+			<text>Tunisian computer scientist and inventor of abstract interpretation</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%BB%D0%B8%D0%BD,_%D0%90%D0%BD%D0%BD%D0%B0</a>
+			<img>karlin.jpg</img>
+			<name>Anna Karlin</name>
+			<text>American computer scientist and researcher of competitive analysis of online algorithms</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%90%D0%B9%D0%BB%D0%B0%D0%BC%D0%B0%D0%BA%D0%B8,_%D0%90%D0%BD%D0%B0%D1%81%D1%82%D0%B0%D1%81%D0%B8%D1%8F</a>
+			<img>ailamaki.jpg</img>
+			<name>Anastasia Ailamaki</name>
+			<text>Greek computer scientist and database researcher</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%BB%D0%B4%D1%81%D1%82%D0%B0%D0%B9%D0%BD,_%D0%90%D0%B4%D0%B5%D0%BB%D1%8C</a>
+			<img>goldstine.jpg</img>
+			<name>Adele Goldstine</name>
+			<text>ENIAC programmer, language documentation pioneer</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%BC%D0%BC%D1%83%D0%BD_%D0%A4%D0%BB%D0%B0%D0%BD%D0%B4%D1%80%D0%B8%D0%B8</a>
+			<img>vlaanderen.jpg</img>
+			<name>Flemish municipalities</name>
+			<text>Complete list of all 308 municipalities in the Flemish part of Belgium</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9B%D1%8F%D0%BC%D0%B1%D0%B4%D0%B0-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F</a>
+			<img>lambda.png</img>
+			<name>Lambda-function</name>
+			<text>λ-calculus, Dirichlet λ-function, Liouville λ-function, Mangoldt Λ-function, …</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%81%D1%8F%D1%82%D1%8C_%D1%81%D0%BC%D0%B5%D0%BB%D1%8C%D1%87%D0%B0%D0%BA%D0%BE%D0%B2_%D0%A1%D0%B0%D0%BD%D0%B0%D0%B4%D1%8B</a>
 			<img>sanada.jpg</img>
 			<name>Sanada Ten Braves</name>

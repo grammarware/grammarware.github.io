@@ -32,5 +32,6 @@ ol li:before {content: "[" counter(item) "] "; counter-increment:item; font-weig
 ol.back li:before {content: "[" counter(item) "] "; counter-increment:item -1; font-weight: bold; padding: .5em}
 li a {font-style:italic}
 li.wip:after {content: " (under review)"; color:#ff6332}
-.prop em {color:black; font-style:normal}
-.prop a {color: #b64d70; font-style:normal}
+.prop strong {color:black}
+.prop a {color: #b64d70; font-weight: normal}
+.prop dt {font-weight: bold}

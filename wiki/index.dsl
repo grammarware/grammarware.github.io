@@ -6,6 +6,18 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D1%87%D0%B8,_%D0%A0%D1%83%D0%B6%D0%B5%D0%BD%D0%B0</a>
+			<img>bajcsy.jpg</img>
+			<name>Ruzena Bajcsy</name>
+			<text>Slovak computer scientist and robotics researcher</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9B%D0%B8,_%D0%A0%D1%83%D0%B1%D0%B8_%D0%91%D0%B5%D0%B9-%D0%BB%D0%BE</a>
+			<img>rubylee.jpg</img>
+			<name>Ruby B. Lee</name>
+			<text>American computer scientist and ex-chief architect of Hewlett-Packard</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%85%D1%82%D0%B5%D1%80,_%D0%A0%D0%B8%D0%BD%D0%B0</a>
 			<img>dechter.jpg</img>
 			<name>Rina Dechter</name>

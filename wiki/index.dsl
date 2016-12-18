@@ -6,6 +6,36 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%A0%D0%B8%D0%B3%D0%B0%D1%81,_%D0%93%D0%B5%D0%BD%D1%80%D0%B8%D0%B5%D1%82%D1%82%D0%B0</a>
+			<img>rigas.jpg</img>
+			<name>Harriett B. Rigas</name>
+			<text>Canadian computer scientist, engineer and educator</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%90%D0%BC%D0%B0%D1%82%D0%BE,_%D0%9D%D1%8D%D0%BD%D1%81%D0%B8_%D0%9C%D0%B0%D1%80%D0%B8</a>
+			<img>amato.jpg</img>
+			<name>Nancy M. Amato</name>
+			<text>American computer scientist and parallel algorithms researcher</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%90%D0%B4%D0%B2%D0%B5,_%D0%A1%D0%B0%D1%80%D0%B8%D1%82%D0%B0_%D0%92%D0%B8%D0%BA%D1%80%D0%B0%D0%BC</a>
+			<img>adve.jpg</img>
+			<name>Sarita V. Adve</name>
+			<text>Indian computer scientist and language memory model designer</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%A5%D1%8D%D0%BD%D1%81%D0%BE%D0%BD,_%D0%92%D0%B8%D0%BA%D0%B8_%D0%9B%D0%B8%D0%BD%D0%BD</a>
+			<img>hanson.jpg</img>
+			<name>Vicki Lynne Hanson</name>
+			<text>American/Scottish computer scientist, accessibility researcher, ACM President</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD,_%D0%AD%D0%BD%D0%BD</a>
+			<img>condon.jpg</img>
+			<name>Anne E. Condon</name>
+			<text>Irish/Canadian computer scientist and computational complexity researcher</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D0%BD%D1%87,_%D0%9D%D1%8D%D0%BD%D1%81%D0%B8_%D0%AD%D0%BD%D0%BD</a>
 			<img>lynch.jpg</img>
 			<name>Nancy Ann Lynch</name>
@@ -176,7 +206,7 @@
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%92%D0%B0%D0%BD_%D0%92%D0%B5%D0%B9%D0%BD%D0%B3%D0%B0%D0%B0%D1%80%D0%B4%D0%B5%D0%BD,_%D0%90%D0%B4%D1%80%D0%B8%D0%B0%D0%BD</a>
 			<img>wijngaarden.jpg</img>
-			<name>Adriaan van Wijngaarden</name>
+			<name>A. van Wijngaarden</name>
 			<text>Dutch computer scientist and programming language pioneer</text>
 		</pic>
 		<pic>

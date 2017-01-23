@@ -75,8 +75,11 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 				else:
 					print('What kind of URI is "'+lines[i].strip()+'"?')
 				lines[i] = ''
-			elif lines[i].strip().startswith('<url>'):
-				paperFull = lines[i].strip()[5:-6]
+			elif lines[i].strip().startswith('<acm>'):
+				if not paperFull:
+					paperFull = 'http://dl.acm.org/citation.cfm?id=' + lines[i].strip()[5:-6]
+				if not paperBib:
+					paperBib = 'http://dl.acm.org/citation.cfm?id=' + lines[i].strip()[5:-6]
 				lines[i] = ''
 			elif lines[i].strip().startswith('<bib>'):
 				paperBib = lines[i].strip()[5:-6]

@@ -49,6 +49,13 @@
 			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
 		</pic>
 		<pic>
+			<a>http://cocodo.github.io/</a>
+			<img>cocodo.200.png</img>
+			<title>Raincode Labs Compiler Coding Dojo</title>
+			<name>RCL CoCoDo</name>
+			<text>a full day compiler experience event bridging academic ‹Programming› and industrial Raincode Labs (2017)</text>
+		</pic>
+		<pic>
 			<a>http://oopsle.github.io/</a>
 			<img>oopsle.200.png</img>
 			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>

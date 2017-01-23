@@ -145,8 +145,9 @@
 			<li>Carlos Cirello Filho (unparsing and versioning)</li>
 			<li>Stevan Pavlicic (traversals)</li>
 			<li>Yoan-Alexander Grigorov</li>
-			<li>Ton Heijligers (TensorFlow)</li>
+			<li>Ton Heijligers (statistical lexical analysis)</li>
 			<li>Alberto Martinez de Murga Ramirez (codebase analysis)</li>
+			<li>Mats Stijlart (grammar smells)</li>
 		</ul>
 		<footer/>
 	</body>

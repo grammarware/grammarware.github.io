@@ -25,6 +25,7 @@
 			<li>In November 2014 and November 2015 I have organised <a href="http://informatics.amsterdam/">Thesis Fair</a>, events bridging industrial companies with their possible MSc interns.</li>
 			<li>Starting from February 2016, I am only involved in the programme as a remote supervisor.</li>
 			<li>In August 2016, I was asked to run a summer school in Compiler Construction for premaster students.</li>
+			<li>In November 2016, I represented <a href="http://www.raincodelabs.com/">Raincode Labs</a> at the Thesis Fair. <a href="https://twitter.com/grammarware/status/801747539146014720">I brought dragons</a>.</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
@@ -36,8 +37,10 @@
 			<li>Juriaan Kennedy van Dam, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Identification2016">Software Language Identification with Natural Language Classifiers</a>, SANER ERA 2016. IEEE, pp. 624–628.</li>
 			<li>Nico de Groot, <a href="http://sattose.org/2016:alltalks#paper10">Analysing CSS using the M3 Model</a>, SATToSE, 2016.</li>
 			<li>Gorjan Jovanovski, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Critical2016">Critical CSS Rules — Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>, SATToSE, 2016.</li>
-			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA2016">The A?B*A Pattern: Undoing Style in CSS and Refactoring Opportunities it Presents</a>, ICSME, 2016. In print.</li>
-			<li>Boryana Goncharenko, Vadim Zaytsev, <a href="http://grammarware.net/writes/#CoCo2016">Language Design and Implementation for the Domain of Coding Conventions</a>, SLE, 2016. In print.</li>
+			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA2016">The A?B*A Pattern: Undoing Style in CSS and Refactoring Opportunities it Presents</a>, ICSME, 2016. IEEE, pp. 67–77.</li>
+			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA-Tool2016">A Tool for Detecting and Refactoring the A?B*A Pattern in CSS.</a>, ICSME, 2016. IEEE, p. 613.</li>
+			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA-Data2016">Experimental Data for the A?B*A Pattern in CSS: Inputs and Outputs.</a>, ICSME, 2016. IEEE, p. 616. Best Artefact Award.</li>
+			<li>Boryana Goncharenko, Vadim Zaytsev, <a href="http://grammarware.net/writes/#CoCo2016">Language Design and Implementation for the Domain of Coding Conventions</a>, SLE, 2016. ACM, pp. 90–104.</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
@@ -102,6 +105,8 @@
 					coordinator: Magiel Bruntink; my role: guest lecturing, grading, weekly two day lab supervision; people involved: Paul Klint, Eric Bouwers</li>
 					<li><a href="http://studiegids.uva.nl/xmlpages/page/2015-2016/zoek-vak/vak/18984">November 2015 – December 2015</a>;
 					my role: coordinator; people involved: Magiel Bruntink, Jurgen Vinju, Darius Blasband</li>
+					<li><a href="http://studiegids.uva.nl/xmlpages/page/2016-2017/zoek-vak/vak/27581">November 2016 – December 2016</a>; coordinator: Riemer van Rozen;
+					my role: guest lecturer; people involved: Ana Oprescu</li>
 				</ul>
 			</li>
 			<li class="title">Software Construction

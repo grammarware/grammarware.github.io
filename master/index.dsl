@@ -38,9 +38,10 @@
 			<li>Nico de Groot, <a href="http://sattose.org/2016:alltalks#paper10">Analysing CSS using the M3 Model</a>, SATToSE, 2016.</li>
 			<li>Gorjan Jovanovski, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Critical2016">Critical CSS Rules — Decreasing Time to First Render by Inlining CSS Rules for Over-the-Fold Elements</a>, SATToSE, 2016.</li>
 			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA2016">The A?B*A Pattern: Undoing Style in CSS and Refactoring Opportunities it Presents</a>, ICSME, 2016. IEEE, pp. 67–77.</li>
-			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA-Tool2016">A Tool for Detecting and Refactoring the A?B*A Pattern in CSS.</a>, ICSME, 2016. IEEE, p. 613.</li>
-			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA-Data2016">Experimental Data for the A?B*A Pattern in CSS: Inputs and Outputs.</a>, ICSME, 2016. IEEE, p. 616. Best Artefact Award.</li>
+			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA-Tool2016">A Tool for Detecting and Refactoring the A?B*A Pattern in CSS</a>, ICSME, 2016. IEEE, p. 613.</li>
+			<li>Leonard Punt, Sjoerd Visscher, Vadim Zaytsev, <a href="http://grammarware.net/writes/#ABA-Data2016">Experimental Data for the A?B*A Pattern in CSS: Inputs and Outputs</a>, ICSME, 2016. IEEE, p. 616. Best Artefact Award.</li>
 			<li>Boryana Goncharenko, Vadim Zaytsev, <a href="http://grammarware.net/writes/#CoCo2016">Language Design and Implementation for the Domain of Coding Conventions</a>, SLE, 2016. ACM, pp. 90–104.</li>
+			<li>Nicole Vavrová, Vadim Zaytsev, <a href="http://grammarware.net/writes/#PythonSmells2017">Does Python Smell Like Java?</a>, ‹Programming› vol. 1(2), 2017. In print.</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
@@ -148,7 +149,6 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<li>Carlos Cirello Filho (unparsing and versioning)</li>
-			<li>Stevan Pavlicic (traversals)</li>
 			<li>Yoan-Alexander Grigorov</li>
 			<li>Ton Heijligers (statistical lexical analysis)</li>
 			<li>Alberto Martinez de Murga Ramirez (codebase analysis)</li>

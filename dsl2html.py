@@ -219,13 +219,21 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			if 'nopic' in classes:
 				classes.remove('nopic')
 			else:
-				classes.append('pic')
+				if 'card' not in classes:
+					classes.append('pic')
 			c = ' '.join(classes)
 			i += 1
-			pic = {}
+			pic = {'src':[]}
 			while lines[i].strip() != '</pic>':
-				db = p.search(lines[i].strip()).groups()
-				pic[db[0]] = db[1]
+				linestripped = lines[i].strip()
+				if linestripped.startswith('<text>'):
+					pic['text'] = linestripped[6:linestripped.index('</text>')]
+				else: 
+					db = p.search(linestripped).groups()
+					if db[0] == 'src':
+						pic[db[0]].append(db[1])
+					else:
+						pic[db[0]] = db[1]
 				i += 1
 			if 'name' not in pic:
 				pic['name'] = ''
@@ -238,25 +246,44 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			else:
 				pic['text'] = ''
 			for key in pic:
+				if key == 'src': continue
 				pic[key] = pic[key].replace('\\n', '<br/>')
 			if divclass:
 				div = '<div class="'+divclass+'">'
 			else:
 				div = '<div>'
-			if pic['a'].find('/') < 0:
-				pic['a'] += '/index.html'
-			g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
-				'<br/>{}{}</span></a></div>\n').format(\
-					div,\
-					pic['a'],\
-					c,\
-					picdir,\
-					pic['img'],\
-					pic['alt'],\
-					pic['title'],\
-					pic['name'],\
-					pic['text'])\
-				)
+			if 'card' in classes:
+				sources = []
+				for src in pic['src']:
+					if src.find(':')<0:
+						print('Unqualified source:', src)
+						sources.append(src)
+					elif src[1] == ':':
+						sources.append('<span class="dwi {}">DwI:{}</span>'.format(src[0],src[2:]))
+					else:
+						sources.append('<span class="pl">{}</span>'.format(src))
+				anchor = pic['title'].replace('&amp;','&')
+				g.write(('\t\t<div class="tile"><span class="card"><h1><a name="{}">{}</a></h1><p>{}</p><h6>{}<h6></span></div>\n').format(\
+						anchor,\
+						pic['title'],\
+						pic['text'],\
+						', '.join(sources))\
+					)
+			else:
+				if pic['a'].find('/') < 0:
+					pic['a'] += '/index.html'
+				g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
+					'<br/>{}{}</span></a></div>\n').format(\
+						div,\
+						pic['a'],\
+						c,\
+						picdir,\
+						pic['img'],\
+						pic['alt'],\
+						pic['title'],\
+						pic['name'],\
+						pic['text'])\
+					)
 		elif lines[i].find('#LASTMOD#') > -1:
 			g.write(lines[i].replace('#LASTMOD#', d))
 		else:

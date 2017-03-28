@@ -261,12 +261,12 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 					elif src[1] == ':':
 						sources.append('<span class="dwi {}">DwI:{}</span>'.format(src[0],src[2:]))
 					else:
-						sources.append('<span class="pl">{}</span>'.format(src))
-				anchor = pic['title'].replace('&amp;','&')
-				g.write(('\t\t<div class="tile"><span class="card"><h1><a name="{}">{}</a></h1><p>{}</p><h6>{}<h6></span></div>\n').format(\
+						sources.append('<span class="pl {}">{}</span>'.format(src.split(':')[0].lower(), src))
+				anchor = pic['title'].replace('&amp;','').replace(' ','_').replace('/','')
+				g.write(('\t\t<div class="card"><h1 id="{}">{}</h1>{}<h6>{}</h6></div>\n').format(\
 						anchor,\
 						pic['title'],\
-						pic['text'],\
+						pic['text'].replace('<span class="p">','<p>').replace('</span>','</p>'),\
 						', '.join(sources))\
 					)
 			else:

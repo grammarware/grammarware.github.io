@@ -27,6 +27,14 @@
 			<text>extensive interactive bibliography of papers at S(L)E venues (2014–…)</text>
 		</pic>
 		<pic>
+			<a>http://slebok.github.io/dyol/</a>
+			<img>dyol.200.png</img>
+			<alt>the DYOL toolkit for software language design</alt>
+			<title>DYOL: Design Your Own Language</title>
+			<name>DYOL</name>
+			<text>a software language design with intent toolkit made from 24 compiler-related books (2017–…)</text>
+		</pic>
+		<pic>
 			<a>http://slebok.github.io/zoo/</a>
 			<img>zoo.200.png</img>
 			<alt>SLPS Grammar Zoo</alt>

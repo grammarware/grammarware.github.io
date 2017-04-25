@@ -8,7 +8,7 @@ p = re.compile('<(?P<tag>\w+)>(?P<txt>[^\<]+)</(?P=tag)+>')
 d = ('Zeroary', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',\
 	'September', 'October', 'November', 'December')[datetime.date.today().month]+\
 	' '+str(datetime.date.today().year)
-for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
+for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	HX = 0
 	picdir = divclass = ''
 	print('Processing', dsl)
@@ -255,13 +255,12 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 			if 'card' in classes:
 				sources = []
 				for src in pic['src']:
-					if src.find(':')<0:
-						print('Unqualified source:', src)
-						sources.append(src)
-					elif src[1] == ':':
-						sources.append('<span class="dwi {}">DwI:{}</span>'.format(src[0],src[2:]))
+					if src[1] == ':':
+						sources.append('<span class="dwi {}">DwI:{}</span>'.format(src[0], src[2:]))
+					elif src.startswith('DSL-'):
+						sources.append('<span class="dsl">{}</span>'.format(src[4:]))
 					else:
-						sources.append('<span class="pl {}">{}</span>'.format(src.split(':')[0].lower(), src))
+						sources.append('<span class="b {}">{}</span>'.format(src.split('-')[0].lower(), src))
 				anchor = pic['title'].replace('&amp;','').replace(' ','_').replace('/','')
 				g.write(('\t\t<div class="card"><h1 id="{}">{}</h1>{}<h6>{}</h6></div>\n').format(\
 						anchor,\
@@ -270,7 +269,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl"):
 						', '.join(sources))\
 					)
 			else:
-				if pic['a'].find('/') < 0:
+				if pic['a'].find('/') < 0 and not pic['a'].endswith('.html'):
 					pic['a'] += '/index.html'
 				g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
 					'<br/>{}{}</span></a></div>\n').format(\

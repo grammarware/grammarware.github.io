@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head title="SATToSE / SoTeSoLa" />
+	<head title="Dr. Vadim Zaytsev — SATToSE / SoTeSoLa seminar series" />
 	<body>
 		<header/>
 		<h1>

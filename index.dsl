@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head viewport title="projects" />
+	<head viewport title="Dr. Vadim Zaytsev — projects" />
 	<body>
 		<hr/>
 		<picdir>logos</picdir>

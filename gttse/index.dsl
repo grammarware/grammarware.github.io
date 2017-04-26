@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head title="GTTSE Summer School"/>
+	<head title="Dr. Vadim Zaytsev — GTTSE Summer School"/>
 	<body>
 		<header/>
 		<h1>

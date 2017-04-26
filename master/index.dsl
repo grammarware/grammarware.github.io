@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head jquery title="Master of Science programme in Software Engineering" />
+	<head jquery title="Dr. Vadim Zaytsev — Master of Science programme in Software Engineering" />
 	<body>
 		<header/>
 		<h1>

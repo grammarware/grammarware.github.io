@@ -111,8 +111,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		<meta name="viewport" content="initial-scale=1.0"/>'''
 			if lines[i].strip().find('title="') < 0:
 				title = ''
+				print('Warning: no title found!')
 			else:
-				title = ' — ' + lines[i].split('"')[1]
+				title = lines[i].split('"')[1]
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			if lines[i].strip().find('jquery') < 0:
 				end = '</script>'
@@ -123,26 +124,21 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		<script src="../jquery.min.js" type="text/javascript"></script>'''
 			g.write('''	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="x-ua-compatible" content="IE=9">%s
-		<title>Dr. Vadim Zaytsev%s</title>
-		<link href="%scommon.css" rel="stylesheet" type="text/css" />
+		<meta http-equiv="x-ua-compatible" content="IE=9">{}
+		<title>{}</title>
+		<link href="{}common.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){{i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){{
+  (i[r].q=i[r].q||[]).push(arguments)}},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  }})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-3743366-7']);
-		  _gaq.push(['_setDomainName', 'github.io']);
-		  _gaq.push(['_setAllowLinker', true]);
-		  _gaq.push(['_trackPageview']);
+  ga('create', 'UA-3743366-8', 'auto');
+  ga('send', 'pageview');
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-		%s
+		{}
 	</head>
-''' % (vp, title, rootpath, end))
+'''.format(vp, title, rootpath, end))
 			i += 1
 		# useful macros
 		if lines[i].strip() == '<header/>':

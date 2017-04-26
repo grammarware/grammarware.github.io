@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head title="PEM Colloquium"/>
+	<head title="Dr. Vadim Zaytsev — PEM Colloquium"/>
 	<body>
 		<header/>
 		<h1>

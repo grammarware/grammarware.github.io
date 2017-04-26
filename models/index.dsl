@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head title="MoDELS" />
+	<head title="Dr. Vadim Zaytsev — MoDELS conference series" />
 	<body>
 		<header/>
 		<h1>

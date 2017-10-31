@@ -19,6 +19,14 @@
 			<text>CV, bio, lists of talks, papers, venues, contact details</text>
 		</pic>
 		<pic>
+			<a>http://slebok.github.io/</a>
+			<img>slebok.200.png</img>
+			<alt>SLEBoK</alt>
+			<title>SLEBoK: Software Language Engineering Body of Knowledge</title>
+			<name>SLEBoK</name>
+			<text>a new multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
+		</pic>
+		<pic>
 			<a>http://bibtex.github.io/</a>
 			<img>bibsleigh.200.png</img>
 			<alt>BibSLEIGH</alt>
@@ -41,6 +49,14 @@
 			<title>Accumulating grammars of contemporary programming languages, extracted and recovered from language documentation, parser specifications and other artefacts and make them available in a range of formats</title>
 			<name>Grammar Zoo</name>
 			<text>collection of extracted grammars in a broad sense (2009–…)</text>
+		</pic>
+		<pic>
+			<a>http://slebok.github.io/grass/</a>
+			<img>grass.200.png</img>
+			<alt>the Grammar Smells project</alt>
+			<title>GraSs: Taxonomy of Grammar Smells</title>
+			<name>GraSs</name>
+			<text>an active project to define, specify, detect and remove smells in grammars (2017–…)</text>
 		</pic>
 		<pic>
 			<a>parsing</a>
@@ -121,14 +137,6 @@
 			<text>occasionally contributing to the sum of all knowledge</text>
 		</pic>
 		<pic>
-			<a>http://slebok.github.io/sleg/</a>
-			<img>sleg.200.png</img>
-			<alt>Software Language Engineering Glossary</alt>
-			<title>Collecting various terms used by software language engineers across natural languages</title>
-			<name>Software Language Engineering Glossary</name>
-			<text>in [conceptual] development</text>
-		</pic>
-		<pic>
 			<a>http://twitter.com/grammarware</a>
 			<img>twitter.200.png</img>
 			<alt>@grammarware</alt>
@@ -143,6 +151,14 @@
 			<title>Letters from A to Z linked to similarly named notions</title>
 			<name>SE Alphabet</name>
 			<text>software language engineering from A to Z; useless fun (2015)</text>
+		</pic>
+		<pic dim>
+			<a>http://slebok.github.io/sleg/</a>
+			<img>sleg.200.png</img>
+			<alt>Software Language Engineering Glossary</alt>
+			<title>Collecting various terms used by software language engineers across natural languages</title>
+			<name>Software Language Engineering Glossary</name>
+			<text>in [conceptual] development</text>
 		</pic>
 		<pic dim>
 			<a>master</a>

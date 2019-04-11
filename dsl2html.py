@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python35/python
+#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
 # -*- coding: utf-8 -*-
 
 import glob, re, datetime
@@ -8,7 +8,12 @@ p = re.compile('<(?P<tag>\w+)>(?P<txt>[^\<]+)</(?P=tag)+>')
 d = ('Zeroary', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',\
 	'September', 'October', 'November', 'December')[datetime.date.today().month]+\
 	' '+str(datetime.date.today().year)
+# Main loop
 for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
+	# Paths are local per file
+	cssdir = ''
+	imgdir = ''
+	# Other counters
 	HX = 0
 	picdir = divclass = ''
 	print('Processing', dsl)
@@ -16,6 +21,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	lines = f.readlines()
 	f.close()
 	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
+	if not lines[0].startswith('<?xml '):
+		g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
 	i = 0
 	paper = False
 	resolver = {}
@@ -102,6 +109,22 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			elif lines[i].strip() != '</paper>' and not lines[i].strip().startswith('<paper'):
 				paperText.append(lines[i].strip())
 				lines[i] = ''
+		# globals
+		if lines[i].strip().startswith('<path '):
+			pairs = lines[i][5:].split('"')
+			for j in range(0,len(pairs)//2):
+				if pairs[2*j]==' css=':
+					cssdir = pairs[2*j+1]
+					if not cssdir.endswith('/'):
+						cssdir += '/'
+				elif pairs[2*j]==' img=':
+					imgdir = pairs[2*j+1]
+					if not imgdir.endswith('/'):
+						imgdir += '/'
+				else:
+					print('Unknown path is being set: ' + pairs[2*j][:-1])
+			i += 1
+			continue
 		# unified head
 		if lines[i].strip().startswith('<head '):
 			if lines[i].strip().find('viewport') < 0:
@@ -114,7 +137,10 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				print('Warning: no title found!')
 			else:
 				title = lines[i].split('"')[1]
-			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+			if cssdir:
+				csspath = cssdir
+			else:
+				csspath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			if lines[i].strip().find('jquery') < 0:
 				end = '</script>'
 			else:
@@ -124,7 +150,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		<script src="../jquery.min.js" type="text/javascript"></script>'''
 			g.write('''	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="x-ua-compatible" content="IE=9">{}
+		<meta http-equiv="x-ua-compatible" content="IE=9"/>{}
 		<title>{}</title>
 		<link href="{}common.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
@@ -138,18 +164,23 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 
 		{}
 	</head>
-'''.format(vp, title, rootpath, end))
+'''.format(vp, title, csspath, end))
 			i += 1
 		# useful macros
 		if lines[i].strip() == '<header/>':
 			lines[i] = '<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>'
 		if lines[i].strip() == '<html doctype>':
 			lines[i] = '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">'''
+<html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
+'''
 		if lines[i].strip() == '<valid/>':
-			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
-			lines[i] = '''<br/><a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a>''' % (rootpath, rootpath)
+			if imgdir == '':
+				rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+				logopath = rootpath + 'logos/'
+			else:
+				logopath = imgdir
+			lines[i] = '''<br/><a href="http://validator.w3.org/check/referer"><img src="{0}xhtml.88.png" alt="XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{0}css.88.png" alt="CSS 3" /></a>\n'''.format(logopath)
 		if lines[i].strip().startswith('<footer'):
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			content = ''
@@ -160,14 +191,49 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				while lines[i].strip() != '</footer>':
 					content += lines[i].strip() + ' '
 					i += 1
-			lines[i] = '''<div class="last"><br/><hr/>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>. %sLast updated: #LASTMOD#.<br/>
-			<a href="http://validator.w3.org/check/referer"><img src="%slogos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="%slogos/css.88.png" alt="CSS 3" /></a></div>''' % (content, rootpath, rootpath)
+			if imgdir == '':
+				valdir = rootpath + 'logos/'
+			else:
+				valdir = imgdir
+			lines[i] = '''<div class="last"><br/><hr/>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>. {0}Last updated: #LASTMOD#.<br/>
+			<a href="http://validator.w3.org/check/referer"><img src="{1}xhtml.88.png" alt="XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{1}css.88.png" alt="CSS 3" /></a></div>'''.format(content, valdir)
+		# macros for <pre> of bibtex
+		if lines[i].find('isbn      =') > -1:
+			parts = lines[i].split('"')
+			if len(parts)<2:
+				print('WRONG ISBN')
+			else:
+				parts[1] = '<a href="http://www.isbnsearch.org/isbn/{0}">{1}</a>'.format(\
+					parts[1].replace('-','').replace(' ',''),\
+					parts[1])
+				lines[i] = '"'.join(parts)
+		elif lines[i].find('doi       =') > -1:
+			parts = lines[i].split('"')
+			if len(parts)<2:
+				print('WRONG DOI')
+			else:
+				parts[1] = '<a href="http://doi.org/{0}">{0}</a>'.format(parts[1])
+				lines[i] = '"'.join(parts)
+		elif lines[i].find('url       =') > -1:
+			parts = lines[i].split('"')
+			if len(parts)<2:
+				print('WRONG URL')
+			else:
+				parts[1] = '<a href="{0}">{0}</a>'.format(parts[1])
+				lines[i] = '"'.join(parts)
 		# jQuery use
 		if lines[i].strip().startswith('<h2 help'):
 			helptext = lines[i].split('"')[1]
 			gist = lines[i].split('>')[1].split('<')[0]
 			lines[i] = '<h2 onmouseover="onn(%s)" onmouseout="off(%s)">%s <span class="help">(%s)</span></h2>' % (HX, HX, gist, helptext)
+			HX += 1
+		elif lines[i].strip() == '<li help>':
+			gist = lines[i].split('>')[1]
+			lines[i] = '<li onmouseover="onn({0})" onmouseout="off({0})">'.format(HX) + gist
+		elif lines[i].strip().startswith('<help>'):
+			helptext = lines[i].split('>')[1].split('<')[0]
+			lines[i] = ' <span class="help">({0})</span>'.format(helptext)
 			HX += 1
 		# Ordered lists
 		if lines[i].strip() == '<ol>':
@@ -224,8 +290,18 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				linestripped = lines[i].strip()
 				if linestripped.startswith('<text>'):
 					pic['text'] = linestripped[6:linestripped.index('</text>')]
-				else: 
-					db = p.search(linestripped).groups()
+				elif linestripped.startswith('<raw>'):
+					pic['raw'] = linestripped[5:linestripped.index('</raw>')]
+				elif linestripped.startswith('<small>'):
+					pic['small'] = linestripped[7:linestripped.index('</small>')]
+				elif linestripped.startswith('<pre>'):
+					pic['pre'] = linestripped[5:linestripped.index('</pre>')].replace('¶', '\n')
+				else:
+					srch = p.search(linestripped)
+					if not srch:
+						print('Could not recognise "{0}"'.format(linestripped.strip()))
+						continue
+					db = srch.groups()
 					if db[0] == 'src':
 						pic[db[0]].append(db[1])
 					else:
@@ -238,11 +314,18 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			if 'title' not in pic:
 				pic['title'] = pic['name']
 			if 'text' in pic:
-				pic['text'] = '<span class="p">%s</span>' % pic['text']
+				pic['text'] = '<span class="p">{}</span>'.format(pic['text'])
 			else:
-				pic['text'] = ''
+				if 'small' in pic:
+					if 'wide' in classes:
+						pic['text'] = '<br/><p class="s">{}</p>'.format(pic['small'])
+					else:
+						pic['text'] = '<br/><span class="s">{}</span>'.format(pic['small'])
+				else:
+					pic['text'] = ''
 			for key in pic:
-				if key == 'src': continue
+				if key == 'src':
+					continue
 				pic[key] = pic[key].replace('\\n', '<br/>')
 			if divclass:
 				div = '<div class="'+divclass+'">'
@@ -258,17 +341,43 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 					else:
 						sources.append('<span class="b {}">{}</span>'.format(src.split('-')[0].lower(), src))
 				anchor = pic['title'].replace('&amp;','').replace(' ','_').replace('/','')
-				g.write(('\t\t<div class="card"><h1 id="{}">{}</h1>{}<h6>{}</h6></div>\n').format(\
-						anchor,\
-						pic['title'],\
-						pic['text'].replace('<span class="p">','<p>').replace('</span>','</p>'),\
-						', '.join(sources))\
+				if 'single' in pic.keys():
+					g.write('\t\t<div class="card flr">')
+				else:
+					g.write('\t\t<div class="card">')
+				if pic['title'].strip() != '':
+					g.write('<h1 id="{1}"><a href="index.html#{1}">{0}</a>'.format(\
+						pic['title'],
+						anchor))
+				if 'extended' in pic.keys():
+					g.write('<a href="{0}.html" class="flr">§</a>'.format(anchor))
+				if 'img' in pic.keys():
+					if '@' in pic['img']:
+						big,small = pic['img'].split('@')
+					else:
+						big = small = pic['img']
+					img = '<a href="{0}{1}"><img src="{0}{2}" alt="{3}" title="{4}"/></a>'.format(\
+						picdir,
+						big,
+						small,
+						pic['alt'],
+						pic['title']
 					)
+				else:
+					img = ''
+				g.write('</h1>\n')
+				if sources:
+					g.write('<h6>{0}</h6>'.format(', '.join(sources)))
+				if 'raw' in pic.keys():
+					g.write(pic['raw']+'\n')
+				g.write(img + pic['text'].replace('<span class="p">','<p>').replace('</span>','</p>'),)
+				g.write('</div>\n')
 			else:
-				if pic['a'].find('/') < 0 and not pic['a'].endswith('.html'):
+				if 'a' in pic.keys() and pic['a'].find('/') < 0 and not pic['a'].endswith('.html'):
 					pic['a'] += '/index.html'
-				g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
-					'<br/>{}{}</span></a></div>\n').format(\
+				if 'img' in pic.keys():
+					g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
+						'<br/>{}{}</span></a></div>\n').format(\
 						div,\
 						pic['a'],\
 						c,\
@@ -279,6 +388,25 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 						pic['name'],\
 						pic['text'])\
 					)
+				else:
+					if 'a' in pic.keys():
+						g.write('\t\t{}<span class="{}"><a href="{}">{}{}</a>'.format(\
+							div,\
+							c,\
+							pic['a'],\
+							pic['name'],\
+							pic['text'])\
+						)
+					else:
+						g.write('\t\t{}<span class="{}">{}{}'.format(\
+							div,\
+							c,\
+							pic['name'],\
+							pic['text'])\
+						)
+					if 'pre' in pic.keys():
+						g.write('<code>' + pic['pre'].replace(' ', '&nbsp;').replace('\n', '<br/>') + '</code>')
+					g.write('</span></div>\n')
 		elif lines[i].find('#LASTMOD#') > -1:
 			g.write(lines[i].replace('#LASTMOD#', d))
 		else:

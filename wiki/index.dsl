@@ -6,6 +6,12 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD,_%D0%9A%D1%8D%D1%82%D1%80%D0%B8%D0%BD</a>
+			<img>bouman.jpg</img>
+			<name>Katherine Louise Bouman</name>
+			<text>American imaging scientist and astrophotographer</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D1%8C%D0%BF%D0%B5%D1%80,_%D0%9C%D0%B0%D1%80%D0%B8-%D0%AD%D0%BB%D0%B8%D0%B7%D0%B0%D0%B1%D0%B5%D1%82</a>
 			<img>belpaire.jpg</img>
 			<name>Marie-Elisabeth Belpaire</name>

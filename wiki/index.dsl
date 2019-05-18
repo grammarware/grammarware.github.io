@@ -6,6 +6,12 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D0%BA%D1%83%D0%B4%D0%B0,_%D0%9A%D1%8D%D0%B9%D0%BA%D0%BE</a>
+			<img>fukuda.jpg</img>
+			<name>Fukuda Keiko</name>
+			<text>American-Japanese judo martial artist and instructor</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%BB%D1%82,_%D0%A0%D0%B8%D1%87%D0%B0%D1%80%D0%B4</a>
 			<img>holt.jpg</img>
 			<name>Richard C. Holt</name>

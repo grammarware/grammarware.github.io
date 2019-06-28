@@ -10,7 +10,7 @@ ul.dim {text-indent:0}
 .tesla {background-color:#040322}
 .double img {max-height:250px; max-width:310px}
 .tile {float:left; width:100px; height:100px; margin:5px}
-.pic img, .tile img {border:0px; max-height:100px}
+.pic img, .tile img {border:0px; max-height:100px; max-width:100px;}
 .icon {height:80px;border:0px;margin:0px}
 div, span.pic, span.p {display:block}
 br {clear:both}
@@ -35,3 +35,5 @@ li.wip:after {content: " (under review)"; color:#ff6332}
 .prop strong {color:black}
 .prop a {color: #b64d70; font-weight: normal}
 .prop dt {font-weight: bold}
+.censored {background-color: black; color: black;}
+table.realtable th, table.realtable * td {border: 1px solid black;}

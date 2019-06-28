@@ -72,12 +72,15 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			elif lines[i].strip().startswith('<doi>'):
 				paperFull = 'http://dx.doi.org/'+lines[i].strip()[5:-6]
 				lines[i] = ''
+			elif lines[i].strip().startswith('<read>'):
+				paperText.append(lines[i].strip()[6:-7])
+				lines[i] = ''
 			elif lines[i].strip().startswith('<uri'):
 				if lines[i].strip().startswith('<uri>'):
 					paperFull = lines[i].strip()[5:-6]
-				elif lines[i].strip().startswith('<uri closed=>'):
+				elif lines[i].strip().startswith('<uri closed'):
 					paperFull = lines[i].strip()[13:-6]
-				elif lines[i].strip().startswith('<uri open=>'):
+				elif lines[i].strip().startswith('<uri open'):
 					paperOpen = lines[i].strip()[11:-6]
 				else:
 					print('What kind of URI is "'+lines[i].strip()+'"?')
@@ -92,7 +95,10 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				paperBib = lines[i].strip()[5:-6]
 				lines[i] = ''
 			elif lines[i].strip().startswith('<dblp>'):
-				paperBib = 'http://dblp.uni-trier.de/rec/bibtex/'+lines[i].strip()[6:-7]
+				s = lines[i].strip()[6:-7]
+				if s.startswith('https://dblp.org/rec/bibtex/'):
+					s = s.replace('https://dblp.org/rec/bibtex/', '')
+				paperBib = 'http://dblp.org/rec/bibtex/' + s
 				lines[i] = ''
 			elif lines[i].strip().startswith('<sleigh>'):
 				paperBib = 'http://bibtex.github.io/'+lines[i].strip()[8:-9]+'.html'
@@ -253,7 +259,16 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			paperText = []
 			paperA = paperFull = paperT = paperV = paperX = paperBib = paperOpen = ''
 			lines[i] = ''
-		elif lines[i].strip() == '</paper>':
+		elif lines[i].strip().startswith('<no'):
+			paper = True
+			paperText = []
+			paperA = paperFull = paperT = paperV = paperX = paperBib = paperOpen = ''
+			paperT = lines[i].strip()
+			paperT = paperT.split('>')[1].split('<')[0]
+			if lines[i].find('uri="') > -1:
+				paperFull = lines[i].split('"')[1]
+			lines[i] = '</paper>' # a trick
+		if lines[i].strip() == '</paper>':
 			paper = False
 			if not paperFull and paperOpen:
 				paperFull = paperOpen
@@ -270,7 +285,11 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				L = ' href="'+paperFull+'"'
 			else:
 				L = ''
-			lines[i] = '<li>%s, <a%s>%s</a>, %s. <a class="now" href="%s">(bibtex)</a>%s%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, paperX, X, paperText)
+			if paperA:
+				paperA += ", "
+			if paperV:
+				paperV = ', ' + paperV
+			lines[i] = '<li>%s<a%s>%s</a>%s. <a class="now" href="%s">(bibtex)</a>%s%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, paperX, X, paperText)
 		# tiles
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

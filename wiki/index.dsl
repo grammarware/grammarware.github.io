@@ -6,6 +6,18 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%83%D1%82%D0%B3%D0%B0%D1%80%D0%B4%D0%B0_%D0%A2%D0%BE%D0%BD%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F</a>
+			<img>lutgardis.jpg</img>
+			<name>Lutgardis van Tongeren</name>
+			<text>Flemish Belgian saint and mater praedicatorum</text>
+		</pic>
+		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%BA%D0%B5%D0%BD_(%D0%91%D0%B5%D0%BB%D1%8C%D0%B3%D0%B8%D1%8F)</a>
+			<img>alken.jpg</img>
+			<name>Alken</name>
+			<text>Belgian municipality with old castles and breweries</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A4%D1%83%D0%BA%D1%83%D0%B4%D0%B0,_%D0%9A%D1%8D%D0%B9%D0%BA%D0%BE</a>
 			<img>fukuda.jpg</img>
 			<name>Fukuda Keiko</name>

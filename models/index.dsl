@@ -9,9 +9,23 @@
 			<img src="http://bibtex.github.io/stuff/models.png" alt="MoDELS" title="MoDELS 2013 logo, redrawn by Vadim Zaytsev"/></a>
 		</h1>
 		<hr/>
+		<h2><a href="https://conf.researchr.org/home/models-2020">MoDELS 2020</a></h2>
+		<ul>
+			<li><a href="https://conf.researchr.org/committee/models-2020/models-2020-technical-track-pc---practice-and-innovation-track">Programme Committee Member</a> at the Practice and Innovation Track</li>
+		</ul>
+		<h2><a href="https://modelsconf19.org/">MoDELS 2019</a></h2>
+		<ul>
+			<li><a href="http://gemoc.org/events/mle2019#keynote">Modelling Syntax, Semantics and Pragmatics in Practice</a> — a keynote at MLE 2019</li>
+		</ul>
+		<h2><a href="https://modelsconf2018.github.io/">MoDELS 2018</a></h2>
+		<ul>
+			<li><strong><a href="https://modelsconf2018.github.io/calls/artifact-evaluation/">Artifact Evaluation</a></strong> Co-Chair</li>
+			<li><a href="https://modelsconf2018.github.io/program/">Foundation Session</a> Chair</li>
+		</ul>
 		<h2><a href="http://www.cs.utexas.edu/models2017">MoDELS 2017</a></h2>
 		<ul>
-			<li><strong><a href="2017.html">Artifact evaluation</a></strong> — the duty of an Artifact Evaluation Co-Chair</li>
+			<li><strong><a href="2017.html">Artifact Evaluation</a></strong> Co-Chair</li>
+			<li><a href="http://grammarware.net/writes/#Design2017">Language Design with Intent</a> — a paper about <a href="http://slebok.github.io/dyol" title="Design Your Own Language">DYOL</a> and a presentation at the Foundations Track</li>
 		</ul>
 		<h2>MoDELS 2016</h2>
 		<ul>
@@ -19,7 +33,7 @@
 		</ul>
 		<h2><a href="http://cruise.eecs.uottawa.ca/models2015/">MoDELS 2015</a></h2>
 		<ul>
-			<li><strong><a href="http://mmmde.github.io/">Workshop on Mathematical Models for Model-Driven Engineering</a></strong> — a duty of a MMMDE Workshop Co-Chair</li>
+			<li><strong><a href="http://mmmde.github.io/">Workshop on Mathematical Models for Model-Driven Engineering</a> (MMMDE)</strong> Workshop Co-Chair</li>
 			<li><a href="http://grammarware.net/writes/#Intensions2015">Multi-Language Modelling with Second Order Intensions</a> — a paper and a presentation at MULTI 2015</li>
 			<li><a href="http://grammarware.net/writes/#Flexible2015">Taxonomy of Flexible Linguistic Commitments</a> — a paper and a <a href="https://github.com/grammarware/flexmde15">demonstration</a> at FlexMDE 2015</li>
 			<li><a href="http://grammarware.net/writes/#Flipped2015">Flipped Top-Down is Systematic Bottom-Up</a> — a paper and a presentation at the Educators Symposium</li>
@@ -35,7 +49,7 @@
 		</ul>
 		<h2><a href="http://models2013.lcc.uma.es/">MoDELS 2013</a></h2>
 		<ul>
-			<li><strong><a href="2013.html">Conference calendar</a></strong> — the duty of a Social Media Co-Chair</li>
+			<li><strong>Social Media Co-Chair</strong> (see the <a href="2013.html">Conference calendar</a>)</li>
 			<li><a href="http://grammarware.net/talks/#Tutorial2013">Modeling Software Structures with GrammarLab</a> — a <strong>tutorial</strong></li>
 			<li><a href="http://grammarware.net/writes/#Pending2013">Pending Evolution of Grammars</a> — a paper and a presentation at XM 2013</li>
 			<li><a href="http://grammarware.net/writes/#Renarration2013">Language Support for Megamodel Renarration</a> — a paper at XM 2013</li>

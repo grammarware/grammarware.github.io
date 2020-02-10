@@ -27,6 +27,13 @@
 			<text>a new multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
 		</pic>
 		<pic>
+			<a>http://oopsle.github.io/</a>
+			<img>oopsle.200.png</img>
+			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
+			<name>OOPSLE</name>
+			<text>a workshop about open and original problems in SLE (2013–…)</text>
+		</pic>
+		<pic>
 			<a>http://bibtex.github.io/</a>
 			<img>bibsleigh.200.png</img>
 			<alt>BibSLEIGH</alt>
@@ -66,11 +73,18 @@
 			<text>bidirectional megamodel of parsing and unparsing in a broad sense</text>
 		</pic>
 		<pic>
-			<a>lab</a>
-			<img>grammarlab-icon.200.png</img>
-			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
-			<name>GrammarLab</name>
-			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
+			<a>codediffng</a>
+			<img>codediffng.200.png</img>
+			<alt>Advanced Source Code Differencing</alt>
+			<title>CodeDiffNG</title>
+			<text>an industrial PhD project with UCL and VUB (2020–2023)</text>
+		</pic>
+		<pic>
+			<a>http://soft.vub.ac.be/intimals/index.html</a>
+			<img>intimals.png</img>
+			<alt>INTelligent Modernisation Assistance for Legacy Software</alt>
+			<title>INTiMALS</title>
+			<text>a mixed academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
 		</pic>
 		<pic>
 			<a>http://cocodo.github.io/</a>
@@ -78,20 +92,6 @@
 			<title>Raincode Labs Compiler Coding Dojo</title>
 			<name>RCL CoCoDo</name>
 			<text>a full day compiler experience event bridging academic ‹Programming› and industrial Raincode Labs (2017)</text>
-		</pic>
-		<pic>
-			<a>http://oopsle.github.io/</a>
-			<img>oopsle.200.png</img>
-			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
-			<name>OOPSLE</name>
-			<text>a workshop about open and original problems in SLE (2013–…)</text>
-		</pic>
-		<pic>
-			<a>http://mmmde.github.io/</a>
-			<img>mmmde.200.png</img>
-			<title>Workshop on Mathematical Models for MDE</title>
-			<name>MMMDE</name>
-			<text>a workshop about mathematical methods in MDE (2015)</text>
 		</pic>
 		<pic>
 			<a>gttse</a>
@@ -114,19 +114,19 @@
 			<span class="p">a framework for nondeterministic transformations</span>
 		</span></a></div> -->
 		<pic>
+			<a>lab</a>
+			<img>grammarlab-icon.200.png</img>
+			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
+			<name>GrammarLab</name>
+			<text>a grammar manipulation library for Rascal\n(2013–…)</text>
+		</pic>
+		<pic>
 			<a>http://slps.github.io/</a>
 			<img>slps.200.png</img>
 			<alt>SLPS</alt>
 			<title>Experimental prototypes for novel computer science techniques for grammars in a broad sense</title>
 			<name>Software Language Processing Suite</name>
 			<text>my main repo in 2008–2012</text>
-		</pic>
-		 <pic>
-			<a>http://github.com/grammarware/ruconf/wiki</a>
-			<img>conf.200.png</img>
-			<alt>Conferences</alt>
-			<title>Providing information in Russian about well-known international conferences in the areas of software engineering and computer science</title>
-			<text>info about international conferences in Russian</text>
 		</pic>
 		<pic>
 			<a>wiki</a>
@@ -144,13 +144,26 @@
 			<name>Twitter</name>
 			<text>mostly for keeping in touch with the research community (2007–…)</text>
 		</pic>
-		<pic>
-			<a>a-z</a>
-			<img>A.png</img>
-			<alt>SE Alphabet</alt>
-			<title>Letters from A to Z linked to similarly named notions</title>
-			<name>SE Alphabet</name>
-			<text>software language engineering from A to Z; useless fun (2015)</text>
+		<pic dim>
+			<a>master</a>
+			<img>master-software-engineering.200.png</img>
+			<title>Universiteit van Amsterdam’s Master of Science programme in Software Engineering</title>
+			<name>UvA MSc SE</name>
+			<text>a one-year university graduate programme in Amsterdam</text>
+		</pic>
+		<pic dim>
+			<a>http://mmmde.github.io/</a>
+			<img>mmmde.200.png</img>
+			<title>Workshop on Mathematical Models for MDE</title>
+			<name>MMMDE</name>
+			<text>a workshop about mathematical methods in MDE (2015)</text>
+		</pic>
+		<pic dim>
+			<a>http://github.com/grammarware/ruconf/wiki</a>
+			<img>conf.200.png</img>
+			<alt>Conferences</alt>
+			<title>Providing information in Russian about well-known international conferences in the areas of software engineering and computer science</title>
+			<text>info about international conferences in Russian (2012–2013)</text>
 		</pic>
 		<pic dim>
 			<a>http://slebok.github.io/sleg/</a>
@@ -158,14 +171,7 @@
 			<alt>Software Language Engineering Glossary</alt>
 			<title>Collecting various terms used by software language engineers across natural languages</title>
 			<name>Software Language Engineering Glossary</name>
-			<text>in [conceptual] development</text>
-		</pic>
-		<pic dim>
-			<a>master</a>
-			<img>master-software-engineering.200.png</img>
-			<title>Universiteit van Amsterdam’s Master of Science programme in Software Engineering</title>
-			<name>UvA MSc SE</name>
-			<text>a one-year university graduate programme</text>
+			<text>in [conceptual] development, superseded by SLEBoK terms</text>
 		</pic>
 		<pic dim>
 			<a>http://www.rascal-mpl.org/</a>
@@ -190,6 +196,14 @@
 			<title>Scientific colloquium: ongoing seminar series dating back from at least 1997</title>
 			<name>PEM</name>
 			<text>a colloquium I used to organise (2012–2013)</text>
+		</pic>
+		<pic dim>
+			<a>a-z</a>
+			<img>A.png</img>
+			<alt>SE Alphabet</alt>
+			<title>Letters from A to Z linked to similarly named notions</title>
+			<name>SE Alphabet</name>
+			<text>software language engineering from A to Z; useless fun (2015)</text>
 		</pic>
 
 		<footer>

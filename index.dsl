@@ -205,7 +205,6 @@
 			<name>SE Alphabet</name>
 			<text>software language engineering from A to Z; useless fun (2015)</text>
 		</pic>
-
 		<footer>
 			Dim tiles refer to past projects.
 			See <a href="copyright">copyright disclaimer</a>.

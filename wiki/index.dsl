@@ -6,6 +6,12 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%8F_%D0%94%D0%B0%D0%BB%D1%8F_%E2%80%94_%D0%9D%D1%8E%D0%B3%D0%BE%D1%80%D0%B0</a>
+			<img>aito.png</img>
+			<name>Dahl—Nygaard Prize</name>
+			<text>for accomplished seniors and promising juniors in software engineering</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%81,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82</a>
 			<img>france.jpg</img>
 			<name>Robert Bertrand France</name>
@@ -42,7 +48,7 @@
 			<text>American-Canadian software engineering and compilation pioneer</text>
 		</pic>
 		<pic>
-			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%83%D0%BC%D0%B0%D0%BD,_%D0%9A%D1%8D%D1%82%D1%80%D0%B8%D0%BD</a>
+			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D1%83%D0%BC%D0%B0%D0%BD,_%D0%9A%D1%8D%D1%82%D1%80%D0%B8%D0%BD</a>
 			<img>bouman.jpg</img>
 			<name>Katherine Louise Bouman</name>
 			<text>American imaging scientist and astrophotographer</text>

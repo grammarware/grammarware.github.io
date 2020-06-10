@@ -48,7 +48,7 @@
 			<li>Nico de Groot, Vadim Zaytsev, <a href="http://grammarware.net/writes/#CSS-Corpus2017">CSS Corpus for Reproducible Analysis</a>, SATToSE, 2017. CEUR, pp. 47–56.</li>
 			<li>Nicole Vavrová, Vadim Zaytsev, <a href="http://grammarware.net/writes/#PythonSmells2017">Does Python Smell Like Java?</a>, ‹Programming› vol. 1(2), 2017. Pp. 11-1–11-29.</li>
 			<li>Mats Stijlaart, Vadim Zaytsev, <a href="http://grammarware.net/writes/#Grammar-Smells2017">Towards a Taxonomy of Grammar Smells</a>, SLE, 2016. ACM, pp. 43–54.</li>
-			<li>Aynel Gül, Vadim Zaytsev, <a href="http://grammarware.net/writes/#HLASM2019">Mutative Fuzzing for an Assembler Compiler</a>, BENEVOL, 2019.</li>
+			<li>Aynel Gül, Vadim Zaytsev, <a href="http://grammarware.net/writes/#HLASM2019">Mutative Fuzzing for an Assembler Compiler</a>, BENEVOL, 2019. CEUR, pp. 18–24.</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
@@ -66,24 +66,24 @@
 		</ul>
 		<h2 help="by defence date">Supervised students</h2>
 		<ol>
-			<li>Ovidiu Roșu. <a href="http://grammarware.net/edits/index.html#Rosu2014">Grammatical Inference from Source Code Written in an Unknown Programming Language</a>. April–June 2014. <a class="red" href="https://bitbucket.org/orosu/thesis-cpp">(C++ code)</a> <a class="red" href="https://bitbucket.org/orosu/thesis-rascal">(Rascal code)</a></li>
+			<li>Ovidiu Roșu. <a href="http://grammarware.net/edits/index.html#Rosu2014">Grammatical Inference from Source Code Written in an Unknown Programming Language</a>. April–June 2014. <a class="red" href="https://github.com/grammarhoard/2014-rosu-inference-cpp">(C++ code)</a> <a class="red" href="https://github.com/grammarhoard/2014-rosu-inference-rascal">(Rascal code)</a></li>
 			<li>Christian Patrik König. <a href="http://grammarware.net/edits/index.html#Koenig2014">Static Code Analysis for PHP</a>. March–August 2014. Hosted by <a href="https://guidion.nl/">Guidion</a>.</li>
-			<li>Eenass Butrus. <a href="http://grammarware.net/edits/index.html#Butrus2014">Satisfying Coverage Criteria by Grammar Mutations and Purdom’s Sentence Generator</a>. April–August 2014. <a class="red" href="https://github.com/Eenass/Sentences-Generation">(Java code)</a></li>
+			<li>Eenass Butrus. <a href="http://grammarware.net/edits/index.html#Butrus2014">Satisfying Coverage Criteria by Grammar Mutations and Purdom’s Sentence Generator</a>. April–August 2014. <a class="red" href="https://github.com/grammarhoard/2014-butrus-testing">(Java code)</a></li>
 			<li>Varvara Tzika. <a href="http://grammarware.net/edits/index.html#Tzika2014">Ranking Classifieds at Marktplaats.nl: Query Modeling, Retrieval Methods, Data Fusion and Result Diversification</a>. June–August 2014. Hosted by <a href="http://www.marktplaats.nl/">Marktplaats</a>. Co-supervised with Manos Tsagkias and Ton Wessling.</li>
 			<li>Xander Horjus. <a href="http://grammarware.net/edits/index.html#Horjus2014">UvApp: Challenges in Mobile Software Engineering Examined</a>. April–August 2014. Hosted by <a href="http://www.uva.nl/over-de-uva/organisatie/organisatiegids/content/gemeenschappelijke-dienstverlenende-eenheden/ict-services-icts/ict-services-icts.html">UvA ICTS</a>. Co-supervised with Tom Kuipers and Alan Berg.</li>
-			<li>Ammar Hamid. <a href="http://grammarware.net/edits/index.html#Hamid2014">Detecting Refactorable Clones Using PDG and Program Slicing</a>. April–August 2014. <a class="red" href="https://github.com/ammarhamid/clone-detection">(Scheme&amp;Ruby code)</a></li>
-			<li>Lulu Zhang. <a href="http://grammarware.net/edits/index.html#Zhang2014">Implementing a PDG Library in Rascal</a>. April–September 2014. <a class="red" href="https://github.com/lulu516/ProgramDependenceGraph">(Rascal code)</a> <a class="red" href="https://github.com/lulu516/JavaTest">(Java code)</a></li>
-			<li>George Pachitariu. <a href="http://grammarware.net/edits/index.html#Pachitariu2014">Data Replication Algorithms in Distributed Databases</a>. April–October 2014. <a class="red" href="https://github.com/georgepachitariu/Megastore">(Java code)</a></li>
+			<li>Ammar Hamid. <a href="http://grammarware.net/edits/index.html#Hamid2014">Detecting Refactorable Clones Using PDG and Program Slicing</a>. April–August 2014. <a class="red" href="https://github.com/grammarhoard/2014-hamid-clones">(Scheme&amp;Ruby code)</a></li>
+			<li>Lulu Zhang. <a href="http://grammarware.net/edits/index.html#Zhang2014">Implementing a PDG Library in Rascal</a>. April–September 2014. <a class="red" href="https://github.com/grammarhoard/2014-zhang-pdg-rascal">(Rascal code)</a> <a class="red" href="https://github.com/grammarhoard/2014-zhang-pdg-java">(Java code)</a></li>
+			<li>George Pachitariu. <a href="http://grammarware.net/edits/index.html#Pachitariu2014">Data Replication Algorithms in Distributed Databases</a>. April–October 2014. <a class="red" href="https://github.com/grammarhoard/2014-pachitariu-megastore">(Java code)</a></li>
 			<li>Sven Rohde. <a href="http://grammarware.net/edits/index.html#Rohde2015">Test-suite for Automated Invariant-based Testing of AJAX Web-applications</a>. April 2014–March 2015. Hosted by <a href="https://guidion.nl/">Guidion</a>. <a class="red" href="https://bitbucket.org/sroh/atusa-plugins">(Java code)</a></li>
 			<li>Bas Meesters. <a href="http://grammarware.net/edits/index.html#Meesters2015">The Visualisation of Symbolic Transition Systems</a>. April–July 2015. Hosted by <a href="http://axini.nl/">Axini</a>. Co-supervised with René de Vries.</li>
 			<li>Kevin Adegeest. <a href="http://grammarware.net/edits/index.html#Adegeest2015">Automated Detection of Unused CSS Style Rules by Crawling Web Applications</a>. April–August 2015.</li>
 			<li>René Bulsing. <a href="http://grammarware.net/edits/index.html#Bulsing2015">Detecting Refactored Clones with Rascal</a>. April–August 2015. <a class="red" href="https://github.com/grammarware/pdg">(Rascal code)</a></li>
-			<li>Nian Liu. <a href="http://grammarware.net/edits/index.html#Liu2015">User-Centered 3D Manipulation Model for Scientific Visualization</a>. April–August 2015. Hosted by <a href="http://www.cwi.nl/">CWI</a>. Co-supervised with Robert van Liere. <a class="red" href="https://github.com/NianLiu89/UserCentered3D">(Java code)</a></li>
-			<li>Leonard Punt. <a href="http://grammarware.net/edits/index.html#Punt2015">The A-B*-A Pattern of Undoing Style in Cascading Style Sheets</a>. April–August 2015. Hosted by <a href="http://q42.com/">Q42</a>. Co-supervised with Sjoerd Visscher. <a class="red" href="http://leonardpunt.github.io/masterproject/">(front page)</a> <a class="red" href="http://leonardpunt.github.io/masterproject/tool.zip">(JavaScript code)</a> <a class="red" href="http://leonardpunt.github.io/masterproject/dataset-and-results.zip">(data set)</a></li>
+			<li>Nian Liu. <a href="http://grammarware.net/edits/index.html#Liu2015">User-Centered 3D Manipulation Model for Scientific Visualization</a>. April–August 2015. Hosted by <a href="http://www.cwi.nl/">CWI</a>. Co-supervised with Robert van Liere. <a class="red" href="https://github.com/grammarhoard/2015-liu-leapmotion">(Java code)</a></li>
+			<li>Leonard Punt. <a href="http://grammarware.net/edits/index.html#Punt2015">The A-B*-A Pattern of Undoing Style in Cascading Style Sheets</a>. April–August 2015. Hosted by <a href="http://q42.com/">Q42</a>. Co-supervised with Sjoerd Visscher. <a class="red" href="http://leonardpunt.github.io/masterproject/">(front page)</a> <a class="red" href="http://leonardpunt.github.io/masterproject/tool.zip">(JavaScript code)</a> <a class="red" href="http://leonardpunt.github.io/masterproject/dataset-and-results.zip">(data set)</a> <a class="red" href="https://github.com/grammarhoard/2015-punt-css">(repo)</a></li>
 			<li>Daniel Conde Moya. <a href="http://grammarware.net/edits/index.html#Conde2015">NATURALIZE: A replication study</a>. April–August 2015. Co-supervised with Alexander Serebrenik.</li>
-			<li>Boryana Goncharenko. <a href="http://grammarware.net/edits/index.html#Goncharenko2015">Detecting Violations of CSS Code Conventions</a>. April–August 2015. <a class="red" href="https://github.com/boryanagoncharenko/CssCoco">(Python code)</a> <a class="red" href="https://github.com/boryanagoncharenko/Sublime-CssCoco">(Sublime plugin)</a> <a class="red" href="https://pypi.python.org/pypi?:action=display&amp;name=csscoco">(PyPi)</a></li>
-			<li>Axel Polet. <a href="http://grammarware.net/edits/index.html#Polet2015">Re-engineering Cascading Style Sheets by Preprocessing and Refactoring</a>. April–August 2015. <a class="red" href="https://github.com/axelpolet89/CRET">(Java code)</a></li>
-			<li>Sebastian Hantich. <a href="http://grammarware.net/edits/index.html#Hantich2015">Indoor Positioning using Location Fingerprinting</a>. April–August 2015. Hosted by <a href="https://www.bunq.com/">bunq</a>. Co-supervised with Esan Wit. <a class="red" href="https://github.com/shantich/master-thesis">(Data set)</a></li>
+			<li>Boryana Goncharenko. <a href="http://grammarware.net/edits/index.html#Goncharenko2015">Detecting Violations of CSS Code Conventions</a>. April–August 2015. <a class="red" href="https://github.com/grammarhoard/2015-goncharenko-css">(Python code)</a> <a class="red" href="https://github.com/grammarhoard/2015-goncharenko-css-sublime">(Sublime plugin)</a> <a class="red" href="https://pypi.python.org/pypi?:action=display&amp;name=csscoco">(PyPi)</a></li>
+			<li>Axel Polet. <a href="http://grammarware.net/edits/index.html#Polet2015">Re-engineering Cascading Style Sheets by Preprocessing and Refactoring</a>. April–August 2015. <a class="red" href="https://github.com/grammarhoard/2015-polet-css">(Java code)</a></li>
+			<li>Sebastian Hantich. <a href="http://grammarware.net/edits/index.html#Hantich2015">Indoor Positioning using Location Fingerprinting</a>. April–August 2015. Hosted by <a href="https://www.bunq.com/">bunq</a>. Co-supervised with Esan Wit. <a class="red" href="https://github.com/grammarhoard/2015-hantich-location">(Data set)</a></li>
 			<li>Tuba Kaya Chomette. <a href="http://grammarware.net/edits/index.html#Kaya2015">Automatically Detecting ORM Performance Anti-Patterns on C♯ Applications</a>. March–September 2015. Co-supervised with Raphael Poss and Giuseppe Procaccianti. <a class="red" href="https://github.com/TubaKayaDev/ORMPerformanceAntiPatternDetector">(C♯ code)</a></li>
 			<li>Nikola Vavrová. <a href="http://grammarware.net/edits/index.html#Vavrova2015">Python Design Defect Detection</a>. April–December 2015. <a class="red" href="https://github.com/nvavrova/thesis">(Java code)</a> <a class="red" href="https://github.com/nvavrova/thesis/blob/master/Python.g4">(ANTLR4 grammar)</a></li>
 			<li>Juriaan Kennedy van Dam. <a href="http://grammarware.net/edits/index.html#Kennedy2016">Identifying Source Code Programming Languages through Natural Language Processing</a>. May 2015–January 2016.</li>
@@ -94,11 +94,12 @@
 			<li>Merijn Wijngaard. <a href="http://grammarware.net/edits/index.html#Wijngaard2016">Dependence Analysis in PHP</a>. April–August 2016. Hosted by <a href="http://www.moxio.com">Moxio</a>. Co-supervised with Mark Hills and A. Boks.</li>
 			<li>Sven-Erik Haitjema. <a href="http://grammarware.net/edits/index.html#Haitjema2016">Wireless Sensor Networks</a>. January 2014–August 2016. Hosted by <a href="http://www.digitallifecentre.nl/">Digital Life Centre</a>. Co-supervised with Ben Kröse.</li>
 			<li>Ton Heijligers. <a href="http://grammarware.net/edits/index.html#Heijligers2017">Statistical Lexical Analysis</a>. January 2016–April 2017.</li>
-			<li>Mats Stijlaart. <a href="http://grammarware.net/edits/index.html#Stijlaart2017">Towards a Catalogue of Grammar Smells</a>. January–August 2017.</li>
+			<li>Mats Stijlaart. <a href="http://grammarware.net/edits/index.html#Stijlaart2017">Towards a Catalogue of Grammar Smells</a>. January–August 2017. <a class="red" href="https://github.com/grammarhoard/2017-stijlaart-smells">(Rascal code)</a></li>
 			<li>Jelle van Noord. <a href="http://grammarware.net/edits/#Noord2019">Extended Taxonomy of Grammar Smells</a>. January–August 2019. Hosted by <a href="https://www.raincodelabs.com/">Raincode Labs</a>. Co-supervised with Clemens Grelck.</li>
 			<li>Tom Freijsen. Language-independent Detection of Complex Source Code Mutations. January–August 2019. Hosted by <a href="https://www.raincodelabs.com/">Raincode Labs</a>. Co-supervised with Clemens Grelck and Johan Fabry.</li>
 			<li>Ewoud Bouman. Testing COBOL Compilers using Metamorphic Relations. January–August 2019. Hosted by <a href="https://www.raincodelabs.com/">Raincode Labs</a>. Co-supervised with Clemens Grelck and Johan Fabry.</li>
 			<li>Aynel Gül. <a href="http://grammarware.net/edits/#Gul2019">Testing HLASM Compilers with a Mutative Fuzzing Approach</a>. January–October 2019. Hosted by <a href="https://www.raincodelabs.com/">Raincode Labs</a>. Co-supervised with Clemens Grelck.</li>
+			<li>Felix Barten. <a href="http://grammarware.net/edits/#Barten2020">Python Code Smell Analysis. Finding Hidden Code Smells</a>. January 2018 – May 2020. <a class="red" href="https://github.com/grammarhoard/2015-vavrova-2020-barten-smells-python">(Java code)</a> <a class="red" href="https://github.com/grammarhoard/2020-barten-smells-java">(Rascal code)</a></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -138,11 +139,11 @@
 			<li class="title">Preparation Master Project <a href="http://grammarware.net/talks/#SEN-SATToSE2014" class="red">(poster)</a>
 				<ul>
 					<li><a href="http://studiegids.uva.nl/web/uva/2013_2014/nl/c/12156.html">September 2013 – March 2014</a>;
-					my role: coordinator; people involved: pretty much everyone from the teaching team</li>
+					<strong>my role: coordinator</strong>; people involved: pretty much everyone from the teaching team</li>
 					<li><a href="http://studiegids.uva.nl/xmlpages/page/2014-2015/zoek-vak/vak/12156">September 2014 – March 2015</a>;
-					my role: coordinator; people involved: Magiel Bruntink once or twice</li>
+					<strong>my role: coordinator</strong>; people involved: Magiel Bruntink once or twice</li>
 					<li><a href="http://studiegids.uva.nl/xmlpages/page/2015-2016/zoek-vak/vak/19851">September 2015 – January 2016</a>;
-					my role: coordinator; people involved (only in January): Hans Dekkers and Paul Griffioen</li>
+					<strong>my role: coordinator</strong>; people involved (only in January): Hans Dekkers and Paul Griffioen</li>
 				</ul>
 			</li>
 			<li class="title">Project Software Engineering (BSc level)
@@ -170,7 +171,6 @@
 			<li>Carlos Cirello Filho (unparsing and versioning)</li>
 			<li>Yoan-Alexander Grigorov (domain-driven design)</li>
 			<li>Alberto Martinez de Murga Ramirez (codebase analysis)</li>
-			<li>Felix Barten (smell detection)</li>
 		</ul>
 		<footer/>
 	</body>

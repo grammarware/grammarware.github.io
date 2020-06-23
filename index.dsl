@@ -63,7 +63,7 @@
 			<alt>the Grammar Smells project</alt>
 			<title>GraSs: Taxonomy of Grammar Smells</title>
 			<name>GraSs</name>
-			<text>an active project to define, specify, detect and remove smells in grammars (2017–…)</text>
+			<text>a project to define, specify, detect and remove smells in grammars (2017–…)</text>
 		</pic>
 		<pic>
 			<a>parsing</a>
@@ -91,7 +91,7 @@
 			<img>cocodo.200.png</img>
 			<title>Raincode Labs Compiler Coding Dojo</title>
 			<name>RCL CoCoDo</name>
-			<text>a full day compiler experience event bridging academic ‹Programming› and industrial Raincode Labs (2017)</text>
+			<text>an event bridging academic ‹Programming› and industrial Raincode Labs (2017–2019)</text>
 		</pic>
 		<pic>
 			<a>gttse</a>

@@ -26,10 +26,24 @@
 			<li>SoTeSoLa is a Summer School on Software Technologies and Software Languages</li>
 			<li><a href="http://sattose.org">SATToSE</a> is a Seminar Series on Advanced Tools and Technologies in Software Evolution</li>
 			<li>SoTeSoLa took place once in 2012 in Koblenz</li>
-			<li>SATToSE took place ten times: in 2008 in Waulsort, in 2009 in Côte d’Opale, in 2010 in Montpellier, in 2011 in Koblenz, in 2012 in Koblenz (integrated into SoTeSoLa), in 2013 in Bern, in 2014 in L’Aquila, in 2015 in Mons, in 2016 in Bergen, in 2017 in Madrid, in 2018 in Athens, in 2019 in Bolzano</li>
-			<li>The next SATToSE is in Amsterdam in 2020</li>
-			<li>I was a participant of SoTeSoLa 2012 and SATToSE 2012, 2013, 2014, 2015, 2016, 2017, 2018</li>
-            <li>I am planning to attend SATToSE 2020 in July.</li>
+			<li>SATToSE took place 13 times:
+				in 2008 in Waulsort,
+				in 2009 in Côte d’Opale,
+				in 2010 in Montpellier,
+				in 2011 in Koblenz,
+				in 2012 in Koblenz (integrated into SoTeSoLa),
+				in 2013 in Bern,
+				in 2014 in L’Aquila,
+				in 2015 in Mons,
+				in 2016 in Bergen,
+				in 2017 in Madrid,
+				in 2018 in Athens,
+				in 2019 in Bolzano,
+				in 2020 virtually.
+			</li>
+			<li>The next SATToSE is in Amsterdam in 2021</li>
+			<li>I was a participant of SoTeSoLa 2012 and SATToSE 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2020</li>
+            <li>I am planning to attend SATToSE 2021 in July.</li>
 			<li>At SoTeSoLa 2012, I played roles of a Hackathon Lead Coordinator (<a href="https://github.com/SATToSE/SoTeSoLa2012/wiki/Hackathon/66018edd9f1df26d2c5a45780a88992df28197f2">read the description</a> or <a href="https://www.youtube.com/watch?v=E2HfytEOAwA">watch the screencast</a>) and a Social Media Chair (@<a href="https://twitter.com/sotesola">sotesola</a>), as well as participated actively in the school’s design and organisation</li>
 			<li>At SATToSE 2012, I gave a presentation and co-represented Rascal at the Technology Showdown and the Hackathon</li>
 			<li>At SATToSE 2013, I was the Hackathon Chair, but also gave a talk and represented Rascal at the Technology Showdown</li>
@@ -41,6 +55,7 @@
 			<li>Since December 2012, I am a Steering Committee member of SATToSE.</li>
             <li><a href="../master/">My students</a> have presented at SATToSE as well: <em>Ammar Hamid</em> (2014), <em>Carlos Cirello</em> (2015), <em>Boryana Goncharenko</em> (2015), <em>Nico de Groot</em> (2016), <em>Gorjan Jovanovski</em> (2016).</li>
             <li>My colleague Johan Fabry presented at SATToSE 2019 a paper co-authored with me and other participants of the <a href="http://soft.vub.ac.be/intimals/index.html">INTiMALS</a> project.</li>
+            <li>Another colleague Céline Deknop presented at SATToSE 2020 a paper co-authored with me and other participants of the <a href="../codediffng/">CodeDiffNG</a> project.</li>
 		</ul>
 		<h2>Publications / presentations</h2>
 		<ul>

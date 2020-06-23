@@ -38,7 +38,9 @@
 		</ul>
 		<h2>Publications / presentations</h2>
 		<ul>
-			<li>TBA</li>
+			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a wip paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
+			</li>
 		</ul>
 		<footer/>
 	</body>

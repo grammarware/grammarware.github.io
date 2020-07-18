@@ -1,4 +1,4 @@
-#!/c/Users/vadim/AppData/Local/Programs/Python/Python37-32/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import glob, re, datetime

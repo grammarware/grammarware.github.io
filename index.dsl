@@ -47,7 +47,7 @@
 			<alt>the DYOL toolkit for software language design</alt>
 			<title>DYOL: Design Your Own Language</title>
 			<name>DYOL</name>
-			<text>a software language design with intent toolkit made from 24 compiler-related books (2017–…)</text>
+			<text>a language design with intent toolkit made from 24 books (2017–…)</text>
 		</pic>
 		<pic>
 			<a>http://slebok.github.io/zoo/</a>
@@ -63,7 +63,7 @@
 			<alt>the Grammar Smells project</alt>
 			<title>GraSs: Taxonomy of Grammar Smells</title>
 			<name>GraSs</name>
-			<text>a project to define, specify, detect and remove smells in grammars (2017–…)</text>
+			<text>a project to define, specify, detect &amp; remove grammar smells (2017–…)</text>
 		</pic>
 		<pic>
 			<a>parsing</a>
@@ -84,14 +84,14 @@
 			<img>intimals.png</img>
 			<alt>INTelligent Modernisation Assistance for Legacy Software</alt>
 			<title>INTiMALS</title>
-			<text>a mixed academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
+			<text>an academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
 		</pic>
 		<pic>
 			<a>http://cocodo.github.io/</a>
 			<img>cocodo.200.png</img>
 			<title>Raincode Labs Compiler Coding Dojo</title>
 			<name>RCL CoCoDo</name>
-			<text>an event bridging academic ‹Programming› and industrial Raincode Labs (2017–2019)</text>
+			<text>bridging academic ‹Programming› with the industry (2017–2019)</text>
 		</pic>
 		<pic>
 			<a>gttse</a>
@@ -106,7 +106,7 @@
 			<alt>SATToSE</alt>
 			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
 			<name>SATToSE\nSoTeSoLa</name>
-			<text>a regular event for collaborating on software evolution\n(2008–…)</text>
+			<text>a regular software evolution event\n(2008–…)</text>
 		</pic>
 		<!-- <div><a href="https://github.com/grammarware/incertus"><span class="pic">
 			<span class="alert">WIP<br/></span>
@@ -142,7 +142,7 @@
 			<alt>@grammarware</alt>
 			<title>Keeping in touch with the web-enabled active part of the scientific community</title>
 			<name>Twitter</name>
-			<text>mostly for keeping in touch with the research community (2007–…)</text>
+			<text>keeping in touch with the research community (2007–…)</text>
 		</pic>
 		<pic dim>
 			<a>master</a>
@@ -171,7 +171,7 @@
 			<alt>Software Language Engineering Glossary</alt>
 			<title>Collecting various terms used by software language engineers across natural languages</title>
 			<name>Software Language Engineering Glossary</name>
-			<text>in [conceptual] development, superseded by SLEBoK terms</text>
+			<text>superseded by SLEBoK terms</text>
 		</pic>
 		<pic dim>
 			<a>http://www.rascal-mpl.org/</a>

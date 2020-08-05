@@ -9,19 +9,19 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BC%D0%B8%D1%8F_%D0%94%D0%B0%D0%BB%D1%8F_%E2%80%94_%D0%9D%D1%8E%D0%B3%D0%BE%D1%80%D0%B0</a>
 			<img>aito.png</img>
 			<name>Dahl—Nygaard Prize</name>
-			<text>for accomplished seniors and promising juniors in software engineering</text>
+			<text>for accomplished seniors and promising juniors in software research</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%81,_%D0%A0%D0%BE%D0%B1%D0%B5%D1%80%D1%82</a>
 			<img>france.jpg</img>
 			<name>Robert Bertrand France</name>
-			<text>American-Jamaican computer scientist and modelling language researcher</text>
+			<text>American-Jamaican computer scientist and language researcher</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BC%D0%BE%D0%BD%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%B8%D1%87</a>
 			<img>simonenko.jpg</img>
 			<name>I. B. Simonenko</name>
-			<text>Russian mathematician, researcher in discrete mathematics and integral equations</text>
+			<text>Russian mathematician, discrete maths and integral equations researcher</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%83%D1%82%D0%B3%D0%B0%D1%80%D0%B4%D0%B0_%D0%A2%D0%BE%D0%BD%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F</a>
@@ -81,13 +81,13 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%A5%D1%8D%D0%BD%D1%81%D0%BE%D0%BD,_%D0%92%D0%B8%D0%BA%D0%B8_%D0%9B%D0%B8%D0%BD%D0%BD</a>
 			<img>hanson.jpg</img>
 			<name>Vicki Lynne Hanson</name>
-			<text>American/Scottish computer scientist, accessibility researcher, ACM President</text>
+			<text>American-Scottish computer scientist in accessibility, ACM ex-president</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD,_%D0%AD%D0%BD%D0%BD</a>
 			<img>condon.jpg</img>
 			<name>Anne E. Condon</name>
-			<text>Irish/Canadian computer scientist and computational complexity researcher</text>
+			<text>Irish-Canadian computer scientist and computational complexity researcher</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D0%BD%D1%87,_%D0%9D%D1%8D%D0%BD%D1%81%D0%B8_%D0%AD%D0%BD%D0%BD</a>
@@ -111,13 +111,13 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%82%D1%81%D0%B0%D0%BD%D0%B0%D0%BC%D0%B8,_%D0%A1%D0%B8%D0%BB%D1%8C%D0%B2%D0%B8%D1%8F</a>
 			<img>ratnasamy.jpg</img>
 			<name>Sylvia Ratnasamy</name>
-			<text>Belgian computer scientist and inventor of distributed hash tables</text>
+			<text>Belgian scientist and inventor of distributed hash tables</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9A%D0%B5%D0%BB%D0%BB%D0%BE%D0%B3,_%D0%A3%D1%8D%D0%BD%D0%B4%D0%B8</a>
 			<img>kellogg.jpg</img>
 			<name>Wendy Kellogg</name>
-			<text>American psychologist, social computing pioneer and a researcher in human-computer interaction</text>
+			<text>American psychologist, social computing pioneer in human-computer interaction</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D1%87%D0%B8,_%D0%A0%D1%83%D0%B6%D0%B5%D0%BD%D0%B0</a>
@@ -224,7 +224,7 @@
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%82%D0%BE,_%D0%9A%D0%B0%D0%B4%D0%B7%D1%83%D1%81%D0%B8%D0%B3%D1%8D</a>
 			<img>goto.jpg</img>
-			<name>Kazushige Goto</name>
+			<name>Kazushige Goto (後藤和茂)</name>
 			<text>American software engineer and parallel computation optimiser</text>
 		</pic>
 		<pic>
@@ -440,7 +440,7 @@
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B3%D1%83%D1%87%D0%B0%D1%8F_%D0%BA%D1%83%D1%87%D0%BA%D0%B0</a>
 			<img>mighty.jpg</img>
-			<name>The Mighty Handful</name>
+			<name>Mighty Handful</name>
 			<text>five composers: Balakirev, Mussorgsky, Borodin, Cui, Rimsky-Korsakov</text>
 		</pic>
 		<pic>

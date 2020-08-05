@@ -4,7 +4,7 @@ body {color:#552200; background-color:#ffdec9; font-family:"Futura", "Gill Sans 
 ul.dim:hover {opacity:0.8; color: blue;}
 ul.dim {text-indent:0}
 .pic .alert {color:#C00}
-.pic .p {color:#552200; padding-top:5px}
+.pic .p {color:#552200; padding-top:5px; font-weight:normal}
 .pic {float:left; text-align:center; width:150px; height:250px; margin:5px; font-weight:bold; border:2px solid #ffbf95}
 .double {float:left; width:314px; height:250px; margin:5px; border:2px solid #ffbf95; text-align:center}
 .tesla {background-color:#040322}

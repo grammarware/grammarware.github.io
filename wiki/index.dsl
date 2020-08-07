@@ -281,7 +281,6 @@
 			<name>Gerard Unger</name>
 			<text>Dutch graphic and font designer</text>
 		</pic>
-
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A4%D0%BB%D0%BE%D1%80%D0%B5%D0%BD%D1%82%D0%B0%D0%B9%D0%BD,_%D0%90%D0%B9%D0%B7%D0%B5%D0%BA</a>
 			<img>florentine.jpg</img>
@@ -331,6 +330,12 @@
 			<text>Russian philologist and literature historian</text>
 		</pic>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/Citebase</a>
+			<img>citebase.png</img>
+			<name>Citebase</name>
+			<text>An experimental open access indexing and citation project (now defunct)</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%BC%D0%B5%D0%BB%D0%BE</a>
 			<img>almelo.png</img>
 			<name>Almelo</name>
@@ -340,7 +345,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%A5%D0%B5%D0%BD%D0%B3%D0%B5%D0%BB%D0%BE</a>
 			<img>hengelo.png</img>
 			<name>Hengelo</name>
-			<text>Dutch town where I used to live</text>
+			<text>Dutch town where I used to live twice in very different times</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A3%D0%B0%D0%B9%D1%82,_%D0%91%D1%83%D0%BA%D0%BA%D0%B0</a>

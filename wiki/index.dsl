@@ -105,7 +105,7 @@
 			<a>https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D0%BD%D1%87,_%D0%9D%D1%8D%D0%BD%D1%81%D0%B8_%D0%AD%D0%BD%D0%BD</a>
 			<img>lynch.jpg</img>
 			<name>Nancy Ann Lynch</name>
-			<text>American computer scientist and inventor input-output automata</text>
+			<text>American computer scientist and inventor of input-output automata</text>
 		</pic>
 		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%80%D0%B4%D0%BE%D1%88,_%D0%AD%D0%B2%D0%B0</a>

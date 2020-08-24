@@ -6,6 +6,12 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B9%D0%BA%D0%BE%D0%BC%D0%BE%D1%82%D0%B8</a>
+			<img>taikomochi.jpg</img>
+			<name>Taikomochi\n(太鼓持ち)</name>
+			<text>Japanese jester, also known as male geisha</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%BD,_%D0%9A%D0%BB%D0%B0%D1%80%D0%B0</a>
 			<img>dan.jpg</img>
 			<name>Klára Dán</name>

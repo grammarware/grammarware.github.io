@@ -36,8 +36,11 @@
 			<li><a href="https://twitter.com/RaincodeLabs/status/1225411351071330304">Twitter: Caught a glimpse of the first meeting for the CodeDiffNG project...</a></li>
 			<li><a href="https://uclouvain.be/en/research-institutes/icteam/news/applied-phd-funding.html">UCL: Innoviris Applied PhD funding for Kim Mens</a></li>
 		</ul>
-		<h2>Publications / presentations</h2>
+		<h2 help="latest first">Publications / presentations</h2>
 		<ul>
+			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff-PROFES2020">Improving Software Modernisation Process by Differencing Migration Logs</a></em>, an Industry Track paper at <a href="https://softeng.polito.it/profes2020/">PROFES</a>, 2020. 16 pages.
+			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a wip paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
 			</li>

@@ -32,6 +32,7 @@
 		</ul>
 		<h2 help="in the media">About us</h2>
 		<ul>
+			<li><a href="https://twitter.com/grammarware/status/1331961118307266560">Twitter: Upcoming at #profes2020: @ClineDeknop with a @RaincodeLabs story...</a></li>
 			<li><a href="https://www.linkedin.com/posts/raincode-labs_caught-a-glimpse-of-the-first-meeting-for-activity-6631177052420734976-qol7">LinkedIn: Caught a glimpse of the first meeting for the CodeDiffNG project...</a></li>
 			<li><a href="https://twitter.com/RaincodeLabs/status/1225411351071330304">Twitter: Caught a glimpse of the first meeting for the CodeDiffNG project...</a></li>
 			<li><a href="https://uclouvain.be/en/research-institutes/icteam/news/applied-phd-funding.html">UCL: Innoviris Applied PhD funding for Kim Mens</a></li>
@@ -39,10 +40,16 @@
 		<h2 help="latest first">Publications / presentations</h2>
 		<ul>
 			<li>
-				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff-PROFES2020">Improving Software Modernisation Process by Differencing Migration Logs</a></em>, an Industry Track paper at <a href="https://softeng.polito.it/profes2020/">PROFES</a>, 2020. 16 pages.
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff2020">Improving Software Modernisation Process by Differencing Migration Logs</a></em>, an Industry Track paper at <a href="https://softeng.polito.it/profes2020/">PROFES</a>, 2020. 16 pages.
+				<ul style="list-style-type:none;">
+					<li><a href="https://doi.org/10.1007/978-3-030-64148-1_17"><code>doi:10.1007/978-3-030-64148-1_17</code></a> <a href="http://grammarware.net/bib/LogDiff2020.bib">(BibTeX)</a></li>
+				</ul>
 			</li>
 			<li>
-				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a wip paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff-SATToSE2020">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a wip paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
+				<ul style="list-style-type:none;">
+					<li><a href="http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf"><code>sattose2000:paper6</code></a> <a href="http://grammarware.net/bib/LogDiff-SATToSE2020.bib">(BibTeX)</a></li>
+				</ul>
 			</li>
 		</ul>
 		<footer/>

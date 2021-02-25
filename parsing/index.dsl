@@ -96,21 +96,21 @@
 			</li>
 			<li help>
 				Anya Helene Bagge, Ralf Lämmel, Vadim Zaytsev.
-				<em><a href="http://grammarware.net/writes/#SLE-Courses2014">Reflections on Courses for Software Language Engineering</a></em>, <a href="http://models2014.webs.upv.es/educatorsym.htm">EduSymp</a>, 2014.
+				<em><a href="http://grammarware.net/writes/#SLE-Courses2014">Reflections on Courses for <abbr title="Software Language Engineering">SLE</abbr></a></em>, <a href="http://models2014.webs.upv.es/educatorsym.htm">EduSymp</a>, 2014.
 				<a class="red" href="http://softlang.uni-koblenz.de/edusymp14/talk.pdf">(slides)</a>
 				<help>contains the megamodel, presents how it was used in teaching</help>
-			</li>
-			<li help>
-				Vadim Zaytsev.
-				<em><a href="http://grammarware.net/writes/#Renarration2014">Understanding Metalanguage Integration by Renarrating a Technical Space Megamodel</a></em>, <a href="http://gemoc.org/gemoc2014/">GEMOC’14</a>, 2014.
-				<a class="red" href="http://grammarware.net/talks/index.html#GEMOC2014">(slides)</a>
-				<help>argues how megamodels are useful in teaching, uses this megamodel as an example</help>
 			</li>
 			<li help>
 				Anya Helene Bagge, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#Tutorial2015">Languages, Models and Megamodels: A Tutorial</a></em>, <a href="http://sattose.org/2014">SATToSE</a>, 2014.
 				<a class="red" href="http://grammarware.github.io/sattose/slides/Bagge.pdf">(slides)</a>
 				<help>uses the megamodel as one of the examples</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#Renarration2014">Understanding Metalanguage Integration by Renarrating a Technical Space Megamodel</a></em>, <a href="http://gemoc.org/gemoc2014/">GEMOC’14</a>, 2014.
+				<a class="red" href="http://grammarware.net/talks/index.html#GEMOC2014">(slides)</a>
+				<help>argues how megamodels are useful in teaching, uses this megamodel as an example</help>
 			</li>
 		</ul>
 		<footer/>

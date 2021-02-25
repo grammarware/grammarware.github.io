@@ -28,7 +28,7 @@
 		</ul>
 		<p>This is the (mega)model of 12 classes of artefacts found in software language processing (dotted lines denote mappings that rely on either lexical or syntactic definitions; solid lines denote universally defined mappings. The loops are examples of transformations):</p>
 		<div class="bmp">
-			<a href="megamodel.1429.png"><img src="megamodel.1429.png" alt="Bidirectional megamodel of parsing and unparsing" title="Click to enlarge" style="width:50%"/></a>
+			<a href="megamodel.png"><img src="megamodel.png" alt="Bidirectional megamodel of parsing and unparsing" title="Click to enlarge" style="width:50%"/></a>
 		</div>
 		<p>It can be used to systematically explore the technical research space of bidirectional mappings to build on top of the existing body of work and discover as of yet unused relationships.</p>
 		<h2>Artefacts</h2>

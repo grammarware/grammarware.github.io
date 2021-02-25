@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="x-ua-compatible" content="IE=9"/>
-		<meta name="viewport" content="initial-scale=1.0"/>
-		<title>Dr. Vadim Zaytsev — Parsing in a Broad Sense</title>
-		<link href="../common.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-3743366-8', 'auto');
-  ga('send', 'pageview');
-
-		function onn(n) {$('.help:eq('+n+')').css('background-color','#552200');}
-		function off(n) {$('.help:eq('+n+')').css('background-color','#ffdec9');}
-		</script>
-		<script src="../jquery.min.js" type="text/javascript"></script>
-	</head>
+<path css=".." img="../logos"/>
+<html doctype>
+	<head jquery viewport title="Dr. Vadim Zaytsev — Parsing in a Broad Sense">
 	<body>
-<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>		<h1>
+		<header/>
+		<h1>
 			(Un)Parsing in a Broad Sense
 			<img src="../logos/parsing.200.png" alt="Parsing in a Broad Sense" title="Parsing in a Broad Sense, logo by Vadim Zaytsev"/>
 		</h1>
@@ -79,47 +61,54 @@
 		</dl>
 		<h2>Publications / presentations</h2>
 		<ul>
-<li onmouseover="onn(0)" onmouseout="off(0)">
+			<li help>
 				Vadim Zaytsev, Anya Helene Bagge.
 				<a href="http://grammarware.net/writes/#Parsing2014">Parsing in a Broad Sense</a>,
 				<a href="http://models2014.webs.upv.es/">MoDELS’14</a>, LNCS 8767, 2014.
 				<a class="red" href="http://grammarware.net/talks/index.html#MoDELS2014">(slides)</a>
- <span class="help">(the MAIN paper on this topic)</span>			</li>
-<li onmouseover="onn(1)" onmouseout="off(1)">
+				<help>the MAIN paper on this topic</help>
+			</li>
+			<li help>
 				Vadim Zaytsev.
 				<a href="https://github.com/grammarware/bx-parsing#bx-parsing"><code>grammarware/bx-parsing</code></a>, GitHub, March 2014.
- <span class="help">(if you like to see some code (in Rascal))</span>			</li>
-<li onmouseover="onn(2)" onmouseout="off(2)">
+				<help>if you like to see some code (in Rascal)</help>
+			</li>
+			<li help>
 				Paul Klint, Ralf Lämmel, Chris Verhoef.
 				<em><a href="http://www.cs.vu.nl/grammarware/agenda/">Toward an Engineering Discipline for Grammarware</a></em>, ACM ToSEM, 2005.
- <span class="help">(introduces the term “grammars in a broad sense”)</span>			</li>
-<li onmouseover="onn(3)" onmouseout="off(3)">
+				<help>introduces the term “grammars in a broad sense”</help>
+			</li>
+			<li help>
 				Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#Bidirectionalisation2014">Case Studies in Bidirectionalisation</a></em>, <a href="http://www.cs.uu.nl/wiki/TFP2014/">TFP</a>, 2014. Extended abstract.
 				<a class="red" href="http://grammarware.net/talks/index.html#TFP2014">(slides)</a>
- <span class="help">(a more FP/BX targeted piece)</span>			</li>
-<li onmouseover="onn(4)" onmouseout="off(4)">
+				<help>a more FP/BX targeted piece</help>
+			</li>
+			<li help>
 				Vadim Zaytsev, Anya Helene Bagge.
 				<em><a href="http://grammarware.net/writes/#Modelling-Parsing2014">Modelling Parsing and Unparsing</a></em>, <a href="http://www.sleconf.org/2014/Parsing-at-SLE.html">Parsing@SLE</a>, 2014.
 				<a class="red" href="http://www.sleconf.org/2014/parsing-slides/4-zaytsev-bagge.pdf">(slides)</a>
- <span class="help">(a more technical piece targeted for parsing researchers)</span>			</li>
-<li onmouseover="onn(5)" onmouseout="off(5)">
+				<help>a more technical piece targeted for parsing researchers</help>
+			</li>
+			<li help>
 				Anya Helene Bagge, Ralf Lämmel, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#SLE-Courses2014">Reflections on Courses for Software Language Engineering</a></em>, <a href="http://models2014.webs.upv.es/educatorsym.htm">EduSymp</a>, 2014.
 				<a class="red" href="http://softlang.uni-koblenz.de/edusymp14/talk.pdf">(slides)</a>
- <span class="help">(contains the megamodel, presents how it was used in teaching)</span>			</li>
-<li onmouseover="onn(6)" onmouseout="off(6)">
+				<help>contains the megamodel, presents how it was used in teaching</help>
+			</li>
+			<li help>
 				Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#Renarration2014">Understanding Metalanguage Integration by Renarrating a Technical Space Megamodel</a></em>, <a href="http://gemoc.org/gemoc2014/">GEMOC’14</a>, 2014.
 				<a class="red" href="http://grammarware.net/talks/index.html#GEMOC2014">(slides)</a>
- <span class="help">(argues how megamodels are useful in teaching, uses this megamodel as an example)</span>			</li>
-<li onmouseover="onn(7)" onmouseout="off(7)">
+				<help>argues how megamodels are useful in teaching, uses this megamodel as an example</help>
+			</li>
+			<li help>
 				Anya Helene Bagge, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#Tutorial2015">Languages, Models and Megamodels: A Tutorial</a></em>, <a href="http://sattose.org/2014">SATToSE</a>, 2014.
 				<a class="red" href="http://grammarware.github.io/sattose/slides/Bagge.pdf">(slides)</a>
- <span class="help">(uses the megamodel as one of the examples)</span>			</li>
+				<help>uses the megamodel as one of the examples</help>
+			</li>
 		</ul>
-<div class="last"><br/><hr/>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://twitter.com/grammarware">grammarware</a>. Last updated: February 2021.<br/>
-			<a href="http://validator.w3.org/check/referer"><img src="../logos/xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../logos/css.88.png" alt="CSS 3" /></a></div>	</body>
+		<footer/>
+	</body>
 </html>

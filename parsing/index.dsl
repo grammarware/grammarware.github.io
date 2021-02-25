@@ -28,7 +28,7 @@
 		</ul>
 		<p>This is the (mega)model of 12 classes of artefacts found in software language processing (dotted lines denote mappings that rely on either lexical or syntactic definitions; solid lines denote universally defined mappings. The loops are examples of transformations):</p>
 		<div class="bmp">
-			<a href="megamodel.1429.png"><img src="megamodel.715.png" alt="Bidirectional megamodel of parsing and unparsing" title="Click to enlarge"/></a>
+			<a href="megamodel.1429.png"><img src="megamodel.1429.png" alt="Bidirectional megamodel of parsing and unparsing" title="Click to enlarge" style="width:50%"/></a>
 		</div>
 		<p>It can be used to systematically explore the technical research space of bidirectional mappings to build on top of the existing body of work and discover as of yet unused relationships.</p>
 		<h2>Artefacts</h2>
@@ -36,28 +36,32 @@
 			<a href="https://github.com/grammarware/bx-parsing#bx-parsing"><img src="../logos/bx.200.png" alt="BX mega, logo by Vadim Zaytsev" title="Bidirectional megamodel of parsing in a broad sense (a code repository)"/></a>
 		</h1>
 		<dl>
-			<dt>STR</dt>
+			<dt><strong>STR</strong></dt>
 				<dd>a string, a file, a byte stream</dd>
-			<dt>TOK</dt>
-				<dd>a finite sequence of strings (called tokens) which, when concatenated, yields STR; includes spaces, line breaks, comments, etc — collectively, layout</dd>
-			<dt>TTK</dt>
+			<dt><strong>LEX</strong></dt>
+				<dd>a finite sequence of untyped strings (called lexemes) which, when concatenated, yields STR; includes spaces, line breaks, comments, etc — collectively, layout</dd>
+			<dt><strong>TOK</strong></dt>
 				<dd>a finite sequence of typed tokens, possibly with layout removed, some classified as numbers, strings, etc</dd>
-			<dt>LEX</dt>
-				<dd>a lexical source model that addes grouping to typing; in fact a possibly incomplete tree connecting most tokens together in one structure</dd>
-			<dt>FOR</dt>
-				<dd>a forest of parse trees, a parse graph or an ambiguous parse tree with sharing; a tree-like structure that models STR according to a syntactic definition</dd>
-			<dt>PTR</dt>
+			<dt><strong>REG</strong></dt>
+				<dd>a hierarchical source model constructed with regular means but adding grouping to typing; in fact a possibly incomplete tree connecting most tokens together in one structure</dd>
+
+			<dt><strong>FOR</strong></dt>
+				<dd>a forest of parse trees, a parse graph or an ambiguous parse tree with sharing; a tree-like structure that models STR according to a syntactic definition, some collection of possible syntactic interpretations of STR</dd>
+			<dt><strong>PTR</strong></dt>
 				<dd>an unambiguous parse tree where the leaves can be concatenated to form STR</dd>
-			<dt>CST</dt>
-			<dd>a parse tree with concrete syntax information; structurally similar to PTR, but abstracted from layout and other minor details; comments could still be a part of the CST model, depending on the use case</dd>
-			<dt>AST</dt>
-			<dd>a tree which contains only abstract syntax information</dd>
-			<dt>PIC</dt>
-			<dd>a picture, which can be an ad hoc model, a “natural model” or a rendering of a formal model</dd>
-			<dt>DRA</dt>
-			<dd>a graphical representation of a model (not necessarily a tree), a drawing in the sense of GraphML or SVG, or a metamodel-indepenent syntax but metametamodel-specific syntax like OMG HUTN</dd>
-			<dt>DIA</dt>
-			<dd>a diagram, a graphical model in the sense of EMF or UML, a model with an explicit advanced metamodel</dd>
+			<dt><strong>CST</strong></dt>
+				<dd>a parse tree with concrete syntax information; structurally similar to PTR, but abstracted from layout and other minor details; comments could still be a part of the CST model, depending on the use case</dd>
+			<dt><strong>AST</strong></dt>
+				<dd>a tree which contains only abstract syntax information, the ultimate enriched intermediate representation for language processing</dd>
+
+			<dt><strong>PIC</strong></dt>
+				<dd>a picture, which can be an ad hoc model, a hand-drawn “natural model” or a rendering of a formal model</dd>
+			<dt><strong>DRA</strong></dt>
+				<dd>a model of a drawing, expressed in terms of visual primitives, their sizes, coordinates and other configurable attributes, a drawing in the sense of GraphML or SVG, or a metamodel-indepenent syntax but metametamodel-specific syntax like OMG <a href="https://www.omg.org/spec/HUTN/">HUTN</a></dd>
+			<dt><strong>GRA</strong></dt>
+				<dd>a graphical representation of a model (not necessarily a tree), abstracted from concrete visualisation details, mentioning at most layout grid strategies, a “boxes and arrows” model like those used in <a href="https://graphviz.org/">Graphviz</a> tools</dd>
+			<dt><strong>DIA</strong></dt>
+				<dd>a diagram, an abstract graphical model with an explicit advanced metamodel and a known visual notation, like a UML/EMF diagram</dd>
 		</dl>
 		<h2>Publications / presentations</h2>
 		<ul>

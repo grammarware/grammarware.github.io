@@ -19,6 +19,13 @@
 			<text>CV, bio, lists of talks, papers, venues, contact details</text>
 		</pic>
 		<pic>
+			<a>ut</a>
+			<img>utwente.200.png</img>
+			<title>Universiteit Twente’s Bachelor and Master of Science programme in Computer Science</title>
+			<name>UT TCS BSc+MSc</name>
+			<text>an integrated (under)graduate university programme in Enschede</text>
+		</pic>
+		<pic>
 			<a>http://slebok.github.io/</a>
 			<img>slebok.200.png</img>
 			<alt>SLEBoK</alt>
@@ -145,7 +152,7 @@
 			<text>keeping in touch with the research community (2007–…)</text>
 		</pic>
 		<pic dim>
-			<a>master</a>
+			<a>uva</a>
 			<img>master-software-engineering.200.png</img>
 			<title>Universiteit van Amsterdam’s Master of Science programme in Software Engineering</title>
 			<name>UvA MSc SE</name>

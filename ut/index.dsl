@@ -51,9 +51,9 @@
 			<li class="title">(MSc) Design of Software Architectures
 				<ul>
 					<li><a href="https://canvas.utwente.nl/courses/6720">September–November 2020</a>;
-					coordinator: Robert Deckers; my role: support</li>
+					coordinator: Robert Deckers; my role: support; cases: CopyCopy, Scandoo</li>
 					<li><a href="https://canvas.utwente.nl/courses/8337">September–November 2021</a>;
-					my role: coordinator</li>
+					my role: coordinator; cases: Bingr, Parqueen, Walkmarkt</li>
 				</ul>
 			</li>
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>

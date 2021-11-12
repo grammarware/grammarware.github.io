@@ -101,6 +101,8 @@
 			<li>Ewoud Bouman. Testing COBOL Compilers using Metamorphic Relations. January–August 2019. Hosted by <a href="https://www.raincodelabs.com/">Raincode Labs</a>. Co-supervised with Clemens Grelck and Johan Fabry.</li>
 			<li>Aynel Gül. <a href="http://grammarware.net/edits/#Gul2019">Testing HLASM Compilers with a Mutative Fuzzing Approach</a>. January–October 2019. Hosted by <a href="https://www.raincodelabs.com/">Raincode Labs</a>. Co-supervised with Clemens Grelck.</li>
 			<li>Felix Barten. <a href="http://grammarware.net/edits/#Barten2020">Python Code Smell Analysis. Finding Hidden Code Smells</a>. January 2018 – May 2020. <a class="red" href="https://github.com/grammarhoard/2015-vavrova-2020-barten-smells-python">(Java code)</a> <a class="red" href="https://github.com/grammarhoard/2020-barten-smells-java">(Rascal code)</a></li>
+			<li>Alberto Martínez de Murga Ramirez. <a href="http://grammarware.net/edits/#Ramirez2021">Dead Code Detectionon Strict ECMAScript 6 Projects</a>. January 2017 – August 2021. <a class="red" href="https://github.com/threkk/prune.js">(TS code)</a></li>
+			<li>Eric van der Woude. <a href="http://grammarware.net/edits/#Woude2021">Retargeting a Compiler for a Different Platform</a>. January–November 2021. Co-supervised with Johan Fabry.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -129,6 +131,7 @@
 					<li><a href="https://studiegids.uva.nl/xmlpages/page/2018-2019/zoek-vak/vak/62679">November – December 2018</a>; coordinator: Riemer van Rozen; my role: guest lecturer</li>
 					<li><a href="https://studiegids.uva.nl/xmlpages/page/2019-2020/zoek-vak/vak/72634">November – December 2019</a>; coordinator: Riemer van Rozen; my role: guest lecturer</li>
 					<li><a href="https://studiegids.uva.nl/xmlpages/page/2020-2021/zoek-vak/vak/79025">November – December 2020</a>; coordinator: Riemer van Rozen; my role: guest lecturer</li>
+					<li><a href="https://studiegids.uva.nl/xmlpages/page/2021-2022/zoek-vak/vak/88818">November – December 2021</a>; coordinator: Thomas van Binsbergen; my role: guest lecturer</li>
 				</ul>
 			</li>
 			<li class="title">Software Construction
@@ -172,8 +175,6 @@
 		<ul>
 			<li>Carlos Cirello Filho (unparsing and versioning)</li>
 			<li>Yoan-Alexander Grigorov (domain-driven design)</li>
-			<li>Alberto Martinez de Murga Ramirez (codebase analysis)</li>
-			<li>Eric van der Woude (compiler replatforming)</li>
 		</ul>
 		<footer/>
 	</body>

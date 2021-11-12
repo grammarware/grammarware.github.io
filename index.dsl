@@ -87,13 +87,6 @@
 			<text>an industrial PhD project with UCL and VUB (2020–2023)</text>
 		</pic>
 		<pic>
-			<a>http://soft.vub.ac.be/intimals/index.html</a>
-			<img>intimals.png</img>
-			<alt>INTelligent Modernisation Assistance for Legacy Software</alt>
-			<title>INTiMALS</title>
-			<text>an academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
-		</pic>
-		<pic>
 			<a>http://cocodo.github.io/</a>
 			<img>cocodo.200.png</img>
 			<title>Raincode Labs Compiler Coding Dojo</title>
@@ -150,6 +143,13 @@
 			<title>Keeping in touch with the web-enabled active part of the scientific community</title>
 			<name>Twitter</name>
 			<text>keeping in touch with the research community (2007–…)</text>
+		</pic>
+		<pic dim>
+			<a>http://soft.vub.ac.be/intimals/index.html</a>
+			<img>intimals.png</img>
+			<alt>INTelligent Modernisation Assistance for Legacy Software</alt>
+			<title>INTiMALS</title>
+			<text>an academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
 		</pic>
 		<pic dim>
 			<a>uva</a>

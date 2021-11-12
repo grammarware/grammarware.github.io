@@ -40,6 +40,13 @@
 		<h2 help="latest first">Publications / presentations</h2>
 		<ul>
 			<li>
+				Céline Deknop, Kim Mens, Alexandre Bergel, Johan Fabry, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#LogDiff2021">A Scalable Log Differencing Visualisation Applied to COBOL Refactoring</a></em>, a research paper at <a href="https://vissoft.info/2021/program.html">VISSOFT</a>, 2021. 12 pages.
+				<ul style="list-style-type:none;">
+					<li><a href="https://doi.org/10.1109/VISSOFT52517.2021.00010"><code>doi:10.1109/VISSOFT52517.2021.00010</code></a> <a href="http://grammarware.net/bib/LogDiff2021.bib">(BibTeX)</a></li>
+				</ul>
+			</li>
+			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff2020">Improving Software Modernisation Process by Differencing Migration Logs</a></em>, an Industry Track paper at <a href="https://softeng.polito.it/profes2020/">PROFES</a>, 2020. 16 pages.
 				<ul style="list-style-type:none;">
 					<li><a href="https://doi.org/10.1007/978-3-030-64148-1_17"><code>doi:10.1007/978-3-030-64148-1_17</code></a> <a href="http://grammarware.net/bib/LogDiff2020.bib">(BibTeX)</a></li>

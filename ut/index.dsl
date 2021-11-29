@@ -79,10 +79,19 @@
 				<ul>
 					<li><u>September 2020 – September 2021</u>;
 					my role: supervisor of <strong>Pieter Staal</strong> on the topic “Electronic Circuit Composition in Haskell using Category Theory” <a href="https://arxiv.org/abs/1803.05316" class="red">(Fong-Spivak)</a></li>
-					<li><u>since April 2020</u>;
-					my role: supervisor of <strong>Famke Driessen</strong> on the topic concerning language migration</li>
+					<!-- <li><u>since April 2020</u>; -->
+					<!-- my role: supervisor of <strong>Famke Driessen</strong> on the topic concerning language migration</li> -->
 				</ul>
 			</li>
+		</ul>
+		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
+		<ul>
+			<li class="dim">Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li><!-- March 2021 -->
+			<li>Famke Driessen (MSc Capita Selecta): language migration</li><!-- April 2021 -->
+			<li>Daan Oosterveld (MSc Individual Minor): compiler project</li><!-- November 2021 -->
+			<li>Arthur Rump (MSc Research Topics): Apollo++</li><!-- November 2021 -->
+			<li>Ivo Broekhof (BSc Final Project): <a href="https://github.com/grammarware/project/blob/main/bsc/Ambiguous_Regular_Expressions.md">Ambiguous Regular Expressions</a></li><!-- November 2021 -->
+			<li>Gerk-Jan Huisma (BSc Final Project): <a href="https://github.com/grammarware/project/blob/main/bsc/Islands_All_the_Way_Down.md">Islands All the Way Down</a></li><!-- November 2021 -->
 		</ul>
 		<footer/>
 	</body>

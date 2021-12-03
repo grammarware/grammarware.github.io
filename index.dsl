@@ -38,7 +38,7 @@
 			<img>oopsle.200.png</img>
 			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
 			<name>OOPSLE</name>
-			<text>a workshop about open and original problems in SLE (2013–…)</text>
+			<text>a workshop about open and original problems in SLE (2013–2020)</text>
 		</pic>
 		<pic>
 			<a>http://bibtex.github.io/</a>
@@ -91,7 +91,7 @@
 			<img>cocodo.200.png</img>
 			<title>Raincode Labs Compiler Coding Dojo</title>
 			<name>RCL CoCoDo</name>
-			<text>bridging academic ‹Programming› with the industry (2017–2019)</text>
+			<text>bridging academic ‹Programming› with the industry (2017–2021)</text>
 		</pic>
 		<pic>
 			<a>gttse</a>

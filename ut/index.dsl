@@ -45,6 +45,7 @@
 			<li>(BSc) Ruiyuan Li. <a href="http://grammarware.net/edits/index.html#Li2021">Generative Probabilistic Programming in Games: Creating Character Backgrounds Using a Bayesian Network</a>. April–July 2021. Co-supervised with Marcus Gerhold.</li>
 			<li>(MSc) Rick H. de Vries. <a href="http://grammarware.net/edits/index.html#Vries2021">Clash of Clangs: Differential Testing of srcML and Clang</a>. October 2020 – July 2021.</li>
 			<li>(MSc) Bui Hong Thien Nhat. <a href="http://grammarware.net/edits/index.html#Bui2021">Negomancer: Improvise. Adapt. Overcome. Transform</a>. November 2020 – September 2021.</li>
+			<li>(BSc) Ivo Broekhof. <a href="http://grammarware.net/edits/index.html#Broekhof2022">Replication and Analysis of the Berry-Sethi Parser for Ambiguous Regular Expressions</a>. November 2021 – February 2022.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -59,6 +60,8 @@
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
 				<ul>
 					<li><a href="https://canvas.utwente.nl/courses/7873">February–April 2021</a>;
+					my role: coordinator</li>
+					<li><a href="https://canvas.utwente.nl/courses/9449">February–April 2022</a>;
 					my role: coordinator</li>
 				</ul>
 			</li>
@@ -90,7 +93,6 @@
 			<li>Famke Driessen (MSc Capita Selecta): language migration</li><!-- April 2021 -->
 			<li>Daan Oosterveld (MSc Individual Minor): compiler project</li><!-- November 2021 -->
 			<li>Arthur Rump (MSc Research Topics): Apollo++</li><!-- November 2021 -->
-			<li>Ivo Broekhof (BSc Final Project): <a href="https://github.com/grammarware/project/blob/main/bsc/Ambiguous_Regular_Expressions.md">Ambiguous Regular Expressions</a></li><!-- November 2021 -->
 			<li>Gerk-Jan Huisma (BSc Final Project): <a href="https://github.com/grammarware/project/blob/main/bsc/Islands_All_the_Way_Down.md">Islands All the Way Down</a></li><!-- November 2021 -->
 		</ul>
 		<footer/>

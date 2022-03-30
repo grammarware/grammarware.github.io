@@ -77,6 +77,11 @@
 					<li><a href="https://canvas.utwente.nl/courses/8568">September–November 2021</a>;
 					my role: guiding one group; people involved: Aamir Farooq, Andrei Raureanu, Bozhidar Velinov, Julián Navarro Di Pasquale</li>
 				</ul>
+				<ul>
+					<li><a href="https://canvas.utwente.nl/courses/9638">February–April 2022</a>;
+					my role: guiding one group; people involved: Boris Belchev, Pavel Hristov, Viktor Tonchev, Ivan Trendafilov, Irvine Verio</li>
+				</ul>
+				
 			</li>
 			<li class="title">Capita Selecta
 				<ul>
@@ -94,6 +99,8 @@
 			<li>Daan Oosterveld (MSc Individual Minor): compiler project</li><!-- November 2021 -->
 			<li>Arthur Rump (MSc Research Topics): Apollo++</li><!-- November 2021 -->
 			<li>Gerk-Jan Huisma (BSc Final Project): <a href="https://github.com/grammarware/project/blob/main/bsc/Islands_All_the_Way_Down.md">Islands All the Way Down</a></li><!-- November 2021 -->
+			<li class="dim">Andrei Popa (MSc Research Topics): <em>Dynamic Difficulty Adjustment of Procedural Content Generation</em> — co-supervised with Marcus Gerhold and Robby van Delden</li><!-- March 2022 -->
+			<li>Max Hendriks (MSc Research Topics): <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
 		</ul>
 		<footer/>
 	</body>

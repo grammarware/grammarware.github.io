@@ -3,6 +3,15 @@
 
 import glob, re, datetime
 
+def prg2full(x):
+	if x == 'CS':
+		return f'<abbr title="Computer Science">CS</abbr>'
+	if x == 'EE':
+		return f'<abbr title="Electrical Engineering">EE</abbr>'
+	if x == 'EmSys':
+		return f'<abbr title="Embedded Systems">EmSys</abbr>'
+	return x
+
 # Header Counter
 p = re.compile('<(?P<tag>\w+)>(?P<txt>[^\<]+)</(?P=tag)+>')
 d = ('Zeroary', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',\
@@ -426,9 +435,23 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 					if 'pre' in pic.keys():
 						g.write('<code>' + pic['pre'].replace(' ', '&nbsp;').replace('\n', '<br/>') + '</code>')
 					g.write('</span></div>\n')
+		elif lines[i].find('<bsc/>') > -1:
+			g.write(lines[i].replace('<bsc/>', '<abbr title="Technical Computer Science">TCS</abbr> <abbr title="Bachelor of Science Research Project">BSc</abbr>'))
+		elif lines[i].find('<msc/>') > -1:
+			g.write(lines[i].replace('<msc/>', '<abbr title="Computer Science">CS</abbr> <abbr title="Master of Science Final Project">MSc</abbr>'))
+		elif lines[i].find('<capita>') > -1:
+			tmp = lines[i].split('capita>')
+			tmp[1] = prg2full(tmp[1][:-2])[1:] + ' <abbr title="Capita Selecta">CS</abbr>'
+			g.write(''.join(tmp))
+		elif lines[i].find('<iminor>') > -1:
+			tmp = lines[i].split('iminor>')
+			tmp[1] = prg2full(tmp[1][:-2])[1:] + ' <abbr title="Individual Minor">IM</abbr>'
+			g.write(''.join(tmp))
 		elif lines[i].find('#LASTMOD#') > -1:
 			g.write(lines[i].replace('#LASTMOD#', d))
 		else:
 			g.write(lines[i])
 		i += 1
 	g.close()
+
+

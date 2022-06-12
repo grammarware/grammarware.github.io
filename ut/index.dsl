@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
 	<head jquery title="Dr. Vadim Zaytsev — (under)graduate programme in Computer Science" />
 	<body>
 		<header/>
 		<h1>
 			<a href="https://www.utwente.nl/en/tcs/">Technical Computer Science</a> (Bachelor) and <br/><a href="https://www.utwente.nl/en/csc/">Computer Science</a> (Master) programmes at the <a href="https://www.utwente.nl/">UT</a>
-			<img src="../logos/utwente.200.png" alt="UT TCS BSc+MSc" title="This is a legacy logo of UT that was valid back when I was studying"/></a>
+			<img src="../logos/utwente.200.png" alt="UT TCS BSc+MSc" title="This is a legacy logo of UT that was valid back when I was studying"/>
 		</h1>
 		<hr/>
 		<p>
@@ -30,6 +29,9 @@
 			<li>From June 2021, I am responsible for introducing Numerus Fixus for BSc TCS.
 				<a href="https://www.utoday.nl/news/70020/numerus-fixus-also-for-technical-computer-science" class="red">(U-Today)</a>
 				<a href="https://www.utwente.nl/en/news/2021/10/121615/enrolment-restrictions-for-technical-computer-science" class="red">(UT News)</a>
+				<a href="https://www.utoday.nl/news/70061/we-see-the-need-for-a-numerus-fixus" class="red">(U-Today)</a>
+				<a href="https://www.utoday.nl/opinion/71491/toegankelijkheid-numerus-fixus-studies-in-gevaar" class="red">(U-Today)</a>
+			</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
@@ -69,15 +71,15 @@
 					<li><a href="https://canvas.utwente.nl/courses/6720">September–November 2020</a>;
 					coordinator: Robert Deckers; my role: support; cases: CopyCopy, Scandoo</li>
 					<li><a href="https://canvas.utwente.nl/courses/8337">September–November 2021</a>;
-					my role: coordinator; cases: Bingr, Parqueen, Walkmarkt</li>
+					my role: coordinator, teacher; cases: Bingr, Parqueen, Walkmarkt</li>
 				</ul>
 			</li>
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
 				<ul>
 					<li><a href="https://canvas.utwente.nl/courses/7873">February–April 2021</a>;
-					my role: coordinator</li>
+					my role: coordinator, teacher</li>
 					<li><a href="https://canvas.utwente.nl/courses/9449">February–April 2022</a>;
-					my role: coordinator</li>
+					my role: coordinator, teacher</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Software Systems

@@ -40,6 +40,15 @@
 		<h2 help="latest first">Publications / presentations</h2>
 		<ul>
 			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#Semiparsing2022">Generating Customised Control-Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, an industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. 10 pages.
+				<!-- 
+				<ul style="list-style-type:none;">
+					<li><a href="https://doi.org/?"><code>doi:?</code></a> <a href="http://grammarware.net/bib/Semiparsing2022.bib">(BibTeX)</a></li>
+				</ul>
+				 -->
+			</li>
+			<li>
 				Céline Deknop, Kim Mens, Alexandre Bergel, Johan Fabry, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#LogDiff2021">A Scalable Log Differencing Visualisation Applied to COBOL Refactoring</a></em>, a research paper at <a href="https://vissoft.info/2021/program.html">VISSOFT</a>, 2021. 12 pages.
 				<ul style="list-style-type:none;">

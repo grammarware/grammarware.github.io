@@ -63,6 +63,17 @@
 				<a class="red" href="https://github.com/brokhiv/bsp-kotlin">(code)</a></li>
 			<li>(<iminor>EE</iminor>) Daan Martin Oosterveld, <em>Creating a C compiler 50 years after C using Rust and procedural macros</em>. November 2021 – February 2022.
 				<a class="red" href="https://github.com/lotrbuilders/Compiler-Project">(code)</a></li>
+			<li>(<bsc/>) Yujie Liu, <a href="http://grammarware.net/edits/index.html#Liu2022">Help Rich Info Get Richer: Enriching a Semi-structured Dataset using a Semantic Web Approach</a>. April–July 2022. Co-supervised with Sophie Lathouwers.</li>
+			<li>(<bsc/>) Cato de Kruif, <a href="http://grammarware.net/edits/index.html#Kruif2022">Using 𝛿-NFGs to Identify and Eliminate Dead Code in C# Programs</a>. April–July 2022.</li>
+			<li>(<bsc/>) Gerk-Jan Huisma, <a href="http://grammarware.net/edits/index.html#Huisma2022">Recursive Island Parsing: Monadic Lake Parser Combinators</a>. November 2021 – July 2022.</li>
+			<li>(<bsc/>) Jelle Hulter, <a href="http://grammarware.net/edits/index.html#Hulter2022">Improving the Integrated Development Environment of a Legacy Software Platform</a>. April–July 2022.</li>
+			<li>(<bsc/>) Tom Meulenkamp, <a href="http://grammarware.net/edits/index.html#Meulenkamp2022">Parser Benchmarking for Legacy Languages</a>. April–July 2022.</li>
+			<li>(<bsc/>) Luc Timmerman, <a href="http://grammarware.net/edits/index.html#Timmerman2022">Performance Testing Owl, Parser Generator for Visibly Pushdown Grammars</a>. April–July 2022.</li>
+			<li>(<bsc/>) Mark van Wijk, <a href="http://grammarware.net/edits/index.html#Wijk2022">The Quest for the Best Thread-Safe Java List</a>. April–July 2022.</li>
+			<li>(<bsc/>) Leonardo Pasquarelli, <a href="http://grammarware.net/edits/index.html#Pasquarelli2022">Extending Java Collections for List and Set Data Structures</a>. January–July 2022.</li>
+			<li>(<bsc/>) Berke Güdücü, <a href="http://grammarware.net/edits/index.html#Guducu2022">Weighted Abstract Syntax Trees for Program Comprehension in Java</a>. April–July 2022. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Wouter van den Brink, <a href="http://grammarware.net/edits/index.html#Brink2022">Weighed and Found Legacy: Modernity Signatures for PHP Systems Using Static Analysis</a>. April–July 2022. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Aron Davids, <a href="http://grammarware.net/edits/index.html#Davids2022">Identifying Plot Holes in Narrative Stories by Simulating Events</a>. April–July 2022.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -114,19 +125,8 @@
 			<li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li><!-- March 2021 -->
 			<li>(<capita>CS</capita>) Famke Driessen: language migration</li><!-- April 2021 -->
 			<li>(<msc/>) Arthur Rump: Apollo++</li><!-- November 2021 -->
-			<li>(<bsc/>) Gerk-Jan Huisma: <a href="https://github.com/grammarware/project/blob/main/bsc/Islands_All_the_Way_Down.md">Recursive Island Parsing: Feasibility of Lake Parser Combinators</a></li><!-- November 2021 -->
 			<li class="dim">(<msc/>) Andrei Popa: <em>Dynamic Difficulty Adjustment of Procedural Content Generation</em> — co-supervised with Marcus Gerhold and Robby van Delden</li><!-- March 2022 -->
 			<li>(<msc/>) Max Hendriks: <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
-			<li>(<bsc/>) Leonardo Pasquarelli, <em>Extending Java Collections for the List and Set Interface</em></li><!-- January 2021 -->
-			<li>(<bsc/>) Mark van Wijk, <em>The Quest for the Best Thread-Safe Java List</em></li><!-- April 2021 -->
-			<li class="dim">(<bsc/>) Wouter van den Brink, <em>Weighed and Found Legacy</em> — co-supervised with Marcus Gerhold</li><!-- April 2021 -->
-			<li>(<bsc/>) Tom Meulenkamp, <em>Parser Benchmarking for Legacy Languages</em></li><!-- April 2021 -->
-			<li>(<bsc/>) Aron Davids, <em>Timeline Verifier</em></li><!-- April 2021 -->
-			<li class="dim">(<bsc/>) Berke Güdücü, <em>Weighted Grammars Based on Usage Statistics for Test Generation in Java</em> — co-supervised with Marcus Gerhold</li><!-- April 2021 -->
-			<li>(<bsc/>) Jelle Hulter, <em>Improving OpenEdge tooling</em></li><!-- April 2021 -->
-			<li>(<bsc/>) Luc Timmerman, <em>Creating a more easily understandable implementation of VPL parser generators</em></li><!-- April 2021 -->
-			<li class="dim">(<bsc/>) Yujie Liu, <em>Help Rich Info Get Richer</em> — co-supervised with Sophie Lathouwers</li><!-- April 2021 -->
-			<li>(<bsc/>) Cato de Kruif, <em>Using δNFGs to identify and eliminate dead code in C# programs</em></li><!-- April 2021 -->
 			<li>(<msc/>) Marnick van der Arend, <em>Scala code quality metrics</em></li><!-- May 2021 -->
 			<li>(<msc/>) Hessel Akkerman, <em>Architecture design with Blazor</em></li><!-- May 2021, +internship? -->
 		</ul>

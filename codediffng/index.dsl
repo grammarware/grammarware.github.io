@@ -41,6 +41,15 @@
 		<ul>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#TraceEq2022">Visualising CFG Differences Through Trace Equivalence </a></em>, a workshop presentation abstract at <a href="https://benevol2022.github.io/">BENEVOL</a>, 2022. 2 pages.
+				<!-- 
+				<ul style="list-style-type:none;">
+					<li><a href="https://doi.org/?"><code>doi:?</code></a> <a href="http://grammarware.net/bib/Semiparsing2022.bib">(BibTeX)</a></li>
+				</ul>
+				 -->
+			</li>
+			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#Semiparsing2022">Generating Customised Control-Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, an industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. 10 pages.
 				<!-- 
 				<ul style="list-style-type:none;">

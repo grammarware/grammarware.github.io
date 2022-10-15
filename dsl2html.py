@@ -30,8 +30,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	lines = f.readlines()
 	f.close()
 	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
-	if not lines[0].startswith('<?xml '):
-		g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+	# if not lines[0].startswith('<?xml '):
+	# 	g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
 	i = 0
 	paper = False
 	resolver = {}
@@ -164,8 +164,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		</script>
 		<script src="../jquery.min.js" type="text/javascript"></script>'''
 			g.write('''	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<meta http-equiv="x-ua-compatible" content="IE=9"/>{}
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>{}
 		<title>{}</title>
 		<link href="{}common.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
@@ -185,8 +185,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		if lines[i].strip() == '<header/>':
 			lines[i] = '<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>'
 		if lines[i].strip() == '<html doctype>':
-			lines[i] = '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd">
+			lines[i] = '''<!doctype html><html lang="en">
 '''
 		if lines[i].strip() == '<valid/>':
 			if imgdir == '':

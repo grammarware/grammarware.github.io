@@ -36,26 +36,39 @@
 			<li><a href="https://www.linkedin.com/posts/raincode-labs_caught-a-glimpse-of-the-first-meeting-for-activity-6631177052420734976-qol7">LinkedIn: Caught a glimpse of the first meeting for the CodeDiffNG project...</a></li>
 			<li><a href="https://twitter.com/RaincodeLabs/status/1225411351071330304">Twitter: Caught a glimpse of the first meeting for the CodeDiffNG project...</a></li>
 			<li><a href="https://uclouvain.be/en/research-institutes/icteam/news/applied-phd-funding.html">UCL: Innoviris Applied PhD funding for Kim Mens</a></li>
+			<li><a href="https://www.linkedin.com/posts/raincode-labs_icsme22-parsing-compiler-activity-6983682079037267968-We8O">LinkedIn: Céline Deknop presenting her paper on generating CFGs for legacy languages with semi-parsing…</a></li>
 		</ul>
-		<h2 help="latest first">Publications / presentations</h2>
+		<h2 help="latest first">Deliverables</h2>
 		<ul>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
-				<em><a href="http://grammarware.net/writes/#TraceEq2022">Visualising CFG Differences Through Trace Equivalence </a></em>, a workshop presentation abstract at <a href="https://benevol2022.github.io/">BENEVOL</a>, 2022. 2 pages.
-				<!-- 
-				<ul style="list-style-type:none;">
-					<li><a href="https://doi.org/?"><code>doi:?</code></a> <a href="http://grammarware.net/bib/Semiparsing2022.bib">(BibTeX)</a></li>
-				</ul>
-				 -->
+				<em><a href="https://zenodo.org/record/6806075">Generating Customised Control Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, a software artefact accompanying the industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. <strong>Best Artefact Award</strong>.
+				Zenodo ID <a href="https://zenodo.org/record/6806075">6806075</a>.
 			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
-				<em><a href="http://grammarware.net/writes/#Semiparsing2022">Generating Customised Control-Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, an industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. 10 pages.
-				<!-- 
+				<em><a href="https://cyprusconferences.org/icsme2022/scientific-program/">Artefact accompanying paper 1967</a></em>, Recognizing and Rewarding Open Science in SE (ROSE) festival, 5 October 2022.
+			</li>
+			<li>
+				Wouter van den Brink, Marcus Gerhold, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#Modernity2022">Deriving Modernity Signatures for PHP Systems with Static Analysis</a></em>, a NIER track paper at <a href="http://www.ieee-scam.org/2022/">SCAM</a>, 2022. 5 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="https://doi.org/?"><code>doi:?</code></a> <a href="http://grammarware.net/bib/Semiparsing2022.bib">(BibTeX)</a></li>
+					<li><a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> <a href="http://grammarware.net/bib/Modernity2022.bib">(BibTeX)</a></li>
 				</ul>
-				 -->
+			</li>
+			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#TraceEq2022">Visualising CFG Differences Through Trace Equivalence</a></em>, a workshop presentation abstract at <a href="https://benevol2022.github.io/">BENEVOL</a>, 2022. 2 pages.
+				<ul style="list-style-type:none;">
+					<li><a href="https://benevol2022.github.io/papers/CelineDeknop.pdf"><code>benevol2022:CelineDeknop</code></a> <a href="http://grammarware.net/bib/TraceEq2022.bib">(BibTeX)</a></li>
+				</ul>
+			</li>
+			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#SemiCfg2022">Generating Customised Control-Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, an industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. 10 pages.
+				<ul style="list-style-type:none;">
+					<li><a href="https://doi.org/10.1109/ICSME55016.2022.00072"><code>doi:10.1109/ICSME55016.2022.00072</code></a> <a href="http://grammarware.net/bib/SemiCfg2022.bib">(BibTeX)</a></li>
+				</ul>
 			</li>
 			<li>
 				Céline Deknop, Kim Mens, Alexandre Bergel, Johan Fabry, Vadim Zaytsev.
@@ -71,7 +84,7 @@
 				</ul>
 			</li>
 			<li>
-				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff-SATToSE2020">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a wip paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff-SATToSE2020">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a WIP paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
 				<ul style="list-style-type:none;">
 					<li><a href="http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf"><code>sattose2000:paper6</code></a> <a href="http://grammarware.net/bib/LogDiff-SATToSE2020.bib">(BibTeX)</a></li>
 				</ul>

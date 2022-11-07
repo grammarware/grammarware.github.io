@@ -37,7 +37,22 @@
 		<ul>
 			<li><a href="https://github.com/slimshadyiam">Aamir Farooq</a>, Vadim Zaytsev. <em>There Is More Than One Way to Zen Your Python</em>, SLE 2021, pp. 68–82, ACM.
 				<a class="red" href="https://slimshadyiam.github.io/ZenYourPython/#/">(project page)</a>
-				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a></li>
+				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
+			</li>
+			<li><a href="https://github.com/marnickvda/">Marnick van der Arend</a>.
+				<em>Language-Agnostic Multi-Paradigm Code Quality Assurance Framework</em>, BENEVOL 2022. CEUR 3245.
+				<a class="red" href="https://benevol2022.github.io/papers/MarnickVanDerArend.pdf">(PDF)</a>
+				<a class="red" href="https://ceur-ws.org/Vol-3245/paper5.pdf">(CEUR)</a>
+			</li>
+			<li><a href="https://woutervdb.com/">Wouter van den Brink</a>, Marcus Gerhold, Vadim Zaytsev.
+				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, SCAM 2022, pp. 181–185, IEEE.
+				<a class="red" href="https://github.com/WoutervdBrink/PHP-Modernity-Signature">(code)</a>
+				<a class="red" href="https://doi.org/10.1109/SCAM55253.2022.00027">(DOI)</a>
+			</li>
+			<li><a href="https://www.arthurrump.com/">Arthur Rump</a>, Marcus Gerhold, Vadim Zaytsev.
+				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, EduSymp 2022, pp. 115–122, ACM.
+				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
+			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>

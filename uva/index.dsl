@@ -26,7 +26,7 @@
 			<li>Starting from February 2016, I am only involved in the programme as a remote supervisor and sympathiser.</li>
 			<li>In August 2016, I was asked to run a summer school in Compiler Construction for premaster students.</li>
 			<li>In November 2016, November 2017 and November 2018, I represented <a href="http://www.raincodelabs.com/">Raincode Labs</a> at the Thesis Fair. <a href="https://twitter.com/grammarware/status/801747539146014720">I brought dragons</a>.</li>
-			<li>On 14 December 2016, 13 December 2017, 12 December 2018 and 9 December 2019, I have given guest lectures for Software Evolution, a course I used to give.</li>
+			<li>On 14 December 2016, 13 December 2017, 12 December 2018, 9 December 2019, 30 November 2020, 29 November 2021 and 28 November 2022 I have given guest lectures for Software Evolution, a course I used to give.</li>
 			<li>In February and March 2018, I was asked to give the last edition of the Software Construction course as an external lecturer. Starting from 2019, the course has been replaced by a course on <a href="https://studiegids.uva.nl/xmlpages/page/2018-2019/zoek-vak/vak/63471">DevOps</a>. The original designer of the Software Construction course moved to Groningen and reformed it into a course on <a href="https://www.rug.nl/staff/t.van.der.storm/teaching">Software Language Engineering</a>.</li>
 			<li>I have attended yearly graduation ceremonies on 8 October 2014, 21 October 2015, 18 October 2016, 17 October 2017, 27 November 2018, 8 October 2019 and 20 January 2021, congratulating successfully graduated students with personal speeches because all of them were awesome.</li>
 			<li>Since 1 March 2020 I am a member of the examination committee of MSc SE.</li>
@@ -132,6 +132,7 @@
 					<li><a href="https://studiegids.uva.nl/xmlpages/page/2019-2020/zoek-vak/vak/72634">November – December 2019</a>; coordinator: Riemer van Rozen; my role: guest lecturer</li>
 					<li><a href="https://studiegids.uva.nl/xmlpages/page/2020-2021/zoek-vak/vak/79025">November – December 2020</a>; coordinator: Riemer van Rozen; my role: guest lecturer</li>
 					<li><a href="https://studiegids.uva.nl/xmlpages/page/2021-2022/zoek-vak/vak/88818">November – December 2021</a>; coordinator: Thomas van Binsbergen; my role: guest lecturer</li>
+					<li><a href="https://studiegids.uva.nl/xmlpages/page/2022-2023/zoek-vak/vak/98306">November – December 2022</a>; coordinator: Thomas van Binsbergen; my role: guest lecturer</li>
 				</ul>
 			</li>
 			<li class="title">Software Construction

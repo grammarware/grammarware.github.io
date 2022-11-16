@@ -67,7 +67,7 @@
 				<a class="red" href="https://github.com/EwoutWal/ANTLR-Extractor/">(code)</a></li>
 			<li>(<bsc/>) Frank Groeneveld. <a href="http://grammarware.net/edits/index.html#Groeneveld2021">Benchmarking and Optimisation of <em>Engage!</em>-based XML Parsers</a>. November 2020 – January 2021.</li>
 			<li>(<bsc/>) Michael Mulder. <a href="http://grammarware.net/edits/index.html#Mulder2021">Creating a Compiler for the Semi-Structured Language of Blazons</a>. November 2020 – January 2021.</li>
-			<li>(<capita>EmSys</capita>) Pieter Staal, <a href="http://grammarware.net/edits/index.html#Staal2021">Electronic Circuit Composition in Haskell using Category Theory</a>. September 2020 – June 2021.</li>
+			<li>(<capita>EmSys</capita>) Pieter Staal, <a href="http://grammarware.net/edits/index.html#Staal2021">Electronic Circuit Composition in Haskell using Category Theory</a>. September 2020 – June 2021. <a href="https://arxiv.org/abs/1803.05316" class="red">(book)</a></li>
 			<li>(<bsc/>) Aamir Farooq. <a href="http://grammarware.net/edits/index.html#Farooq2021">How to Zen Your Python</a>. April–July 2021. Best Paper Award at <a href="https://sites.google.com/utwente.nl/tscit35/">TScIT35</a>.</li>
 			<li>(<bsc/>) Marten Voorberg. <a href="http://grammarware.net/edits/index.html#Voorberg2021">Performance Analysis of Membership Data Structures for Integers in Java</a>. April–July 2021.</li>
 			<li>(<bsc/>) Jan Douwe Beekman. <a href="http://grammarware.net/edits/index.html#Beekman2021">Procedural Location Generation with Weighted Attribute Grammars</a>. April–July 2021. Co-supervised with Marcus Gerhold.</li>
@@ -98,6 +98,8 @@
 					coordinator: Robert Deckers; my role: support; cases: CopyCopy, Scandoo</li>
 					<li><a href="https://canvas.utwente.nl/courses/8337">September–November 2021</a>;
 					my role: coordinator, teacher; cases: Bingr, Parqueen, Walkmarkt</li>
+					<li><a href="https://canvas.utwente.nl/courses/11270">September–November 2022</a>;
+					my role: coordinator, teacher; cases: Wellerness, TurboWorkbench, COBOL-FIT</li>
 				</ul>
 			</li>
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
@@ -113,27 +115,21 @@
 					<li><a href="https://canvas.utwente.nl/courses/7181">November 2020 – January 2021</a>; coordinator: Tom van Dijk; my role: course redesign, all microlectures for the Design half, some microlectures for the Programming part, corresponding Q&amp;A sessions; people involved: Faizan Ahmed, Maarten Everts, Marcus Gerhold, Marieke Huisman, Ömer Şakar, Yeray Barrios Fleitas
 					<a href="https://www.inter-actief.utwente.nl/news/456/2021/4/12/idea-results/" class="red">(IDEA)</a></li>
 					<li><a href="https://canvas.utwente.nl/courses/9233">November 2021 – January 2022</a>; coordinator: Tom van Dijk; my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures; people involved: Faizan Ahmed, Maarten Everts, Marcus Gerhold, Marieke Huisman, Peter Lammich, Ömer Şakar, Yeray Barrios Fleitas</li>
+					<li><a href="https://canvas.utwente.nl/courses/10839">November 2022 – January 2023</a>; coordinator: Tom van Dijk; my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures; people involved: Faizan Ahmed, Georgiana Caltais, Mohammed El-Hajj, Marcus Gerhold, Marieke Huisman, Peter Lammich, Iman Hemati Moghadam, Ömer Şakar, Reza Soltani, Mahboobeh Zangiabady</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Design Project
 				<ul>
 					<li><a href="https://canvas.utwente.nl/courses/8568">September–November 2021</a>;
 					my role: guiding one group; people involved: Aamir Farooq, Andrei Raureanu, Bozhidar Velinov, Julián Navarro Di Pasquale</li>
-				</ul>
-				<ul>
 					<li><a href="https://canvas.utwente.nl/courses/9638">February–April 2022</a>;
 					my role: guiding one group; people involved: Boris Belchev, Pavel Hristov, Viktor Tonchev, Ivan Trendafilov, Irvine Verio</li>
+					<li><a href="https://canvas.utwente.nl/courses/10617">September–November 2022</a>;
+					my role: guiding one group; people involved: Samuel Coste, Hans Goor, Tim Koree, Ronan Oostveen, Reinout Vos</li>
 				</ul>
 				
 			</li>
-			<li class="title">Capita Selecta
-				<ul>
-					<li><u>September 2020 – September 2021</u>;
-					my role: supervisor of <strong>Pieter Staal</strong> on the topic “Electronic Circuit Composition in Haskell using Category Theory” <a href="https://arxiv.org/abs/1803.05316" class="red">(Fong-Spivak)</a></li>
-					<!-- <li><u>since April 2020</u>; -->
-					<!-- my role: supervisor of <strong>Famke Driessen</strong> on the topic concerning language migration</li> -->
-				</ul>
-			</li>
+			<li class="title">Capita Selecta</li>
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
@@ -142,8 +138,18 @@
 			<li>(<msc/>) Arthur Rump: Apollo++</li><!-- November 2021 -->
 			<li class="dim">(<msc/>) Andrei Popa: <em>Dynamic Difficulty Adjustment of Procedural Content Generation</em> — co-supervised with Marcus Gerhold and Robby van Delden</li><!-- March 2022 -->
 			<li>(<msc/>) Max Hendriks: <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
-			<li>(<msc/>) Marnick van der Arend, <em>Scala code quality metrics</em></li><!-- May 2021 -->
-			<li>(<msc/>) Hessel Akkerman, <em>Architecture design with Blazor</em></li><!-- May 2021, +internship? -->
+			<li>(<msc/>) Marnick van der Arend, <em>Scala code quality metrics</em></li><!-- May 2022 -->
+			<li>(<msc/>) Hessel Akkerman, <em>Architecture design with Blazor</em></li><!-- May 2022, +internship? -->
+			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <em>ABI between BabyCobol and C/C++ with LLVM</em></li><!-- Sep 2022 -->
+			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
+			<li>(<msc/>) Ömer Sayilir, <em>Semi-parsing</em></li><!-- Nov 2022 -->
+			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Kristian Nedelchev, <em>Performance testing across languages</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Rutger Witmans: <em>Whitespace refactoring</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Pepijn Visser: <em>BibTeX transformation</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Michael Janssen: <em>Automate the automaton</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Bas Marcelis: <em>Automate the automatin</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Chris Admiraal: <em>Modernity of Python code</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022 -->
 		</ul>
 		<footer/>
 	</body>

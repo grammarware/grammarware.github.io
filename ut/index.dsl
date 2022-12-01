@@ -31,6 +31,7 @@
 				<a href="https://www.utwente.nl/en/news/2021/10/121615/enrolment-restrictions-for-technical-computer-science" class="red">(UT News)</a>
 				<a href="https://www.utoday.nl/news/70061/we-see-the-need-for-a-numerus-fixus" class="red">(U-Today)</a>
 				<a href="https://www.utoday.nl/opinion/71491/toegankelijkheid-numerus-fixus-studies-in-gevaar" class="red">(U-Today)</a>
+				<a href="https://www.utoday.nl/news/72234/over-de-groeiambities-van-de-ut-hele-regio-moet-meebewegen" class="red">(U-Today)</a>
 			</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
@@ -49,9 +50,10 @@
 				<a class="red" href="https://github.com/WoutervdBrink/PHP-Modernity-Signature">(code)</a>
 				<a class="red" href="https://doi.org/10.1109/SCAM55253.2022.00027">(DOI)</a>
 			</li>
-			<li><a href="https://www.arthurrump.com/">Arthur Rump</a>, Marcus Gerhold, Vadim Zaytsev.
+			<li><a href="https://www.arthurrump.com/">Arthur Rump</a>, Vadim Zaytsev.
 				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, EduSymp 2022, pp. 115–122, ACM.
 				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
+				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
@@ -147,9 +149,9 @@
 			<li>(<bsc/>) Kristian Nedelchev, <em>Performance testing across languages</em></li><!-- Nov 2022 -->
 			<li>(<bsc/>) Rutger Witmans: <em>Whitespace refactoring</em></li><!-- Nov 2022 -->
 			<li>(<bsc/>) Pepijn Visser: <em>BibTeX transformation</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Michael Janssen: <em>Automate the automaton</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Bas Marcelis: <em>Automate the automatin</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Chris Admiraal: <em>Modernity of Python code</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022 -->
+			<li>(<bsc/>) Michael Janssen: <em>Hybrid regular automata</em></li><!-- Nov 2022 -->
+			<li>(<bsc/>) Bas Marcelis: <em>Differential parsing of coloured nested words</em></li><!-- Nov 2022 -->
+			<li class="dim">(<bsc/>) Chris Admiraal: <em>Modernity of Python code</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022 -->
 		</ul>
 		<footer/>
 	</body>

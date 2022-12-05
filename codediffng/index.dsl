@@ -43,12 +43,18 @@
 		<ul>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
-				<em><a href="https://zenodo.org/record/6806075">Generating Customised Control Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, a software artefact accompanying the industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. <strong>Best Artefact Award</strong>.
+				<em><a href="https://zenodo.org/record/6806075">Generating Customised Control Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, a software artefact accompanying the industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022.
 				Zenodo ID <a href="https://zenodo.org/record/6806075">6806075</a>.
+				<ul style="list-style-type:none;">
+					<li><a href="best.jpg">Best Artefact Award</a></li>
+				</ul>
 			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
 				<em><a href="https://cyprusconferences.org/icsme2022/scientific-program/">Artefact accompanying paper 1967</a></em>, Recognizing and Rewarding Open Science in SE (ROSE) festival, 5 October 2022.
+				<ul style="list-style-type:none;">
+					<li><a href="http://web.archive.org/web/20221005124815/https://cyprusconferences.org/icsme2022/scientific-program/">(archived version of the conference website)</a></li>
+				</ul>
 			</li>
 			<li>
 				Wouter van den Brink, Marcus Gerhold, Vadim Zaytsev.

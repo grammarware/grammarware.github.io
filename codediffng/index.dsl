@@ -38,6 +38,7 @@
 			<li><a href="https://uclouvain.be/en/research-institutes/icteam/news/applied-phd-funding.html">UCL: Innoviris Applied PhD funding for Kim Mens</a></li>
 			<li><a href="https://www.linkedin.com/posts/raincode-labs_icsme22-parsing-compiler-activity-6983682079037267968-We8O">LinkedIn: Céline Deknop presenting her paper on generating CFGs for legacy languages with semi-parsing…</a></li>
 			<li><a href="https://www.linkedin.com/posts/raincode-labs_the-work-of-celine-one-of-us-won-the-best-activity-6991711036823191552-75dk">The work of Celine (one of us) won the best artefact award at the ICSME 2022</a></li>
+			<li><a href="https://www.utwente.nl/en/eemcs/fmt/news-events/news/2022/12/364384/best-artefact-award-at-icsme-2022">Best Artefact Award at ICSME 2022 for Vadim Zaytsev, among others</a></li>
 		</ul>
 		<h2 help="latest first">Deliverables</h2>
 		<ul>

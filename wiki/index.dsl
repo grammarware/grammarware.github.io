@@ -6,6 +6,12 @@
 		<p>I am somewhat active on Wikipedia and other WMF projects since 2004, preferably writing entire articles in one mega-edit summarising the work of days, if not weeks. Articles linked below are examples of that — of course, most have already been edited by others, who sometimes contributed significantly. Thus, this page is not a claim to fame, but rather a collection of mementoes.</p>
 		<hr/>
 		<pic>
+			<a>https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BA%D1%85%D0%BE%D1%84%D1%84,_%D0%93%D0%B5%D1%80%D1%80%D0%B8%D1%82</a>
+			<img>berkhoff.jpg</img>
+			<name>Gerrit Berkhoff</name>
+			<text>a Dutch chemist and the first rector of UTwente</text>
+		</pic>
+		<pic>
 			<a>https://ru.wikipedia.org/wiki/%D0%A2%D0%B2%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D0%B8%D0%B0%D0%BB%D0%B5%D0%BA%D1%82</a>
 			<img>twents.png</img>
 			<name>Twents dialect</name>

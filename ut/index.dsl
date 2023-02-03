@@ -91,6 +91,12 @@
 			<li>(<bsc/>) Berke Güdücü, <a href="http://grammarware.net/edits/index.html#Guducu2022">Weighted Abstract Syntax Trees for Program Comprehension in Java</a>. April–July 2022. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Wouter van den Brink, <a href="http://grammarware.net/edits/index.html#Brink2022">Weighed and Found Legacy: Modernity Signatures for PHP Systems Using Static Analysis</a>. April–July 2022. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Aron Davids, <a href="http://grammarware.net/edits/index.html#Davids2022">Identifying Plot Holes in Narrative Stories by Simulating Events</a>. April–July 2022.</li>
+			<li>(<bsc/>) Bas Marcelis, <a href="https://grammarware.net/edits/index.html#Marcelis2023">A Derivative-based, Colored-edged Parser Generator for Nested Words</a>. November 2022 – February 2023.</li>
+			<li>(<bsc/>) Pepijn Visser, <a href="https://grammarware.net/edits/index.html#Visser2023">xBib: The Language design and implementation of a Transformation Language</a>. November 2022 – February 2023.</li>
+			<li>(<bsc/>) Rutger Witmans, <a href="https://grammarware.net/edits/index.html#Witmans2023">Improving nothingness: Refactorings on Whitespace</a>. November 2022 – February 2023.</li>
+			<li>(<bsc/>) Michael Janssen, <a href="https://grammarware.net/edits/index.html#Janssen2023">A Parser Generator for Visibly Pushdown Languages: Translating between VPLs</a>. November 2022 – February 2023.</li>
+			<li>(<bsc/>) Chris Admiraal, <a href="https://grammarware.net/edits/index.html#Admiraal2023">Calculating the Modernity of Popular Python Projects</a>. November 2022 – February 2023. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Kristian Nedelchev, <a href="https://grammarware.net/edits/index.html#Nedelchev2023">Performance evaluation of Map implementations in Java, Python and C#</a>. November 2022 – February 2023.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -109,6 +115,8 @@
 					<li><a href="https://canvas.utwente.nl/courses/7873">February–April 2021</a>;
 					my role: coordinator, teacher</li>
 					<li><a href="https://canvas.utwente.nl/courses/9449">February–April 2022</a>;
+					my role: coordinator, teacher</li>
+					<li><a href="https://canvas.utwente.nl/courses/12236">February–April 2023</a>;
 					my role: coordinator, teacher</li>
 				</ul>
 			</li>
@@ -146,12 +154,6 @@
 			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Ömer Sayilir, <em>Semi-parsing</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Kristian Nedelchev, <em>Performance testing across languages</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Rutger Witmans: <em>Whitespace refactoring</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Pepijn Visser: <em>BibTeX transformation</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Michael Janssen: <em>Hybrid regular automata</em></li><!-- Nov 2022 -->
-			<li>(<bsc/>) Bas Marcelis: <em>Differential parsing of coloured nested words</em></li><!-- Nov 2022 -->
-			<li class="dim">(<bsc/>) Chris Admiraal: <em>Modernity of Python code</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022 -->
 		</ul>
 		<footer/>
 	</body>

@@ -97,6 +97,7 @@
 			<li>(<bsc/>) Michael Janssen, <a href="https://grammarware.net/edits/index.html#Janssen2023">A Parser Generator for Visibly Pushdown Languages: Translating between VPLs</a>. November 2022 – February 2023.</li>
 			<li>(<bsc/>) Chris Admiraal, <a href="https://grammarware.net/edits/index.html#Admiraal2023">Calculating the Modernity of Popular Python Projects</a>. November 2022 – February 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Kristian Nedelchev, <a href="https://grammarware.net/edits/index.html#Nedelchev2023">Performance evaluation of Map implementations in Java, Python and C#</a>. November 2022 – February 2023.</li>
+			<li>(<msc/>) Marnick van der Arend. <a href="http://grammarware.net/edits/index.html#Arend2023">The LAMP Framework — A Language-Agnostic Code Quality Assurance Framework for Multi-Paradigm Languages</a>. May 2022 – March 2023. <a class="red" href="https://github.com/MarnickvdA/LAMP-Framework">(code)</a></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -136,24 +137,33 @@
 					my role: guiding one group; people involved: Boris Belchev, Pavel Hristov, Viktor Tonchev, Ivan Trendafilov, Irvine Verio</li>
 					<li><a href="https://canvas.utwente.nl/courses/10617">September–November 2022</a>;
 					my role: guiding one group; people involved: Samuel Coste, Hans Goor, Tim Koree, Ronan Oostveen, Reinout Vos</li>
+					<li><a href="https://canvas.utwente.nl/courses/11816">February–April 2023</a>;
+					my role: guiding one group; people involved: André Andringa, Maouheb Bessi, Marc Souvannasouck, Jelle Veldmaat, Cristi Zubcu</li>
 				</ul>
-				
 			</li>
 			<li class="title">Capita Selecta</li>
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li><!-- March 2021 -->
-			<li>(<capita>CS</capita>) Famke Driessen: language migration</li><!-- April 2021 -->
+			<!-- <li>(<capita>CS</capita>) Famke Driessen: language migration</li> --><!-- April 2021 -->
 			<li>(<msc/>) Arthur Rump: Apollo++</li><!-- November 2021 -->
 			<li class="dim">(<msc/>) Andrei Popa: <em>Dynamic Difficulty Adjustment of Procedural Content Generation</em> — co-supervised with Marcus Gerhold and Robby van Delden</li><!-- March 2022 -->
 			<li>(<msc/>) Max Hendriks: <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
-			<li>(<msc/>) Marnick van der Arend, <em>Scala code quality metrics</em></li><!-- May 2022 -->
-			<li>(<msc/>) Hessel Akkerman, <em>Architecture design with Blazor</em></li><!-- May 2022, +internship? -->
 			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <em>ABI between BabyCobol and C/C++ with LLVM</em></li><!-- Sep 2022 -->
 			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
-			<li>(<msc/>) Ömer Sayilir, <em>Semi-parsing</em></li><!-- Nov 2022 -->
-			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022 -->
+			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Nov 2022 -->
+			<li>(<msc/>) Stijn Broekhuis, <em>JSON Schemata Inference</em></li><!-- Nov 2022 -->
+			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
+			<li>(<capita>CS</capita>) Ellen Wittingen, <em>Compiler Optimisations</em></li><!-- Jan 2023 -->
+			<li>(<msc/>) Daniël Floor, <em>Code comprehension in a multi-paradigm environment</em></li><!-- Jan 2023 -->
+			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
+			<li>(<bsc/>) Julian van Santen, <em>Grammar-Based Testing</em></li><!-- Apr 2023 -->
+			<li>(<bsc/>) Tom Smeets, <em>Multi-channel Debugger for an STM32 Microprocessor</em></li><!-- Apr 2023 -->
+			<li>(<bsc/>) Vladimir Kobzev, <em>DSL for Game Conversations and Cutscenes</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2023 -->
+			<li>(<bsc/>) Rolf van Kleef, <em>Testing BabyCobol</em></li><!-- Apr 2023 -->
+			<li>(<bsc/>) Cristi Zubcu, <em>Codebase Modernity Meter</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2023 -->
+			<li>(<msc/>) Nele Budde, <em>Consider It Parsed</em></li><!-- Apr 2023 -->
 		</ul>
 		<footer/>
 	</body>

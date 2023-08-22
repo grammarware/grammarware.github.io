@@ -55,6 +55,9 @@
 				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
 				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
 			</li>
+			<li><a href="https://github.com/rwitmans">Rutger Witmans</a>, Vadim Zaytsev.
+				<em>Improving Nothingness. Refactoring Whitespace</em>, SATToSE 2023.
+			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
@@ -97,7 +100,13 @@
 			<li>(<bsc/>) Michael Janssen, <a href="https://grammarware.net/edits/index.html#Janssen2023">A Parser Generator for Visibly Pushdown Languages: Translating between VPLs</a>. November 2022 – February 2023.</li>
 			<li>(<bsc/>) Chris Admiraal, <a href="https://grammarware.net/edits/index.html#Admiraal2023">Calculating the Modernity of Popular Python Projects</a>. November 2022 – February 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Kristian Nedelchev, <a href="https://grammarware.net/edits/index.html#Nedelchev2023">Performance evaluation of Map implementations in Java, Python and C#</a>. November 2022 – February 2023.</li>
-			<li>(<msc/>) Marnick van der Arend. <a href="http://grammarware.net/edits/index.html#Arend2023">The LAMP Framework — A Language-Agnostic Code Quality Assurance Framework for Multi-Paradigm Languages</a>. May 2022 – March 2023. <a class="red" href="https://github.com/MarnickvdA/LAMP-Framework">(code)</a></li>
+			<li>(<msc/>) Marnick van der Arend, <a href="http://grammarware.net/edits/index.html#Arend2023">The LAMP Framework — A Language-Agnostic Code Quality Assurance Framework for Multi-Paradigm Languages</a>. May 2022 – March 2023. Co-supervised with Jan-Jelle Kester and Rinse van Hees. <a class="red" href="https://github.com/MarnickvdA/LAMP-Framework">(code)</a></li>
+			<li>(<msc/>) Andrei Popa, <a href="http://grammarware.net/edits/index.html#Popa2023">Gotta Adjust Them All! Dynamic Difficulty Adjustment of Role-Playing Games through Procedural Generation of Non-Player Characters</a>. March 2022 – May 2023. Co-supervised with Marcus Gerhold. <a class="red" href="https://github.com/grammarhoard/2023-popa-pcg">(code)</a></li>
+			<li>(<capita>CS</capita>) Ellen Wittingen, <a href="http://grammarware.net/edits/index.html#Wittingen2023">Compiler Optimizations for Power Usage and Program Size</a>. January–June 2023.</li>
+			<li>(<bsc/>) Tom Smeets, <a href="https://grammarware.net/edits/index.html#Smeets2023"><abbr title="microscope">µScope</abbr>: A Reusable Interface For Debugging STM32 Microcontrollers</a>. April–July 2023. Co-supervised with Tim Klein Nijenhuis. <a class="red" href="https://github.com/DEMCON/uscope">(code)</a> <a class="red" href="https://marketplace.visualstudio.com/items?itemName=DEMCON.uscope">(plugin)</a></li>
+			<li>(<bsc/>) Vladimir Kobzev, <a href="https://grammarware.net/edits/index.html#Kobzev2023">Dia: a Domain Specific Language for Scripted Dialogues and Cutscenes</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Cristian Zubcu, <a href="https://grammarware.net/edits/index.html#Zubcu2023">Effect of Normalization Techniques on Modernity Signatures in Source Code Analysis</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Sandu-Victor Mintuş, <a href="https://grammarware.net/edits/index.html#Mintus2023">Supporting New Programming Language in RefDetect</a>. April–July 2023. Co-supervised with Iman Hemati Moghadam.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -148,23 +157,15 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li><!-- March 2021 -->
-			<!-- <li>(<capita>CS</capita>) Famke Driessen: language migration</li> --><!-- April 2021 -->
 			<li>(<msc/>) Arthur Rump: Apollo++</li><!-- November 2021 -->
-			<li class="dim">(<msc/>) Andrei Popa: <em>Dynamic Difficulty Adjustment of Procedural Content Generation</em> — co-supervised with Marcus Gerhold and Robby van Delden</li><!-- March 2022 -->
 			<li>(<msc/>) Max Hendriks: <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
 			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <em>ABI between BabyCobol and C/C++ with LLVM</em></li><!-- Sep 2022 -->
 			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
-			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Nov 2022 -->
+			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Jul 2023 -->
 			<li>(<msc/>) Stijn Broekhuis, <em>JSON Schemata Inference</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
-			<li>(<capita>CS</capita>) Ellen Wittingen, <em>Compiler Optimisations</em></li><!-- Jan 2023 -->
 			<li>(<msc/>) Daniël Floor, <em>Code comprehension in a multi-paradigm environment</em></li><!-- Jan 2023 -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
-			<li>(<bsc/>) Julian van Santen, <em>Grammar-Based Testing</em></li><!-- Apr 2023 -->
-			<li>(<bsc/>) Tom Smeets, <em>Multi-channel Debugger for an STM32 Microprocessor</em></li><!-- Apr 2023 -->
-			<li>(<bsc/>) Vladimir Kobzev, <em>DSL for Game Conversations and Cutscenes</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2023 -->
-			<li>(<bsc/>) Rolf van Kleef, <em>Testing BabyCobol</em></li><!-- Apr 2023 -->
-			<li>(<bsc/>) Cristi Zubcu, <em>Codebase Modernity Meter</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2023 -->
 			<li>(<msc/>) Nele Budde, <em>Consider It Parsed</em></li><!-- Apr 2023 -->
 			<li>(<capita>CS</capita>) Lola Solovyeva, <em>Language Identification</em></li><!-- Apr 2023 -->
 		</ul>

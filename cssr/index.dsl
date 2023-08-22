@@ -256,7 +256,7 @@
 						<ul><li><a href="https://en.wikipedia.org/wiki/Unrestricted_grammar" title="Unrestricted grammar">Unrestricted</a></li>
 						<li>(no common name)</li>
 						<li><a href="https://en.wikipedia.org/wiki/Context-sensitive_grammar" title="Context-sensitive grammar">Context-sensitive</a></li>
-						<li><span style="white-space:nowrap;">Positive <a href="https://en.wikipedia.org/wiki/Range_concatenation_grammars" title="Range concatenation grammars">range concatenation</a></span></li>
+						<li><span>Positive <a href="https://en.wikipedia.org/wiki/Range_concatenation_grammars" title="Range concatenation grammars">range concatenation</a></span></li>
 						<li><a href="https://en.wikipedia.org/wiki/Indexed_grammar" title="Indexed grammar">Indexed</a></li>
 						<li>—</li>
 						<li><a href="https://en.wikipedia.org/wiki/Linear_context-free_rewriting_system" class="mw-redirect" title="Linear context-free rewriting system">Linear context-free rewriting systems</a></li>
@@ -272,7 +272,7 @@
 						<ul><li><a href="https://en.wikipedia.org/wiki/Recursively_enumerable_language">Recursively enumerable</a></li>
 						<li><a href="https://en.wikipedia.org/wiki/Recursive_language" title="Recursive language">Decidable</a></li>
 						<li><a href="https://en.wikipedia.org/wiki/Context-sensitive_language" title="Context-sensitive language">Context-sensitive</a></li>
-						<li><span style="white-space:nowrap;">Positive <a href="https://en.wikipedia.org/wiki/Range_concatenation_language" class="mw-redirect" title="Range concatenation language">range concatenation</a></span></li>
+						<li><span>Positive <a href="https://en.wikipedia.org/wiki/Range_concatenation_language" class="mw-redirect" title="Range concatenation language">range concatenation</a></span></li>
 						<li><a href="https://en.wikipedia.org/wiki/Indexed_language" title="Indexed language">Indexed</a></li>
 						<li>—</li>
 						<li><a href="https://en.wikipedia.org/wiki/Linear_context-free_rewriting_language" class="mw-redirect" title="Linear context-free rewriting language">Linear context-free rewriting language</a></li>
@@ -375,10 +375,162 @@
 				<a class="red" href="http://grammarware.github.io/sattose/slides/Bagge.pdf">(Slides)</a>
 			</li>
 		</ol>
-		
+		<hr/>
+		<h2>Lecture 2: Deep Dive into Compiler Construction (<a href="slides2.pdf" class="red">Slides</a>)</h2>
+		<hr/>
+		<h2>Lecture 3: Burning Topics in Compiler Construction (<a href="slides3.pdf" class="red">Slides</a>)</h2>
+
+		<h3>Topic 1.5: Design with intent</h3>
+		<ol>
+			<li>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Design2017">Language Design with Intent</a>,
+				MoDELS, 2017.
+				<a class="red" href="http://grammarware.net/text/2017/design.pdf">(PDF)</a>
+			</li>
+			<li>
+				Vadim Zaytsev.
+				<a href="http://slebok.github.io/dyol/">DYOL: Design Your Own Language</a>: A software language design toolkit,
+				2017.
+				<a class="red" href="http://slebok.github.io/dyol/cards/index.html">(cards)</a>
+			</li>
+			<li>
+				Dan Lockton.
+				<a href="http://designwithintent.co.uk/">Design with Intent</a>,
+				2015.
+			</li>
+		</ol>
 
 		<hr/>
-		(...to be continued...)
+
+		<h2 help="subject to expansion">Other sources</h2>
+		<ol>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Coverage2017">
+					Open Challenges in Incremental Coverage of Legacy Software Languages
+				</a>,
+				PX/17.2, 2017.
+				<a class="red" href="http://grammarware.net/text/2017/coverage.pdf">(PDF)</a>
+				<help>fourth generation languages and their problems</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Design2017">
+					Formal Foundations for Semi-parsing
+				</a>,
+				CSMR-WCRE, 2014.
+				<a class="red" href="http://grammarware.net/text/2014/semiparsing.pdf">(PDF)</a>
+				<help>semi-parsing algorithms: islands, lakes, etc</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Pattern2017">
+					Parser Generation by Example for Legacy Pattern Languages
+				</a>,
+				GPCE, 2017.
+				<a class="red" href="http://grammarware.net/text/2017/pattern.pdf">(PDF)</a>
+				<help>parsing exotic legacy languages</help>
+			</li>
+			<li help>
+				Vadim Zaytsev, Anya Helene Bagge.
+				<a href="http://grammarware.net/writes/#Parsing2014">
+					Parsing in a Broad Sense
+				</a>,
+				MoDELS, 2014.
+				<a class="red" href="http://grammarware.net/text/2014/parsing.pdf">(PDF)</a>
+				<help>parsing in a broad sense</help>
+			</li>
+			<li help>
+				Ralf Lämmel, Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#JLS-SQJ2011">
+					Recovering Grammar Relationships for the Java Language Specification
+				</a>,
+				SQJ, 2014.
+				<a class="red" href="http://grammarware.net/text/2011/jls-sqj.pdf">(PDF)</a>
+				<help>grammar extraction</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#NPGR2012">
+					Notation-Parametric Grammar Recovery
+				</a>,
+				LDTA, 2012.
+				<a class="red" href="http://grammarware.net/text/2012/npgr.pdf">(PDF)</a>
+				<help>grammar recovery</help>
+			</li>
+			<li help>
+				Mats Stijlaart, Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Grammar-Smells2017">
+					Towards a Taxonomy of Grammar Smells
+				</a>,
+				SLE, 2017.
+				<a class="red" href="http://grammarware.net/text/2017/grammar-smells.pdf">(PDF)</a>
+				<help>grammar smells</help>
+			</li>
+			<li help>
+				Ralf Lämmel, Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Convergence2009">
+					An Introduction to Grammar Convergence
+				</a>,
+				IFM, 2009.
+				<a class="red" href="http://grammarware.net/text/2009/convergence.pdf">(PDF)</a>
+				<help>grammar convergence</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#SPPF2016">
+					Cotransforming Grammars with Shared Packed Parse Forests
+				</a>,
+				EC-EASST, 2016.
+				<a class="red" href="http://grammarware.net/text/2016/sppf.pdf">(PDF)</a>
+				<help>bidirectional and coupled transformations</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Compilepretation2017">
+					On the Need of Compilepretation for Legacy Languages
+				</a>,
+				MoreVMs, 2017.
+				<help>between interpretation and compilation</help>
+			</li>
+			<li help>
+				Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Testing2018">
+					An Industrial Case Study in Compiler Testing
+				</a>,
+				SLE, 2018.
+				<a class="red" href="http://grammarware.net/text/2018/testing.pdf">(PDF)</a>
+				<help>compiler testing</help>
+			</li>
+			<li help>
+				Vadim Zaytsev, Ralf Lämmel.
+				<a href="http://grammarware.net/writes/#LDF2011">
+					A Unified Format for Language Documents
+				</a>,
+				SLE, 2010.
+				<a class="red" href="http://grammarware.net/text/2011/ldf.pdf">(PDF)</a>
+				<help>language documentation</help>
+			</li>
+			<li help>
+				Juriaan Kennedy van Dam, Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#Identification2016">
+					Software Language Identification with Natural Language Classifiers
+				</a>,
+				SANER, 2016.
+				<a class="red" href="http://grammarware.net/text/2016/identification.pdf">(PDF)</a>
+				<help>machine learning in compiler construction</help>
+			</li>
+			<li help>
+				Anya Helene Bagge, Vadim Zaytsev.
+				<a href="http://grammarware.net/writes/#OOPSLE2015">
+					Open and Original Problems in Software Language Engineering 2015 Workshop Report
+				</a>,
+				SIGSOFT SE Notes, 2015.
+				<a class="red" href="http://grammarware.net/text/2015/oopsle.pdf">(PDF)</a>
+				<help>open problems of the future</help>
+			</li>
+		</ol>
 		<footer/>
 	</body>
 </html>

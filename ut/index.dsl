@@ -71,7 +71,7 @@
 			<li>(<bsc/>) Michael Mulder. <a href="http://grammarware.net/edits/index.html#Mulder2021">Creating a Compiler for the Semi-Structured Language of Blazons</a>. November 2020 – January 2021.</li>
 			<li>(<capita>EmSys</capita>) Pieter Staal, <a href="http://grammarware.net/edits/index.html#Staal2021">Electronic Circuit Composition in Haskell using Category Theory</a>. September 2020 – June 2021. <a href="https://arxiv.org/abs/1803.05316" class="red">(book)</a></li>
 			<li>(<bsc/>) Aamir Farooq. <a href="http://grammarware.net/edits/index.html#Farooq2021">How to Zen Your Python</a>. April–July 2021. Best Paper Award at <a href="https://sites.google.com/utwente.nl/tscit35/">TScIT35</a>.</li>
-			<li>(<bsc/>) Marten Voorberg. <a href="http://grammarware.net/edits/index.html#Voorberg2021">Performance Analysis of Membership Data Structures for Integers in Java</a>. April–July 2021.</li>
+			<li>(<bsc/>) Marten Voorberg. <a href="http://grammarware.net/edits/index.html#Voorberg2021">Performance Analysis of Membership Data Structures for Integers in Java</a>. April–July 2021. Best Paper Nomination at <a href="https://sites.google.com/utwente.nl/tscit35/">TScIT35</a>.</li>
 			<li>(<bsc/>) Jan Douwe Beekman. <a href="http://grammarware.net/edits/index.html#Beekman2021">Procedural Location Generation with Weighted Attribute Grammars</a>. April–July 2021. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Ruiyuan Li. <a href="http://grammarware.net/edits/index.html#Li2021">Generative Probabilistic Programming in Games: Creating Character Backgrounds Using a Bayesian Network</a>. April–July 2021. Co-supervised with Marcus Gerhold.</li>
 			<li>(<msc/>) Rick H. de Vries. <a href="http://grammarware.net/edits/index.html#Vries2021">Clash of Clangs: Differential Testing of srcML and Clang</a>. October 2020 – July 2021.</li>
@@ -91,7 +91,7 @@
 			<li>(<bsc/>) Berke Güdücü, <a href="http://grammarware.net/edits/index.html#Guducu2022">Weighted Abstract Syntax Trees for Program Comprehension in Java</a>. April–July 2022. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Wouter van den Brink, <a href="http://grammarware.net/edits/index.html#Brink2022">Weighed and Found Legacy: Modernity Signatures for PHP Systems Using Static Analysis</a>. April–July 2022. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Aron Davids, <a href="http://grammarware.net/edits/index.html#Davids2022">Identifying Plot Holes in Narrative Stories by Simulating Events</a>. April–July 2022.</li>
-			<li>(<bsc/>) Bas Marcelis, <a href="https://grammarware.net/edits/index.html#Marcelis2023">A Derivative-based, Colored-edged Parser Generator for Nested Words</a>. November 2022 – February 2023.</li>
+			<li>(<bsc/>) Bas Marcelis, <a href="https://grammarware.net/edits/index.html#Marcelis2023">A Derivative-based, Colored-edged Parser Generator for Nested Words</a>. November 2022 – February 2023. Best Paper Award at <a href="https://sites.google.com/utwente.nl/38tscit/">TScIT38</a>.</li>
 			<li>(<bsc/>) Pepijn Visser, <a href="https://grammarware.net/edits/index.html#Visser2023">xBib: The Language design and implementation of a Transformation Language</a>. November 2022 – February 2023.</li>
 			<li>(<bsc/>) Rutger Witmans, <a href="https://grammarware.net/edits/index.html#Witmans2023">Improving nothingness: Refactorings on Whitespace</a>. November 2022 – February 2023.</li>
 			<li>(<bsc/>) Michael Janssen, <a href="https://grammarware.net/edits/index.html#Janssen2023">A Parser Generator for Visibly Pushdown Languages: Translating between VPLs</a>. November 2022 – February 2023.</li>
@@ -109,6 +109,8 @@
 					my role: coordinator, teacher; cases: Bingr, Parqueen, Walkmarkt</li>
 					<li><a href="https://canvas.utwente.nl/courses/11270">September–November 2022</a>;
 					my role: coordinator, teacher; cases: Wellerness, TurboWorkbench, COBOL-FIT</li>
+					<li><a href="https://canvas.utwente.nl/courses/12664">September–November 2023</a>;
+					coordinator: Georgiana Caltais; my role: teacher; cases: Boldly, WiseWorld</li>
 				</ul>
 			</li>
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
@@ -141,7 +143,7 @@
 					my role: guiding one group; people involved: André Andringa, Maouheb Bessi, Marc Souvannasouck, Jelle Veldmaat, Cristi Zubcu</li>
 				</ul>
 			</li>
-			<li class="title">Capita Selecta</li>
+			<li class="title">(MSc) Capita Selecta</li>
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
@@ -164,6 +166,7 @@
 			<li>(<bsc/>) Rolf van Kleef, <em>Testing BabyCobol</em></li><!-- Apr 2023 -->
 			<li>(<bsc/>) Cristi Zubcu, <em>Codebase Modernity Meter</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2023 -->
 			<li>(<msc/>) Nele Budde, <em>Consider It Parsed</em></li><!-- Apr 2023 -->
+			<li>(<capita>CS</capita>) Lola Solovyeva, <em>Language Identification</em></li><!-- Apr 2023 -->
 		</ul>
 		<footer/>
 	</body>

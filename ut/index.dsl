@@ -37,33 +37,33 @@
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
 			<li><a href="https://github.com/slimshadyiam">Aamir Farooq</a>, Vadim Zaytsev.
-				<em>There Is More Than One Way to Zen Your Python</em>, SLE 2021, pp. 68–82, ACM.
+				<em>There Is More Than One Way to Zen Your Python</em>, <strong>SLE</strong> 2021, pp. 68–82, ACM.
 				<a class="red" href="https://slimshadyiam.github.io/ZenYourPython/#/">(project page)</a>
 				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
 			</li>
 			<li><a href="https://github.com/marnickvda/">Marnick van der Arend</a>.
-				<em>Language-Agnostic Multi-Paradigm Code Quality Assurance Framework</em>, BENEVOL 2022. CEUR 3245.
+				<em>Language-Agnostic Multi-Paradigm Code Quality Assurance Framework</em>, <strong>BENEVOL</strong> 2022. CEUR 3245.
 				<a class="red" href="https://benevol2022.github.io/papers/MarnickVanDerArend.pdf">(PDF)</a>
 				<a class="red" href="https://ceur-ws.org/Vol-3245/paper5.pdf">(CEUR)</a>
 			</li>
 			<li><a href="https://woutervdb.com/">Wouter van den Brink</a>, Marcus Gerhold, Vadim Zaytsev.
-				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, SCAM 2022, pp. 181–185, IEEE.
+				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, <strong>SCAM</strong> 2022, pp. 181–185, IEEE.
 				<a class="red" href="https://github.com/WoutervdBrink/PHP-Modernity-Signature">(code)</a>
 				<a class="red" href="https://doi.org/10.1109/SCAM55253.2022.00027">(DOI)</a>
 			</li>
 			<li><a href="https://www.arthurrump.com/">Arthur Rump</a>, Vadim Zaytsev.
-				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, EduSymp 2022, pp. 115–122, ACM.
+				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, <strong>EduSymp</strong> 2022, pp. 115–122, ACM.
 				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
 				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
 			</li>
 			<li>Daniël Floor,
 				Rinse van Hees,
 				Vadim Zaytsev.
-				<em>Code Comprehension in a Multi-Paradigm Environment</em>, SATToSE 2023. CEUR 3483.
+				<em>Code Comprehension in a Multi-Paradigm Environment</em>, <strong>SATToSE</strong> 2023. CEUR 3483.
 				<a class="red" href="http://ceur-ws.org/Vol-3483/paper1.pdf">(CEUR)</a>
 			</li>
 			<li><a href="https://github.com/rwitmans">Rutger Witmans</a>, Vadim Zaytsev.
-				<em>Perfecting Nothingness by Refactoring Whitespace</em>, SATToSE 2023. CEUR 3483.
+				<em>Perfecting Nothingness by Refactoring Whitespace</em>, <strong>SATToSE</strong> 2023. CEUR 3483.
 				<a class="red" href="https://github.com/rwitmans/whiteref/">(code)</a>
 				<a class="red" href="http://ceur-ws.org/Vol-3483/paper2.pdf">(CEUR)</a>
 			</li>
@@ -71,7 +71,7 @@
 				<a href="https://www.linkedin.com/in/aim%C3%A9-ntagengerwa-555b45b5/">Aimé Ntagengerwa</a>,
 				<a href="https://www.linkedin.com/in/omer-faruk-sayilir/">Ömer Sayilir</a>,
 				Vadim Zaytsev.
-				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, GPCE 2023, ACM.
+				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, <strong>GPCE</strong> 2023, ACM.
 				<a class="red" href="https://github.com/Crossover-Compiler/">(code)</a>
 				<!-- <a class="red" href="https://doi.org/10.1145/3624007.3624055">(DOI)</a> -->
 				<a class="red" href="https://grammarware.net/text/2023/crossover.pdf">(PDF)</a>

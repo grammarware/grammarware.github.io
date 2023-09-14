@@ -36,7 +36,8 @@
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
-			<li><a href="https://github.com/slimshadyiam">Aamir Farooq</a>, Vadim Zaytsev. <em>There Is More Than One Way to Zen Your Python</em>, SLE 2021, pp. 68–82, ACM.
+			<li><a href="https://github.com/slimshadyiam">Aamir Farooq</a>, Vadim Zaytsev.
+				<em>There Is More Than One Way to Zen Your Python</em>, SLE 2021, pp. 68–82, ACM.
 				<a class="red" href="https://slimshadyiam.github.io/ZenYourPython/#/">(project page)</a>
 				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
 			</li>
@@ -55,8 +56,25 @@
 				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
 				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
 			</li>
+			<li>Daniël Floor,
+				Rinse van Hees,
+				Vadim Zaytsev.
+				<em>Code Comprehension in a Multi-Paradigm Environment</em>, SATToSE 2023. CEUR 3483.
+				<a class="red" href="http://ceur-ws.org/Vol-3483/paper1.pdf">(CEUR)</a>
+			</li>
 			<li><a href="https://github.com/rwitmans">Rutger Witmans</a>, Vadim Zaytsev.
-				<em>Improving Nothingness. Refactoring Whitespace</em>, SATToSE 2023.
+				<em>Perfecting Nothingness by Refactoring Whitespace</em>, SATToSE 2023. CEUR 3483.
+				<a class="red" href="https://github.com/rwitmans/whiteref/">(code)</a>
+				<a class="red" href="http://ceur-ws.org/Vol-3483/paper2.pdf">(CEUR)</a>
+			</li>
+			<li><a href="https://www.linkedin.com/in/mart-van-assen-a4803727b/">Mart van Assen</a>,
+				<a href="https://www.linkedin.com/in/aim%C3%A9-ntagengerwa-555b45b5/">Aimé Ntagengerwa</a>,
+				<a href="https://www.linkedin.com/in/omer-faruk-sayilir/">Ömer Sayilir</a>,
+				Vadim Zaytsev.
+				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, GPCE 2023, ACM.
+				<a class="red" href="https://github.com/Crossover-Compiler/">(code)</a>
+				<!-- <a class="red" href="https://doi.org/10.1145/3624007.3624055">(DOI)</a> -->
+				<a class="red" href="https://grammarware.net/text/2023/crossover.pdf">(PDF)</a>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
@@ -107,6 +125,7 @@
 			<li>(<bsc/>) Vladimir Kobzev, <a href="https://grammarware.net/edits/index.html#Kobzev2023">Dia: a Domain Specific Language for Scripted Dialogues and Cutscenes</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Cristian Zubcu, <a href="https://grammarware.net/edits/index.html#Zubcu2023">Effect of Normalization Techniques on Modernity Signatures in Source Code Analysis</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Sandu-Victor Mintuş, <a href="https://grammarware.net/edits/index.html#Mintus2023">Supporting New Programming Language in RefDetect</a>. April–July 2023. Co-supervised with Iman Hemati Moghadam.</li>
+			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <a href="http://grammarware.net/edits/index.html#ANS2023">Crossover: Towards Compiler-Enabled COBOL-C Interoperability</a>. September 2022 – September 2023.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -156,10 +175,9 @@
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
-			<li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li><!-- March 2021 -->
+			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
 			<li>(<msc/>) Arthur Rump: Apollo++</li><!-- November 2021 -->
 			<li>(<msc/>) Max Hendriks: <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
-			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <em>ABI between BabyCobol and C/C++ with LLVM</em></li><!-- Sep 2022 -->
 			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Jul 2023 -->
 			<li>(<msc/>) Stijn Broekhuis, <em>JSON Schemata Inference</em></li><!-- Nov 2022 -->

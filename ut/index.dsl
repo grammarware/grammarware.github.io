@@ -33,6 +33,7 @@
 				<a href="https://www.utoday.nl/opinion/71491/toegankelijkheid-numerus-fixus-studies-in-gevaar" class="red">(U-Today)</a>
 				<a href="https://www.utoday.nl/news/72234/over-de-groeiambities-van-de-ut-hele-regio-moet-meebewegen" class="red">(U-Today)</a>
 			</li>
+			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
@@ -56,8 +57,8 @@
 				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
 				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
 			</li>
-			<li>Daniël Floor,
-				Rinse van Hees,
+			<li><a href="https://www.linkedin.com/in/dani%C3%ABl-floor-266652208/">Daniël Floor</a>,
+				<a href="https://www.linkedin.com/in/rinse-van-hees/">Rinse van Hees</a>,
 				Vadim Zaytsev.
 				<em>Code Comprehension in a Multi-Paradigm Environment</em>, <strong>SATToSE</strong> 2023. CEUR 3483.
 				<a class="red" href="http://ceur-ws.org/Vol-3483/paper1.pdf">(CEUR)</a>
@@ -73,8 +74,14 @@
 				Vadim Zaytsev.
 				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, <strong>GPCE</strong> 2023, ACM.
 				<a class="red" href="https://github.com/Crossover-Compiler/">(code)</a>
-				<!-- <a class="red" href="https://doi.org/10.1145/3624007.3624055">(DOI)</a> -->
+				<a class="red" href="https://doi.org/10.1145/3624007.3624055">(DOI)</a>
 				<a class="red" href="https://grammarware.net/text/2023/crossover.pdf">(PDF)</a>
+			</li>
+			<li><a href="https://people.utwente.nl/m.gerhold">Marcus Gerhold</a>,
+				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/">Lola Solovyeva</a>,
+				Vadim Zaytsev.
+				<em>Leveraging Deep Learning for Python Version Identification</em>, <strong>BENEVOL</strong> 2023. CEUR 3567.
+				<a class="red" href="http://ceur-ws.org/Vol-3567/paper5.pdf">(CEUR)</a>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
@@ -126,6 +133,10 @@
 			<li>(<bsc/>) Cristian Zubcu, <a href="https://grammarware.net/edits/index.html#Zubcu2023">Effect of Normalization Techniques on Modernity Signatures in Source Code Analysis</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Sandu-Victor Mintuş, <a href="https://grammarware.net/edits/index.html#Mintus2023">Supporting New Programming Language in RefDetect</a>. April–July 2023. Co-supervised with Iman Hemati Moghadam.</li>
 			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <a href="http://grammarware.net/edits/index.html#ANS2023">Crossover: Towards Compiler-Enabled COBOL-C Interoperability</a>. September 2022 – September 2023.</li>
+			<li>(<capita>CS</capita>) Lola Solovyeva, <a href="http://grammarware.net/edits/index.html#Solovyeva2023">Leveraging Machine Learning for Python Version Identification</a>. April–October 2023. Co-supervised with Marcus Gerhold.</li>
+			<li>(<msc/>) Max Hendriks, <a href="http://grammarware.net/edits/index.html#Hendriks2023">Consider it Parsed!</a> March 2022 – October 2023. <a class="red" href="https://github.com/BurritoZz/Relational-Parsing-Rust">(code)</a></li>
+			<li>(<msc/>) Stijn Broekhuis, <a href="http://grammarware.net/edits/index.html#Broekhuis2023">Incorporating User Inputs for Improved JSON Schema Inference</a>. November 2022 – December 2023. <a class="red" href="https://github.com/sbroekhuis/InteractiveSchemaInferrer">(code)</a></li>
+			<li>(<msc/>) Arthur Rump, <a href="http://grammarware.net/edits/index.html#Rump2023">Apollo++: Automated Assessment of Learning Outcomes in Programming Projects</a>. November 2021 – December 2023. <a class="red" href="https://github.com/arthurrump/apollopp">(code)</a></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -157,6 +168,7 @@
 					<a href="https://www.inter-actief.utwente.nl/news/456/2021/4/12/idea-results/" class="red">(IDEA)</a></li>
 					<li><a href="https://canvas.utwente.nl/courses/9233">November 2021 – January 2022</a>; coordinator: Tom van Dijk; my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures; people involved: Faizan Ahmed, Maarten Everts, Marcus Gerhold, Marieke Huisman, Peter Lammich, Ömer Şakar, Yeray Barrios Fleitas</li>
 					<li><a href="https://canvas.utwente.nl/courses/10839">November 2022 – January 2023</a>; coordinator: Tom van Dijk; my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures; people involved: Faizan Ahmed, Georgiana Caltais, Mohammed El-Hajj, Marcus Gerhold, Marieke Huisman, Peter Lammich, Iman Hemati Moghadam, Ömer Şakar, Reza Soltani, Mahboobeh Zangiabady</li>
+					<li><a href="https://canvas.utwente.nl/courses/13253">November 2023 – February 2024</a>; coordinator: Tom van Dijk; my role: exam design, re-recording some microlectures, lectorials corresponding to microlectures; people involved: Faizan Ahmed, Petra van den Bos, Nhat Bui, Georgiana Caltais, Fernando Castor, Mohammed El-Hajj, Marcus Gerhold, Marieke Huisman, Iman Hemati Moghadam, Marijn Peppelman, Ömer Şakar, Reza Soltani, Mahboobeh Zangiabady</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Design Project
@@ -169,6 +181,8 @@
 					my role: guiding one group; people involved: Samuel Coste, Hans Goor, Tim Koree, Ronan Oostveen, Reinout Vos</li>
 					<li><a href="https://canvas.utwente.nl/courses/11816">February–April 2023</a>;
 					my role: guiding one group; people involved: André Andringa, Maouheb Bessi, Marc Souvannasouck, Jelle Veldmaat, Cristi Zubcu</li>
+					<li><a href="https://canvas.utwente.nl/courses/12811">September–November 2023</a>;
+					my role: guiding one group together with Iman Hemati Moghadam; people involved: Alen Badrajan, Yancho Bozhilov, Ujjwal Dodeja, Jose Gavilanes, Georgios Valtas.</li>
 				</ul>
 			</li>
 			<li class="title">(MSc) Capita Selecta</li>
@@ -176,16 +190,15 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
-			<li>(<msc/>) Arthur Rump: Apollo++</li><!-- November 2021 -->
-			<li>(<msc/>) Max Hendriks: <a href="https://fmt.ewi.utwente.nl/education/master/432/">Consider It Parsed</a></li><!-- March 2022 -->
 			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Jul 2023 -->
-			<li>(<msc/>) Stijn Broekhuis, <em>JSON Schemata Inference</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
 			<li>(<msc/>) Daniël Floor, <em>Code comprehension in a multi-paradigm environment</em></li><!-- Jan 2023 -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
-			<li>(<msc/>) Nele Budde, <em>Consider It Parsed</em></li><!-- Apr 2023 -->
-			<li>(<capita>CS</capita>) Lola Solovyeva, <em>Language Identification</em></li><!-- Apr 2023 -->
+			<li>(<msc/>) Oebele Lijzinga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
+			<li>(<msc/>) Naum Tomov, <em>DSL evaluation</em> — co-supervised with Nhat Bui</li><!-- Nov 2023 -->
+			<li>(<bsc/>) Chris Bleeker, <em>Modernity in Rust</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2023 -->
+			<li>(<bsc/>) Everard de Vree, <em>Xsmith with Haskell</em></li><!-- Nov 2023 -->
 		</ul>
 		<footer/>
 	</body>

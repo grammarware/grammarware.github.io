@@ -62,6 +62,8 @@
 		</ul>
 		<h2>Publications / presentations</h2>
 		<ul>
+			<li>Daniël Floor, Rinse van Hees, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#MultiParadigm2023">Code Comprehension in a Multi-Paradigm Environment</a>, SATToSE, CEUR, 2023.</em>
+			<li>Rutger Witmans, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#WhiteRef2023">Perfecting Nothingness by Refactoring Whitespace</a>, SATToSE, CEUR, 2023.</em>
 			<li>Rutger Witmans, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#WhiteRef-SATToSE2023">Improving Nothingness. Refactoring Whitespace</a>, SATToSE, 2023.</em>
 			<li>Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#LogDiff-SATToSE2020">Advanced Differencing of Legacy Code and Migration Logs</a>, SATToSE, 2020.</em>
 			<li>Dario Di Nucci, Hoang Son Pham, Johan Fabry, Coen De Roover, Kim Mens, Tim Molderez, Siegfried Nijssen, Vadim Zaytsev, <em><a href="http://grammarware.net/writes/#INTiMALS-Framework2019">A Language-Parametric Modular Framework for Mining Idiomatic Code Patterns</a></em>, SATToSE, 2019.</li>

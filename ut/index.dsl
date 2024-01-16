@@ -48,7 +48,9 @@
 				<a class="red" href="https://benevol2022.github.io/papers/MarnickVanDerArend.pdf">(PDF)</a>
 				<a class="red" href="https://ceur-ws.org/Vol-3245/paper5.pdf">(CEUR)</a>
 			</li>
-			<li><a href="https://woutervdb.com/">Wouter van den Brink</a>, Marcus Gerhold, Vadim Zaytsev.
+			<li><a href="https://woutervdb.com/">Wouter van den Brink</a>,
+				<a href="https://people.utwente.nl/m.gerhold">Marcus Gerhold</a>,
+				Vadim Zaytsev.
 				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, <strong>SCAM</strong> 2022, pp. 181–185, IEEE.
 				<a class="red" href="https://github.com/WoutervdBrink/PHP-Modernity-Signature">(code)</a>
 				<a class="red" href="https://doi.org/10.1109/SCAM55253.2022.00027">(DOI)</a>
@@ -83,6 +85,12 @@
 				Vadim Zaytsev.
 				<em>Leveraging Deep Learning for Python Version Identification</em>, <strong>BENEVOL</strong> 2023. CEUR 3567.
 				<a class="red" href="http://ceur-ws.org/Vol-3567/paper5.pdf">(CEUR)</a>
+			</li>
+			<li><a href="https://people.utwente.nl/m.gerhold">Marcus Gerhold</a>,
+				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/">Lola Solovyeva</a>,
+				Vadim Zaytsev.
+				<em>The Limits of the Identifiable: Challenges in Python Version Identification with Deep Learning</em>, <strong>SANER</strong> 2024. RENE track.
+				<!-- <a class="red" href="http://ceur-ws.org/Vol-3567/paper5.pdf">(CEUR)</a> -->
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>

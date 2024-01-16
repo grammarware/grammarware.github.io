@@ -34,6 +34,22 @@
 			<text>a new multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
 		</pic>
 		<pic>
+			<a>pipeline</a>
+			<img>pipeline.200.png</img>
+			<alt>Pipeline</alt>
+			<title>Unified Assessment Pipeline for Learning-by-Doing</title>
+			<name>Pipeline</name>
+			<text>incentive-grant sponsored project about non-grading assessment (2024–…)</text>
+		</pic>
+		<pic>
+			<a>https://zorro-project.nl</a>
+			<img>zorro.200.png</img>
+			<alt>Zorro</alt>
+			<title>Zero downtime is Cyber-Physical Systems</title>
+			<name>Zorro</name>
+			<text>a large industrial-academic project; I do model-based system engineering (2023–2028)</text>
+		</pic>
+		<pic>
 			<a>http://oopsle.github.io/</a>
 			<img>oopsle.200.png</img>
 			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
@@ -87,13 +103,6 @@
 			<text>an industrial PhD project with UCL and VUB (2020–2023)</text>
 		</pic>
 		<pic>
-			<a>http://cocodo.github.io/</a>
-			<img>cocodo.200.png</img>
-			<title>Raincode Labs Compiler Coding Dojo</title>
-			<name>RCL CoCoDo</name>
-			<text>bridging academic ‹Programming› with the industry (2017–2021)</text>
-		</pic>
-		<pic>
 			<a>gttse</a>
 			<img>gttse.200.png</img>
 			<title>Summer School on Grand Timely Topics in Software Engineering</title>
@@ -143,6 +152,13 @@
 			<title>Keeping in touch with the web-enabled active part of the scientific community</title>
 			<name>Twitter</name>
 			<text>keeping in touch with the research community (2007–…)</text>
+		</pic>
+		<pic dim>
+			<a>http://cocodo.github.io/</a>
+			<img>cocodo.200.png</img>
+			<title>Raincode Labs Compiler Coding Dojo</title>
+			<name>RCL CoCoDo</name>
+			<text>bridging academic ‹Programming› with the industry (2017–2021)</text>
 		</pic>
 		<pic dim>
 			<a>http://soft.vub.ac.be/intimals/index.html</a>

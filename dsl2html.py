@@ -159,8 +159,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			if lines[i].strip().find('jquery') < 0:
 				end = '</script>'
 			else:
-				end = '''function onn(n) {$('.help:eq('+n+')').css('background-color','#552200');}
-		function off(n) {$('.help:eq('+n+')').css('background-color','#ffdec9');}
+				end = '''function onn(n) {$('.help:eq('+n+')').css('color',$('body').css('color'));}
+		function off(n) {$('.help:eq('+n+')').css('color',$('body').css('background-color'));}
 		</script>
 		<script src="../jquery.min.js" type="text/javascript"></script>'''
 			g.write('''	<head>
@@ -240,14 +240,14 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		if lines[i].strip().startswith('<h2 help'):
 			helptext = lines[i].split('"')[1]
 			gist = lines[i].split('>')[1].split('<')[0]
-			lines[i] = '<h2 onmouseover="onn(%s)" onmouseout="off(%s)">%s <span class="help">(%s)</span></h2>' % (HX, HX, gist, helptext)
+			lines[i] = f'<h2 onmouseover="onn({HX})" onmouseout="off({HX})">{gist} <span class="help">({helptext})</span></h2>'
 			HX += 1
 		elif lines[i].strip() == '<li help>':
 			gist = lines[i].split('>')[1]
-			lines[i] = '<li onmouseover="onn({0})" onmouseout="off({0})">'.format(HX) + gist
+			lines[i] = f'<li onmouseover="onn({HX})" onmouseout="off({HX})">{gist}'
 		elif lines[i].strip().startswith('<help>'):
 			helptext = lines[i].split('>')[1].split('<')[0]
-			lines[i] = ' <span class="help">({0})</span>'.format(helptext)
+			lines[i] = f' <span class="help">({helptext})</span>'
 			HX += 1
 		# Ordered lists
 		if lines[i].strip() == '<ol>':
@@ -326,7 +326,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				else:
 					srch = p.search(linestripped)
 					if not srch:
-						print('Could not recognise "{0}"'.format(linestripped.strip()))
+						print(f'Could not recognise "{linestripped.strip()}"')
 						continue
 					db = srch.groups()
 					if db[0] == 'src':
@@ -377,7 +377,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 						pic['title'],
 						anchor))
 				if 'extended' in pic.keys():
-					g.write('<a href="{0}.html" class="flr">§</a>'.format(anchor))
+					g.write(f'<a href="{anchor}.html" class="flr">§</a>')
 				if 'img' in pic.keys():
 					if '@' in pic['img']:
 						big,small = pic['img'].split('@')

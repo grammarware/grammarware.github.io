@@ -18,8 +18,7 @@
 			grammarware engineering, source code refactoring, software migration,
 			reverse engineering, etc. This is mainly a communication and
 			collaboration, not a publication event, even though it does have <a
-			href="http://dblp.uni-trier.de/db/conf/sattose/index.html">a DBLP
-			page</a>.
+			href="https://dblp.org/db/conf/sattose/">a DBLP page</a> (which I brought to existence).
 		</p>
 		<h2>Organisation</h2>
 		<ul>

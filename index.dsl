@@ -96,26 +96,20 @@
 			<text>bidirectional megamodel of parsing and unparsing in a broad sense</text>
 		</pic>
 		<pic>
-			<a>codediffng</a>
-			<img>codediffng.200.png</img>
-			<alt>Advanced Source Code Differencing</alt>
-			<title>CodeDiffNG</title>
-			<text>an industrial PhD project with UCL and VUB (2020–2023)</text>
-		</pic>
-		<pic>
-			<a>gttse</a>
-			<img>gttse.200.png</img>
-			<title>Summer School on Grand Timely Topics in Software Engineering</title>
-			<name>GTTSE</name>
-			<text>a summer school on grammar tackling trends\n(2005–…)</text>
-		</pic>
-		<pic>
 			<a>sattose</a>
 			<img>sotesola.200.png</img>
 			<alt>SATToSE</alt>
 			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
 			<name>SATToSE\nSoTeSoLa</name>
 			<text>a regular software evolution event\n(2008–…)</text>
+		</pic>
+		<pic>
+			<a>sen</a>
+			<img>sen.200.png</img>
+			<alt>SEN Classroom</alt>
+			<title>Software ENgineering Classroom</title>
+			<name>SEN Classroom</name>
+			<text>a national educational event\n(2023–…)</text>
 		</pic>
 		<!-- <div><a href="https://github.com/grammarware/incertus"><span class="pic">
 			<span class="alert">WIP<br/></span>
@@ -152,6 +146,20 @@
 			<title>Keeping in touch with the web-enabled active part of the scientific community</title>
 			<name>Twitter</name>
 			<text>keeping in touch with the research community (2007–…)</text>
+		</pic>
+		<pic dim>
+			<a>gttse</a>
+			<img>gttse.200.png</img>
+			<title>Summer School on Grand Timely Topics in Software Engineering</title>
+			<name>GTTSE</name>
+			<text>a summer school on grammar tackling trends\n(2005–…)</text>
+		</pic>
+		<pic dim>
+			<a>codediffng</a>
+			<img>codediffng.200.png</img>
+			<alt>Advanced Source Code Differencing</alt>
+			<title>CodeDiffNG</title>
+			<text>an industrial PhD project with UCL and VUB (2020–2023)</text>
 		</pic>
 		<pic dim>
 			<a>http://cocodo.github.io/</a>

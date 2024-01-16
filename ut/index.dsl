@@ -32,6 +32,7 @@
 				<a href="https://www.utoday.nl/news/70061/we-see-the-need-for-a-numerus-fixus" class="red">(U-Today)</a>
 				<a href="https://www.utoday.nl/opinion/71491/toegankelijkheid-numerus-fixus-studies-in-gevaar" class="red">(U-Today)</a>
 				<a href="https://www.utoday.nl/news/72234/over-de-groeiambities-van-de-ut-hele-regio-moet-meebewegen" class="red">(U-Today)</a>
+				<a href="https://ioviv.at/a-new-age-of-technical-computer-science/" class="red">(I/O Vivat)</a>
 			</li>
 			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 		</ul>
@@ -160,6 +161,8 @@
 					my role: coordinator, teacher</li>
 					<li><a href="https://canvas.utwente.nl/courses/12236">February–April 2023</a>;
 					my role: coordinator, teacher</li>
+					<li><a href="https://canvas.utwente.nl/courses/13975">February–April 2024</a>;
+					my role: coordinator, teacher</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Software Systems
@@ -195,6 +198,7 @@
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
 			<li>(<msc/>) Daniël Floor, <em>Code comprehension in a multi-paradigm environment</em></li><!-- Jan 2023 -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
+			<li>(<msc/>) Filip Ivanov, <em>code review</em> — co-supervised with Arjan van Hessen</li><!-- Oct 2023 -->
 			<li>(<msc/>) Oebele Lijzinga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
 			<li>(<msc/>) Naum Tomov, <em>DSL evaluation</em> — co-supervised with Nhat Bui</li><!-- Nov 2023 -->
 			<li>(<bsc/>) Chris Bleeker, <em>Modernity in Rust</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2023 -->

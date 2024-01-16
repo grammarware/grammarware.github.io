@@ -44,6 +44,27 @@
 		<ul>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#DifferencingTool2024">Visual Assurance in Refactoring through Trace Equivalence of Control Flow Graphs</a></em>, a Tool Demo track paper at <a href="https://conf.researchr.org/home/saner-2024">SANER</a>, 2024. 5 pages.
+				<ul style="list-style-type:none;">
+					<li>
+						<!-- <a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> -->
+						<a href="http://grammarware.net/bib/DifferencingTool2024.bib">(BibTeX)</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Céline Deknop.
+				<em><a href="https://uclouvain.be/fr/secteurs/sst/evenements/public-thesis-defense-icteam-85.html">Understanding Large Codebase Refactoring through Differencing</a></em>, a PhD thesis, December 2023.
+				<!-- 5 pages. -->
+				<ul style="list-style-type:none;">
+					<li>
+						<!-- <a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> -->
+						<a href="https://grammarware.net/bib/Deknop2023.bib">(BibTeX)</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
 				<em><a href="https://zenodo.org/record/6806075">Generating Customised Control Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, a software artefact accompanying the industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022.
 				Zenodo ID <a href="https://zenodo.org/record/6806075">6806075</a>.
 				<ul style="list-style-type:none;">

@@ -34,19 +34,20 @@
 			<text>funded collaborative initiatives from the past and the present</text>
 		</pic>
 		<pic>
+			<a>events</a>
+			<img>conference.png</img>
+			<alt>academic conference</alt>
+			<title>events, conferences, workshops, coding dojos, etc</title>
+			<name>Events</name>
+			<text>events, conferences, workshops, coding dojos, etc</text>
+		</pic>
+		<pic>
 			<a>http://slebok.github.io/</a>
 			<img>slebok.200.png</img>
 			<alt>SLEBoK</alt>
 			<title>SLEBoK: Software Language Engineering Body of Knowledge</title>
 			<name>SLEBoK</name>
 			<text>a new multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
-		</pic>
-		<pic>
-			<a>http://oopsle.github.io/</a>
-			<img>oopsle.200.png</img>
-			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
-			<name>OOPSLE</name>
-			<text>a workshop about open and original problems in SLE (2013–2020)</text>
 		</pic>
 		<pic>
 			<a>http://bibtex.github.io/</a>
@@ -87,22 +88,6 @@
 			<title>Bidirectional Megamodel of Parsing</title>
 			<text>bidirectional megamodel of parsing and unparsing in a broad sense</text>
 		</pic>
-		<pic>
-			<a>sattose</a>
-			<img>sotesola.200.png</img>
-			<alt>SATToSE</alt>
-			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
-			<name>SATToSE\nSoTeSoLa</name>
-			<text>a regular software evolution event\n(2008–…)</text>
-		</pic>
-		<pic>
-			<a>sen</a>
-			<img>sen.200.png</img>
-			<alt>SEN Classroom</alt>
-			<title>Software ENgineering Classroom</title>
-			<name>SEN Classroom</name>
-			<text>a national educational event\n(2023–…)</text>
-		</pic>
 		<!-- <div><a href="https://github.com/grammarware/incertus"><span class="pic">
 			<span class="alert">WIP<br/></span>
 			<img src="logos/incertus.200.png" alt="Incertus" title="Incertus"/><br/>Incertus
@@ -140,39 +125,11 @@
 			<text>keeping in touch with the research community (2007–2021)</text>
 		</pic>
 		<pic dim>
-			<a>gttse</a>
-			<img>gttse.200.png</img>
-			<title>Summer School on Grand Timely Topics in Software Engineering</title>
-			<name>GTTSE</name>
-			<text>a summer school on grammar tackling trends\n(2005–…)</text>
-		</pic>
-		<pic dim>
-			<a>http://cocodo.github.io/</a>
-			<img>cocodo.200.png</img>
-			<title>Raincode Labs Compiler Coding Dojo</title>
-			<name>RCL CoCoDo</name>
-			<text>bridging academic ‹Programming› with the industry (2017–2021)</text>
-		</pic>
-		<pic dim>
 			<a>uva</a>
 			<img>master-software-engineering.200.png</img>
 			<title>Universiteit van Amsterdam’s Master of Science programme in Software Engineering</title>
 			<name>UvA MSc SE</name>
 			<text>a one-year university graduate programme in Amsterdam</text>
-		</pic>
-		<pic dim>
-			<a>http://mmmde.github.io/</a>
-			<img>mmmde.200.png</img>
-			<title>Workshop on Mathematical Models for MDE</title>
-			<name>MMMDE</name>
-			<text>a workshop about mathematical methods in MDE (2015)</text>
-		</pic>
-		<pic dim>
-			<a>http://github.com/grammarware/ruconf/wiki</a>
-			<img>conf.200.png</img>
-			<alt>Conferences</alt>
-			<title>Providing information in Russian about well-known international conferences in the areas of software engineering and computer science</title>
-			<text>info about international conferences in Russian (2012–2013)</text>
 		</pic>
 		<pic dim>
 			<a>http://slebok.github.io/sleg/</a>
@@ -199,14 +156,6 @@
 			<text>nobody else is crazy enough to do open notebook computer science</text>
 		</pic>
 		<pic dim>
-			<a>pem</a>
-			<img>pem.200.png</img>
-			<alt>PEM Colloquium</alt>
-			<title>Scientific colloquium: ongoing seminar series dating back from at least 1997</title>
-			<name>PEM</name>
-			<text>a colloquium I used to organise (2012–2013)</text>
-		</pic>
-		<pic dim>
 			<a>a-z</a>
 			<img>A.png</img>
 			<alt>SE Alphabet</alt>
@@ -215,8 +164,9 @@
 			<text>software language engineering from A to Z; useless fun (2015)</text>
 		</pic>
 		<footer>
+			<a href="https://www.flaticon.com/free-icons/conference" title="conference icons">Conference icons created by Freepik - Flaticon</a>.
 			Dim tiles refer to past projects.
-			See <a href="copyright">copyright disclaimer</a>.
+			See <a href="copyright">copyright disclaimer</a>.<br/>
 		</footer>
 	</body>
 </html>

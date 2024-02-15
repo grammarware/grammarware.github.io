@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head viewport title="Dr. Vadim Zaytsev — projects" />
+	<head viewport title="Dr. Vadim Zaytsev — initiatives" />
 	<body>
 		<hr/>
 		<picdir>logos</picdir>
@@ -26,28 +26,20 @@
 			<text>an integrated (under)graduate university programme in Enschede</text>
 		</pic>
 		<pic>
+			<a>projects</a>
+			<img>scroll.png</img>
+			<alt>scroll emoji</alt>
+			<title>Funded collaborative initiatives</title>
+			<name>Projects</name>
+			<text>funded collaborative initiatives from the past and the present</text>
+		</pic>
+		<pic>
 			<a>http://slebok.github.io/</a>
 			<img>slebok.200.png</img>
 			<alt>SLEBoK</alt>
 			<title>SLEBoK: Software Language Engineering Body of Knowledge</title>
 			<name>SLEBoK</name>
 			<text>a new multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
-		</pic>
-		<pic>
-			<a>pipeline</a>
-			<img>pipeline.200.png</img>
-			<alt>Pipeline</alt>
-			<title>Unified Assessment Pipeline for Learning-by-Doing</title>
-			<name>Pipeline</name>
-			<text>incentive-grant sponsored project about non-grading assessment (2024–…)</text>
-		</pic>
-		<pic>
-			<a>https://zorro-project.nl</a>
-			<img>zorro.200.png</img>
-			<alt>Zorro</alt>
-			<title>Zero downtime is Cyber-Physical Systems</title>
-			<name>Zorro</name>
-			<text>a large industrial-academic project; I do model-based system engineering (2023–2028)</text>
 		</pic>
 		<pic>
 			<a>http://oopsle.github.io/</a>
@@ -139,13 +131,13 @@
 			<name>Wikipedia</name>
 			<text>occasionally contributing to the sum of all knowledge</text>
 		</pic>
-		<pic>
+		<pic dim>
 			<a>http://twitter.com/grammarware</a>
 			<img>twitter.200.png</img>
 			<alt>@grammarware</alt>
 			<title>Keeping in touch with the web-enabled active part of the scientific community</title>
 			<name>Twitter</name>
-			<text>keeping in touch with the research community (2007–…)</text>
+			<text>keeping in touch with the research community (2007–2021)</text>
 		</pic>
 		<pic dim>
 			<a>gttse</a>
@@ -155,25 +147,11 @@
 			<text>a summer school on grammar tackling trends\n(2005–…)</text>
 		</pic>
 		<pic dim>
-			<a>codediffng</a>
-			<img>codediffng.200.png</img>
-			<alt>Advanced Source Code Differencing</alt>
-			<title>CodeDiffNG</title>
-			<text>an industrial PhD project with UCL and VUB (2020–2023)</text>
-		</pic>
-		<pic dim>
 			<a>http://cocodo.github.io/</a>
 			<img>cocodo.200.png</img>
 			<title>Raincode Labs Compiler Coding Dojo</title>
 			<name>RCL CoCoDo</name>
 			<text>bridging academic ‹Programming› with the industry (2017–2021)</text>
-		</pic>
-		<pic dim>
-			<a>http://soft.vub.ac.be/intimals/index.html</a>
-			<img>intimals.png</img>
-			<alt>INTelligent Modernisation Assistance for Legacy Software</alt>
-			<title>INTiMALS</title>
-			<text>an academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
 		</pic>
 		<pic dim>
 			<a>uva</a>

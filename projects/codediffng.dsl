@@ -9,11 +9,11 @@
 		</h1>
 		<hr/>
 		<p>
-			<strong>CodeDiffNG</strong> is an applied PhD project being
+			<strong>CodeDiffNG</strong> was an applied PhD project
 			carried out at <a href="https://uclouvain.be/en">Université
 			catholique de Louvain</a> and <a
 			href="https://www.raincodelabs.com/">Raincode Labs</a> in
-			2020–2023. We are interested in researching and developing methods
+			2020–2023. We were interested in researching and developing methods
 			of differencing source code beyond the state of the art in clone
 			detection, program differencing and model comparison, and covering
 			industrially relevant scenarios of producing and visualising
@@ -68,7 +68,7 @@
 				<em><a href="https://zenodo.org/record/6806075">Generating Customised Control Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, a software artefact accompanying the industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022.
 				Zenodo ID <a href="https://zenodo.org/record/6806075">6806075</a>.
 				<ul style="list-style-type:none;">
-					<li><a href="best.jpg">Best Artefact Award</a></li>
+					<li><a href="best-icsme-2022.jpg">Best Artefact Award</a></li>
 				</ul>
 			</li>
 			<li>

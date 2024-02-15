@@ -1,4 +1,0 @@
-#!/bin/sh
-
-svg2png -w 150 $1
-mv `basename -s .svg $1`-w150.png `basename -s .svg $1`.png

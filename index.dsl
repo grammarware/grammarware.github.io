@@ -80,22 +80,6 @@
 			<name>Software Language Engineering Glossary</name>
 			<text>superseded by SLEBoK terms</text>
 		</pic>
-		<pic dim>
-			<a>http://grammarware.net/opens/</a>
-			<img>ons.200.png</img>
-			<alt>Open Notebook Science</alt>
-			<title>A repository of subatomic scientific knowledge objects, created by one researcher</title>
-			<name>Open Notebook</name>
-			<text>nobody else is crazy enough to do open notebook computer science</text>
-		</pic>
-		<pic dim>
-			<a>a-z</a>
-			<img>A.png</img>
-			<alt>SE Alphabet</alt>
-			<title>Letters from A to Z linked to similarly named notions</title>
-			<name>SE Alphabet</name>
-			<text>software language engineering from A to Z; useless fun (2015)</text>
-		</pic>
 		<footer>
 			<a href="https://www.flaticon.com/free-icons/conference" title="conference icons">Conference icons created by Freepik - Flaticon</a>.
 			Dim tiles refer to past projects.

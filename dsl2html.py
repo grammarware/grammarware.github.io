@@ -383,13 +383,13 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 						big,small = pic['img'].split('@')
 					else:
 						big = small = pic['img']
-					img = '<a href="{0}{1}"><img src="{0}{2}" alt="{3}" title="{4}"/></a>'.format(\
-						picdir,
-						big,
-						small,
-						pic['alt'],
-						pic['title']
-					)
+					bigwithdir = big
+					if not bigwithdir.startswith('https://'):
+						bigwithdir = picdir + bigwithdir
+					smallwithdir = small
+					if not smallwithdir.startswith('https://'):
+						smallwithdir = picdir + smallwithdir
+					img = f'<a href="{bigwithdir}"><img src="{smallwithdir}" alt="{pic["alt"]}" title="{pic["title"]}"/></a>'
 				else:
 					img = ''
 				g.write('</h1>\n')
@@ -403,13 +403,16 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				if 'a' in pic.keys() and pic['a'].find('/') < 0 and not pic['a'].endswith('.html'):
 					pic['a'] += '/index.html'
 				if 'img' in pic.keys():
-					g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}{}" alt="{}" title="{}"/>'+\
+					picwithdir = pic['img']
+					if not picwithdir.startswith('https://'):
+						picwithdir = picdir + picwithdir
+
+					g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}" alt="{}" title="{}"/>'+\
 						'<br/>{}{}</span></a></div>\n').format(\
 						div,\
 						pic['a'],\
 						c,\
-						picdir,\
-						pic['img'],\
+						picwithdir,\
 						pic['alt'],\
 						pic['title'],\
 						pic['name'],\

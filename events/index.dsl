@@ -13,6 +13,13 @@
 			<text>return to the root</text>
 		</pic>
 		<pic>
+			<a>models.html</a>
+			<img>https://bibtex.github.io/stuff/models.png</img>
+			<title>ACM / IEEE International Conference on Model Driven Engineering Languages and Systems</title>
+			<name>MoDELS</name>
+			<text>one of the main conferences I frequently attend and serve (2013–2020)</text>
+		</pic>
+		<pic>
 			<a>http://oopsle.github.io/</a>
 			<img>oopsle.200.png</img>
 			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>

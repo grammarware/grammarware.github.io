@@ -49,6 +49,14 @@
 			<title>INTiMALS</title>
 			<text>an academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
 		</pic>
+		<pic dim>
+			<a>https://www.cs.vu.nl/lppr/</a>
+			<img>lppr.200.png</img>
+			<alt>Language Parametric Program Restructuring</alt>
+			<title>Language Parametric Program Restructuring</title>
+			<name>Language Parametric Program Restructuring</name>
+			<text>the project that hosted my PhD (2004–2008)</text>
+		</pic>
 		<footer>
 			Dim tiles refer to completed projects.
 			See <a href="copyright">copyright disclaimer</a>.

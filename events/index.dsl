@@ -20,7 +20,7 @@
 			<text>a workshop about open and original problems in SLE (2013–2020)</text>
 		</pic>
 		<pic>
-			<a>sattose</a>
+			<a>sattose.html</a>
 			<img>sotesola.200.png</img>
 			<alt>SATToSE</alt>
 			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
@@ -28,7 +28,7 @@
 			<text>a regular software evolution event\n(2008–…)</text>
 		</pic>
 		<pic>
-			<a>sen</a>
+			<a>senc.html</a>
 			<img>sen.200.png</img>
 			<alt>SEN Classroom</alt>
 			<title>Software ENgineering Classroom</title>
@@ -36,7 +36,7 @@
 			<text>a national educational event\n(2023–…)</text>
 		</pic>
 		<pic dim>
-			<a>gttse</a>
+			<a>gttse.html</a>
 			<img>gttse.200.png</img>
 			<title>Summer School on Grand Timely Topics in Software Engineering</title>
 			<name>GTTSE</name>
@@ -64,7 +64,7 @@
 			<text>info about international conferences in Russian (2012–2013)</text>
 		</pic>
 		<pic dim>
-			<a>pem</a>
+			<a>pem.html</a>
 			<img>pem.200.png</img>
 			<alt>PEM Colloquium</alt>
 			<title>Scientific colloquium: ongoing seminar series dating back from at least 1997</title>

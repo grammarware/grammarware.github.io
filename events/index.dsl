@@ -12,12 +12,21 @@
 			<name>BACK</name>
 			<text>return to the root</text>
 		</pic>
+		<!--  -->
+		<pic>
+			<a>senc.html</a>
+			<img>sen.200.png</img>
+			<alt>SEN Classroom</alt>
+			<title>Software ENgineering Classroom</title>
+			<name>SEN Classroom</name>
+			<text>a national educational event\n(2023–…)</text>
+		</pic>
 		<pic>
 			<a>models.html</a>
 			<img>https://bibtex.github.io/stuff/models.png</img>
 			<title>ACM / IEEE International Conference on Model Driven Engineering Languages and Systems</title>
 			<name>MoDELS</name>
-			<text>one of the main conferences I frequently attend and serve (2013–2020)</text>
+			<text>one of the main conferences I frequently attend and serve (2012–…)</text>
 		</pic>
 		<pic>
 			<a>http://oopsle.github.io/</a>
@@ -33,14 +42,6 @@
 			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
 			<name>SATToSE\nSoTeSoLa</name>
 			<text>a regular software evolution event\n(2008–…)</text>
-		</pic>
-		<pic>
-			<a>senc.html</a>
-			<img>sen.200.png</img>
-			<alt>SEN Classroom</alt>
-			<title>Software ENgineering Classroom</title>
-			<name>SEN Classroom</name>
-			<text>a national educational event\n(2023–…)</text>
 		</pic>
 		<pic dim>
 			<a>gttse.html</a>
@@ -80,7 +81,7 @@
 		</pic>
 		<footer>
 			Dim tiles refer to events to which I am currently not actively contributing.
-			See <a href="copyright">copyright disclaimer</a>.<br/>
+			See <a href="../copyright">copyright disclaimer</a>.<br/>
 		</footer>
 	</body>
 </html>

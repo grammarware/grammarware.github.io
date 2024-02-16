@@ -97,7 +97,7 @@
 		</pic>
 		<footer>
 			Dim tiles refer to past projects.
-			See <a href="copyright">copyright disclaimer</a>.<br/>
+			See <a href="../copyright">copyright disclaimer</a>.<br/>
 		</footer>
 	</body>
 </html>

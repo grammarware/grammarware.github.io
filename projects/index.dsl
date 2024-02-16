@@ -18,7 +18,7 @@
 			<alt>Pipeline</alt>
 			<title>Unified Assessment Pipeline for Learning-by-Doing</title>
 			<name>Pipeline</name>
-			<text>incentive-grant sponsored project about non-grading assessment (2024–…)</text>
+			<text>incentive-grant sponsored project about non-grading assessment (2024–2030)</text>
 		</pic>
 		<pic>
 			<a>https://zorro-project.nl</a>
@@ -27,13 +27,6 @@
 			<title>Zero downtime is Cyber-Physical Systems</title>
 			<name>Zorro</name>
 			<text>a large industrial-academic project; I do model-based system engineering (2023–2028)</text>
-		</pic>
-		<pic dim>
-			<a>../lab</a>
-			<img>grammarlab-icon.200.png</img>
-			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
-			<name>GrammarLab</name>
-			<text>a grammar manipulation library for Rascal\n(2013–2015)</text>
 		</pic>
 		<pic dim>
 			<a>codediffng.html</a>
@@ -48,6 +41,13 @@
 			<alt>INTelligent Modernisation Assistance for Legacy Software</alt>
 			<title>INTiMALS</title>
 			<text>an academic-industrial research project among RCL, UCL and VUB (2018–2020)</text>
+		</pic>
+		<pic dim>
+			<a>../lab</a>
+			<img>grammarlab-icon.200.png</img>
+			<title>A library for extraction, maintenance, evolution and analysis of grammars in a broad sense</title>
+			<name>GrammarLab</name>
+			<text>foundations for a grammar laboratory, a Rascal project (2013–2015)</text>
 		</pic>
 		<pic dim>
 			<a>https://www.cs.vu.nl/lppr/</a>

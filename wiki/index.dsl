@@ -570,8 +570,9 @@
 			<text>cum laude, magna cum laude, summa cum laude, etc</text>
 		</pic>
 		<footer>
+			<br/>
 			<a href="https://en.wikipedia.org/wiki/Fair_use">Fair use</a> claimed for all images used on this page.<br/>
-			See also <a href="copyright">copyright disclaimer</a>.
+			See also the <a href="copyright">general copyright disclaimer</a>.
 		</footer>
 	</body>
 </html>

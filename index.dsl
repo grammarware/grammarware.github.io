@@ -81,9 +81,8 @@
 			<text>superseded by SLEBoK terms</text>
 		</pic>
 		<footer>
-			<a href="https://www.flaticon.com/free-icons/conference" title="conference icons">Conference icons created by Freepik - Flaticon</a>.
 			Dim tiles refer to past projects.
-			See <a href="copyright">copyright disclaimer</a>.<br/>
+			See <a href="copyright.html">copyright disclaimer</a>.<br/>
 		</footer>
 	</body>
 </html>

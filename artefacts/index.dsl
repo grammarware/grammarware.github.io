@@ -9,7 +9,7 @@
 			<img>terminal.200.png</img>
 			<alt>Grammarware</alt>
 			<title>back to the top of the website</title>
-			<name>BACK</name>
+			<name>↸ BACK</name>
 			<text>return to the root</text>
 		</pic>
 		<pic>
@@ -97,7 +97,7 @@
 		</pic>
 		<footer>
 			Dim tiles refer to past projects.
-			See <a href="../copyright">copyright disclaimer</a>.<br/>
+			See <a href="../copyright.html">copyright disclaimer</a>.<br/>
 		</footer>
 	</body>
 </html>

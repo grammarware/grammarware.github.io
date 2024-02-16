@@ -49,7 +49,7 @@
 				<a class="red" href="https://ceur-ws.org/Vol-3245/paper5.pdf">(CEUR)</a>
 			</li>
 			<li><a href="https://woutervdb.com/">Wouter van den Brink</a>,
-				<a href="https://people.utwente.nl/m.gerhold">Marcus Gerhold</a>,
+				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
 				Vadim Zaytsev.
 				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, <strong>SCAM</strong> 2022, pp. 181–185, IEEE.
 				<a class="red" href="https://github.com/WoutervdBrink/PHP-Modernity-Signature">(code)</a>
@@ -80,17 +80,26 @@
 				<a class="red" href="https://doi.org/10.1145/3624007.3624055">(DOI)</a>
 				<a class="red" href="https://grammarware.net/text/2023/crossover.pdf">(PDF)</a>
 			</li>
-			<li><a href="https://people.utwente.nl/m.gerhold">Marcus Gerhold</a>,
+			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
 				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/">Lola Solovyeva</a>,
 				Vadim Zaytsev.
 				<em>Leveraging Deep Learning for Python Version Identification</em>, <strong>BENEVOL</strong> 2023. CEUR 3567.
 				<a class="red" href="http://ceur-ws.org/Vol-3567/paper5.pdf">(CEUR)</a>
 			</li>
-			<li><a href="https://people.utwente.nl/m.gerhold">Marcus Gerhold</a>,
+			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
 				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/">Lola Solovyeva</a>,
 				Vadim Zaytsev.
 				<em>The Limits of the Identifiable: Challenges in Python Version Identification with Deep Learning</em>, <strong>SANER</strong> 2024. RENE track.
 				<!-- <a class="red" href="http://ceur-ws.org/Vol-3567/paper5.pdf">(CEUR)</a> -->
+			</li>
+			<li>Chris Admiraal,
+				<a href="https://www.woutervdb.com">Wouter van den Brink</a>,
+				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
+				Vadim Zaytsev,
+				<a href="https://www.linkedin.com/in/cristian-zubcu/">Christian Zubcu</a>.
+				<em>Deriving Modernity Signatures of Codebases with Static Analysis</em>,
+				<strong>JSS 211</strong>, May 2024.
+				<a class="red" href="https://doi.org/10.1016/j.jss.2024.111973">(DOI)</a>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
@@ -146,21 +155,12 @@
 			<li>(<msc/>) Max Hendriks, <a href="http://grammarware.net/edits/index.html#Hendriks2023">Consider it Parsed!</a> March 2022 – October 2023. <a class="red" href="https://github.com/BurritoZz/Relational-Parsing-Rust">(code)</a></li>
 			<li>(<msc/>) Stijn Broekhuis, <a href="http://grammarware.net/edits/index.html#Broekhuis2023">Incorporating User Inputs for Improved JSON Schema Inference</a>. November 2022 – December 2023. <a class="red" href="https://github.com/sbroekhuis/InteractiveSchemaInferrer">(code)</a></li>
 			<li>(<msc/>) Arthur Rump, <a href="http://grammarware.net/edits/index.html#Rump2023">Apollo++: Automated Assessment of Learning Outcomes in Programming Projects</a>. November 2021 – December 2023. <a class="red" href="https://github.com/arthurrump/apollopp">(code)</a></li>
+			<li>(<bsc/>) Julian van Santen, <a href="https://grammarware.net/edits/index.html#Santen2024">Using LLM Chatbots to Improve the Learning Experience in Functional Programming Courses</a>. February 2024. Co-supervised with Marco Gerards. Best Paper Award at <a href="https://sites.google.com/view/tscit40/homepage">TScIT40</a>.</li>
+			<li>(<bsc/>) Chris Bleeker, <a href="https://grammarware.net/edits/index.html#Santen2024">Measuring Code Modernity in Rust</a>. November 2023 – February 2024. Co-supervised with Marcus Gerhold. <a class="red" href="https://github.com/cb-p/ruvolution">(code)</a></li>
+			<li>(<bsc/>) Everard de Vree, <a href="https://grammarware.net/edits/index.html#Vree2024">Forging a Differential Tester for Haskell Compilers using Xsmith</a>. November 2023 – February 2024.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
-			<li class="title">(MSc) Design of Software Architectures
-				<ul>
-					<li><a href="https://canvas.utwente.nl/courses/6720">September–November 2020</a>;
-					coordinator: Robert Deckers; my role: support; cases: CopyCopy, Scandoo</li>
-					<li><a href="https://canvas.utwente.nl/courses/8337">September–November 2021</a>;
-					my role: coordinator, teacher; cases: Bingr, Parqueen, Walkmarkt</li>
-					<li><a href="https://canvas.utwente.nl/courses/11270">September–November 2022</a>;
-					my role: coordinator, teacher; cases: Wellerness, TurboWorkbench, COBOL-FIT</li>
-					<li><a href="https://canvas.utwente.nl/courses/12664">September–November 2023</a>;
-					coordinator: Georgiana Caltais; my role: teacher; cases: Boldly, WiseWorld</li>
-				</ul>
-			</li>
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
 				<ul>
 					<li><a href="https://canvas.utwente.nl/courses/7873">February–April 2021</a>;
@@ -197,6 +197,18 @@
 				</ul>
 			</li>
 			<li class="title">(MSc) Capita Selecta</li>
+			<li class="title">(MSc) Design of Software Architectures
+				<ul>
+					<li><a href="https://canvas.utwente.nl/courses/6720">September–November 2020</a>;
+					coordinator: Robert Deckers; my role: support; cases: CopyCopy, Scandoo</li>
+					<li><a href="https://canvas.utwente.nl/courses/8337">September–November 2021</a>;
+					my role: coordinator, teacher; cases: Bingr, Parqueen, Walkmarkt</li>
+					<li><a href="https://canvas.utwente.nl/courses/11270">September–November 2022</a>;
+					my role: coordinator, teacher; cases: Wellerness, TurboWorkbench, COBOL-FIT</li>
+					<li><a href="https://canvas.utwente.nl/courses/12664">September–November 2023</a>;
+					coordinator: Georgiana Caltais; my role: teacher; cases: Boldly, WiseWorld</li>
+				</ul>
+			</li>
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
@@ -207,10 +219,9 @@
 			<li>(<msc/>) Daniël Floor, <em>Code comprehension in a multi-paradigm environment</em></li><!-- Jan 2023 -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
 			<li>(<msc/>) Filip Ivanov, <em>code review</em> — co-supervised with Arjan van Hessen</li><!-- Oct 2023 -->
-			<li>(<msc/>) Oebele Lijzinga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
+			<li>(<msc/>) Oebele Lijzenga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
 			<li>(<msc/>) Naum Tomov, <em>DSL evaluation</em> — co-supervised with Nhat Bui</li><!-- Nov 2023 -->
-			<li>(<bsc/>) Chris Bleeker, <em>Modernity in Rust</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2023 -->
-			<li>(<bsc/>) Everard de Vree, <em>Xsmith with Haskell</em></li><!-- Nov 2023 -->
+			<li>(<msc/>) Ivo Broekhof, <em>Quality metrics for Scala</em> — co-supervised with Rinse van Hees</li><!-- Feb 2024 -->
 		</ul>
 		<footer/>
 	</body>

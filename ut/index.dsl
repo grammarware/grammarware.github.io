@@ -158,6 +158,8 @@
 			<li>(<bsc/>) Julian van Santen, <a href="https://grammarware.net/edits/index.html#Santen2024">Using LLM Chatbots to Improve the Learning Experience in Functional Programming Courses</a>. February 2024. Co-supervised with Marco Gerards. Best Paper Award at <a href="https://sites.google.com/view/tscit40/homepage">TScIT40</a>.</li>
 			<li>(<bsc/>) Chris Bleeker, <a href="https://grammarware.net/edits/index.html#Santen2024">Measuring Code Modernity in Rust</a>. November 2023 – February 2024. Co-supervised with Marcus Gerhold. <a class="red" href="https://github.com/cb-p/ruvolution">(code)</a></li>
 			<li>(<bsc/>) Everard de Vree, <a href="https://grammarware.net/edits/index.html#Vree2024">Forging a Differential Tester for Haskell Compilers using Xsmith</a>. November 2023 – February 2024.</li>
+			<li>(<capita>CS</capita>) Suzanne van der Veen, <a href="http://grammarware.net/edits/index.html#Veen2024">NoWa: A Chomsky Normal Form Converter for Weighted Attribute Grammars</a>. September 2022 – January 2024. <a class="red" href="https://github.com/SvdVeen/NoWa">(code)</a></li>
+			<li>(<msc/>) Daniël Floor, <a href="https://grammarware.net/edits/index.html#Floor2024">Code Comprehension in the Multi-Paradigm Environment Kotlin</a>. January 2023 – February 2024. Hosted by InfoSupport.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -216,12 +218,14 @@
 			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
 			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Jul 2023 -->
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
-			<li>(<msc/>) Daniël Floor, <em>Code comprehension in a multi-paradigm environment</em></li><!-- Jan 2023 -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
+			<li>(<capita>CS</capita>) Peter Smit, <em>CBS</em></li><!-- Aug 2023 -->
+			<li>(<capita>CS</capita>) Valentijn Hol, <em>Rust</em></li><!-- Sep 2023 -->
 			<li>(<msc/>) Filip Ivanov, <em>code review</em> — co-supervised with Arjan van Hessen</li><!-- Oct 2023 -->
 			<li>(<msc/>) Oebele Lijzenga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
 			<li>(<msc/>) Naum Tomov, <em>DSL evaluation</em> — co-supervised with Nhat Bui</li><!-- Nov 2023 -->
 			<li>(<msc/>) Ivo Broekhof, <em>Quality metrics for Scala</em> — co-supervised with Rinse van Hees</li><!-- Feb 2024 -->
+			<li>(<msc/>) Luc Timmerman, <em>Cloud Optimisation</em> — co-supervised with Fernando Castor</li><!-- Feb 2024 -->
 		</ul>
 		<footer/>
 	</body>

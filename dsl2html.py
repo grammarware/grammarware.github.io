@@ -298,7 +298,14 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			if paperV:
 				paperV = ', ' + paperV
 			lines[i] = '<li>%s<a%s>%s</a>%s. <a class="now" href="%s">(bibtex)</a>%s%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, paperX, X, paperText)
-		# tiles
+		# expansions
+		if lines[i].find('<codered>') > -1:
+			# <a class="red" href="https://github.com/grammarhoard/2023-witmans-whitespace">(code)</a></li>
+			print('<<< '+lines[i])
+			lines[i] = lines[i].replace('<codered>', '<a class="red" href="').replace('</codered>', '">(code)</a>')
+			print('CODE RED!')
+			print('>>> '+lines[i])
+		# exclusive expansions
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'
 		elif lines[i].strip().startswith('<divclass'):

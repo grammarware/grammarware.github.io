@@ -37,6 +37,12 @@
 					<li>Moderator: <a href="..">Vadim Zaytsev</a></li>
 				</ul>
 			</li>
+			<li>
+				🆕 <strong><a class="red" href="#">23 May 2024</a></strong> in Amsterdam 🆕
+				<ul>
+					<li>Details TBA</li>
+				</ul>
+			</li>
 		</ul>
 		<h2 help="in the media">About us</h2>
 		<ul>

@@ -14,6 +14,14 @@
 		</pic>
 		<!--  -->
 		<pic>
+			<a>https://conf.researchr.org/home/staf-2024</a>
+			<img>staf2024.png</img>
+			<alt>STAF</alt>
+			<title>Software Technologies: Applications and Foundations</title>
+			<name>STAF 2024</name>
+			<text>a multi-conference event I am general-chairing in 2024</text>
+		</pic>
+		<pic>
 			<a>senc.html</a>
 			<img>sen.200.png</img>
 			<alt>SEN Classroom</alt>

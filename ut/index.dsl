@@ -35,6 +35,7 @@
 				<a href="https://ioviv.at/a-new-age-of-technical-computer-science/" class="red">(I/O Vivat)</a>
 			</li>
 			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
+			<li>In 2024, the UT Master of Computer Science was again deemed <a href="overzicht2024.png">the best general computer science programme</a> in the country by the same reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
@@ -157,6 +158,9 @@
 			<li>(<bsc/>) Everard de Vree, <a href="https://grammarware.net/edits/index.html#Vree2024">Forging a Differential Tester for Haskell Compilers using Xsmith</a>. November 2023 – February 2024.</li>
 			<li>(<capita>CS</capita>) Suzanne van der Veen, <a href="http://grammarware.net/edits/index.html#Veen2024">NoWa: A Chomsky Normal Form Converter for Weighted Attribute Grammars</a>. September 2022 – January 2024. <codered>https://github.com/SvdVeen/NoWa</codered></li>
 			<li>(<msc/>) Daniël Floor, <a href="https://grammarware.net/edits/index.html#Floor2024">Code Comprehension in the Multi-Paradigm Environment Kotlin</a>. January 2023 – February 2024. Hosted by <a href="https://infosupport.com">InfoSupport</a>.</li>
+			<li>(<capita>CS</capita>) Valentijn Hol, <a href="http://grammarware.net/edits/index.html#Hol2024">Facilitating Various Metaprogramming Techniques for Rust</a>. September 2023 – February 2024.</li>
+			<li>(<msc/>) Ömer Sayilir, <a href="https://grammarware.net/edits/index.html#Sayilir2024">Towards Grammatical Inference of Legacy Programming Languages</a>. July 2023 – May 2024. <codered>https://github.com/omersayilir75/BabyCobolRecognizer</codered> <codered>https://github.com/omersayilir75/GramInfGenAlg</codered> <codered>https://github.com/omersayilir75/OberonRecognizer</codered> <codered>https://github.com/omersayilir75/SQLiteRecognizer</codered></li>
+			<li>(<msc/>) Rafael Dulfer, <a href="https://grammarware.net/edits/index.html#Dulfer2024">WAGon: A Weighted Attribute Grammar Oriented Notation</a>. November 2022 – June 2024. <a href="https://dulfer.be/wagon/wagon/index.html" class="red">(documentation)</a> <codered>https://github.com/Rafaeltheraven/wagon</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -212,12 +216,9 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
-			<li>(<msc/>) Rafael Dulfer, <em>Parsing with WAG</em></li><!-- Nov 2022 -->
-			<li>(<msc/>) Ömer Sayilir, <em>4GLs</em></li><!-- Jul 2023 -->
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
 			<li>(<capita>CS</capita>) Peter Smit, <em>CBS</em></li><!-- Aug 2023 -->
-			<li>(<capita>CS</capita>) Valentijn Hol, <em>Rust</em></li><!-- Sep 2023 -->
 			<li>(<msc/>) Filip Ivanov, <em>code review</em> — co-supervised with Arjan van Hessen</li><!-- Oct 2023 -->
 			<li>(<msc/>) Oebele Lijzenga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
 			<li>(<msc/>) Naum Tomov, <em>DSL evaluation</em> — co-supervised with Nhat Bui</li><!-- Nov 2023 -->

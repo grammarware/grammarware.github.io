@@ -161,6 +161,13 @@
 			<li>(<capita>CS</capita>) Valentijn Hol, <a href="http://grammarware.net/edits/index.html#Hol2024">Facilitating Various Metaprogramming Techniques for Rust</a>. September 2023 – February 2024.</li>
 			<li>(<msc/>) Ömer Sayilir, <a href="https://grammarware.net/edits/index.html#Sayilir2024">Towards Grammatical Inference of Legacy Programming Languages</a>. July 2023 – May 2024. <codered>https://github.com/omersayilir75/BabyCobolRecognizer</codered> <codered>https://github.com/omersayilir75/GramInfGenAlg</codered> <codered>https://github.com/omersayilir75/OberonRecognizer</codered> <codered>https://github.com/omersayilir75/SQLiteRecognizer</codered></li>
 			<li>(<msc/>) Rafael Dulfer, <a href="https://grammarware.net/edits/index.html#Dulfer2024">WAGon: A Weighted Attribute Grammar Oriented Notation</a>. November 2022 – June 2024. <a href="https://dulfer.be/wagon/wagon/index.html" class="red">(documentation)</a> <codered>https://github.com/Rafaeltheraven/wagon</codered></li>
+			<li>(<bsc/>) Vladislav Mukhachev, <a href="https://grammarware.net/edits/index.html#Mukhachev2024">Support Python in RefDetect</a>. April–July 2024. Co-supervised with Iman Hemati Moghadam.</li>
+			<li>(<bsc/>) Aliaksei Kouzel, <a href="https://grammarware.net/edits/index.html#Kouzel2024">Developing a DSL Design Methodology for CPS Diagnostics</a>. April–July 2024. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Haroun Mangal, <a href="https://grammarware.net/edits/index.html#Mangal2024">CSPL: A Domain-Specific Language for Modelling the Behaviour of Cyber-Physical Systems</a>. April–July 2024. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Selin Mehmed, <a href="https://grammarware.net/edits/index.html#Mehmed2024">Domain-Specific Language for Cyber-Physical Systems: A Survey</a>. April–July 2024. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Marks Troicins, <a href="https://grammarware.net/edits/index.html#Troicins2024">Measuring Code Modernity of the C# Language Codebases</a>. April–July 2024. Co-supervised with Marcus Gerhold. <codered>https://github.com/MarkOneLove/Codebase-Modernity-Meter</codered></li>
+			<li>(<bsc/>) Marko Vasylenko, <a href="https://grammarware.net/edits/index.html#Vasylenko2024">Input Invariants in Fuzz-testing</a>. April–July 2024. <codered>https://github.com/vasylenson/string-theory-py</codered></li>
+			<li>(<bsc/>) Danila Bren, <a href="https://grammarware.net/edits/index.html#Bren2024">Pushing Down Context Free Grammars</a>. April–July 2024.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -216,7 +223,7 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
-			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em></li><!-- Nov 2022? -->
+			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022? -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
 			<li>(<capita>CS</capita>) Peter Smit, <em>CBS</em></li><!-- Aug 2023 -->
 			<li>(<msc/>) Filip Ivanov, <em>code review</em> — co-supervised with Arjan van Hessen</li><!-- Oct 2023 -->

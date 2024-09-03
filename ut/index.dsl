@@ -168,6 +168,9 @@
 			<li>(<bsc/>) Marks Troicins, <a href="https://grammarware.net/edits/index.html#Troicins2024">Measuring Code Modernity of the C# Language Codebases</a>. April–July 2024. Co-supervised with Marcus Gerhold. <codered>https://github.com/MarkOneLove/Codebase-Modernity-Meter</codered></li>
 			<li>(<bsc/>) Marko Vasylenko, <a href="https://grammarware.net/edits/index.html#Vasylenko2024">Input Invariants in Fuzz-testing</a>. April–July 2024. <codered>https://github.com/vasylenson/string-theory-py</codered></li>
 			<li>(<bsc/>) Danila Bren, <a href="https://grammarware.net/edits/index.html#Bren2024">Pushing Down Context Free Grammars</a>. April–July 2024.</li>
+			<li>(<msc/>) Naum Tomov, <a href="https://grammarware.net/edits/index.html#Tomov2024">Extensibility Of Domain-Specific Languages: A Case Study of an Industrial DSL</a>. November 2023 – July 2024. Co-supervised with Nhat Bui.</li>
+			<li>(<msc/>) Filip Ivanov, <a href="https://grammarware.net/edits/index.html#Ivanov2024">CodeQuizzer: Improving Codebase Understanding for Code Review via a Gamified Quiz Taking System</a>. October 2023 – July 2024. Co-supervised with Arjan van Hessen.</li>
+			<li>(<msc/>) Oebele Lijzenga, <a href="https://grammarware.net/edits/index.html#Lijzenga2024">Generating Patch Ingredients for Search-Based Program Repair Using Code Language Models</a>. November 2023 – August 2024. Co-supervised with Iman Hemati Moghadam.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -226,9 +229,6 @@
 			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022? -->
 			<li>(<msc/>) Lotte Steenmeijer, <em>WAGIoT</em></li><!-- Feb 2023 -->
 			<li>(<capita>CS</capita>) Peter Smit, <em>CBS</em></li><!-- Aug 2023 -->
-			<li>(<msc/>) Filip Ivanov, <em>code review</em> — co-supervised with Arjan van Hessen</li><!-- Oct 2023 -->
-			<li>(<msc/>) Oebele Lijzenga, <em>Automated Program Repair</em> — co-supervised with Iman Hemati Moghadam</li><!-- Nov 2023 -->
-			<li>(<msc/>) Naum Tomov, <em>DSL evaluation</em> — co-supervised with Nhat Bui</li><!-- Nov 2023 -->
 			<li>(<msc/>) Ivo Broekhof, <em>Quality metrics for Scala</em> — co-supervised with Rinse van Hees</li><!-- Feb 2024 -->
 			<li>(<msc/>) Luc Timmerman, <em>Cloud Optimisation</em> — co-supervised with Fernando Castor</li><!-- Feb 2024 -->
 		</ul>

@@ -20,8 +20,9 @@
 		<h2 help="alphabetically by surname">Participants</h2>
 		<ul>
 			<li><a href="https://www.utwente.nl/en/eemcs/hmi/hmi-people-pages/hmi-profile-pages/angelikamaderprofile/">Angelika Mader</a> (principal investigator)</li>
-			<li><a href="https://grammarware.github.io">Vadim Zaytsev</a> (principal investigator)</li>
+			<li><a href="https://people.utwente.nl/arend.rensink">Arend Rensink</a> (promotor)</li>
 			<li><a href="https://www.arthurrump.com/about/">Arthur Rump</a> (doctoral candidate)</li>
+			<li><a href="https://grammarware.github.io">Vadim Zaytsev</a> (principal investigator)</li>
 		</ul>
 		<h2 help="in the media">About us</h2>
 		<ul>

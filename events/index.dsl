@@ -14,12 +14,27 @@
 		</pic>
 		<!--  -->
 		<pic>
+			<a>https://conf.researchr.org/home/sle-2025</a>
+			<img>sle.200.png</img>
+			<alt>SLE</alt>
+			<title>Software Language Engineering</title>
+			<name>SLE 2025</name>
+			<text>a conference I am programme-chairing in 2025</text>
+		</pic>
+		<pic>
+			<a>http://oopsle.github.io/</a>
+			<img>oopsle.200.png</img>
+			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
+			<name>OOPSLE</name>
+			<text>a workshop about open and original problems in SLE (2013–2025)</text>
+		</pic>
+		<pic>
 			<a>https://conf.researchr.org/home/staf-2024</a>
 			<img>staf2024.png</img>
 			<alt>STAF</alt>
 			<title>Software Technologies: Applications and Foundations</title>
 			<name>STAF 2024</name>
-			<text>a multi-conference event I am general-chairing in 2024</text>
+			<text>a multi-conference event I have general-chaired in 2024</text>
 		</pic>
 		<pic>
 			<a>senc.html</a>
@@ -30,26 +45,19 @@
 			<text>a national educational event\n(2023–…)</text>
 		</pic>
 		<pic>
-			<a>models.html</a>
-			<img>https://bibtex.github.io/stuff/models.png</img>
-			<title>ACM / IEEE International Conference on Model Driven Engineering Languages and Systems</title>
-			<name>MoDELS</name>
-			<text>one of the main conferences I frequently attend and serve (2012–…)</text>
-		</pic>
-		<pic>
-			<a>http://oopsle.github.io/</a>
-			<img>oopsle.200.png</img>
-			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
-			<name>OOPSLE</name>
-			<text>a workshop about open and original problems in SLE (2013–2020)</text>
-		</pic>
-		<pic>
 			<a>sattose.html</a>
 			<img>sotesola.200.png</img>
 			<alt>SATToSE</alt>
 			<title>Seminar Series on Advanced Tools and Techniques for Software Evolution</title>
 			<name>SATToSE\nSoTeSoLa</name>
-			<text>a regular software evolution event\n(2008–…)</text>
+			<text>a regular software evolution event\n(2008–2023)</text>
+		</pic>
+		<pic dim>
+			<a>models.html</a>
+			<img>https://bibtex.github.io/stuff/models.png</img>
+			<title>ACM / IEEE International Conference on Model Driven Engineering Languages and Systems</title>
+			<name>MoDELS</name>
+			<text>one of the main conferences I frequently attend and serve (2012–…)</text>
 		</pic>
 		<pic dim>
 			<a>gttse.html</a>

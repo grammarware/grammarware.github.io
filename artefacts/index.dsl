@@ -18,7 +18,7 @@
 			<alt>SLEBoK</alt>
 			<title>SLEBoK: Software Language Engineering Body of Knowledge</title>
 			<name>SLEBoK</name>
-			<text>a new multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
+			<text>an ongoing multi-track initiative for which I am the Editor-in-Chief (2017–…)</text>
 		</pic>
 		<pic>
 			<a>https://slebok.github.io/proverb/</a>

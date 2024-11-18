@@ -27,12 +27,22 @@
 			<li>I started co-teaching the first MSc course in September 2020, co-teaching the first BSc course in November 2020, and did the first solo MSc course in February 2021.</li>
 			<li>From May 2021, I am the Programme Director of both <a href="https://www.utwente.nl/en/tcs/organisation/">BSc TCS</a> and <a href="https://www.utwente.nl/en/csc/organization/">MSc CS</a>.</li>
 			<li>From June 2021, I am responsible for introducing Numerus Fixus for BSc TCS.
-				<a href="https://www.utoday.nl/news/70020/numerus-fixus-also-for-technical-computer-science" class="red">(U-Today)</a>
-				<a href="https://www.utwente.nl/en/news/2021/10/121615/enrolment-restrictions-for-technical-computer-science" class="red">(UT News)</a>
-				<a href="https://www.utoday.nl/news/70061/we-see-the-need-for-a-numerus-fixus" class="red">(U-Today)</a>
-				<a href="https://www.utoday.nl/opinion/71491/toegankelijkheid-numerus-fixus-studies-in-gevaar" class="red">(U-Today)</a>
-				<a href="https://www.utoday.nl/news/72234/over-de-groeiambities-van-de-ut-hele-regio-moet-meebewegen" class="red">(U-Today)</a>
-				<a href="https://ioviv.at/a-new-age-of-technical-computer-science/" class="red">(I/O Vivat)</a>
+				<uL>
+					<li><a href="https://www.utoday.nl/news/70019/ook-numerus-fixus-voor-technical-computer-science" class="red">Ook numerus fixus voor Technical Computer Science</a> (U-Today, 16 Jun 2021)</li>
+					<li><a href="https://www.utoday.nl/news/70020/numerus-fixus-also-for-technical-computer-science" class="red">Numerus fixus also for Technical Computer Science</a> (U-Today, 16 Jun 2021)</li>
+					<li><a href="https://www.utoday.nl/news/70060/we-zien-de-noodzaak-van-een-numerus-fixus" class="red">‘We zien de noodzaak van een numerus fixus’</a> (U-Today, 23 Jun 2021)</li>
+					<li><a href="https://www.utoday.nl/news/70061/we-see-the-need-for-a-numerus-fixus" class="red">'We see the need for a numerus fixus'</a> (U-Today, 23 Jun 2021)</li>
+					<li><a href="https://www.utwente.nl/en/news/2021/10/121615/enrolment-restrictions-for-technical-computer-science" class="red">Enrolment restrictions for Technical Computer Science</a> (UT News, 4 Oct 2021)</li>
+					<li><a href="https://www.utoday.nl/opinion/71491/toegankelijkheid-numerus-fixus-studies-in-gevaar" class="red">Toegankelijkheid numerus fixus studies in gevaar</a> (U-Today, 25 May 2022)</li>
+					<li><a href="https://www.utoday.nl/news/72234/over-de-groeiambities-van-de-ut-hele-regio-moet-meebewegen" class="red">Over de groeiambities van de UT: ‘Hele regio moet meebewegen’</a> (U-Today, 1 Dec 2022)</li>
+					<li><a href="https://ioviv.at/a-new-age-of-technical-computer-science/" class="red">A new age of Technical Computer Science</a> (I/O Vivat, 17 May 2023)</li>
+				</uL>
+			</li>
+			<li>In March 2023, I have replaced Numerus Fixus with Mandatory Matching for BSc TCS.
+				<uL>
+					<li><a href="https://www.utoday.nl/news/74858/instroomcijfers-computer-science-redt-ut-zorgen-bij-tg-en-ide" class="red">Instroomcijfers: Computer Science ‘redt’ UT, dip bij <abbr title="Technische Geneeskunde">TG</abbr> en <abbr title="Industrial Design Engineering">IDE</abbr></a> (U-Today, 13 Nov 2024)</li>
+					<li><a href="https://www.utoday.nl/news/74860/intake-figures-computer-science-saves-ut-decline-at-tm-and-ide" class="red">Inflow figures: Computer Science ‘saves’ UT, dip at <abbr title="Technical Medicine">TM</abbr> and <abbr title="Industrial Design Engineering">IDE</abbr></a> (U-Today, 13 Nov 2024)</li>
+				</uL>
 			</li>
 			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 			<li>In 2024, the UT Master of Computer Science was again deemed <a href="overzicht2024.png">the best general computer science programme</a> in the country by the same reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
@@ -156,6 +166,7 @@
 			<li><em>The Art of Distancing</em>, Computer Science Educational Day, 21 January 2021.</li>
 			<li><em>DEUS VULT: The Holy Wars of Computer Science</em>, <a href="https://www.inter-actief.utwente.nl/">Inter-Actief</a> Lecture, 30 November 2021.</li>
 			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
+			<li><em>Exploring "learning by doing" through <abbr title="project-based learning">PBL</abbr> and <abbr title="challenge-based learning">CBL</abbr></em>, <a href="https://grammarware.github.io/events/senc.html">SEN Classrooms</a>, 23 May 2024.</li>
 		</ul>
 		<h2 help="by defence date">Supervised students</h2>
 		<ol>
@@ -298,6 +309,7 @@
 			<li>(<msc/>) Anissa Donkers, <em>Code Quality</em> — co-supervised with Arthur Rump</li><!-- Sep 2024 -->
 			<li>(<msc/>) Tom Meulenkamp, <em>Relational parsing</em></li><!-- Sep 2024 -->
 			<li>(<capita>CS</capita>) Daniel Mocanu, <em>Pythonicity</em></li><!-- Nov 2024 -->
+			<li>(<bsc/>) Thijs Beumer, <em>JavaScript Code Modernity</em></li><!-- Nov 2024 -->
 		</ul>
 		<footer/>
 	</body>

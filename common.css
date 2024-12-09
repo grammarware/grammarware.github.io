@@ -42,3 +42,4 @@ table.realtable th, table.realtable * td {border: 1px solid black;}
 li.j::marker {color:red}
 li.c::marker {color:blue}
 li.w::marker {color:cadetblue}
+a.a {text-decoration-style:double;}

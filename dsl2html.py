@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/opt/anaconda3/bin/python
 # -*- coding: utf-8 -*-
 
 import glob, re, datetime

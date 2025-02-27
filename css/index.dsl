@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
-	<head jquery title="Cascading Style Sheets" />
+	<head jquery title="Dr. Vadim Zaytsev — Cascading Style Sheets" />
 	<body>
 		<header/>
 		<h1>
@@ -66,7 +66,7 @@
 				<doi>10.1109/ICSME.2016.91</doi>
 				<gwbib>ABA-Data2016</gwbib>
 				<gwpdf>2016/aba-data.pdf</gwpdf>
-				<x>http://leonardpunt.github.io/masterproject/dataset-and-results.zip
+				<x>http://leonardpunt.github.io/masterproject/dataset-and-results.zip</x>
 				A dataset artefact accompanying [#ABA#], made by fixing and extending the <a href="http://dmazinanian.me/publications/FSE'14/FSE'14-crawled.7z">dataset from [#DRO#]</a>. Won the Best Artefact Award.
 			</paper>
 			<paper>
@@ -109,7 +109,22 @@
 				<doi>10.1109/SANER.2016.18</doi>
 				<dblp>conf/wcre/MazinanianT16</dblp>
 			</paper>
+			<paper>
+				<a>P. S. Lokhande, B. B. Meshram</a>
+				<t>Analytic Hierarchy Process (AHP) to Find Most Probable Web Attack on an E-Commerce Site</t>
+				<v>ICTCS 2016</v>
+				<doi>10.1145/2905055.2905120</doi>
+				<acm>2905120</acm>
+			</paper>
 			<!-- 2015 -->
+			<paper>
+				<a>Kei Kanaoka, Motomichi Toyama</a>
+				<t>Browser GUI for Generating Web Data Extraction Rules in Ducky</t>
+				<v>iiWAS 2015</v>
+				<doi>10.1145/2837185.2837262</doi>
+				<dblp>conf/iiwas/KanaokaT15</dblp>
+				Ducky, a data extraction framework proposed in this paper, uses CSS selectors instead of XPath to address elements within web pages.
+			</paper>
 			<paper>
 				<a>Thomas H. Park, Brian Dorn, Andrea Forte</a>
 				<t>An Analysis of HTML and CSS Syntax Errors in a Web Development Course</t>
@@ -284,11 +299,53 @@
 			</paper>
 			<!-- 2010 -->
 			<paper>
+				<a>Colin Stewart</a>
+				<t>Course Restructuring in "CMPT 165 – Introduction to Multimedia and the Internet"</t>
+				<v>WCCCE 2010</v>
+				<doi>10.1145/1806512.1806518</doi>
+				<acm>1806518</acm>
+			</paper>
+			<paper>
+				<a>Kaimin Zhang, Lu Wang, Aimin Pan, Bin Benjamin Zhu</a>
+				<t>Smart Caching for Web Browsers</t>
+				<v>WWW 2010</v>
+				<doi>10.1145/1772690.1772741</doi>
+				<dblp>conf/www/ZhangWPZ10</dblp>
+			</paper>
+			<paper>
+				<a>John J. Barton, Jan Odvarko</a>
+				<t>Dynamic and Graphical Web Page Breakpoints</t>
+				<v>WWW 2010</v>
+				<doi>10.1145/1772690.1772700</doi>
+				<dblp>conf/www/BartonO10</dblp>
+			</paper>
+			<paper>
+				<a>Leo A. Meyerovich, Rastislav Bodik</a>
+				<t>Fast and Parallel Webpage Layout</t>
+				<v>WWW 2010</v>
+				<doi>10.1145/1772690.1772763</doi>
+				<dblp>conf/www/MeyerovichB10</dblp>
+			</paper>
+			<paper>
+				<a>Joel Hollingsworth, David J. Powell</a>
+				<t>Teaching Web Programming using the Google Cloud</t>
+				<v>ACM SE 2010</v>
+				<doi>10.1145/1900008.1900110</doi>
+				<dblp>conf/ACMse/HollingsworthP10</dblp>
+			</paper>
+			<paper>
 				<a>Manuel Serrano</a>
 				<t>HSS: A Compiler for Cascading Style Sheets</t>
 				<v>PPDP 2010</v>
 				<doi>10.1145/1836089.1836103</doi>
 				<sleigh>PPDP-2010-Serrano</sleigh>
+			</paper>
+			<paper>
+				<a>Marco Balduzzi, Manuel Egele, Engin Kirda, Davide Balzarotti, Christopher Kruegel</a>
+				<t>A solution for the Automated Detection of Clickjacking Attacks</t>
+				<v>ASIACCS 2010</v>
+				<doi>10.1145/1755688.1755706</doi>
+				<dblp>conf/ccs/BalduzziEKBK10</dblp>
 			</paper>
 			<paper>
 				<a>Lin-Shung Huang, Zack Weinberg, Chris Evans, Collin Jackson</a>
@@ -605,6 +662,11 @@
 				<dblp>journals/wwwj/CulshawLM97</dblp>
 				One of the very first detailed mentions of CSS less than a year after CSS1 reached W3C Rec level. No research contribution, just explanations of what it can do, with lots of examples. PREPARE FOR CAPSLOCK.
 			</paper>
+		</ol>
+		<rejected>
+			<no doi="10.1145/2938503.2938527">Modern Web Page Generation by Using Exclusively SuperSQL</no>
+			<no doi="10.1145/2851581.2892553">cTed: Advancing Selection Mechanisms in Web Browsers</no>
+		</rejected>
 		<footer/>
 	</body>
 </html>

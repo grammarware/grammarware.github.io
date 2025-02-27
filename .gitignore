@@ -1,1 +1,9 @@
 .DS_Store
+# This is temporary!
+100
+nl
+rc
+logos/raincode.png
+logos/*.svg
+css
+stresslabo

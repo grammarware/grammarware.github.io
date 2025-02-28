@@ -18,6 +18,7 @@ div.cpic, span.cpic {display:inline-block}
 br {clear:both}
 .last {width:100%; text-align:right; font-style:italic; font-size:smaller}
 a:link, a:visited {color:#1d6470}
+a.stud:link, a.stud:visited {color:#00A953; text-decoration: underline; text-decoration-style: double;}
 a.red:link, a.red:visited {color:#b64d70; font-style:normal}
 a.now:link, a.now:visited {color:#ff6332; font-style:normal}
 .pic:hover, .cpic:hover, .double:hover {background-color:#ffbf95}

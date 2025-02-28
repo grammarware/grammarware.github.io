@@ -13,7 +13,7 @@ def prg2full(x):
 	return x
 
 # Header Counter
-p = re.compile('<(?P<tag>\w+)>(?P<txt>[^\<]+)</(?P=tag)+>')
+p = re.compile('<(?P<tag>\\w+)>(?P<txt>[^\\<]+)</(?P=tag)+>')
 d = ('Zeroary', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',\
 	'September', 'October', 'November', 'December')[datetime.date.today().month]+\
 	' '+str(datetime.date.today().year)
@@ -301,17 +301,17 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		# expansions
 		if lines[i].find('<codered>') > -1:
 			# <a class="red" href="https://github.com/grammarhoard/2023-witmans-whitespace">(code)</a></li>
-			print('<<< '+lines[i])
+			# print('<<< '+lines[i])
 			lines[i] = lines[i].replace('<codered>', '<a class="red" href="').replace('</codered>', '">(code)</a>')
-			print('CODE RED!')
-			print('>>> '+lines[i])
+			# print('CODE RED!')
+			# print('>>> '+lines[i])
 		# exclusive expansions
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'
 		elif lines[i].strip().startswith('<divclass'):
 			divclass = p.search(lines[i].strip()).groups()[1]
 		elif lines[i].strip().startswith('<pic'):
-			classes = re.split('\W+', lines[i])[2:-1]
+			classes = re.split('\\W+', lines[i])[2:-1]
 			if 'nopic' in classes:
 				classes.remove('nopic')
 			else:

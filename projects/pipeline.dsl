@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
 	<head jquery title="Dr. Vadim Zaytsev — Pipeline" />
-	<body style="background-color:#77A5EE;" onload="off(0);off(1);">
+	<body style="background-color:#77A5EE;" onload="off(0);off(1);off(2);">
 		<header/>
 		<h1>
 			Unified Assessment Pipeline for Learning-by-Doing
@@ -24,16 +23,36 @@
 			<li><a href="https://www.arthurrump.com/about/">Arthur Rump</a> (doctoral candidate)</li>
 			<li><a href="https://grammarware.github.io">Vadim Zaytsev</a> (principal investigator)</li>
 		</ul>
+		<h2 help="latest first">Deliverables</h2>
+		<ul>
+			<li>
+				Arthur Rump, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#Illdefined2022">A Refined Model of Ill-definedness in Project-Based Learning</a></em>, a paper at <a href="https://conf.researchr.org/track/models-2022/models-2022-educators-symposium">EduSymp @ MoDELS</a>, 2022. 8 pages.
+				<ul style="list-style-type:none;">
+					<li>
+						<!-- <a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> -->
+						<a href="http://grammarware.net/bib/DifferencingTool2024.bib">(BibTeX)</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Arthur Rump, Vadim Zaytsev, Angelika Mader.
+				<em><a href="http://grammarware.net/writes/#PipelineRequirements2025">Requirements for an Automated Assesment Tool for Learning Programming by Doing</a></em>, an Education Track paper at <a href="https://conf.researchr.org/track/icst-2025/icst-2025-education">ICST</a>, 2025. <!-- 8 pages. -->
+				<!--
+				<ul style="list-style-type:none;">
+					<li>
+						<doired>...</doired>
+						<bibred>PipelineRequirements2025</bibred>
+					</li>
+				</ul>
+				-->
+			</li>
+		</ul>
 		<h2 help="in the media">About us</h2>
 		<ul>
 			<li><a href="https://www.utwente.nl/en/eemcs/fmt/news%20and%20vacancies/News/2024/1/1297503/incentive-grants-for-vadim-zaytsev-and-moritz-hahn">Incentive grants for Vadim Zaytsev and Moritz Hahn</a></li>
 			<li><a href="https://www.utwente.nl/en/service-portal/news-events/news/2023/12/1290130/eemcs-faculty-celebrates-innovation-and-education-initiatives">EEMCS Faculty celebrates innovation and education initiatives</a></li>
 		</ul>
-		<!-- 
-		<h2 help="latest first">Deliverables</h2>
-		<ul>
-		</ul>
- 		-->
 		<footer/>
 	</body>
 </html>

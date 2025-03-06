@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
 	<head jquery title="Dr. Vadim Zaytsev — CodeDiffNG" />
 	<body>
@@ -47,19 +46,19 @@
 				<em><a href="http://grammarware.net/writes/#DifferencingTool2024">Visual Assurance in Refactoring through Trace Equivalence of Control Flow Graphs</a></em>, a Tool Demo track paper at <a href="https://conf.researchr.org/home/saner-2024">SANER</a>, 2024. 5 pages.
 				<ul style="list-style-type:none;">
 					<li>
-						<!-- <a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> -->
-						<a href="http://grammarware.net/bib/DifferencingTool2024.bib">(BibTeX)</a>
+						<doired>10.1109/SANER60148.2024.00091</doired>
+						<bibred>DifferencingTool2024</bibred>
 					</li>
 				</ul>
 			</li>
 			<li>
 				Céline Deknop.
-				<em><a href="https://uclouvain.be/fr/secteurs/sst/evenements/public-thesis-defense-icteam-85.html">Understanding Large Codebase Refactoring through Differencing</a></em>, a PhD thesis, December 2023.
-				<!-- 5 pages. -->
+				<em><a href="https://dial.uclouvain.be/pr/boreal/object/boreal:284187">Understanding Large Codebase Refactoring through Differencing</a></em>, a PhD thesis, December 2023.
+				200 pages.
 				<ul style="list-style-type:none;">
 					<li>
-						<!-- <a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> -->
-						<a href="https://grammarware.net/bib/Deknop2023.bib">(BibTeX)</a>
+						<ared>http://hdl.handle.net/2078.1/284187</ared>
+						<bibred>Deknop2023</bibred>
 					</li>
 				</ul>
 			</li>
@@ -75,47 +74,67 @@
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
 				<em><a href="https://cyprusconferences.org/icsme2022/scientific-program/">Artefact accompanying paper 1967</a></em>, Recognizing and Rewarding Open Science in SE (ROSE) festival, 5 October 2022.
 				<ul style="list-style-type:none;">
-					<li><a href="http://web.archive.org/web/20221005124815/https://cyprusconferences.org/icsme2022/scientific-program/">(archived version of the conference website)</a></li>
+					<li>
+						<ared>https://cyprusconferences.org/icsme2022/scientific-program/</ared>
+						<!-- <a href="http://web.archive.org/web/20221005124815/https://cyprusconferences.org/icsme2022/scientific-program/">(archived version of the conference website)</a> -->
+					</li>
 				</ul>
 			</li>
 			<li>
 				Wouter van den Brink, Marcus Gerhold, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#Modernity2022">Deriving Modernity Signatures for PHP Systems with Static Analysis</a></em>, a NIER track paper at <a href="http://www.ieee-scam.org/2022/">SCAM</a>, 2022. 5 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> <a href="http://grammarware.net/bib/Modernity2022.bib">(BibTeX)</a></li>
+					<li>
+						<doired>10.1109/SCAM55253.2022.00027</doired>
+						<bibred>Modernity2022.bib</bibred>
 				</ul>
 			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#TraceEq2022">Visualising CFG Differences Through Trace Equivalence</a></em>, a workshop presentation abstract at <a href="https://benevol2022.github.io/">BENEVOL</a>, 2022. 2 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="https://benevol2022.github.io/papers/CelineDeknop.pdf"><code>benevol2022:CelineDeknop</code></a> <a href="http://grammarware.net/bib/TraceEq2022.bib">(BibTeX)</a></li>
+					<li>
+						<ared>https://benevol2022.github.io/papers/CelineDeknop.pdf</ared>
+						<bibred>TraceEq2022</bibred>
+					</li>
 				</ul>
 			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#SemiCfg2022">Generating Customised Control-Flow Graphs for Legacy Languages with Semi-Parsing</a></em>, an industry track paper at <a href="https://cyprusconferences.org/icsme2022/">ICSME</a>, 2022. 10 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="https://doi.org/10.1109/ICSME55016.2022.00072"><code>doi:10.1109/ICSME55016.2022.00072</code></a> <a href="http://grammarware.net/bib/SemiCfg2022.bib">(BibTeX)</a></li>
+					<li>
+						<doired>10.1109/ICSME55016.2022.00072</doired>
+						<bibred>SemiCfg2022</bibred>
+					</li>
 				</ul>
 			</li>
 			<li>
 				Céline Deknop, Kim Mens, Alexandre Bergel, Johan Fabry, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#LogDiff2021">A Scalable Log Differencing Visualisation Applied to COBOL Refactoring</a></em>, a research paper at <a href="https://vissoft.info/2021/program.html">VISSOFT</a>, 2021. 12 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="https://doi.org/10.1109/VISSOFT52517.2021.00010"><code>doi:10.1109/VISSOFT52517.2021.00010</code></a> <a href="http://grammarware.net/bib/LogDiff2021.bib">(BibTeX)</a></li>
+					<li>
+						<doired>10.1109/VISSOFT52517.2021.00010</doired>
+						<bibred>LogDiff2021</bibred>
+					</li>
 				</ul>
 			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff2020">Improving Software Modernisation Process by Differencing Migration Logs</a></em>, an Industry Track paper at <a href="https://softeng.polito.it/profes2020/">PROFES</a>, 2020. 16 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="https://doi.org/10.1007/978-3-030-64148-1_17"><code>doi:10.1007/978-3-030-64148-1_17</code></a> <a href="http://grammarware.net/bib/LogDiff2020.bib">(BibTeX)</a></li>
+					<li>
+						<doired>10.1007/978-3-030-64148-1_17</doired>
+						<bibred>LogDiff2020</bibred>
+					</li>
 				</ul>
 			</li>
 			<li>
 				Céline Deknop, Johan Fabry, Kim Mens, Vadim Zaytsev. <em><a href="http://grammarware.net/writes/index.html#LogDiff-SATToSE2020">Advanced Differencing of Legacy Code and Migration Logs</a></em>, a WIP paper at <a href="http://sattose.org/2020">SATToSE</a>, 2020. 6 pages.
 				<ul style="list-style-type:none;">
-					<li><a href="http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf"><code>sattose2000:paper6</code></a> <a href="http://grammarware.net/bib/LogDiff-SATToSE2020.bib">(BibTeX)</a></li>
+					<li>
+						<ared>http://sattose.wdfiles.com/local--files/2020/sattose2020_paper_6.pdf</ared>
+						<bibred>LogDiff-SATToSE2020</bibred>
+					</li>
 				</ul>
 			</li>
 		</ul>

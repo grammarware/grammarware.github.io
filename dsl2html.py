@@ -3,6 +3,10 @@
 
 import glob, re, datetime
 
+def expandred(input, tag, prefix, suffix, name):
+	return input.replace(f'<{tag}>', f'<a class="red" href="{prefix}').replace(f'</{tag}>', f'{suffix}">({name})</a>')
+
+
 def prg2full(x):
 	if x == 'CS':
 		return f'<abbr title="Computer Science">CS</abbr>'
@@ -30,8 +34,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 	lines = f.readlines()
 	f.close()
 	g = open(dsl.replace('.dsl', '.html'), 'w', encoding='utf-8')
-	# if not lines[0].startswith('<?xml '):
-	# 	g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+	# if lines[1].startswith('<!doctype html>'):
+	# 	lines[0] = ''
+	# g.write('<?xml version="1.0" encoding="UTF-8"?>\n')
 	i = 0
 	paper = False
 	resolver = {}
@@ -300,11 +305,13 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = '<li>%s<a%s>%s</a>%s. <a class="now" href="%s">(bibtex)</a>%s%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, paperX, X, paperText)
 		# expansions
 		if lines[i].find('<codered>') > -1:
-			# <a class="red" href="https://github.com/grammarhoard/2023-witmans-whitespace">(code)</a></li>
-			# print('<<< '+lines[i])
-			lines[i] = lines[i].replace('<codered>', '<a class="red" href="').replace('</codered>', '">(code)</a>')
-			# print('CODE RED!')
-			# print('>>> '+lines[i])
+			lines[i] = expandred(lines[i], 'codered', '', '', 'code')
+		if lines[i].find('<doired>') > -1:
+			lines[i] = expandred(lines[i], 'doired', 'https://doi.org/', '', 'DOI')
+		if lines[i].find('<bibred>') > -1:
+			lines[i] = expandred(lines[i], 'bibred', 'https://grammarware.net/writes/#', '.bib', 'BibTeX')
+		if lines[i].find('<ared>') > -1:
+			lines[i] = expandred(lines[i], 'ared', '', '', 'link')
 		# exclusive expansions
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

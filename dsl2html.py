@@ -312,6 +312,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = expandred(lines[i], 'bibred', 'https://grammarware.net/writes/#', '.bib', 'BibTeX')
 		if lines[i].find('<ared>') > -1:
 			lines[i] = expandred(lines[i], 'ared', '', '', 'link')
+		if lines[i].find('<canvasred>') > -1:
+			lines[i] = expandred(lines[i], 'canvasred', 'https://canvas.utwente.nl/courses/', '', 'Canvas')
 		# exclusive expansions
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

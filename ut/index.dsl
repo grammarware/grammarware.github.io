@@ -134,21 +134,22 @@
 				<em>Extract, Model, Refine: Improved Modelling of Program Verification Tools through Data Enrichment</em>.
 				<strong>SoSyM</strong>,
 				January 2025.
-				<a class="red" href="https://doi.org/10.1007/s10270-024-01232-7">(DOI)</a>
+				<doired>10.1007/s10270-024-01232-7</doired>
 			</li>
 			<li>
 				<a href="https://www.utwente.nl/onderwijs/student-services/actueel/colloquia/eemcs-colloquia/2023/12/1250550/master-colloquium-stijn-broekhuis-m-cs" class="stud">Stijn Broekhuis</a>,
 				Vadim Zaytsev.
 				<em>Improving JSON Schema Inference by Incorporating User Inputs</em>,
 				<strong>BENEVOL</strong> 2024.
-				In print.
+				<ceurred>3941/BENEVOL2024_TECH_paper14</ceurred>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
 			<li><em>The Art of Distancing</em>, Computer Science Educational Day, 21 January 2021.</li>
 			<li><em>DEUS VULT: The Holy Wars of Computer Science</em>, <a href="https://www.inter-actief.utwente.nl/">Inter-Actief</a> Lecture, 30 November 2021.</li>
-			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
+			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://web.archive.org/web/20220527224850/https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
+			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
 		</ul>
 		<h2 help="by defence date">Supervised students</h2>
 		<ol>
@@ -221,55 +222,178 @@
 		<ul>
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
 				<ul>
-					<li><a href="https://canvas.utwente.nl/courses/7873">February–April 2021</a>;
-					my role: coordinator, teacher</li>
-					<li><a href="https://canvas.utwente.nl/courses/9449">February–April 2022</a>;
-					my role: coordinator, teacher</li>
-					<li><a href="https://canvas.utwente.nl/courses/12236">February–April 2023</a>;
-					my role: coordinator, teacher</li>
-					<li><a href="https://canvas.utwente.nl/courses/13975">February–April 2024</a>;
-					my role: coordinator, teacher</li>
-					<li><a href="https://canvas.utwente.nl/courses/16754">April–July 2025</a>;
-					my role: coordinator, teacher</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2024">April–July 2025</a>
+						<canvasred>16754</canvasred>;
+						my role: coordinator, teacher; guest lecturer: Fernando Castor de Lima Filho
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2023">February–April 2024</a>
+						<canvasred>13975</canvasred>;
+						my role: coordinator, teacher; guest lecturer: Iman Hemati Moghadam
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2022">February–April 2023</a>
+						<canvasred>12236</canvasred>;
+						my role: coordinator, teacher; guest lecturers: Rom Langerak, Iman Hemati Moghadam
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2021">February–April 2022</a>
+						<canvasred>9449</canvasred>;
+						my role: coordinator, teacher
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2020">February–April 2021</a>
+						<canvasred>7873</canvasred>;
+						my role: coordinator, teacher
+					</li>
 				</ul>
 			</li>
-			<li class="title">(BSc) Software Systems
+			<li class="title">(BSc) Software Systems / Software Design
 				<ul>
-					<li><a href="https://canvas.utwente.nl/courses/7181">November 2020 – January 2021</a>; coordinator: Tom van Dijk; my role: course redesign, all microlectures for the Design half, some microlectures for the Programming part, corresponding Q&amp;A sessions; people involved: Faizan Ahmed, Maarten Everts, Marcus Gerhold, Marieke Huisman, Ömer Şakar, Yeray Barrios Fleitas
-					<a href="https://www.inter-actief.utwente.nl/news/456/2021/4/12/idea-results/" class="red">(IDEA)</a></li>
-					<li><a href="https://canvas.utwente.nl/courses/9233">November 2021 – January 2022</a>; coordinator: Tom van Dijk; my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures; people involved: Faizan Ahmed, Maarten Everts, Marcus Gerhold, Marieke Huisman, Peter Lammich, Ömer Şakar, Yeray Barrios Fleitas</li>
-					<li><a href="https://canvas.utwente.nl/courses/10839">November 2022 – January 2023</a>; coordinator: Tom van Dijk; my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures; people involved: Faizan Ahmed, Georgiana Caltais, Mohammed El-Hajj, Marcus Gerhold, Marieke Huisman, Peter Lammich, Iman Hemati Moghadam, Ömer Şakar, Reza Soltani, Mahboobeh Zangiabady</li>
-					<li><a href="https://canvas.utwente.nl/courses/13253">November 2023 – February 2024</a>; coordinator: Tom van Dijk; my role: exam design, re-recording some microlectures, lectorials corresponding to microlectures; people involved: Faizan Ahmed, Petra van den Bos, Nhat Bui, Georgiana Caltais, Fernando Castor, Mohammed El-Hajj, Marcus Gerhold, Marieke Huisman, Iman Hemati Moghadam, Marijn Peppelman, Ömer Şakar, Reza Soltani, Mahboobeh Zangiabady</li>
-					<li><a href="https://canvas.utwente.nl/courses/15360">November 2024 – January 2025</a>; coordinator: Tom van Dijk; my role: exam co-design, lectorials corresponding to microlectures; people involved: Petra van den Bos, Marcus Gerhold, Ömer Sayilir, Aimé Ntagengerwa, Lola Solovyeva, Nhat Bui, Arthur Rump and others</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400356&amp;collegejaar=2024">November 2024 – January 2025</a>
+						<canvasred>15360</canvasred>;
+						coordinator: Tom van Dijk;
+						my role: exam co-design, lectorials corresponding to microlectures;
+						people involved: Petra van den Bos, Marcus Gerhold, many others for grading
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202300186&amp;collegejaar=2023">November 2023 – February 2024</a>
+						<canvasred>13253</canvasred>;
+						coordinator: Tom van Dijk;
+						my role: exam design, re-recording some microlectures, lectorials corresponding to microlectures;
+						people involved: Petra van den Bos, Marcus Gerhold, others for the Programming part
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001024&amp;collegejaar=2022">November 2022 – January 2023</a>
+						<canvasred>10839</canvasred>;
+						coordinator: Tom van Dijk;
+						my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures;
+						people involved: Marcus Gerhold, Peter Lammich, others for the Programming part
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001024&amp;collegejaar=2021">November 2021 – January 2022</a>
+						<canvasred>9233</canvasred>;
+						coordinator: Tom van Dijk;
+						my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures;
+						people involved: Marcus Gerhold, Peter Lammich, others for the Programming part
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001024&amp;collegejaar=2020">November 2020 – January 2021</a>
+						<canvasred>7181</canvasred>
+						<a href="https://www.inter-actief.utwente.nl/news/456/2021/4/12/idea-results/" class="red">(IDEA)</a>;
+						coordinator: Tom van Dijk;
+						my role: course redesign, all microlectures for the Design half, some microlectures for the Programming part, corresponding Q&amp;A sessions;
+						people involved: Marcus Gerhold, others for the Programming part
+					</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Design Project
 				<ul>
-					<li><a href="https://canvas.utwente.nl/courses/8568">September–November 2021</a>;
-					my role: guiding one group; people involved: Aamir Farooq, Andrei Raureanu, Bozhidar Velinov, Julián Navarro Di Pasquale</li>
-					<li><a href="https://canvas.utwente.nl/courses/9638">February–April 2022</a>;
-					my role: guiding one group; people involved: Boris Belchev, Pavel Hristov, Viktor Tonchev, Ivan Trendafilov, Irvine Verio</li>
-					<li><a href="https://canvas.utwente.nl/courses/10617">September–November 2022</a>;
-					my role: guiding one group; people involved: Samuel Coste, Hans Goor, Tim Koree, Ronan Oostveen, Reinout Vos</li>
-					<li><a href="https://canvas.utwente.nl/courses/11816">February–April 2023</a>;
-					my role: guiding one group; people involved: André Andringa, Maouheb Bessi, Marc Souvannasouck, Jelle Veldmaat, Cristi Zubcu</li>
-					<li><a href="https://canvas.utwente.nl/courses/12811">September–November 2023</a>;
-					my role: guiding one group together with Iman Hemati Moghadam; people involved: Alen Badrajan, Yancho Bozhilov, Ujjwal Dodeja, Jose Gavilanes, Georgios Valtas.</li>
-					<li><a href="https://canvas.utwente.nl/courses/16228">February–April 2025</a>;
-					my role: guiding one group together with Ömer Sayilir and Aimé Ntagengerwa; people involved: Ana Gavra, Diana Bîrjoveanu, Ovidiu Lascu, Florin Priboi, Alexandru Zambori, Răzvan Ştefan.</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2024">February–April 2025</a>
+						<canvasred>16228</canvasred>;
+						coordinator: Rom Langerak;
+						my role: guiding one group together with Ömer Sayilir and Aimé Ntagengerwa;
+						students involved:
+							Diana Bîrjoveanu,
+							Ana Gavra,
+							Ovidiu Lascu,
+							Florin Priboi,
+							Răzvan Ştefan,
+							Alexandru Zambori.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2023">September–November 2023</a>
+						<canvasred>12811</canvasred>;
+						coordinator: Rom Langerak;
+						my role: guiding one group together with Iman Hemati Moghadam;
+						students involved:
+							Alen Badrajan,
+							Yancho Bozhilov,
+							Ujjwal Dodeja,
+							Jose Gavilanes,
+							Georgios Valtas.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2022">February–April 2023</a>
+						<canvasred>11816</canvasred>;
+						coordinator: Rom Langerak;
+						my role: guiding one group;
+						students involved:
+							André Andringa,
+							Maouheb Bessi,
+							Marc Souvannasouck,
+							Jelle Veldmaat,
+							Cristian Zubcu.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2022">September–November 2022</a>
+						<canvasred>10617</canvasred>;
+						coordinator: Rom Langerak;
+						my role: guiding one group;
+						students involved:
+							Samuel Coste,
+							Hans Goor,
+							Tim Koree,
+							Ronan Oostveen,
+							Reinout Vos.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2021">February–April 2022</a>
+						<canvasred>9638</canvasred>;
+						coordinator: Rom Langerak;
+						my role: guiding one group;
+						students involved:
+							Boris Belchev,
+							Pavel Hristov,
+							Viktor Tonchev,
+							Ivan Trendafilov,
+							Irvine Verio.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2021">September–November 2021</a>
+						<canvasred>8568</canvasred>;
+						coordinator: Rom Langerak;
+						my role: guiding one group;
+						students involved:
+							Aamir Farooq,
+							Julián Navarro Di Pasquale,
+							Andrei Raureanu,
+							Bozhidar Velinov.
+					</li>
 				</ul>
 			</li>
 			<li class="title">(MSc) Capita Selecta</li>
 			<li class="title">(MSc) Design of Software Architectures
 				<ul>
-					<li><a href="https://canvas.utwente.nl/courses/6720">September–November 2020</a>;
-					coordinator: Robert Deckers; my role: support; cases: CopyCopy, Scandoo</li>
-					<li><a href="https://canvas.utwente.nl/courses/8337">September–November 2021</a>;
-					my role: coordinator, teacher; cases: Bingr, Parqueen, Walkmarkt</li>
-					<li><a href="https://canvas.utwente.nl/courses/11270">September–November 2022</a>;
-					my role: coordinator, teacher; cases: Wellerness, TurboWorkbench, COBOL-FIT</li>
-					<li><a href="https://canvas.utwente.nl/courses/12664">September–November 2023</a>;
-					coordinator: Georgiana Caltais; my role: teacher; cases: Boldly, WiseWorld</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=192111332&amp;collegejaar=2023">September–November 2023</a>
+						<canvasred>12664</canvasred>;
+						coordinator: Georgiana Caltais;
+						my role: teacher;
+						cases: Boldly, WiseWorld.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=192111332&amp;collegejaar=2022">September–November 2022</a>
+						<canvasred>11270</canvasred>;
+						my role: coordinator, teacher;
+						cases: Wellerness, TurboWorkbench, COBOL-FIT.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=192111332&amp;collegejaar=2021">September–November 2021</a>
+						<canvasred>8337</canvasred>;
+						my role: coordinator, teacher;
+						cases: Bingr, Parqueen, Walkmarkt.
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=192111332&amp;collegejaar=2020">September–November 2020</a>
+						<canvasred>6720</canvasred>;
+						coordinator: Robert Deckers;
+						my role: support;
+						cases: CopyCopy, Scandoo.
+					</li>
 				</ul>
 			</li>
 		</ul>

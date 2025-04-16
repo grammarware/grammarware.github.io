@@ -306,8 +306,12 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		# expansions
 		if lines[i].find('<codered>') > -1:
 			lines[i] = expandred(lines[i], 'codered', '', '', 'code')
+		if lines[i].find('<datared>') > -1:
+			lines[i] = expandred(lines[i], 'datared', '', '', 'data')
 		if lines[i].find('<doired>') > -1:
 			lines[i] = expandred(lines[i], 'doired', 'https://doi.org/', '', 'DOI')
+		if lines[i].find('<ceurred>') > -1:
+			lines[i] = expandred(lines[i], 'ceurred', 'https://ceur-ws.org/Vol-', '.pdf', 'CEUR')
 		if lines[i].find('<bibred>') > -1:
 			lines[i] = expandred(lines[i], 'bibred', 'https://grammarware.net/writes/#', '.bib', 'BibTeX')
 		if lines[i].find('<ared>') > -1:

@@ -26,16 +26,6 @@
 		<h2 help="latest first">Deliverables</h2>
 		<ul>
 			<li>
-				Arthur Rump, Vadim Zaytsev.
-				<em><a href="http://grammarware.net/writes/#Illdefined2022">A Refined Model of Ill-definedness in Project-Based Learning</a></em>, a paper at <a href="https://conf.researchr.org/track/models-2022/models-2022-educators-symposium">EduSymp @ MoDELS</a>, 2022. 8 pages.
-				<ul style="list-style-type:none;">
-					<li>
-						<!-- <a href="https://doi.org/10.1109/SCAM55253.2022.00027"><code>doi:10.1109/SCAM55253.2022.00027</code></a> -->
-						<a href="http://grammarware.net/bib/DifferencingTool2024.bib">(BibTeX)</a>
-					</li>
-				</ul>
-			</li>
-			<li>
 				Arthur Rump, Vadim Zaytsev, Angelika Mader.
 				<em><a href="http://grammarware.net/writes/#PipelineRequirements2025">Requirements for an Automated Assesment Tool for Learning Programming by Doing</a></em>, an Education Track paper at <a href="https://conf.researchr.org/track/icst-2025/icst-2025-education">ICST</a>, 2025. <!-- 8 pages. -->
 				<!--
@@ -46,6 +36,12 @@
 					</li>
 				</ul>
 				-->
+			</li>
+			<li>
+				Arthur Rump, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#Illdefined2022">A Refined Model of Ill-definedness in Project-Based Learning</a></em>, a paper at <a href="https://conf.researchr.org/track/models-2022/models-2022-educators-symposium">EduSymp @ MoDELS</a>, 2022. 8 pages.
+				<doired>10.1145/3550356.3556505</doired>
+				<bibred>Illdefined2022</bibred>
 			</li>
 		</ul>
 		<h2 help="in the media">About us</h2>

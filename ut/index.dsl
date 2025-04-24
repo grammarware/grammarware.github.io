@@ -108,7 +108,7 @@
 				<doired>10.1016/j.jss.2024.111973</doired>
 			</li>
 			<li>
-				Iman Hemati Moghadam,
+				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
 				<a href="https://www.linkedin.com/in/matthias-sleurink-9b6896223" class="stud">Matthias Sleurink</a>,
 				Vadim Zaytsev.
 				<em>Surpassing Threshold Barriers: Evaluating the Efficacy of Nature-Inspired Algorithms in Detecting Applied Refactorings</em>.
@@ -117,7 +117,7 @@
 				<datared>https://doi.org/10.5281/zenodo.10971388</datared>
 			</li>
 			<li>
-				Marcus Gerhold,
+				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
 				<a href="https://essay.utwente.nl/100776/" class="stud">Aliaksei Kouzel</a>,
 				<a href="https://www.linkedin.com/in/haroun-mangal-884aa9251/" class="stud">Haroun Mangal</a>,
 				<a href="http://essay.utwente.nl/100883/" class="stud">Selin Mehmed</a>,
@@ -143,8 +143,8 @@
 				<ceurred>3941/BENEVOL2024_TECH_paper14</ceurred>
 			</li>
 			<li>
-				Iman Hemati Moghadam,
-				Oebele Lijzenga,
+				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
+				<a href="https://www.linkedin.com/in/oebele-lijzenga-3ab3aa1a2/" class="stud">Oebele Lijzenga</a>,
 				Vadim Zaytsev.
 				<em>Leveraging Search-Based and Pre-Trained Code Language Models for Automated Program Repair</em>,
 				<strong>SAC/SE</strong> 2025.
@@ -414,6 +414,13 @@
 			<li>(<msc/>) Anissa Donkers, <em>Quality of AI-generated code</em> — co-supervised with Arthur Rump</li><!-- Sep 2024 -->
 			<li>(<msc/>) Tom Meulenkamp, <em>Parsing Techniques</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
+
+			<li>(<bsc/>) Marius Pană, <em>Language Workbenches</em> — co-supervised with Aimé Ntagengerwa and Ömer Sayilir</li><!-- Apr 2024 -->
+			<li>(<bsc/>) Enrique Ramos Adamik, <em>Language Workbenches</em> — co-supervised with Aimé Ntagengerwa and Ömer Sayilir</li><!-- Apr 2024 -->
+			<li>(<bsc/>) Sorin Zele, <em>Codebase Modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2024 -->
+			<li>(<bsc/>) Aleksandra Ignatovič, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2024 -->
+			<li>(<bsc/>) Bart Griepsma, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2024 -->
+			<li>(<bsc/>) Wouter ten Brinke, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2024 -->
 		</ul>
 		<footer/>
 	</body>

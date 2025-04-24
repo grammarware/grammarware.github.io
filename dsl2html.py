@@ -313,7 +313,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		if lines[i].find('<ceurred>') > -1:
 			lines[i] = expandred(lines[i], 'ceurred', 'https://ceur-ws.org/Vol-', '.pdf', 'CEUR')
 		if lines[i].find('<bibred>') > -1:
-			lines[i] = expandred(lines[i], 'bibred', 'https://grammarware.net/writes/#', '.bib', 'BibTeX')
+			lines[i] = expandred(lines[i], 'bibred', 'https://grammarware.net/bib/', '.bib', 'BibTeX')
 		if lines[i].find('<ared>') > -1:
 			lines[i] = expandred(lines[i], 'ared', '', '', 'link')
 		if lines[i].find('<canvasred>') > -1:

@@ -19,7 +19,7 @@
 			<alt>SLE</alt>
 			<title>Software Language Engineering</title>
 			<name>SLE 2025</name>
-			<text>a conference I am programme-chairing in 2025</text>
+			<text>a conference I am programme-cochairing in 2025</text>
 		</pic>
 		<pic>
 			<a>http://oopsle.github.io/</a>
@@ -27,6 +27,14 @@
 			<title>International Workshop on Open and Original Problems in Software Language Engineering</title>
 			<name>OOPSLE</name>
 			<text>a workshop about open and original problems in SLE (2013–2025)</text>
+		</pic>
+		<pic>
+			<a>https://ictopen.nl/</a>
+			<img>ict.open.200.png</img>
+			<alt>ICT.OPEN</alt>
+			<title>NWO ICT.OPEN</title>
+			<name>ICT.OPEN 2025</name>
+			<text>a national conference I have programme-cochaired in 2025</text>
 		</pic>
 		<pic>
 			<a>https://conf.researchr.org/home/staf-2024</a>
@@ -42,7 +50,7 @@
 			<alt>SEN Classroom</alt>
 			<title>Software ENgineering Classroom</title>
 			<name>SEN Classroom</name>
-			<text>a national educational event\n(2023–…)</text>
+			<text>a national educational event\n(2023–2024)</text>
 		</pic>
 		<pic>
 			<a>sattose.html</a>

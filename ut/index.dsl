@@ -223,6 +223,7 @@
 			<li>(<capita>CS</capita>) Faisal Nizamudeen, <a href="http://grammarware.net/edits/index.html#Nizamudeen2024">JavaScript: Past, Present and Future</a>. June–November 2024.</li>
 			<li>(<msc/>) Lotte Steenmeijer, <a href="https://purl.utwente.nl/essays/104891">Use Weighted Attribute Grammars to Formalize Human-to-Machine Communication in Internet of Things System</a>. February 2023 – January 2025.</li>
 			<li>(<bsc/>) Thijs Beumer, <a href="https://purl.utwente.nl/essays/105139"> Measuring Code Modernity of Codebases Written in JavaScript</a>. November 2024 – January 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/TBeumer/JSModernity</codered></li>
+			<li>(<msc/>) Nick Wolters, <a href="https://purl.utwente.nl/essays/106280">Building a Grammar: Generating Samples for Weighted Attribute Grammars</a>. November 2022 – January 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/NickWolters/wagenator</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -300,6 +301,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2024">February–April 2025</a>
 						<canvasred>16228</canvasred>;
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yTRrsNZs/</ared>; 
 						coordinator: Rom Langerak;
 						my role: guiding one group together with Ömer Sayilir and Aimé Ntagengerwa;
 						students involved:
@@ -313,6 +315,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2023">September–November 2023</a>
 						<canvasred>12811</canvasred>;
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/TytQHsvY/</ared>;
 						coordinator: Rom Langerak;
 						my role: guiding one group together with Iman Hemati Moghadam;
 						students involved:
@@ -325,6 +328,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2022">February–April 2023</a>
 						<canvasred>11816</canvasred>;
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/_rwrSi7L/</ared>;
 						coordinator: Rom Langerak;
 						my role: guiding one group;
 						students involved:
@@ -337,6 +341,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2022">September–November 2022</a>
 						<canvasred>10617</canvasred>;
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/7CMOogak/</ared>;
 						coordinator: Rom Langerak;
 						my role: guiding one group;
 						students involved:
@@ -349,6 +354,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2021">February–April 2022</a>
 						<canvasred>9638</canvasred>;
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/xd3dneBu/</ared>;
 						coordinator: Rom Langerak;
 						my role: guiding one group;
 						students involved:
@@ -361,6 +367,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001049&amp;collegejaar=2021">September–November 2021</a>
 						<canvasred>8568</canvasred>;
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/O4z9FENJ/</ared>;
 						coordinator: Rom Langerak;
 						my role: guiding one group;
 						students involved:
@@ -406,21 +413,22 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
-			<li>(<msc/>) Nick Wolters, <em>Semi-parsing</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2022? -->
 			<li>(<capita>CS</capita>) Wouter van den Brink, <em>Code Modernity</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2023 -->
 			<li>(<msc/>) Ivo Broekhof, <em>Quality metrics for Scala</em> — co-supervised with Rinse van Hees</li><!-- Feb 2024 -->
 			<li>(<msc/>) Luc Timmerman, <em>Cloud Optimisation</em> — co-supervised with Fernando Castor</li><!-- Feb 2024 -->
 			<li>(<capita>CS</capita>) Ken Yeh, <em>TTC Replication</em></li><!-- Sep 2024 -->
 			<li>(<msc/>) Anissa Donkers, <em>Quality of AI-generated code</em> — co-supervised with Arthur Rump</li><!-- Sep 2024 -->
-			<li>(<msc/>) Tom Meulenkamp, <em>Parsing Techniques</em></li><!-- Oct 2024 -->
+			<li>(<msc/>) Tom Meulenkamp, <em>Relational Parsing</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
+			<li>(<msc/>) Faisal Nizamudeen, <em>AI-generating code</em></li><!-- Oct 2024 -->
 
-			<li>(<bsc/>) Marius Pană, <em>Language Workbenches</em> — co-supervised with Aimé Ntagengerwa and Ömer Sayilir</li><!-- Apr 2024 -->
-			<li>(<bsc/>) Enrique Ramos Adamik, <em>Language Workbenches</em> — co-supervised with Aimé Ntagengerwa and Ömer Sayilir</li><!-- Apr 2024 -->
-			<li>(<bsc/>) Sorin Zele, <em>Codebase Modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2024 -->
-			<li>(<bsc/>) Aleksandra Ignatovič, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2024 -->
-			<li>(<bsc/>) Bart Griepsma, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2024 -->
-			<li>(<bsc/>) Wouter ten Brinke, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2024 -->
+			<li>(<bsc/>) Miroslav Atanasov, <em>software analytics</em> — co-supervised with Tiago Prince Sales</li><!-- Nov 2024 -->
+			<li>(<bsc/>) Aleksandra Ignatovič, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2025 -->
+			<li>(<bsc/>) Marius Pană, <em>Language Workbenches</em> — co-supervised with Aimé Ntagengerwa and Ömer Sayilir</li><!-- Apr 2025 -->
+			<li>(<bsc/>) Enrique Ramos Adamik, <em>Language Workbenches</em> — co-supervised with Aimé Ntagengerwa and Ömer Sayilir</li><!-- Apr 2025 -->
+			<li>(<bsc/>) Sorin Zele, <em>Codebase Modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2025 -->
+			<li>(<bsc/>) Bart Griepsma, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2025 -->
+			<li>(<bsc/>) Wouter ten Brinke, <em>SEnTeX</em> — co-supervised with Nhat Bui</li><!-- Apr 2025 -->
 		</ul>
 		<footer/>
 	</body>

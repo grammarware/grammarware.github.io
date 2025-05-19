@@ -221,9 +221,9 @@
 			<li>(<msc/>) Oebele Lijzenga, <a href="https://grammarware.net/edits/index.html#Lijzenga2024">Generating Patch Ingredients for Search-Based Program Repair Using Code Language Models</a>. November 2023 – August 2024. Co-supervised with Iman Hemati Moghadam.</li>
 			<li>(<capita>CS</capita>) Peter Smit, <a href="http://grammarware.net/edits/index.html#Smit2024">CBS: Providing FunCons for Simple Programming Language Semantics</a>. August 2023 – August 2024. <codered>https://github.com/petersmit27/IBAFlang</codered></li>
 			<li>(<capita>CS</capita>) Faisal Nizamudeen, <a href="http://grammarware.net/edits/index.html#Nizamudeen2024">JavaScript: Past, Present and Future</a>. June–November 2024.</li>
-			<li>(<msc/>) Lotte Steenmeijer, <a href="https://purl.utwente.nl/essays/104891">Use Weighted Attribute Grammars to Formalize Human-to-Machine Communication in Internet of Things System</a>. February 2023 – January 2025.</li>
-			<li>(<bsc/>) Thijs Beumer, <a href="https://purl.utwente.nl/essays/105139"> Measuring Code Modernity of Codebases Written in JavaScript</a>. November 2024 – January 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/TBeumer/JSModernity</codered></li>
-			<li>(<msc/>) Nick Wolters, <a href="https://purl.utwente.nl/essays/106280">Building a Grammar: Generating Samples for Weighted Attribute Grammars</a>. November 2022 – January 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/NickWolters/wagenator</codered></li>
+			<li>(<msc/>) Lotte Steenmeijer, <a href="http://grammarware.net/edits/index.html#Steenmeijer2025">Use Weighted Attribute Grammars to Formalize Human-to-Machine Communication in Internet of Things System</a>. February 2023 – January 2025.</li>
+			<li>(<bsc/>) Thijs Beumer, <a href="http://grammarware.net/edits/index.html#Beumer2025"> Measuring Code Modernity of Codebases Written in JavaScript</a>. November 2024 – January 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/TBeumer/JSModernity</codered></li>
+			<li>(<msc/>) Nick Wolters, <a href="http://grammarware.net/edits/index.html#Wolters2025">Building a Grammar: Generating Samples for Weighted Attribute Grammars</a>. November 2022 – May 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/NickWolters/wagenator</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>

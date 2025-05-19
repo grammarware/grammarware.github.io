@@ -26,16 +26,20 @@
 		<h2 help="latest first">Deliverables</h2>
 		<ul>
 			<li>
+				Arthur Rump.
+				<em>Automation Support for Giving Feedback in Learning Programming by Doing</em>, a Doctoral Symposium paper at <a href="https://iticse.acm.org/2025/program/">ITiCSE</a>, 2025.
+			</li>
+			<li>
+				Tom van Dijk, Vadim Zaytsev.
+				<em><a href="http://grammarware.net/writes/#GAIinPBL2025">The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</a></em>, an <a href="https://2025-aisola.isola-conference.org/">AISoLA</a> paper at <a href="https://2024-isola.isola-conference.org/">ISoLA</a>, 2024.
+				<!-- <doired>...</doired> -->
+				<bibred>GAIinPBL2025</bibred>
+			</li>
+			<li>
 				Arthur Rump, Vadim Zaytsev, Angelika Mader.
 				<em><a href="http://grammarware.net/writes/#PipelineRequirements2025">Requirements for an Automated Assesment Tool for Learning Programming by Doing</a></em>, an Education Track paper at <a href="https://conf.researchr.org/track/icst-2025/icst-2025-education">ICST</a>, 2025. <!-- 8 pages. -->
-				<!--
-				<ul style="list-style-type:none;">
-					<li>
-						<doired>...</doired>
-						<bibred>PipelineRequirements2025</bibred>
-					</li>
-				</ul>
-				-->
+				<!-- <doired>...</doired> -->
+				<bibred>PipelineRequirements2025</bibred>
 			</li>
 			<li>
 				Arthur Rump, Vadim Zaytsev.

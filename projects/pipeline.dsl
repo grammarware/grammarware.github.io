@@ -27,7 +27,8 @@
 		<ul>
 			<li>
 				Arthur Rump.
-				<em>Automation Support for Giving Feedback in Learning Programming by Doing</em>, a Doctoral Symposium paper at <a href="https://iticse.acm.org/2025/program/">ITiCSE</a>, 2025.
+				<em>Automation Support for Giving Feedback in Learning Programming by Doing</em>, a <a href="https://iticse.acm.org/2025/doctoral-consortium/">Doctoral Symposium</a> paper at <a href="https://iticse.acm.org/2025/program/">ITiCSE</a>, 2025. 2 pages.
+				<doired>10.1145/3724389.3731300</doired>
 			</li>
 			<li>
 				Tom van Dijk, Vadim Zaytsev.
@@ -37,8 +38,8 @@
 			</li>
 			<li>
 				Arthur Rump, Vadim Zaytsev, Angelika Mader.
-				<em><a href="http://grammarware.net/writes/#PipelineRequirements2025">Requirements for an Automated Assesment Tool for Learning Programming by Doing</a></em>, an Education Track paper at <a href="https://conf.researchr.org/track/icst-2025/icst-2025-education">ICST</a>, 2025. <!-- 8 pages. -->
-				<!-- <doired>...</doired> -->
+				<em><a href="http://grammarware.net/writes/#PipelineRequirements2025">Requirements for an Automated Assesment Tool for Learning Programming by Doing</a></em>, an <a href="https://conf.researchr.org/track/icst-2025/icst-2025-education?">Education Track</a> paper at <a href="https://conf.researchr.org/track/icst-2025/icst-2025-education">ICST</a>, 2025. 8 pages.
+				<doired>10.1109/ICST62969.2025.10988998</doired>
 				<bibred>PipelineRequirements2025</bibred>
 			</li>
 			<li>

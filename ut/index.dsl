@@ -148,6 +148,15 @@
 				Vadim Zaytsev.
 				<em>Leveraging Search-Based and Pre-Trained Code Language Models for Automated Program Repair</em>,
 				<strong>SAC/SE</strong> 2025.
+				<doired>10.1145/3672608.3707774</doired>
+			</li>
+			<li>
+				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
+				<a href="https://www.linkedin.com/in/oebele-lijzenga-3ab3aa1a2/" class="stud">Oebele Lijzenga</a>,
+				Vadim Zaytsev.
+				<em>Comparative Analysis of Pre-Trained Models for Automated Program Repair via Code Infill Generation</em>,
+				<strong>GPCE</strong> 2025.
+				<doired>10.1145/3742876.3742881</doired>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>

@@ -36,6 +36,11 @@
 			</li>
 			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 			<li>In 2024, the UT Master of Computer Science was again deemed <a href="overzicht2024.png">the best general computer science programme</a> in the country by the same reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
+			<li>Some other media appearances:
+				<ul>
+					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a>
+				</ul>
+			</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>
@@ -165,6 +170,7 @@
 			<li><em>DEUS VULT: The Holy Wars of Computer Science</em>, <a href="https://www.inter-actief.utwente.nl/">Inter-Actief</a> Lecture, 30 November 2021.</li>
 			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://web.archive.org/web/20220527224850/https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
 			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
+			<li><a href="https://grammarware.net/writes/#GAIinPBL2025"><em>The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</em></a> (with Tom van Dijk), ISoLA, 2025.</li>
 		</ul>
 		<h2 help="by defence date">Supervised students</h2>
 		<ol>
@@ -243,6 +249,9 @@
 			<li>(<bsc/>) Wouter ten Brinke, <a href="http://grammarware.net/edits/index.html#Brinke2025">FlexiTeX: LaTeX Collaboration Without Giving Up Personal Project Structure</a>. April–June 2025. Co-supervised with Nhat. <codered>https://github.com/wtb04/FlexiTeX</codered></li>
 			<li>(<bsc/>) Bart Griepsma, <a href="http://grammarware.net/edits/index.html#Griepsma2025">Can We Standardize LaTeX? Discovering Patterns in Real-World Repositories</a>. April–June 2025. Co-supervised with Nhat. <codered>https://github.com/Bart0TW/LaTeX-Project-Analyzer</codered></li>
 			<li>(<bsc/>) Sorin Zele, <a href="http://grammarware.net/edits/index.html#Zele2025">Codebase Modernity: one step forward</a>. April–June 2025. Co-supervised with Marcus Gerhold.</li>
+			<li>(<msc/>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#CS-Yeh2025">Reproducibility in Model Transformation Artefacts from a Decade of Transformation Tool Contest</a>. September 2024 – July 2025.</li>
+			<li>(<msc/>) Anissa Donkers, <a href="http://grammarware.net/edits/index.html#Donkers2025">Exploring Code Quality in First-Year Java Projects: A Comparative Study of Traditional and AI-Assisted Solutions</a>. September 2024 – August 2025. Co-supervised with Arthur Rump.</li>
+			<li>(<msc/>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#Yeh2025">From Modeling to Verification: Translating SysMLv2 to PNML-Compliant Petri Nets</a>. July–August 2025. Co-supervised with Ömer Sayilir and Wallace Corbo Ugulino. <codered>https://github.com/ypj0202/SysML2PetriNet</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -433,8 +442,6 @@
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
 			<li>(<capita>CS</capita>) Wouter van den Brink, <em>Code Modernity</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2023 -->
-			<li>(<capita>CS</capita>) Ken Yeh, <em>TTC Replication</em></li><!-- Sep 2024 -->
-			<li>(<msc/>) Anissa Donkers, <em>Quality of AI-generated code</em> — co-supervised with Arthur Rump</li><!-- Sep 2024 -->
 			<li>(<msc/>) Tom Meulenkamp, <em>Relational Parsing</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
 		</ul>

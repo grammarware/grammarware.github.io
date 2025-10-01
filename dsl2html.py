@@ -16,6 +16,9 @@ def prg2full(x):
 		return f'<abbr title="Computer Science: Data Science and Technology Specialisation">CS-DST</abbr>'
 	if x == 'EE':
 		return f'<abbr title="Electrical Engineering">EE</abbr>'
+	if x == 'ScE':
+		# return f'<a href="https://www.utwente.nl/en/education/master/programmes/science-education/"><abbr title="Science Education">ScE</abbr></a>'
+		return f'<abbr title="Science Education">ScE</abbr>'
 	if x == 'EmSys':
 		return f'<abbr title="Embedded Systems">EmSys</abbr>'
 	return x
@@ -465,6 +468,10 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			g.write(lines[i].replace('<bsc/>', '<abbr title="Technical Computer Science">TCS</abbr> <abbr title="Bachelor of Science Research Project">BSc</abbr>'))
 		elif lines[i].find('<msc/>') > -1:
 			g.write(lines[i].replace('<msc/>', '<abbr title="Computer Science">CS</abbr> <abbr title="Master of Science Final Project">MSc</abbr>'))
+		elif lines[i].find('<msc>') > -1:
+			tmp = lines[i].split('<msc>')[1].split('</msc>')[0]
+			tmp = prg2full(tmp) + ' <abbr title="Master of Science Final Project">MSc</abbr>'
+			g.write(lines[i].split('<msc>')[0] + tmp + lines[i].split('</msc>')[1])
 		elif lines[i].find('<capita>') > -1:
 			tmp = lines[i].split('capita>')
 			tmp[1] = prg2full(tmp[1][:-2])[1:] + ' <abbr title="Capita Selecta">CaSe</abbr>'

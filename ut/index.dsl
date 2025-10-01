@@ -469,6 +469,7 @@
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Floris Heinen, <em>transpilation</em></li><!-- Oct 2025 -->
+			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 		</ul>
 		<footer/>
 	</body>

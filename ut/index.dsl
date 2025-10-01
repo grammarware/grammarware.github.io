@@ -171,6 +171,7 @@
 			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://web.archive.org/web/20220527224850/https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
 			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
 			<li><a href="https://grammarware.net/writes/#GAIinPBL2025"><em>The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</em></a> (with Tom van Dijk), ISoLA, 2025.</li>
+			<li><a href="https://www.inter-actief.utwente.nl/activities/7696/"><em>Expert Vibing</em>, Inter-<em>Actief</em> Lunch Lecture, 9 September 2025.</a>
 		</ul>
 		<h2 help="by defence date">Supervised students</h2>
 		<ol>
@@ -253,6 +254,7 @@
 			<li>(<capita>CS-ST</capita>) Wouter van den Brink, <em>TurboModernity Requirements</em>. November 2023 – July 2025. Co-supervised with Marcus Gerhold.</li>
 			<li>(<msc/>) Anissa Donkers, <a href="http://grammarware.net/edits/index.html#Donkers2025">Exploring Code Quality in First-Year Java Projects: A Comparative Study of Traditional and AI-Assisted Solutions</a>. September 2024 – August 2025. Co-supervised with Arthur Rump.</li>
 			<li>(<msc/>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#Yeh2025">From Modeling to Verification: Translating SysMLv2 to PNML-Compliant Petri Nets</a>. July–August 2025. Co-supervised with Ömer Sayilir and Wallace Corbo Ugulino. <codered>https://github.com/ypj0202/SysML2PetriNet</codered></li>
+			<li>(<msc/>) Tom Meulenkamp, <a href="http://grammarware.net/edits/index.html#Meulenkamp2025">Relational Parsing: From Academics to Practice</a>. October 2024 – September 2025. <codered>https://github.com/supertom01/relationalParsing</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -344,6 +346,7 @@
 						my role: guiding one group together with Nhat;
 						students involved:
 							Lisa te Braak,
+							Wouter van Gent,
 							Edwin Martens,
 							Maria Sandu,
 							Leonard Fabian Ţabrea,
@@ -464,8 +467,8 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
-			<li>(<msc/>) Tom Meulenkamp, <em>Relational Parsing</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
+			<li>(<msc/>) Floris Heinen, <em>transpilation</em></li><!-- Oct 2025 -->
 		</ul>
 		<footer/>
 	</body>

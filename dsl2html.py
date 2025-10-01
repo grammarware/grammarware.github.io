@@ -10,6 +10,10 @@ def expandred(input, tag, prefix, suffix, name):
 def prg2full(x):
 	if x == 'CS':
 		return f'<abbr title="Computer Science">CS</abbr>'
+	if x == 'CS-ST':
+		return f'<abbr title="Computer Science: Software Technology Specialisation">CS-ST</abbr>'
+	if x == 'CS-DST':
+		return f'<abbr title="Computer Science: Data Science and Technology Specialisation">CS-DST</abbr>'
 	if x == 'EE':
 		return f'<abbr title="Electrical Engineering">EE</abbr>'
 	if x == 'EmSys':
@@ -463,7 +467,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			g.write(lines[i].replace('<msc/>', '<abbr title="Computer Science">CS</abbr> <abbr title="Master of Science Final Project">MSc</abbr>'))
 		elif lines[i].find('<capita>') > -1:
 			tmp = lines[i].split('capita>')
-			tmp[1] = prg2full(tmp[1][:-2])[1:] + ' <abbr title="Capita Selecta">CS</abbr>'
+			tmp[1] = prg2full(tmp[1][:-2])[1:] + ' <abbr title="Capita Selecta">CaSe</abbr>'
 			g.write(''.join(tmp))
 		elif lines[i].find('<iminor>') > -1:
 			tmp = lines[i].split('iminor>')

@@ -18,10 +18,11 @@
 		</p>
 		<h2 help="alphabetically by surname">Participants</h2>
 		<ul>
-			<li><a href="https://www.utwente.nl/en/eemcs/hmi/hmi-people-pages/hmi-profile-pages/angelikamaderprofile/">Angelika Mader</a> (principal investigator)</li>
-			<li><a href="https://people.utwente.nl/arend.rensink">Arend Rensink</a> (promotor)</li>
+			<li><a href="https://personen.utwente.nl/j.r.buitenweg">Jan Buitenweg</a> (committee member)
+			<li><a href="https://www.utwente.nl/en/eemcs/hmi/hmi-people-pages/hmi-profile-pages/angelikamaderprofile/">Angelika Mader</a> (principal investigator, promotor)</li>
+			<li><a href="https://people.utwente.nl/arend.rensink">Arend Rensink</a> (copromotor)</li>
 			<li><a href="https://www.arthurrump.com/about/">Arthur Rump</a> (doctoral candidate)</li>
-			<li><a href="https://grammarware.github.io">Vadim Zaytsev</a> (principal investigator)</li>
+			<li><a href="https://grammarware.github.io">Vadim Zaytsev</a> (principal investigator, promotor)</li>
 		</ul>
 		<h2 help="latest first">Deliverables</h2>
 		<ul>
@@ -33,7 +34,7 @@
 			<li>
 				Tom van Dijk, Vadim Zaytsev.
 				<em><a href="http://grammarware.net/writes/#GAIinPBL2025">The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</a></em>, an <a href="https://2025-aisola.isola-conference.org/">AISoLA</a> paper at <a href="https://2024-isola.isola-conference.org/">ISoLA</a>, 2024.
-				<!-- <doired>...</doired> -->
+				<doired>10.1007/978-3-032-01377-4_3</doired>
 				<bibred>GAIinPBL2025</bibred>
 			</li>
 			<li>

@@ -206,22 +206,22 @@
 			<li>(<bsc/>) Kristian Nedelchev, <a href="https://grammarware.net/edits/index.html#Nedelchev2023">Performance evaluation of Map implementations in Java, Python and C#</a>. November 2022 – February 2023.</li>
 			<li>(<msc/>) Marnick van der Arend, <a href="http://grammarware.net/edits/index.html#Arend2023">The LAMP Framework — A Language-Agnostic Code Quality Assurance Framework for Multi-Paradigm Languages</a>. May 2022 – March 2023. Hosted by <a href="https://infosupport.com">InfoSupport</a>. <codered>https://github.com/MarnickvdA/LAMP-Framework</codered></li>
 			<li>(<msc/>) Andrei Popa, <a href="http://grammarware.net/edits/index.html#Popa2023">Gotta Adjust Them All! Dynamic Difficulty Adjustment of Role-Playing Games through Procedural Generation of Non-Player Characters</a>. March 2022 – May 2023. Co-supervised with Marcus Gerhold. <a class="red" href="https://github.com/grammarhoard/2023-popa-pcg">(code)</a></li>
-			<li>(<capita>CS</capita>) Ellen Wittingen, <a href="http://grammarware.net/edits/index.html#Wittingen2023">Compiler Optimizations for Power Usage and Program Size</a>. January–June 2023.</li>
+			<li>(<capita>CS-ST</capita>) Ellen Wittingen, <a href="http://grammarware.net/edits/index.html#Wittingen2023">Compiler Optimizations for Power Usage and Program Size</a>. January–June 2023.</li>
 			<li>(<bsc/>) Tom Smeets, <a href="https://grammarware.net/edits/index.html#Smeets2023"><abbr title="microscope">µScope</abbr>: A Reusable Interface For Debugging STM32 Microcontrollers</a>. April–July 2023. Hosted by <a href="https://demcon.com">DEMCON</a>. <codered>https://github.com/DEMCON/uscope</codered> <a class="red" href="https://marketplace.visualstudio.com/items?itemName=DEMCON.uscope">(plugin)</a></li>
 			<li>(<bsc/>) Vladimir Kobzev, <a href="https://grammarware.net/edits/index.html#Kobzev2023">Dia: a Domain Specific Language for Scripted Dialogues and Cutscenes</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Cristian Zubcu, <a href="https://grammarware.net/edits/index.html#Zubcu2023">Effect of Normalization Techniques on Modernity Signatures in Source Code Analysis</a>. April–July 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<bsc/>) Sandu-Victor Mintuş, <a href="https://grammarware.net/edits/index.html#Mintus2023">Supporting New Programming Language in RefDetect</a>. April–July 2023. Co-supervised with Iman Hemati Moghadam.</li>
-			<li>(<capita>CS</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <a href="http://grammarware.net/edits/index.html#ANS2023">Crossover: Towards Compiler-Enabled COBOL-C Interoperability</a>. September 2022 – September 2023.</li>
-			<li>(<capita>CS</capita>) Lola Solovyeva, <a href="http://grammarware.net/edits/index.html#Solovyeva2023">Leveraging Machine Learning for Python Version Identification</a>. April–October 2023. Co-supervised with Marcus Gerhold.</li>
+			<li>(<capita>CS-ST</capita>) Mart van Assen, Aimé Ntagengerwa, Ömer Sayilir, <a href="http://grammarware.net/edits/index.html#ANS2023">Crossover: Towards Compiler-Enabled COBOL-C Interoperability</a>. September 2022 – September 2023.</li>
+			<li>(<capita>CS-DST</capita>) Lola Solovyeva, <a href="http://grammarware.net/edits/index.html#Solovyeva2023">Leveraging Machine Learning for Python Version Identification</a>. April–October 2023. Co-supervised with Marcus Gerhold.</li>
 			<li>(<msc/>) Max Hendriks, <a href="http://grammarware.net/edits/index.html#Hendriks2023">Consider it Parsed!</a> March 2022 – October 2023. <codered>https://github.com/BurritoZz/Relational-Parsing-Rust</codered></li>
 			<li>(<msc/>) Stijn Broekhuis, <a href="http://grammarware.net/edits/index.html#Broekhuis2023">Incorporating User Inputs for Improved JSON Schema Inference</a>. November 2022 – December 2023. <codered>https://github.com/sbroekhuis/InteractiveSchemaInferrer</codered></li>
 			<li>(<msc/>) Arthur Rump, <a href="http://grammarware.net/edits/index.html#Rump2023">Apollo++: Automated Assessment of Learning Outcomes in Programming Projects</a>. November 2021 – December 2023. <codered>https://github.com/arthurrump/apollopp</codered></li>
 			<li>(<bsc/>) Julian van Santen, <a href="https://grammarware.net/edits/index.html#Santen2024">Using LLM Chatbots to Improve the Learning Experience in Functional Programming Courses</a>. February 2024. Co-supervised with Marco Gerards. Best Paper Award at <a href="https://sites.google.com/view/tscit40/homepage">TScIT40</a>.</li>
 			<li>(<bsc/>) Chris Bleeker, <a href="https://grammarware.net/edits/index.html#Santen2024">Measuring Code Modernity in Rust</a>. November 2023 – February 2024. Co-supervised with Marcus Gerhold. <codered>https://github.com/cb-p/ruvolution</codered></li>
 			<li>(<bsc/>) Everard de Vree, <a href="https://grammarware.net/edits/index.html#Vree2024">Forging a Differential Tester for Haskell Compilers using Xsmith</a>. November 2023 – February 2024.</li>
-			<li>(<capita>CS</capita>) Suzanne van der Veen, <a href="http://grammarware.net/edits/index.html#Veen2024">NoWa: A Chomsky Normal Form Converter for Weighted Attribute Grammars</a>. September 2022 – January 2024. <codered>https://github.com/SvdVeen/NoWa</codered></li>
+			<li>(<capita>CS-ST</capita>) Suzanne van der Veen, <a href="http://grammarware.net/edits/index.html#Veen2024">NoWa: A Chomsky Normal Form Converter for Weighted Attribute Grammars</a>. September 2022 – January 2024. <codered>https://github.com/SvdVeen/NoWa</codered></li>
 			<li>(<msc/>) Daniël Floor, <a href="https://grammarware.net/edits/index.html#Floor2024">Code Comprehension in the Multi-Paradigm Environment Kotlin</a>. January 2023 – February 2024. Hosted by <a href="https://infosupport.com">InfoSupport</a>.</li>
-			<li>(<capita>CS</capita>) Valentijn Hol, <a href="http://grammarware.net/edits/index.html#Hol2024">Facilitating Various Metaprogramming Techniques for Rust</a>. September 2023 – February 2024.</li>
+			<li>(<capita>CS-ST</capita>) Valentijn Hol, <a href="http://grammarware.net/edits/index.html#Hol2024">Facilitating Various Metaprogramming Techniques for Rust</a>. September 2023 – February 2024.</li>
 			<li>(<msc/>) Ömer Sayilir, <a href="https://grammarware.net/edits/index.html#Sayilir2024">Towards Grammatical Inference of Legacy Programming Languages</a>. July 2023 – May 2024. <codered>https://github.com/omersayilir75/BabyCobolRecognizer</codered> <codered>https://github.com/omersayilir75/GramInfGenAlg</codered> <codered>https://github.com/omersayilir75/OberonRecognizer</codered> <codered>https://github.com/omersayilir75/SQLiteRecognizer</codered></li>
 			<li>(<msc/>) Rafael Dulfer, <a href="https://grammarware.net/edits/index.html#Dulfer2024">WAGon: A Weighted Attribute Grammar Oriented Notation</a>. November 2022 – June 2024. <a href="https://dulfer.be/wagon/wagon/index.html" class="red">(documentation)</a> <codered>https://github.com/Rafaeltheraven/wagon</codered></li>
 			<li>(<bsc/>) Vladislav Mukhachev, <a href="https://grammarware.net/edits/index.html#Mukhachev2024">Support Python in RefDetect</a>. April–July 2024. Co-supervised with Iman Hemati Moghadam.</li>
@@ -234,8 +234,8 @@
 			<li>(<msc/>) Naum Tomov, <a href="https://grammarware.net/edits/index.html#Tomov2024">Extensibility Of Domain-Specific Languages: A Case Study of an Industrial DSL</a>. November 2023 – July 2024. Co-supervised with Nhat.</li>
 			<li>(<msc/>) Filip Ivanov, <a href="https://grammarware.net/edits/index.html#Ivanov2024">CodeQuizzer: Improving Codebase Understanding for Code Review via a Gamified Quiz Taking System</a>. October 2023 – July 2024. Co-supervised with Arjan van Hessen.</li>
 			<li>(<msc/>) Oebele Lijzenga, <a href="https://grammarware.net/edits/index.html#Lijzenga2024">Generating Patch Ingredients for Search-Based Program Repair Using Code Language Models</a>. November 2023 – August 2024. Co-supervised with Iman Hemati Moghadam.</li>
-			<li>(<capita>CS</capita>) Peter Smit, <a href="http://grammarware.net/edits/index.html#Smit2024">CBS: Providing FunCons for Simple Programming Language Semantics</a>. August 2023 – August 2024. <codered>https://github.com/petersmit27/IBAFlang</codered></li>
-			<li>(<capita>CS</capita>) Faisal Nizamudeen, <a href="http://grammarware.net/edits/index.html#Nizamudeen2024">JavaScript: Past, Present and Future</a>. June–November 2024.</li>
+			<li>(<capita>CS-ST</capita>) Peter Smit, <a href="http://grammarware.net/edits/index.html#Smit2024">CBS: Providing FunCons for Simple Programming Language Semantics</a>. August 2023 – August 2024. <codered>https://github.com/petersmit27/IBAFlang</codered></li>
+			<li>(<capita>CS-ST</capita>) Faisal Nizamudeen, <a href="http://grammarware.net/edits/index.html#Nizamudeen2024">JavaScript: Past, Present and Future</a>. June–November 2024.</li>
 			<li>(<msc/>) Lotte Steenmeijer, <a href="http://grammarware.net/edits/index.html#Steenmeijer2025">Use Weighted Attribute Grammars to Formalize Human-to-Machine Communication in Internet of Things System</a>. February 2023 – January 2025.</li>
 			<li>(<bsc/>) Thijs Beumer, <a href="http://grammarware.net/edits/index.html#Beumer2025">Measuring Code Modernity of Codebases Written in JavaScript</a>. November 2024 – January 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/TBeumer/JSModernity</codered></li>
 			<li>(<msc/>) Nick Wolters, <a href="http://grammarware.net/edits/index.html#Wolters2025">Building a Grammar: Generating Samples for Weighted Attribute Grammars</a>. November 2022 – May 2025. Co-supervised with Marcus Gerhold. <codered>https://github.com/NickWolters/wagenator</codered></li>
@@ -243,13 +243,14 @@
 			<li>(<msc/>) Luc Timmerman, <a href="http://grammarware.net/edits/index.html#Timmerman2025">SCREAM: System for Cloud Resource Extraction And Motivation</a>. February 2024 – June 2025. Co-supervised with Fernando Castor. <codered>https://github.com/Luctia/scream</codered> </li>
 			<li>(<msc/>) Faisal Nizamudeen, <a href="http://grammarware.net/edits/index.html#Nizamudeen2025">Benchmarking the Programming Capabilities of Large Language Models</a>. October 2024 – June 2025.</li>
 			<li>(<bsc/>) Aleksandra Ignatovič, <a href="http://grammarware.net/edits/index.html#Ignatovich2025">How Academics Organize LaTeX Projects—and Whether Structure Should Be Standardized</a>. April–June 2025. Co-supervised with Nhat.</li>
-			<li>(<bsc/>) Marius Pană, <a href="http://grammarware.net/edits/index.html#Pana2025">Comparing Rascal and JetBrains MPS through a DOT-Based Domain-Specific Language</a>. April–June 2025. Co-supervised with Ömer Sayilir.</li>
-			<li>(<bsc/>) Enrique Ramos Adamik, <a href="http://grammarware.net/edits/index.html#Ramos2025">Comparing the Validation Capabilities of the Rascal and Spoofax Language Workbenches</a>. April–June 2025. Co-supervised with Ömer Sayilir. <codered>https://github.com/enrique-ramos-7/rascal-spoofax-dot</codered></li>
+			<li>(<bsc/>) Marius Pană, <a href="http://grammarware.net/edits/index.html#Pana2025">Comparing Rascal and JetBrains MPS through a DOT-Based Domain-Specific Language</a>. April–June 2025. Co-supervised with Ömer Sayilir. Best Paper Award at <a href="https://sites.google.com/utwente.nl/43twentestudentconference">TScIT43</a>.</li>
+			<li>(<bsc/>) Enrique Ramos Adamik, <a href="http://grammarware.net/edits/index.html#Ramos2025">Comparing the Validation Capabilities of the Rascal and Spoofax Language Workbenches</a>. April–June 2025. Co-supervised with Ömer Sayilir. <codered>https://github.com/enrique-ramos-7/rascal-spoofax-dot</codered> Best Paper Nomination at <a href="https://sites.google.com/utwente.nl/43twentestudentconference">TScIT43</a>.</li>
 			<li>(<bsc/>) Miroslav Atanasov, <a href="http://grammarware.net/edits/index.html#Atanasov2025">Fake it ’till you make it: exploring the usefulness of synthetic datasets to train machine learning models for self-admitted technical debt classification and identification</a>. November 2024 – June 2025. Co-supervised with Tiago Prince Sales.</li>
 			<li>(<bsc/>) Wouter ten Brinke, <a href="http://grammarware.net/edits/index.html#Brinke2025">FlexiTeX: LaTeX Collaboration Without Giving Up Personal Project Structure</a>. April–June 2025. Co-supervised with Nhat. <codered>https://github.com/wtb04/FlexiTeX</codered></li>
 			<li>(<bsc/>) Bart Griepsma, <a href="http://grammarware.net/edits/index.html#Griepsma2025">Can We Standardize LaTeX? Discovering Patterns in Real-World Repositories</a>. April–June 2025. Co-supervised with Nhat. <codered>https://github.com/Bart0TW/LaTeX-Project-Analyzer</codered></li>
 			<li>(<bsc/>) Sorin Zele, <a href="http://grammarware.net/edits/index.html#Zele2025">Codebase Modernity: one step forward</a>. April–June 2025. Co-supervised with Marcus Gerhold.</li>
-			<li>(<msc/>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#CS-Yeh2025">Reproducibility in Model Transformation Artefacts from a Decade of Transformation Tool Contest</a>. September 2024 – July 2025.</li>
+			<li>(<capita>CS-ST</capita>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#CS-Yeh2025">Reproducibility in Model Transformation Artefacts from a Decade of Transformation Tool Contest</a>. September 2024 – July 2025.</li>
+			<li>(<capita>CS-ST</capita>) Wouter van den Brink, <em>TurboModernity Requirements</em>. November 2023 – July 2025. Co-supervised with Marcus Gerhold.</li>
 			<li>(<msc/>) Anissa Donkers, <a href="http://grammarware.net/edits/index.html#Donkers2025">Exploring Code Quality in First-Year Java Projects: A Comparative Study of Traditional and AI-Assisted Solutions</a>. September 2024 – August 2025. Co-supervised with Arthur Rump.</li>
 			<li>(<msc/>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#Yeh2025">From Modeling to Verification: Translating SysMLv2 to PNML-Compliant Petri Nets</a>. July–August 2025. Co-supervised with Ömer Sayilir and Wallace Corbo Ugulino. <codered>https://github.com/ypj0202/SysML2PetriNet</codered></li>
 		</ol>
@@ -286,6 +287,15 @@
 			</li>
 			<li class="title">(BSc) Software Systems / Software Design
 				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500340&amp;collegejaar=2025">November 2025 – February 2026</a>
+						<!--
+						<canvasred>???</canvasred>;
+						-->
+						coordinator: Fernando Castor de Lima Filho;
+						my role: exam co-design, re-recording some microlectures, lectorials corresponding to microlectures;
+						people involved: Petra van den Bos, Marcus Gerhold, many others for grading
+					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400356&amp;collegejaar=2024">November 2024 – January 2025</a>
 						<canvasred>15360</canvasred>;
@@ -326,6 +336,19 @@
 			</li>
 			<li class="title">(BSc) Design Project
 				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2025">September–November 2025</a>
+						<canvasred>17091</canvasred>;
+						<!-- <ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yTRrsNZs/</ared>;  -->
+						coordinator: Rom Langerak;
+						my role: guiding one group together with Nhat;
+						students involved:
+							Lisa te Braak,
+							Edwin Martens,
+							Maria Sandu,
+							Leonard Fabian Ţabrea,
+							Max van Zanten.
+					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2024">February–April 2025</a>
 						<canvasred>16228</canvasred>;
@@ -441,7 +464,6 @@
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
-			<li>(<capita>CS</capita>) Wouter van den Brink, <em>Code Modernity</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2023 -->
 			<li>(<msc/>) Tom Meulenkamp, <em>Relational Parsing</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
 		</ul>

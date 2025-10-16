@@ -12,6 +12,15 @@
 			<name>↸ BACK</name>
 			<text>return to the root</text>
 		</pic>
+		<!--  -->
+		<pic>
+			<a>https://slebok.github.io/cococola</a>
+			<img>https://slebok.github.io/www/cococola.svg</img>
+			<alt>CoCoCoLa</alt>
+			<title>CoCoCoLa: Code Completion Control Language</title>
+			<name>CoCoCoLa</name>
+			<text>a code completion control language I’ve codesigned (2025–…)</text>
+		</pic>
 		<pic>
 			<a>https://slebok.github.io/</a>
 			<img>slebok.200.png</img>

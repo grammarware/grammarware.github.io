@@ -14,12 +14,20 @@
 		</pic>
 		<!--  -->
 		<pic>
+			<a>https://benevol2025.github.io/</a>
+			<img>https://benevol2025.github.io/img/logo-square.png</img>
+			<alt>BENEVOL</alt>
+			<title>Belgium-Netherlands Software Evolution Workshop</title>
+			<name>BENEVOL 2025</name>
+			<text>a workshop I am general-chairing in 2025</text>
+		</pic>
+		<pic>
 			<a>https://conf.researchr.org/home/sle-2025</a>
 			<img>sle.200.png</img>
 			<alt>SLE</alt>
 			<title>Software Language Engineering</title>
 			<name>SLE 2025</name>
-			<text>a conference I am programme-cochairing in 2025</text>
+			<text>a conference I have programme-cochaired in 2025</text>
 		</pic>
 		<pic>
 			<a>http://oopsle.github.io/</a>

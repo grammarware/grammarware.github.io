@@ -4,7 +4,7 @@
 		<header/>
 		<h1>
 			<a href="https://www.utwente.nl/en/tcs/">Technical Computer Science</a> (Bachelor) and <br/><a href="https://www.utwente.nl/en/csc/">Computer Science</a> (Master) programmes at the <a href="https://www.utwente.nl/">UT</a>
-			<img src="../logos/utwente.200.png" alt="UT TCS BSc+MSc" title="This is a legacy logo of UT that was valid back when I was studying"/>
+			<img src="../logos/utwente.200.png" alt="UT TCS BSc+MSc" title="This is a legacy logo of UT that was valid back when I was studying">
 		</h1>
 		<hr/>
 		<p>
@@ -38,7 +38,7 @@
 			<li>In 2024, the UT Master of Computer Science was again deemed <a href="overzicht2024.png">the best general computer science programme</a> in the country by the same reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 			<li>Some other media appearances:
 				<ul>
-					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a>
+					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a> (Tubantia)</li>
 				</ul>
 			</li>
 		</ul>

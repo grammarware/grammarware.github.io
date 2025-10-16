@@ -158,7 +158,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				vp = ''
 			else:
 				vp = '''
-		<meta name="viewport" content="initial-scale=1.0"/>'''
+		<meta name="viewport" content="initial-scale=1.0">'''
 			if lines[i].strip().find('title="') < 0:
 				title = ''
 				print('Warning: no title found!')
@@ -174,13 +174,13 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				end = '''function onn(n) {$('.help:eq('+n+')').css('color',$('body').css('color'));}
 		function off(n) {$('.help:eq('+n+')').css('color',$('body').css('background-color'));}
 		</script>
-		<script src="../jquery.min.js" type="text/javascript"></script>'''
+		<script src="../jquery.min.js"></script>'''
 			g.write('''	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>{}
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">{}
 		<title>{}</title>
-		<link href="{}common.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript">
+		<link href="{}common.css" rel="stylesheet" type="text/css">
+		<script>
   (function(i,s,o,g,r,a,m){{i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){{
   (i[r].q=i[r].q||[]).push(arguments)}},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -195,7 +195,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			i += 1
 		# useful macros
 		if lines[i].strip() == '<header/>':
-			lines[i] = '<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr/>'
+			lines[i] = '<div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr>'
 		if lines[i].strip() == '<html doctype>':
 			lines[i] = '''<!doctype html><html lang="en">
 '''
@@ -205,8 +205,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				logopath = rootpath + 'logos/'
 			else:
 				logopath = imgdir
-			lines[i] = '''<br/><a href="http://validator.w3.org/check/referer"><img src="{0}xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{0}css.88.png" alt="CSS 3" /></a>\n'''.format(logopath)
+			lines[i] = '''<br><a href="http://validator.w3.org/check/referer"><img src="{0}xhtml.88.png" alt="XHTML 1.1"></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{0}css.88.png" alt="CSS 3"></a>\n'''.format(logopath)
 		if lines[i].strip().startswith('<footer'):
 			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
 			content = ''
@@ -221,9 +221,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				valdir = rootpath + 'logos/'
 			else:
 				valdir = imgdir
-			lines[i] = '''<div class="last"><br/><hr/>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. {0}Last updated: #LASTMOD#.<br/>
-			<a href="http://validator.w3.org/check/referer"><img src="{1}xhtml.88.png" alt="XHTML 1.1" /></a>
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{1}css.88.png" alt="CSS 3" /></a></div>'''.format(content, valdir)
+			lines[i] = '''<div class="last"><br><hr>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. {0}Last updated: #LASTMOD#.<br>
+			<a href="http://validator.w3.org/check/referer"><img src="{1}xhtml.88.png" alt="XHTML 1.1"></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{1}css.88.png" alt="CSS 3"></a></div>'''.format(content, valdir)
 		# macros for <pre> of bibtex
 		if lines[i].find('isbn      =') > -1:
 			parts = lines[i].split('"')
@@ -372,15 +372,15 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			else:
 				if 'small' in pic:
 					if 'wide' in classes:
-						pic['text'] = '<br/><p class="s">{}</p>'.format(pic['small'])
+						pic['text'] = '<br><p class="s">{}</p>'.format(pic['small'])
 					else:
-						pic['text'] = '<br/><span class="s">{}</span>'.format(pic['small'])
+						pic['text'] = '<br><span class="s">{}</span>'.format(pic['small'])
 				else:
 					pic['text'] = ''
 			for key in pic:
 				if key == 'src':
 					continue
-				pic[key] = pic[key].replace('\\n', '<br/>')
+				pic[key] = pic[key].replace('\\n', '<br>')
 			if divclass:
 				div = '<div class="'+divclass+'">'
 			else:
@@ -416,7 +416,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 					smallwithdir = small
 					if not smallwithdir.startswith('https://'):
 						smallwithdir = picdir + smallwithdir
-					img = f'<a href="{bigwithdir}"><img src="{smallwithdir}" alt="{pic["alt"]}" title="{pic["title"]}"/></a>'
+					img = f'<a href="{bigwithdir}"><img src="{smallwithdir}" alt="{pic["alt"]}" title="{pic["title"]}"></a>'
 				else:
 					img = ''
 				g.write('</h1>\n')
@@ -434,8 +434,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 					if not picwithdir.startswith('https://'):
 						picwithdir = picdir + picwithdir
 
-					g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}" alt="{}" title="{}"/>'+\
-						'<br/>{}{}</span></a></div>\n').format(\
+					g.write(('\t\t{}<a href="{}"><span class="{}"><img src="{}" alt="{}" title="{}">'+\
+						'<br>{}{}</span></a></div>\n').format(\
 						div,\
 						pic['a'],\
 						c,\
@@ -462,7 +462,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 							pic['text'])\
 						)
 					if 'pre' in pic.keys():
-						g.write('<code>' + pic['pre'].replace(' ', '&nbsp;').replace('\n', '<br/>') + '</code>')
+						g.write('<code>' + pic['pre'].replace(' ', '&nbsp;').replace('\n', '<br>') + '</code>')
 					g.write('</span></div>\n')
 		elif lines[i].find('<bsc/>') > -1:
 			g.write(lines[i].replace('<bsc/>', '<abbr title="Technical Computer Science">TCS</abbr> <abbr title="Bachelor of Science Research Project">BSc</abbr>'))
@@ -483,6 +483,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 		elif lines[i].find('#LASTMOD#') > -1:
 			g.write(lines[i].replace('#LASTMOD#', d))
 		else:
+			# last moment changes
+			lines[i] = lines[i].replace('<hr/>', '<hr>').replace('<br/>', '<br>')
+			# ultimately, write
 			g.write(lines[i])
 		i += 1
 	g.close()

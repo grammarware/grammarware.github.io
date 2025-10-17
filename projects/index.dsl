@@ -28,6 +28,14 @@
 			<name>Zorro</name>
 			<text>a large industrial-academic project; I do model-based system engineering (2023–2028)</text>
 		</pic>
+		<pic>
+			<a>modernity.html</a>
+			<img>modernity.500.png</img>
+			<alt>Laravel modernity profile visualised</alt>
+			<title>Software Modernity</title>
+			<name>Software Modernity</name>
+			<text>a software evolution research direction (2021–)</text>
+		</pic>
 		<pic dim>
 			<a>codediffng.html</a>
 			<img>codediffng.200.png</img>

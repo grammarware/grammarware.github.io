@@ -20,23 +20,36 @@
 	</head>
 	<body>
 <div style="text-align:center;"><a href="http://grammarware.github.io">Vadim Zaytsev</a> aka @<a href="http://grammarware.net">grammarware</a></div><hr>		<h1>
-			Modernity
+			Software Modernity
 			<a href="../logos/modernity.500.png"><img src="../logos/modernity.500.png" alt="modernity" title="modernity" style="max-width: 200px;" /></a>
 		</h1>
 		<hr>
 		<p>
-			Code modernity research is an unfunded research direction which concerns <strong>coevolution</strong> of software languages and codebases written in those languages.
+			Code modernity research direction is an unfunded endeavour which concerns <strong>coevolution</strong> of software languages and codebases written in those languages. We analyse new language features that software language engineers put into new versions of their languages, and track adoption of those by users of these languages over time.
+		</p>
+		<p>
+			We have started bottom-up by tracking the use of certain features over long periods of time, in languages with a strong culture of writing idiomatic code, such as Python. Our findings indicated that some language features have a much slower adoption curve than others; that some others reach a certain saturation level which they never significantly surpass; and that some features even follow the <a href="https://en.wikipedia.org/wiki/Gartner_hype_cycle">hype cycle</a> curve with their <em>peaks of inflated expectations</em> and <em>troughs of disillusionment</em>.
+		</p>
+		<p>
+			Then, we proposed the concept of <strong>modernity signatures</strong> which can be created systematically by traversing parse trees, and accumulated to estimate the age of a codebase. We found out the real software projects differ in their modernity profile, with notable extremes abstaining entirely from new language features (presumably for compatibility and portability reasons) on one hand, and embracing them even before the corresponding major release officially declares them ready for use (possibly for developer effectiveness). Personal taste and coding traditions certainly have their influence there as well.
+		</p>
+		<p>
+			We have replicated the experiments over many different programming languages, seeking to provide insights into coding practices, codebase health and the evolution of software languages. There is also inherent maintenance value in estimating the age of a codebase without executing the code or performing extensive human inspection. We believe modernity signatures can aid developers in many ways from choosing whether to use a system or how to approach its maintenance, to assessing usefulness of a language feature, thus providing a valuable tool for source code analysis and manipulation.
+		</p>
+		<p>
+			One of the future steps for us is to attempt to link modernity of a codebase with the quality of the code in it.
 		</p>
 		<br clear="both">
 		<h2>Completed projects</h2>
+		<div><a href="http://purl.utwente.nl/essays/86873"><span class="pic"><img src="../logos/python.110.svg" alt="Python logo (GPL)" title="UT BSc TCS student project"><br>Aamir Farooq (2021)<span class="p">pythonicity analysis</span></span></a></div>
 		<div><a href="http://purl.utwente.nl/essays/91735"><span class="pic"><img src="../logos/duke.300.png" alt="Java Duke logo (BSD)" title="UT BSc TCS student project"><br>Berke Güdücü (2022)<span class="p">Java modernity (up to AST level)</span></span></a></div>
 		<div><a href="http://purl.utwente.nl/essays/91794"><span class="pic"><img src="../logos/php.200.png" alt="PHP logo (CC-BY-SA)" title="UT BSc TCS student project"><br>Wouter van den Brink (2022)<span class="p">PHP modernity</span></span></a></div>
 		<div><a href="http://purl.utwente.nl/essays/94375"><span class="pic"><img src="../logos/python.110.svg" alt="Python logo (GPL)" title="UT BSc TCS student project"><br>Chris Admiraal (2023)<span class="p">Python modernity (based on netromdk's <tt>vermin</tt>)</span></span></a></div>
 		<div><a href="http://purl.utwente.nl/essays/96034"><span class="pic"><img src="../logos/../projects/modnormforms.png" alt="normalisation formulae (vector, z-score, logarithmic)" title="UT BSc TCS student project"><br>Cristian Zubcu (2023)<span class="p">effects of normalisation on modernity reports</span></span></a></div>
-		<div><a href="http://purl.utwente.nl/essays/101016"><span class="pic"><img src="../logos/csharp.300.svg" alt="C# logo (public domain)" title="UT BSc TCS student project"><br>Marks Troicins (2024)<span class="p">C# modernity</span></span></a></div>
+		<div><a href="http://purl.utwente.nl/essays/101016"><span class="pic"><img src="../logos/csharp.300.svg" alt="C# logo (public domain)" title="UT BSc TCS student project"><br>Marks Troicins (2024)<span class="p">C# modernity (based on <tt>Roslyn</tt>, tested on 6 repos)</span></span></a></div>
 		<div><a href="http://purl.utwente.nl/essays/98262"><span class="pic"><img src="../logos/rust.106.svg" alt="Rust logo (CC-BY)" title="UT BSc TCS student project"><br>Chris Bleeker (2024)<span class="p">Rust modernity</span></span></a></div>
 		<div><a href="http://purl.utwente.nl/essays/105139"><span class="pic"><img src="../logos/js.512.svg" alt="unofficial JavaScript logo (public domain)" title="UT BSc TCS student project"><br>Thijs Beumer (2025)<span class="p">JavaScript modernity</span></span></a></div>
-		<div><a href="http://purl.utwente.nl/essays/107509"><span class="pic"><img src="../logos/csharp.300.svg" alt="C# logo (public domain)" title="UT BSc TCS student project"><br>Sorin Zele (2025)<span class="p">C# modernity</span></span></a></div>
+		<div><a href="http://purl.utwente.nl/essays/107509"><span class="pic"><img src="../logos/csharp.300.svg" alt="C# logo (public domain)" title="UT BSc TCS student project"><br>Sorin Zele (2025)<span class="p">C# modernity (8800+ commits from 134 repos)</span></span></a></div>
 		<br clear="both">
 <h2 onmouseover="onn(0)" onmouseout="off(0)">Publications <span class="help">(latest first)</span></h2>		<ul>
 			<li>
@@ -48,6 +61,11 @@
 				Wouter van den Brink, Marcus Gerhold, Vadim Zaytsev.
 				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, SCAM 2022
 				<a class="red" href="https://doi.org/10.1109/SCAM55253.2022.00027">(DOI)</a>
+			</li>
+			<li>
+				Aamir Farooq, Vadim Zaytsev.
+				<em>There Is More Than One Way to Zen Your Python.</em>, SLE 2021.
+				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
 			</li>
 		</ul>
 <div class="last"><br><hr>The page is maintained by <a href="http://grammarware.net/">Dr. Vadim Zaytsev</a> a.k.a. @<a href="http://grammarware.github.io">grammarware</a>. Last updated: October 2025.<br>

@@ -23,7 +23,7 @@
 			One of the future steps for us is to attempt to link modernity of a codebase with the quality of the code in it.
 		</p>
 		<br clear="both">
-		<h2>Completed projects</h2>
+		<h2>Completed constituent projects</h2>
 		<picdir>../logos</picdir>
 		<pic>
 			<a>http://purl.utwente.nl/essays/86873</a>
@@ -97,6 +97,14 @@
 			<name>Sorin Zele (2025)</name>
 			<text>C# modernity (8800+ commits from 134 repos)</text>
 		</pic>
+		<pic>
+			<a>../ut</a>
+			<img>code.200.png</img>
+			<alt>generic Matrix-style greenscreen</alt>
+			<title>UT MSc CS Capita Selecta coursework</title>
+			<name>Wouter van den Brink (2025)</name>
+			<text>“TurboModernity”: req spec for a generic modernity framework</text>
+		</pic>
 		<br clear="both">
 		<h2 help="latest first">Publications</h2>
 		<ul>
@@ -104,6 +112,10 @@
 				Chris Admiraal, Wouter van den Brink, Marcus Gerhold, Vadim Zaytsev, Christian Zubcu.
 				<em>Deriving Modernity Signatures of Codebases with Static Analysis</em>, JSS vol. 211, 2024.
 				<doired>10.1016/j.jss.2024.111973</doired>
+			</li>
+			<li>
+				Vadim Zaytsev.
+				<em>Seeing a Language</em>, SIESTA 2023 summer school lecture.
 			</li>
 			<li>
 				Wouter van den Brink, Marcus Gerhold, Vadim Zaytsev.

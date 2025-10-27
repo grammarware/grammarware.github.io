@@ -21,6 +21,8 @@ def prg2full(x):
 		return f'<abbr title="Science Education">ScE</abbr>'
 	if x == 'EmSys':
 		return f'<abbr title="Embedded Systems">EmSys</abbr>'
+	if x == 'BIT':
+		return f'<abbr title="Business Information Technology">BIT</abbr>'
 	return x
 
 # Header Counter
@@ -468,6 +470,10 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			g.write(lines[i].replace('<bsc/>', '<abbr title="Technical Computer Science">TCS</abbr> <abbr title="Bachelor of Science Research Project">BSc</abbr>'))
 		elif lines[i].find('<msc/>') > -1:
 			g.write(lines[i].replace('<msc/>', '<abbr title="Computer Science">CS</abbr> <abbr title="Master of Science Final Project">MSc</abbr>'))
+		elif lines[i].find('<bsc>') > -1:
+			tmp = lines[i].split('<bsc>')[1].split('</bsc>')[0]
+			tmp = prg2full(tmp) + ' <abbr title="Bachelor of Science Research Project">BSc</abbr>'
+			g.write(lines[i].split('<bsc>')[0] + tmp + lines[i].split('</bsc>')[1])
 		elif lines[i].find('<msc>') > -1:
 			tmp = lines[i].split('<msc>')[1].split('</msc>')[0]
 			tmp = prg2full(tmp) + ' <abbr title="Master of Science Final Project">MSc</abbr>'

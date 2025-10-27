@@ -243,7 +243,7 @@
 			<li>(<msc/>) Ivo Broekhof, <a href="http://grammarware.net/edits/index.html#Broekhof2025">Maintainability Metrics for Mixed-Paradigm Code in Scala</a>. February 2024 – June 2025. Co-supervised with Rinse van Hees.</li>
 			<li>(<msc/>) Luc Timmerman, <a href="http://grammarware.net/edits/index.html#Timmerman2025">SCREAM: System for Cloud Resource Extraction And Motivation</a>. February 2024 – June 2025. Co-supervised with Fernando Castor. <codered>https://github.com/Luctia/scream</codered> </li>
 			<li>(<msc/>) Faisal Nizamudeen, <a href="http://grammarware.net/edits/index.html#Nizamudeen2025">Benchmarking the Programming Capabilities of Large Language Models</a>. October 2024 – June 2025.</li>
-			<li>(<bsc/>) Aleksandra Ignatovič, <a href="http://grammarware.net/edits/index.html#Ignatovich2025">How Academics Organize LaTeX Projects—and Whether Structure Should Be Standardized</a>. April–June 2025. Co-supervised with Nhat.</li>
+			<li>(<bsc>BIT</bsc>) Aleksandra Ignatovič, <a href="http://grammarware.net/edits/index.html#Ignatovich2025">How Academics Organize LaTeX Projects—and Whether Structure Should Be Standardized</a>. April–June 2025. Co-supervised with Nhat.</li>
 			<li>(<bsc/>) Marius Pană, <a href="http://grammarware.net/edits/index.html#Pana2025">Comparing Rascal and JetBrains MPS through a DOT-Based Domain-Specific Language</a>. April–June 2025. Co-supervised with Ömer Sayilir. Best Paper Award at <a href="https://sites.google.com/utwente.nl/43twentestudentconference">TScIT43</a>.</li>
 			<li>(<bsc/>) Enrique Ramos Adamik, <a href="http://grammarware.net/edits/index.html#Ramos2025">Comparing the Validation Capabilities of the Rascal and Spoofax Language Workbenches</a>. April–June 2025. Co-supervised with Ömer Sayilir. <codered>https://github.com/enrique-ramos-7/rascal-spoofax-dot</codered> Best Paper Nomination at <a href="https://sites.google.com/utwente.nl/43twentestudentconference">TScIT43</a>.</li>
 			<li>(<bsc/>) Miroslav Atanasov, <a href="http://grammarware.net/edits/index.html#Atanasov2025">Fake it ’till you make it: exploring the usefulness of synthetic datasets to train machine learning models for self-admitted technical debt classification and identification</a>. November 2024 – June 2025. Co-supervised with Tiago Prince Sales.</li>
@@ -291,9 +291,7 @@
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500340&amp;collegejaar=2025">November 2025 – February 2026</a>
-						<!--
-						<canvasred>???</canvasred>;
-						-->
+						<canvasred>17775</canvasred>;
 						coordinator: Fernando Castor de Lima Filho;
 						my role: exam co-design, re-recording some microlectures, lectorials corresponding to microlectures;
 						people involved: Petra van den Bos, Marcus Gerhold, many others for grading

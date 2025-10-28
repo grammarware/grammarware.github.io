@@ -163,6 +163,15 @@
 				<strong>GPCE</strong> 2025.
 				<doired>10.1145/3742876.3742881</doired>
 			</li>
+			<li>
+				 <a href="https://woutertenbrinke.nl/" class="stud">Wouter ten Brinke</a>,
+				 <a href="https://purl.utwente.nl/essays/107264" class="stud">Bart Griepsma</a>,
+				 <a href="https://www.linkedin.com/in/aleksandra-ignatovi%C4%8D-48a53817b/" class="stud">Aleksandra Ignatovič</a>,
+				 <a href="https://people.utwente.nl/n.bui">Nhat</a>,
+				 Vadim Zaytsev.
+				 <em>On the Structuring of LaTeX Projects</em>,
+				 <strong>BENEVOL</strong> 2025.
+			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
 		<ul>
@@ -287,7 +296,7 @@
 					</li>
 				</ul>
 			</li>
-			<li class="title">(BSc) Software Systems / Software Design
+			<li class="title">(BSc) Software Systems / Design and Modelling
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500340&amp;collegejaar=2025">November 2025 – February 2026</a>
@@ -460,6 +469,16 @@
 						cases: CopyCopy, Scandoo.
 					</li>
 				</ul>
+				<li class="title">(BSc) Programming Paradigms / Compiler Construction
+				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202200190&amp;collegejaar=2023">April–June 2024</a>
+						<canvasred>14720</canvasred>;
+						coordinator: Arnd Hartmanns;
+						my role: giving four lectures on graph-based IR, linear IR, call graphs, activation records, parameter passing and memory layout; exam co-design;
+						people involved: Iman Hemati Moghadam
+					</li>
+				</ul>
 			</li>
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
@@ -468,6 +487,7 @@
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Floris Heinen, <em>transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
+			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
 		</ul>
 		<footer/>
 	</body>

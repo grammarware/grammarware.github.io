@@ -41,6 +41,16 @@
 					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a> (Tubantia)</li>
 				</ul>
 			</li>
+			<li>
+				At the yearly graduation ceremonies of BSc TCS, when handling out diplomas, I have prepared and delivered
+				<strong>66</strong> (in 2021),
+				<strong>77</strong> (in 2022),
+				<strong>108</strong> (in 2023),
+				<strong>114</strong> (in 2024),
+				and
+				<strong>133</strong> (in 2025)
+				personal congratulatory speeches, partially based on feedback provided by supervisors.
+			</li>
 		</ul>
 		<h2 help="by acceptance date">Publications based on student work</h2>
 		<ul>

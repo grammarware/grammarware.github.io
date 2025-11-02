@@ -1,5 +1,5 @@
 <html doctype>
-	<head jquery title="Dr. Vadim Zaytsev — Pipeline" />
+	<head jquery title="Dr. Vadim Zaytsev — Modernity" />
 	<body>
 		<header/>
 		<h1>

@@ -36,6 +36,7 @@
 			</li>
 			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 			<li>In 2024, the UT Master of Computer Science was again deemed <a href="overzicht2024.png">the best general computer science programme</a> in the country by the same reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
+			<li>In December 2025 both BSc TCS and MSc CS were successfully <a href="https://www.utwente.nl/en/eemcs/accreditations/cs/">re-accredited</a>.</li>
 			<li>Some other media appearances:
 				<ul>
 					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a> (Tubantia)</li>
@@ -274,6 +275,8 @@
 			<li>(<msc/>) Anissa Donkers, <a href="http://grammarware.net/edits/index.html#Donkers2025">Exploring Code Quality in First-Year Java Projects: A Comparative Study of Traditional and AI-Assisted Solutions</a>. September 2024 – August 2025. Co-supervised with Arthur Rump.</li>
 			<li>(<msc/>) Ping-Ching Yeh, <a href="http://grammarware.net/edits/index.html#Yeh2025">From Modeling to Verification: Translating SysMLv2 to PNML-Compliant Petri Nets</a>. July–August 2025. Co-supervised with Ömer Sayilir and Wallace Corbo Ugulino. <codered>https://github.com/ypj0202/SysML2PetriNet</codered></li>
 			<li>(<msc/>) Tom Meulenkamp, <a href="http://grammarware.net/edits/index.html#Meulenkamp2025">Relational Parsing: From Academics to Practice</a>. October 2024 – September 2025. <codered>https://github.com/supertom01/relationalParsing</codered></li>
+			<li>(<bsc/>) Carim Popa, <a href="http://grammarware.net/edits/index.html#Popa2026">Comparing Spoofax and Eclipse Xtext Language Workbenches for Editor Support in DOT DSL</a>. November 2025 – January 2026. Co-supervised with Ömer Sayilir. Best Presentation Award at Track 3 of <a href="https://sites.google.com/utwente.nl/44twentestudentconference">TScIT44</a>. <codered>https://github.com/CarimPopa/DOT-Spoofax</codered></li>
+			<li>(<bsc/>) Daan Wensink, <a href="http://grammarware.net/edits/index.html#Wensink2026">Determining modernity metrics for Java codebases</a>. November 2025 – January 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/DaanW29/CodeModernityTool</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -358,7 +361,7 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2025">September–November 2025</a>
 						<canvasred>17091</canvasred>;
-						<!-- <ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yTRrsNZs/</ared>;  -->
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/YhFqRB3Z/</ared>; 
 						coordinator: Rom Langerak;
 						my role: guiding one group together with Nhat;
 						students involved:
@@ -498,6 +501,8 @@
 			<li>(<msc/>) Floris Heinen, <em>transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
+			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
+
 		</ul>
 		<footer/>
 	</body>

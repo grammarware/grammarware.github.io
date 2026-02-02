@@ -53,84 +53,48 @@
 				personal congratulatory speeches, partially based on feedback provided by supervisors.
 			</li>
 		</ul>
-		<h2 help="by acceptance date">Publications based on student work</h2>
+		<h2 help="by acceptance date, latest first">Publications based on student work</h2>
 		<ul>
 			<li>
-				<a href="https://github.com/slimshadyiam" class="stud">Aamir Farooq</a>,
-				Vadim Zaytsev.
-				<em>There Is More Than One Way to Zen Your Python</em>, <strong>SLE</strong> 2021, pp. 68–82, ACM.
-				<a class="red" href="https://slimshadyiam.github.io/ZenYourPython/#/">(project page)</a>
-				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
-			</li>
-			<li><a href="https://github.com/marnickvda/" class="stud">Marnick van der Arend</a>.
-				<em>Language-Agnostic Multi-Paradigm Code Quality Assurance Framework</em>, <strong>BENEVOL</strong> 2022. CEUR 3245.
-				<a class="red" href="https://benevol2022.github.io/papers/MarnickVanDerArend.pdf">(PDF)</a>
-				<a class="red" href="https://ceur-ws.org/Vol-3245/paper5.pdf">(CEUR)</a>
-			</li>
-			<li><a href="https://woutervdb.com/" class="stud">Wouter van den Brink</a>,
-				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
-				Vadim Zaytsev.
-				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, <strong>SCAM</strong> 2022, pp. 181–185, IEEE.
-				<doired>10.1109/SCAM55253.2022.00027</doired>
-				<codered>https://github.com/WoutervdBrink/PHP-Modernity-Signature</codered>
-			</li>
-			<li><a href="https://www.arthurrump.com/" class="stud">Arthur Rump</a>,
-				Vadim Zaytsev.
-				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, <strong>EduSymp</strong> 2022, pp. 115–122, ACM.
-				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
-				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
-			</li>
-			<li><a href="https://www.linkedin.com/in/dani%C3%ABl-floor-266652208/" class="stud">Daniël Floor</a>,
-				<a href="https://www.linkedin.com/in/rinse-van-hees/">Rinse van Hees</a>,
-				Vadim Zaytsev.
-				<em>Code Comprehension in a Multi-Paradigm Environment</em>, <strong>SATToSE</strong> 2023. CEUR 3483. September 2023.
-				<ceurred>3483/paper1</ceurred>
-			</li>
-			<li><a href="https://github.com/rwitmans" class="stud">Rutger Witmans</a>,
-				Vadim Zaytsev.
-				<em>Perfecting Nothingness by Refactoring Whitespace</em>, <strong>SATToSE</strong> 2023. CEUR 3483.
-				<a class="red" href="https://github.com/rwitmans/whiteref/">(code)</a>
-				<a class="red" href="http://ceur-ws.org/Vol-3483/paper2.pdf">(CEUR)</a>
-			</li>
-			<li><a href="https://www.linkedin.com/in/mart-van-assen-a4803727b/" class="stud">Mart van Assen</a>,
-				<a href="https://www.linkedin.com/in/aim%C3%A9-ntagengerwa-555b45b5/" class="stud">Aimé Ntagengerwa</a>,
-				<a href="https://www.linkedin.com/in/omer-faruk-sayilir/" class="stud">Ömer Sayilir</a>,
-				Vadim Zaytsev.
-				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, <strong>GPCE</strong> 2023, ACM.
-				<doired>https://doi.org/10.1145/3624007.3624055</doired>
-				<codered>https://github.com/Crossover-Compiler/</codered>
-			</li>
-			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
-				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/" class="stud">Lola Solovyeva</a>,
-				Vadim Zaytsev.
-				<em>Leveraging Deep Learning for Python Version Identification</em>, <strong>BENEVOL</strong> 2023. CEUR 3567. November 2023.
-				<ceurred>3567/paper5</ceurred>
-			</li>
-			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
-				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/" class="stud">Lola Solovyeva</a>,
-				Vadim Zaytsev.
-				<em>The Limits of the Identifiable: Challenges in Python Version Identification with Deep Learning</em>, <strong>SANER</strong> 2024. RENE track. July 2024.
-				<doired>10.1109/SANER60148.2024.00022</doired>
-			</li>
-			<li>
-				<a href="https://essay.utwente.nl/94375/" class="stud">Chris Admiraal</a>,
-				<a href="https://www.woutervdb.com" class="stud">Wouter van den Brink</a>,
-				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
-				Vadim Zaytsev,
-				<a href="https://www.linkedin.com/in/cristian-zubcu/" class="stud">Christian Zubcu</a>.
-				<em>Deriving Modernity Signatures of Codebases with Static Analysis</em>,
-				<strong>JSS 211</strong>,
-				May 2024.
-				<doired>10.1016/j.jss.2024.111973</doired>
+				 <a href="https://woutertenbrinke.nl/" class="stud">Wouter ten Brinke</a>,
+				 <a href="https://purl.utwente.nl/essays/107264" class="stud">Bart Griepsma</a>,
+				 <a href="https://www.linkedin.com/in/aleksandra-ignatovi%C4%8D-48a53817b/" class="stud">Aleksandra Ignatovič</a>,
+				 <a href="https://people.utwente.nl/n.bui">Nhat</a>,
+				 Vadim Zaytsev.
+				 <em>On the Structuring of LaTeX Projects</em>,
+				 <strong>BENEVOL</strong> 2025.
 			</li>
 			<li>
 				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
-				<a href="https://www.linkedin.com/in/matthias-sleurink-9b6896223" class="stud">Matthias Sleurink</a>,
+				<a href="https://www.linkedin.com/in/oebele-lijzenga-3ab3aa1a2/" class="stud">Oebele Lijzenga</a>,
 				Vadim Zaytsev.
-				<em>Surpassing Threshold Barriers: Evaluating the Efficacy of Nature-Inspired Algorithms in Detecting Applied Refactorings</em>.
-				<strong>ICCTA</strong> 2024. August 2024.
-				<doired>10.1145/3674558.3674568</doired>
-				<datared>https://doi.org/10.5281/zenodo.10971388</datared>
+				<em>Comparative Analysis of Pre-Trained Models for Automated Program Repair via Code Infill Generation</em>,
+				<strong>GPCE</strong> 2025.
+				<doired>10.1145/3742876.3742881</doired>
+			</li>
+			<li>
+				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
+				<a href="https://www.linkedin.com/in/oebele-lijzenga-3ab3aa1a2/" class="stud">Oebele Lijzenga</a>,
+				Vadim Zaytsev.
+				<em>Leveraging Search-Based and Pre-Trained Code Language Models for Automated Program Repair</em>,
+				<strong>SAC/SE</strong> 2025.
+				<doired>10.1145/3672608.3707774</doired>
+			</li>
+			<li>
+				<a href="https://www.utwente.nl/onderwijs/student-services/actueel/colloquia/eemcs-colloquia/2023/12/1250550/master-colloquium-stijn-broekhuis-m-cs" class="stud">Stijn Broekhuis</a>,
+				Vadim Zaytsev.
+				<em>Improving JSON Schema Inference by Incorporating User Inputs</em>,
+				<strong>BENEVOL</strong> 2024. CEUR 3941. March 2025.
+				<ceurred>3941/BENEVOL2024_TECH_paper14</ceurred>
+			</li>
+			<li>
+				<a href="http://www.sophielathouwers.nl/">Sophie Lathouwers</a>,
+				<a href="https://liuliujie.github.io/" class="stud">Yujie Liu</a>,
+				Vadim Zaytsev.
+				<em>Extract, Model, Refine: Improved Modelling of Program Verification Tools through Data Enrichment</em>.
+				<strong>SoSyM</strong>,
+				January 2025.
+				<doired>10.1007/s10270-024-01232-7</doired>
 			</li>
 			<li>
 				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
@@ -143,45 +107,81 @@
 				<doired>10.1145/3652620.3688348</doired>
 			</li>
 			<li>
-				<a href="http://www.sophielathouwers.nl/">Sophie Lathouwers</a>,
-				<a href="https://liuliujie.github.io/" class="stud">Yujie Liu</a>,
-				Vadim Zaytsev.
-				<em>Extract, Model, Refine: Improved Modelling of Program Verification Tools through Data Enrichment</em>.
-				<strong>SoSyM</strong>,
-				January 2025.
-				<doired>10.1007/s10270-024-01232-7</doired>
-			</li>
-			<li>
-				<a href="https://www.utwente.nl/onderwijs/student-services/actueel/colloquia/eemcs-colloquia/2023/12/1250550/master-colloquium-stijn-broekhuis-m-cs" class="stud">Stijn Broekhuis</a>,
-				Vadim Zaytsev.
-				<em>Improving JSON Schema Inference by Incorporating User Inputs</em>,
-				<strong>BENEVOL</strong> 2024. CEUR 3941. March 2025.
-				<ceurred>3941/BENEVOL2024_TECH_paper14</ceurred>
-			</li>
-			<li>
 				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
-				<a href="https://www.linkedin.com/in/oebele-lijzenga-3ab3aa1a2/" class="stud">Oebele Lijzenga</a>,
+				<a href="https://www.linkedin.com/in/matthias-sleurink-9b6896223" class="stud">Matthias Sleurink</a>,
 				Vadim Zaytsev.
-				<em>Leveraging Search-Based and Pre-Trained Code Language Models for Automated Program Repair</em>,
-				<strong>SAC/SE</strong> 2025.
-				<doired>10.1145/3672608.3707774</doired>
+				<em>Surpassing Threshold Barriers: Evaluating the Efficacy of Nature-Inspired Algorithms in Detecting Applied Refactorings</em>.
+				<strong>ICCTA</strong> 2024. August 2024.
+				<doired>10.1145/3674558.3674568</doired>
+				<datared>https://doi.org/10.5281/zenodo.10971388</datared>
 			</li>
 			<li>
-				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
-				<a href="https://www.linkedin.com/in/oebele-lijzenga-3ab3aa1a2/" class="stud">Oebele Lijzenga</a>,
+				<a href="https://essay.utwente.nl/94375/" class="stud">Chris Admiraal</a>,
+				<a href="https://www.woutervdb.com" class="stud">Wouter van den Brink</a>,
+				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
+				Vadim Zaytsev,
+				<a href="https://www.linkedin.com/in/cristian-zubcu/" class="stud">Christian Zubcu</a>.
+				<em>Deriving Modernity Signatures of Codebases with Static Analysis</em>,
+				<strong>JSS 211</strong>,
+				May 2024.
+				<doired>10.1016/j.jss.2024.111973</doired>
+			</li>
+			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
+				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/" class="stud">Lola Solovyeva</a>,
 				Vadim Zaytsev.
-				<em>Comparative Analysis of Pre-Trained Models for Automated Program Repair via Code Infill Generation</em>,
-				<strong>GPCE</strong> 2025.
-				<doired>10.1145/3742876.3742881</doired>
+				<em>The Limits of the Identifiable: Challenges in Python Version Identification with Deep Learning</em>, <strong>SANER</strong> 2024. RENE track. July 2024.
+				<doired>10.1109/SANER60148.2024.00022</doired>
+			</li>
+			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
+				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/" class="stud">Lola Solovyeva</a>,
+				Vadim Zaytsev.
+				<em>Leveraging Deep Learning for Python Version Identification</em>, <strong>BENEVOL</strong> 2023. CEUR 3567. November 2023.
+				<ceurred>3567/paper5</ceurred>
+			</li>
+			<li><a href="https://www.linkedin.com/in/mart-van-assen-a4803727b/" class="stud">Mart van Assen</a>,
+				<a href="https://www.linkedin.com/in/aim%C3%A9-ntagengerwa-555b45b5/" class="stud">Aimé Ntagengerwa</a>,
+				<a href="https://www.linkedin.com/in/omer-faruk-sayilir/" class="stud">Ömer Sayilir</a>,
+				Vadim Zaytsev.
+				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, <strong>GPCE</strong> 2023, ACM.
+				<doired>https://doi.org/10.1145/3624007.3624055</doired>
+				<codered>https://github.com/Crossover-Compiler/</codered>
+			</li>
+			<li><a href="https://github.com/rwitmans" class="stud">Rutger Witmans</a>,
+				Vadim Zaytsev.
+				<em>Perfecting Nothingness by Refactoring Whitespace</em>, <strong>SATToSE</strong> 2023. CEUR 3483.
+				<a class="red" href="https://github.com/rwitmans/whiteref/">(code)</a>
+				<a class="red" href="http://ceur-ws.org/Vol-3483/paper2.pdf">(CEUR)</a>
+			</li>
+			<li><a href="https://www.linkedin.com/in/dani%C3%ABl-floor-266652208/" class="stud">Daniël Floor</a>,
+				<a href="https://www.linkedin.com/in/rinse-van-hees/">Rinse van Hees</a>,
+				Vadim Zaytsev.
+				<em>Code Comprehension in a Multi-Paradigm Environment</em>, <strong>SATToSE</strong> 2023. CEUR 3483. September 2023.
+				<ceurred>3483/paper1</ceurred>
+			</li>
+			<li><a href="https://www.arthurrump.com/" class="stud">Arthur Rump</a>,
+				Vadim Zaytsev.
+				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, <strong>EduSymp</strong> 2022, pp. 115–122, ACM.
+				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
+				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
+			</li>
+			<li><a href="https://woutervdb.com/" class="stud">Wouter van den Brink</a>,
+				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
+				Vadim Zaytsev.
+				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, <strong>SCAM</strong> 2022, pp. 181–185, IEEE.
+				<doired>10.1109/SCAM55253.2022.00027</doired>
+				<codered>https://github.com/WoutervdBrink/PHP-Modernity-Signature</codered>
+			</li>
+			<li><a href="https://github.com/marnickvda/" class="stud">Marnick van der Arend</a>.
+				<em>Language-Agnostic Multi-Paradigm Code Quality Assurance Framework</em>, <strong>BENEVOL</strong> 2022. CEUR 3245.
+				<a class="red" href="https://benevol2022.github.io/papers/MarnickVanDerArend.pdf">(PDF)</a>
+				<a class="red" href="https://ceur-ws.org/Vol-3245/paper5.pdf">(CEUR)</a>
 			</li>
 			<li>
-				 <a href="https://woutertenbrinke.nl/" class="stud">Wouter ten Brinke</a>,
-				 <a href="https://purl.utwente.nl/essays/107264" class="stud">Bart Griepsma</a>,
-				 <a href="https://www.linkedin.com/in/aleksandra-ignatovi%C4%8D-48a53817b/" class="stud">Aleksandra Ignatovič</a>,
-				 <a href="https://people.utwente.nl/n.bui">Nhat</a>,
-				 Vadim Zaytsev.
-				 <em>On the Structuring of LaTeX Projects</em>,
-				 <strong>BENEVOL</strong> 2025.
+				<a href="https://github.com/slimshadyiam" class="stud">Aamir Farooq</a>,
+				Vadim Zaytsev.
+				<em>There Is More Than One Way to Zen Your Python</em>, <strong>SLE</strong> 2021, pp. 68–82, ACM.
+				<a class="red" href="https://slimshadyiam.github.io/ZenYourPython/#/">(project page)</a>
+				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
 			</li>
 		</ul>
 		<h2 help="by presentation date">Publications / presentations on educational topics</h2>

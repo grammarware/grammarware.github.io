@@ -56,6 +56,15 @@
 		<h2 help="by acceptance date, latest first">Publications based on student work</h2>
 		<ul>
 			<li>
+				<a href="https://www.linkedin.com/in/ivo-broekhof/" class="stud">Ivo Broekhof</a>,
+				<a href="https://www.linkedin.com/in/rinse-van-hees/">Rinse van Hees</a>,
+				<a href="https://github.com/Nhaajt">Nhat</a>,
+				Vadim Zaytsev. 
+				<em>Scala Mixed-Paradigm Maintainability Metrics</em>,
+				<strong>SANER</strong> 2026.
+				In print.
+			</li>
+			<li>
 				 <a href="https://woutertenbrinke.nl/" class="stud">Wouter ten Brinke</a>,
 				 <a href="https://purl.utwente.nl/essays/107264" class="stud">Bart Griepsma</a>,
 				 <a href="https://www.linkedin.com/in/aleksandra-ignatovi%C4%8D-48a53817b/" class="stud">Aleksandra Ignatovič</a>,
@@ -63,6 +72,7 @@
 				 Vadim Zaytsev.
 				 <em>On the Structuring of LaTeX Projects</em>,
 				 <strong>BENEVOL</strong> 2025.
+				 <pdfred>https://benevol2025.github.io/pre/paper10.pdf</pdfred>
 			</li>
 			<li>
 				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
@@ -95,6 +105,7 @@
 				<strong>SoSyM</strong>,
 				January 2025.
 				<doired>10.1007/s10270-024-01232-7</doired>
+				<a class="red" href="https://slebok.github.io/proverb/index.html">(q.v.: ProVerB)</a>
 			</li>
 			<li>
 				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
@@ -105,6 +116,7 @@
 				<em>Modelling of Cyber-Physical Systems through Domain-Specific Languages: Decision, Analysis, Design</em>.
 				<strong>MLE</strong> 2024. October 2024.
 				<doired>10.1145/3652620.3688348</doired>
+				<a class="red" href="https://zorro-project.nl/">(q.v.: Zorro)</a>
 			</li>
 			<li>
 				<a href="https://orcid.org/0000-0002-5478-9858">Iman Hemati Moghadam</a>,
@@ -125,6 +137,7 @@
 				<strong>JSS 211</strong>,
 				May 2024.
 				<doired>10.1016/j.jss.2024.111973</doired>
+				<a class="red" href="../projects/modernity.html">(q.v.: Modernity)</a>
 			</li>
 			<li><a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
 				<a href="https://www.linkedin.com/in/lola-solovyeva-5a5ab4178/" class="stud">Lola Solovyeva</a>,
@@ -145,6 +158,7 @@
 				<em>Crossover: Towards Compiler-Enabled COBOL-C Interoperability</em>, <strong>GPCE</strong> 2023, ACM.
 				<doired>https://doi.org/10.1145/3624007.3624055</doired>
 				<codered>https://github.com/Crossover-Compiler/</codered>
+				<a class="red" href="https://slebok.github.io/baby/">(q.v.: BabyCobol)</a>
 			</li>
 			<li><a href="https://github.com/rwitmans" class="stud">Rutger Witmans</a>,
 				Vadim Zaytsev.
@@ -163,6 +177,7 @@
 				<em>A Refined Model of Ill-definedness in Project-Based Learning</em>, <strong>EduSymp</strong> 2022, pp. 115–122, ACM.
 				<a class="red" href="https://doi.org/10.1145/3550356.3556505">(DOI)</a>
 				<a class="red" href="https://www.arthurrump.com/2022/11/03/a-meta-perspective-on-a-refined-model-of-ill-definedness/">(blog)</a>
+				<a class="red" href="../projects/pipeline.html">(q.v.: Pipeline)</a>
 			</li>
 			<li><a href="https://woutervdb.com/" class="stud">Wouter van den Brink</a>,
 				<a href="https://mgerhold.personalweb.utwente.nl">Marcus Gerhold</a>,
@@ -170,6 +185,7 @@
 				<em>Deriving Modernity Signatures for PHP Systems with Static Analysis</em>, <strong>SCAM</strong> 2022, pp. 181–185, IEEE.
 				<doired>10.1109/SCAM55253.2022.00027</doired>
 				<codered>https://github.com/WoutervdBrink/PHP-Modernity-Signature</codered>
+				<a class="red" href="../projects/modernity.html">(q.v.: Modernity)</a>
 			</li>
 			<li><a href="https://github.com/marnickvda/" class="stud">Marnick van der Arend</a>.
 				<em>Language-Agnostic Multi-Paradigm Code Quality Assurance Framework</em>, <strong>BENEVOL</strong> 2022. CEUR 3245.
@@ -182,18 +198,19 @@
 				<em>There Is More Than One Way to Zen Your Python</em>, <strong>SLE</strong> 2021, pp. 68–82, ACM.
 				<a class="red" href="https://slimshadyiam.github.io/ZenYourPython/#/">(project page)</a>
 				<a class="red" href="https://doi.org/10.1145/3486608.3486909">(DOI)</a>
+				<a class="red" href="../projects/modernity.html">(q.v.: Modernity)</a>
 			</li>
 		</ul>
-		<h2 help="by presentation date">Publications / presentations on educational topics</h2>
+		<h2 help="by presentation date, latest first">Publications / presentations on educational topics</h2>
 		<ul>
-			<li><em>The Art of Distancing</em>, Computer Science Educational Day, 21 January 2021.</li>
-			<li><em>DEUS VULT: The Holy Wars of Computer Science</em>, <a href="https://www.inter-actief.utwente.nl/">Inter-Actief</a> Lecture, 30 November 2021.</li>
-			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://web.archive.org/web/20220527224850/https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
-			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
-			<li><a href="https://grammarware.net/writes/#GAIinPBL2025"><em>The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</em></a> (with Tom van Dijk), ISoLA, 2025.</li>
 			<li><a href="https://www.inter-actief.utwente.nl/activities/7696/"><em>Expert Vibing</em>, Inter-<em>Actief</em> Lunch Lecture, 9 September 2025.</a>
+			<li><a href="https://grammarware.net/writes/#GAIinPBL2025"><em>The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</em></a> (with Tom van Dijk), ISoLA, 2025.</li>
+			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
+			<li><em>32 Hour Curriculum</em>, student—teacher debate, <a href="https://web.archive.org/web/20220527224850/https://www.utwente.nl/en/eemcs/monthofeducation/programme/2-june/">Month of Education</a>, 2 June 2022.</li>
+			<li><em>DEUS VULT: The Holy Wars of Computer Science</em>, <a href="https://www.inter-actief.utwente.nl/">Inter-Actief</a> Lecture, 30 November 2021.</li>
+			<li><em>The Art of Distancing</em>, Computer Science Educational Day, 21 January 2021.</li>
 		</ul>
-		<h2 help="by defence date">Supervised students</h2>
+		<h2 help="by defence date, earliest first">Supervised students</h2>
 		<ol>
 			<li>(<bsc/>) Joël Ledelay. <a href="http://grammarware.net/edits/index.html#Ledelay2021">Retrofitting Memoization: An Exploratory Study</a>. November 2020 – January 2021. Hosted by <a href="https://www.actfact.com">ActFact</a>.</li>
 			<li>(<bsc/>) Ewout van der Wal. <a href="http://grammarware.net/edits/index.html#Wal2021">Rosetta ANTLR: Ultimate Grammar Extractor</a>. November 2020 – January 2021. Best Paper Award at <a href="https://sites.google.com/utwente.nl/tscit34/">TScIT34</a>. <codered>https://github.com/EwoutWal/ANTLR-Extractor/</codered></li>

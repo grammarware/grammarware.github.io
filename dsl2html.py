@@ -327,6 +327,8 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = expandred(lines[i], 'ared', '', '', 'link')
 		if lines[i].find('<canvasred>') > -1:
 			lines[i] = expandred(lines[i], 'canvasred', 'https://canvas.utwente.nl/courses/', '', 'Canvas')
+		if lines[i].find('<pdfred>') > -1:
+			lines[i] = expandred(lines[i], 'pdfred', '', '', 'PDF')
 		# exclusive expansions
 		if lines[i].strip().startswith('<picdir'):
 			picdir = p.search(lines[i].strip()).groups()[1]+'/'

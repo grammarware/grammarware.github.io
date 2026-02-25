@@ -4,7 +4,7 @@
 		<header/>
 		<h1>
 			CodeDiffNG: Advanced Source Code Diffing
-			<img src="../logos/codediffng.200.png" alt="CodeDiffNG" title="CodeDiffNG logo designed by Vadim Zaytsev"/>
+			<img src="../logos/codediffng.200.png" alt="CodeDiffNG" title="CodeDiffNG logo designed by Vadim Zaytsev">
 		</h1>
 		<hr/>
 		<p>

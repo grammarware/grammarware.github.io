@@ -4,7 +4,7 @@
 		<header/>
 		<h1>
 			Software Modernity
-			<a href="../logos/modernity.500.png"><img src="../logos/modernity.500.png" alt="modernity" title="modernity" style="max-width: 200px;" /></a>
+			<a href="../logos/modernity.500.png"><img src="../logos/modernity.500.png" alt="modernity" title="modernity" style="max-width: 200px;" ></a>
 		</h1>
 		<hr/>
 		<p>
@@ -22,8 +22,8 @@
 		<p>
 			One of the future steps for us is to attempt to link modernity of a codebase with the quality of the code in it.
 		</p>
-		<br clear="both">
-		<h2>Completed constituent projects</h2>
+		<br style="clear:both">
+		<h2 help="latest rightmost">Completed constituent projects</h2>
 		<picdir>../logos</picdir>
 		<pic>
 			<a>http://purl.utwente.nl/essays/86873</a>
@@ -55,7 +55,7 @@
 			<alt>Python logo (GPL)</alt>
 			<title>UT BSc TCS student project</title>
 			<name>Chris Admiraal (2023)</name>
-			<text>Python modernity (based on netromdk's <tt>vermin</tt>)</text>
+			<text>Python modernity (based on netromdk's <code>vermin</code>)</text>
 		</pic>
 		<pic>
 			<a>http://purl.utwente.nl/essays/96034</a>
@@ -71,7 +71,7 @@
 			<alt>C# logo (public domain)</alt>
 			<title>UT BSc TCS student project</title>
 			<name>Marks Troicins (2024)</name>
-			<text>C# modernity (based on <tt>Roslyn</tt>, tested on 6 repos)</text>
+			<text>C# modernity (based on <code>Roslyn</code>, tested on 6 repos)</text>
 		</pic>
 		<pic>
 			<a>http://purl.utwente.nl/essays/98262</a>
@@ -105,7 +105,15 @@
 			<name>Wouter van den Brink (2025)</name>
 			<text>“TurboModernity”: req spec for a generic modernity framework</text>
 		</pic>
-		<br clear="both">
+		<pic>
+			<a>http://purl.utwente.nl/essays/109503</a>
+			<img>duke.300.png</img>
+			<alt>Java Duke logo (BSD)</alt>
+			<title>UT BSc TCS student project</title>
+			<name>Daan Wensink (2025)</name>
+			<text>Java modernity (tested on Elastic)</text>
+		</pic>
+		<br style="clear:both">
 		<h2 help="latest first">Publications</h2>
 		<ul>
 			<li>

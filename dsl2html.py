@@ -210,7 +210,7 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 			lines[i] = '''<br><a href="http://validator.w3.org/check/referer"><img src="{0}xhtml.88.png" alt="XHTML 1.1"></a>
 			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="{0}css.88.png" alt="CSS 3"></a>\n'''.format(logopath)
 		if lines[i].strip().startswith('<footer'):
-			rootpath = '' if dsl.find('/') < 0 and dsl.find('\\') < 0 else '../'
+			rootpath = '../'*dsl.count('/') + '..\\'*dsl.count('\\')
 			content = ''
 			if lines[i].strip() == '<footer/>':
 				content = ''
@@ -313,6 +313,9 @@ for dsl in glob.glob("*.dsl") + glob.glob("*/*.dsl") + glob.glob("*/*/*.dsl"):
 				paperV = ', ' + paperV
 			lines[i] = '<li>%s<a%s>%s</a>%s. <a class="now" href="%s">(bibtex)</a>%s%s%s%s</li>' % (paperA, L, paperT, paperV, paperBib, paperOpen, paperX, X, paperText)
 		# expansions
+		if lines[i].find('<url>') > -1:
+			url_inside_line = lines[i].split('<url>')[-1].split('</url>')[0]
+			lines[i] = lines[i].replace('<url>',f'<a class="red" href="{url_inside_line}"><code>').replace('</url>', '</code></a>')
 		if lines[i].find('<codered>') > -1:
 			lines[i] = expandred(lines[i], 'codered', '', '', 'code')
 		if lines[i].find('<datared>') > -1:

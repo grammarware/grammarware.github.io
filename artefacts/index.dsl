@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <html doctype>
 	<head viewport title="Dr. Vadim Zaytsev — artefacts" />
 	<body>
@@ -114,7 +113,7 @@
 		</pic>
 		<footer>
 			Dim tiles refer to past projects.
-			See <a href="../copyright.html">copyright disclaimer</a>.<br/>
+			See <a href="../copyright.html">copyright disclaimer</a>.<br>
 		</footer>
 	</body>
 </html>

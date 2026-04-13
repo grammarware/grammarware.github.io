@@ -40,6 +40,7 @@
 			<li>Some other media appearances:
 				<ul>
 					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a> (Tubantia)</li>
+					<!-- https://www.utwente.nl/en/stories/student/820539/from-student-to-spotify-engineer-i-lay-the-technical-foundation-so-millions-can-stream-without-interruption/ -->
 				</ul>
 			</li>
 			<li>
@@ -300,6 +301,11 @@
 			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
 				<ul>
 					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2025">April–July 2026</a>
+						<canvasred>17775</canvasred>;
+						my role: coordinator, teacher
+					</li>
+					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2024">April–July 2025</a>
 						<canvasred>16754</canvasred>;
 						my role: coordinator, teacher; guest lecturer: Fernando Castor de Lima Filho
@@ -332,35 +338,35 @@
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500340&amp;collegejaar=2025">November 2025 – February 2026</a>
 						<canvasred>17775</canvasred>;
 						coordinator: Fernando Castor de Lima Filho;
-						my role: exam co-design, re-recording some microlectures, lectorials corresponding to microlectures;
+						my role: exam co-design, re-recording some microlectures, lectorials corresponding to microlectures, exam and resit grading;
 						people involved: Petra van den Bos, Marcus Gerhold, many others for grading
 					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400356&amp;collegejaar=2024">November 2024 – January 2025</a>
 						<canvasred>15360</canvasred>;
 						coordinator: Tom van Dijk;
-						my role: exam co-design, lectorials corresponding to microlectures;
+						my role: exam co-design, lectorials corresponding to microlectures, exam grading;
 						people involved: Petra van den Bos, Marcus Gerhold, many others for grading
 					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202300186&amp;collegejaar=2023">November 2023 – February 2024</a>
 						<canvasred>13253</canvasred>;
 						coordinator: Tom van Dijk;
-						my role: exam design, re-recording some microlectures, lectorials corresponding to microlectures;
+						my role: exam design, re-recording some microlectures, lectorials corresponding to microlectures, exam and resit grading;
 						people involved: Petra van den Bos, Marcus Gerhold, others for the Programming part
 					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001024&amp;collegejaar=2022">November 2022 – January 2023</a>
 						<canvasred>10839</canvasred>;
 						coordinator: Tom van Dijk;
-						my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures;
+						my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures, exam and resit grading;
 						people involved: Marcus Gerhold, Peter Lammich, others for the Programming part
 					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202001024&amp;collegejaar=2021">November 2021 – January 2022</a>
 						<canvasred>9233</canvasred>;
 						coordinator: Tom van Dijk;
-						my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures;
+						my role: exam design, Q&amp;A sessions corresponding to pre-recorded microlectures, exam and resit grading;
 						people involved: Marcus Gerhold, Peter Lammich, others for the Programming part
 					</li>
 					<li>
@@ -368,13 +374,26 @@
 						<canvasred>7181</canvasred>
 						<a href="https://www.inter-actief.utwente.nl/news/456/2021/4/12/idea-results/" class="red">(IDEA)</a>;
 						coordinator: Tom van Dijk;
-						my role: course redesign, all microlectures for the Design half, some microlectures for the Programming part, corresponding Q&amp;A sessions;
+						my role: course redesign, all microlectures for the Design half, some microlectures for the Programming part, corresponding Q&amp;A sessions, exam and resit grading;
 						people involved: Marcus Gerhold, others for the Programming part
 					</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Design Project
 				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2025">February–April 2026</a>
+						<canvasred>18113</canvasred>;
+						<!-- <ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yTRrsNZs/</ared>;  -->
+						coordinator: Rom Langerak;
+						my role: guiding one group;
+						students involved:
+							Alisa Bîcleşanu,
+							Ewout van Dijk,
+							Sebastian Dorobanţu,
+							Tudor Matei,
+							Radu Roznovăţ.
+					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2025">September–November 2025</a>
 						<canvasred>17091</canvasred>;
@@ -519,7 +538,7 @@
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
 			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
-
+			<li>(<bsc/>) Floortje ter Avest, <em>software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 		</ul>
 		<footer/>
 	</body>

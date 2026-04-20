@@ -302,7 +302,7 @@
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2025">April–July 2026</a>
-						<canvasred>17775</canvasred>;
+						<canvasred>18696</canvasred>;
 						my role: coordinator, teacher
 					</li>
 					<li>
@@ -538,7 +538,13 @@
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
 			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
-			<li>(<bsc/>) Floortje ter Avest, <em>software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Floortje ter Avest, <em>Python software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Giulia Talau, <em>Java software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Lars Wijntjes, <em>Lua software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Maarten van Dort, <em>Go software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Evelyn van der Sar, <em>software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Vlad Negara, <em>CSS transformations</em></li><!-- Apr 2026 -->
+			<li>(<bsc/>) Jorik van Veen, <em>Nix</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 		</ul>
 		<footer/>
 	</body>

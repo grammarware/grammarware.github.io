@@ -25,8 +25,8 @@
 			group as an Associate Professor of software evolution in July 2021, with the intention
 			also to strenthen the teaching capabilities of an already advanced team.</li>
 			<li>I started co-teaching the first MSc course in September 2020, co-teaching the first BSc course in November 2020, and did the first solo MSc course in February 2021.</li>
-			<li>From May 2021, I am the Programme Director of both <a href="https://www.utwente.nl/en/tcs/organisation/">BSc TCS</a> and <a href="https://www.utwente.nl/en/csc/organization/">MSc CS</a>.</li>
-			<li>From June 2021, I am responsible for introducing Numerus Fixus for BSc TCS.
+			<li>From May 2021, I was the Programme Director of both <a href="https://www.utwente.nl/en/tcs/organisation/">BSc TCS</a> and <a href="https://www.utwente.nl/en/csc/organization/">MSc CS</a>.</li>
+			<li>From June 2021, I was responsible for introducing Numerus Fixus for BSc TCS.
 				<a href="https://www.utoday.nl/news/70020/numerus-fixus-also-for-technical-computer-science" class="red">(U-Today)</a>
 				<a href="https://www.utwente.nl/en/news/2021/10/121615/enrolment-restrictions-for-technical-computer-science" class="red">(UT News)</a>
 				<a href="https://www.utoday.nl/news/70061/we-see-the-need-for-a-numerus-fixus" class="red">(U-Today)</a>
@@ -53,6 +53,7 @@
 				<strong>133</strong> (in 2025)
 				personal congratulatory speeches, partially based on feedback provided by supervisors.
 			</li>
+			<li>On May 2026, I <a href="https://www.utwente.nl/en/service-portal/news-events/news/2026/4/898306/appointment-of-new-programme-director-for-tcscs">retired as the Programme Director</a> and went back to being a full time Associate Professor again.</li>
 		</ul>
 		<h2 help="by acceptance date, latest first">Publications based on student work</h2>
 		<ul>
@@ -534,7 +535,7 @@
 		<ul>
 			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
-			<li>(<msc/>) Floris Heinen, <em>transpilation</em></li><!-- Oct 2025 -->
+			<li>(<msc/>) Floris Heinen, <em>C to Rust transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
 			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
@@ -542,9 +543,9 @@
 			<li>(<bsc/>) Giulia Talau, <em>Java software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Lars Wijntjes, <em>Lua software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Maarten van Dort, <em>Go software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
-			<li>(<bsc/>) Evelyn van der Sar, <em>software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Evelyn van der Sar, <em>Kotlin software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Vlad Negara, <em>CSS transformations</em></li><!-- Apr 2026 -->
-			<li>(<bsc/>) Jorik van Veen, <em>Nix</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<bsc/>) Jorik van Veen, <em>typed Nix</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 		</ul>
 		<footer/>
 	</body>

@@ -533,19 +533,19 @@
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
-			<!-- <li class="dim">(<msc/>) Sander Bakkum (MSc Research Project): <em>Unicomponent Identification in Monolithic Embedded Firmware Images</em> — co-supervised with Andrea Continella</li> --><!-- March 2021 -->
 			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Floris Heinen, <em>C to Rust transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
 			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
-			<li>(<bsc/>) Floortje ter Avest, <em>Python software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<msc/>) Yuhang Yang, <em>Legacy and AI</em> — at ING</li><!-- Feb 2026 -->
+			<li>(<bsc/>) Floortje ter Avest, <em>Python software modernity / code quality</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Giulia Talau, <em>Java software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Lars Wijntjes, <em>Lua software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Maarten van Dort, <em>Go software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Evelyn van der Sar, <em>Kotlin software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
 			<li>(<bsc/>) Vlad Negara, <em>CSS transformations</em></li><!-- Apr 2026 -->
-			<li>(<bsc/>) Jorik van Veen, <em>typed Nix</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
+			<li>(<msc/>) Jipp Krabbenborg, <em>Microservices</em> — at InfoSupport</li><!-- Sep 2026 -->
 		</ul>
 		<footer/>
 	</body>

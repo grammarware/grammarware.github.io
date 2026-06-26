@@ -296,10 +296,17 @@
 			<li>(<msc/>) Tom Meulenkamp, <a href="http://grammarware.net/edits/index.html#Meulenkamp2025">Relational Parsing: From Academics to Practice</a>. October 2024 – September 2025. <codered>https://github.com/supertom01/relationalParsing</codered></li>
 			<li>(<bsc/>) Carim Popa, <a href="http://grammarware.net/edits/index.html#Popa2026">Comparing Spoofax and Eclipse Xtext Language Workbenches for Editor Support in DOT DSL</a>. November 2025 – January 2026. Co-supervised with Ömer Sayilir. Best Presentation Award at Track 3 of <a href="https://sites.google.com/utwente.nl/44twentestudentconference">TScIT44</a>. <codered>https://github.com/CarimPopa/DOT-Spoofax</codered></li>
 			<li>(<bsc/>) Daan Wensink, <a href="http://grammarware.net/edits/index.html#Wensink2026">Determining modernity metrics for Java codebases</a>. November 2025 – January 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/DaanW29/CodeModernityTool</codered></li>
+			<li>(<msc/>) Michael Janssen, <a href="http://grammarware.net/edits/index.html#Janssen2025">Relational Parsing: From Academics to Practice</a>. October 2024 – June 2026. <codered>https://github.com/michael-janssen-dev/ariadne</codered></li>
+			<li>(<bsc/>) Floortje ter Avest, <a href="http://grammarware.net/edits/index.html#Avest2026">The Relationship Between Modern Code Practices and Code Quality</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/FloortjetA/correlation_modernity_quality</codered></li>
+			<li>(<bsc/>) Maarten van Dort, <a href="http://grammarware.net/edits/index.html#Dort2026">Feature Adoption in Golang: An Empirical Study of Post-Generics Go Evolution</a>. April–July 2026. Co-supervised with Marcus Gerhold.</li>
+			<li>(<bsc/>) Evelyn van der Sar, <a href="http://grammarware.net/edits/index.html#Sar2026">Measuring codebase modernity in Kotlin</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/ShadowBooster/compatibility-detekt-rules</codered></li>
+			<li>(<bsc/>) Giulia Tălău, <a href="http://grammarware.net/edits/index.html#Talau2026">How Modern are Java Codebases?</a>. April–July 2026. Co-supervised with Marcus Gerhold. </li>
+			<li>(<bsc/>) Lars Wijntjes, <a href="http://grammarware.net/edits/index.html#Wijntjes2026">Codebase Modernity in Lua</a>. April–July 2026. Co-supervised with Marcus Gerhold. </li>
+			<li>(<bsc/>) Vlad Negară, <a href="http://grammarware.net/edits/index.html#Negara2026">SCSS without the S: Transforming outdated Cascading Style Sheets to use modern features</a>. April–July 2026. <codered>https://github.com/VladNegara/postcss-add-is</codered> <codered>https://github.com/VladNegara/postcss-add-nesting</codered> <codered>https://github.com/VladNegara/postcss-add-if</codered></li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
-			<li class="title">(MSc) Software Evolution <a href="https://slebok.github.io/baby/" class="red">(BabyCobol)</a>
+			<li class="title">(MSc) Software Evolution <a href="https://circus.github.io/babycobol/" class="red">(BabyCobol)</a>
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2025">April–July 2026</a>
@@ -533,18 +540,11 @@
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
-			<li>(<msc/>) Michael Janssen, <em>Process Mining</em></li><!-- Oct 2024 -->
 			<li>(<msc/>) Floris Heinen, <em>C to Rust transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Douwe Ossinga, <em>UML quality</em> — co-supervised with Nacir Bouali</li><!-- Nov 2025 -->
 			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
 			<li>(<msc/>) Yuhang Yang, <em>Legacy and AI</em> — at ING</li><!-- Feb 2026 -->
-			<li>(<bsc/>) Floortje ter Avest, <em>Python software modernity / code quality</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
-			<li>(<bsc/>) Giulia Talau, <em>Java software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
-			<li>(<bsc/>) Lars Wijntjes, <em>Lua software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
-			<li>(<bsc/>) Maarten van Dort, <em>Go software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
-			<li>(<bsc/>) Evelyn van der Sar, <em>Kotlin software modernity</em> — co-supervised with Marcus Gerhold</li><!-- Apr 2026 -->
-			<li>(<bsc/>) Vlad Negara, <em>CSS transformations</em></li><!-- Apr 2026 -->
 			<li>(<msc/>) Jipp Krabbenborg, <em>Microservices</em> — at InfoSupport</li><!-- Sep 2026 -->
 		</ul>
 		<footer/>

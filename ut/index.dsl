@@ -36,13 +36,10 @@
 			</li>
 			<li>In 2023, the UT Master of Computer Science was deemed <a href="overzicht2023.png">the best general computer science programme</a> in the country by the reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
 			<li>In 2024, the UT Master of Computer Science was again deemed <a href="overzicht2024.png">the best general computer science programme</a> in the country by the same reputable independent study comparison agency <a href="https://keuzegids.nl">Keuzegids</a>.</li>
-			<li>In December 2025 both BSc TCS and MSc CS were successfully <a href="https://www.utwente.nl/en/eemcs/accreditations/cs/">re-accredited</a>.</li>
-			<li>Some other media appearances:
-				<ul>
-					<li><a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a> (Tubantia)</li>
+			<li>In September 2025, there was an article in Tubantia featuring quotes from Tom van Dijk and me: <a href="https://www.tubantia.nl/enschede/twentse-docent-waarschuwt-nieuwe-lichting-studenten-wees-geen-npc-gebruik-chatgpt-niet~a9b4a271/">Teacher from Twente warns the new batch of students: ‘Do not be an NPC, do not use ChatGPT’</a></li>
 					<!-- https://www.utwente.nl/en/stories/student/820539/from-student-to-spotify-engineer-i-lay-the-technical-foundation-so-millions-can-stream-without-interruption/ -->
-				</ul>
 			</li>
+			<li>In December 2025 both BSc TCS and MSc CS were successfully <a href="https://www.utwente.nl/en/eemcs/accreditations/cs/">re-accredited</a>.</li>
 			<li>
 				At the yearly graduation ceremonies of BSc TCS, when handling out diplomas, I have prepared and delivered
 				<strong>66</strong> (in 2021),
@@ -54,6 +51,7 @@
 				personal congratulatory speeches, partially based on feedback provided by supervisors.
 			</li>
 			<li>On May 2026, I <a href="https://www.utwente.nl/en/service-portal/news-events/news/2026/4/898306/appointment-of-new-programme-director-for-tcscs">retired as the Programme Director</a> and went back to being a full time Associate Professor again.</li>
+			<li>In July 2026, I became a Module Coordinator of <a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500330&amp;collegejaar=2026&amp;taal=en">Diamonds of Computer Science</a> together with Marcus Gerhold.</li>
 		</ul>
 		<h2 help="by acceptance date, latest first">Publications based on student work</h2>
 		<ul>
@@ -64,7 +62,7 @@
 				Vadim Zaytsev. 
 				<em>Scala Mixed-Paradigm Maintainability Metrics</em>,
 				<strong>SANER</strong> 2026.
-				In print.
+				<doired>10.1109/SANER67736.2026.00012</doired>
 			</li>
 			<li>
 				 <a href="https://woutertenbrinke.nl/" class="stud">Wouter ten Brinke</a>,
@@ -340,7 +338,16 @@
 					</li>
 				</ul>
 			</li>
-			<li class="title">(BSc) Software Systems / Design and Modelling
+			<li class="title">(BSc) Module 1: Diamonds of Computer Science
+				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500330&amp;collegejaar=2026&amp;taal=en">September–November 2026</a>
+						<canvasred>19434</canvasred>;
+						my role: co-coordinator with Marcus Gerhold
+					</li>
+				</ul>
+			</li>
+			<li class="title">(BSc) Module 2: Software Systems / Design and Modelling
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500340&amp;collegejaar=2025">November 2025 – February 2026</a>

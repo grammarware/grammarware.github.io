@@ -28,7 +28,7 @@ code {font-family:"Courier Prime", Courier, monospace}
 .bmp img {border: 1px solid black}
 .help {color:#ffdec9; font-size:smaller; font-style:italic}
 .title {font-size:larger;}
-.title>ul{font-size:smaller;}
+.title>ul, .title>span{font-size:smaller;}
 ol.fwd {counter-reset: item}
 ol li {display:block; text-indent:-2em}
 ol li:before {content: "[" counter(item) "] "; counter-increment:item; font-weight: bold; padding: .5em}

@@ -203,6 +203,7 @@
 		</ul>
 		<h2 help="by presentation date, latest first">Publications / presentations on educational topics</h2>
 		<ul>
+			<li><em>Reflection on your PhD journey and career choices: why did you choose academia or industry?</em>, a panel of the <a href="https://www.linkedin.com/posts/marieke-huisman-9b644311_it-was-an-honor-and-privilege-to-give-the-activity-7470083636139294723-8UrD">CS PhD Day</a>, 5 June 2026.</li>
 			<li><a href="https://www.inter-actief.utwente.nl/activities/7696/"><em>Expert Vibing</em>, Inter-<em>Actief</em> Lunch Lecture, 9 September 2025.</a>
 			<li><a href="https://grammarware.net/writes/#GAIinPBL2025"><em>The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</em></a> (with Tom van Dijk), ISoLA, 2025.</li>
 			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
@@ -210,6 +211,7 @@
 			<li><em>DEUS VULT: The Holy Wars of Computer Science</em>, <a href="https://www.inter-actief.utwente.nl/">Inter-Actief</a> Lecture, 30 November 2021.</li>
 			<li><em>The Art of Distancing</em>, Computer Science Educational Day, 21 January 2021.</li>
 		</ul>
+		<a name="sup"></a>
 		<h2 help="by defence date, earliest first">Supervised students</h2>
 		<ol>
 			<li>(<bsc/>) Joël Ledelay. <a href="http://grammarware.net/edits/index.html#Ledelay2021">Retrofitting Memoization: An Exploratory Study</a>. November 2020 – January 2021. Hosted by <a href="https://www.actfact.com">ActFact</a>.</li>
@@ -304,40 +306,6 @@
 		</ol>
 		<h2>Courses</h2>
 		<ul>
-			<li class="title">(MSc) Software Evolution <a href="https://circus.github.io/babycobol/" class="red">(BabyCobol)</a>
-				<ul>
-					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2025">April–July 2026</a>
-						<canvasred>18696</canvasred>;
-						my role: coordinator, teacher
-					</li>
-					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2024">April–July 2025</a>
-						<canvasred>16754</canvasred>;
-						my role: coordinator, teacher; guest lecturer: Fernando Castor de Lima Filho
-					</li>
-					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2023">February–April 2024</a>
-						<canvasred>13975</canvasred>;
-						my role: coordinator, teacher; guest lecturer: Iman Hemati Moghadam
-					</li>
-					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2022">February–April 2023</a>
-						<canvasred>12236</canvasred>;
-						my role: coordinator, teacher; guest lecturers: Rom Langerak, Iman Hemati Moghadam
-					</li>
-					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2021">February–April 2022</a>
-						<canvasred>9449</canvasred>;
-						my role: coordinator, teacher
-					</li>
-					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2020">February–April 2021</a>
-						<canvasred>7873</canvasred>;
-						my role: coordinator, teacher
-					</li>
-				</ul>
-			</li>
 			<li class="title">(BSc) Module 1: Diamonds of Computer Science
 				<ul>
 					<li>
@@ -394,7 +362,18 @@
 					</li>
 				</ul>
 			</li>
-			<li class="title">(BSc) Design Project
+			<li class="title">(BSc) Module 8A: Programming Paradigms / Compiler Construction
+				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202200190&amp;collegejaar=2023">April–June 2024</a>
+						<canvasred>14720</canvasred>;
+						coordinator: Arnd Hartmanns;
+						my role: giving four lectures on graph-based IR, linear IR, call graphs, activation records, parameter passing and memory layout; exam co-design;
+						people involved: Iman Hemati Moghadam
+					</li>
+				</ul>
+			</li>
+			<li class="title">(BSc) Module 11: Design Project
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2025">February–April 2026</a>
@@ -503,7 +482,10 @@
 					</li>
 				</ul>
 			</li>
-			<li class="title">(MSc) Capita Selecta</li>
+			<li class="title">(BSc) Module 12: Research Project <span>— see above in the list of <a href="#sup">supervisees</a></li>
+			<li class="title">(MSc) Capita Selecta <span>— see above in the list of <a href="#sup">supervisees</a></li>
+			<li class="title">(MSc) Reseach Topics <span>— see above in the list of <a href="#sup">supervisees</a></li>
+			<li class="title">(MSc) Final Project <span>— see above in the list of <a href="#sup">supervisees</a></li>
 			<li class="title">(MSc) Design of Software Architectures
 				<ul>
 					<li>
@@ -533,14 +515,37 @@
 						cases: CopyCopy, Scandoo.
 					</li>
 				</ul>
-				<li class="title">(BSc) Programming Paradigms / Compiler Construction
+			<li class="title">(MSc) Software Evolution <a href="https://circus.github.io/babycobol/" class="red">(BabyCobol)</a>
 				<ul>
 					<li>
-						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202200190&amp;collegejaar=2023">April–June 2024</a>
-						<canvasred>14720</canvasred>;
-						coordinator: Arnd Hartmanns;
-						my role: giving four lectures on graph-based IR, linear IR, call graphs, activation records, parameter passing and memory layout; exam co-design;
-						people involved: Iman Hemati Moghadam
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2025">April–July 2026</a>
+						<canvasred>18696</canvasred>;
+						my role: coordinator, teacher
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2024">April–July 2025</a>
+						<canvasred>16754</canvasred>;
+						my role: coordinator, teacher; guest lecturer: Fernando Castor de Lima Filho
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2023">February–April 2024</a>
+						<canvasred>13975</canvasred>;
+						my role: coordinator, teacher; guest lecturer: Iman Hemati Moghadam
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2022">February–April 2023</a>
+						<canvasred>12236</canvasred>;
+						my role: coordinator, teacher; guest lecturers: Rom Langerak, Iman Hemati Moghadam
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2021">February–April 2022</a>
+						<canvasred>9449</canvasred>;
+						my role: coordinator, teacher
+					</li>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=201400225&amp;collegejaar=2020">February–April 2021</a>
+						<canvasred>7873</canvasred>;
+						my role: coordinator, teacher
 					</li>
 				</ul>
 			</li>
@@ -553,6 +558,7 @@
 			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
 			<li>(<msc/>) Yuhang Yang, <em>Legacy and AI</em> — at ING</li><!-- Feb 2026 -->
 			<li>(<msc/>) Jipp Krabbenborg, <em>Microservices</em> — at InfoSupport</li><!-- Sep 2026 -->
+			<li>(<msc/>) Evan Franciszok, <em> Legacy detection</em> — at InfoSupport</li><!-- Sep 2026 -->
 		</ul>
 		<footer/>
 	</body>

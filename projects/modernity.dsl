@@ -113,6 +113,38 @@
 			<name>Daan Wensink (2025)</name>
 			<text>Java modernity (tested on Elastic)</text>
 		</pic>
+		<pic>
+			<a>http://purl.utwente.nl/essays/110719</a>
+			<img>lua.svg</img>
+			<alt>Lua logo (public domain)</alt>
+			<title>UT BSc TCS student project</title>
+			<name>Lars Wijntjes (2026)</name>
+			<text>Lua modernity<br>(76 repos, five 5.x versions)</text>
+		</pic>
+		<pic>
+			<a>http://purl.utwente.nl/essays/110764</a>
+			<img>kotlin.svg</img>
+			<alt>Kotlin logo (public domain)</alt>
+			<title>UT BSc TCS student project</title>
+			<name>Evelyn van der Sar (2026)</name>
+			<text>Kotlin modernity<br>(50 repos)</text>
+		</pic>
+		<pic>
+			<a>http://purl.utwente.nl/essays/110784</a>
+			<img>python.110.svg</img>
+			<alt>Python logo (GPL)</alt>
+			<title>UT BSc TCS student project</title>
+			<name>Floortje ter Avest (2026)</name>
+			<text>link between Python modernity and code quality</text>
+		</pic>
+		<pic>
+			<a>http://purl.utwente.nl/essays/110795</a>
+			<img>duke.300.png</img>
+			<alt>Java Duke logo (BSD)</alt>
+			<title>UT BSc TCS student project</title>
+			<name>Giulia Tălău (2026)</name>
+			<text>Java modernity (135 repos, 62 language features)</text>
+		</pic>
 		<br style="clear:both">
 		<h2 help="latest first">Publications</h2>
 		<ul>

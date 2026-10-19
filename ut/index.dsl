@@ -203,7 +203,10 @@
 		</ul>
 		<h2 help="by presentation date, latest first">Publications / presentations on educational topics</h2>
 		<ul>
+			<li><a href="https://grammarware.net/writes/#OpenEnded2026"><em>How Computer Science Teachers Assess Open-ended Programming Assignments</em></a> (with Arthur Rump and Angelika Mader), Koli Calling, 2026.</li>
+			<li><a href="https://grammarware.net/writes/#SENL2026"><em>A Systematic Analysis of Higher Education on Software Engineering in the Netherlands</em></a> (with Bastiaan Heeren, Fabiano Dalpiaz, Mazyar Seraj, Roberto Verdecchia), JSS, 2026. <a class="red" href="https://www.versen.nl/contents/works/education">(q.v.: VERSEN WG on Education)</a></li>
 			<li><em>Reflection on your PhD journey and career choices: why did you choose academia or industry?</em>, a panel of the <a href="https://www.linkedin.com/posts/marieke-huisman-9b644311_it-was-an-honor-and-privilege-to-give-the-activity-7470083636139294723-8UrD">CS PhD Day</a>, 5 June 2026.</li>
+			<li><a href="https://grammarware.net/writes/#PipelineRequirements2025"><em>Requirements for an Automated Assessment Tool for Learning Programming by Doing</em></a> (with Arthur Rump and Angelika Mader), ICST, 2026.</li>
 			<li><a href="https://www.inter-actief.utwente.nl/activities/7696/"><em>Expert Vibing</em>, Inter-<em>Actief</em> Lunch Lecture, 9 September 2025.</a>
 			<li><a href="https://grammarware.net/writes/#GAIinPBL2025"><em>The Impact of Generative Artificial Intelligence Tools in Project-Based Learning</em></a> (with Tom van Dijk), ISoLA, 2025.</li>
 			<li><em>The Future of Education in the Era of Generative AI</em>, panel, <a href="https://ictopen.nl/programme/the-future-of-education-in-the-era-of-generative-ai">ICT.OPEN</a>, 16 April 2025.</li>
@@ -305,6 +308,7 @@
 			<li>(<bsc/>) Vlad Negară, <a href="http://grammarware.net/edits/index.html#Negara2026">SCSS without the S: Transforming outdated Cascading Style Sheets to use modern features</a>. April–July 2026. <codered>https://github.com/VladNegara/postcss-add-is</codered> <codered>https://github.com/VladNegara/postcss-add-nesting</codered> <codered>https://github.com/VladNegara/postcss-add-if</codered></li>
 			<li>(<msc/>) Douwe Osinga, <a href="http://grammarware.net/edits/index.html#Osinga2026">Automatic Analysis and Grading of UTML UML Diagrams</a>. November 2025 – July 2026. <codered>https://codeberg.org/drwr/seshat</codered></li>
 			<li>(<msc/>) Yuhang Yang, <a href="http://grammarware.net/edits/index.html#Yang2026">Delamain: Mapping Code Structure to a Graph — A Language-Agnostic Kythe-Style Intermediate Representation for GraphRAG-Based Program Comprehension</a>. February–September 2026. Hosted by <a href="https://ing.nl">ING</a>.</li>
+			<li>(<msc/>) Bram Ottenschot, <a href="http://grammarware.net/edits/index.html#Ottenschot2026">MACRO-AP: A Decision Support Framework for Microservice Architecture Coarsening through the Detection and Refactoring of Anti-Patterns</a>. January–October 2026. Hosted by <a href="https://infosupport.com">InfoSupport</a>.</li>
 		</ol>
 		<h2>Courses</h2>
 		<ul>
@@ -313,12 +317,19 @@
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500330&amp;collegejaar=2026&amp;taal=en">September–November 2026</a>
 						<canvasred>19434</canvasred>;
-						my role: co-coordinator with Marcus Gerhold
+						my role: co-coordinator with Marcus Gerhold; 1EC Diamond Project — design, implementation, grading
 					</li>
 				</ul>
 			</li>
 			<li class="title">(BSc) Module 2: Software Systems / Design and Modelling
 				<ul>
+					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500341&amp;collegejaar=2026">November 2026 – January 2026</a>
+						<!-- <canvasred>17775</canvasred>; -->
+						coordinator: Fernando Castor de Lima Filho;
+						my role: microlectures, tutorials, exam design and grading;
+						people involved: mostly Petra van den Bos, some others for grading
+					</li>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500340&amp;collegejaar=2025">November 2025 – February 2026</a>
 						<canvasred>17775</canvasred>;
@@ -378,9 +389,23 @@
 			<li class="title">(BSc) Module 11: Design Project
 				<ul>
 					<li>
+						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2026">September–November 2026</a>
+						<canvasred>19140</canvasred>;
+						<!-- <ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yTRrsNZs/</ared>;  -->
+						coordinator: Rom Langerak;
+						my role: guiding one group;
+						students involved:
+							Timo van den Berg,
+							Nikita Chulkov,
+							Hakan Isakhanli,
+							Evelyn van der Sar,
+							Ali Kaan Uysal,
+							Rutger Westgeest.
+					</li>
+					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202400006&amp;collegejaar=2025">February–April 2026</a>
 						<canvasred>18113</canvasred>;
-						<!-- <ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yTRrsNZs/</ared>;  -->
+						<ared>https://bachelorshowcase-eemcs.apps.utwente.nl/view/yd479QW6/</ared>; 
 						coordinator: Rom Langerak;
 						my role: guiding one group;
 						students involved:
@@ -554,10 +579,10 @@
 		</ul>
 		<h2 help="by start date; dim if not the main supervisor">Current students</h2>
 		<ul>
-			<li>(<msc/>) Bram Ottenschot, <em>Micro to macro</em> — at InfoSupport</li><!-- Jan 2026 -->
 			<li>(<msc/>) Floris Heinen, <em>C to Rust transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
 			<li>(<msc/>) Evan Franciszok, <em> Legacy detection</em> — at InfoSupport</li><!-- Sep 2026 -->
+			<li>(<bsc/>) Jasper Grimberg, <em>LLM usage justifiability</em></li><!-- Oct 2026 -->
 		</ul>
 		<footer/>
 	</body>

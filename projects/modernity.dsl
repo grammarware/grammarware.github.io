@@ -130,6 +130,14 @@
 			<text>Kotlin modernity<br>(50 repos)</text>
 		</pic>
 		<pic>
+			<a>http://purl.utwente.nl/essays/110856</a>
+			<img>go.png</img>
+			<alt>Go gopher (CC-BY)</alt>
+			<title>UT BSc TCS student project</title>
+			<name>Maarten van Dort (2026)</name>
+			<text>Go modernity<br>22 repos</text>
+		</pic>
+		<pic>
 			<a>http://purl.utwente.nl/essays/110784</a>
 			<img>python.110.svg</img>
 			<alt>Python logo (GPL)</alt>

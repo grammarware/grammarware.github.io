@@ -299,12 +299,12 @@
 			<li>(<msc/>) Tom Meulenkamp, <a href="http://grammarware.net/edits/index.html#Meulenkamp2025">Relational Parsing: From Academics to Practice</a>. October 2024 – September 2025. <codered>https://github.com/supertom01/relationalParsing</codered></li>
 			<li>(<bsc/>) Carim Popa, <a href="http://grammarware.net/edits/index.html#Popa2026">Comparing Spoofax and Eclipse Xtext Language Workbenches for Editor Support in DOT DSL</a>. November 2025 – January 2026. Co-supervised with Ömer Sayilir. Best Presentation Award at Track 3 of <a href="https://sites.google.com/utwente.nl/44twentestudentconference">TScIT44</a>. <codered>https://github.com/CarimPopa/DOT-Spoofax</codered></li>
 			<li>(<bsc/>) Daan Wensink, <a href="http://grammarware.net/edits/index.html#Wensink2026">Determining modernity metrics for Java codebases</a>. November 2025 – January 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/DaanW29/CodeModernityTool</codered></li>
-			<li>(<msc/>) Michael Janssen, <a href="http://grammarware.net/edits/index.html#Janssen2025">Analysing Service Interactions in Traced Microservice Architectures Using Process Mining</a>. October 2024 – June 2026. <codered>https://github.com/michael-janssen-dev/ariadne</codered></li>
+			<li>(<msc/>) Michael Janssen, <a href="http://grammarware.net/edits/index.html#Janssen2026">Analysing Service Interactions in Traced Microservice Architectures Using Process Mining</a>. October 2024 – June 2026. <codered>https://github.com/michael-janssen-dev/ariadne</codered></li>
 			<li>(<bsc/>) Floortje ter Avest, <a href="http://grammarware.net/edits/index.html#Avest2026">The Relationship Between Modern Code Practices and Code Quality</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/FloortjetA/correlation_modernity_quality</codered></li>
 			<li>(<bsc/>) Maarten van Dort, <a href="http://grammarware.net/edits/index.html#Dort2026">Feature Adoption in Golang: An Empirical Study of Post-Generics Go Evolution</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/maarten06/GoModerno</codered></li>
 			<li>(<bsc/>) Evelyn van der Sar, <a href="http://grammarware.net/edits/index.html#Sar2026">Measuring codebase modernity in Kotlin</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/ShadowBooster/compatibility-detekt-rules</codered></li>
-			<li>(<bsc/>) Giulia Tălău, <a href="http://grammarware.net/edits/index.html#Talau2026">How Modern are Java Codebases?</a>. April–July 2026. Co-supervised with Marcus Gerhold. </li>
-			<li>(<bsc/>) Lars Wijntjes, <a href="http://grammarware.net/edits/index.html#Wijntjes2026">Codebase Modernity in Lua</a>. April–July 2026. Co-supervised with Marcus Gerhold. </li>
+			<li>(<bsc/>) Giulia Tălău, <a href="http://grammarware.net/edits/index.html#Talau2026">How Modern are Java Codebases?</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/giulica25/JavaFeatureSignature</codered></li>
+			<li>(<bsc/>) Lars Wijntjes, <a href="http://grammarware.net/edits/index.html#Wijntjes2026">Codebase Modernity in Lua</a>. April–July 2026. Co-supervised with Marcus Gerhold. <codered>https://github.com/larswijn/codebase-modernity-lua</codered></li>
 			<li>(<bsc/>) Vlad Negară, <a href="http://grammarware.net/edits/index.html#Negara2026">SCSS without the S: Transforming outdated Cascading Style Sheets to use modern features</a>. April–July 2026. <codered>https://github.com/VladNegara/postcss-add-is</codered> <codered>https://github.com/VladNegara/postcss-add-nesting</codered> <codered>https://github.com/VladNegara/postcss-add-if</codered></li>
 			<li>(<msc/>) Douwe Osinga, <a href="http://grammarware.net/edits/index.html#Osinga2026">Automatic Analysis and Grading of UTML UML Diagrams</a>. November 2025 – July 2026. <codered>https://codeberg.org/drwr/seshat</codered></li>
 			<li>(<msc/>) Yuhang Yang, <a href="http://grammarware.net/edits/index.html#Yang2026">Delamain: Mapping Code Structure to a Graph — A Language-Agnostic Kythe-Style Intermediate Representation for GraphRAG-Based Program Comprehension</a>. February–September 2026. Hosted by <a href="https://ing.nl">ING</a>.</li>
@@ -581,8 +581,11 @@
 		<ul>
 			<li>(<msc/>) Floris Heinen, <em>C to Rust transpilation</em></li><!-- Oct 2025 -->
 			<li>(<msc>ScE</msc>) Wouter van den Brink, <em>modernity and quality of software</em> — co-supervised with Marcus Gerhold</li><!-- Sep 2025 -->
-			<li>(<msc/>) Evan Franciszok, <em> Legacy detection</em> — at InfoSupport</li><!-- Sep 2026 -->
+			<li>(<msc/>) Evan Franciszok, <em>Legacy detection</em> — at InfoSupport</li><!-- Sep 2026 -->
 			<li>(<bsc/>) Jasper Grimberg, <em>LLM usage justifiability</em></li><!-- Oct 2026 -->
+			<li>(<msc/>) Marius Pană, <em>Zorro</em></li><!-- Nov 2026 -->
+			<li>(<capita>CS-ST</capita>) Alessandro Nanni, <em>Java</em></li><!-- Feb 2027 -->
+			<li>(<msc/>) Alessandro Nanni, <em>Jetpack Compose</em></li><!-- Apr 2027 -->
 		</ul>
 		<footer/>
 	</body>

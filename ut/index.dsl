@@ -325,7 +325,7 @@
 				<ul>
 					<li>
 						<a href="https://utwente.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=202500341&amp;collegejaar=2026">November 2026 – January 2026</a>
-						<!-- <canvasred>17775</canvasred>; -->
+						<canvasred>19817</canvasred>;
 						coordinator: Fernando Castor de Lima Filho;
 						my role: microlectures, tutorials, exam design and grading;
 						people involved: mostly Petra van den Bos, some others for grading
@@ -586,6 +586,7 @@
 			<li>(<msc/>) Marius Pană, <em>Zorro</em></li><!-- Nov 2026 -->
 			<li>(<capita>CS-ST</capita>) Alessandro Nanni, <em>Java</em></li><!-- Feb 2027 -->
 			<li>(<msc/>) Alessandro Nanni, <em>Jetpack Compose</em></li><!-- Apr 2027 -->
+			<li>(<bsc/>) Tom Heijkamp, <em>Haskell modernity</em> — co-supervised with Marcus Gerhold</li><!-- Nov 2026 -->
 		</ul>
 		<footer/>
 	</body>
